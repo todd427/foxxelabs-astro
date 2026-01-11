@@ -1,0 +1,567 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Thinking Style Snapshot (YES/NO) · Foxxe Labs" description="A quick YES/NO questionnaire to help identify your cognitive preferences.">
+  <div class="tool-page">
+    <header class="tool-header">
+      <h1>Thinking Style Snapshot (YES/NO)</h1>
+      <p class="sub">
+        10 YES/NO statements. Takes ~2 minutes. Estimates whether you lean focused, hybrid, or broad/systems.
+      </p>
+      <div class="pillrow">
+        <span class="pill">~2 minutes</span>
+        <span class="pill">No data stored</span>
+        <span class="pill">Printable</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2 class="pre-only" id="howTitlePre">How it works</h2>
+        <p class="pre-only muted">Answer honestly based on your typical experience. There are no wrong answers.</p>
+
+        <form id="snapshotForm">
+          <div class="questions">
+            <fieldset>
+              <legend>Quick snapshot (10 statements)</legend>
+              <div class="row" data-q="q1">
+                <div class="qtext">1. I feel most alive when I'm mastering a single skill or domain.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q1" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q1" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q2">
+                <div class="qtext">2. I get bored easily if I do the same thing too long.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q2" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q2" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q3">
+                <div class="qtext">3. I often see connections between unrelated topics.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q3" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q3" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q4">
+                <div class="qtext">4. I prefer clear routines and predictable structures.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q4" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q4" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q5">
+                <div class="qtext">5. I've changed careers or hobbies multiple times.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q5" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q5" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q6">
+                <div class="qtext">6. Novelty and challenge energize me.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q6" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q6" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q7">
+                <div class="qtext">7. I'd rather be excellent at one thing than decent at many.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q7" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q7" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q8">
+                <div class="qtext">8. People often say I have a lot of interests.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q8" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q8" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q9">
+                <div class="qtext">9. I sometimes find it hard to choose just one path or identity.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q9" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q9" value="no"> NO</label>
+                </div>
+              </div>
+              <div class="row" data-q="q10">
+                <div class="qtext">10. My best ideas come from mixing different fields together.</div>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="q10" value="yes" required> YES</label>
+                  <label class="choice"><input type="radio" name="q10" value="no"> NO</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Calculate Snapshot</button>
+            <button type="button" class="secondary" id="resetBtn">Reset</button>
+            <button type="button" class="secondary" onclick="window.print()">Print / Save as PDF</button>
+          </div>
+        </form>
+
+        <div id="result" class="result" aria-live="polite">
+          <div class="scoreline">
+            <div class="badge" id="badge">Result</div>
+            <div class="score" id="score">YES count: 0</div>
+          </div>
+
+          <div id="summaryText" class="muted"></div>
+
+          <div class="twoCol">
+            <div>
+              <div><strong>Tends to enjoy</strong></div>
+              <ul class="list" id="enjoyList"></ul>
+            </div>
+            <div>
+              <div><strong>Helpful nudge</strong></div>
+              <div class="note" id="nudgeText"></div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="links">
+            <div><strong>Links to follow on your result</strong> <span class="muted">(pick one and try it for a week)</span></div>
+            <div id="linksBlock"></div>
+          </div>
+
+          <div style="margin-top:12px" class="note">
+            Best use: self-awareness, not self-boxing. Re-take after a big life change or every 6–12 months.
+          </div>
+        </div>
+
+        <p class="fine">
+          This snapshot is not a diagnosis or a measure of intelligence or worth. It's a quick pattern-check and a conversation starter.
+        </p>
+      </section>
+
+      <aside class="card post-only results-aside" aria-labelledby="howTitlePost">
+        <h2 id="howTitlePost">How to read your snapshot</h2>
+        <p class="muted">Count how many YES answers you gave.</p>
+        <ul class="list">
+          <li><strong>0–3 YES</strong> → Focused Thinker (depth, consistency, sustained attention)</li>
+          <li><strong>4–7 YES</strong> → Hybrid Thinker (balances depth with variety; switches modes on purpose)</li>
+          <li><strong>8–10 YES</strong> → Broad / Systems Thinker (thrives on novelty; connects ideas across domains)</li>
+        </ul>
+
+        <h2 style="margin-top:16px;">Multipotentialite context (optional)</h2>
+        <p class="muted">
+          This quiz grew out of the "multipotentialite" conversation: people who have many interests and tend to learn fast,
+          connect ideas, and change lanes over time. If you want the vocabulary (and the reassurance), start here:
+        </p>
+        <ul class="list">
+          <li><a href="https://puttylike.com/terminology/" target="_blank" rel="noopener noreferrer">Puttylike: What is a multipotentialite?</a></li>
+          <li><a href="https://ed.ted.com/lessons/cXwd0sDU" target="_blank" rel="noopener noreferrer">TED-Ed lesson: "Why some of us don't have one true calling"</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Multipotentiality" target="_blank" rel="noopener noreferrer">Multipotentiality (Wikipedia)</a></li>
+          <li><a href="https://www.goodreads.com/book/show/31307672-how-to-be-everything" target="_blank" rel="noopener noreferrer">How to Be Everything (book info)</a></li>
+          <li><a href="https://www.goodreads.com/book/show/287818.Refuse_to_Choose_" target="_blank" rel="noopener noreferrer">Refuse to Choose (Scanner mind) (book info)</a></li>
+        </ul>
+
+        <h2 style="margin-top:16px;">What to do with your result</h2>
+        <ul class="list">
+          <li><strong>Focused</strong>: double down on one skill and track progress weekly.</li>
+          <li><strong>Hybrid</strong>: plan "focus blocks" + "explore blocks" on purpose.</li>
+          <li><strong>Broad/Systems</strong>: keep a backlog of ideas and choose one "main quest" per month.</li>
+        </ul>
+
+        <div class="note">
+          Tip: treat this as an experiment. Re-take after a big life change or every 6–12 months.
+        </div>
+      </aside>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .post-only {
+    display: none;
+  }
+  
+  :global(body.done) .post-only {
+    display: block;
+  }
+  
+  :global(body.done) .pre-only {
+    display: none;
+  }
+  
+  /* Hide right column until results calculated */
+  :global(body:not(.done)) .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  :global(body:not(.done)) .results-aside {
+    display: none;
+  }
+  
+  :global(body.done) .results-aside {
+    display: block;
+  }
+  
+  .tool-header {
+    padding: 28px 18px 10px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    margin: 0 0 8px 0;
+    font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+    letter-spacing: .2px;
+  }
+  
+  .sub {
+    color: var(--muted);
+    margin: 0;
+    max-width: 70ch;
+  }
+  
+  .grid {
+    padding: 16px 18px 56px;
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 16px;
+  }
+  
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+  }
+  
+  .pillrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--muted);
+    font-size: .9rem;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .fine {
+    font-size: .95rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  fieldset {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 10px 12px;
+    margin: 0;
+    background: rgba(255,255,255,.02);
+  }
+  
+  legend {
+    padding: 0 8px;
+    color: #d7e4f2;
+    font-weight: 600;
+    font-size: .98rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 4px 2px;
+    align-items: center;
+  }
+  
+  .qtext {
+    flex: 1 1 40ch;
+    min-width: 30ch;
+  }
+  
+  .choices {
+    display: flex;
+    gap: 10px;
+  }
+  
+  label.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    user-select: none;
+    background: rgba(255,255,255,.03);
+  }
+  
+  label.choice:hover {
+    border-color: rgba(125,211,252,.5);
+  }
+  
+  input[type="radio"] {
+    accent-color: var(--accent);
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  
+  button {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: linear-gradient(180deg, rgba(125,211,252,.22), rgba(167,139,250,.10));
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  button.secondary {
+    background: rgba(255,255,255,.03);
+    font-weight: 600;
+    color: var(--muted);
+  }
+  
+  button:hover {
+    border-color: rgba(255,255,255,.22);
+  }
+  
+  .result {
+    display: none;
+    margin-top: 14px;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.03);
+  }
+  
+  .result.show {
+    display: block;
+  }
+  
+  .scoreline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  
+  .score {
+    font-size: 1.05rem;
+    color: var(--muted);
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.03);
+    font-weight: 800;
+    letter-spacing: .2px;
+  }
+  
+  .badge.focused {
+    color: #34d399;
+  }
+  
+  .badge.hybrid {
+    color: #fbbf24;
+  }
+  
+  .badge.broad {
+    color: var(--accent);
+  }
+  
+  .twoCol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .list {
+    margin: 6px 0 0 18px;
+    color: #d5e2f0;
+  }
+  
+  .links a {
+    display: inline-block;
+    margin: 4px 0;
+  }
+  
+  .note {
+    border-left: 3px solid rgba(125,211,252,.55);
+    padding-left: 10px;
+    margin-top: 10px;
+    color: var(--muted);
+  }
+  
+  @media print {
+    :global(body) {
+      background: #fff;
+      color: #000;
+    }
+    .card {
+      box-shadow: none;
+      background: #fff;
+      border-color: #ddd;
+    }
+    a {
+      color: #000;
+    }
+    button {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  const form = document.getElementById('snapshotForm');
+  const result = document.getElementById('result');
+  const badge = document.getElementById('badge');
+  const score = document.getElementById('score');
+  const summaryText = document.getElementById('summaryText');
+  const enjoyList = document.getElementById('enjoyList');
+  const nudgeText = document.getElementById('nudgeText');
+  const linksBlock = document.getElementById('linksBlock');
+  const resetBtn = document.getElementById('resetBtn');
+
+  const profiles = {
+    focused: {
+      badgeClass: "focused",
+      title: "Focused Thinker",
+      summary: "You prefer depth, consistency, and sustained attention in one area.",
+      enjoys: ["Deep work and long arcs", "Clear routines", "Fewer moving parts", "Mastery over novelty"],
+      nudge: "Protect your focus; set a single 'next best' goal.",
+      links: [
+        { label: "Deep Work (Cal Newport) overview", href: "https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/" },
+        { label: "Pomodoro® Technique (official site)", href: "https://www.pomodorotechnique.com/" },
+        { label: "Multipotentialite terminology (Puttylike)", href: "https://puttylike.com/terminology/" },
+        { label: "Multipotentiality (Wikipedia)", href: "https://en.wikipedia.org/wiki/Multipotentiality" }
+      ],
+      experiment: "Experiment: schedule 3×45-minute distraction-free blocks this week. Track how it feels and what moves."
+    },
+    hybrid: {
+      badgeClass: "hybrid",
+      title: "Hybrid Thinker",
+      summary: "You balance depth with variety and can switch between focus and exploration.",
+      enjoys: ["Alternating sprints and exploration", "Project 'seasons'", "Variety with a home base", "Switching modes on purpose"],
+      nudge: "Time-box exploration, then commit to one lane for a bit.",
+      links: [
+        { label: "Timeboxing (Wikipedia)", href: "https://en.wikipedia.org/wiki/Timeboxing" },
+        { label: "Pomodoro® Technique (official site)", href: "https://www.pomodorotechnique.com/" },
+        { label: "Why some of us don't have one true calling (TED-Ed lesson)", href: "https://ed.ted.com/lessons/cXwd0sDU" },
+        { label: "Multipotentialite terminology (Puttylike)", href: "https://puttylike.com/terminology/" },
+        { label: "Refuse to Choose (Barbara Sher) info", href: "https://www.goodreads.com/book/show/287818.Refuse_to_Choose_" }
+      ],
+      experiment: "Experiment: run a 5-day cycle: 90 minutes explore (Mon) → 4 days focus (Tue–Fri). Review what you shipped."
+    },
+    broad: {
+      badgeClass: "broad",
+      title: "Broad / Systems Thinker",
+      summary: "You thrive on novelty, learn quickly, and connect ideas across domains.",
+      enjoys: ["Cross-domain pattern spotting", "Novelty and challenge", "Fast learning loops", "Connecting people + ideas"],
+      nudge: "Keep a 'parking lot' list so new ideas don't steal the wheel.",
+      links: [
+        { label: "Multipotentialite terminology (Puttylike)", href: "https://puttylike.com/terminology/" },
+        { label: "Why some of us don't have one true calling (TED-Ed lesson)", href: "https://ed.ted.com/lessons/cXwd0sDU" },
+        { label: "How to Be Everything (Emilie Wapnick) info", href: "https://www.goodreads.com/book/show/31307672-how-to-be-everything" },
+        { label: "Refuse to Choose (Barbara Sher) info", href: "https://www.goodreads.com/book/show/287818.Refuse_to_Choose_" },
+        { label: "Systems thinking resources (Donella Meadows Project)", href: "https://donellameadows.org/systems-thinking-resources/" }
+      ],
+      experiment: "Experiment: maintain an 'Idea Parking Lot' and pick one 'main quest' for the next 30 days."
+    }
+  };
+
+  function countYes(formData){
+    let yes = 0;
+    for (let i = 1; i <= 10; i++){
+      if (formData.get('q' + i) === 'yes') yes++;
+    }
+    return yes;
+  }
+
+  function renderProfile(yesCount){
+    let p;
+    if (yesCount <= 3) p = profiles.focused;
+    else if (yesCount <= 7) p = profiles.hybrid;
+    else p = profiles.broad;
+
+    badge.className = "badge " + p.badgeClass;
+    badge.textContent = p.title;
+    score.textContent = "YES count: " + yesCount + " / 10";
+    summaryText.innerHTML = "<p><strong>Default mode:</strong> " + p.summary + "</p>"
+      + "<p class='muted'><strong>Turn the label into an experiment:</strong> " + p.experiment + "</p>";
+
+    enjoyList.innerHTML = "";
+    p.enjoys.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      enjoyList.appendChild(li);
+    });
+
+    nudgeText.textContent = p.nudge;
+
+    linksBlock.innerHTML = "";
+    const ul = document.createElement('ul');
+    ul.className = "list";
+    p.links.forEach(link => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = link.href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = link.label;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    linksBlock.appendChild(ul);
+
+    document.body.classList.add('done');
+    result.classList.add('show');
+    result.scrollIntoView({behavior: "smooth", block: "start"});
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const yesCount = countYes(fd);
+    renderProfile(yesCount);
+  });
+
+  resetBtn.addEventListener('click', () => {
+    form.reset();
+    result.classList.remove('show');
+    document.body.classList.remove('done');
+  });
+})();
+</script>
