@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allResources = await getCollection('resources', ({ data }) => {
+    return data.draft !== true;
+  });
+  
+  const categories = [...new Set(allResources.map(post => post.data.category))];
+  
+  return categories.map(category => {
+    const filteredPosts = allResources.filter(post => 
+      post.data.category === category
+    ).sort((a, b) => 
+      b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+    );
+    
+    return {
+      params: { category: category.toLowerCase().replace(/\s+/g, '-') },
+      props: { posts: filteredPosts, category }
+    };
+  });
+}
+
+const { posts, category } = Astro.props;
+---
+
+<BaseLayout title={`${category} | Resources | Foxxe Labs`} description={`Resources in the ${category} category`}>
+  <div class="category-page">
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/resources/">Resources</a>
+          <span class="separator">/</span>
+          <span>{category}</span>
+        </div>
+        <h1 class="page-title">{category}</h1>
+        <p class="post-count">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+      </div>
+    </div>
+    
+    <div class="posts-grid">
+      <div class="container">
+        {posts.map((post, index) => {
+          const formattedDate = post.data.publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+          
+          return (
+            <article class="post-card" style={`animation-delay: ${index * 0.1}s`}>
+              {post.data.heroImage && (
+                <a href={`/resources/${post.slug}/`} class="post-card-image">
+                  <img src={post.data.heroImage} alt={post.data.heroImageAlt || post.data.title} />
+                  <div class="image-overlay"></div>
+                </a>
+              )}
+              
+              <div class="post-card-content">
+                <div class="post-card-meta">
+                  <time datetime={post.data.publishDate.toISOString()}>{formattedDate}</time>
+                </div>
+                
+                <h2 class="post-card-title">
+                  <a href={`/resources/${post.slug}/`}>{post.data.title}</a>
+                </h2>
+                
+                <p class="post-card-description">{post.data.description}</p>
+                
+                <div class="post-card-tags">
+                  {post.data.tags.slice(0, 3).map(tag => (
+                    <a href={`/resources/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="mini-tag">
+                      #{tag}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .category-page {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .breadcrumb a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .separator {
+    margin: 0 var(--space-xs);
+    opacity: 0.5;
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .post-count {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  
+  .posts-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-2xl);
+  }
+  
+  .post-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent-dim);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .post-card-image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  
+  .post-card:hover .post-card-image img {
+    transform: scale(1.05);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(15, 15, 15, 0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .post-card:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  .post-card-content {
+    padding: var(--space-lg);
+  }
+  
+  .post-card-meta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-card-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+  }
+  
+  .post-card-title a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .post-card-title a:hover {
+    color: var(--color-accent);
+  }
+  
+  .post-card-description {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .mini-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .mini-tag:hover {
+    color: var(--color-accent);
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+    
+    .posts-grid .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

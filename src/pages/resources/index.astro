@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allResources = await getCollection('resources', ({ data }) => {
+  return data.draft !== true;
+});
+
+const sortedResources = allResources.sort((a, b) => 
+  b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+// Extract unique categories and tags
+const categories = [...new Set(allResources.map(post => post.data.category))];
+const allTags = allResources.flatMap(post => post.data.tags);
+const uniqueTags = [...new Set(allTags)];
+---
+
+<BaseLayout title="Resources | Foxxe Labs" description="In-depth guides and analysis on AI security, applications, and industry developments">
+  <div class="resources-page">
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">Resources</h1>
+        <p class="page-description">
+          In-depth guides, frameworks, and analysis covering the AI landscape — 
+          from security fundamentals to emerging applications.
+        </p>
+      </div>
+    </div>
+    
+    <div class="filters-section">
+      <div class="container">
+        <div class="filter-group">
+          <h3 class="filter-label">Categories</h3>
+          <div class="filter-pills">
+            {categories.sort().map(category => (
+              <a href={`/resources/categories/${category.toLowerCase().replace(/\s+/g, '-')}/`} class="filter-pill">
+                {category}
+              </a>
+            ))}
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h3 class="filter-label">Popular Tags</h3>
+          <div class="filter-pills">
+            {uniqueTags.slice(0, 12).map(tag => (
+              <a href={`/resources/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="filter-pill tag-pill">
+                #{tag}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="posts-grid">
+      <div class="container">
+        {sortedResources.map((post, index) => {
+          const formattedDate = post.data.publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+          
+          return (
+            <article class="post-card" style={`animation-delay: ${index * 0.1}s`}>
+              {post.data.heroImage && (
+                <a href={`/resources/${post.slug}/`} class="post-card-image">
+                  <img src={post.data.heroImage} alt={post.data.heroImageAlt || post.data.title} />
+                  <div class="image-overlay"></div>
+                </a>
+              )}
+              
+              <div class="post-card-content">
+                <div class="post-card-meta">
+                  <span class="post-card-category">{post.data.category}</span>
+                  <span class="meta-divider">•</span>
+                  <time datetime={post.data.publishDate.toISOString()}>{formattedDate}</time>
+                </div>
+                
+                <h2 class="post-card-title">
+                  <a href={`/resources/${post.slug}/`}>{post.data.title}</a>
+                </h2>
+                
+                <p class="post-card-description">{post.data.description}</p>
+                
+                <div class="post-card-tags">
+                  {post.data.tags.slice(0, 3).map(tag => (
+                    <span class="mini-tag">#{tag}</span>
+                  ))}
+                </div>
+                
+                <a href={`/resources/${post.slug}/`} class="read-more">
+                  Read more →
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .resources-page {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .page-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .page-description {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* Filters */
+  .filters-section {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-2xl) 0;
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .filter-group {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .filter-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .filter-pill {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-pill:hover {
+    background: var(--color-bg);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  
+  .tag-pill {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+  
+  /* Posts Grid */
+  .posts-grid {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .posts-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-2xl);
+  }
+  
+  .post-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent-dim);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .post-card-image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  
+  .post-card:hover .post-card-image img {
+    transform: scale(1.05);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(15, 15, 15, 0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .post-card:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  .post-card-content {
+    padding: var(--space-lg);
+  }
+  
+  .post-card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-card-category {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .meta-divider {
+    opacity: 0.3;
+  }
+  
+  .post-card-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+  }
+  
+  .post-card-title a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .post-card-title a:hover {
+    color: var(--color-accent);
+  }
+  
+  .post-card-description {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+  
+  .mini-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+  }
+  
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+  
+  .read-more:hover {
+    color: var(--color-accent-bright);
+    gap: var(--space-xs);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+    
+    .page-description {
+      font-size: 1.1rem;
+    }
+    
+    .posts-grid .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

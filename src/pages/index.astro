@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources', ({ data }) => {
+  return data.draft !== true;
+});
+
+const news = await getCollection('news', ({ data }) => {
+  return data.draft !== true;
+});
+
+const latestResources = resources
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 3);
+
+const latestNews = news
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 4);
+---
+
+<BaseLayout title="Foxxe Labs">
+  <section class="hero">
+    <div class="card">
+      <div class="kicker">Knowledge & Analysis</div>
+      <h1>AI security, applications, and industry insights</h1>
+      <p class="sub">
+        In-depth resources and curated news for technical readers navigating the rapidly evolving AI landscape.
+        Some posts are comprehensive guides. Some are quick updates. All aim to be useful.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn" href="/resources/">Browse Resources</a>
+        <a class="btn secondary" href="/news/">Latest News</a>
+      </div>
+
+      <div class="pillrow">
+        <span class="pill">Static site</span>
+        <span class="pill">Astro-powered</span>
+        <span class="pill">RSS available</span>
+        <span class="pill">No tracking by default</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Latest Resources</h2>
+      <ul class="list">
+        {latestResources.map(post => (
+          <li>
+            <a href={`/resources/${post.slug}/`}>{post.data.title}</a>
+            <span class="muted"> — {post.data.category}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2 style="margin-top:16px;">What this is (and isn't)</h2>
+      <ul class="list">
+        <li><strong>Is:</strong> actionable guides, frameworks, and credible news summaries.</li>
+        <li><strong>Isn't:</strong> hot takes, hype, or shallow coverage.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Resources</h2>
+      <p class="muted">In-depth guides on AI model types, security patterns, applications, and industry developments.</p>
+      <ul class="list">
+        <li><a href="/resources/">All resources</a></li>
+        {latestResources.slice(0, 2).map(post => (
+          <li><a href={`/resources/${post.slug}/`}>{post.data.title}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>News</h2>
+      <p class="muted">Curated updates on significant AI developments — model releases, research breakthroughs, and industry shifts.</p>
+      <ul class="list">
+        <li><a href="/news/">All news</a></li>
+        {latestNews.slice(0, 2).map(post => (
+          <li>
+            <a href={`/news/${post.slug}/`}>{post.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Browse by Category</h2>
+      <ul class="list">
+        <li><a href="/resources/categories/foundations/">Foundations</a></li>
+        <li><a href="/resources/categories/security/">Security</a></li>
+        <li><a href="/resources/categories/applications/">Applications</a></li>
+        <li><a href="/resources/categories/industry/">Industry</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p class="muted">
+        Get in touch or subscribe to updates.
+      </p>
+      <ul class="list">
+        <li><a href="/contact/">Contact page</a></li>
+        <li><a href="/rss.xml">Subscribe to RSS feed</a></li>
+        <li class="muted">Email: contact@foxxelabs.ie</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 18px;
+  }
+  
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .kicker {
+    font-weight: 900;
+    color: #d7e4f2;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    font-size: .85rem;
+    margin-bottom: 10px;
+  }
+  
+  .sub {
+    color: var(--muted);
+    margin: 0 0 16px 0;
+    max-width: 70ch;
+  }
+  
+  .ctaRow {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: 850;
+    color: var(--text);
+    background: linear-gradient(180deg, rgba(125,211,252,.22), rgba(167,139,250,.10));
+    transition: border-color 0.3s ease;
+  }
+  
+  .btn.secondary {
+    background: rgba(255,255,255,.03);
+    font-weight: 700;
+    color: var(--muted);
+  }
+  
+  .btn:hover {
+    border-color: rgba(255,255,255,.22);
+  }
+  
+  .pillrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--muted);
+    font-size: .92rem;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 900px) {
+    .grid2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .list {
+    margin: 8px 0 0 18px;
+    color: #d5e2f0;
+    line-height: 1.6;
+  }
+  
+  .list li {
+    margin-bottom: 6px;
+  }
+</style>

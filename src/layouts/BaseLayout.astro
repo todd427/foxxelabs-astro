@@ -1,0 +1,216 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+
+const { 
+  title, 
+  description = 'Foxxe Labs: practical tools, research prototypes, and creative experiments.',
+  image = '/og-default.png',
+  type = 'website'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href={canonicalURL} />
+  
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.site)} />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalURL} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={new URL(image, Astro.site)} />
+</head>
+<body>
+  <div class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand" href="/">Foxxe Labs</a>
+      <nav class="nav">
+        <a class={currentPath === '/' ? 'active' : ''} href="/">Home</a>
+        <a class={currentPath.startsWith('/resources') ? 'active' : ''} href="/resources/">Resources</a>
+        <a class={currentPath.startsWith('/news') ? 'active' : ''} href="/news/">News</a>
+        <a class={currentPath.startsWith('/tools') ? 'active' : ''} href="/tools/">Tools</a>
+        <a class={currentPath.startsWith('/about') ? 'active' : ''} href="/about/">About</a>
+        <a class={currentPath.startsWith('/contact') ? 'active' : ''} href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div>&copy; {new Date().getFullYear()} Foxxe Labs. Built as a lightweight static site for Cloudflare Pages.</div>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #0b0f14;
+    --card: #121923;
+    --muted: #9fb0c3;
+    --text: #e9f0f7;
+    --accent: #7dd3fc;
+    --accent2: #a78bfa;
+    --border: rgba(255,255,255,.10);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: radial-gradient(1200px 800px at 15% 10%, rgba(167,139,250,.18), transparent 55%),
+                radial-gradient(1000px 700px at 85% 20%, rgba(125,211,252,.16), transparent 55%),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+  }
+  
+  a {
+    color: var(--accent);
+  }
+  
+  a:hover {
+    color: #b3e7ff;
+  }
+  
+  .sitebar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11,15,20,.72);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+  }
+  
+  .sitebar-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  
+  .brand {
+    font-weight: 900;
+    letter-spacing: .2px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 750;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+  }
+  
+  .nav a:hover {
+    color: var(--text);
+    border-color: rgba(255,255,255,.12);
+  }
+  
+  .nav a.active {
+    color: var(--text);
+    border-color: rgba(125,211,252,.45);
+    background: rgba(125,211,252,.08);
+  }
+  
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 18px 70px;
+  }
+  
+  .card {
+    background: rgba(18,25,35,.92);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.28);
+    backdrop-filter: blur(6px);
+  }
+  
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+    letter-spacing: .2px;
+  }
+  
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+  }
+  
+  h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+  }
+  
+  .muted {
+    color: var(--muted);
+  }
+  
+  footer {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 18px 40px;
+    color: var(--muted);
+    font-size: .92rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sitebar-inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .nav {
+      justify-content: center;
+    }
+  }
+</style>

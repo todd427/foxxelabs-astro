@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact · Foxxe Labs" description="Contact Foxxe Labs.">
+  <div class="card" style="max-width: 980px; margin: 0 auto;">
+    <h1>Contact</h1>
+    <p class="muted">
+      Best option: email. If you're writing about a specific tool, include the page URL in your message so I know where you came from.
+    </p>
+
+    <div class="pillrow">
+      <span class="pill">Email-forwarding friendly</span>
+      <span class="pill">No contact form (yet)</span>
+      <span class="pill">Fastest response</span>
+    </div>
+
+    <h2>Email</h2>
+    <p>
+      <a href="mailto:contact@foxxelabs.ie">contact@foxxelabs.ie</a>
+    </p>
+
+    <h2>Tool-specific addresses (optional)</h2>
+    <p class="muted">
+      If you use Cloudflare Email Routing, you can create addresses like
+      <code>snapshot@foxxelabs.ie</code> or <code>tools@foxxelabs.ie</code> and forward them to the same inbox.
+      That gives you a built-in "where did this come from?" indicator in the email's <em>To:</em> line.
+    </p>
+
+    <div class="note">
+      If you want a real form (name/message) without exposing your email, we can add a Cloudflare Worker later.
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  h2 {
+    margin: 18px 0 10px 0;
+    font-size: 1.15rem;
+  }
+  
+  .pillrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  
+  .pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--muted);
+    font-size: .92rem;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .note {
+    border-left: 3px solid rgba(125,211,252,.55);
+    padding-left: 10px;
+    margin-top: 12px;
+    color: var(--muted);
+  }
+  
+  code {
+    background: rgba(255,255,255,.04);
+    padding: 2px 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+</style>

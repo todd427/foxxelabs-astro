@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allResources = await getCollection('resources', ({ data }) => {
+    return data.draft !== true;
+  });
+  
+  const allTags = allResources.flatMap(post => post.data.tags);
+  const uniqueTags = [...new Set(allTags)];
+  
+  return uniqueTags.map(tag => {
+    const filteredPosts = allResources.filter(post => 
+      post.data.tags.includes(tag)
+    ).sort((a, b) => 
+      b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+    );
+    
+    return {
+      params: { tag: tag.toLowerCase().replace(/\s+/g, '-') },
+      props: { posts: filteredPosts, tag }
+    };
+  });
+}
+
+const { posts, tag } = Astro.props;
+---
+
+<BaseLayout title={`#${tag} | Resources | Foxxe Labs`} description={`Resources tagged with ${tag}`}>
+  <div class="tag-page">
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/resources/">Resources</a>
+          <span class="separator">/</span>
+          <span>#{tag}</span>
+        </div>
+        <h1 class="page-title">#{tag}</h1>
+        <p class="post-count">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+      </div>
+    </div>
+    
+    <div class="posts-list">
+      <div class="container">
+        {posts.map((post, index) => {
+          const formattedDate = post.data.publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+          
+          return (
+            <article class="post-item" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="post-item-meta">
+                <span class="post-item-category">{post.data.category}</span>
+                <span class="meta-divider">•</span>
+                <time datetime={post.data.publishDate.toISOString()}>{formattedDate}</time>
+              </div>
+              
+              <h2 class="post-item-title">
+                <a href={`/resources/${post.slug}/`}>{post.data.title}</a>
+              </h2>
+              
+              <p class="post-item-description">{post.data.description}</p>
+              
+              <div class="post-item-tags">
+                {post.data.tags.filter(t => t !== tag).slice(0, 3).map(t => (
+                  <a href={`/resources/tags/${t.toLowerCase().replace(/\s+/g, '-')}/`} class="mini-tag">
+                    #{t}
+                  </a>
+                ))}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tag-page {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .breadcrumb a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .separator {
+    margin: 0 var(--space-xs);
+    opacity: 0.5;
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    color: var(--color-accent);
+  }
+  
+  .post-count {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  
+  .posts-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .post-item {
+    padding: var(--space-2xl) 0;
+    border-bottom: 1px solid var(--color-border);
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-item:first-child {
+    padding-top: 0;
+  }
+  
+  .post-item-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .post-item-category {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .meta-divider {
+    opacity: 0.3;
+  }
+  
+  .post-item-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+  }
+  
+  .post-item-title a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .post-item-title a:hover {
+    color: var(--color-accent);
+  }
+  
+  .post-item-description {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+  }
+  
+  .post-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .mini-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .mini-tag:hover {
+    color: var(--color-accent);
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+    
+    .post-item-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>

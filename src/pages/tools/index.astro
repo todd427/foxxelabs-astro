@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tools · Foxxe Labs" description="Tools and demos from Foxxe Labs.">
+  <div class="card" style="max-width: 980px; margin: 0 auto;">
+    <h1>Tools</h1>
+    <p class="muted">A small cabinet of working demos. More will show up as they stop being feral.</p>
+    <p class="muted">Need context? See <a href="/about/">About</a> or <a href="/contact/">Contact</a>.</p>
+
+    <div class="tool">
+      <div style="min-width: 42ch; flex: 1 1 42ch;">
+        <a class="title" href="/tools/thinking-style-snapshot/">Thinking Style Snapshot</a>
+        <div class="muted">10 YES/NO statements that estimate whether you lean focused, hybrid, or broad/systems. Includes multipotentialite follow-on links.</div>
+      </div>
+      <div class="pillrow">
+        <span class="pill">~2 minutes</span>
+        <span class="pill">No data stored</span>
+        <span class="pill">Printable</span>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 14px;
+    background: rgba(255,255,255,.02);
+    margin-top: 12px;
+  }
+  
+  .tool a.title {
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .tool a.title:hover {
+    color: var(--accent);
+  }
+  
+  .pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--muted);
+    font-size: .9rem;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .pillrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+</style>

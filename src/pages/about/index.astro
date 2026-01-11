@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About · Foxxe Labs" description="About Foxxe Labs.">
+  <div class="card" style="max-width: 980px; margin: 0 auto;">
+    <h1>About Foxxe Labs</h1>
+    <p class="muted">
+      Foxxe Labs is a small workshop where ideas become prototypes and prototypes become tools.
+      The goal is simple: build things that make thinking easier, learning faster, and choices clearer.
+    </p>
+
+    <h2>What you'll find here</h2>
+    <ul class="list">
+      <li><strong>Tools</strong> you can share (quizzes, checklists, small interactive demos).</li>
+      <li><strong>Research-adjacent prototypes</strong> that explore human-AI interaction, trust, and cognition.</li>
+      <li><strong>Creative experiments</strong> that are useful even when they're strange.</li>
+    </ul>
+
+    <h2>What you won't find (unless a page explicitly says otherwise)</h2>
+    <ul class="list">
+      <li>Hidden data collection.</li>
+      <li>Tracking by default.</li>
+    </ul>
+
+    <div class="note">
+      If a tool ever collects responses, the page will say so clearly, and will include a plain-language privacy note.
+    </div>
+
+    <h2>Start here</h2>
+    <ul class="list">
+      <li><a href="/tools/thinking-style-snapshot/">Thinking Style Snapshot</a></li>
+      <li><a href="/tools/">Tools index</a></li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  h2 {
+    margin: 18px 0 10px 0;
+    font-size: 1.15rem;
+  }
+  
+  .list {
+    margin: 8px 0 0 18px;
+    color: #d5e2f0;
+  }
+  
+  .note {
+    border-left: 3px solid rgba(125,211,252,.55);
+    padding-left: 10px;
+    margin-top: 12px;
+    color: var(--muted);
+  }
+</style>
