@@ -445,15 +445,20 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 <script>
 (function(){
-  const form = document.getElementById('snapshotForm');
-  const result = document.getElementById('result');
-  const badge = document.getElementById('badge');
-  const score = document.getElementById('score');
-  const summaryText = document.getElementById('summaryText');
-  const enjoyList = document.getElementById('enjoyList');
-  const nudgeText = document.getElementById('nudgeText');
-  const linksBlock = document.getElementById('linksBlock');
-  const resetBtn = document.getElementById('resetBtn');
+  const form = document.getElementById('snapshotForm') as HTMLFormElement;
+  const result = document.getElementById('result') as HTMLElement;
+  const badge = document.getElementById('badge') as HTMLElement;
+  const score = document.getElementById('score') as HTMLElement;
+  const summaryText = document.getElementById('summaryText') as HTMLElement;
+  const enjoyList = document.getElementById('enjoyList') as HTMLElement;
+  const nudgeText = document.getElementById('nudgeText') as HTMLElement;
+  const linksBlock = document.getElementById('linksBlock') as HTMLElement;
+  const resetBtn = document.getElementById('resetBtn') as HTMLButtonElement;
+
+  if (!form || !result || !badge || !score || !summaryText || !enjoyList || !nudgeText || !linksBlock || !resetBtn) {
+    console.error('Required elements not found');
+    return;
+  }
 
   const profiles = {
     focused: {
@@ -502,7 +507,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     }
   };
 
-  function countYes(formData){
+  function countYes(formData: FormData): number {
     let yes = 0;
     for (let i = 1; i <= 10; i++){
       if (formData.get('q' + i) === 'yes') yes++;
@@ -510,7 +515,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     return yes;
   }
 
-  function renderProfile(yesCount){
+  function renderProfile(yesCount: number): void {
     let p;
     if (yesCount <= 3) p = profiles.focused;
     else if (yesCount <= 7) p = profiles.hybrid;
