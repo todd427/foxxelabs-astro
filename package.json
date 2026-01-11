@@ -7,12 +7,15 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-news": "node scripts/generate-content.js news",
+    "generate-resource": "node scripts/generate-content.js resource"
   },
   "dependencies": {
     "astro": "^4.0.0",
     "@astrojs/mdx": "^2.0.0",
-    "@astrojs/rss": "^4.0.0"
+    "@astrojs/rss": "^4.0.0",
+    "@anthropic-ai/sdk": "^0.32.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.0",

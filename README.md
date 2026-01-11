@@ -5,6 +5,7 @@ A static site built with Astro for publishing in-depth resources and curated new
 ## Features
 
 - 📝 **Content Collections**: Structured resources and news with full frontmatter validation
+- 🤖 **Automated Content Generation**: AI-powered content creation using Claude API (NEW!)
 - 🏷️ **Taxonomy**: Categories and tags with automatic index pages
 - 🎨 **Distinctive Design**: Custom dark theme with Crimson Pro + IBM Plex Mono
 - 🖼️ **Hero Images**: First-class image support with consistent styling
@@ -35,6 +36,67 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+## 🤖 Automated Content Generation
+
+Generate AI-powered content using Claude API. Perfect for keeping your site updated with minimal effort!
+
+### Setup
+
+1. **Get API Key:**
+   - Visit https://console.anthropic.com/
+   - Create an API key
+
+2. **Set Environment Variable:**
+   ```bash
+   export ANTHROPIC_API_KEY="your-key-here"
+   ```
+   
+   Or add to your shell profile (~/.zshrc or ~/.bashrc):
+   ```bash
+   echo 'export ANTHROPIC_API_KEY="your-key-here"' >> ~/.zshrc
+   ```
+
+### Usage
+
+**Generate news posts** (searches recent AI developments):
+```bash
+npm run generate-news
+```
+
+**Generate resource post** on a specific topic:
+```bash
+npm run generate-resource "AI security best practices"
+npm run generate-resource "Vector database comparison"
+npm run generate-resource "Prompt engineering techniques"
+```
+
+### What Happens
+
+1. Script searches the web for current information
+2. Claude generates a complete post with:
+   - Proper frontmatter
+   - Structured content
+   - Sources and citations
+3. Saves as **draft** in `src/content/news/` or `src/content/resources/`
+4. You review, edit if needed
+5. Change `draft: false` to publish
+
+### Configuration
+
+Edit `scripts/config.json` to customize:
+- Topics to search
+- How far back to look
+- Max posts per run
+- Writing style preferences
+
+**Full documentation:** See `scripts/README.md`
+
+**Cost:** ~$0.05-0.30 per post using Claude Sonnet 4
+
+## Manual Content Creation
+
+You can still create content manually if you prefer:
 
 ## Project Structure
 

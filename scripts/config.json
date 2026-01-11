@@ -1,0 +1,30 @@
+{
+  "topics": [
+    "AI security vulnerabilities",
+    "LLM model releases",
+    "AI research breakthroughs",
+    "Machine learning applications",
+    "AI industry developments",
+    "Prompt engineering advances",
+    "AI safety and alignment"
+  ],
+  "newsCategories": [
+    "Research",
+    "Industry",
+    "Security",
+    "Breaking"
+  ],
+  "resourceCategories": [
+    "Foundations",
+    "Security",
+    "Applications",
+    "Industry"
+  ],
+  "daysBack": 7,
+  "maxPosts": 3,
+  "style": {
+    "tone": "Professional but conversational",
+    "approach": "Practical and actionable",
+    "format": "Clear structure with sources"
+  }
+}
