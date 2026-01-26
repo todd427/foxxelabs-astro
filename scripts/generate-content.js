@@ -23,6 +23,35 @@ if (!apiKey) {
 
 const client = new Anthropic({ apiKey });
 
+// Rate limiting configuration
+const RATE_LIMIT_DELAY_MS = 65000; // 65 seconds between requests to stay under 30K tokens/min
+const MAX_RETRIES = 3;
+const RETRY_DELAY_MS = 60000; // Wait 60 seconds before retry on rate limit
+
+/**
+ * Delay helper
+ */
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+/**
+ * Make API call with retry logic for rate limits
+ */
+async function callWithRetry(apiCall, retries = MAX_RETRIES) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      return await apiCall();
+    } catch (error) {
+      if (error.status === 429 && attempt < retries) {
+        const waitTime = RETRY_DELAY_MS * attempt; // Exponential backoff
+        console.log(`⏳ Rate limited. Waiting ${waitTime / 1000}s before retry (attempt ${attempt}/${retries})...`);
+        await delay(waitTime);
+      } else {
+        throw error;
+      }
+    }
+  }
+}
+
 // Parse command line arguments
 const args = process.argv.slice(2);
 const contentType = args[0] || 'news'; // 'news' or 'resource'
@@ -38,7 +67,7 @@ async function searchForContent(topic, daysBack) {
     ? `${specificTopic} AI ${daysBack} days`
     : `${topic} recent ${daysBack} days`;
   
-  const response = await client.messages.create({
+  const response = await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 4000,
     tools: [{
@@ -49,7 +78,7 @@ async function searchForContent(topic, daysBack) {
       role: 'user',
       content: `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype.`
     }]
-  });
+  }));
   
   return response;
 }
@@ -91,7 +120,7 @@ Search results context: ${topic}
 
 Generate the post as JSON only, no additional text.`;
 
-  const response = await client.messages.create({
+  const response = await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 4000,
     messages: [
@@ -106,7 +135,7 @@ Generate the post as JSON only, no additional text.`;
         content: prompt
       }
     ]
-  });
+  }));
   
   // Extract JSON from response
   const text = response.content[0].text;
@@ -171,7 +200,7 @@ Search for current information and output as JSON:
   "content": "Full markdown content"
 }`;
 
-  const response = await client.messages.create({
+  const response = await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 8000,
     tools: [{
@@ -182,7 +211,7 @@ Search for current information and output as JSON:
       role: 'user',
       content: prompt
     }]
-  });
+  }));
   
   // Get the final text response
   const text = response.content
@@ -297,17 +326,31 @@ async function main() {
     const topics = specificTopic ? [specificTopic] : config.topics.slice(0, config.maxPosts);
     const posts = [];
     
-    for (const topic of topics) {
+    for (let i = 0; i < topics.length; i++) {
+      const topic = topics[i];
       try {
         const searchResults = await searchForContent(topic, config.daysBack);
+        
+        // Delay between search and generation to respect rate limits
+        console.log(`⏳ Waiting ${RATE_LIMIT_DELAY_MS / 1000}s before generating post...`);
+        await delay(RATE_LIMIT_DELAY_MS);
+        
         const postData = await generateNewsPost(searchResults, topic);
         const slug = createMarkdownFile(postData, 'news');
         posts.push(slug);
         
-        // Small delay between requests
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Delay between topics (if not the last topic)
+        if (i < topics.length - 1) {
+          console.log(`⏳ Waiting ${RATE_LIMIT_DELAY_MS / 1000}s before next topic...\n`);
+          await delay(RATE_LIMIT_DELAY_MS);
+        }
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
+        // Still wait before next topic to avoid compounding rate limits
+        if (i < topics.length - 1) {
+          console.log(`⏳ Waiting before retry/next topic...`);
+          await delay(RATE_LIMIT_DELAY_MS);
+        }
       }
     }
     
