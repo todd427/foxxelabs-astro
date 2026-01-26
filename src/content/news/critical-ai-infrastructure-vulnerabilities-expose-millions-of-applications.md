@@ -6,7 +6,7 @@ category: "Security"
 tags: ["vulnerabilities", "ai-agents", "infrastructure", "cybersecurity"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://chainlit.io/security-advisory"
-draft: true
+draft: false
 ---
 
 ## Critical Vulnerabilities Hit Popular AI Frameworks

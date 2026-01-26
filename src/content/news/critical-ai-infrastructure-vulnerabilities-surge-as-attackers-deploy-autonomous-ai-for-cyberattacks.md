@@ -6,7 +6,7 @@ category: "Security"
 tags: ["vulnerabilities", "AI security", "cyberattacks", "infrastructure"]
 source: "Multiple Security Reports"
 sourceUrl: "https://example.com"
-draft: true
+draft: false
 ---
 
 ## Wave of Critical AI Security Flaws Exposes Infrastructure Risks

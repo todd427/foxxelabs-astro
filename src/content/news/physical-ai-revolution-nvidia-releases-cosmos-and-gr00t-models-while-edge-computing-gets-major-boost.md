@@ -6,7 +6,7 @@ category: "Breaking"
 tags: ["physical-ai", "edge-computing", "robotics", "model-releases"]
 source: "NVIDIA"
 sourceUrl: "https://blogs.nvidia.com/blog/ces-2025-physical-ai/"
-draft: true
+draft: false
 ---
 
 ## Key Developments

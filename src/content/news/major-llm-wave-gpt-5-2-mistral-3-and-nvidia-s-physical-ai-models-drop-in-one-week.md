@@ -6,7 +6,7 @@ category: "Breaking"
 tags: ["model-releases", "enterprise-ai", "physical-ai", "cost-optimization"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://foxxelabs.com/ai-news-aggregation"
-draft: true
+draft: false
 ---
 
 ## Key Developments
