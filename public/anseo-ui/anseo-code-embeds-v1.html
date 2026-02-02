@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anseo — Code Embed Feature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Dark theme */
+        :root {
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --bg-card: #1f2937;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border-color: #374151;
+            --accent-primary: #3b82f6;
+        }
+
+        /* M3-inspired avatar colors */
+        .avatar-1 { background: #E8DEF8; color: #4A4458; }
+        .avatar-2 { background: #D0BCFF; color: #381E72; }
+        .avatar-3 { background: #FFD8E4; color: #633B48; }
+        .avatar-4 { background: #C2E7FF; color: #004A77; }
+        .avatar-5 { background: #A8DAB5; color: #0D5223; }
+        
+        /* Platform brand colors */
+        .codepen-bg { background: linear-gradient(135deg, #1e1f26 0%, #2c2d35 100%); }
+        .jsfiddle-bg { background: linear-gradient(135deg, #0084ff 0%, #0066cc 100%); }
+        .codesandbox-bg { background: linear-gradient(135deg, #151515 0%, #242424 100%); }
+        .replit-bg { background: linear-gradient(135deg, #0d101e 0%, #1c2333 100%); }
+    </style>
+</head>
+<body class="min-h-screen" style="background: var(--bg-primary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <div class="max-w-2xl mx-auto px-4 py-6 border-b" style="border-color: var(--border-color);">
+        <h1 class="text-xl font-bold text-blue-400">Code Embed Feature — Wireframe</h1>
+        <p class="text-sm mt-1" style="color: var(--text-muted);">How shared code links would appear in the Anseo feed</p>
+    </div>
+
+    <div class="max-w-2xl mx-auto divide-y" style="border-color: var(--border-color);">
+
+        <!-- ==================== POST WITH CODEPEN EMBED ==================== -->
+        <article class="p-4">
+            <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full avatar-3 flex items-center justify-center text-sm font-semibold flex-shrink-0">AM</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-semibold">Aoife Murphy</span>
+                        <span style="color: var(--text-muted);" class="text-sm">2h ago</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-400 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">palette</span> Design Club
+                        </span>
+                    </div>
+                    <p class="mt-2" style="color: var(--text-secondary);">Finally got that glassmorphism card effect working! Check it out 👇</p>
+                    
+                    <!-- CodePen Embed Card -->
+                    <div class="mt-3 rounded-xl overflow-hidden border" style="border-color: var(--border-color);">
+                        <!-- Preview Image / Thumbnail -->
+                        <div class="codepen-bg h-48 relative flex items-center justify-center">
+                            <!-- Simulated preview -->
+                            <div class="w-32 h-20 rounded-xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center">
+                                <span class="text-white/60 text-sm">Card Preview</span>
+                            </div>
+                            <!-- Play overlay -->
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Embed Info -->
+                        <div class="p-3" style="background: var(--bg-secondary);">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5" viewBox="0 0 100 100" fill="none">
+                                    <path d="M50 0L0 25v50l50 25 50-25V25L50 0z" fill="#fff"/>
+                                    <path d="M50 0L0 25l50 25 50-25L50 0z" fill="#333"/>
+                                    <path d="M0 75l50 25V50L0 25v50z" fill="#333"/>
+                                    <path d="M100 75l-50 25V50l50-25v50z" fill="#333"/>
+                                </svg>
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium text-sm truncate">Glassmorphism Card Effect</p>
+                                    <p class="text-xs truncate" style="color: var(--text-muted);">codepen.io/aoife_designs</p>
+                                </div>
+                                <a href="#" class="px-3 py-1.5 rounded-lg text-sm font-medium bg-white/10 hover:bg-white/20 transition flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                                    Open
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5 mt-3" style="color: var(--text-muted);">
+                        <button class="flex items-center gap-1 hover:text-red-400 transition">
+                            <span class="material-symbols-outlined text-xl">favorite</span>
+                            <span class="text-sm">24</span>
+                        </button>
+                        <button class="flex items-center gap-1 hover:text-blue-400 transition">
+                            <span class="material-symbols-outlined text-xl">chat_bubble</span>
+                            <span class="text-sm">8</span>
+                        </button>
+                        <button class="hover:text-orange-400 transition">
+                            <span class="material-symbols-outlined text-xl">bookmark</span>
+                        </button>
+                        <button class="hover:text-green-400 transition ml-auto">
+                            <span class="material-symbols-outlined text-xl">share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==================== POST WITH JSFIDDLE EMBED ==================== -->
+        <article class="p-4">
+            <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full avatar-4 flex items-center justify-center text-sm font-semibold flex-shrink-0">TW</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-semibold">Todd Willingham</span>
+                        <span style="color: var(--text-muted);" class="text-sm">5h ago</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-400 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">code</span> Web Dev
+                        </span>
+                    </div>
+                    <p class="mt-2" style="color: var(--text-secondary);">Here's that Alpine.js accordion component I mentioned. Fork it and try it out!</p>
+                    
+                    <!-- JSFiddle Embed Card -->
+                    <div class="mt-3 rounded-xl overflow-hidden border" style="border-color: var(--border-color);">
+                        <div class="jsfiddle-bg h-48 relative flex items-center justify-center">
+                            <!-- Simulated code preview -->
+                            <div class="text-left font-mono text-xs text-white/70 p-4">
+                                <div><span class="text-blue-300">&lt;div</span> <span class="text-green-300">x-data</span>=<span class="text-yellow-300">"{ open: false }"</span><span class="text-blue-300">&gt;</span></div>
+                                <div class="ml-4"><span class="text-blue-300">&lt;button</span> <span class="text-green-300">@click</span>=<span class="text-yellow-300">"open = !open"</span><span class="text-blue-300">&gt;</span></div>
+                                <div class="ml-8">Toggle</div>
+                                <div class="ml-4"><span class="text-blue-300">&lt;/button&gt;</span></div>
+                                <div><span class="text-blue-300">&lt;/div&gt;</span></div>
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3" style="background: var(--bg-secondary);">
+                            <div class="flex items-center gap-2">
+                                <div class="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-white text-xs font-bold">JS</div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium text-sm truncate">Alpine.js Accordion Component</p>
+                                    <p class="text-xs truncate" style="color: var(--text-muted);">jsfiddle.net/toddw/abc123</p>
+                                </div>
+                                <a href="#" class="px-3 py-1.5 rounded-lg text-sm font-medium bg-white/10 hover:bg-white/20 transition flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                                    Open
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5 mt-3" style="color: var(--text-muted);">
+                        <button class="flex items-center gap-1 hover:text-red-400 transition">
+                            <span class="material-symbols-outlined text-xl">favorite</span>
+                            <span class="text-sm">18</span>
+                        </button>
+                        <button class="flex items-center gap-1 hover:text-blue-400 transition">
+                            <span class="material-symbols-outlined text-xl">chat_bubble</span>
+                            <span class="text-sm">5</span>
+                        </button>
+                        <button class="hover:text-orange-400 transition">
+                            <span class="material-symbols-outlined text-xl">bookmark</span>
+                        </button>
+                        <button class="hover:text-green-400 transition ml-auto">
+                            <span class="material-symbols-outlined text-xl">share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==================== POST WITH CODESANDBOX EMBED ==================== -->
+        <article class="p-4">
+            <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full avatar-1 flex items-center justify-center text-sm font-semibold flex-shrink-0">SC</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-semibold">Sarah Chen</span>
+                        <span style="color: var(--text-muted);" class="text-sm">1d ago</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-400 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">code</span> Web Dev
+                        </span>
+                    </div>
+                    <p class="mt-2" style="color: var(--text-secondary);">Built a React todo app for the assignment. Here's my CodeSandbox if anyone wants to compare approaches!</p>
+                    
+                    <!-- CodeSandbox Embed Card -->
+                    <div class="mt-3 rounded-xl overflow-hidden border" style="border-color: var(--border-color);">
+                        <div class="codesandbox-bg h-48 relative flex items-center justify-center">
+                            <!-- Simulated app preview -->
+                            <div class="bg-white rounded-lg p-3 w-40 shadow-xl">
+                                <div class="text-gray-800 text-xs font-medium mb-2">My Todos</div>
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                                        <div class="w-3 h-3 rounded border border-gray-300"></div>
+                                        <span>Learn React</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-gray-400 line-through">
+                                        <div class="w-3 h-3 rounded bg-green-500"></div>
+                                        <span>Setup project</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition cursor-pointer">
+                                <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3" style="background: var(--bg-secondary);">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5" viewBox="0 0 256 296" fill="none">
+                                    <path d="M115.5 0L0 66.3v163.4l115.5 66.3 115.5-66.3V66.3L115.5 0z" fill="#fff"/>
+                                </svg>
+                                <div class="flex-1 min-w-0">
+                                    <p class="font-medium text-sm truncate">React Todo App</p>
+                                    <p class="text-xs truncate" style="color: var(--text-muted);">codesandbox.io/s/react-todo-abc123</p>
+                                </div>
+                                <a href="#" class="px-3 py-1.5 rounded-lg text-sm font-medium bg-white/10 hover:bg-white/20 transition flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                                    Open
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5 mt-3" style="color: var(--text-muted);">
+                        <button class="flex items-center gap-1 hover:text-red-400 transition">
+                            <span class="material-symbols-outlined text-xl">favorite</span>
+                            <span class="text-sm">31</span>
+                        </button>
+                        <button class="flex items-center gap-1 hover:text-blue-400 transition">
+                            <span class="material-symbols-outlined text-xl">chat_bubble</span>
+                            <span class="text-sm">12</span>
+                        </button>
+                        <button class="hover:text-orange-400 transition">
+                            <span class="material-symbols-outlined text-xl">bookmark</span>
+                        </button>
+                        <button class="hover:text-green-400 transition ml-auto">
+                            <span class="material-symbols-outlined text-xl">share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==================== EXPANDED EMBED (MODAL/INLINE) ==================== -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined">fullscreen</span>
+                Expanded View (Click to Expand)
+            </h2>
+            
+            <div class="rounded-xl overflow-hidden border" style="border-color: var(--border-color);">
+                <!-- Header -->
+                <div class="p-3 flex items-center justify-between" style="background: var(--bg-secondary);">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" viewBox="0 0 100 100" fill="none">
+                            <path d="M50 0L0 25v50l50 25 50-25V25L50 0z" fill="#fff"/>
+                            <path d="M50 0L0 25l50 25 50-25L50 0z" fill="#333"/>
+                        </svg>
+                        <span class="font-medium text-sm">Glassmorphism Card Effect</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-white/10" style="color: var(--text-muted);">by Aoife Murphy</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="p-1.5 rounded hover:bg-white/10 transition" title="Fork">
+                            <span class="material-symbols-outlined text-lg">fork_right</span>
+                        </button>
+                        <button class="p-1.5 rounded hover:bg-white/10 transition" title="Open in CodePen">
+                            <span class="material-symbols-outlined text-lg">open_in_new</span>
+                        </button>
+                        <button class="p-1.5 rounded hover:bg-white/10 transition" title="Close">
+                            <span class="material-symbols-outlined text-lg">close</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Iframe placeholder -->
+                <div class="codepen-bg h-80 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="w-40 h-24 mx-auto rounded-xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center mb-4">
+                            <span class="text-white/60 text-sm">Live Preview</span>
+                        </div>
+                        <p class="text-white/50 text-sm">Interactive CodePen embed loads here</p>
+                        <p class="text-white/30 text-xs mt-1">(sandboxed iframe)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== IMPLEMENTATION NOTES ==================== -->
+    <div class="max-w-2xl mx-auto p-4 mt-8 mb-20">
+        <div class="rounded-xl p-6" style="background: var(--bg-secondary); border: 1px solid var(--border-color);">
+            <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined">engineering</span>
+                Implementation Plan
+            </h2>
+            
+            <div class="space-y-4">
+                
+                <div class="p-4 rounded-lg" style="background: var(--bg-primary);">
+                    <h3 class="font-semibold text-green-400 flex items-center gap-2">
+                        <span class="material-symbols-outlined">looks_one</span>
+                        Phase 1: Link Detection & Preview Cards
+                    </h3>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">
+                        Detect CodePen/JSFiddle/CodeSandbox URLs in posts, fetch oEmbed metadata, display rich preview cards.
+                    </p>
+                    <div class="flex items-center gap-4 mt-3 text-sm">
+                        <span class="flex items-center gap-1 text-blue-400">
+                            <span class="material-symbols-outlined text-base">schedule</span>
+                            6-8 hours
+                        </span>
+                        <span style="color: var(--text-muted);">URL regex, oEmbed API calls, card template</span>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-lg" style="background: var(--bg-primary);">
+                    <h3 class="font-semibold text-yellow-400 flex items-center gap-2">
+                        <span class="material-symbols-outlined">looks_two</span>
+                        Phase 2: Click-to-Expand Embeds
+                    </h3>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">
+                        Clicking preview loads the actual iframe embed (sandboxed). Keeps feed fast, only loads when needed.
+                    </p>
+                    <div class="flex items-center gap-4 mt-3 text-sm">
+                        <span class="flex items-center gap-1 text-blue-400">
+                            <span class="material-symbols-outlined text-base">schedule</span>
+                            4-6 hours
+                        </span>
+                        <span style="color: var(--text-muted);">Iframe sandboxing, lazy loading, modal/inline toggle</span>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-lg" style="background: var(--bg-primary);">
+                    <h3 class="font-semibold text-purple-400 flex items-center gap-2">
+                        <span class="material-symbols-outlined">looks_3</span>
+                        Phase 3: Additional Platforms
+                    </h3>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">
+                        Add support for Replit, GitHub Gists, StackBlitz, Figma embeds.
+                    </p>
+                    <div class="flex items-center gap-4 mt-3 text-sm">
+                        <span class="flex items-center gap-1 text-blue-400">
+                            <span class="material-symbols-outlined text-base">schedule</span>
+                            4-6 hours
+                        </span>
+                        <span style="color: var(--text-muted);">Per-platform oEmbed handlers</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 rounded-lg border-2 border-dashed" style="border-color: var(--border-color);">
+                    <h3 class="font-semibold flex items-center gap-2">
+                        <span class="material-symbols-outlined">summarize</span>
+                        Total Estimate
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4 mt-3 text-sm">
+                        <div>
+                            <p class="font-medium text-green-400">MVP (Phase 1)</p>
+                            <p style="color: var(--text-muted);">6-8 hours</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-blue-400">Full Feature (1-3)</p>
+                            <p style="color: var(--text-muted);">14-20 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-sm" style="color: var(--text-muted);">
+                    <p class="font-medium mb-2">Supported Platforms (Phase 1-3):</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 rounded bg-white/10">CodePen</span>
+                        <span class="px-2 py-1 rounded bg-white/10">JSFiddle</span>
+                        <span class="px-2 py-1 rounded bg-white/10">CodeSandbox</span>
+                        <span class="px-2 py-1 rounded bg-white/10">Replit</span>
+                        <span class="px-2 py-1 rounded bg-white/10">GitHub Gist</span>
+                        <span class="px-2 py-1 rounded bg-white/10">StackBlitz</span>
+                        <span class="px-2 py-1 rounded bg-white/10">Figma</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

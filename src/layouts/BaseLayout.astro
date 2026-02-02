@@ -49,6 +49,7 @@ const currentPath = Astro.url.pathname;
       <a class="brand" href="/">Foxxe Labs</a>
       <nav class="nav">
         <a class={currentPath === '/' ? 'active' : ''} href="/">Home</a>
+        <a class={currentPath.startsWith('/anseo-ui') ? 'active' : ''} href="/anseo-ui/index.html">Anseo UI Dev</a>
         <a class={currentPath.startsWith('/resources') ? 'active' : ''} href="/resources/">Resources</a>
         <a class={currentPath.startsWith('/news') ? 'active' : ''} href="/news/">News</a>
         <a class={currentPath.startsWith('/tools') ? 'active' : ''} href="/tools/">Tools</a>
