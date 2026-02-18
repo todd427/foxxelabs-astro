@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Ethics — Ethics of IP in the Digital Age</title>
+<meta name="description" content="Ethics of Intellectual Property in the Digital Age — Piracy, AI training data, creator rights vs open access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --border: rgba(45, 212, 191, 0.15);
+    --cyan: #2dd4bf;
+    --cyan-bright: #5eead4;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --nav-height: 48px;
+    --footer-height: 52px;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── TOP NAV ─── */
+  .topnav {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .topnav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .topnav-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--cyan);
+  }
+
+  .topnav-sep {
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  .topnav-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .topnav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .topnav-right a {
+    color: var(--muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .topnav-right a:hover { color: var(--text); }
+
+  .slide-counter { font-variant-numeric: tabular-nums; }
+
+  /* ─── DOT NAV ─── */
+  .dotnav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0 6px;
+    flex-shrink: 0;
+    background: var(--bg);
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    border: none;
+    padding: 0;
+  }
+
+  .dot:hover { background: var(--cyan); transform: scale(1.15); }
+  .dot.active { background: var(--cyan-bright); transform: scale(1.15); }
+
+  /* ─── SLIDE AREA ─── */
+  .slide-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    overflow: hidden;
+  }
+
+  .slide-area img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 160px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* ─── BOTTOM NAV ─── */
+  .bottomnav {
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+    user-select: none;
+  }
+
+  .nav-btn.prev {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .nav-btn.prev:hover { color: var(--text); border-color: rgba(255,255,255,0.15); }
+  .nav-btn.prev:disabled { opacity: 0.3; cursor: default; }
+  .nav-btn.prev:disabled:hover { color: var(--muted); border-color: var(--border); }
+
+  .nav-btn.next {
+    background: var(--cyan);
+    color: var(--bg);
+  }
+
+  .nav-btn.next:hover { background: var(--cyan-bright); }
+  .nav-btn.next:disabled { opacity: 0.3; cursor: default; }
+  .nav-btn.next:disabled:hover { background: var(--cyan); }
+
+  .nav-hint {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .nav-hint kbd {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* ─── FULL-HEIGHT LAYOUT ─── */
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    .topnav, .bottomnav { padding: 0 12px; }
+    .slide-area { padding: 8px 8px; }
+    .topnav-sub { display: none; }
+    .nav-hint { display: none; }
+    .nav-btn { padding: 8px 14px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <nav class="topnav">
+    <div class="topnav-left">
+      <span class="topnav-title">Cyber Ethics</span>
+      <span class="topnav-sep">|</span>
+      <span class="topnav-sub">Ethics of IP in the Digital Age</span>
+    </div>
+    <div class="topnav-right">
+      <span class="slide-counter"><span id="current">1</span> / <span id="total">10</span></span>
+      <a href="https://foxxelabs.ie">&#9862; foxxelabs.ie</a>
+    </div>
+  </nav>
+
+  <div class="dotnav" id="dotnav"></div>
+
+  <div class="slide-area">
+    <img id="slide" src="slides/slide-01.jpg" alt="Slide 1">
+  </div>
+
+  <nav class="bottomnav">
+    <button class="nav-btn prev" id="prevBtn" disabled>
+      <span>&#8592;</span> Prev
+    </button>
+    <span class="nav-hint"><kbd>&#8592;</kbd> <kbd>&#8594;</kbd> Arrow keys to navigate</span>
+    <button class="nav-btn next" id="nextBtn">
+      Next <span>&#8594;</span>
+    </button>
+  </nav>
+
+</div>
+
+<script>
+  const TOTAL = 10;
+  let current = 1;
+
+  const slideImg   = document.getElementById('slide');
+  const counterEl   = document.getElementById('current');
+  const prevBtn     = document.getElementById('prevBtn');
+  const nextBtn     = document.getElementById('nextBtn');
+  const dotnav      = document.getElementById('dotnav');
+
+  // Build dots
+  for (let i = 1; i <= TOTAL; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 1 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + i);
+    dot.dataset.slide = i;
+    dot.addEventListener('click', () => goTo(i));
+    dotnav.appendChild(dot);
+  }
+
+  const dots = dotnav.querySelectorAll('.dot');
+
+  const slideAlts = [
+    "Title — Ethics of Intellectual Property in the Digital Age",
+    "Copyright and Intellectual Property — Who Benefits? Who Decides? Who Pays?",
+    "The Original Bargain — Statute of Anne 1710",
+    "The bargain keeps breaking — Berne Convention 1886, TRIPS 1995",
+    "And now we have AI — Training Data and Open Access Betrayal",
+    "The Moving Target — Timeline from 1710 to AI Disruption",
+    "Utilitarianism — The Measurement, Dynamic, and Distribution Problems",
+    "Deontology — Human Learning analogy fails, Moral Rights are Kantian",
+    "Questions for Ethical Reasoning",
+    "Thank you — We live in interesting times"
+  ];
+
+  function goTo(n) {
+    if (n < 1 || n > TOTAL) return;
+    current = n;
+    const num = String(n).padStart(2, '0');
+    slideImg.src = 'slides/slide-' + num + '.jpg';
+    slideImg.alt = slideAlts[n - 1] || 'Slide ' + n;
+    counterEl.textContent = n;
+    prevBtn.disabled = (n === 1);
+    nextBtn.disabled = (n === TOTAL);
+    dots.forEach((d, i) => d.classList.toggle('active', i === n - 1));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Swipe support
+  let touchStartX = 0;
+  slideImg.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slideImg.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) goTo(current + 1);
+      else goTo(current - 1);
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
