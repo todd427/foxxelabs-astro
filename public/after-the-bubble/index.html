@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>After the Bubble: What Comes Next | FoxxeLabs</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0a1628;
+    --bg-card: #0f1f38;
+    --bg-highlight: #132744;
+    --teal: #2dd4bf;
+    --teal-dim: #1a9a8a;
+    --teal-glow: rgba(45, 212, 191, 0.15);
+    --coral: #f97066;
+    --amber: #fbbf24;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-dim: #64748b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slide-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4vh 8vw;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    background: var(--bg-deep);
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .slide.exiting {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  /* Typography */
+  .slide-label {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: var(--teal);
+    margin-bottom: 1.5vh;
+  }
+
+  .slide-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 3vh;
+    max-width: 75%;
+  }
+
+  .slide-title .accent { color: var(--teal); }
+  .slide-title .warn { color: var(--coral); }
+  .slide-title .gold { color: var(--amber); }
+
+  .slide-body {
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 68%;
+    font-weight: 300;
+  }
+
+  .slide-body strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .slide-body em {
+    color: var(--teal);
+    font-style: italic;
+  }
+
+  .callout {
+    border-left: 3px solid var(--teal);
+    padding: 2vh 2.5vw;
+    margin: 3vh 0;
+    background: var(--teal-glow);
+    max-width: 68%;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .callout-warn {
+    border-left-color: var(--coral);
+    background: rgba(249, 112, 102, 0.08);
+  }
+
+  .callout-gold {
+    border-left-color: var(--amber);
+    background: rgba(251, 191, 36, 0.08);
+  }
+
+  /* Timeline */
+  .timeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin: 4vh 0 2vh;
+    max-width: 85%;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--teal-dim), var(--teal-dim) 75%, var(--coral) 75%);
+  }
+
+  .timeline-node {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding-top: 32px;
+  }
+
+  .timeline-node::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--teal-dim);
+    border: 2px solid var(--bg-deep);
+  }
+
+  .timeline-node:last-child::before {
+    background: var(--coral);
+    box-shadow: 0 0 12px rgba(249, 112, 102, 0.5);
+  }
+
+  .timeline-node .era {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5vh;
+  }
+
+  .timeline-node:last-child .era { color: var(--coral); }
+
+  .timeline-node .desc {
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  .timeline-node .arrow {
+    font-family: 'Space Mono', monospace;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+  }
+
+  /* Stats grid */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2vw;
+    margin: 3vh 0;
+    max-width: 80%;
+  }
+
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(45, 212, 191, 0.12);
+    padding: 2.5vh 2vw;
+    border-radius: 4px;
+  }
+
+  .stat-number {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 1vh;
+  }
+
+  .stat-number.warn { color: var(--coral); }
+  .stat-number.gold { color: var(--amber); }
+
+  .stat-desc {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  /* Maslow pyramid */
+  .maslow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 3vh 0;
+    max-width: 70%;
+  }
+
+  .maslow-row {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+  }
+
+  .maslow-level {
+    padding: 1.2vh 2vw;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.7rem, 1.1vw, 0.9rem);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .maslow-tag {
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    color: var(--text-dim);
+    white-space: nowrap;
+    min-width: 180px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  .m-physiological { background: #1a3a2a; color: #4ade80; flex: 1; }
+  .m-safety { background: #1a3535; color: #2dd4bf; flex: 0.85; }
+  .m-belonging { background: #1a2d45; color: #60a5fa; flex: 0.7; }
+  .m-esteem { background: #2d1a45; color: #a78bfa; flex: 0.55; }
+  .m-actualization { background: #3d1a2a; color: var(--coral); flex: 0.4; border: 1px dashed var(--coral); }
+
+  /* Pieces grid */
+  .pieces-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
+    margin: 3vh 0;
+    max-width: 85%;
+  }
+
+  .piece {
+    background: var(--bg-card);
+    border: 1px solid rgba(45, 212, 191, 0.12);
+    padding: 2.5vh 2vw;
+    border-radius: 4px;
+  }
+
+  .piece-name {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: var(--teal);
+    margin-bottom: 1vh;
+    font-weight: 700;
+  }
+
+  .piece-detail {
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Chain diagram */
+  .chain {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    margin: 3vh 0;
+    flex-wrap: wrap;
+    max-width: 85%;
+  }
+
+  .chain-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 1.2vh 1.5vw;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    color: var(--teal);
+    white-space: nowrap;
+  }
+
+  .chain-arrow {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+  }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    bottom: 3vh;
+    right: 4vw;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    background: var(--bg-card);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    color: var(--teal);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .nav-btn:hover {
+    background: var(--teal);
+    color: var(--bg-deep);
+  }
+
+  .nav-counter {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--teal), var(--teal-dim));
+    transition: width 0.4s ease;
+    z-index: 100;
+  }
+
+  /* Footer */
+  .slide-footer {
+    position: absolute;
+    bottom: 3vh;
+    left: 8vw;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .slide-footer a {
+    color: var(--teal-dim);
+    text-decoration: none;
+  }
+
+  /* Question mark animation for slide 3 */
+  .question-marks {
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(8rem, 18vw, 14rem);
+    font-weight: 700;
+    color: rgba(45, 212, 191, 0.06);
+    line-height: 0.9;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .home-link {
+    position: fixed;
+    top: 14px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: rgba(15, 31, 56, 0.85);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .home-link:hover {
+    color: var(--teal);
+    border-color: rgba(45, 212, 191, 0.4);
+  }
+
+  .home-link svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media (max-width: 768px) {
+    .slide { padding: 3vh 5vw; }
+    .slide-title, .slide-body, .callout { max-width: 95%; }
+    .stat-grid { max-width: 95%; grid-template-columns: 1fr 1fr; }
+    .pieces-grid { grid-template-columns: 1fr; max-width: 95%; }
+    .timeline { max-width: 95%; flex-wrap: wrap; }
+    .maslow { max-width: 95%; }
+    .chain { max-width: 95%; }
+    .maslow-tag { display: none; }
+    .question-marks { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="home-link" href="https://foxxelabs.ie" title="Back to FoxxeLabs">
+  <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+  foxxelabs.ie
+</a>
+
+<div class="progress-bar" id="progress"></div>
+
+<div class="slide-container" id="deck">
+
+  <!-- SLIDE 1: Title -->
+  <div class="slide active" data-index="0">
+    <div class="slide-label">FoxxeLabs Research &bull; February 2026</div>
+    <div class="slide-title">
+      After the Bubble:<br>
+      <span class="accent">What Comes Next?</span>
+    </div>
+    <div class="slide-body">
+      The labour-for-wages model is breaking. Every previous economic revolution displaced one type of human contribution and created demand for another. The AI revolution displaces <em>cognitive labour</em> &mdash; and it&rsquo;s not yet clear what replaces it.
+    </div>
+    <div class="callout">
+      This is not a policy paper. It&rsquo;s an exploration of what happens when a billion knowledge workers need a new reason to exist &mdash; and a sketch of what the on-ramps might look like.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 2: The Cognitive Ladder -->
+  <div class="slide" data-index="1">
+    <div class="slide-label">The Deeper Question</div>
+    <div class="slide-title">
+      The <span class="accent">Cognitive Ladder</span> Is Running Out of Rungs
+    </div>
+    <div class="timeline">
+      <div class="timeline-node">
+        <div class="era">Agricultural</div>
+        <div class="desc">Physical labour<br><span class="arrow">&rarr;</span> factories</div>
+      </div>
+      <div class="timeline-node">
+        <div class="era">Industrial</div>
+        <div class="desc">Craft labour<br><span class="arrow">&rarr;</span> offices</div>
+      </div>
+      <div class="timeline-node">
+        <div class="era">Digital</div>
+        <div class="desc">Routine labour<br><span class="arrow">&rarr;</span> knowledge</div>
+      </div>
+      <div class="timeline-node">
+        <div class="era">AI</div>
+        <div class="desc">Cognitive labour<br><span class="arrow">&rarr;</span> ???</div>
+      </div>
+    </div>
+    <div class="slide-body">
+      Every previous wave created demand for a new type of human contribution. This wave displaces cognitive labour &mdash; and it&rsquo;s not clear what replaces it. For the first time, the escalation path runs out.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 3: Maslow Mapping -->
+  <div class="slide" data-index="2">
+    <div class="slide-label">A Framework for Understanding</div>
+    <div class="slide-title">
+      The Ladder Maps to <span class="accent">Maslow</span>
+    </div>
+    <div class="maslow">
+      <div class="maslow-row">
+        <div class="maslow-tag">AI Revolution &rarr;</div>
+        <div class="maslow-level m-actualization">Self-Actualisation</div>
+      </div>
+      <div class="maslow-row">
+        <div class="maslow-tag">Digital Revolution &rarr;</div>
+        <div class="maslow-level m-esteem">Esteem &amp; Identity</div>
+      </div>
+      <div class="maslow-row">
+        <div class="maslow-tag">(&hellip;belonging?)</div>
+        <div class="maslow-level m-belonging">Belonging &amp; Community</div>
+      </div>
+      <div class="maslow-row">
+        <div class="maslow-tag">Industrial Revolution &rarr;</div>
+        <div class="maslow-level m-safety">Safety &amp; Stability</div>
+      </div>
+      <div class="maslow-row">
+        <div class="maslow-tag">Agricultural Revolution &rarr;</div>
+        <div class="maslow-level m-physiological">Physiological Needs</div>
+      </div>
+    </div>
+    <div class="callout-warn callout">
+      The trap: Maslow&rsquo;s model requires lower levels to be <strong>secured first</strong>. If the labour-for-wages model breaks, it doesn&rsquo;t just threaten the top of the pyramid &mdash; it pulls out the bottom rungs. The AI revolution is unique because it potentially kicks people <em>off</em> the ladder entirely.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 4: The Numbers -->
+  <div class="slide" data-index="3">
+    <div class="slide-label">The Scale of Displacement</div>
+    <div class="slide-title">
+      <span class="warn">A Billion</span> Knowledge Workers at Risk
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number">~1B</div>
+        <div class="stat-desc">Global knowledge workers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">$70T</div>
+        <div class="stat-desc">Annual global cognitive labour compensation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number warn">50%</div>
+        <div class="stat-desc">Entry-level white-collar jobs potentially replaceable (Anthropic CEO estimate)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number warn">&lt;10%</div>
+        <div class="stat-desc">Firms using AI regularly as of mid-2025. We are at the very beginning.</div>
+      </div>
+    </div>
+    <div class="slide-body">
+      This is historically unprecedented: the <em>intelligentsia</em> are in the blast radius. Lawyers, analysts, coders, middle managers &mdash; all before the plumber and the electrician.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 5: The Human Cost -->
+  <div class="slide" data-index="4">
+    <div class="slide-label">The Cost Nobody Discusses</div>
+    <div class="slide-title">
+      Displacement <span class="warn">Kills</span>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number warn">16&times;</div>
+        <div class="stat-desc">Increased suicide risk for unemployed vs. employed individuals</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number warn">87%</div>
+        <div class="stat-desc">Higher likelihood of suicide among unemployed (meta-analysis)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number warn">~20%</div>
+        <div class="stat-desc">Of suicides in Australia directly attributable to labour underutilisation (2004&ndash;2016)</div>
+      </div>
+    </div>
+    <div class="callout-warn callout">
+      Existing research is based on populations where identity loss was <em>partial</em>. A laid-off factory worker still knew what they were. The cognitive class faces the <strong>category itself disappearing</strong>. These are people whose identity lives at the esteem level. Strip that away and you&rsquo;re not just removing income &mdash; you&rsquo;re removing the psychological architecture.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 6: The Coherence Crisis -->
+  <div class="slide" data-index="5">
+    <div class="slide-label">Beyond Economics</div>
+    <div class="slide-title">
+      This Is a <span class="accent">Coherence Crisis</span>
+    </div>
+    <div class="slide-body">
+      Every civilisation that thrived long-term had a <em>direction</em> &mdash; Rome had expansion, medieval Europe had God, the Enlightenment had reason, the 20th century had progress-through-technology.
+    </div>
+    <div class="callout">
+      The labour-for-wages model wasn&rsquo;t just an economic arrangement. It was the <strong>organising story</strong>. You go to school, you get skilled, you work, you contribute, you&rsquo;re valued. Take that away and it&rsquo;s not just income that vanishes &mdash; <em>it&rsquo;s the plot.</em>
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      Western civilisation has spent 300 years building an identity architecture around <em>doing</em>. &ldquo;What do you do?&rdquo; is how we introduce ourselves. The transition isn&rsquo;t from one economy to another. It&rsquo;s from one <strong>identity model</strong> to another.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 7: Two Frontiers -->
+  <div class="slide" data-index="6">
+    <div class="slide-label">Finding the Pony</div>
+    <div class="slide-title">
+      Two Frontiers: <span class="accent">Outward</span> and <span class="gold">Downward</span>
+    </div>
+    <div class="slide-body">
+      <strong>Space</strong> gives us a new plot. A project that requires human <em>purpose</em> more than human labour. It creates meaning through collective aspiration and is literally infinite in scope.
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      <strong>Earth husbandry</strong> gives us a role. Ocean restoration, soil regeneration, rewilding, atmospheric repair. These resist full automation because they are <em>biological</em> and <em>local</em>. You can&rsquo;t automate planting a forest the way you automate writing a contract. Ecosystems are chaotic, contextual, embodied.
+    </div>
+    <div class="callout-gold callout">
+      &ldquo;Husband&rdquo; originally meant <em>house-bonded</em> &mdash; the one who tends and stewards. That&rsquo;s a <strong>role</strong>, not a <strong>job</strong>. Both frontiers are infinite. Both are meaningful. Both resist pure cognitive automation. Space for the builders. Earth for the tenders.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 8: Food Security -->
+  <div class="slide" data-index="7">
+    <div class="slide-label">The First Domino</div>
+    <div class="slide-title">
+      <span class="accent">Food Security</span> Unlocks Everything Else
+    </div>
+    <div class="slide-body">
+      Every major social upheaval that went dark &mdash; the French Revolution, the Russian Revolution, the Arab Spring &mdash; had food insecurity as the <em>accelerant</em>. Hungry people don&rsquo;t debate economic models. They burn things down.
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      But food production is the one sector where AI and automation actually <em>increase</em> security rather than destroy it. Vertical farming, precision agriculture, automated distribution. The technology exists. The obstacle isn&rsquo;t capability &mdash; it&rsquo;s the profit model. <strong>Food scarcity is profitable. Abundance isn&rsquo;t &mdash; under capitalism.</strong>
+    </div>
+    <div class="callout">
+      If you can decouple food security from the labour-for-wages model, you buy time for the rest of the transition. People who aren&rsquo;t hungry can afford to rethink identity. People who aren&rsquo;t hungry don&rsquo;t start revolutions. People who aren&rsquo;t hungry can look up at the stars.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 9: The Cascade -->
+  <div class="slide" data-index="8">
+    <div class="slide-label">The Sequence</div>
+    <div class="slide-title">
+      Each Step <span class="accent">De-risks</span> the Next
+    </div>
+    <div class="chain">
+      <div class="chain-item">Energy Independence</div>
+      <div class="chain-arrow">&rarr;</div>
+      <div class="chain-item">Cheap Local Food</div>
+      <div class="chain-arrow">&rarr;</div>
+      <div class="chain-item">Reduced Cost of Living</div>
+      <div class="chain-arrow">&rarr;</div>
+      <div class="chain-item">Breathing Room</div>
+      <div class="chain-arrow">&rarr;</div>
+      <div class="chain-item">New Economic Models</div>
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      Community energy cooperatives power vertical farms. Local food production frees up income. Lower survival costs mean people can take risks on new models. Local compute means AI tools aren&rsquo;t controlled by Silicon Valley. Cooperative structure means value stays local.
+    </div>
+    <div class="callout">
+      You don&rsquo;t need to solve the whole civilisational transition at once. A community with food security is a community that can <em>experiment</em> with post-labour identity models. It&rsquo;s a laboratory.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 10: Ireland as Prototype -->
+  <div class="slide" data-index="9">
+    <div class="slide-label">A Test Case</div>
+    <div class="slide-title">
+      Why <span class="accent">Ireland</span>?
+    </div>
+    <div class="slide-body">
+      5 million people &mdash; small enough to be testable. Already a tech hub. EU membership provides safety net and stage. And exactly the right mix of pressures: energy dependence, housing shortage, growing population, agricultural heritage, and a cognitive workforce about to be squeezed when multinationals figure out they don&rsquo;t need 50,000 people in Dublin.
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number gold">&euro;300M</div>
+        <div class="stat-desc">Fresh produce Ireland imports annually that could be grown locally</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number gold">200+</div>
+        <div class="stat-desc">Sustainable Energy Communities already mentored by SEAI</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number gold">&euro;86K</div>
+        <div class="stat-desc">Cost of a modular vertical farm unit (Farmony, Irish company)</div>
+      </div>
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      And a cultural memory of what happens when you depend on someone else&rsquo;s economic model. <em>The Famine wasn&rsquo;t just about potatoes &mdash; it was about an extractive system that exported food while people starved.</em>
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 11: Pieces Already Exist -->
+  <div class="slide" data-index="10">
+    <div class="slide-label">Already on the Ground</div>
+    <div class="slide-title">
+      The <span class="accent">Pieces</span> Already Exist
+    </div>
+    <div class="pieces-grid">
+      <div class="piece">
+        <div class="piece-name">Energy Co-ops Ireland</div>
+        <div class="piece-detail">Five operational energy cooperatives. Community Power is Ireland&rsquo;s first community-owned electricity utility. Focused on green hydrogen and community ownership.</div>
+      </div>
+      <div class="piece">
+        <div class="piece-name">SEAI SEC Programme</div>
+        <div class="piece-detail">200+ Sustainable Energy Communities. ATU provides technical advice and mentoring. Now exporting the model to Northern Ireland.</div>
+      </div>
+      <div class="piece">
+        <div class="piece-name">Farmony</div>
+        <div class="piece-detail">Irish agri-tech startup. Modular vertical farms from &euro;86K. Turnkey solution: hardware, software, ongoing support. Open-source platform.</div>
+      </div>
+      <div class="piece">
+        <div class="piece-name">EcoVision</div>
+        <div class="piece-detail">Cooperative bringing together 15 energy communities across Tipperary, Limerick, and Clare. Community-led one-stop shop for energy upgrades.</div>
+      </div>
+      <div class="piece">
+        <div class="piece-name">EU Frameworks</div>
+        <div class="piece-detail">New EU legislation gives communities the right to generate, store, consume, and sell their own energy. RESS auctions support community-led projects.</div>
+      </div>
+      <div class="piece">
+        <div class="piece-name">Cooperative Legal Structures</div>
+        <div class="piece-detail">Irish cooperative law well-established. Community Interest Companies, co-ops, and CLGs all available. Revenue-sharing models proven in Denmark and Germany.</div>
+      </div>
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 12: What's Missing -->
+  <div class="slide" data-index="11">
+    <div class="slide-label">The Gap</div>
+    <div class="slide-title">
+      What&rsquo;s <span class="warn">Missing</span> Is the Story
+    </div>
+    <div class="slide-body">
+      Right now, Community Power is an energy thing. Farmony is an agri-tech thing. The SEC programme is a sustainability thing. The AI displacement research is an economics thing. The mental health data is a psychology thing.
+    </div>
+    <div class="callout">
+      <strong>Nobody is connecting them.</strong> Nobody is saying: &ldquo;these are the building blocks for what comes after the labour-for-wages model breaks.&rdquo;
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      The economists talk about displacement. The psychologists talk about suicide risk. The sustainability people talk about energy. The space people talk about space. The missing piece isn&rsquo;t technology or money. It&rsquo;s the <em>synthesis</em> &mdash; the coherent narrative about what the transition actually looks like and where the on-ramps are.
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+  <!-- SLIDE 13: Call to Action -->
+  <div class="slide" data-index="12">
+    <div class="slide-label">The Question</div>
+    <div class="slide-title">
+      <span class="accent">Who Wants to Build This?</span>
+    </div>
+    <div class="slide-body">
+      The AI bubble will pop. The cognitive class will be displaced. The stumble is coming regardless. The only question is <em>how long it lasts and how many people it destroys</em>.
+    </div>
+    <div class="slide-body" style="margin-top: 2vh;">
+      Somewhere there&rsquo;s a mid-sized Irish town that could demonstrate the alternative: community energy powering local food production, reducing cost of living, creating space for new economic models. Not utopia &mdash; a <strong>proof of concept</strong>. One town that works visibly while the old model visibly fails.
+    </div>
+    <div class="callout-gold callout">
+      The pieces are on the ground. The urgency is real. The missing ingredient is <strong>people</strong> &mdash; specifically, the displaced cognitive class themselves, redirecting their skills toward building what comes next instead of mourning what&rsquo;s gone.<br><br>
+      <em>With all this horseshit, there&rsquo;s got to be a pony here somewhere.</em>
+    </div>
+    <div class="slide-body" style="margin-top: 2vh; color: var(--text-dim); font-style: italic;">
+      Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="61150e050521070e1919040d0003124f0804">[email&#160;protected]</a>
+    </div>
+    <div class="slide-footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+  </div>
+
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+  <div class="nav-counter"><span id="current">1</span> / <span id="total">13</span></div>
+  <button class="nav-btn" id="prev" aria-label="Previous slide">&larr;</button>
+  <button class="nav-btn" id="next" aria-label="Next slide">&rarr;</button>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  document.getElementById('total').textContent = total;
+
+  function goTo(n) {
+    if (n < 0 || n >= total) return;
+    slides[current].classList.remove('active');
+    slides[current].classList.add('exiting');
+    setTimeout(() => slides[current === 0 && n > 0 ? 0 : current].classList.remove('exiting'), 500);
+    
+    const prev = current;
+    current = n;
+    
+    setTimeout(() => {
+      slides[prev].classList.remove('exiting');
+    }, 500);
+    
+    slides[current].classList.add('active');
+    document.getElementById('current').textContent = current + 1;
+    document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+  }
+
+  document.getElementById('next').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('prev').addEventListener('click', () => goTo(current - 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+    if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    if (e.key === 'End') { e.preventDefault(); goTo(total - 1); }
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goTo(current + 1);
+      else goTo(current - 1);
+    }
+  });
+</script>
+
+</body>
+</html>
