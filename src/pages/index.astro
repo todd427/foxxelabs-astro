@@ -95,6 +95,19 @@ const latestNews = news
           allowfullscreen
         ></iframe>
       </div>
+
+      <div class="further-reading">
+        <h3>Further Reading</h3>
+        <ul class="list">
+          <li>
+            Kaye, L. K. (n.d.). <em>Building a career in cyberpsychology</em> [Microsoft Sway].
+            Edge Hill University.
+            <a href="https://sway.cloud.microsoft/2HUh7329A8UDqF2j" target="_blank" rel="noopener noreferrer">
+              View presentation →
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -325,6 +338,27 @@ const latestNews = news
     overflow: hidden;
     margin-top: 12px;
     border-radius: 10px;
+  }
+
+  .further-reading {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  .further-reading h3 {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #2dd4bf;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .further-reading .list {
+    font-size: .93rem;
+    color: var(--muted);
+    line-height: 1.65;
   }
 
   .video-wrapper iframe {
