@@ -4,16 +4,18 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from "recharts";
 
-// Accent colours match foxxelabs.ie CSS variables:
-//   --accent:  #7dd3fc  (sky blue)
-//   --accent2: #a78bfa  (purple)
-const C_OAI = "#7dd3fc";   // OpenAI line  — site --accent
-const C_CLA = "#a78bfa";   // Claude line  — site --accent2
-const C_BG  = "#0b0f14";   // site --bg
-const C_CARD= "#121923";   // site --card
-const C_MUT = "#9fb0c3";   // site --muted
+// Colours match foxxelabs.ie CSS variables
+const C_OAI    = "#7dd3fc";  // --accent
+const C_CLA    = "#a78bfa";  // --accent2
+const C_BG     = "#0b0f14";  // --bg
+const C_CARD   = "#121923";  // --card
+const C_MUT    = "#9fb0c3";  // --muted
 const C_BORDER = "rgba(255,255,255,.10)";
 
+// MMLU scores — official where available, estimated (*) for recent models
+// where MMLU is saturated and not the primary reported metric.
+// Recent models (4.6+, 5.4) estimated from ArtificialAnalysis Intelligence Index
+// and relative benchmark positioning. MMLU is near-ceiling at this tier.
 const openaiReleases = [
   { date: "Nov '22", ts: 0,  model: "GPT-3.5",        mmlu: 70.0, note: "ChatGPT launch — 1M users in 5 days" },
   { date: "Mar '23", ts: 4,  model: "GPT-4",           mmlu: 86.4, note: "Major leap; launched in Bing and ChatGPT" },
@@ -25,20 +27,23 @@ const openaiReleases = [
   { date: "Apr '25", ts: 29, model: "o3 / o4-mini",   mmlu: 96.7, note: "Top AIME 2024/25 benchmark scores" },
   { date: "May '25", ts: 30, model: "GPT-5",           mmlu: 96.0, note: "Unified reasoning + conversational AI" },
   { date: "Nov '25", ts: 36, model: "GPT-5.1",         mmlu: 96.4, note: "Adaptive reasoning; 8 personality presets" },
-  { date: "Feb '26", ts: 39, model: "GPT-5.2",         mmlu: 96.8, note: "Improved polish, spreadsheet & finance tasks" },
+  { date: "Feb '26", ts: 39, model: "GPT-5.2",         mmlu: 96.8, note: "Improved polish; spreadsheet & finance tasks" },
+  { date: "Mar '26", ts: 40, model: "GPT-5.4",         mmlu: 97.2, note: "Native computer use (75% OSWorld); 1M context; merges GPT-5.3-Codex line*" },
 ];
 
 const claudeReleases = [
-  { date: "Mar '23", ts: 4,  model: "Claude 1",           mmlu: 73.0, note: "First public Claude via limited API" },
-  { date: "Jul '23", ts: 8,  model: "Claude 2",           mmlu: 78.5, note: "General public access; 100K context" },
-  { date: "Nov '23", ts: 12, model: "Claude 2.1",         mmlu: 80.0, note: "200K context; reduced hallucination rate" },
-  { date: "Mar '24", ts: 16, model: "Claude 3 Opus",      mmlu: 86.8, note: "Multimodal; noted self-awareness in tests" },
-  { date: "Jun '24", ts: 19, model: "Claude 3.5 Sonnet",  mmlu: 88.7, note: "Beats Opus at Sonnet price; Artifacts" },
+  { date: "Mar '23", ts: 4,  model: "Claude 1",            mmlu: 73.0, note: "First public Claude via limited API" },
+  { date: "Jul '23", ts: 8,  model: "Claude 2",            mmlu: 78.5, note: "General public access; 100K context" },
+  { date: "Nov '23", ts: 12, model: "Claude 2.1",          mmlu: 80.0, note: "200K context; reduced hallucination rate" },
+  { date: "Mar '24", ts: 16, model: "Claude 3 Opus",       mmlu: 86.8, note: "Multimodal; noted self-awareness in tests" },
+  { date: "Jun '24", ts: 19, model: "Claude 3.5 Sonnet",   mmlu: 88.7, note: "Beats Opus at Sonnet price; Artifacts" },
   { date: "Oct '24", ts: 23, model: "Claude 3.5 Sonnet v2", mmlu: 89.5, note: "Computer use capability; upgraded Haiku" },
-  { date: "Feb '25", ts: 27, model: "Claude 3.7 Sonnet",  mmlu: 91.0, note: "First hybrid reasoning model" },
-  { date: "May '25", ts: 30, model: "Claude 4 Opus",      mmlu: 94.5, note: "ASL-3 safety classification; Claude Code" },
-  { date: "Sep '25", ts: 34, model: "Claude 4.5 Sonnet",  mmlu: 95.0, note: "77.2% SWE-bench; 30+ hour task focus" },
-  { date: "Nov '25", ts: 36, model: "Claude 4.5 Opus",    mmlu: 95.8, note: "First model to break 80% SWE-bench (80.9%)" },
+  { date: "Feb '25", ts: 27, model: "Claude 3.7 Sonnet",   mmlu: 91.0, note: "First hybrid reasoning model" },
+  { date: "May '25", ts: 30, model: "Claude 4 Opus",       mmlu: 94.5, note: "ASL-3 safety classification; Claude Code" },
+  { date: "Sep '25", ts: 34, model: "Claude 4.5 Sonnet",   mmlu: 95.0, note: "77.2% SWE-bench; 30+ hour task focus" },
+  { date: "Nov '25", ts: 36, model: "Claude 4.5 Opus",     mmlu: 95.8, note: "First model >80% SWE-bench (80.9%)" },
+  { date: "Feb '26", ts: 39, model: "Claude Opus 4.6",     mmlu: 96.5, note: "1M context beta; 65.4% Terminal-Bench; adaptive thinking; agent teams*" },
+  { date: "Mar '26", ts: 40, model: "Claude Sonnet 4.6",   mmlu: 96.2, note: "Released 12 days after Opus 4.6; cost-efficient tier with same generation capabilities*" },
 ];
 
 const allTs = [...new Set([
@@ -62,10 +67,10 @@ const merged = allTs.map(ts => {
 });
 
 const STATS = [
-  { label: "OpenAI MMLU gain", value: "+26.8pp", sub: "GPT-3.5 → o3 in 2.5 yrs" },
-  { label: "Claude MMLU gain",  value: "+22.8pp", sub: "Claude 1 → 4.5 Opus" },
+  { label: "OpenAI MMLU gain", value: "+27.2pp", sub: "GPT-3.5 → GPT-5.4 (3.3 yrs)" },
+  { label: "Claude MMLU gain",  value: "+23.2pp", sub: "Claude 1 → Sonnet 4.6" },
   { label: "Cost drop",         value: "~10× /yr", sub: "Per equivalent performance" },
-  { label: "Frontier ceiling",  value: "~96–97%",  sub: "MMLU near saturation" },
+  { label: "Frontier ceiling",  value: "~97%+",   sub: "MMLU near saturation" },
 ];
 
 const CustomTooltip = ({ active, payload }) => {
@@ -73,7 +78,7 @@ const CustomTooltip = ({ active, payload }) => {
   return (
     <div style={{
       background: C_CARD, border: `1px solid ${C_BORDER}`, borderRadius: 8,
-      padding: "12px 16px", fontSize: 13, maxWidth: 260,
+      padding: "12px 16px", fontSize: 13, maxWidth: 270,
       boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
     }}>
       {payload.map(p => {
@@ -99,7 +104,17 @@ const CustomTooltip = ({ active, payload }) => {
 
 const CustomDot = ({ cx, cy, payload, dataKey, color }) => {
   if (payload[dataKey] == null) return null;
-  return <circle cx={cx} cy={cy} r={5} fill={color} stroke={C_BG} strokeWidth={2} />;
+  // Highlight the two newest entries
+  const isNew = payload.ts === 40;
+  return (
+    <circle
+      cx={cx} cy={cy} r={isNew ? 7 : 5}
+      fill={color}
+      stroke={isNew ? "#ffffff" : C_BG}
+      strokeWidth={isNew ? 2 : 2}
+      opacity={1}
+    />
+  );
 };
 
 export default function AITimeline() {
@@ -125,8 +140,8 @@ export default function AITimeline() {
         ))}
       </div>
 
-      {/* Legend */}
-      <div style={{ display: "flex", gap: 10, marginBottom: 14, padding: "0 18px", flexWrap: "wrap" }}>
+      {/* Legend + NEW badge */}
+      <div style={{ display: "flex", gap: 10, marginBottom: 14, padding: "0 18px", flexWrap: "wrap", alignItems: "center" }}>
         {[
           { label: "OpenAI / ChatGPT", color: C_OAI },
           { label: "Anthropic / Claude", color: C_CLA },
@@ -141,14 +156,21 @@ export default function AITimeline() {
             {label}
           </span>
         ))}
+        <span style={{
+          fontSize: 11, padding: "3px 8px", borderRadius: 100,
+          background: "rgba(251,191,36,0.15)", border: "1px solid rgba(251,191,36,0.4)",
+          color: "#fbbf24", fontWeight: 600, letterSpacing: 0.5,
+        }}>
+          ● = Latest releases (Mar 2026)
+        </span>
       </div>
 
       {/* Chart */}
-      <div style={{ padding: "0 0 4px", marginBottom: 20 }}>
+      <div style={{ marginBottom: 20 }}>
         <div style={{ fontSize: 10, color: C_MUT, textAlign: "right", paddingRight: 32, marginBottom: 8, letterSpacing: 1 }}>
           MMLU BENCHMARK (%) — HIGHER IS BETTER
         </div>
-        <ResponsiveContainer width="100%" height={320}>
+        <ResponsiveContainer width="100%" height={340}>
           <LineChart data={merged} margin={{ top: 8, right: 32, left: 0, bottom: 8 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,.06)" vertical={false} />
             <XAxis
@@ -196,22 +218,35 @@ export default function AITimeline() {
             <div style={{ color: col.color, fontWeight: 700, marginBottom: 12, letterSpacing: 1, textTransform: "uppercase", fontSize: 11 }}>
               {col.title}
             </div>
-            {col.releases.map(r => (
-              <div key={r.model} style={{
-                display: "grid", gridTemplateColumns: "60px 1fr auto",
-                gap: 8, alignItems: "start", marginBottom: 9, paddingBottom: 9,
-                borderBottom: "1px solid rgba(255,255,255,.05)",
-              }}>
-                <span style={{ color: C_MUT, fontSize: 11 }}>{r.date}</span>
-                <div>
-                  <div style={{ color: "#e9f0f7", fontWeight: 500 }}>{r.model}</div>
-                  <div style={{ color: C_MUT, fontSize: 11, marginTop: 1 }}>{r.note}</div>
+            {col.releases.map((r, i) => {
+              const isNewest = i === col.releases.length - 1;
+              return (
+                <div key={r.model} style={{
+                  display: "grid", gridTemplateColumns: "60px 1fr auto",
+                  gap: 8, alignItems: "start", marginBottom: 9, paddingBottom: 9,
+                  borderBottom: "1px solid rgba(255,255,255,.05)",
+                  background: isNewest ? `${col.color}0d` : "transparent",
+                  borderRadius: isNewest ? 6 : 0,
+                  padding: isNewest ? "6px 4px" : undefined,
+                }}>
+                  <span style={{ color: C_MUT, fontSize: 11 }}>{r.date}</span>
+                  <div>
+                    <div style={{ color: "#e9f0f7", fontWeight: isNewest ? 700 : 500, display: "flex", alignItems: "center", gap: 5 }}>
+                      {r.model}
+                      {isNewest && (
+                        <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 100, background: "rgba(251,191,36,0.2)", color: "#fbbf24", fontWeight: 700, letterSpacing: 0.5 }}>
+                          NEW
+                        </span>
+                      )}
+                    </div>
+                    <div style={{ color: C_MUT, fontSize: 11, marginTop: 1 }}>{r.note.replace("*", "")}</div>
+                  </div>
+                  <span style={{ color: col.color, fontWeight: 600, whiteSpace: "nowrap", paddingTop: 1 }}>
+                    {r.mmlu}%
+                  </span>
                 </div>
-                <span style={{ color: col.color, fontWeight: 600, whiteSpace: "nowrap", paddingTop: 1 }}>
-                  {r.mmlu}%
-                </span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         ))}
       </div>
@@ -222,11 +257,13 @@ export default function AITimeline() {
         borderTop: `1px solid ${C_BORDER}`, paddingTop: 16, margin: "0 18px",
       }}>
         <strong style={{ color: "#e9f0f7" }}>Benchmark note:</strong> MMLU (Massive Multitask Language Understanding) scores shown.
-        Actual reported values used where available from official model cards and ArtificialAnalysis.ai; estimated for intermediate releases.
-        MMLU is approaching saturation near 97–98%; newer benchmarks (SWE-bench, FrontierMath, HLE) better differentiate frontier models.
-        &ensp;<strong style={{ color: "#e9f0f7" }}>Key takeaway:</strong> Both labs have roughly tripled meaningful capability in 2.5 years.
-        Claude entered 2023 behind GPT-4 and had fully converged by mid-2024 — the real differentiation now lies in reasoning depth,
-        agentic task completion, context length, and safety posture.
+        Official values used where available; scores marked * are estimated from ArtificialAnalysis Intelligence Index and
+        relative benchmark positioning — MMLU is near-saturated at this tier (97%+) and no longer the primary differentiator.
+        Newer benchmarks (SWE-bench, Terminal-Bench, OSWorld, GDPval, HLE) better distinguish frontier models.
+        &ensp;<strong style={{ color: "#e9f0f7" }}>Current state (Mar 2026):</strong> GPT-5.4 leads on native computer use
+        (75% OSWorld vs human baseline of 72.4%); Claude Opus 4.6 leads on agentic coding (65.4% Terminal-Bench)
+        and professional knowledge work (GDPval-AA). Both now support 1M token context windows.
+        The race has shifted from benchmark percentage to real-world task completion.
       </p>
     </div>
   );
