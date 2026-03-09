@@ -37,6 +37,12 @@ const latestNews = news
         <p>The labour-for-wages model is breaking. Displacement, the meaning crisis, and cooperative on-ramps for Ireland.</p>
         <span class="featured-link">Read the exploration →</span>
       </a>
+      <a class="featured-card" href="/ai-timeline/">
+        <span class="featured-tag new">FoxxeLabs Research — New</span>
+        <h2>AI Model Performance Timeline</h2>
+        <p>Interactive benchmark chart tracking every major ChatGPT and Claude release since 2022. The convergence story, visualised.</p>
+        <span class="featured-link">Explore the chart →</span>
+      </a>
     </div>
   </section>
 
@@ -183,14 +189,8 @@ const latestNews = news
 
   .featured-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
-  }
-
-  @media (max-width: 900px) {
-    .featured-grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   .featured-card {

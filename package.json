@@ -12,10 +12,16 @@
     "generate-resource": "node scripts/generate-content.js resource"
   },
   "dependencies": {
-    "astro": "^4.0.0",
+    "@anthropic-ai/sdk": "^0.32.0",
     "@astrojs/mdx": "^2.0.0",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.0",
-    "@anthropic-ai/sdk": "^0.32.0"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^4.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "recharts": "^3.8.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.0",
