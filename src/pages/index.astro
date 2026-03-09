@@ -37,12 +37,6 @@ const latestNews = news
         <p>The labour-for-wages model is breaking. Displacement, the meaning crisis, and cooperative on-ramps for Ireland.</p>
         <span class="featured-link">Read the exploration →</span>
       </a>
-      <a class="featured-card" href="/ai-timeline/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>AI Model Performance Timeline</h2>
-        <p>Interactive benchmark chart tracking every major ChatGPT and Claude release since 2022. The convergence story, visualised.</p>
-        <span class="featured-link">Explore the chart →</span>
-      </a>
     </div>
   </section>
 
@@ -86,6 +80,65 @@ const latestNews = news
         <li><strong>Is:</strong> actionable guides, frameworks, and credible news summaries.</li>
         <li><strong>Isn't:</strong> hot takes, hype, or shallow coverage.</li>
       </ul>
+    </div>
+  </section>
+
+
+  <section class="sionnach-section">
+    <div class="sionnach-card">
+      <div class="sionnach-inner">
+        <div class="sionnach-text">
+          <div class="sionnach-eyebrow">Foxxe Labs — New Product</div>
+          <h2 class="sionnach-title">
+            <a href="https://sionnach.ie" target="_blank" rel="noopener noreferrer" class="sionnach-name-link">Sionnach</a>
+          </h2>
+          <p class="sionnach-tagline">
+            A conversation with someone who has been dead for centuries — running entirely on your device.
+          </p>
+          <p class="sionnach-body">
+            <em>Sionnach</em> (the Irish word for fox) is a personality engine built on WebNN and WebGPU —
+            modern browser standards that run neural networks directly on your GPU.
+            No server. No account. No data leaving your device.
+            Choose a historical figure — Turing, Darwin, Darrow, Hugo, Socrates —
+            and have the conversation you never could.
+          </p>
+          <p class="sionnach-privacy">
+            This is not just a privacy position. It is a demonstration that meaningful, characterful AI
+            does not require enormous centralised compute. It runs on the device in your pocket.
+          </p>
+          <div class="sionnach-ctas">
+            <a class="sionnach-btn primary" href="https://sionnach.ie" target="_blank" rel="noopener noreferrer">
+              Visit sionnach.ie →
+            </a>
+            <a class="sionnach-btn secondary" href="https://sionnach.eu" target="_blank" rel="noopener noreferrer">
+              sionnach.eu
+            </a>
+          </div>
+        </div>
+        <div class="sionnach-cast">
+          <div class="sionnach-cast-label">The Cast</div>
+          <div class="sionnach-cast-grid">
+            {[
+              { name: "Socrates",           role: "Philosopher" },
+              { name: "Alan Turing",        role: "Scientist" },
+              { name: "Marie Curie",        role: "Scientist" },
+              { name: "Charles Darwin",     role: "Scientist" },
+              { name: "Victor Hugo",        role: "Writer" },
+              { name: "William Shakespeare",role: "Writer" },
+              { name: "Julius Caesar",      role: "Statesman" },
+              { name: "Winston Churchill",  role: "Statesman" },
+              { name: "Clarence Darrow",    role: "Legal Mind" },
+              { name: "Aristophanes",       role: "Comedian" },
+            ].map(p => (
+              <div class="sionnach-person">
+                <span class="sionnach-person-name">{p.name}</span>
+                <span class="sionnach-person-role">{p.role}</span>
+              </div>
+            ))}
+          </div>
+          <div class="sionnach-cast-more">+ more being added · create your own</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -189,8 +242,14 @@ const latestNews = news
 
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .featured-card {
@@ -392,4 +451,171 @@ const latestNews = news
   .list li {
     margin-bottom: 6px;
   }
+
+  /* ── Sionnach Section ── */
+  .sionnach-section {
+    margin-bottom: 18px;
+  }
+
+  .sionnach-card {
+    background: linear-gradient(135deg, rgba(20, 14, 30, 0.95), rgba(28, 18, 42, 0.95));
+    border: 1px solid rgba(167, 139, 250, 0.30);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.28), 0 0 60px rgba(167,139,250,.06);
+  }
+
+  .sionnach-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: start;
+  }
+
+  @media (max-width: 760px) {
+    .sionnach-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sionnach-eyebrow {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #a78bfa;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .sionnach-title {
+    font-size: 2rem;
+    margin: 0 0 10px;
+    line-height: 1.1;
+    letter-spacing: .5px;
+  }
+
+  .sionnach-name-link {
+    color: #e9d5ff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sionnach-name-link:hover {
+    opacity: 0.85;
+  }
+
+  .sionnach-tagline {
+    font-size: 1.05rem;
+    color: #c4b5fd;
+    margin: 0 0 14px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .sionnach-body {
+    font-size: .95rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0 0 10px;
+    max-width: 58ch;
+  }
+
+  .sionnach-privacy {
+    font-size: .88rem;
+    color: rgba(167,139,250,.7);
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 58ch;
+    border-left: 2px solid rgba(167,139,250,.3);
+    padding-left: 12px;
+  }
+
+  .sionnach-ctas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .sionnach-btn {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 14px;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .95rem;
+    transition: border-color 0.2s, opacity 0.2s;
+    border: 1px solid transparent;
+  }
+
+  .sionnach-btn.primary {
+    background: linear-gradient(135deg, rgba(167,139,250,.25), rgba(196,181,253,.15));
+    border-color: rgba(167,139,250,.5);
+    color: #e9d5ff;
+  }
+
+  .sionnach-btn.primary:hover {
+    border-color: rgba(167,139,250,.9);
+    opacity: 0.9;
+  }
+
+  .sionnach-btn.secondary {
+    background: rgba(255,255,255,.03);
+    border-color: rgba(255,255,255,.1);
+    color: var(--muted);
+  }
+
+  .sionnach-btn.secondary:hover {
+    border-color: rgba(255,255,255,.22);
+    color: var(--text);
+  }
+
+  .sionnach-cast {
+    min-width: 200px;
+  }
+
+  .sionnach-cast-label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: rgba(167,139,250,.6);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .sionnach-cast-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sionnach-person {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .sionnach-person-name {
+    font-size: .88rem;
+    color: #d8b4fe;
+    font-weight: 600;
+  }
+
+  .sionnach-person-role {
+    font-size: .75rem;
+    color: rgba(167,139,250,.5);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  .sionnach-cast-more {
+    margin-top: 10px;
+    font-size: .75rem;
+    color: rgba(167,139,250,.45);
+    font-style: italic;
+  }
+
 </style>
