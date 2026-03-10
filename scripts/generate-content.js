@@ -430,7 +430,7 @@ async function main() {
     
     console.log(`\n✨ Done! Generated ${posts.length} news post(s)`);
     console.log('📄 Review drafts in: src/content/news/');
-    console.log('💡 Edit as needed, then change "draft: true" to "draft: false" to publish');
+    console.log('💡 Edit as needed, or commit to post');
     
   } else {
     console.error('❌ Invalid content type. Use "news" or "resource"');

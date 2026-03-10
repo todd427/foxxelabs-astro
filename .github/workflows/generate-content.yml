@@ -1,0 +1,77 @@
+name: Daily Content Generation
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily (08:00 Irish time, 09:00 Irish summer time)
+  workflow_dispatch:        # Allow manual trigger from GitHub Actions UI
+    inputs:
+      interval:
+        description: 'Content interval'
+        required: false
+        default: 'daily'
+        type: choice
+        options:
+          - daily
+          - weekly
+          - monthly
+      content_type:
+        description: 'Content type'
+        required: false
+        default: 'news'
+        type: choice
+        options:
+          - news
+          - resource
+      topic:
+        description: 'Specific topic (optional)'
+        required: false
+        default: ''
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate content
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          INTERVAL="${{ github.event.inputs.interval || 'daily' }}"
+          CONTENT_TYPE="${{ github.event.inputs.content_type || 'news' }}"
+          TOPIC="${{ github.event.inputs.topic || '' }}"
+
+          if [ -n "$TOPIC" ]; then
+            node scripts/generate-content.js "$CONTENT_TYPE" "$TOPIC" --interval "$INTERVAL"
+          else
+            node scripts/generate-content.js "$CONTENT_TYPE" --interval "$INTERVAL"
+          fi
+
+      - name: Check for new content
+        id: check_changes
+        run: |
+          git diff --quiet src/content/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit new content
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "foxxelabs-bot"
+          git config user.email "bot@foxxelabs.ie"
+          git add src/content/
+          git commit -m "chore: auto-generate content [$(date +'%Y-%m-%d')]"
+          git push
+
+      - name: No new content
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "ℹ️ No new content was generated — nothing to commit."
