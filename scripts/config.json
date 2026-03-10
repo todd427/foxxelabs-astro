@@ -6,25 +6,68 @@
     "Machine learning applications",
     "AI industry developments",
     "Prompt engineering advances",
-    "AI safety and alignment"
+    "AI safety and alignment",
+    "EU AI Act developments",
+    "AI policy Ireland and Europe",
+    "Cyberpsychology and online behaviour",
+    "AI labour market impact",
+    "AI regulation and governance"
   ],
   "newsCategories": [
     "Research",
     "Industry",
     "Security",
-    "Breaking"
+    "Breaking",
+    "Policy",
+    "Ireland & EU"
   ],
   "resourceCategories": [
     "Foundations",
     "Security",
     "Applications",
-    "Industry"
+    "Industry",
+    "Policy",
+    "Cyberpsychology"
   ],
-  "daysBack": 7,
+  "sources": {
+    "research": [
+      "arxiv.org/list/cs.AI",
+      "deepmind.google/research",
+      "openai.com/news",
+      "anthropic.com/news"
+    ],
+    "security": [
+      "krebsonsecurity.com",
+      "thehackernews.com",
+      "irisscert.ie"
+    ],
+    "industry": [
+      "theverge.com/ai-artificial-intelligence",
+      "arstechnica.com/ai",
+      "technologyreview.mit.edu",
+      "wired.com/tag/artificial-intelligence"
+    ],
+    "policy": [
+      "artificialintelligenceact.eu",
+      "futureoflife.org",
+      "ainowinstitute.org"
+    ],
+    "ireland_eu": [
+      "siliconrepublic.com",
+      "irishtimes.com/technology",
+      "euractiv.com/section/artificial-intelligence"
+    ],
+    "cyberpsychology": [
+      "bps.org.uk/cyberpsychology",
+      "cyberpsychology.eu",
+      "lindakkaye.wixsite.com/dr-linda-kaye"
+    ]
+  },
+  "daysBack": 1,
   "maxPosts": 3,
   "style": {
     "tone": "Professional but conversational",
-    "approach": "Practical and actionable",
+    "approach": "Practical and actionable, with an Irish and European perspective where relevant",
     "format": "Clear structure with sources"
   }
 }

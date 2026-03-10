@@ -55,18 +55,73 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
 // Parse command line arguments
 const args = process.argv.slice(2);
 const contentType = args[0] || 'news'; // 'news' or 'resource'
-const specificTopic = args[1]; // Optional specific topic
+
+// Extract --interval flag, defaulting to 'daily'
+const intervalFlagIndex = args.indexOf('--interval');
+const intervalArg = intervalFlagIndex !== -1 ? args[intervalFlagIndex + 1] : 'daily';
+
+const INTERVAL_DAYS = { daily: 1, weekly: 7, monthly: 30 };
+const daysBack = INTERVAL_DAYS[intervalArg] ?? 1;
+
+if (!INTERVAL_DAYS[intervalArg]) {
+  console.warn(`⚠️  Unknown interval "${intervalArg}", defaulting to daily (1 day)`);
+}
+
+// specificTopic is any non-flag arg after the content type
+const specificTopic = args[1] && !args[1].startsWith('--') ? args[1] : undefined;
+
+/**
+ * Map a topic string to relevant source categories from config.
+ * Always appends ireland_eu as a secondary source for the site's angle.
+ */
+function getSourcesForTopic(topic) {
+  const t = topic.toLowerCase();
+  const { sources } = config;
+  const relevant = [];
+
+  if (/security|vulnerabilit|exploit|breach|hack|threat/.test(t)) {
+    relevant.push(...sources.security);
+  }
+  if (/research|breakthrough|paper|arxiv|model release|llm|alignment|safety/.test(t)) {
+    relevant.push(...sources.research);
+  }
+  if (/policy|regulation|governance|act|law|compliance|eu ai/.test(t)) {
+    relevant.push(...sources.policy);
+  }
+  if (/cyberpsych|online behaviour|digital psychology|emoji|social media psychology/.test(t)) {
+    relevant.push(...sources.cyberpsychology);
+  }
+  if (/industry|application|startup|investment|product|market/.test(t)) {
+    relevant.push(...sources.industry);
+  }
+
+  // Default to industry + research if nothing matched
+  if (relevant.length === 0) {
+    relevant.push(...sources.industry, ...sources.research);
+  }
+
+  // Always include Ireland & EU sources for the site's regional angle
+  relevant.push(...sources.ireland_eu);
+
+  // Deduplicate
+  return [...new Set(relevant)];
+}
 
 /**
  * Search for recent AI news/developments
  */
 async function searchForContent(topic, daysBack) {
   console.log(`🔍 Searching for: ${topic}...`);
-  
-  const searchQuery = specificTopic 
+
+  const searchQuery = specificTopic
     ? `${specificTopic} AI ${daysBack} days`
     : `${topic} recent ${daysBack} days`;
-  
+
+  const topicSources = getSourcesForTopic(topic);
+  const sourcesHint = topicSources.length
+    ? `Prioritise results from these sources where available: ${topicSources.join(', ')}. `
+    : '';
+
   const response = await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 4000,
@@ -76,10 +131,10 @@ async function searchForContent(topic, daysBack) {
     }],
     messages: [{
       role: 'user',
-      content: `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype.`
+      content: `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`
     }]
   }));
-  
+
   return response;
 }
 
@@ -88,7 +143,12 @@ async function searchForContent(topic, daysBack) {
  */
 async function generateNewsPost(searchResults, topic) {
   console.log(`✍️  Generating news post...`);
-  
+
+  const topicSources = getSourcesForTopic(topic);
+  const sourcesNote = topicSources.length
+    ? `Preferred sources for citation: ${topicSources.join(', ')}. Cite these where the search results include them.`
+    : '';
+
   const prompt = `Based on the search results, write a news post for Foxxe Labs following this format:
 
 REQUIREMENTS:
@@ -104,6 +164,7 @@ REQUIREMENTS:
 - Sources: Include specific URLs and dates
 - Tone: ${config.style.tone}
 - Approach: ${config.style.approach}
+- ${sourcesNote}
 
 OUTPUT FORMAT (JSON):
 {
@@ -143,8 +204,16 @@ Generate the post as JSON only, no additional text.`;
   if (!jsonMatch) {
     throw new Error('Failed to extract JSON from response');
   }
-  
-  return JSON.parse(jsonMatch[0]);
+
+  const post = JSON.parse(jsonMatch[0]);
+
+  // Append source link to bottom of content if available
+  if (post.sourceUrl) {
+    const sourceLabel = post.source || post.sourceUrl;
+    post.content += `\n\n---\n**Source:** [${sourceLabel}](${post.sourceUrl})`;
+  }
+
+  return post;
 }
 
 /**
@@ -152,7 +221,12 @@ Generate the post as JSON only, no additional text.`;
  */
 async function generateResourcePost(topic) {
   console.log(`✍️  Generating resource post on: ${topic}...`);
-  
+
+  const topicSources = getSourcesForTopic(topic);
+  const sourcesNote = topicSources.length
+    ? `Prioritise and cite these sources where available: ${topicSources.join(', ')}.`
+    : '';
+
   const prompt = `Create a comprehensive resource post on "${topic}" for Foxxe Labs following this structure:
 
 REQUIREMENTS:
@@ -161,7 +235,7 @@ REQUIREMENTS:
 - Category: Choose from: ${config.resourceCategories.join(', ')}
 - Tags: 3-5 relevant tags
 - Reading time: Estimate (e.g., "12 min read")
-- Further reading: 3-5 quality sources with URLs
+- Further reading: 3-5 quality sources with URLs — ${sourcesNote}
 
 CONTENT STRUCTURE:
 ## Why This Matters
@@ -271,7 +345,7 @@ tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
     }
   }
   
-  frontmatter += `\ndraft: true\n---\n\n`;
+  frontmatter += `\ndraft: false\n---\n\n`;
   
   // Combine frontmatter and content
   const fullContent = frontmatter + postData.content;
@@ -321,7 +395,7 @@ async function main() {
     
   } else if (contentType === 'news') {
     // Generate news posts
-    console.log(`📰 Searching for AI news from the past ${config.daysBack} days...\n`);
+    console.log(`📰 Searching for AI news from the past ${daysBack} day(s) [${intervalArg}]...\n`);
     
     const topics = specificTopic ? [specificTopic] : config.topics.slice(0, config.maxPosts);
     const posts = [];
@@ -329,7 +403,7 @@ async function main() {
     for (let i = 0; i < topics.length; i++) {
       const topic = topics[i];
       try {
-        const searchResults = await searchForContent(topic, config.daysBack);
+        const searchResults = await searchForContent(topic, daysBack);
         
         // Delay between search and generation to respect rate limits
         console.log(`⏳ Waiting ${RATE_LIMIT_DELAY_MS / 1000}s before generating post...`);
