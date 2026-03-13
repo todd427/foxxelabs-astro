@@ -24,9 +24,9 @@ if (!apiKey) {
 const client = new Anthropic({ apiKey });
 
 // Rate limiting configuration
-const RATE_LIMIT_DELAY_MS = 65000; // 65 seconds between requests to stay under 30K tokens/min
 const MAX_RETRIES = 3;
-const RETRY_DELAY_MS = 60000; // Wait 60 seconds before retry on rate limit
+const TOKEN_HEADROOM = 5000;    // Reserve this many tokens before throttling
+const MIN_DELAY_MS = 1000;      // Minimum pause after any request
 
 /**
  * Delay helper
@@ -34,17 +34,43 @@ const RETRY_DELAY_MS = 60000; // Wait 60 seconds before retry on rate limit
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 /**
- * Make API call with retry logic for rate limits
+ * Extract rate limit info from response headers and pause if needed.
+ * Anthropic returns:
+ *   x-ratelimit-remaining-tokens  — tokens left in the current window
+ *   x-ratelimit-reset-tokens      — ISO timestamp when the window resets
+ */
+async function throttleIfNeeded(response) {
+  const remaining = parseInt(response.headers?.['x-ratelimit-remaining-tokens'] ?? '999999', 10);
+  const resetAt   = response.headers?.['x-ratelimit-reset-tokens'];
+
+  if (remaining < TOKEN_HEADROOM && resetAt) {
+    const resetMs = new Date(resetAt).getTime() - Date.now();
+    if (resetMs > 0) {
+      console.log(`⏳ Nearing token limit (${remaining} remaining). Waiting ${Math.ceil(resetMs / 1000)}s for window reset...`);
+      await delay(resetMs + 500); // small buffer
+    }
+  } else {
+    await delay(MIN_DELAY_MS); // brief courtesy pause
+  }
+}
+
+/**
+ * Make API call with retry logic for rate limits.
+ * Throttles proactively based on response headers; backs off on 429s.
  */
 async function callWithRetry(apiCall, retries = MAX_RETRIES) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      return await apiCall();
+      const response = await apiCall();
+      await throttleIfNeeded(response);
+      return response;
     } catch (error) {
       if (error.status === 429 && attempt < retries) {
-        const waitTime = RETRY_DELAY_MS * attempt; // Exponential backoff
-        console.log(`⏳ Rate limited. Waiting ${waitTime / 1000}s before retry (attempt ${attempt}/${retries})...`);
-        await delay(waitTime);
+        // Use retry-after header if present, otherwise exponential backoff
+        const retryAfter = parseInt(error.headers?.['retry-after'] ?? '0', 10);
+        const waitMs = retryAfter > 0 ? retryAfter * 1000 : 15000 * attempt;
+        console.log(`⏳ Rate limited. Waiting ${waitMs / 1000}s before retry (attempt ${attempt}/${retries})...`);
+        await delay(waitMs);
       } else {
         throw error;
       }
@@ -397,34 +423,18 @@ async function main() {
     // Generate news posts
     console.log(`📰 Searching for AI news from the past ${daysBack} day(s) [${intervalArg}]...\n`);
     
-    const topics = specificTopic ? [specificTopic] : config.topics.slice(0, config.maxPosts);
+    const topics = specificTopic ? [specificTopic] : config.topics;
     const posts = [];
     
     for (let i = 0; i < topics.length; i++) {
       const topic = topics[i];
       try {
         const searchResults = await searchForContent(topic, daysBack);
-        
-        // Delay between search and generation to respect rate limits
-        console.log(`⏳ Waiting ${RATE_LIMIT_DELAY_MS / 1000}s before generating post...`);
-        await delay(RATE_LIMIT_DELAY_MS);
-        
         const postData = await generateNewsPost(searchResults, topic);
         const slug = createMarkdownFile(postData, 'news');
         posts.push(slug);
-        
-        // Delay between topics (if not the last topic)
-        if (i < topics.length - 1) {
-          console.log(`⏳ Waiting ${RATE_LIMIT_DELAY_MS / 1000}s before next topic...\n`);
-          await delay(RATE_LIMIT_DELAY_MS);
-        }
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
-        // Still wait before next topic to avoid compounding rate limits
-        if (i < topics.length - 1) {
-          console.log(`⏳ Waiting before retry/next topic...`);
-          await delay(RATE_LIMIT_DELAY_MS);
-        }
       }
     }
     
