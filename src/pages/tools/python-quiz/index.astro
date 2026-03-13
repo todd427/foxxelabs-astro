@@ -1,0 +1,567 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Python Knowledge Quiz · Foxxe Labs"
+  description="15 multiple-choice questions across data types, operators, comprehensions, OOP, and advanced Python internals."
+>
+  <div class="quiz-shell">
+
+    <div class="quiz-header">
+      <a class="back-link" href="/tools/">← Tools</a>
+      <span class="badge">Python</span>
+    </div>
+
+    <!-- ── Start screen ── -->
+    <div id="start-screen" class="screen active">
+      <div class="q-card">
+        <p class="eyebrow">Knowledge test</p>
+        <h1 class="start-title">How well do you know <em>Python</em>?</h1>
+        <p class="start-desc">15 multiple-choice questions covering data types, operators, functions, OOP, and more — from beginner to advanced.</p>
+        <div class="meta-grid">
+          <div class="meta-item"><span class="val">15</span><span class="lbl">questions</span></div>
+          <div class="meta-item"><span class="val">7</span><span class="lbl">topics</span></div>
+          <div class="meta-item"><span class="val">~5</span><span class="lbl">minutes</span></div>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Data Types</span>
+          <span class="pill">Operators</span>
+          <span class="pill">Comprehensions</span>
+          <span class="pill">Functions</span>
+          <span class="pill">OOP</span>
+          <span class="pill">Functional</span>
+          <span class="pill">Advanced</span>
+        </div>
+        <button class="btn-primary" onclick="startQuiz()">
+          Begin quiz
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Question screen ── -->
+    <div id="question-screen" class="screen">
+      <div class="q-topbar">
+        <span class="q-num" id="q-num">1 / 15</span>
+        <span class="pill" id="q-cat">Data Types</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div class="q-card">
+        <div class="diff-dots" id="diff-dots"></div>
+        <p class="q-text" id="q-text"></p>
+        <div class="options" id="options"></div>
+        <div id="explanation" style="display:none"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-primary" id="btn-next" style="display:none" onclick="nextQ()">
+          Next
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Results screen ── -->
+    <div id="results-screen" class="screen">
+      <div class="q-card">
+        <div class="results-top">
+          <svg class="score-ring" viewBox="0 0 80 80">
+            <circle class="ring-bg"   cx="40" cy="40" r="34"/>
+            <circle class="ring-fill" cx="40" cy="40" r="34" id="score-arc" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+            <text class="ring-text" x="40" y="38" id="score-frac"></text>
+            <text class="ring-sub"  x="40" y="51">score</text>
+          </svg>
+          <div class="results-headline">
+            <h2 id="result-title"></h2>
+            <p id="result-sub"></p>
+          </div>
+        </div>
+        <p class="breakdown-title">By topic</p>
+        <div id="breakdown"></div>
+        <div class="results-actions">
+          <button class="btn-ghost" onclick="restartQuiz()">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5a4.5 4.5 0 1 1 1.2 3M2 9.5V6.5H5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Try again
+          </button>
+          <button class="btn-ghost" onclick="shareResult()">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 1l3 3-3 3M12 4H5a3 3 0 0 0 0 6h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Share result
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* ── Shell ── */
+  .quiz-shell {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ── Header ── */
+  .quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .back-link {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--accent); }
+
+  /* ── Screens ── */
+  .screen { display: none; }
+  .screen.active { display: block; animation: fadeIn 0.25s ease; }
+  @keyframes fadeIn { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform:none; } }
+
+  /* ── Card ── */
+  .q-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 1.75rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 18px 40px rgba(0,0,0,.22);
+    backdrop-filter: blur(6px);
+  }
+
+  /* ── Start screen ── */
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+  }
+  .start-title {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .start-title em { font-style: normal; color: var(--accent); }
+  .start-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+  .meta-item {
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .meta-item .val {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+    font-variant-numeric: tabular-nums;
+  }
+  .meta-item .lbl {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    display: block;
+  }
+
+  /* ── Pills ── */
+  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+  .pill {
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  [data-theme="light"] .pill { background: rgba(0,0,0,.03); }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #0b0f14;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+  .btn-primary:hover { opacity: 0.88; }
+  .btn-primary:active { transform: scale(0.98); }
+  .btn-primary svg { transition: transform 0.15s; }
+  .btn-primary:hover svg { transform: translateX(3px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+  .btn-ghost:hover {
+    color: var(--text);
+    border-color: color-mix(in srgb, var(--text) 20%, transparent);
+    background: color-mix(in srgb, var(--text) 5%, transparent);
+  }
+
+  /* ── Progress bar ── */
+  .q-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .q-num { font-size: 13px; color: var(--muted); }
+  .progress-track {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* ── Difficulty dots ── */
+  .diff-dots { display: flex; gap: 4px; margin-bottom: 1rem; }
+  .diff-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--border);
+    transition: background 0.2s;
+  }
+  .diff-dot.on { background: var(--accent2); }
+
+  /* ── Question text ── */
+  .q-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 1.25rem;
+  }
+  .q-text code, .opt-text code {
+    font-family: ui-monospace, 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 13px;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--accent);
+    padding: 1px 5px;
+    border-radius: 5px;
+  }
+  [data-theme="light"] .q-text code,
+  [data-theme="light"] .opt-text code {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--accent);
+  }
+
+  /* ── Options ── */
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    background: color-mix(in srgb, var(--text) 2%, transparent);
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    user-select: none;
+  }
+  .option:hover:not(.locked) {
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    transform: translateX(2px);
+  }
+  .option.correct {
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+  .option.wrong {
+    border-color: rgba(239,68,68,.4);
+    background: rgba(239,68,68,.08);
+  }
+  .opt-key {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    min-width: 18px;
+    padding-top: 2px;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .option.correct .opt-key { color: var(--accent); }
+  .option.wrong   .opt-key { color: #f87171; }
+  .opt-text { font-size: 14px; color: var(--text); line-height: 1.5; }
+
+  /* ── Explanation ── */
+  .explanation {
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.65;
+    border: 1px solid;
+    margin-top: 1rem;
+    animation: fadeIn 0.2s ease;
+  }
+  .explanation.ok {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    color: var(--text);
+  }
+  .explanation.err {
+    background: rgba(239,68,68,.07);
+    border-color: rgba(239,68,68,.3);
+    color: var(--text);
+  }
+  .explanation code {
+    font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+    font-size: 12px;
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .exp-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .explanation.ok  .exp-label { color: var(--accent); }
+  .explanation.err .exp-label { color: #f87171; }
+
+  /* ── Next button row ── */
+  .btn-row { display: flex; justify-content: flex-end; margin-top: 1rem; }
+
+  /* ── Results ── */
+  .results-top {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-ring { width: 80px; height: 80px; flex-shrink: 0; }
+  .ring-bg   { fill: none; stroke: var(--border); stroke-width: 5; }
+  .ring-fill { fill: none; stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 1s cubic-bezier(0.4,0,0.2,1); transform-origin: center; transform: rotate(-90deg); }
+  .ring-text { font-size: 14px; font-weight: 700; fill: var(--text); dominant-baseline: middle; text-anchor: middle; }
+  .ring-sub  { font-size: 9px; fill: var(--muted); dominant-baseline: middle; text-anchor: middle; }
+  .results-headline { flex: 1; }
+  .results-headline h2 { font-size: 1.2rem; font-weight: 700; margin: 0 0 4px; }
+  .results-headline p  { font-size: 14px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+  .breakdown-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+  }
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-cat { color: var(--muted); min-width: 110px; }
+  .breakdown-bar-wrap { flex: 1; margin: 0 12px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .breakdown-bar { height: 100%; border-radius: 2px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
+  .bd-score { font-size: 12px; font-weight: 600; min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
+  .bd-score.good { color: var(--accent); }
+  .bd-score.mid  { color: #fbbf24; }
+  .bd-score.bad  { color: #f87171; }
+
+  .results-actions { display: flex; gap: 8px; margin-top: 1.5rem; flex-wrap: wrap; }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .q-card { padding: 1.25rem 1rem; }
+    .results-top { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  }
+</style>
+
+<script>
+const Qs = [
+  { q:"What is the output of <code>type([])</code>?", opts:["<code>&lt;class 'array'&gt;</code>","<code>&lt;class 'list'&gt;</code>","<code>&lt;class 'tuple'&gt;</code>","<code>&lt;class 'dict'&gt;</code>"], ans:1, cat:"Data Types", diff:1, exp:"<code>[]</code> creates a list literal. <code>type([])</code> returns <code>&lt;class 'list'&gt;</code> — <code>array</code> is not a built-in Python type." },
+  { q:"Which of the following is <strong>immutable</strong> in Python?", opts:["List","Dictionary","Set","Tuple"], ans:3, cat:"Data Types", diff:1, exp:"Tuples are immutable — once created they cannot be changed. Lists, dicts, and sets are all mutable." },
+  { q:"What does <code>len({'a':1,'b':2,'c':3})</code> return?", opts:["6","3","2","Raises TypeError"], ans:1, cat:"Data Types", diff:1, exp:"<code>len()</code> on a dict counts the number of key-value pairs, not the values themselves. Three pairs → <code>3</code>." },
+  { q:"What is the result of <code>3 ** 2 ** 2</code>?", opts:["81","36","729","18"], ans:0, cat:"Operators", diff:2, exp:"The <code>**</code> operator is right-associative. This evaluates as <code>3 ** (2 ** 2)</code> = <code>3 ** 4</code> = <code>81</code>." },
+  { q:"What does the walrus operator <code>:=</code> do?", opts:["Assigns and returns a value in one expression","Creates a new scope","Compares two objects by identity","Unpacks an iterable"], ans:0, cat:"Operators", diff:2, exp:"The walrus operator (Python 3.8+) assigns a value to a variable <em>and</em> returns it simultaneously. Very useful inside <code>while</code> loops and comprehensions." },
+  { q:"What is the output of <code>[x**2 for x in range(4) if x % 2 == 0]</code>?", opts:["[0, 4]","[0, 1, 4, 9]","[4, 16]","[1, 9]"], ans:0, cat:"Comprehensions", diff:2, exp:"<code>range(4)</code> gives 0,1,2,3. The filter keeps even numbers (0 and 2). Squaring gives <code>[0, 4]</code>. The filter runs before the expression." },
+  { q:"What does <code>def f(*args, **kwargs): return args, kwargs</code> return when called as <code>f(1, 2, x=3)</code>?", opts:["<code>([1, 2], {'x': 3})</code>","<code>((1, 2), {'x': 3})</code>","<code>(1, 2, {'x': 3})</code>","Raises SyntaxError"], ans:1, cat:"Functions", diff:2, exp:"<code>*args</code> collects positional arguments into a <strong>tuple</strong> (not a list): <code>(1, 2)</code>. <code>**kwargs</code> gives <code>{'x': 3}</code>. Return value is <code>((1, 2), {'x': 3})</code>." },
+  { q:"What is a generator in Python?", opts:["A class that implements <code>__iter__</code>","A function that uses <code>yield</code> to lazily produce values","A built-in for creating sequences","A special type of list comprehension"], ans:1, cat:"Functions", diff:2, exp:"A generator function uses <code>yield</code>. Calling it returns a generator object that produces values one at a time, on demand — this is lazy evaluation." },
+  { q:"What does <code>@staticmethod</code> do to a method?", opts:["Makes it callable without an instance, with no <code>self</code> or <code>cls</code>","Makes it accessible only within the class","Prevents subclasses from overriding it","Automatically caches its return value"], ans:0, cat:"OOP", diff:2, exp:"A static method belongs to the class namespace but receives neither <code>self</code> nor <code>cls</code>. It behaves like a plain function defined inside the class body." },
+  { q:"What algorithm does Python use for its Method Resolution Order (MRO)?", opts:["Depth-first left-to-right","C3 linearisation","Breadth-first left-to-right","Alphabetical order"], ans:1, cat:"OOP", diff:3, exp:"Python uses C3 linearisation to compute the MRO, guaranteeing a consistent and predictable order in complex multiple-inheritance hierarchies. Inspect it with <code>Class.__mro__</code>." },
+  { q:"What does defining <code>__slots__</code> in a class do?", opts:["Restricts attributes to those listed, removing the per-instance <code>__dict__</code>","Makes all attributes read-only","Enables multiple inheritance","Replaces <code>__init__</code>"], ans:0, cat:"OOP", diff:3, exp:"<code>__slots__</code> removes the default per-instance <code>__dict__</code> and allocates fixed slots instead — reducing memory usage and speeding up attribute access." },
+  { q:"What is the result of <code>list(map(lambda x: x+1, filter(lambda x: x%2==0, range(6))))</code>?", opts:["[1, 3, 5]","[2, 4, 6]","[0, 2, 4]","[3, 5]"], ans:0, cat:"Functional", diff:3, exp:"<code>filter</code> keeps even numbers from range(6): 0, 2, 4. <code>map</code> adds 1 to each: 1, 3, 5. Result is <code>[1, 3, 5]</code>. Work inside-out." },
+  { q:"What does <code>functools.lru_cache</code> do?", opts:["Limits recursive call depth","Memoises function results for repeated inputs","Converts a generator to a list","Profiles function execution time"], ans:1, cat:"Functional", diff:3, exp:"<code>lru_cache</code> (Least Recently Used) caches a function's return values. Repeated calls with the same arguments return the cached result without recomputing." },
+  { q:"In Python, what is a descriptor?", opts:["Any object stored in a class <code>__dict__</code>","An object defining <code>__get__</code>, <code>__set__</code>, or <code>__delete__</code>, customising attribute access","A function decorated with <code>@property</code>","A subclass of <code>object</code>"], ans:1, cat:"Advanced", diff:3, exp:"A descriptor implements at least one of <code>__get__</code>, <code>__set__</code>, or <code>__delete__</code>. <code>@property</code>, <code>@classmethod</code>, and <code>@staticmethod</code> are all descriptors under the hood." },
+  { q:"What is the output of <code>print(0.1 + 0.2 == 0.3)</code>?", opts:["True","False","None","Raises FloatingPointError"], ans:1, cat:"Advanced", diff:2, exp:"Due to IEEE 754 binary floating-point, <code>0.1 + 0.2</code> is actually <code>0.30000000000000004</code> internally. Use <code>math.isclose()</code> for float comparisons." }
+];
+
+let cur = 0, score = 0, answers = [];
+
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function startQuiz() {
+  cur = 0; score = 0; answers = [];
+  show('question-screen');
+  renderQ();
+}
+
+function renderQ() {
+  const q = Qs[cur];
+  document.getElementById('q-num').textContent = (cur+1) + ' / ' + Qs.length;
+  document.getElementById('q-cat').textContent = q.cat;
+  document.getElementById('progress-fill').style.width = ((cur / Qs.length)*100) + '%';
+  const dd = document.getElementById('diff-dots');
+  dd.innerHTML = '';
+  for (let i=1; i<=3; i++) {
+    const d = document.createElement('div');
+    d.className = 'diff-dot' + (i <= q.diff ? ' on' : '');
+    dd.appendChild(d);
+  }
+  document.getElementById('q-text').innerHTML = q.q;
+  const keys = ['A','B','C','D'];
+  const cont = document.getElementById('options');
+  cont.innerHTML = '';
+  q.opts.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option';
+    div.innerHTML = '<span class="opt-key">'+keys[i]+'</span><span class="opt-text">'+opt+'</span>';
+    div.onclick = () => pick(i);
+    cont.appendChild(div);
+  });
+  document.getElementById('explanation').style.display = 'none';
+  document.getElementById('btn-next').style.display = 'none';
+}
+
+function pick(idx) {
+  const q = Qs[cur];
+  const opts = document.querySelectorAll('.option');
+  opts.forEach(o => { o.classList.add('locked'); o.onclick = null; });
+  const ok = idx === q.ans;
+  opts[idx].classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) opts[q.ans].classList.add('correct');
+  answers[cur] = { selected: idx, correct: ok };
+  if (ok) score++;
+  const exp = document.getElementById('explanation');
+  exp.className = 'explanation ' + (ok ? 'ok' : 'err');
+  exp.innerHTML = '<span class="exp-label">' + (ok ? '✓ Correct' : '✗ Incorrect') + '</span>' + q.exp;
+  exp.style.display = 'block';
+  const btn = document.getElementById('btn-next');
+  btn.style.display = 'inline-flex';
+  btn.innerHTML = (cur === Qs.length-1 ? 'See results' : 'Next') +
+    ' <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+}
+
+function nextQ() {
+  cur++;
+  if (cur >= Qs.length) { showResults(); return; }
+  renderQ();
+}
+
+function showResults() {
+  show('results-screen');
+  const pct = Math.round((score / Qs.length)*100);
+  document.getElementById('score-frac').textContent = score + '/' + Qs.length;
+  const circ = 2 * Math.PI * 34;
+  const arc = document.getElementById('score-arc');
+  arc.style.strokeDashoffset = circ;
+  // Use CSS variable colours via computed style
+  const root = getComputedStyle(document.documentElement);
+  const accent = root.getPropertyValue('--accent').trim();
+  arc.style.stroke = pct >= 80 ? accent : pct >= 50 ? '#fbbf24' : '#f87171';
+  setTimeout(() => { arc.style.strokeDashoffset = circ - (circ * pct / 100); }, 50);
+  const tiers = [
+    [0,40,'Needs more work','Review the topics below and give it another go.'],
+    [40,60,'Getting there','Solid foundations — some gaps to close.'],
+    [60,80,'Competent','Good grasp of Python. Push into the advanced topics.'],
+    [80,95,'Strong','You know your Python well.'],
+    [95,101,'Expert','Near-perfect. Seriously impressive.']
+  ];
+  let tier = tiers[0];
+  tiers.forEach(([lo,hi,t,s]) => { if (pct>=lo && pct<hi) tier=[lo,hi,t,s]; });
+  document.getElementById('result-title').textContent = tier[2];
+  document.getElementById('result-sub').textContent = tier[3];
+  const cats = {};
+  Qs.forEach((q,i) => {
+    if (!cats[q.cat]) cats[q.cat] = {c:0,t:0};
+    cats[q.cat].t++;
+    if (answers[i]&&answers[i].correct) cats[q.cat].c++;
+  });
+  const bd = document.getElementById('breakdown');
+  bd.innerHTML = '';
+  Object.entries(cats).forEach(([cat,{c,t}]) => {
+    const p = Math.round((c/t)*100);
+    const cls = p>=80?'good':p>=50?'mid':'bad';
+    const barColor = p>=80 ? accent : p>=50 ? '#fbbf24' : '#f87171';
+    const row = document.createElement('div');
+    row.className = 'breakdown-row';
+    row.innerHTML = '<span class="breakdown-cat">'+cat+'</span>'
+      +'<div class="breakdown-bar-wrap"><div class="breakdown-bar" style="width:0%;background:'+barColor+'" data-pct="'+p+'"></div></div>'
+      +'<span class="bd-score '+cls+'">'+c+'/'+t+'</span>';
+    bd.appendChild(row);
+  });
+  setTimeout(() => {
+    document.querySelectorAll('.breakdown-bar').forEach(b => {
+      b.style.width = b.dataset.pct + '%';
+    });
+  }, 100);
+}
+
+function restartQuiz() { startQuiz(); }
+
+function shareResult() {
+  const pct = Math.round((score / Qs.length)*100);
+  const text = `I scored ${score}/${Qs.length} (${pct}%) on the Python Knowledge Quiz on foxxelabs.ie — give it a try!`;
+  if (navigator.share) {
+    navigator.share({ title: 'Python Quiz Result', text, url: window.location.href });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => alert('Result copied to clipboard!'));
+  }
+}
+</script>
