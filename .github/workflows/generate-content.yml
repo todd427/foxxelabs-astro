@@ -61,7 +61,8 @@ jobs:
       - name: Check for new content
         id: check_changes
         run: |
-          git diff --quiet src/content/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          git add src/content/
+          git diff --cached --quiet src/content/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit new content
         if: steps.check_changes.outputs.changed == 'true'
