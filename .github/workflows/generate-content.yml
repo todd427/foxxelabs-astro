@@ -49,6 +49,8 @@ jobs:
       - name: Generate content
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           INTERVAL="${{ github.event.inputs.interval || 'daily' }}"
           CONTENT_TYPE="${{ github.event.inputs.content_type || 'news' }}"

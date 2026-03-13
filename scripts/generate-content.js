@@ -23,22 +23,22 @@ if (!apiKey) {
 
 const client = new Anthropic({ apiKey });
 
+// Supabase configuration (optional — pipeline still works without it)
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const supabaseEnabled = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
+
+if (!supabaseEnabled) {
+  console.warn('⚠️  Supabase env vars not set — intelligence records will not be saved.');
+}
+
 // Rate limiting configuration
 const MAX_RETRIES = 3;
-const TOKEN_HEADROOM = 5000;    // Reserve this many tokens before throttling
-const MIN_DELAY_MS = 1000;      // Minimum pause after any request
+const TOKEN_HEADROOM = 5000;
+const MIN_DELAY_MS = 1000;
 
-/**
- * Delay helper
- */
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-/**
- * Extract rate limit info from response headers and pause if needed.
- * Anthropic returns:
- *   x-ratelimit-remaining-tokens  — tokens left in the current window
- *   x-ratelimit-reset-tokens      — ISO timestamp when the window resets
- */
 async function throttleIfNeeded(response) {
   const remaining = parseInt(response.headers?.['x-ratelimit-remaining-tokens'] ?? '999999', 10);
   const resetAt   = response.headers?.['x-ratelimit-reset-tokens'];
@@ -47,17 +47,13 @@ async function throttleIfNeeded(response) {
     const resetMs = new Date(resetAt).getTime() - Date.now();
     if (resetMs > 0) {
       console.log(`⏳ Nearing token limit (${remaining} remaining). Waiting ${Math.ceil(resetMs / 1000)}s for window reset...`);
-      await delay(resetMs + 500); // small buffer
+      await delay(resetMs + 500);
     }
   } else {
-    await delay(MIN_DELAY_MS); // brief courtesy pause
+    await delay(MIN_DELAY_MS);
   }
 }
 
-/**
- * Make API call with retry logic for rate limits.
- * Throttles proactively based on response headers; backs off on 429s.
- */
 async function callWithRetry(apiCall, retries = MAX_RETRIES) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
@@ -66,7 +62,6 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
       return response;
     } catch (error) {
       if (error.status === 429 && attempt < retries) {
-        // Use retry-after header if present, otherwise exponential backoff
         const retryAfter = parseInt(error.headers?.['retry-after'] ?? '0', 10);
         const waitMs = retryAfter > 0 ? retryAfter * 1000 : 15000 * attempt;
         console.log(`⏳ Rate limited. Waiting ${waitMs / 1000}s before retry (attempt ${attempt}/${retries})...`);
@@ -78,11 +73,56 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
   }
 }
 
+/**
+ * Save an intelligence record to Supabase.
+ * Non-fatal — logs a warning if it fails so the pipeline keeps running.
+ */
+async function saveToSupabase(postData, topic, slug) {
+  if (!supabaseEnabled) return;
+
+  const record = {
+    topic,
+    category:       postData.category     ?? null,
+    interval:       intervalArg,
+    title:          postData.title         ?? null,
+    summary:        postData.description   ?? null,
+    significance:   postData.significance  ?? 'medium',
+    irish_eu_angle: postData.irish_eu_angle ?? false,
+    entities:       postData.entities      ?? [],
+    sources:        postData.sourceUrl
+      ? [{ url: postData.sourceUrl, title: postData.source ?? postData.sourceUrl }]
+      : [],
+    slug,
+    tags:           postData.tags          ?? [],
+  };
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/intelligence_records`, {
+      method:  'POST',
+      headers: {
+        'Content-Type':  'application/json',
+        'apikey':        SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer':        'return=minimal',
+      },
+      body: JSON.stringify(record),
+    });
+
+    if (!res.ok) {
+      const body = await res.text();
+      console.warn(`⚠️  Supabase write failed (${res.status}): ${body}`);
+    } else {
+      console.log(`🗄️  Saved to Supabase: ${slug}`);
+    }
+  } catch (err) {
+    console.warn(`⚠️  Supabase error: ${err.message}`);
+  }
+}
+
 // Parse command line arguments
 const args = process.argv.slice(2);
-const contentType = args[0] || 'news'; // 'news' or 'resource'
+const contentType = args[0] || 'news';
 
-// Extract --interval flag, defaulting to 'daily'
 const intervalFlagIndex = args.indexOf('--interval');
 const intervalArg = intervalFlagIndex !== -1 ? args[intervalFlagIndex + 1] : 'daily';
 
@@ -93,49 +133,25 @@ if (!INTERVAL_DAYS[intervalArg]) {
   console.warn(`⚠️  Unknown interval "${intervalArg}", defaulting to daily (1 day)`);
 }
 
-// specificTopic is any non-flag arg after the content type
 const specificTopic = args[1] && !args[1].startsWith('--') ? args[1] : undefined;
 
-/**
- * Map a topic string to relevant source categories from config.
- * Always appends ireland_eu as a secondary source for the site's angle.
- */
 function getSourcesForTopic(topic) {
   const t = topic.toLowerCase();
   const { sources } = config;
   const relevant = [];
 
-  if (/security|vulnerabilit|exploit|breach|hack|threat/.test(t)) {
-    relevant.push(...sources.security);
-  }
-  if (/research|breakthrough|paper|arxiv|model release|llm|alignment|safety/.test(t)) {
-    relevant.push(...sources.research);
-  }
-  if (/policy|regulation|governance|act|law|compliance|eu ai/.test(t)) {
-    relevant.push(...sources.policy);
-  }
-  if (/cyberpsych|online behaviour|digital psychology|emoji|social media psychology/.test(t)) {
-    relevant.push(...sources.cyberpsychology);
-  }
-  if (/industry|application|startup|investment|product|market/.test(t)) {
-    relevant.push(...sources.industry);
-  }
+  if (/security|vulnerabilit|exploit|breach|hack|threat/.test(t)) relevant.push(...sources.security);
+  if (/research|breakthrough|paper|arxiv|model release|llm|alignment|safety/.test(t)) relevant.push(...sources.research);
+  if (/policy|regulation|governance|act|law|compliance|eu ai/.test(t)) relevant.push(...sources.policy);
+  if (/cyberpsych|online behaviour|digital psychology|emoji|social media psychology/.test(t)) relevant.push(...sources.cyberpsychology);
+  if (/industry|application|startup|investment|product|market/.test(t)) relevant.push(...sources.industry);
 
-  // Default to industry + research if nothing matched
-  if (relevant.length === 0) {
-    relevant.push(...sources.industry, ...sources.research);
-  }
-
-  // Always include Ireland & EU sources for the site's regional angle
+  if (relevant.length === 0) relevant.push(...sources.industry, ...sources.research);
   relevant.push(...sources.ireland_eu);
 
-  // Deduplicate
   return [...new Set(relevant)];
 }
 
-/**
- * Search for recent AI news/developments
- */
 async function searchForContent(topic, daysBack) {
   console.log(`🔍 Searching for: ${topic}...`);
 
@@ -148,25 +164,17 @@ async function searchForContent(topic, daysBack) {
     ? `Prioritise results from these sources where available: ${topicSources.join(', ')}. `
     : '';
 
-  const response = await callWithRetry(() => client.messages.create({
+  return await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 4000,
-    tools: [{
-      type: 'web_search_20250305',
-      name: 'web_search'
-    }],
+    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
     messages: [{
       role: 'user',
       content: `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`
     }]
   }));
-
-  return response;
 }
 
-/**
- * Generate a news post from search results
- */
 async function generateNewsPost(searchResults, topic) {
   console.log(`✍️  Generating news post...`);
 
@@ -182,12 +190,14 @@ REQUIREMENTS:
 - Description: One compelling sentence (120-160 chars)
 - Category: Choose from: ${config.newsCategories.join(', ')}
 - Tags: 2-4 relevant tags
+- Significance: Rate as "high", "medium", or "low" based on industry impact
+- Entities: List key organisations, people, products, or standards mentioned (e.g. ["OpenAI", "GPT-5", "NIST"])
+- Irish/EU angle: true if the story has direct relevance to Ireland or the EU, false otherwise
 - Content: 300-500 words covering:
   * Key Developments (what happened)
   * Industry Context (why it matters)
   * Practical Implications (what it means for builders/users)
   * Open Questions (what's still unclear)
-- Sources: Include specific URLs and dates
 - Tone: ${config.style.tone}
 - Approach: ${config.style.approach}
 - ${sourcesNote}
@@ -200,6 +210,9 @@ OUTPUT FORMAT (JSON):
   "tags": ["tag1", "tag2"],
   "source": "Primary source name",
   "sourceUrl": "https://...",
+  "significance": "high|medium|low",
+  "entities": ["Entity1", "Entity2"],
+  "irish_eu_angle": true,
   "content": "Full markdown content with ## headings"
 }
 
@@ -213,27 +226,20 @@ Generate the post as JSON only, no additional text.`;
     messages: [
       {
         role: 'user',
-        content: searchResults.content.map(block => 
+        content: searchResults.content.map(block =>
           block.type === 'text' ? block.text : ''
         ).join('\n')
       },
-      {
-        role: 'user',
-        content: prompt
-      }
+      { role: 'user', content: prompt }
     ]
   }));
-  
-  // Extract JSON from response
+
   const text = response.content[0].text;
   const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) {
-    throw new Error('Failed to extract JSON from response');
-  }
+  if (!jsonMatch) throw new Error('Failed to extract JSON from response');
 
   const post = JSON.parse(jsonMatch[0]);
 
-  // Append source link to bottom of content if available
   if (post.sourceUrl) {
     const sourceLabel = post.source || post.sourceUrl;
     post.content += `\n\n---\n**Source:** [${sourceLabel}](${post.sourceUrl})`;
@@ -242,9 +248,6 @@ Generate the post as JSON only, no additional text.`;
   return post;
 }
 
-/**
- * Generate a resource post on a specific topic
- */
 async function generateResourcePost(topic) {
   console.log(`✍️  Generating resource post on: ${topic}...`);
 
@@ -265,31 +268,17 @@ REQUIREMENTS:
 
 CONTENT STRUCTURE:
 ## Why This Matters
-Context and relevance (2-3 paragraphs)
-
 ## The Map: [Framework/Taxonomy]
-Break down the landscape into clear categories
-
 ## Practical Uses
-Real-world applications with examples
-
 ## Tradeoffs & Failure Modes
-What can go wrong, limitations
-
 ## What Changed Recently
-Recent developments with [sources and dates]
-
 ## What to Watch Next
-Emerging trends (3-5 bullets)
-
 ## Foxxe Take
-Your strategic perspective and recommendations
 
 TONE: ${config.style.tone}
 LENGTH: 1500-2000 words
-FORMAT: Use concrete examples and actionable insights
 
-Search for current information and output as JSON:
+Output as JSON:
 {
   "title": "...",
   "description": "...",
@@ -303,44 +292,30 @@ Search for current information and output as JSON:
   const response = await callWithRetry(() => client.messages.create({
     model: 'claude-sonnet-4-20250514',
     max_tokens: 8000,
-    tools: [{
-      type: 'web_search_20250305',
-      name: 'web_search'
-    }],
-    messages: [{
-      role: 'user',
-      content: prompt
-    }]
+    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+    messages: [{ role: 'user', content: prompt }]
   }));
-  
-  // Get the final text response
+
   const text = response.content
     .filter(block => block.type === 'text')
     .map(block => block.text)
     .join('\n');
-  
+
   const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) {
-    throw new Error('Failed to extract JSON from response');
-  }
-  
+  if (!jsonMatch) throw new Error('Failed to extract JSON from response');
+
   return JSON.parse(jsonMatch[0]);
 }
 
-/**
- * Create a markdown file from post data
- */
 function createMarkdownFile(postData, type) {
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
-  
-  // Create slug from title
+
   const slug = postData.title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
-  
-  // Build frontmatter
+
   let frontmatter = `---
 title: "${postData.title}"
 description: "${postData.description}"
@@ -349,99 +324,79 @@ category: "${postData.category}"
 tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
 
   if (type === 'news') {
-    if (postData.source) {
-      frontmatter += `\nsource: "${postData.source}"`;
-    }
-    if (postData.sourceUrl) {
-      frontmatter += `\nsourceUrl: "${postData.sourceUrl}"`;
-    }
+    if (postData.source)    frontmatter += `\nsource: "${postData.source}"`;
+    if (postData.sourceUrl) frontmatter += `\nsourceUrl: "${postData.sourceUrl}"`;
   } else if (type === 'resource') {
-    if (postData.readingTime) {
-      frontmatter += `\nreadingTime: "${postData.readingTime}"`;
-    }
-    if (postData.furtherReading && postData.furtherReading.length > 0) {
+    if (postData.readingTime) frontmatter += `\nreadingTime: "${postData.readingTime}"`;
+    if (postData.furtherReading?.length) {
       frontmatter += `\nfurtherReading:`;
       postData.furtherReading.forEach(item => {
         frontmatter += `\n  - title: "${item.title}"`;
         frontmatter += `\n    url: "${item.url}"`;
-        if (item.source) {
-          frontmatter += `\n    source: "${item.source}"`;
-        }
+        if (item.source) frontmatter += `\n    source: "${item.source}"`;
       });
     }
   }
-  
+
   frontmatter += `\ndraft: false\n---\n\n`;
-  
-  // Combine frontmatter and content
+
   const fullContent = frontmatter + postData.content;
-  
-  // Determine output path
   const outputDir = path.join(__dirname, '..', 'src', 'content', type);
   const outputPath = path.join(outputDir, `${slug}.md`);
-  
-  // Check if file already exists
+
   if (fs.existsSync(outputPath)) {
     console.log(`⚠️  File already exists: ${slug}.md`);
-    const timestamp = now.getTime();
-    const newSlug = `${slug}-${timestamp}`;
-    const newPath = path.join(outputDir, `${newSlug}.md`);
-    fs.writeFileSync(newPath, fullContent);
+    const newSlug = `${slug}-${now.getTime()}`;
+    fs.writeFileSync(path.join(outputDir, `${newSlug}.md`), fullContent);
     console.log(`✅ Created: ${newSlug}.md (with timestamp to avoid conflict)`);
     return newSlug;
   }
-  
+
   fs.writeFileSync(outputPath, fullContent);
   console.log(`✅ Created: ${slug}.md`);
   return slug;
 }
 
-/**
- * Main execution
- */
 async function main() {
   console.log('🚀 Foxxe Labs Content Generator\n');
-  
+
   if (contentType === 'resource') {
-    // Generate a resource post
     const topic = specificTopic || 'AI security best practices';
     console.log(`📝 Generating resource post on: ${topic}\n`);
-    
+
     try {
       const postData = await generateResourcePost(topic);
       const slug = createMarkdownFile(postData, 'resource');
-      
+      await saveToSupabase(postData, topic, slug);
+
       console.log('\n✨ Done!');
       console.log(`📄 Review the draft at: src/content/resources/${slug}.md`);
-      console.log('💡 Edit as needed, then change "draft: true" to "draft: false" to publish');
     } catch (error) {
       console.error('❌ Error generating resource:', error.message);
       process.exit(1);
     }
-    
+
   } else if (contentType === 'news') {
-    // Generate news posts
     console.log(`📰 Searching for AI news from the past ${daysBack} day(s) [${intervalArg}]...\n`);
-    
+
     const topics = specificTopic ? [specificTopic] : config.topics;
     const posts = [];
-    
-    for (let i = 0; i < topics.length; i++) {
-      const topic = topics[i];
+
+    for (const topic of topics) {
       try {
         const searchResults = await searchForContent(topic, daysBack);
         const postData = await generateNewsPost(searchResults, topic);
         const slug = createMarkdownFile(postData, 'news');
+        await saveToSupabase(postData, topic, slug);
         posts.push(slug);
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
       }
     }
-    
+
     console.log(`\n✨ Done! Generated ${posts.length} news post(s)`);
     console.log('📄 Review drafts in: src/content/news/');
-    console.log('💡 Edit as needed, or commit to post');
-    
+
   } else {
     console.error('❌ Invalid content type. Use "news" or "resource"');
     console.log('\nUsage:');
