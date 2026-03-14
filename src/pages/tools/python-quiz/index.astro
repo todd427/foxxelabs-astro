@@ -439,106 +439,108 @@ const Qs = [
   { q:"What is the output of <code>print(0.1 + 0.2 == 0.3)</code>?", opts:["True","False","None","Raises FloatingPointError"], ans:1, cat:"Advanced", diff:2, exp:"Due to IEEE 754 binary floating-point, <code>0.1 + 0.2</code> is actually <code>0.30000000000000004</code> internally. Use <code>math.isclose()</code> for float comparisons." }
 ];
 
-let cur = 0, score = 0, answers = [];
+interface Answer { selected: number; correct: boolean; }
+interface CatStat { c: number; t: number; }
 
-function show(id) {
+let cur = 0, score = 0, answers: Answer[] = [];
+
+function show(id: string): void {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  (document.getElementById(id) as HTMLElement).classList.add('active');
 }
 
-function startQuiz() {
+function startQuiz(): void {
   cur = 0; score = 0; answers = [];
   show('question-screen');
   renderQ();
 }
 
-function renderQ() {
+function renderQ(): void {
   const q = Qs[cur];
-  document.getElementById('q-num').textContent = (cur+1) + ' / ' + Qs.length;
-  document.getElementById('q-cat').textContent = q.cat;
-  document.getElementById('progress-fill').style.width = ((cur / Qs.length)*100) + '%';
-  const dd = document.getElementById('diff-dots');
+  (document.getElementById('q-num') as HTMLElement).textContent = (cur+1) + ' / ' + Qs.length;
+  (document.getElementById('q-cat') as HTMLElement).textContent = q.cat;
+  (document.getElementById('progress-fill') as HTMLElement).style.width = ((cur / Qs.length)*100) + '%';
+  const dd = document.getElementById('diff-dots') as HTMLElement;
   dd.innerHTML = '';
   for (let i=1; i<=3; i++) {
     const d = document.createElement('div');
     d.className = 'diff-dot' + (i <= q.diff ? ' on' : '');
     dd.appendChild(d);
   }
-  document.getElementById('q-text').innerHTML = q.q;
+  (document.getElementById('q-text') as HTMLElement).innerHTML = q.q;
   const keys = ['A','B','C','D'];
-  const cont = document.getElementById('options');
+  const cont = document.getElementById('options') as HTMLElement;
   cont.innerHTML = '';
-  q.opts.forEach((opt, i) => {
+  q.opts.forEach((opt: string, i: number) => {
     const div = document.createElement('div');
     div.className = 'option';
     div.innerHTML = '<span class="opt-key">'+keys[i]+'</span><span class="opt-text">'+opt+'</span>';
     div.onclick = () => pick(i);
     cont.appendChild(div);
   });
-  document.getElementById('explanation').style.display = 'none';
-  document.getElementById('btn-next').style.display = 'none';
+  (document.getElementById('explanation') as HTMLElement).style.display = 'none';
+  (document.getElementById('btn-next') as HTMLElement).style.display = 'none';
 }
 
-function pick(idx) {
+function pick(idx: number): void {
   const q = Qs[cur];
-  const opts = document.querySelectorAll('.option');
+  const opts = document.querySelectorAll<HTMLElement>('.option');
   opts.forEach(o => { o.classList.add('locked'); o.onclick = null; });
   const ok = idx === q.ans;
   opts[idx].classList.add(ok ? 'correct' : 'wrong');
   if (!ok) opts[q.ans].classList.add('correct');
   answers[cur] = { selected: idx, correct: ok };
   if (ok) score++;
-  const exp = document.getElementById('explanation');
+  const exp = document.getElementById('explanation') as HTMLElement;
   exp.className = 'explanation ' + (ok ? 'ok' : 'err');
   exp.innerHTML = '<span class="exp-label">' + (ok ? '✓ Correct' : '✗ Incorrect') + '</span>' + q.exp;
   exp.style.display = 'block';
-  const btn = document.getElementById('btn-next');
+  const btn = document.getElementById('btn-next') as HTMLElement;
   btn.style.display = 'inline-flex';
   btn.innerHTML = (cur === Qs.length-1 ? 'See results' : 'Next') +
     ' <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
 
-function nextQ() {
+function nextQ(): void {
   cur++;
   if (cur >= Qs.length) { showResults(); return; }
   renderQ();
 }
 
-function showResults() {
+function showResults(): void {
   show('results-screen');
   const pct = Math.round((score / Qs.length)*100);
-  document.getElementById('score-frac').textContent = score + '/' + Qs.length;
+  (document.getElementById('score-frac') as HTMLElement).textContent = score + '/' + Qs.length;
   const circ = 2 * Math.PI * 34;
-  const arc = document.getElementById('score-arc');
-  arc.style.strokeDashoffset = circ;
-  // Use CSS variable colours via computed style
+  const arc = document.getElementById('score-arc') as HTMLElement;
+  arc.style.strokeDashoffset = String(circ);
   const root = getComputedStyle(document.documentElement);
   const accent = root.getPropertyValue('--accent').trim();
   arc.style.stroke = pct >= 80 ? accent : pct >= 50 ? '#fbbf24' : '#f87171';
-  setTimeout(() => { arc.style.strokeDashoffset = circ - (circ * pct / 100); }, 50);
-  const tiers = [
-    [0,40,'Needs more work','Review the topics below and give it another go.'],
-    [40,60,'Getting there','Solid foundations — some gaps to close.'],
-    [60,80,'Competent','Good grasp of Python. Push into the advanced topics.'],
-    [80,95,'Strong','You know your Python well.'],
-    [95,101,'Expert','Near-perfect. Seriously impressive.']
+  setTimeout(() => { arc.style.strokeDashoffset = String(circ - (circ * pct / 100)); }, 50);
+  const tiers: [number, number, string, string][] = [
+    [0,  40, 'Needs more work', 'Review the topics below and give it another go.'],
+    [40, 60, 'Getting there',   'Solid foundations — some gaps to close.'],
+    [60, 80, 'Competent',       'Good grasp of Python. Push into the advanced topics.'],
+    [80, 95, 'Strong',          'You know your Python well.'],
+    [95, 101,'Expert',          'Near-perfect. Seriously impressive.']
   ];
   let tier = tiers[0];
-  tiers.forEach(([lo,hi,t,s]) => { if (pct>=lo && pct<hi) tier=[lo,hi,t,s]; });
-  document.getElementById('result-title').textContent = tier[2];
-  document.getElementById('result-sub').textContent = tier[3];
-  const cats = {};
-  Qs.forEach((q,i) => {
-    if (!cats[q.cat]) cats[q.cat] = {c:0,t:0};
+  tiers.forEach(([lo, hi, t, s]) => { if (pct >= lo && pct < hi) tier = [lo, hi, t, s]; });
+  (document.getElementById('result-title') as HTMLElement).textContent = tier[2];
+  (document.getElementById('result-sub') as HTMLElement).textContent = tier[3];
+  const cats: Record<string, CatStat> = {};
+  Qs.forEach((q, i) => {
+    if (!cats[q.cat]) cats[q.cat] = {c: 0, t: 0};
     cats[q.cat].t++;
-    if (answers[i]&&answers[i].correct) cats[q.cat].c++;
+    if (answers[i] && answers[i].correct) cats[q.cat].c++;
   });
-  const bd = document.getElementById('breakdown');
+  const bd = document.getElementById('breakdown') as HTMLElement;
   bd.innerHTML = '';
-  Object.entries(cats).forEach(([cat,{c,t}]) => {
-    const p = Math.round((c/t)*100);
-    const cls = p>=80?'good':p>=50?'mid':'bad';
-    const barColor = p>=80 ? accent : p>=50 ? '#fbbf24' : '#f87171';
+  Object.entries(cats).forEach(([cat, {c, t}]) => {
+    const p = Math.round((c / t) * 100);
+    const cls = p >= 80 ? 'good' : p >= 50 ? 'mid' : 'bad';
+    const barColor = p >= 80 ? accent : p >= 50 ? '#fbbf24' : '#f87171';
     const row = document.createElement('div');
     row.className = 'breakdown-row';
     row.innerHTML = '<span class="breakdown-cat">'+cat+'</span>'
@@ -547,15 +549,15 @@ function showResults() {
     bd.appendChild(row);
   });
   setTimeout(() => {
-    document.querySelectorAll('.breakdown-bar').forEach(b => {
-      b.style.width = b.dataset.pct + '%';
+    document.querySelectorAll<HTMLElement>('.breakdown-bar').forEach(b => {
+      b.style.width = (b.dataset.pct ?? '0') + '%';
     });
   }, 100);
 }
 
-function restartQuiz() { startQuiz(); }
+function restartQuiz(): void { startQuiz(); }
 
-function shareResult() {
+function shareResult(): void {
   const pct = Math.round((score / Qs.length)*100);
   const text = `I scored ${score}/${Qs.length} (${pct}%) on the Python Knowledge Quiz on foxxelabs.ie — give it a try!`;
   if (navigator.share) {
