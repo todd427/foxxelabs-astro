@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce Psychology Quiz — Foxxe Labs</title>
+<meta name="description" content="Cheat sheet and quiz on the psychology of e-commerce and social commerce. Kahneman, Cialdini, Schwartz, Belk — the core frameworks fast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:      #1a1a2e;
+    --surface: #16213e;
+    --border:  rgba(45, 212, 191, 0.15);
+    --cyan:    #2dd4bf;
+    --cyan-bright: #5eead4;
+    --text:    #e2e8f0;
+    --muted:   #64748b;
+    --nav-h:   48px;
+  }
+
+  html, body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Top nav ── */
+  .topnav {
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .topnav-left { display: flex; align-items: center; gap: 12px; }
+  .topnav-title { font-weight: 700; font-size: 0.95rem; color: var(--cyan); }
+  .topnav-sep   { color: var(--muted); font-weight: 300; }
+  .topnav-sub   { font-size: 0.85rem; color: var(--muted); }
+
+  .topnav-right a {
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .topnav-right a:hover { color: var(--text); }
+
+  /* ── Main content ── */
+  .main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .page-header { margin-bottom: 1.75rem; }
+  .page-header h1 { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+  .page-header p  { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+
+  /* ── Tabs ── */
+  .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+  .tab {
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .tab.active {
+    background: rgba(45, 212, 191, 0.1);
+    color: var(--cyan);
+    border-color: rgba(45, 212, 191, 0.4);
+    font-weight: 500;
+  }
+
+  .tab:hover:not(.active) { background: rgba(255,255,255,0.04); color: var(--text); }
+
+  /* ── Panels ── */
+  .panel { display: none; }
+  .panel.show { display: block; }
+
+  /* ── Cheat cards ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-concept {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-bottom: 0.2rem;
+  }
+
+  .card-source {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-body {
+    font-size: 0.875rem;
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  .card-zinger {
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid rgba(45, 212, 191, 0.4);
+    font-size: 0.8125rem;
+    font-style: italic;
+    color: var(--cyan-bright);
+  }
+
+  /* ── Quiz question ── */
+  .q-num {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .q-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .q-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+
+  .opts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .opt {
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-family: inherit;
+    text-align: left;
+    line-height: 1.45;
+    transition: background 0.12s, border-color 0.12s;
+    width: 100%;
+  }
+
+  .opt:hover:not(.locked) {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  .opt.correct {
+    background: rgba(45, 212, 191, 0.1);
+    border-color: var(--cyan);
+    color: var(--cyan-bright);
+  }
+
+  .opt.wrong {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #fca5a5;
+  }
+
+  .opt.locked { cursor: default; }
+
+  .feedback {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding: 0.75rem 0.875rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    display: none;
+  }
+
+  .feedback.show { display: block; }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .score-inline { font-size: 0.8rem; color: var(--muted); }
+
+  .next-btn {
+    padding: 0.45rem 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--cyan);
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.12s;
+    display: none;
+  }
+
+  .next-btn:hover { background: var(--cyan-bright); }
+  .next-btn.show  { display: inline-block; }
+
+  /* ── Score screen ── */
+  .score-screen {
+    display: none;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 2.5rem 1rem;
+  }
+
+  .score-screen.show { display: block; }
+
+  .score-big {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .score-of {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+
+  .score-msg {
+    font-size: 0.9375rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 1.25rem auto 0;
+    max-width: 28rem;
+  }
+
+  .restart-btn {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: background 0.12s;
+  }
+
+  .restart-btn:hover { background: rgba(255,255,255,0.05); }
+
+  @media (max-width: 640px) {
+    .topnav { padding: 0 12px; }
+    .topnav-sub { display: none; }
+    .main { padding: 1.25rem 1rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top nav matching foxxelabs.ie pattern -->
+<nav class="topnav">
+  <div class="topnav-left">
+    <span class="topnav-title">Foxxe Labs</span>
+    <span class="topnav-sep">|</span>
+    <span class="topnav-sub">E-commerce Psychology Quiz</span>
+  </div>
+  <div class="topnav-right">
+    <a href="https://foxxelabs.ie">&#9862; foxxelabs.ie</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <div class="page-header">
+    <h1>E-commerce &amp; Social Commerce</h1>
+    <p>The Psychology of the Buy</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="cheat">Cheat sheet</button>
+    <button class="tab"        data-tab="quiz">Quiz</button>
+  </div>
+
+  <div class="panel show" data-panel="cheat" id="cheat-panel"></div>
+
+  <div class="panel" data-panel="quiz" id="quiz-panel">
+    <p class="q-num" id="q-num"></p>
+    <div class="q-card" id="q-card">
+      <p class="q-text" id="q-text"></p>
+      <div class="opts" id="opts"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="nav">
+        <span class="score-inline" id="score-inline">Score: 0</span>
+        <button class="next-btn" id="next-btn">Next &#8594;</button>
+      </div>
+    </div>
+    <div class="score-screen" id="score-screen">
+      <p class="score-big"  id="score-big"></p>
+      <p class="score-of"   id="score-of"></p>
+      <p class="score-msg"  id="score-msg"></p>
+      <button class="restart-btn" id="restart-btn">Try again</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const TOPIC = {
+  cheatSheet: [
+    {
+      concept: "Daniel Kahneman \u2014 System 1 vs System 2",
+      source:  "Thinking, Fast and Slow, 2011",
+      body:    "System 1 = fast, automatic, emotional. System 2 = slow, deliberate, rational. Pre-digital shopping forced System 2 \u2014 effort was unavoidable. E-commerce is engineered to trap you in System 1: one-click checkout, countdown timers, scarcity signals all bypass deliberation.",
+      zinger:  "\u201cIf you stop to think, Amazon loses the sale.\u201d",
+    },
+    {
+      concept: "Tversky & Kahneman \u2014 Anchoring bias",
+      source:  "Judgment under uncertainty, Science, 1974",
+      body:    "The first number you see becomes your reference point. \u20ac120 crossed out \u2192 \u20ac79 feels like a gain even if \u20ac120 was never a real price. Prime Day and Black Friday set anchors weeks in advance.",
+      zinger:  "\u201cThe price you see first is not information. It is manipulation.\u201d",
+    },
+    {
+      concept: "Barry Schwartz \u2014 Paradox of choice",
+      source:  "The Paradox of Choice, 2004",
+      body:    "Beyond a threshold, more options increase anxiety and post-purchase regret. Amazon lists millions of SKUs \u2014 consumers hit decision fatigue and default to whatever the algorithm surfaces. 70% of purchases come from page one.",
+      zinger:  "\u201cThe freedom of infinite choice quietly becomes no choice at all.\u201d",
+    },
+    {
+      concept: "Robert Cialdini \u2014 Social proof (RASCAL-U: S)",
+      source:  "Influence: The Psychology of Persuasion, 1984",
+      body:    "We infer validity from what others have done. Pre-digital: slow, local, trustworthy word-of-mouth. Digital: millions of strangers at scale \u2014 and the signal has been commodified. Fake review farms are well-documented; FTC and EU DSA have taken enforcement action.",
+      zinger:  "\u201cWe trust the crowd. Someone rented the crowd.\u201d",
+    },
+    {
+      concept: "Russell Belk \u2014 Extended self",
+      source:  "Journal of Consumer Research, 1988",
+      body:    "We are, in part, what we own. Social commerce makes consumption performative \u2014 haul videos, unboxing, affiliate codes tie purchasing to identity broadcast. Your wish list and purchase history construct a commercial self that feeds back into recommendations.",
+      zinger:  "\u201cSocial commerce didn\u2019t just sell us things \u2014 it turned buying into identity performance.\u201d",
+    },
+    {
+      concept: "Key facts \u2014 don\u2019t flub these",
+      source:  "Common presentation trip-wires",
+      body:    "Amazon launched 1994 selling physical books (Kindle was 2007). System 1 \u2260 fight-or-flight. RASCAL-U: Reciprocity, Authority, Social Proof, Commitment & Consistency, Affinity (Liking), Limited (Scarcity), Unity. Tversky\u2019s first name: Amos.",
+      zinger:  null,
+    },
+  ],
+  questions: [
+    {
+      q:    "Daniel Kahneman proposed two systems of thinking. Which system does e-commerce UX target \u2014 and why?",
+      opts: ["System 2 \u2014 slow, deliberate thinking \u2014 because it increases satisfaction","System 1 \u2014 fast, automatic thinking \u2014 to prevent deliberation before purchase","System 1 \u2014 fight-or-flight \u2014 to create fear around missing out","System 2 \u2014 because rational buyers spend more"],
+      ans:  1,
+      fb:   "System 1 \u2014 fast and automatic. Key mechanism: if you stop to think (System 2), Amazon loses the sale. System 1 is NOT fight-or-flight \u2014 that\u2019s a stress response, not a synonym.",
+    },
+    {
+      q:    "What is the anchoring bias, and which researchers identified it?",
+      opts: ["Tendency to trust first reviews \u2014 Cialdini, 1984","Over-reliance on the first number seen as a reference point \u2014 Tversky & Kahneman, 1974","Decision paralysis from too many choices \u2014 Schwartz, 2004","Identity formed through possessions \u2014 Belk, 1988"],
+      ans:  1,
+      fb:   "Tversky (Amos) and Kahneman, 1974. The crossed-out price is a direct exploitation \u2014 \u20ac120 becomes your reference point before System 2 can ask \u2018compared to what?\u2019",
+    },
+    {
+      q:    "Barry Schwartz\u2019s paradox of choice argues that more options always make consumers happier. True or false?",
+      opts: ["True \u2014 freedom of choice is always beneficial","False \u2014 beyond a threshold, more options increase anxiety and post-purchase regret","True \u2014 but only for high-involvement purchases","False \u2014 options have no effect on satisfaction"],
+      ans:  1,
+      fb:   "False. Schwartz (2004) showed satisfaction peaks with manageable choice sets then drops. Consequence: decision fatigue drives consumers to default to algorithmic recommendations. Amazon chose for you.",
+    },
+    {
+      q:    "Amazon launched in 1994 selling what?",
+      opts: ["Kindle ebooks and digital readers","Electronics and consumer goods","Physical books","Everything \u2014 it launched as a general marketplace"],
+      ans:  2,
+      fb:   "Physical books. Kindle didn\u2019t arrive until 2007. A classmate or lecturer who knows tech history will notice if you get this wrong.",
+    },
+    {
+      q:    "Cialdini\u2019s social proof principle explains online reviews. What is the core problem with applying it digitally?",
+      opts: ["Reviews are too long for consumers to read","Star ratings are not visible on mobile","The signal has been commodified \u2014 fake review farms mean we\u2019re applying a trust heuristic to a gamed dataset","Consumers don\u2019t trust online strangers at all"],
+      ans:  2,
+      fb:   "The signal has been hollowed out. Pre-digital word-of-mouth came from known, trusted people. Online reviews are from strangers at scale \u2014 and that scale has been systematically gamed.",
+    },
+    {
+      q:    "In RASCAL-U, what does the second A stand for?",
+      opts: ["Authority","Anchoring","Affinity (Liking)","Autonomy"],
+      ans:  2,
+      fb:   "Affinity (Liking). First A = Authority. Full mnemonic: Reciprocity, Authority, Social Proof, Commitment & Consistency, Affinity/Liking, Limited (Scarcity), Unity.",
+    },
+    {
+      q:    "Russell Belk\u2019s extended self thesis (1988) argues we are, in part, what we own. How does social commerce exploit this?",
+      opts: ["By offering loyalty points that extend our financial identity","By making consumption performative \u2014 purchases become identity signals broadcast to audiences","By tracking location and suggesting nearby products","By matching product colours to profile photos"],
+      ans:  1,
+      fb:   "Consumption becomes performative. Haul videos, unboxing content, affiliate codes \u2014 buying is no longer private, it\u2019s broadcast. The platform profits from both the sale and the content.",
+    },
+    {
+      q:    "What is the key distinction between digital psychological manipulation and pre-digital persuasion?",
+      opts: ["Digital persuasion is entirely new \u2014 none of these techniques existed before","The psychology is old, but digital removed every natural brake that previously limited its effect","Pre-digital persuasion was more effective because it was personal","Digital persuasion only affects younger consumers"],
+      ans:  1,
+      fb:   "The psychology is old. What changed: frictionlessness. Pre-digital impulse buying required physical presence and wakefulness. Digital requires neither.",
+    },
+    {
+      q:    "Which correctly pairs a benefit and a risk of e-commerce \u2014 with academic grounding?",
+      opts: ["Benefit: faster delivery. Risk: too many choices.","Benefit: democratisation of access for lower-income and rural consumers. Risk: compulsive buying disorder exacerbated by frictionlessness (Andreassen et al., 2015).","Benefit: free returns. Risk: data privacy.","Benefit: loyalty rewards. Risk: addiction to shopping apps."],
+      ans:  1,
+      fb:   "Democratisation of access (genuine reduction in retailer information asymmetry) vs. compulsive buying disorder \u2014 Andreassen et al., 2015 is the citation to know.",
+    },
+  ],
+};
+
+// ── Cheat sheet ───────────────────────────────────────────────────────────────
+const cheatPanel = document.getElementById('cheat-panel');
+TOPIC.cheatSheet.forEach(function(c) {
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.innerHTML =
+    '<p class="card-concept">' + esc(c.concept) + '</p>' +
+    '<p class="card-source">'  + esc(c.source)  + '</p>' +
+    '<p class="card-body">'    + esc(c.body)    + '</p>' +
+    (c.zinger ? '<p class="card-zinger">' + esc(c.zinger) + '</p>' : '');
+  cheatPanel.appendChild(el);
+});
+
+// ── Quiz state ────────────────────────────────────────────────────────────────
+let cur = 0, score = 0, answered = false;
+const Qs = TOPIC.questions;
+
+const qNum       = document.getElementById('q-num');
+const qText      = document.getElementById('q-text');
+const optsEl     = document.getElementById('opts');
+const fbEl       = document.getElementById('feedback');
+const scoreEl    = document.getElementById('score-inline');
+const nextBtn    = document.getElementById('next-btn');
+const qCard      = document.getElementById('q-card');
+const scoreScr   = document.getElementById('score-screen');
+const scoreBig   = document.getElementById('score-big');
+const scoreOf    = document.getElementById('score-of');
+const scoreMsg   = document.getElementById('score-msg');
+const restartBtn = document.getElementById('restart-btn');
+
+function renderQ() {
+  const q = Qs[cur];
+  answered = false;
+  qNum.textContent    = 'Question ' + (cur + 1) + ' of ' + Qs.length;
+  qText.textContent   = q.q;
+  scoreEl.textContent = 'Score: ' + score;
+  fbEl.textContent    = '';
+  fbEl.classList.remove('show');
+  nextBtn.classList.remove('show');
+  optsEl.innerHTML    = '';
+  q.opts.forEach(function(o, i) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'opt';
+    b.textContent = o;
+    b.addEventListener('click', function() { pick(i); });
+    optsEl.appendChild(b);
+  });
+}
+
+function pick(i) {
+  if (answered) return;
+  answered = true;
+  const q    = Qs[cur];
+  const btns = optsEl.querySelectorAll('.opt');
+  btns.forEach(function(b, idx) {
+    b.classList.add('locked');
+    if (idx === q.ans)                 b.classList.add('correct');
+    else if (idx === i && i !== q.ans) b.classList.add('wrong');
+  });
+  if (i === q.ans) score++;
+  fbEl.textContent = q.fb;
+  fbEl.classList.add('show');
+  scoreEl.textContent = 'Score: ' + score;
+  nextBtn.textContent = cur < Qs.length - 1 ? 'Next \u2192' : 'See results \u2192';
+  nextBtn.classList.add('show');
+}
+
+nextBtn.addEventListener('click', function() {
+  cur++;
+  if (cur >= Qs.length) showScore();
+  else renderQ();
+});
+
+function showScore() {
+  qCard.style.display = 'none';
+  scoreScr.classList.add('show');
+  scoreBig.textContent = score + '/' + Qs.length;
+  scoreOf.textContent  = 'out of ' + Qs.length;
+  const pct = score / Qs.length;
+  scoreMsg.textContent =
+    pct === 1   ? 'Clean sweep. Go sleep.' :
+    pct >= 0.78 ? 'Solid. Present with confidence.' :
+    pct >= 0.56 ? 'Decent. One more pass on the cheat sheet.' :
+                  'Back to the cheat sheet \u2014 especially Kahneman, Tversky, and the Amazon launch date.';
+}
+
+restartBtn.addEventListener('click', function() {
+  cur = 0; score = 0; answered = false;
+  qCard.style.display = '';
+  scoreScr.classList.remove('show');
+  renderQ();
+});
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.toggle('active', t === tab);
+    });
+    document.querySelectorAll('.panel').forEach(function(p) {
+      p.classList.toggle('show', p.dataset.panel === tab.dataset.tab);
+    });
+    if (tab.dataset.tab === 'quiz') renderQ();
+  });
+});
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+renderQ();
+</script>
+</body>
+</html>
