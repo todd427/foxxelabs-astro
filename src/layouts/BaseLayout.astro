@@ -46,11 +46,11 @@ const currentPath = Astro.url.pathname;
   <!-- Theme: apply before paint to prevent flash -->
   <script is:inline>
     (function() {
-      const stored = localStorage.getItem('foxxe-theme'); // 'dark' | 'light' | 'system' | null
+      const stored = localStorage.getItem('foxxe-theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const resolved = (stored === 'dark' || stored === 'light')
         ? stored
-        : (prefersDark ? 'dark' : 'light'); // system or unset both follow OS
+        : (prefersDark ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', resolved);
     })();
   </script>
@@ -88,9 +88,7 @@ const currentPath = Astro.url.pathname;
       const icon = btn.querySelector('.theme-icon');
       const mq = window.matchMedia('(prefers-color-scheme: dark)');
 
-      // icons: dark=moon, light=sun, system=monitor
       const ICONS = { dark: '☽', light: '☀', system: '⊙' };
-      // cycle order
       const CYCLE = { dark: 'light', light: 'system', system: 'dark' };
 
       function getStored() {
@@ -117,11 +115,9 @@ const currentPath = Astro.url.pathname;
         applyTheme(next);
       }
 
-      // Init icon on load
       applyTheme(getStored());
       btn.addEventListener('click', cycleTheme);
 
-      // If in system mode, follow OS changes live
       mq.addEventListener('change', function() {
         if (getStored() === 'system') applyTheme('system');
       });
@@ -131,8 +127,11 @@ const currentPath = Astro.url.pathname;
 </html>
 
 <style is:global>
-  /* ── Dark theme (default) ── */
+  /* ─────────────────────────────────────────────────────────────────────────
+     Design tokens — dark theme (default)
+     ───────────────────────────────────────────────────────────────────────── */
   :root, [data-theme="dark"] {
+    /* Core colours */
     --bg:    #0b0f14;
     --card:  #121923;
     --muted: #9fb0c3;
@@ -146,17 +145,34 @@ const currentPath = Astro.url.pathname;
       radial-gradient(1000px 700px at 85% 20%, rgba(125,211,252,.16), transparent 55%),
       var(--bg);
 
-    /* Compatibility aliases */
-    --color-bg:           var(--bg);
-    --color-text:         var(--text);
-    --color-text-muted:   var(--muted);
-    --color-accent:       var(--accent);
-    --color-accent-bright: #b3e7ff;
-    --color-surface:      var(--card);
-    --color-border:       var(--border);
+    /* Compatibility aliases (PostLayout + older components) */
+    --color-bg:              var(--bg);
+    --color-text:            var(--text);
+    --color-text-muted:      var(--muted);
+    --color-accent:          var(--accent);
+    --color-accent-bright:   #b3e7ff;
+    --color-accent-dim:      rgba(125,211,252,.25);
+    --color-surface:         var(--card);
+    --color-surface-elevated:#1a2535;
+    --color-border:          var(--border);
+
+    /* Spacing scale */
+    --space-xs:  4px;
+    --space-sm:  8px;
+    --space-md:  14px;
+    --space-lg:  20px;
+    --space-xl:  32px;
+    --space-2xl: 48px;
+    --space-3xl: 72px;
+
+    /* Typography */
+    --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    --content-max: 720px;
   }
 
-  /* ── Light theme ── */
+  /* ─────────────────────────────────────────────────────────────────────────
+     Light theme overrides
+     ───────────────────────────────────────────────────────────────────────── */
   [data-theme="light"] {
     --bg:    #f4f6f9;
     --card:  #ffffff;
@@ -171,20 +187,28 @@ const currentPath = Astro.url.pathname;
       radial-gradient(1000px 700px at 85% 20%, rgba(3,105,161,.07), transparent 55%),
       var(--bg);
 
-    --color-bg:           var(--bg);
-    --color-text:         var(--text);
-    --color-text-muted:   var(--muted);
-    --color-accent:       var(--accent);
-    --color-accent-bright: #0284c7;
-    --color-surface:      var(--card);
-    --color-border:       var(--border);
+    --color-bg:              var(--bg);
+    --color-text:            var(--text);
+    --color-text-muted:      var(--muted);
+    --color-accent:          var(--accent);
+    --color-accent-bright:   #0284c7;
+    --color-accent-dim:      rgba(3,105,161,.2);
+    --color-surface:         var(--card);
+    --color-surface-elevated:#f0f2f5;
+    --color-border:          var(--border);
+
+    /* Spacing + typography inherited from :root — no overrides needed */
   }
 
+  /* ─────────────────────────────────────────────────────────────────────────
+     Base reset + global styles
+     ───────────────────────────────────────────────────────────────────────── */
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+                 "Apple Color Emoji", "Segoe UI Emoji";
     background: var(--body-gradient);
     color: var(--text);
     line-height: 1.45;
@@ -202,6 +226,7 @@ const currentPath = Astro.url.pathname;
     text-decoration-color: var(--color-accent-bright);
   }
 
+  /* ── Nav bar ── */
   .sitebar {
     position: sticky;
     top: 0;
@@ -256,7 +281,6 @@ const currentPath = Astro.url.pathname;
     background: color-mix(in srgb, var(--accent) 8%, transparent);
   }
 
-  /* ── Theme toggle button ── */
   .theme-btn {
     background: transparent;
     border: 1px solid var(--border);
@@ -274,6 +298,7 @@ const currentPath = Astro.url.pathname;
     background: color-mix(in srgb, var(--text) 5%, transparent);
   }
 
+  /* ── Layout ── */
   main {
     max-width: 980px;
     margin: 0 auto;
