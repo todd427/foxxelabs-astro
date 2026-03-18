@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anseo Project — UI Development v2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .slide { display: none; }
+        .slide.active { display: flex; }
+        .slide { animation: fadeIn 0.3s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .progress-dot { transition: all 0.2s ease; }
+        .progress-dot.active { transform: scale(1.3); }
+
+        /* Wireframe mockup styles */
+        .wf-phone {
+            width: 220px;
+            background: #1e293b;
+            border: 2px solid #475569;
+            border-radius: 24px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .wf-desktop {
+            background: #1e293b;
+            border: 2px solid #475569;
+            border-radius: 8px;
+            overflow: hidden;
+            flex: 1;
+        }
+        .wf-bar { background: #0f172a; padding: 8px 12px; border-bottom: 1px solid #334155; font-size: 11px; color: #64748b; }
+        .wf-nav { background: #0f172a; padding: 8px 12px; border-top: 1px solid #334155; display: flex; justify-content: space-around; }
+        .wf-card { background: #0f172a; border: 1px solid #334155; border-radius: 8px; margin: 6px; padding: 10px; }
+        .wf-pill { display: inline-block; background: #1e3a5f; color: #60a5fa; border-radius: 999px; padding: 2px 10px; font-size: 10px; margin: 2px; }
+        .wf-pill.active { background: #1d4ed8; color: white; }
+        .wf-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #1d4ed8, #3b82f6); display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; color: white; flex-shrink: 0; }
+        .wf-btn { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; color: #94a3b8; padding: 3px 6px; border-radius: 4px; border: 1px solid #334155; }
+        .wf-btn.primary { background: #1d4ed8; color: white; border-color: #1d4ed8; }
+        .wf-tag { display: inline-block; background: #1e3a5f; color: #60a5fa; border-radius: 999px; padding: 1px 8px; font-size: 9px; margin: 1px; }
+        .wf-community-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; color: #60a5fa; }
+        .wf-input { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 10px; color: #94a3b8; width: 100%; box-sizing: border-box; }
+        .wf-divider { border-top: 1px solid #1e293b; margin: 6px 0; }
+        .wf-muted { color: #64748b; font-size: 9px; }
+        .wf-text { color: #cbd5e1; font-size: 10px; line-height: 1.5; }
+        .wf-heading { color: #f1f5f9; font-size: 12px; font-weight: 600; }
+        .wf-orange { color: #fb923c; }
+        .wf-green { color: #4ade80; }
+        .wf-red { color: #f87171; }
+        .wf-blue { color: #60a5fa; }
+        .wf-icon { font-size: 14px !important; }
+
+        /* Annotation callout */
+        .callout {
+            background: #0f172a;
+            border-left: 3px solid #f97316;
+            padding: 8px 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .callout strong { color: #fb923c; display: block; margin-bottom: 2px; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-bold text-orange-400">Anseo</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-400 text-sm">UI Development v2</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 text-sm" id="slide-counter">1 / 7</span>
+                <a href="https://foxxelabs.ie" class="text-slate-500 hover:text-orange-400 text-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    foxxelabs.ie
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Dots -->
+    <div class="fixed top-14 left-0 right-0 z-40 bg-slate-800/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-3">
+            <button onclick="goToSlide(0)" class="progress-dot w-2.5 h-2.5 rounded-full bg-orange-400 active" data-slide="0" title="Intro"></button>
+            <button onclick="goToSlide(1)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="1" title="Communities"></button>
+            <button onclick="goToSlide(2)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="2" title="Feed"></button>
+            <button onclick="goToSlide(3)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="3" title="Post Detail"></button>
+            <button onclick="goToSlide(4)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="4" title="Post Modal"></button>
+            <button onclick="goToSlide(5)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="5" title="Moderation"></button>
+            <button onclick="goToSlide(6)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="6" title="Roadmap"></button>
+        </div>
+    </div>
+
+    <!-- Slides -->
+    <div class="pt-24 pb-20 min-h-screen">
+
+        <!-- ==================== SLIDE 0: TITLE ==================== -->
+        <div class="slide active flex-col items-center justify-center min-h-[calc(100vh-11rem)] px-4" data-slide="0">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <span class="material-symbols-outlined text-7xl md:text-8xl text-orange-400">forum</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                    <span class="text-orange-400">Anseo</span> Project
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-2">UI Development — v2</p>
+                <p class="text-md text-slate-500 mb-10">What's shipped since the wireframes · March 2026</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-green-400 mb-1">groups</span>
+                        <p class="text-sm font-medium">Communities</p>
+                        <p class="text-xs text-slate-500">Full stack shipped</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-blue-400 mb-1">dynamic_feed</span>
+                        <p class="text-sm font-medium">Feed</p>
+                        <p class="text-xs text-slate-500">Pills, badges, actions</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-purple-400 mb-1">chat_bubble</span>
+                        <p class="text-sm font-medium">Post Detail</p>
+                        <p class="text-xs text-slate-500">Replies, translate, TTS</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-red-400 mb-1">shield</span>
+                        <p class="text-sm font-medium">Moderation</p>
+                        <p class="text-xs text-slate-500">Queue + banners</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-8 text-xs">
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ Communities (Phases 1–4)</span>
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ 18 Themes · 9 Layouts</span>
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ Translate · TTS · Share</span>
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ Moderation Queue</span>
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ Bookmarks</span>
+                    <span class="bg-green-900/40 text-green-400 border border-green-700 px-3 py-1 rounded-full">✓ Email Invites (SMTP2GO)</span>
+                    <span class="bg-slate-700/40 text-slate-400 border border-slate-600 px-3 py-1 rounded-full">↗ Nav Redesign</span>
+                    <span class="bg-slate-700/40 text-slate-400 border border-slate-600 px-3 py-1 rounded-full">↗ EasyMDE</span>
+                    <span class="bg-slate-700/40 text-slate-400 border border-slate-600 px-3 py-1 rounded-full">↗ OAuth2 / MS</span>
+                </div>
+
+                <button onclick="nextSlide()" class="px-8 py-3 bg-orange-500 hover:bg-orange-600 rounded-xl font-medium transition flex items-center gap-2 mx-auto">
+                    View Shipped UI
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <p class="text-slate-600 text-sm mt-6">March 2026 · beta.anseo.irish</p>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 1: COMMUNITIES ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="1">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-green-400 mb-2">groups</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Communities — Full Stack</h2>
+                    <p class="text-slate-400">List · Detail · Appearance · Invite · Category drilldown</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Community List mockup -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Community List</p>
+                        <div class="wf-phone mx-auto">
+                            <div class="wf-bar flex justify-between items-center">
+                                <span>Communities</span>
+                                <span class="material-symbols-outlined wf-icon wf-orange">add</span>
+                            </div>
+                            <div style="padding: 6px;">
+                                <div style="display:flex; gap:4px; flex-wrap:wrap; margin-bottom:6px;">
+                                    <span class="wf-pill active">All</span>
+                                    <span class="wf-pill">📚 Study</span>
+                                    <span class="wf-pill">🎮 Gaming</span>
+                                    <span class="wf-pill">🌍 Society</span>
+                                </div>
+                                <div class="wf-card" style="margin:0 0 6px;">
+                                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                                        <span style="font-size:18px;">📚</span>
+                                        <div>
+                                            <div class="wf-heading" style="font-size:11px;">Study Group</div>
+                                            <div class="wf-muted">47 members · Public</div>
+                                        </div>
+                                        <span class="wf-btn primary" style="margin-left:auto; font-size:9px;">Join</span>
+                                    </div>
+                                    <div class="wf-text" style="font-size:9px;">Share notes, ask questions, study together.</div>
+                                </div>
+                                <div class="wf-card" style="margin:0 0 6px;">
+                                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                                        <span style="font-size:18px;">🎮</span>
+                                        <div>
+                                            <div class="wf-heading" style="font-size:11px;">Gaming Society</div>
+                                            <div class="wf-muted">23 members · Public</div>
+                                        </div>
+                                        <span class="wf-btn primary" style="margin-left:auto; font-size:9px;">Join</span>
+                                    </div>
+                                </div>
+                                <div class="wf-card" style="margin:0;">
+                                    <div style="display:flex; align-items:center; gap:6px;">
+                                        <span style="font-size:18px;">🔒</span>
+                                        <div>
+                                            <div class="wf-heading" style="font-size:11px;">Dev Team Alpha</div>
+                                            <div class="wf-muted">8 members · Private</div>
+                                        </div>
+                                        <span class="wf-btn" style="margin-left:auto; font-size:9px;">Request</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Detail mockup -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Community Detail</p>
+                        <div class="wf-phone mx-auto">
+                            <div class="wf-bar flex justify-between">
+                                <span>← Study Group</span>
+                                <span class="material-symbols-outlined wf-icon">settings</span>
+                            </div>
+                            <div style="padding:6px;">
+                                <div style="text-align:center; padding:8px 0 6px; border-bottom: 1px solid #334155; margin-bottom:6px;">
+                                    <div style="font-size:28px;">📚</div>
+                                    <div class="wf-heading">Study Group</div>
+                                    <div class="wf-muted" style="margin:2px 0;">47 members · 12 posts</div>
+                                    <div style="display:flex; justify-content:center; gap:4px; margin-top:4px;">
+                                        <span class="wf-btn primary">✓ Joined</span>
+                                        <span class="wf-btn">Invite</span>
+                                    </div>
+                                </div>
+                                <div class="wf-card" style="margin:0 0 5px;">
+                                    <div style="display:flex; align-items:center; gap:5px; margin-bottom:3px;">
+                                        <div class="wf-avatar">OM</div>
+                                        <div>
+                                            <div class="wf-text" style="font-weight:500;">Orla Murphy</div>
+                                            <div class="wf-muted">3h ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="wf-text">Anyone have the Data Structures notes from Tuesday?</div>
+                                    <div class="wf-divider"></div>
+                                    <div style="display:flex; gap:4px;">
+                                        <span class="wf-btn"><span class="material-symbols-outlined wf-icon">chat_bubble_outline</span> 4</span>
+                                        <span class="wf-btn"><span class="material-symbols-outlined wf-icon">translate</span></span>
+                                    </div>
+                                </div>
+                                <div class="wf-card" style="margin:0;">
+                                    <div style="display:flex; align-items:center; gap:5px; margin-bottom:3px;">
+                                        <div class="wf-avatar">CF</div>
+                                        <div>
+                                            <div class="wf-text" style="font-weight:500;">Ciarán Flood</div>
+                                            <div class="wf-muted">5h ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="wf-text">Exam prep session tomorrow 2pm in L101?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Appearance mockup -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Appearance (Theme Picker)</p>
+                        <div class="wf-phone mx-auto">
+                            <div class="wf-bar">Community Appearance</div>
+                            <div style="padding:6px;">
+                                <div class="wf-text" style="margin-bottom:8px; color:#94a3b8;">Choose a theme for this community. Members see this theme when browsing your posts.</div>
+                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;">
+                                    <div style="border:2px solid #1d4ed8; border-radius:8px; padding:8px; text-align:center; background:#0f172a;">
+                                        <div style="width:100%; height:20px; background:linear-gradient(90deg,#1d4ed8,#3b82f6); border-radius:4px; margin-bottom:4px;"></div>
+                                        <div class="wf-muted">Anseo Dark</div>
+                                        <div style="font-size:9px; color:#1d4ed8; margin-top:2px;">✓ Selected</div>
+                                    </div>
+                                    <div style="border:1px solid #334155; border-radius:8px; padding:8px; text-align:center; background:#0f172a;">
+                                        <div style="width:100%; height:20px; background:linear-gradient(90deg,#065f46,#10b981); border-radius:4px; margin-bottom:4px;"></div>
+                                        <div class="wf-muted">Emerald</div>
+                                    </div>
+                                    <div style="border:1px solid #334155; border-radius:8px; padding:8px; text-align:center; background:#0f172a;">
+                                        <div style="width:100%; height:20px; background:linear-gradient(90deg,#7c2d12,#ea580c); border-radius:4px; margin-bottom:4px;"></div>
+                                        <div class="wf-muted">Sunset</div>
+                                    </div>
+                                    <div style="border:1px solid #334155; border-radius:8px; padding:8px; text-align:center; background:#0f172a;">
+                                        <div style="width:100%; height:20px; background:linear-gradient(90deg,#fff,#e2e8f0); border-radius:4px; margin-bottom:4px;"></div>
+                                        <div class="wf-muted">Postcard</div>
+                                    </div>
+                                </div>
+                                <div class="wf-btn primary" style="margin-top:8px; width:100%; justify-content:center; padding:6px;">Save Appearance</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 grid grid-cols-4 gap-3 text-center">
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-lg font-bold text-green-400">14</p>
+                        <p class="text-xs text-slate-500">Views shipped</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-lg font-bold text-blue-400">Email</p>
+                        <p class="text-xs text-slate-500">Invites (SMTP2GO)</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-lg font-bold text-orange-400">18+</p>
+                        <p class="text-xs text-slate-500">Themes available</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-lg font-bold text-purple-400">9</p>
+                        <p class="text-xs text-slate-500">Tests passing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 2: FEED ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="2">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-blue-400 mb-2">dynamic_feed</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Feed — What's New</h2>
+                    <p class="text-slate-400">Community pills · Community badges · Action bar · Bookmark · Clickable cards</p>
+                </div>
+
+                <div class="flex gap-4 justify-center items-start flex-wrap">
+                    <!-- Mobile Feed -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Mobile Feed</p>
+                        <div class="wf-phone">
+                            <div class="wf-bar flex justify-between items-center">
+                                <div>
+                                    <div class="wf-heading" style="font-size:12px;">Home</div>
+                                    <div class="wf-muted">12 posts</div>
+                                </div>
+                                <span class="material-symbols-outlined wf-icon">refresh</span>
+                            </div>
+                            <!-- Community filter pills -->
+                            <div style="padding:4px 6px; border-bottom:1px solid #1e293b; display:flex; gap:3px; flex-wrap:wrap;">
+                                <span class="wf-pill active">All</span>
+                                <span class="wf-pill">📚 Study</span>
+                                <span class="wf-pill">🎮 Gaming</span>
+                                <span class="wf-pill">⚽ Sports</span>
+                            </div>
+                            <!-- Post card -->
+                            <div class="wf-card" style="margin:6px; cursor:pointer;">
+                                <div style="display:flex; align-items:flex-start; gap:6px; margin-bottom:5px;">
+                                    <div class="wf-avatar">SM</div>
+                                    <div style="flex:1;">
+                                        <div class="wf-text" style="font-weight:500;">Siobhán Mac</div>
+                                        <div class="wf-muted">2h ago · <span style="color:#34d399;">● Recent</span></div>
+                                        <div class="wf-community-badge">📚 Study Group</div>
+                                    </div>
+                                    <span class="material-symbols-outlined wf-icon" style="color:#60a5fa;">bookmark</span>
+                                </div>
+                                <div class="wf-text" style="margin-bottom:5px;">Has anyone started the semester project yet? Looking for group members...</div>
+                                <div style="margin-bottom:5px;">
+                                    <span class="wf-tag">#project</span>
+                                    <span class="wf-tag">#groupwork</span>
+                                </div>
+                                <div class="wf-divider"></div>
+                                <div style="display:flex; gap:3px; align-items:center;">
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">chat_bubble_outline</span> 6</span>
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">translate</span></span>
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">volume_up</span></span>
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">share</span></span>
+                                </div>
+                            </div>
+                            <!-- Second post -->
+                            <div class="wf-card" style="margin:0 6px 6px; cursor:pointer;">
+                                <div style="display:flex; align-items:flex-start; gap:6px; margin-bottom:5px;">
+                                    <div class="wf-avatar">PD</div>
+                                    <div>
+                                        <div class="wf-text" style="font-weight:500;">Pádraig Duffy</div>
+                                        <div class="wf-muted">4h ago</div>
+                                    </div>
+                                    <span class="material-symbols-outlined wf-icon" style="color:#475569; margin-left:auto;">bookmark</span>
+                                </div>
+                                <div class="wf-text">Free coffee in the SU canteen until 11am tomorrow</div>
+                                <div class="wf-divider"></div>
+                                <div style="display:flex; gap:3px;">
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">chat_bubble_outline</span> 14</span>
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">translate</span></span>
+                                    <span class="wf-btn"><span class="material-symbols-outlined wf-icon">share</span></span>
+                                </div>
+                            </div>
+                            <div class="wf-nav">
+                                <span class="material-symbols-outlined wf-icon wf-orange">home</span>
+                                <span class="material-symbols-outlined wf-icon" style="color:#475569;">groups</span>
+                                <span class="material-symbols-outlined wf-icon wf-orange" style="font-size:22px !important; background:#1d4ed8; padding:2px; border-radius:6px;">add</span>
+                                <span class="material-symbols-outlined wf-icon" style="color:#475569;">bookmarks</span>
+                                <span class="material-symbols-outlined wf-icon" style="color:#475569;">account_circle</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callouts -->
+                    <div style="flex:1; min-width:220px; max-width:300px;">
+                        <div style="display:flex; flex-direction:column; gap:10px; margin-top:30px;">
+                            <div class="callout">
+                                <strong>Community filter pills</strong>
+                                Pill row below header filters feed to a single community. Auto-selects when entering a community.
+                            </div>
+                            <div class="callout">
+                                <strong>Community badge</strong>
+                                Each post shows its community with icon and name — links directly to community detail.
+                            </div>
+                            <div class="callout">
+                                <strong>Action bar</strong>
+                                Comment count · Translate · TTS (listen) · Show original · Share — all in-feed, no page load needed.
+                            </div>
+                            <div class="callout">
+                                <strong>Bookmark (HTMX)</strong>
+                                Toggles in-place via HTMX swap. Filled/unfilled icon state persists.
+                            </div>
+                            <div class="callout">
+                                <strong>Clickable cards</strong>
+                                Entire post card is clickable → post detail. Actions use stopPropagation.
+                            </div>
+                            <div class="callout">
+                                <strong>Read more →</strong>
+                                Posts over 300 chars truncate with "Read more →" link to detail.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 3: POST DETAIL ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="3">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-purple-400 mb-2">chat_bubble</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Post Detail</h2>
+                    <p class="text-slate-400">Full action bar · Comments with replies · Translate on comments · Report</p>
+                </div>
+
+                <div class="flex gap-4 justify-center items-start flex-wrap">
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Post Detail View</p>
+                        <div class="wf-phone">
+                            <div class="wf-bar">
+                                <span class="wf-blue">← Study Group</span>
+                            </div>
+                            <div style="padding:6px;">
+                                <!-- Post -->
+                                <div style="border-bottom:1px solid #1e293b; padding-bottom:8px; margin-bottom:8px;">
+                                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+                                        <div class="wf-avatar" style="width:36px;height:36px;font-size:12px;">SM</div>
+                                        <div>
+                                            <div class="wf-text" style="font-weight:600;">Siobhán Mac</div>
+                                            <div class="wf-muted">March 18, 2026 at 2:14 PM</div>
+                                        </div>
+                                        <div style="margin-left:auto; display:flex; gap:3px;">
+                                            <span class="material-symbols-outlined wf-icon wf-blue">bookmark</span>
+                                            <span class="material-symbols-outlined wf-icon" style="color:#475569;">flag</span>
+                                        </div>
+                                    </div>
+                                    <div class="wf-text" style="margin-bottom:6px;">Has anyone started the semester project yet? Looking for group members for the AI Ethics module. We need 3 people max — reply if interested, I'll DM once Anseo gets chat 😄</div>
+                                    <div style="margin-bottom:6px;">
+                                        <span class="wf-tag">#project</span>
+                                        <span class="wf-tag">#groupwork</span>
+                                        <span class="wf-tag">#AI</span>
+                                    </div>
+                                    <!-- Action bar -->
+                                    <div style="display:flex; gap:3px; flex-wrap:wrap;">
+                                        <span class="wf-btn"><span class="material-symbols-outlined wf-icon">translate</span> Translate</span>
+                                        <span class="wf-btn"><span class="material-symbols-outlined wf-icon">volume_up</span> Listen</span>
+                                        <span class="wf-btn"><span class="material-symbols-outlined wf-icon">share</span></span>
+                                    </div>
+                                </div>
+                                <!-- Comments -->
+                                <div class="wf-heading" style="font-size:11px; margin-bottom:6px;">
+                                    <span class="material-symbols-outlined wf-icon">chat_bubble_outline</span> Comments (3)
+                                </div>
+                                <!-- Comment 1 -->
+                                <div style="border-left:2px solid #334155; padding-left:6px; margin-bottom:6px;">
+                                    <div style="display:flex; align-items:center; gap:4px; margin-bottom:3px;">
+                                        <div class="wf-avatar" style="width:22px;height:22px;font-size:8px;">CF</div>
+                                        <div class="wf-text" style="font-weight:500; font-size:9px;">Ciarán Flood</div>
+                                        <div class="wf-muted" style="margin-left:auto;">1h ago</div>
+                                    </div>
+                                    <div class="wf-text" style="font-size:9px; margin-bottom:3px;">I'm in! I have the reading list sorted already.</div>
+                                    <div style="display:flex; gap:3px;">
+                                        <span class="wf-btn" style="font-size:8px; padding:2px 4px;"><span class="material-symbols-outlined" style="font-size:10px;">translate</span></span>
+                                        <span class="wf-btn" style="font-size:8px; padding:2px 4px;"><span class="material-symbols-outlined" style="font-size:10px;">add_comment</span> Reply</span>
+                                        <span class="wf-btn" style="font-size:8px; padding:2px 4px;"><span class="material-symbols-outlined" style="font-size:10px;">flag</span></span>
+                                    </div>
+                                    <!-- Reply -->
+                                    <div style="border-left:2px solid #1e3a5f; padding-left:5px; margin-top:4px;">
+                                        <div style="display:flex; align-items:center; gap:3px; margin-bottom:2px;">
+                                            <div class="wf-avatar" style="width:16px;height:16px;font-size:7px; background:linear-gradient(135deg,#3b82f6,#60a5fa);">SM</div>
+                                            <div class="wf-text" style="font-size:8px; font-weight:500;">Siobhán Mac</div>
+                                            <div class="wf-muted" style="font-size:8px;">45m ago</div>
+                                        </div>
+                                        <div class="wf-text" style="font-size:8px;">Great! I'll post a Google Doc link tomorrow.</div>
+                                    </div>
+                                </div>
+                                <!-- Comment 2 -->
+                                <div style="border-left:2px solid #334155; padding-left:6px; margin-bottom:6px;">
+                                    <div style="display:flex; align-items:center; gap:4px; margin-bottom:3px;">
+                                        <div class="wf-avatar" style="width:22px;height:22px;font-size:8px; background:linear-gradient(135deg,#7c3aed,#a78bfa);">NB</div>
+                                        <div class="wf-text" style="font-weight:500; font-size:9px;">Niamh Burke</div>
+                                        <div class="wf-muted" style="margin-left:auto;">30m ago</div>
+                                    </div>
+                                    <div class="wf-text" style="font-size:9px;">Can I join as the third? Done the ethics reading.</div>
+                                    <div style="display:flex; gap:3px; margin-top:3px;">
+                                        <span class="wf-btn" style="font-size:8px; padding:2px 4px;"><span class="material-symbols-outlined" style="font-size:10px;">add_comment</span> Reply</span>
+                                    </div>
+                                </div>
+                                <!-- Comment form -->
+                                <div style="margin-top:4px;">
+                                    <textarea class="wf-input" rows="2" placeholder="Add a comment…" style="resize:none;"></textarea>
+                                    <div class="wf-btn primary" style="margin-top:4px; width:100%; justify-content:center; padding:5px;">
+                                        <span class="material-symbols-outlined wf-icon">send</span> Add Comment
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="flex:1; min-width:220px; max-width:300px; margin-top:30px;">
+                        <div style="display:flex; flex-direction:column; gap:10px;">
+                            <div class="callout">
+                                <strong>Action bar (post)</strong>
+                                Translate · Listen (TTS) · Show Original · Share — same partials as feed, applied to post level.
+                            </div>
+                            <div class="callout">
+                                <strong>Nested replies</strong>
+                                Comments support one-level replies. Reply form toggles inline via JS, no page reload.
+                            </div>
+                            <div class="callout">
+                                <strong>Comment translate</strong>
+                                Each comment also has translate + show original, using the same shared partial as posts.
+                            </div>
+                            <div class="callout">
+                                <strong>Report</strong>
+                                Non-owner users see report (flag) on posts and comments. Owners see edit/delete instead.
+                            </div>
+                            <div class="callout">
+                                <strong>Edit window</strong>
+                                Edit button only visible within 1 hour of post creation (is_editable property).
+                            </div>
+                            <div class="callout">
+                                <strong>Back link</strong>
+                                Smart back navigation: returns to community if post belongs to one, else to feed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 4: POST MODAL ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="4">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-yellow-400 mb-2">edit_note</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Post Creation Modal</h2>
+                    <p class="text-slate-400">Community selector · Tagify tags · Image upload · Markdown · 10,000 char limit</p>
+                </div>
+
+                <div class="flex gap-6 justify-center items-start flex-wrap">
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Post Modal (Mobile)</p>
+                        <div class="wf-phone">
+                            <div class="wf-bar flex justify-between items-center">
+                                <span class="wf-heading" style="font-size:12px;">New Post</span>
+                                <span class="material-symbols-outlined wf-icon" style="color:#475569;">close</span>
+                            </div>
+                            <div style="padding:8px;">
+                                <!-- Community selector -->
+                                <div style="margin-bottom:8px;">
+                                    <div class="wf-muted" style="margin-bottom:3px;">Community (optional)</div>
+                                    <select class="wf-input" style="appearance:none;">
+                                        <option>— Post to main feed —</option>
+                                    </select>
+                                </div>
+                                <!-- Content -->
+                                <div style="margin-bottom:8px;">
+                                    <div class="wf-muted" style="margin-bottom:3px;">Post content *</div>
+                                    <textarea class="wf-input" rows="5" style="resize:none;" placeholder="What's on your mind? Markdown supported…"></textarea>
+                                </div>
+                                <!-- Tags (Tagify) -->
+                                <div style="margin-bottom:8px;">
+                                    <div class="wf-muted" style="margin-bottom:3px;">Tags</div>
+                                    <div style="background:#0f172a; border:1px solid #334155; border-radius:6px; padding:5px 8px; display:flex; align-items:center; gap:4px; flex-wrap:wrap; min-height:30px;">
+                                        <span style="background:#1e3a5f; color:#60a5fa; border-radius:12px; padding:1px 8px; font-size:9px; display:flex; align-items:center; gap:3px;">study <span style="color:#94a3b8;">×</span></span>
+                                        <span style="background:#1e3a5f; color:#60a5fa; border-radius:12px; padding:1px 8px; font-size:9px; display:flex; align-items:center; gap:3px;">project <span style="color:#94a3b8;">×</span></span>
+                                        <input style="background:transparent; border:none; outline:none; font-size:9px; color:#94a3b8; width:60px;" placeholder="Add tag…">
+                                    </div>
+                                </div>
+                                <!-- Image upload -->
+                                <div style="margin-bottom:10px;">
+                                    <div class="wf-muted" style="margin-bottom:3px;">Image (optional)</div>
+                                    <div style="border:1px dashed #334155; border-radius:6px; padding:10px; text-align:center;">
+                                        <span class="material-symbols-outlined" style="font-size:18px; color:#475569;">image</span>
+                                        <div class="wf-muted">Tap to upload image</div>
+                                    </div>
+                                </div>
+                                <!-- Submit -->
+                                <div class="wf-btn primary" style="width:100%; justify-content:center; padding:8px;">
+                                    <span class="material-symbols-outlined wf-icon">send</span> Post
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="flex:1; min-width:220px; max-width:320px; margin-top:30px;">
+                        <div style="display:flex; flex-direction:column; gap:10px;">
+                            <div class="callout">
+                                <strong>Community selector</strong>
+                                Dropdown auto-selects the current community when entering from community detail. Empty = main feed post.
+                            </div>
+                            <div class="callout">
+                                <strong>Tagify tags</strong>
+                                Tag input uses Tagify for pill UI with autocomplete from existing tags. Tags stored as M2M on Post.
+                            </div>
+                            <div class="callout">
+                                <strong>10,000 char limit</strong>
+                                Increased from 5,000. Markdown rendering via markdown_extras templatetag. "Read more →" in feed above 300 chars.
+                            </div>
+                            <div class="callout">
+                                <strong>Image upload</strong>
+                                Single image per post, stored via Backblaze B2. Click thumbnail to open full size in new tab.
+                            </div>
+                            <div class="callout">
+                                <strong>FAB trigger</strong>
+                                Modal opened by the floating action pill (top-left). Also accessible from empty feed state CTA.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 5: MODERATION ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="5">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-red-400 mb-2">shield</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Moderation</h2>
+                    <p class="text-slate-400">Inline banners · Mod queue · Report flow · Mute / warning system</p>
+                </div>
+
+                <div class="flex gap-4 justify-center items-start flex-wrap">
+                    <!-- Moderation banner on post -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Moderation Banner (on Post)</p>
+                        <div class="wf-phone">
+                            <div class="wf-bar">Post Detail</div>
+                            <div style="padding:6px;">
+                                <div class="wf-card" style="margin:0 0 6px;">
+                                    <div style="display:flex; gap:5px; margin-bottom:4px;">
+                                        <div class="wf-avatar">TB</div>
+                                        <div>
+                                            <div class="wf-text" style="font-weight:500;">Tom Burke</div>
+                                            <div class="wf-muted">6h ago</div>
+                                        </div>
+                                    </div>
+                                    <!-- Held banner -->
+                                    <div style="background:#1c1917; border:1px solid #78350f; border-radius:6px; padding:6px 8px; margin-bottom:6px;">
+                                        <div style="display:flex; align-items:center; gap:4px; margin-bottom:2px;">
+                                            <span class="material-symbols-outlined" style="font-size:12px; color:#f97316;">warning</span>
+                                            <span style="font-size:9px; font-weight:600; color:#f97316;">Under Review</span>
+                                        </div>
+                                        <div style="font-size:9px; color:#a8a29e;">This post is under review and is only visible to you and moderators.</div>
+                                    </div>
+                                    <div class="wf-text">This is the post content that is being reviewed…</div>
+                                </div>
+                                <!-- Warned banner -->
+                                <div class="wf-card" style="margin:0;">
+                                    <div style="display:flex; gap:5px; margin-bottom:4px;">
+                                        <div class="wf-avatar">AN</div>
+                                        <div>
+                                            <div class="wf-text" style="font-weight:500;">Anna Nic</div>
+                                            <div class="wf-muted">2h ago</div>
+                                        </div>
+                                    </div>
+                                    <div style="background:#0f172a; border:1px solid #1d4ed8; border-radius:6px; padding:5px 8px; margin-bottom:6px;">
+                                        <div style="font-size:9px; color:#60a5fa; display:flex; gap:3px; align-items:center;">
+                                            <span class="material-symbols-outlined" style="font-size:11px;">info</span>
+                                            Community guidelines reminder attached
+                                        </div>
+                                    </div>
+                                    <div class="wf-text">Normal post content here.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mod Queue -->
+                    <div>
+                        <p class="text-xs text-slate-500 mb-2 text-center">Moderation Queue (Admin/Mod)</p>
+                        <div class="wf-desktop" style="width:280px;">
+                            <div class="wf-bar flex justify-between">
+                                <span class="wf-heading" style="font-size:11px;">Moderation Queue</span>
+                                <span style="font-size:9px; background:#7f1d1d; color:#fca5a5; padding:1px 6px; border-radius:999px;">3 pending</span>
+                            </div>
+                            <div style="padding:6px;">
+                                <!-- Queue item 1 -->
+                                <div class="wf-card" style="margin:0 0 5px;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                                        <div>
+                                            <span style="font-size:9px; background:#1c1917; color:#f97316; border:1px solid #78350f; padding:1px 5px; border-radius:4px;">Reported</span>
+                                            <span class="wf-muted" style="margin-left:4px;">by 2 users</span>
+                                        </div>
+                                        <div class="wf-muted">30m ago</div>
+                                    </div>
+                                    <div class="wf-text" style="margin-bottom:5px; font-size:9px; border-left:2px solid #334155; padding-left:5px;">
+                                        "Anyone selling old exam papers? DM me the price…"
+                                    </div>
+                                    <div style="display:flex; gap:4px;">
+                                        <span class="wf-btn" style="font-size:9px; background:#14532d; color:#4ade80; border-color:#166534;">✓ Approve</span>
+                                        <span class="wf-btn" style="font-size:9px; background:#7f1d1d; color:#f87171; border-color:#991b1b;">✗ Remove</span>
+                                        <span class="wf-btn" style="font-size:9px;">Warn</span>
+                                    </div>
+                                </div>
+                                <!-- Queue item 2 -->
+                                <div class="wf-card" style="margin:0 0 5px;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                                        <span style="font-size:9px; background:#1c1917; color:#f97316; border:1px solid #78350f; padding:1px 5px; border-radius:4px;">Auto-flagged</span>
+                                        <div class="wf-muted">1h ago</div>
+                                    </div>
+                                    <div class="wf-text" style="font-size:9px; border-left:2px solid #334155; padding-left:5px; margin-bottom:5px;">
+                                        "Here's the link to my study notes pdf…"
+                                    </div>
+                                    <div style="display:flex; gap:4px;">
+                                        <span class="wf-btn" style="font-size:9px; background:#14532d; color:#4ade80; border-color:#166534;">✓ Approve</span>
+                                        <span class="wf-btn" style="font-size:9px; background:#7f1d1d; color:#f87171; border-color:#991b1b;">✗ Remove</span>
+                                    </div>
+                                </div>
+                                <!-- Stats -->
+                                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px; margin-top:6px;">
+                                    <div style="background:#0f172a; border-radius:5px; padding:5px; text-align:center;">
+                                        <div style="font-size:14px; font-weight:700; color:#f97316;">3</div>
+                                        <div class="wf-muted">Pending</div>
+                                    </div>
+                                    <div style="background:#0f172a; border-radius:5px; padding:5px; text-align:center;">
+                                        <div style="font-size:14px; font-weight:700; color:#4ade80;">47</div>
+                                        <div class="wf-muted">Approved</div>
+                                    </div>
+                                    <div style="background:#0f172a; border-radius:5px; padding:5px; text-align:center;">
+                                        <div style="font-size:14px; font-weight:700; color:#f87171;">8</div>
+                                        <div class="wf-muted">Removed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="flex:1; min-width:200px; max-width:260px; margin-top:30px;">
+                        <div style="display:flex; flex-direction:column; gap:10px;">
+                            <div class="callout">
+                                <strong>Inline banners</strong>
+                                Held posts show amber "Under Review" banner. Only visible to post author + mods/staff.
+                            </div>
+                            <div class="callout">
+                                <strong>Report flow</strong>
+                                Non-owners see flag icon on posts and comments. Reports accumulate on Report model with status tracking.
+                            </div>
+                            <div class="callout">
+                                <strong>Mod queue</strong>
+                                Moderators see pending reports with approve/remove/warn actions. report_count field on Post model.
+                            </div>
+                            <div class="callout">
+                                <strong>Mute system</strong>
+                                Users can be muted_until a datetime + warning_count tracked. Middleware enforces mute.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDE 6: ROADMAP ==================== -->
+        <div class="slide flex-col items-center px-4 py-4" data-slide="6">
+            <div class="max-w-3xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-pink-400 mb-2">map</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">What's Next</h2>
+                    <p class="text-slate-400">Near-term priorities · beta.anseo.irish · March 2026</p>
+                </div>
+
+                <div class="space-y-3">
+                    <!-- Nav redesign -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-blue-400">navigation</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">Navigation Redesign</p>
+                            <p class="text-xs text-slate-500">Unified bottom nav, wireframes done in v1</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-blue-400">6–8 hrs</p>
+                            <p class="text-xs text-slate-500">Wireframe ✓</p>
+                        </div>
+                    </div>
+
+                    <!-- EasyMDE -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-yellow-400">edit</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">EasyMDE Editor</p>
+                            <p class="text-xs text-slate-500">Toggle for posts over 2k chars — toolbar + preview</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-yellow-400">2–3 hrs</p>
+                            <p class="text-xs text-slate-500">Near-term</p>
+                        </div>
+                    </div>
+
+                    <!-- Post polish -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-green-400">auto_fix</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">Post Polish</p>
+                            <p class="text-xs text-slate-500">Title field, image expand, profile/settings flow</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-green-400">~3 hrs</p>
+                            <p class="text-xs text-slate-500">Near-term</p>
+                        </div>
+                    </div>
+
+                    <!-- Auth pages -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-purple-400">login</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">Auth Pages Update</p>
+                            <p class="text-xs text-slate-500">Theme-aware login/signup, wireframes done in v1</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-purple-400">2–3 hrs</p>
+                            <p class="text-xs text-slate-500">Wireframe ✓</p>
+                        </div>
+                    </div>
+
+                    <!-- OAuth2 / MS -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-blue-900 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-900/40 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-blue-300">key</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">OAuth2 · Kindle · Microsoft Auth</p>
+                            <p class="text-xs text-slate-500">Expand beyond ATU email — biggest unlock for user growth</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-blue-300">4–5 days</p>
+                            <p class="text-xs text-blue-500">High priority</p>
+                        </div>
+                    </div>
+
+                    <!-- Mod queue polish -->
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-red-400">shield</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold truncate">Mod Queue P2</p>
+                            <p class="text-xs text-slate-500">Flagged-post resolution flow, AI false-positive handling</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-sm font-medium text-red-400">~4 hrs</p>
+                            <p class="text-xs text-slate-500">Near-term</p>
+                        </div>
+                    </div>
+
+                    <!-- Later stage items -->
+                    <div class="bg-slate-800/40 rounded-xl p-4 border border-dashed border-slate-600 flex items-center gap-4 opacity-60">
+                        <div class="w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-slate-400">chat</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-slate-400 truncate">Chat · Promotions/SumUp · Community Wiki · Code Embeds</p>
+                            <p class="text-xs text-slate-600">Later stage — post OAuth2 · Redis required for chat</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-xs text-slate-600">Future</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-slate-600 text-sm">beta.anseo.irish · Django · HTMX · Alpine.js · Tailwind CSS</p>
+                    <p class="text-slate-500 text-sm mt-1">Branch: beta · Railway · Cloudflare DNS · Backblaze B2</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Nav Footer -->
+    <footer class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur border-t border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <button onclick="prevSlide()" id="prev-btn" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition flex items-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed" disabled>
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="hidden sm:inline">Prev</span>
+            </button>
+            <p class="text-xs text-slate-600 hidden md:block">← → Arrow keys to navigate</p>
+            <button onclick="nextSlide()" id="next-btn" class="px-4 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 transition flex items-center gap-2">
+                <span class="hidden sm:inline">Next</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 7;
+
+        function showSlide(index) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.slide[data-slide="${index}"]`).classList.add('active');
+            document.querySelectorAll('.progress-dot').forEach((dot, i) => {
+                if (i === index) { dot.classList.add('active', 'bg-orange-400'); dot.classList.remove('bg-slate-600'); }
+                else { dot.classList.remove('active', 'bg-orange-400'); dot.classList.add('bg-slate-600'); }
+            });
+            document.getElementById('slide-counter').textContent = `${index + 1} / ${totalSlides}`;
+            document.getElementById('prev-btn').disabled = (index === 0);
+            const nextBtn = document.getElementById('next-btn');
+            if (index === totalSlides - 1) {
+                nextBtn.innerHTML = '<span class="hidden sm:inline">Restart</span><span class="material-symbols-outlined">replay</span>';
+            } else {
+                nextBtn.innerHTML = '<span class="hidden sm:inline">Next</span><span class="material-symbols-outlined">arrow_forward</span>';
+            }
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) showSlide(currentSlide + 1);
+            else showSlide(0);
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) { showSlide(index); }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            else if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
