@@ -44,7 +44,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
       <div class="outcome-label">🎯 Your outcome</div>
       <p class="outcome-text">By the end of this module, you will have built a working Lunar Lander simulator that you can play, test automatically, and extend with an autopilot. Every Python concept is introduced the moment the game needs it.</p>
       <div class="outcome-grid">
-        <div class="outcome-item"><span class="oi-icon">📦</span><span>Variables & constants</span></div>
+        <div class="outcome-item"><span class="oi-icon">📦</span><span>Variables &amp; constants</span></div>
         <div class="outcome-item"><span class="oi-icon">📖</span><span>Dictionaries</span></div>
         <div class="outcome-item"><span class="oi-icon">⚙️</span><span>Functions</span></div>
         <div class="outcome-item"><span class="oi-icon">🔁</span><span>Loops</span></div>
@@ -262,10 +262,10 @@ print(hud(s))</code></pre></div>
             <strong>Why do we need this?</strong> A game loop runs continuously: show state → get input → update → check if over → repeat. The <code>while</code> loop keeps going until we tell it to stop. The game is over when we land (or crash).
           </div>
           <div class="code-block"><pre><code>def is_landed(state):
-    return state['altitude'] <= 0
+    return state['altitude'] &lt;= 0
 
 def is_safe(state):
-    return is_landed(state) and abs(state['velocity']) <= SAFE_SPEED
+    return is_landed(state) and abs(state['velocity']) &lt;= SAFE_SPEED
 
 def play():
     state = initial_state()
@@ -306,7 +306,7 @@ play()</code></pre></div>
           <div class="step-left">
             <span class="step-num">06</span>
             <div>
-              <div class="step-title">Replay & Analysis — Visualising Runs</div>
+              <div class="step-title">Replay &amp; Analysis — Visualising Runs</div>
               <div class="step-concept">Lists · Matplotlib · Functions as arguments</div>
             </div>
           </div>
@@ -316,7 +316,7 @@ play()</code></pre></div>
           <div class="why-box">
             <strong>Why do we need this?</strong> Playing manually is fun, but we want to compare strategies. If we record every state, we can plot the full trajectory — altitude, velocity, and fuel over time.
           </div>
-          <div class="code-block"><pre><code">import matplotlib.pyplot as plt
+          <div class="code-block"><pre><code>import matplotlib.pyplot as plt
 
 def simulate(thrust_schedule):
     """Run a simulation from a thrust schedule (list of (time, thrust) tuples)."""
@@ -326,7 +326,7 @@ def simulate(thrust_schedule):
 
     for _ in range(int(600 / DT)):
         t = state['time']
-        candidates = [v for k, v in schedule_dict.items() if k <= t]
+        candidates = [v for k, v in schedule_dict.items() if k &lt;= t]
         state['thrust_pct'] = candidates[-1] if candidates else 0
         state = step(state)
         history.append(dict(state))
@@ -379,7 +379,7 @@ plt.tight_layout(); plt.show()</code></pre></div>
           <div class="why-box">
             <strong>Why do we need this?</strong> How do you know your physics is correct? You could play the game and check — or you could write code that checks it for you. Automated tests run in milliseconds and never lie.
           </div>
-          <div class="code-block"><pre><code">def run_ticks(thrust_pct, ticks=10):
+          <div class="code-block"><pre><code>def run_ticks(thrust_pct, ticks=10):
     s = initial_state()
     s['thrust_pct'] = thrust_pct
     for _ in range(ticks):
@@ -394,8 +394,8 @@ def test_simulation_advances():
 
 def test_gravity_causes_descent():
     s = run_ticks(thrust_pct=0, ticks=6)
-    assert s['velocity'] < START_VEL, "Should fall faster"
-    assert s['altitude'] < START_ALT, "Should be lower"
+    assert s['velocity'] &lt; START_VEL, "Should fall faster"
+    assert s['altitude'] &lt; START_ALT, "Should be lower"
     print("✅ test_gravity_causes_descent passed")
 
 def test_thrust_counters_gravity():
@@ -433,7 +433,7 @@ test_thrust_counters_gravity()</code></pre></div>
           <div class="why-box">
             <strong>The challenge:</strong> Write a function that lands the lander <em>automatically</em>, using as little fuel as possible. The function receives the current state and returns a thrust percentage.
           </div>
-          <div class="code-block"><pre><code">def autopilot(state):
+          <div class="code-block"><pre><code>def autopilot(state):
     """
     Autopilot controller. Returns thrust percentage (0-100).
     state keys: altitude, velocity, fuel, time, thrust_pct
@@ -442,7 +442,7 @@ test_thrust_counters_gravity()</code></pre></div>
     vel = state['velocity']
 
     # TODO: replace with something smarter
-    if vel < -50:
+    if vel &lt; -50:
         return 80
     else:
         return 20
@@ -483,7 +483,7 @@ def test_autopilot_lands_safely():
 def test_autopilot_efficient():
     run = simulate(autopilot)
     fuel_used = (START_FUEL - run[-1]['fuel']) / START_FUEL * 100
-    assert fuel_used < 80, f"Used {fuel_used:.0f}% of fuel — try to be more efficient"
+    assert fuel_used &lt; 80, f"Used {fuel_used:.0f}% of fuel — try to be more efficient"
     print(f"✅ efficient ({fuel_used:.0f}% fuel used)")
 
 test_autopilot_lands()
@@ -534,7 +534,6 @@ test_autopilot_efficient()</code></pre></div>
     border: 1px solid var(--border); padding: 4px 10px; border-radius: 999px;
   }
 
-  /* Hero */
   .module-hero {
     background: color-mix(in srgb, var(--card) 90%, transparent);
     border: 1px solid var(--border); border-radius: 22px;
@@ -575,13 +574,11 @@ test_autopilot_efficient()</code></pre></div>
   }
   .btn-ghost:hover { color: var(--text); border-color: color-mix(in srgb, var(--text) 25%, transparent); }
 
-  /* Progress */
   .progress-bar-wrap { margin-bottom: 1.25rem; }
   .progress-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
   .progress-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width .4s cubic-bezier(.4,0,.2,1); }
 
-  /* Outcome card */
   .outcome-card {
     background: color-mix(in srgb, var(--accent) 6%, var(--card));
     border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
@@ -593,7 +590,6 @@ test_autopilot_efficient()</code></pre></div>
   .outcome-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
   .oi-icon { font-size: 16px; }
 
-  /* History card */
   .history-card {
     background: color-mix(in srgb, var(--accent2) 6%, var(--card));
     border: 1px solid color-mix(in srgb, var(--accent2) 20%, transparent);
@@ -606,7 +602,6 @@ test_autopilot_efficient()</code></pre></div>
   }
   .history-text { font-size: .9rem; color: var(--muted); line-height: 1.7; }
 
-  /* Steps */
   .steps { display: flex; flex-direction: column; gap: 10px; }
 
   .step-card {
@@ -636,7 +631,6 @@ test_autopilot_efficient()</code></pre></div>
   .step-body.open { display: block; animation: fadeIn .2s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
-  /* Step body content */
   .why-box {
     background: color-mix(in srgb, var(--accent) 7%, transparent);
     border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
@@ -690,7 +684,6 @@ test_autopilot_efficient()</code></pre></div>
   }
   .btn-done:hover { background: color-mix(in srgb, var(--accent) 25%, transparent); }
 
-  /* Step 8 extras */
   .challenge-banner {
     background: color-mix(in srgb, var(--accent2) 12%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent2) 30%, transparent);
@@ -713,7 +706,6 @@ test_autopilot_efficient()</code></pre></div>
   .autopilot-tests { margin-top: .75rem; }
   .at-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
 
-  /* Completion */
   .completion-card {
     background: color-mix(in srgb, var(--card) 92%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
@@ -729,7 +721,6 @@ test_autopilot_efficient()</code></pre></div>
   .ct-python { color: var(--accent); font-family: var(--font-mono); }
   .ct-real { color: var(--muted); }
 
-  /* Step done state */
   .step-card.done { border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
   .step-card.done .step-num { opacity: 1; }
   .step-card.done .step-header::after { content: '✓'; color: var(--accent); font-size: 14px; font-weight: 700; }
@@ -751,7 +742,6 @@ test_autopilot_efficient()</code></pre></div>
     const body = document.getElementById('body-' + n);
     const chev = document.getElementById('chev-' + n);
     const isOpen = body.classList.contains('open');
-    // Close all
     for (let i = 1; i <= TOTAL_STEPS; i++) {
       document.getElementById('body-' + i).classList.remove('open');
       document.getElementById('chev-' + i).classList.remove('open');
@@ -765,17 +755,13 @@ test_autopilot_efficient()</code></pre></div>
   function markDone(n) {
     completed.add(n);
     document.getElementById('step-' + n).classList.add('done');
-    // Close this step
     document.getElementById('body-' + n).classList.remove('open');
     document.getElementById('chev-' + n).classList.remove('open');
-    // Update progress
     updateProgress();
-    // Open next step if available
     if (n < TOTAL_STEPS) {
       toggleStep(n + 1);
       document.getElementById('step-' + (n + 1)).scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    // Show completion if all done
     if (completed.size === TOTAL_STEPS) {
       document.getElementById('completion-card').style.display = 'block';
       document.getElementById('completion-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
