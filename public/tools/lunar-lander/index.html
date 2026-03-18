@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Lander — Learn Python by Landing on the Moon · Foxxe Labs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#f1f5f9;--muted:#94a3b8;--accent:#38bdf8;--accent2:#fb923c;--mono:'JetBrains Mono',monospace}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{background:rgba(15,23,42,.9);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.brand{font-weight:800;font-size:1.1rem;color:var(--accent2)}
+.shell{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.back-link{font-size:13px;color:var(--muted)}
+.back-link:hover{color:var(--accent);text-decoration:none}
+.badge{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);padding:4px 10px;border-radius:999px}
+.hero{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:2rem;margin-bottom:1.25rem;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+h1.title{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;margin:0 0 .5rem;letter-spacing:-.02em}
+.sub{font-size:1rem;color:var(--muted);line-height:1.65;margin:0 0 1.25rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem}
+.meta-pill{font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:4px 10px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#0b0f14;font-size:14px;font-weight:700;padding:10px 20px;border:none;border-radius:999px;cursor:pointer;text-decoration:none;transition:opacity .15s}
+.btn-primary:hover{opacity:.85;color:#0b0f14;text-decoration:none}
+.btn-ghost{display:inline-flex;align-items:center;background:transparent;color:var(--muted);font-size:14px;font-weight:600;padding:10px 20px;border:1px solid var(--border);border-radius:999px;cursor:pointer;transition:color .15s}
+.btn-ghost:hover{color:var(--text)}
+.progress-wrap{margin-bottom:1.25rem;display:none}
+.prog-label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+.prog-track{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .4s;width:0%}
+.outcome-card{background:color-mix(in srgb,var(--accent) 6%,var(--card));border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:16px;padding:1.5rem;margin-bottom:1.25rem}
+.outcome-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.outcome-text{font-size:.95rem;line-height:1.65;margin:0 0 1.25rem}
+.outcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.outcome-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.history{background:color-mix(in srgb,var(--accent2) 6%,var(--card));border:1px solid color-mix(in srgb,var(--accent2) 20%,transparent);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:flex;gap:1.25rem;align-items:flex-start}
+.hist-year{font-size:2.5rem;font-weight:900;color:var(--accent2);opacity:.6;flex-shrink:0;line-height:1}
+.hist-text{font-size:.9rem;color:var(--muted);line-height:1.7}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{background:color-mix(in srgb,var(--card) 92%,transparent);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s}
+.step:hover{border-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+.step.challenge{border-color:color-mix(in srgb,var(--accent2) 30%,transparent)}
+.step-hdr{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;cursor:pointer;user-select:none}
+.step-left{display:flex;align-items:center;gap:1rem}
+.step-num{font-size:1.4rem;font-weight:900;color:var(--accent);opacity:.4;flex-shrink:0}
+.challenge .step-num{color:var(--accent2)}
+.step-title{font-size:15px;font-weight:700}
+.step-concept{font-size:12px;color:var(--muted);margin-top:2px}
+.step-chev{color:var(--muted);font-size:12px;transition:transform .2s}
+.step-chev.open{transform:rotate(180deg)}
+.step-body{padding:0 1.25rem 1.25rem;display:none}
+.step-body.open{display:block;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.why{background:color-mix(in srgb,var(--accent) 7%,transparent);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;font-size:13.5px;line-height:1.65;margin-bottom:1rem}
+.phys{background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:1rem}
+.phys p{font-family:var(--mono);font-size:13px;line-height:2}
+.code{background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:10px;overflow-x:auto;margin-bottom:1rem}
+.code pre{margin:0;padding:14px 16px}
+.code code{font-family:var(--mono);font-size:12.5px;color:var(--text);line-height:1.75;white-space:pre}
+.hud-ex{font-family:var(--mono);font-size:12px;background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--accent);margin-bottom:1rem}
+.try{background:color-mix(in srgb,var(--accent2) 7%,transparent);border-left:3px solid var(--accent2);border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;line-height:1.65;margin-bottom:1rem}
+.tip{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:1rem;padding:8px 12px;border:1px solid var(--border);border-radius:8px}
+.btn-done{background:color-mix(in srgb,var(--accent) 15%,transparent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);color:var(--accent);font-size:13px;font-weight:700;padding:8px 18px;border-radius:999px;cursor:pointer;transition:background .15s}
+.btn-done:hover{background:color-mix(in srgb,var(--accent) 25%,transparent)}
+.challenge-banner{background:color-mix(in srgb,var(--accent2) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent2) 30%,transparent);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:1rem;text-align:center}
+.hints{display:flex;flex-direction:column;gap:6px;margin-bottom:1rem}
+.hint-toggle{background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:13px;padding:8px 12px;cursor:pointer;text-align:left;width:100%;transition:color .15s}
+.hint-toggle:hover{color:var(--text)}
+.hint-body{background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:0 0 8px 8px;padding:10px 12px;font-size:13px;color:var(--muted);line-height:1.65;display:none}
+.at-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;margin-top:.75rem}
+.step.done{border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.step.done .step-num{opacity:1}
+.step.done .step-hdr::after{content:'&#10003;';color:var(--accent);font-size:14px;font-weight:700}
+.completion{background:color-mix(in srgb,var(--card) 92%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:22px;padding:2rem;margin-top:1.5rem;text-align:center;display:none;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.comp-icon{font-size:3rem;margin-bottom:1rem}
+.completion h2{font-size:1.6rem;margin:0 0 .5rem}
+.completion>p{color:var(--muted);margin:0 0 1.5rem;line-height:1.65}
+.comp-table{text-align:left;margin-bottom:1.5rem;border-top:1px solid var(--border)}
+.ct-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}
+.ct-game{font-weight:600}
+.ct-py{color:var(--accent);font-family:var(--mono)}
+.ct-real{color:var(--muted)}
+code{font-family:var(--mono);font-size:12.5px;background:color-mix(in srgb,var(--text) 10%,transparent);padding:1px 4px;border-radius:3px}
+strong{font-weight:700}
+em{font-style:italic}
+p{margin-bottom:.75rem}
+p:last-child{margin-bottom:0}
+@media(max-width:600px){.ct-row{grid-template-columns:1fr;gap:2px}.history{flex-direction:column;gap:.5rem}.hist-year{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <span class="brand">Foxxe Labs</span>
+  <a href="https://foxxelabs.ie" style="font-size:13px;color:var(--muted)">foxxelabs.ie &#8594;</a>
+</header>
+<div class="shell">
+  <div class="page-header">
+    <a class="back-link" href="/tools/">&#8592; Tools</a>
+    <span class="badge">Python &middot; Outcome-Based Learning</span>
+  </div>
+  <div class="hero">
+    <div class="eyebrow">Interactive Module</div>
+    <h1 class="title">&#128640; Lunar Lander</h1>
+    <p class="sub">Learn Python by landing on the Moon. Every concept is introduced because the game needs it &#8212; not because it&#8217;s next in a textbook.</p>
+    <div class="meta">
+      <span class="meta-pill">8 steps</span>
+      <span class="meta-pill">~90 minutes</span>
+      <span class="meta-pill">Python 3</span>
+      <span class="meta-pill">Google Colab</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://colab.research.google.com" target="_blank" rel="noopener">Open in Colab &#8594;</a>
+      <button class="btn-ghost" id="btn-start">Start the module &#8595;</button>
+    </div>
+  </div>
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="prog-label"><span id="prog-text">Step 1 of 8</span><span id="prog-pct">0%</span></div>
+    <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+  </div>
+  <div class="outcome-card">
+    <div class="outcome-label">&#127919; Your outcome</div>
+    <p class="outcome-text">By the end of this module, you will have built a working Lunar Lander simulator that you can play, test automatically, and extend with an autopilot. Every Python concept is introduced the moment the game needs it.</p>
+    <div class="outcome-grid">
+      <div class="outcome-item"><span>&#128230;</span><span>Variables &amp; constants</span></div>
+      <div class="outcome-item"><span>&#128218;</span><span>Dictionaries</span></div>
+      <div class="outcome-item"><span>&#9881;&#65039;</span><span>Functions</span></div>
+      <div class="outcome-item"><span>&#128257;</span><span>Loops</span></div>
+      <div class="outcome-item"><span>&#128256;</span><span>Conditionals</span></div>
+      <div class="outcome-item"><span>&#129514;</span><span>Automated tests</span></div>
+      <div class="outcome-item"><span>&#128202;</span><span>Matplotlib</span></div>
+      <div class="outcome-item"><span>&#129robots;</span><span>Autopilot challenge</span></div>
+    </div>
+  </div>
+  <div class="history">
+    <div class="hist-year">1969</div>
+    <div class="hist-text">
+      <strong>The original Lunar Lander</strong> was written by David Ahl on a DEC PDP-8 in FOCAL &#8212; a computer with 4KB of RAM. The units were Imperial: feet, feet per second, pounds of fuel. We&#8217;re keeping the Imperial units. It feels right.<br><br>
+      The Apollo Guidance Computer that actually landed humans on the Moon ran at <strong>2 MHz with 4KB of RAM</strong>. It solved real-time trajectory control. You&#8217;ll be doing the same &#8212; just with slightly more memory.
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step" id="step-1">
+      <div class="step-hdr" onclick="toggleStep(1)">
+        <div class="step-left"><span class="step-num">01</span><div><div class="step-title">Constants &#8212; The Rules of the Universe</div><div class="step-concept">Variables &middot; Naming conventions</div></div></div>
+        <span class="step-chev" id="chev-1">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-1">
+        <div class="why"><strong>Why do we need this?</strong> The computer has no memory of its own. You have to tell it everything &#8212; and give each thing a name. Constants are values that never change: gravity doesn&#8217;t change, the safe landing speed doesn&#8217;t change.</div>
+        <p>We write constants in <code>UPPER_CASE</code> by convention so we remember they&#8217;re fixed.</p>
+        <div class="code"><pre><code id="c1"></code></pre></div>
+        <div class="try"><strong>Try it:</strong> Change <code>START_ALT</code> to <code>500</code> and re-run. What changes? Change it back when you&#8217;re done.</div>
+        <div class="tip">&#128161; Variables are named containers for values. Constants are variables we promise never to change.</div>
+        <button class="btn-done" onclick="markDone(1)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-2">
+      <div class="step-hdr" onclick="toggleStep(2)">
+        <div class="step-left"><span class="step-num">02</span><div><div class="step-title">State &#8212; Tracking the Lander</div><div class="step-concept">Dictionaries &middot; Functions &middot; Docstrings</div></div></div>
+        <span class="step-chev" id="chev-2">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-2">
+        <div class="why"><strong>Why do we need this?</strong> The lander has a <em>state</em> &#8212; a snapshot of where it is and what it&#8217;s doing. A dictionary keeps everything together as one thing.</div>
+        <p>Our lander state has four values: <code>altitude</code>, <code>velocity</code>, <code>fuel</code>, and <code>thrust_pct</code>.</p>
+        <div class="code"><pre><code id="c2"></code></pre></div>
+        <div class="try"><strong>Try it:</strong> Access a single value with <code>print(lander['altitude'])</code>. Change a value: <code>lander['thrust_pct'] = 50</code>. Print the whole dict again &#8212; did it change?</div>
+        <div class="tip">&#128161; Dictionaries store named values. Functions (<code>def</code>) let you reuse code.</div>
+        <button class="btn-done" onclick="markDone(2)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-3">
+      <div class="step-hdr" onclick="toggleStep(3)">
+        <div class="step-left"><span class="step-num">03</span><div><div class="step-title">Physics &#8212; Gravity and Thrust</div><div class="step-concept">Arithmetic &middot; Functions &middot; Return values</div></div></div>
+        <span class="step-chev" id="chev-3">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-3">
+        <div class="why"><strong>Why do we need this?</strong> Every 0.5 seconds, we calculate what happens to the lander based on physics. Thrust pushes up. Gravity pulls down.</div>
+        <div class="phys">
+          <p>acceleration = (thrust% &divide; 100) &times; MAX_ACCEL &minus; G</p>
+          <p>velocity = velocity + acceleration &times; DT</p>
+          <p>altitude = altitude + velocity &times; DT</p>
+          <p>fuel = fuel &minus; (thrust% &divide; 100) &times; FUEL_RATE &times; DT</p>
+        </div>
+        <div class="code"><pre><code id="c3"></code></pre></div>
+        <div class="try"><strong>Try it:</strong> Set <code>s['thrust_pct'] = 100</code> before the loop and re-run. What happens to velocity?</div>
+        <div class="tip">&#128161; Functions return new data. We don&#8217;t modify state <em>in place</em> &#8212; we return a new copy.</div>
+        <button class="btn-done" onclick="markDone(3)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-4">
+      <div class="step-hdr" onclick="toggleStep(4)">
+        <div class="step-left"><span class="step-num">04</span><div><div class="step-title">Display &#8212; The HUD</div><div class="step-concept">F-strings &middot; String formatting</div></div></div>
+        <span class="step-chev" id="chev-4">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-4">
+        <div class="why"><strong>Why do we need this?</strong> Numbers are useless if you can&#8217;t read them. A Heads-Up Display shows the player what&#8217;s happening each tick.</div>
+        <div class="hud-ex">t= 12.5s | alt= 1843.2 ft | vel=  -387.1 ft/s | fuel= 548 lb | thrust= 75%</div>
+        <div class="code"><pre><code id="c4"></code></pre></div>
+        <div class="try"><strong>Try it:</strong> The format spec <code>:7.1f</code> means 7 characters wide, 1 decimal place. Change it to <code>:10.2f</code>. What changes?</div>
+        <div class="tip">&#128161; F-strings embed expressions directly in text. Format specs control width and precision.</div>
+        <button class="btn-done" onclick="markDone(4)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-5">
+      <div class="step-hdr" onclick="toggleStep(5)">
+        <div class="step-left"><span class="step-num">05</span><div><div class="step-title">The Game Loop &#8212; Making it Playable</div><div class="step-concept">While loops &middot; Input &middot; Conditionals &middot; Break</div></div></div>
+        <span class="step-chev" id="chev-5">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-5">
+        <div class="why"><strong>Why do we need this?</strong> A game loop runs continuously: show state &#8594; get input &#8594; update &#8594; check if over &#8594; repeat.</div>
+        <div class="code"><pre><code id="c5"></code></pre></div>
+        <div class="try"><strong>Play it.</strong> Try 0% all the way down. Try 100%. Hint: burn hard early to slow the initial 450 ft/s fall, ease off, then burn again for final approach.</div>
+        <div class="tip">&#128161; <code>while True</code> loops forever until <code>break</code>. <code>input()</code> pauses and waits for the user.</div>
+        <button class="btn-done" onclick="markDone(5)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-6">
+      <div class="step-hdr" onclick="toggleStep(6)">
+        <div class="step-left"><span class="step-num">06</span><div><div class="step-title">Replay &amp; Analysis &#8212; Visualising Runs</div><div class="step-concept">Lists &middot; Matplotlib &middot; Functions as arguments</div></div></div>
+        <span class="step-chev" id="chev-6">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-6">
+        <div class="why"><strong>Why do we need this?</strong> If we record every state, we can plot the full trajectory and compare strategies.</div>
+        <div class="code"><pre><code id="c6"></code></pre></div>
+        <div class="try"><strong>Try it:</strong> Change the thrust schedule values. What does 90% at t=0 do to the altitude curve?</div>
+        <div class="tip">&#128161; Lists of tuples. List comprehensions. Matplotlib subplots.</div>
+        <button class="btn-done" onclick="markDone(6)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step" id="step-7">
+      <div class="step-hdr" onclick="toggleStep(7)">
+        <div class="step-left"><span class="step-num">07</span><div><div class="step-title">Automated Tests &#8212; Verifying Your Physics</div><div class="step-concept">Assert statements &middot; Test functions &middot; TDD thinking</div></div></div>
+        <span class="step-chev" id="chev-7">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-7">
+        <div class="why"><strong>Why do we need this?</strong> Automated tests run in milliseconds and never lie. Write code that checks your code.</div>
+        <div class="code"><pre><code id="c7"></code></pre></div>
+        <div class="try"><strong>Break a test on purpose:</strong> Change <code>G = 5.0</code> to <code>G = -5.0</code> and re-run. Which tests fail? Why? Change it back.</div>
+        <div class="tip">&#128161; <code>assert condition, "message"</code> raises an error if the condition is false.</div>
+        <button class="btn-done" onclick="markDone(7)">&#10003; Done &#8212; next step</button>
+      </div>
+    </div>
+    <div class="step challenge" id="step-8">
+      <div class="step-hdr" onclick="toggleStep(8)">
+        <div class="step-left"><span class="step-num">08</span><div><div class="step-title">Autopilot Challenge &#127942;</div><div class="step-concept">Functions as arguments &middot; Control logic &middot; Optimisation</div></div></div>
+        <span class="step-chev" id="chev-8">&#9660;</span>
+      </div>
+      <div class="step-body" id="body-8">
+        <div class="challenge-banner">This step has no ceiling. Start simple &#8212; go as far as you want.</div>
+        <div class="why"><strong>The challenge:</strong> Write a function that lands the lander <em>automatically</em>, using as little fuel as possible.</div>
+        <div class="code"><pre><code id="c8a"></code></pre></div>
+        <div class="hints">
+          <div id="hint1">
+            <button class="hint-toggle" onclick="toggleHint('hint1')">&#128161; Hint 1 &#8212; Think about target velocity</button>
+            <div class="hint-body">At any altitude, there&#8217;s a speed that would bring you to a safe stop at the surface. If you&#8217;re falling faster than that, burn harder. If you&#8217;re already slow enough, ease off.</div>
+          </div>
+          <div id="hint2">
+            <button class="hint-toggle" onclick="toggleHint('hint2')">&#128161; Hint 2 &#8212; Proportional control</button>
+            <div class="hint-body">The simplest effective controller: <code>error = target_velocity - actual_velocity</code>. Try: <code>thrust = 50 + k * error</code> for some constant <code>k</code>. Clamp the result to 0&#8211;100.</div>
+          </div>
+          <div id="hint3">
+            <button class="hint-toggle" onclick="toggleHint('hint3')">&#128161; Hint 3 &#8212; Target velocity from altitude</button>
+            <div class="hint-body">Try: <code>target_vel = -alt / 20</code>. At 2500ft that&#8217;s &#8722;125 ft/s. At 100ft it&#8217;s &#8722;5 ft/s. It naturally gets gentler as you approach the surface.</div>
+          </div>
+        </div>
+        <div class="at-label">Your autopilot must pass these three tests:</div>
+        <div class="code"><pre><code id="c8b"></code></pre></div>
+        <button class="btn-done" onclick="markDone(8)">&#10003; All tests pass &#8212; module complete!</button>
+      </div>
+    </div>
+  </div>
+  <div class="completion" id="completion">
+    <div class="comp-icon">&#127765;</div>
+    <h2>Module complete.</h2>
+    <p>You didn&#8217;t learn Python by memorising syntax. You learned it by needing it. That&#8217;s how it works.</p>
+    <div class="comp-table">
+      <div class="ct-row"><span class="ct-game">Constants (G, MAX_ACCEL)</span><span class="ct-py">Variables, naming</span><span class="ct-real">Config files, environment vars</span></div>
+      <div class="ct-row"><span class="ct-game">Lander state</span><span class="ct-py">Dictionary</span><span class="ct-real">Database record / JSON</span></div>
+      <div class="ct-row"><span class="ct-game">Physics tick</span><span class="ct-py">Function</span><span class="ct-real">Data processing step</span></div>
+      <div class="ct-row"><span class="ct-game">Game loop</span><span class="ct-py">while loop</span><span class="ct-real">Web server request loop</span></div>
+      <div class="ct-row"><span class="ct-game">Player input</span><span class="ct-py">input()</span><span class="ct-real">API request / form submit</span></div>
+      <div class="ct-row"><span class="ct-game">HUD display</span><span class="ct-py">f-strings</span><span class="ct-real">Report generation</span></div>
+      <div class="ct-row"><span class="ct-game">Smoke tests</span><span class="ct-py">assert, test functions</span><span class="ct-real">Unit tests in production</span></div>
+      <div class="ct-row"><span class="ct-game">Autopilot</span><span class="ct-py">Function as argument</span><span class="ct-real">Callbacks, strategy pattern</span></div>
+    </div>
+    <a class="btn-primary" href="https://colab.research.google.com" target="_blank" rel="noopener">Open the full notebook in Colab &#8594;</a>
+  </div>
+</div>
+<script>
+// All Python code injected via JS textContent — bypasses HTML/JSX parser entirely
+var PY = {};
+PY.c1 = "# The physical constants of our simulation\n# (Imperial units \u2014 just like the 1969 original)\n\nG          = 5.0    # Lunar gravity, ft/s\u00b2\nMAX_ACCEL  = 15.0   # Max upward accel at 100% thrust, ft/s\u00b2\nFUEL_RATE  = 1.0    # Fuel consumed per second at 100% thrust\nDT         = 0.5    # Time step \u2014 seconds per tick\nSAFE_SPEED = 7.0    # Maximum safe landing speed, ft/s\n\n# Starting conditions\nSTART_ALT  = 2500.0  # Starting altitude, ft\nSTART_VEL  = -450.0  # Starting velocity (negative = falling)\nSTART_FUEL = 600.0   # Starting fuel, lb\n\nprint(f\"Starting altitude: {START_ALT} ft\")\nprint(f\"Starting velocity: {START_VEL} ft/s\")\nprint(f\"Safe landing speed: \u2264{SAFE_SPEED} ft/s\")";
+PY.c2 = "def initial_state():\n    \"\"\"Return a fresh lander state dictionary.\"\"\"\n    return {\n        'time':       0.0,\n        'altitude':   START_ALT,\n        'velocity':   START_VEL,\n        'fuel':       START_FUEL,\n        'thrust_pct': 0,\n    }\n\n# Test it\nlander = initial_state()\nprint(\"Initial lander state:\")\nfor key, value in lander.items():\n    print(f\"  {key:12s} = {value}\")";
+PY.c3 = "def step(state):\n    \"\"\"Advance the simulation by one time step (DT seconds).\"\"\"\n    thrust = max(0, min(100, state['thrust_pct'])) / 100.0\n\n    acceleration = thrust * MAX_ACCEL - G\n    velocity     = state['velocity'] + acceleration * DT\n    altitude     = state['altitude'] + velocity * DT\n    fuel         = max(0.0, state['fuel'] - thrust * FUEL_RATE * DT)\n\n    return {\n        'time':       state['time'] + DT,\n        'altitude':   altitude,\n        'velocity':   velocity,\n        'fuel':       fuel,\n        'thrust_pct': state['thrust_pct'],\n    }\n\n# Test: no thrust \u2014 should fall\ns = initial_state()\nfor _ in range(4):\n    s = step(s)\n    print(f\"alt={s['altitude']:.1f}ft  vel={s['velocity']:.1f}ft/s\")";
+PY.c4 = "def hud(state):\n    \"\"\"Return a formatted HUD string for the current state.\"\"\"\n    return (\n        f\"t={state['time']:5.1f}s | \"\n        f\"alt={state['altitude']:7.1f} ft | \"\n        f\"vel={state['velocity']:8.1f} ft/s | \"\n        f\"fuel={state['fuel']:4.0f} lb | \"\n        f\"thrust={state['thrust_pct']:3d}%\"\n    )\n\n# Test it\ns = initial_state()\nprint(hud(s))\ns['thrust_pct'] = 75\ns = step(s)\nprint(hud(s))";
+PY.c5 = "def is_landed(state):\n    return state['altitude'] <= 0\n\ndef is_safe(state):\n    return is_landed(state) and abs(state['velocity']) <= SAFE_SPEED\n\ndef play():\n    state = initial_state()\n    print(\"\ud83d\ude80 LUNAR LANDER \u2014 enter thrust 0-100 each tick. 'q' to quit.\")\n    print(f\"Goal: land with speed \u2264 {SAFE_SPEED} ft/s\")\n    print(\"-\" * 65)\n\n    while True:\n        print(hud(state))\n\n        if is_landed(state):\n            if is_safe(state):\n                print(f\"\u2705 SAFE LANDING! Speed: {abs(state['velocity']):.1f} ft/s\")\n            else:\n                print(f\"\ud83d\udca5 CRASH! Impact speed: {abs(state['velocity']):.1f} ft/s\")\n            break\n\n        cmd = input(\"thrust% > \").strip().lower()\n        if cmd == 'q':\n            break\n        if cmd.isdigit():\n            state['thrust_pct'] = max(0, min(100, int(cmd)))\n\n        state = step(state)\n\nplay()";
+PY.c6 = "import matplotlib.pyplot as plt\n\ndef simulate(thrust_schedule):\n    \"\"\"Run simulation from thrust schedule (list of (time, thrust) tuples).\"\"\"\n    state = initial_state()\n    history = [dict(state)]\n    schedule_dict = dict(thrust_schedule)\n\n    for _ in range(int(600 / DT)):\n        t = state['time']\n        candidates = [v for k, v in schedule_dict.items() if k <= t]\n        state['thrust_pct'] = candidates[-1] if candidates else 0\n        state = step(state)\n        history.append(dict(state))\n        if is_landed(state):\n            break\n    return history\n\nrun = simulate([\n    (0,   80),   # start: burn hard\n    (30,  40),   # ease off\n    (80,  70),   # ramp up for approach\n    (120, 90),   # heavy burn for landing\n])\n\ntimes = [s['time']     for s in run]\nalts  = [s['altitude'] for s in run]\nvels  = [s['velocity'] for s in run]\n\nfig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6), sharex=True)\nax1.plot(times, alts, color='steelblue')\nax1.set_ylabel('Altitude (ft)'); ax1.grid(True, alpha=0.3)\nax2.plot(times, vels, color='tomato')\nax2.axhline(-SAFE_SPEED, color='green', linestyle='--', label='Safe speed')\nax2.set_ylabel('Velocity (ft/s)'); ax2.set_xlabel('Time (s)')\nax2.legend(); ax2.grid(True, alpha=0.3)\nplt.tight_layout(); plt.show()";
+PY.c7 = "def run_ticks(thrust_pct, ticks=10):\n    s = initial_state()\n    s['thrust_pct'] = thrust_pct\n    for _ in range(ticks):\n        s = step(s)\n    return s\n\ndef test_simulation_advances():\n    s = run_ticks(thrust_pct=0, ticks=4)\n    assert s['time'] > 0, \"Time should increase\"\n    assert s['altitude'] != START_ALT, \"Altitude should change\"\n    print(\"\u2705 test_simulation_advances passed\")\n\ndef test_gravity_causes_descent():\n    s = run_ticks(thrust_pct=0, ticks=6)\n    assert s['velocity'] < START_VEL, \"Should fall faster\"\n    assert s['altitude'] < START_ALT, \"Should be lower\"\n    print(\"\u2705 test_gravity_causes_descent passed\")\n\ndef test_thrust_counters_gravity():\n    s0 = run_ticks(thrust_pct=0,   ticks=8)\n    s1 = run_ticks(thrust_pct=100, ticks=8)\n    assert s1['velocity'] > s0['velocity'], \"Thrust should help\"\n    print(\"\u2705 test_thrust_counters_gravity passed\")\n\ntest_simulation_advances()\ntest_gravity_causes_descent()\ntest_thrust_counters_gravity()";
+PY.c8a = "def autopilot(state):\n    \"\"\"\n    Autopilot controller. Returns thrust percentage (0-100).\n    state keys: altitude, velocity, fuel, time, thrust_pct\n    \"\"\"\n    alt = state['altitude']\n    vel = state['velocity']\n\n    # TODO: replace with something smarter\n    if vel < -50:\n        return 80\n    else:\n        return 20\n\n# Run it\nrun = simulate(autopilot)   # pass the function, not the result\nfinal = run[-1]\nprint(f\"Final speed: {abs(final['velocity']):.1f} ft/s\")\nprint(f\"Outcome: {'\u2705 SAFE' if is_safe(final) else '\ud83d\udca5 CRASH'}\")";
+PY.c8b = "def test_autopilot_lands():\n    run = simulate(autopilot)\n    assert is_landed(run[-1]), \"Must reach the surface\"\n    print(\"\u2705 lands\")\n\ndef test_autopilot_lands_safely():\n    run = simulate(autopilot)\n    assert is_safe(run[-1]), f\"Too fast: {abs(run[-1]['velocity']):.1f} ft/s\"\n    print(\"\u2705 lands safely\")\n\ndef test_autopilot_efficient():\n    run = simulate(autopilot)\n    fuel_used = (START_FUEL - run[-1]['fuel']) / START_FUEL * 100\n    assert fuel_used < 80, f\"Used {fuel_used:.0f}% of fuel \u2014 try to be more efficient\"\n    print(f\"\u2705 efficient ({fuel_used:.0f}% fuel used)\")\n\ntest_autopilot_lands()\ntest_autopilot_lands_safely()\ntest_autopilot_efficient()";
+
+for (var id in PY) {
+  var el = document.getElementById(id);
+  if (el) el.textContent = PY[id];
+}
+
+var N = 8;
+var completed = new Set();
+
+function toggleStep(n) {
+  var body = document.getElementById('body-' + n);
+  var chev = document.getElementById('chev-' + n);
+  var isOpen = body.classList.contains('open');
+  for (var i = 1; i <= N; i++) {
+    document.getElementById('body-' + i).classList.remove('open');
+    document.getElementById('chev-' + i).classList.remove('open');
+  }
+  if (!isOpen) { body.classList.add('open'); chev.classList.add('open'); }
+}
+
+function markDone(n) {
+  completed.add(n);
+  document.getElementById('step-' + n).classList.add('done');
+  document.getElementById('body-' + n).classList.remove('open');
+  document.getElementById('chev-' + n).classList.remove('open');
+  var pct = Math.round(completed.size / N * 100);
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('prog-pct').textContent = pct + '%';
+  document.getElementById('prog-text').textContent =
+    completed.size === N ? 'Complete!' : 'Step ' + (completed.size + 1) + ' of ' + N;
+  if (n < N) {
+    toggleStep(n + 1);
+    document.getElementById('step-' + (n + 1)).scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  if (completed.size === N) {
+    var c = document.getElementById('completion');
+    c.style.display = 'block';
+    c.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+function toggleHint(id) {
+  var b = document.getElementById(id).querySelector('.hint-body');
+  b.style.display = b.style.display === 'block' ? 'none' : 'block';
+}
+
+document.getElementById('btn-start').addEventListener('click', function() {
+  document.getElementById('progress-wrap').style.display = 'block';
+  toggleStep(1);
+  document.getElementById('step-1').scrollIntoView({behavior:'smooth',block:'start'});
+  this.style.display = 'none';
+});
+</script>
+</body>
+</html>
