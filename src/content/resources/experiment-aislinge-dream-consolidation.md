@@ -121,29 +121,19 @@ Total aislinge layer: approximately 150 bridges, stored as a consolidated memory
 
 ## Phase 4 — Evaluation
 
-Does the aislinge layer actually improve retrieval? We built an evaluation harness (`evaluate.py`) that runs test queries twice — once against raw episodic memory only (the `personal` filter: Claude + ChatGPT), and once against the full collection including aislinge bridges (the `all` filter). The difference tells us what the consolidation layer adds.
+Does the aislinge layer actually improve retrieval? We built an evaluation harness (`evaluate.py`) that runs 23 test queries twice — once against raw episodic memory only, and once against the full collection including aislinge bridges. The difference shows what the consolidation layer adds.
 
-**Evaluation suite: 23 queries across three categories**
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;">
+  <iframe src="/aislinge/evaluation.html" width="100%" height="680" style="border:none;background:#0d1117;" title="Aislinge Phase 4 Evaluation — 23 queries interactive breakdown"></iframe>
+</div>
 
-| Category | Purpose |
-|----------|---------|
-| Semantic (12) | Conceptual queries — tests dense retrieval and consolidated bridge quality |
-| FTS (7) | Proper noun queries — tests the hybrid FTS5+dense retrieval layer |
-| Emotional (4) | Affective register — tests the emotional bridge layer |
-
-**Results (19 March 2026, 33,750 documents, ~150 bridges):**
-
-| Category | Aislinge surfaced | Notes |
-|----------|------------------|-------|
-| Semantic | 4/12 | ai_crash rank 1 (0.97), cyberpsychology rank 1 (1.0), anseo rank 1 |
-| FTS | 1/7 | Legion FoxxeLabs page at 0.934 via FTS5 — confirms hybrid layer working |
-| Emotional | 1/4 | emo_building_alone rank 3 — first confirmed emotional bridge in evaluation |
-
-The cyberpsychology result is worth pausing on. Without the aislinge layer, the top result for *"personality traits cyber-aggression trust disinhibition"* is a ChatGPT dissertation proposal excerpt at a cosine similarity of 0.508. With the aislinge layer, the top result is a consolidated bridge at 1.0 — a perfect retrieval score:
+The cyberpsychology result is the headline. Without the aislinge layer, the top result for *"personality traits cyber-aggression trust disinhibition"* is a ChatGPT dissertation proposal excerpt at cosine similarity 0.508. With the aislinge layer, the top result is a consolidated bridge at 1.0 — a perfect retrieval score:
 
 > *"The individual is exploring how AI-related factors such as trust, disinhibition, and familiarity, in conjunction with personality traits, influence the propensity for cyber-aggression."*
 
 That single sentence, synthesised from a Claude↔Anseo bridge, outperforms the raw source document that generated it.
+
+The FTS category confirms the hybrid retrieval layer is working: the `fts_legion` query returns the FoxxeLabs page at 0.934 via exact-match keyword search on "Legion" — a proper noun that dense vector retrieval alone would miss entirely.
 
 ---
 

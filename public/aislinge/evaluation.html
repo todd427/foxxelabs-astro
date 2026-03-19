@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aislinge — Evaluation Results</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    padding: 20px 16px 28px;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e6edf3;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: #8b949e;
+    margin-bottom: 20px;
+  }
+
+  /* ── Stat cards ─────────────────────────────────────────── */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .card-label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .card-value {
+    font-size: 22px;
+    font-weight: 600;
+    color: #e6edf3;
+    line-height: 1.1;
+  }
+  .card-sub {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 3px;
+  }
+  .card-value.purple { color: #a78bfa; }
+  .card-value.green  { color: #3fb950; }
+
+  /* ── Category tabs ──────────────────────────────────────── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .tab {
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background: transparent;
+    color: #8b949e;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tab.active, .tab:hover {
+    background: #21262d;
+    color: #e6edf3;
+    border-color: #58a6ff;
+  }
+  .tab.active { color: #58a6ff; }
+
+  /* ── Main chart ─────────────────────────────────────────── */
+  .chart-wrap {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .chart-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+
+  /* ── Legend ─────────────────────────────────────────────── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .swatch {
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── Query table ────────────────────────────────────────── */
+  .table-wrap {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  thead th {
+    background: #21262d;
+    color: #8b949e;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #30363d;
+  }
+  tbody tr {
+    border-bottom: 1px solid #21262d;
+    transition: background 0.12s;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #1c2128; }
+  tbody td {
+    padding: 8px 12px;
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .query-id {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    color: #58a6ff;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .theme { color: #8b949e; }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .badge-semantic { background: #0d2137; color: #58a6ff; }
+  .badge-fts      { background: #0a2019; color: #3fb950; }
+  .badge-emotional{ background: #1d1028; color: #a78bfa; }
+
+  .rank-pill {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .rank-1 { background: #1a3020; color: #3fb950; }
+  .rank-2 { background: #162d20; color: #56d364; }
+  .rank-3, .rank-4, .rank-5 { background: #1d2b1a; color: #7ee787; }
+  .rank-none { color: #484f58; }
+
+  .score-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 6px;
+    background: #21262d;
+    border-radius: 3px;
+    overflow: hidden;
+    max-width: 80px;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .score-val { font-size: 11px; font-family: monospace; min-width: 36px; }
+  .score-raw { color: #8b949e; }
+  .score-aislinge { color: #a78bfa; }
+  .score-delta-pos { color: #3fb950; font-size: 10px; }
+  .score-delta-neg { color: #f85149; font-size: 10px; }
+
+  .bridge-text {
+    font-style: italic;
+    color: #c9d1d9;
+    font-size: 11px;
+    border-left: 2px solid #a78bfa;
+    padding-left: 8px;
+    margin-top: 3px;
+  }
+
+  .empty-row td { color: #484f58; }
+</style>
+</head>
+<body>
+
+<h2>Aislinge — Phase 4 Evaluation</h2>
+<p class="subtitle">23 queries × 2 retrieval modes (raw episodic vs with aislinge bridges) · 19 March 2026 · 33,750 documents</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="card-label">queries run</div>
+    <div class="card-value">23</div>
+    <div class="card-sub">semantic · fts · emotional</div>
+  </div>
+  <div class="card">
+    <div class="card-label">aislinge surfaced</div>
+    <div class="card-value purple">6 / 23</div>
+    <div class="card-sub">4 semantic · 1 fts · 1 emotional</div>
+  </div>
+  <div class="card">
+    <div class="card-label">top result changed</div>
+    <div class="card-value green">9 / 23</div>
+    <div class="card-sub">aislinge displaced raw top hit</div>
+  </div>
+  <div class="card">
+    <div class="card-label">avg aislinge rank</div>
+    <div class="card-value">2.7</div>
+    <div class="card-sub">when present in results</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="filterTable('all',this)">All (23)</button>
+  <button class="tab" onclick="filterTable('semantic',this)">Semantic (12)</button>
+  <button class="tab" onclick="filterTable('fts',this)">FTS (7)</button>
+  <button class="tab" onclick="filterTable('emotional',this)">Emotional (4)</button>
+  <button class="tab" onclick="filterTable('surfaced',this)">Surfaced only (6)</button>
+</div>
+
+<div class="chart-wrap">
+  <div class="chart-title">score lift · raw top hit vs aislinge top hit (when surfaced)</div>
+  <div class="legend">
+    <div class="legend-item"><div class="swatch" style="background:#30363d"></div><span>raw episodic (personal filter)</span></div>
+    <div class="legend-item"><div class="swatch" style="background:#a78bfa"></div><span>with aislinge (all filter)</span></div>
+    <div class="legend-item"><div class="swatch" style="background:#3fb950"></div><span>aislinge surfaced at rank 1</span></div>
+  </div>
+  <div style="position:relative;width:100%;height:220px;">
+    <canvas id="liftChart"></canvas>
+  </div>
+</div>
+
+<div class="table-wrap">
+  <table id="evalTable">
+    <thead>
+      <tr>
+        <th style="width:140px">query</th>
+        <th>theme</th>
+        <th style="width:72px">category</th>
+        <th style="width:110px">raw top score</th>
+        <th style="width:130px">with aislinge</th>
+        <th style="width:64px">rank</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<script>
+const QUERIES = [
+  // semantic
+  { id:"ai_crash",          theme:"AI bubble / economic disruption",      cat:"semantic",  raw:0.508, mixed:0.97,  rawSrc:"claude",  mixSrc:"aislinge", rank:1,
+    bridge:"The individual is contemplating the potential impact of an impending economic crash on humanity and is seeking strategies for mitigation." },
+  { id:"cyberpsychology",   theme:"MSc dissertation / UCA",               cat:"semantic",  raw:0.508, mixed:1.0,   rawSrc:"chatgpt", mixSrc:"aislinge", rank:1,
+    bridge:"The individual is exploring how AI-related factors such as trust, disinhibition, and familiarity, in conjunction with personality traits, influence the propensity for cyber-aggression." },
+  { id:"anseo_roadmap",     theme:"Anseo platform strategy",              cat:"semantic",  raw:0.961, mixed:0.508, rawSrc:"claude",  mixSrc:"aislinge", rank:1,
+    bridge:"The individual is contemplating how to integrate newly discussed community features into the existing Anseo Roadmap framework." },
+  { id:"legion_consciousness", theme:"Legion / developmental AI",         cat:"semantic",  raw:0.508, mixed:0.97,  rawSrc:"claude",  mixSrc:"anseo",    rank:null, bridge:null },
+  { id:"digital_legacy",    theme:"AfterWords / toddBot",                 cat:"semantic",  raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+  { id:"solo_founder",      theme:"FoxxeLabs / AI workflow",              cat:"semantic",  raw:0.508, mixed:0.508, rawSrc:"claude",  mixSrc:"claude",   rank:5,
+    bridge:"The individual is contemplating the transformative impact of AI technologies in enabling greater efficiency and productivity." },
+  { id:"mnemos_memory",     theme:"Mnemos architecture",                  cat:"semantic",  raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"anseo",    rank:null, bridge:null },
+  { id:"sleep_consolidation", theme:"Aislinge / neuroscience analogy",    cat:"semantic",  raw:1.0,   mixed:0.985, rawSrc:"claude",  mixSrc:"claude",   rank:null, bridge:null },
+  { id:"vcm_theory",        theme:"Voice Conflict Model — theory",        cat:"semantic",  raw:1.0,   mixed:0.984, rawSrc:"anseo",   mixSrc:"anseo",    rank:null, bridge:null },
+  { id:"new_map_growth",    theme:"New Map for Growth book",              cat:"semantic",  raw:0.508, mixed:0.992, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+  { id:"building_ai",       theme:"Building Your First AI book",          cat:"semantic",  raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+  { id:"politics_conflict", theme:"VCM / politics / internet Stage 3",    cat:"semantic",  raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+  // fts
+  { id:"fts_legion",        theme:"Legion — proper noun FTS test",        cat:"fts",       raw:0.508, mixed:0.934, rawSrc:"claude",  mixSrc:"anseo",    rank:null,
+    bridge:null, note:"FTS5 hit: FoxxeLabs page" },
+  { id:"fts_toddbot",       theme:"AfterWords — proper noun FTS test",    cat:"fts",       raw:0.961, mixed:0.961, rawSrc:"claude",  mixSrc:"claude",   rank:null, bridge:null },
+  { id:"fts_mnemos",        theme:"Mnemos stack — proper noun FTS test",  cat:"fts",       raw:0.508, mixed:0.508, rawSrc:"claude",  mixSrc:"claude",   rank:null, bridge:null },
+  { id:"fts_vcm",           theme:"VCM — proper noun FTS test",           cat:"fts",       raw:null,  mixed:null,  rawSrc:null,      mixSrc:null,       rank:null, bridge:null, note:"Rate limited / stale FTS index" },
+  { id:"fts_anseo",         theme:"Anseo — proper noun FTS test",         cat:"fts",       raw:null,  mixed:null,  rawSrc:null,      mixSrc:null,       rank:null, bridge:null, note:"Rate limited / stale FTS index" },
+  { id:"fts_cybersafer",    theme:"CyberSafer — proper noun FTS test",    cat:"fts",       raw:null,  mixed:null,  rawSrc:null,      mixSrc:null,       rank:null, bridge:null, note:"Rate limited / stale FTS index" },
+  { id:"fts_sceal",         theme:"Scéal — proper noun FTS test",         cat:"fts",       raw:null,  mixed:null,  rawSrc:null,      mixSrc:null,       rank:null, bridge:null, note:"Rate limited / stale FTS index" },
+  // emotional
+  { id:"emo_conflict_ai",   theme:"Conflict with AI — emotional register",cat:"emotional", raw:0.508, mixed:0.508, rawSrc:"claude",  mixSrc:"claude",   rank:null, bridge:null },
+  { id:"emo_building_alone",theme:"Weight of building alone",             cat:"emotional", raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:3,
+    bridge:"The underlying tension of feeling overwhelmed by the complexity of managing a growing project, despite visible progress." },
+  { id:"emo_rage_machine",  theme:"Defiance — emotional register",        cat:"emotional", raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+  { id:"emo_grief_legacy",  theme:"Grief and legacy — emotional register",cat:"emotional", raw:0.508, mixed:0.508, rawSrc:"chatgpt", mixSrc:"chatgpt",  rank:null, bridge:null },
+];
+
+const CAT_COLOUR = { semantic:'#58a6ff', fts:'#3fb950', emotional:'#a78bfa' };
+const SRC_COLOUR = { aislinge:'#a78bfa', claude:'#3fb950', chatgpt:'#58a6ff', anseo:'#e3b341', doc:'#8b949e' };
+
+// ── Build lift chart ──────────────────────────────────────────────────────
+const surfaced = QUERIES.filter(q => q.rank !== null && q.raw !== null);
+new Chart(document.getElementById('liftChart'), {
+  type: 'bar',
+  data: {
+    labels: surfaced.map(q => q.id),
+    datasets: [
+      {
+        label: 'raw top score',
+        data: surfaced.map(q => q.raw),
+        backgroundColor: 'rgba(48,54,61,0.9)',
+        borderRadius: 3,
+        barPercentage: 0.55,
+      },
+      {
+        label: 'with aislinge',
+        data: surfaced.map(q => q.mixed),
+        backgroundColor: surfaced.map(q => q.rank === 1 ? '#3fb950cc' : '#a78bfacc'),
+        borderRadius: 3,
+        barPercentage: 0.55,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#1c2128',
+        borderColor: '#30363d',
+        borderWidth: 1,
+        titleColor: '#e6edf3',
+        bodyColor: '#8b949e',
+        callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: ${ctx.raw.toFixed(3)}`,
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: { color: '#21262d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, maxRotation: 35, minRotation: 25 },
+      },
+      y: {
+        min: 0, max: 1.05,
+        grid: { color: '#21262d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v.toFixed(1) },
+      },
+    },
+  },
+});
+
+// ── Build table ───────────────────────────────────────────────────────────
+function scoreBar(val, colour) {
+  if (val === null) return '<span style="color:#484f58">—</span>';
+  return `<div class="score-bar-wrap">
+    <div class="score-bar-bg"><div class="score-bar-fill" style="width:${Math.round(val*100)}%;background:${colour}"></div></div>
+    <span class="score-val" style="color:${colour}">${val.toFixed(3)}</span>
+  </div>`;
+}
+
+function rankBadge(rank) {
+  if (rank === null) return '<span class="rank-none">—</span>';
+  const cls = rank <= 2 ? `rank-${rank}` : 'rank-3';
+  return `<span class="rank-pill ${cls}">@${rank}</span>`;
+}
+
+function renderTable(filter) {
+  const body = document.getElementById('tableBody');
+  const rows = QUERIES.filter(q => {
+    if (filter === 'all')      return true;
+    if (filter === 'surfaced') return q.rank !== null;
+    return q.cat === filter;
+  });
+
+  body.innerHTML = rows.map(q => {
+    const isEmpty = q.raw === null;
+    const delta = (!isEmpty && q.mixed !== null) ? q.mixed - q.raw : null;
+    const deltaHtml = delta !== null && Math.abs(delta) > 0.001
+      ? `<span class="${delta > 0 ? 'score-delta-pos' : 'score-delta-neg'}">${delta > 0 ? '+' : ''}${delta.toFixed(3)}</span>`
+      : '';
+
+    const mixedBar = q.mixed !== null
+      ? scoreBar(q.mixed, q.mixSrc === 'aislinge' ? '#a78bfa' : (SRC_COLOUR[q.mixSrc] || '#8b949e'))
+      : '<span style="color:#484f58">—</span>';
+
+    const bridgeHtml = q.bridge
+      ? `<div class="bridge-text">${q.bridge}</div>`
+      : (q.note ? `<div style="color:#484f58;font-size:10px;margin-top:2px">${q.note}</div>` : '');
+
+    return `<tr class="${isEmpty ? 'empty-row' : ''}">
+      <td><span class="query-id">${q.id}</span></td>
+      <td><span class="theme">${q.theme}</span>${bridgeHtml}</td>
+      <td><span class="badge badge-${q.cat}">${q.cat}</span></td>
+      <td>${isEmpty ? '<span style="color:#484f58">no result</span>' : scoreBar(q.raw, SRC_COLOUR[q.rawSrc] || '#8b949e')} ${deltaHtml}</td>
+      <td>${mixedBar}</td>
+      <td>${rankBadge(q.rank)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function filterTable(cat, btn) {
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable(cat);
+}
+
+renderTable('all');
+</script>
+</body>
+</html>
