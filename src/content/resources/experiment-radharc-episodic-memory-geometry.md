@@ -18,26 +18,26 @@ furtherReading:
 draft: false
 ---
 
-## Background
+## <span style="color:#1F4E79">Background</span>
 
 [Mnemos](https://mnemos.foxxelabs.ie) is our personal RAG system — a deployed episodic memory store currently holding 33,440 documents: ChatGPT and Claude conversation history, research documents, SFT training data, and Anseo community content. In the architecture we are building, it is the hippocampus.
 
-The larger system is **Aislinge** (Irish: *prophetic dream*), a dream consolidation runtime for language models. Current LLMs are frozen at deployment: they experience the world but learn nothing from it. Aislinge is the offline consolidation process that turns experience into genuine learning — the equivalent of sleep.
+The larger system is **<span style="color:#C55A11">Aislinge</span>** (Irish: *prophetic dream*), a dream consolidation runtime for language models. Current LLMs are frozen at deployment: they experience the world but learn nothing from it. Aislinge is the offline consolidation process that turns experience into genuine learning — the equivalent of sleep.
 
 Before building the consolidation engine, we needed to understand the geometry we are working with. What does Mnemos actually look like from inside a language model? Where does it cluster? Where is it unstable? Where does meaning bleed unexpectedly across source types?
 
-That is what **Experiment Radharc** set out to answer. *Radharc* (Irish: *a view, a first look*) — the survey before the build.
+That is what **<span style="color:#C55A11">Experiment Radharc</span>** set out to answer. *Radharc* (Irish: *a view, a first look*) — the survey before the build.
 
 ---
 
-## Method
+## <span style="color:#1F4E79">Method</span>
 
 We sampled 484 documents from Mnemos, stratified across five source types: `chatgpt`, `claude`, `doc` (research documents and the Legion PRD), `sft` (structured fine-tuning data: instruction-format documents, email tasks, book extracts), and `anseo` (community platform content). Documents were fetched via the Mnemos `/api/sample` endpoint — no local database required on the inference machine.
 
 Each document was passed through two frozen base models at 4-bit NF4 quantisation:
 
-- **Mistral 7B Instruct v0.3** — broad web corpus training, strong factual recall
-- **Phi-3.5-mini Instruct** (3.8B) — synthetic/curated data, strong reasoning per parameter
+- **<span style="color:#595959">Mistral 7B Instruct v0.3</span>** — broad web corpus training, strong factual recall
+- **<span style="color:#595959">Phi-3.5-mini Instruct</span>** (3.8B) — synthetic/curated data, strong reasoning per parameter
 
 Hidden states were extracted from middle and final transformer layers, mean-pooled over non-padding tokens, and averaged across both layers to produce a single vector per document (4096-dimensional for Mistral, 3072-dimensional for Phi). UMAP projection to 2D gave us the geometry maps. Pairwise cosine similarity gave us the adjacency structure.
 
@@ -45,7 +45,7 @@ All code is open source at [todd427/radharc](https://github.com/todd427/radharc)
 
 ---
 
-## Visualisations
+## <span style="color:#1F4E79">Visualisations</span>
 
 The UMAP plots below show the same 484 documents as seen by each model. Each dot is one document, coloured by source type. Position reflects the model's internal representation of semantic similarity — closer means the model considers the documents more alike.
 
@@ -61,9 +61,9 @@ The divergence chart below shows the 40 documents where Mistral and Phi-3.5-mini
 
 ---
 
-## What We Found
+## <span style="color:#1F4E79">What We Found</span>
 
-### The two models see the same memory very differently
+### <span style="color:#2E75B6">The two models see the same memory very differently</span>
 
 Mistral organises Mnemos by **source provenance**. ChatGPT and Claude conversation history forms a dense central cluster; SFT data is completely isolated; research documents form their own satellite. The geometry is segregated — the model treats source type as a primary signal of meaning.
 
@@ -71,17 +71,17 @@ Phi-3.5-mini organises by **semantic content**. Sources bleed into each other. R
 
 Neither is wrong. They are different models of what similarity means, shaped by different training regimes. That difference is the experiment result.
 
-### Your AI conversation history is semantically unified
+### <span style="color:#2E75B6">Your AI conversation history is semantically unified</span>
 
 The highest-consensus adjacencies — pairs both models agree are geometrically close — are almost entirely `claude ↔ chatgpt` pairs, with similarity scores around 0.93. Both models treat ChatGPT and Claude conversation histories as essentially interchangeable. The two streams have merged into one semantic space.
 
 The implication: from the model's perspective, the source platform is invisible. What matters is content and conversational register. When Aislinge consolidates this material, it will consolidate across platforms without needing to distinguish them.
 
-### SFT data is the most geometrically unstable
+### <span style="color:#2E75B6">SFT data is the most geometrically unstable</span>
 
 Divergence by source type (mean divergence between Mistral and Phi representations):
 
-| Source   | Mean divergence |
+| <span style="color:#595959">Source</span> | <span style="color:#595959">Mean divergence</span> |
 |----------|----------------|
 | sft      | 0.957          |
 | anseo    | 0.665          |
@@ -91,7 +91,7 @@ Divergence by source type (mean divergence between Mistral and Phi representatio
 
 SFT data has nearly double the divergence of Claude conversation history. The reason is structural: the `sft` category is a mixed bag — instruction-format documents, email reformatting tasks, and book extracts all live under the same label. Mistral reads this as a unified instruction-following register; Phi, trained on more curated reasoning data, reads the same material as three distinct content types. The models are both right, and their disagreement exposes a real fault line in how this data was ingested.
 
-### Mistral sees a connection Phi misses entirely
+### <span style="color:#2E75B6">Mistral sees a connection Phi misses entirely</span>
 
 One model-specific adjacency stands out: Mistral connects a student post asking *"Does anyone have notes from last week's Data Structures lecture?"* with a hardware wishlist fragment. Phi does not see this connection at all.
 
@@ -99,19 +99,19 @@ What Mistral is recognising: *community resource request* — an abstract patter
 
 ---
 
-## What This Means for Aislinge
+## <span style="color:#1F4E79">What This Means for Aislinge</span>
 
 Radharc was a cartography exercise. Three things the map tells us about what to build:
 
-**Focus consolidation on SFT first.** The most geometrically unstable region is where the dream pass will have the highest leverage. Unresolved meaning is the best candidate for consolidation work.
+**<span style="color:#C55A11">Focus consolidation on SFT first.</span>** The most geometrically unstable region is where the dream pass will have the highest leverage. Unresolved meaning is the best candidate for consolidation work.
 
-**Use model disagreement as the salience signal.** The differences between Mistral and Phi are not noise — they are the signal. High divergence means high uncertainty means high consolidation value. Aislinge should run at minimum two models and use their disagreement to prioritise what gets consolidated, rather than relying on any single model's geometry.
+**<span style="color:#C55A11">Use model disagreement as the salience signal.</span>** The differences between Mistral and Phi are not noise — they are the signal. High divergence means high uncertainty means high consolidation value. Aislinge should run at minimum two models and use their disagreement to prioritise what gets consolidated, rather than relying on any single model's geometry.
 
-**Target the cross-domain adjacencies for generative replay.** The connections both models agree on despite source-type differences — research documents adjacent to conversation fragments, Anseo roadmap entries adjacent to Claude planning sessions — are the natural bridges. Aislinge's generative replay phase should explicitly generate synthetic material that bridges these pairs. That is where novel insight is most likely to emerge.
+**<span style="color:#C55A11">Target the cross-domain adjacencies for generative replay.</span>** The connections both models agree on despite source-type differences — research documents adjacent to conversation fragments, Anseo roadmap entries adjacent to Claude planning sessions — are the natural bridges. Aislinge's generative replay phase should explicitly generate synthetic material that bridges these pairs. That is where novel insight is most likely to emerge.
 
 ---
 
-## Foxxe Take
+## <span style="color:#1F4E79">Foxxe Take</span>
 
 The field is moving. There are papers called "Language Models Need Sleep" being submitted to ICLR 2026. Letta is building continual learning in token space. The direction is clear and the competition is real.
 
@@ -121,7 +121,7 @@ That framing difference has design consequences at every level. It is why we sta
 
 The next experiment is Aislinge Phase 1: a salience-weighted consolidation pass over the SFT cluster, targeting the high-divergence documents identified here.
 
-The dream map is drawn.
+<span style="color:#C55A11">The dream map is drawn.</span>
 
 ---
 
