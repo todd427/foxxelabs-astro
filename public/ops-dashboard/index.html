@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ops Dashboard — Wireframe · Foxxe Labs</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b0f14;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;padding-top:42px}
+
+/* ── Site header ── */
+.site-hdr{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,15,20,.9);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);padding:0 18px;height:42px;display:flex;align-items:center;justify-content:space-between}
+.site-back{color:rgba(159,176,195,.7);text-decoration:none;font-size:12px;display:flex;align-items:center;gap:5px;transition:color .15s}
+.site-back:hover{color:#7dd3fc}
+.site-title{font-size:12px;color:rgba(159,176,195,.45);font-style:italic}
+.site-badge{font-size:10px;padding:2px 8px;border-radius:12px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:#fbbf24}
+
+/* ── Dashboard themes ── */
+[data-theme="dark"]{--bg:#111318;--bg2:#181c24;--bg3:#1e2330;--bg4:#252c3c;--text:#e4ecf5;--t2:#8fa4bc;--t3:#546880;--bd:rgba(255,255,255,0.08);--bd2:rgba(255,255,255,0.16);--acc:#5baee8;--acc2:rgba(91,174,232,0.12);--acc3:#8ecef8;--ok:#50c896;--ok2:rgba(80,200,150,0.12);--warn:#f0b840;--warn2:rgba(240,184,64,0.12);--err:#f07070;--err2:rgba(240,112,112,0.12);--pur:#9984e8;--pur2:rgba(153,132,232,0.12);--pur3:#bcb0f5;--hdr:#0d1018;--font:system-ui,-apple-system,sans-serif}
+[data-theme="light"]{--bg:#ffffff;--bg2:#f5f4f0;--bg3:#eeede8;--bg4:#e4e2dc;--text:#1a1a18;--t2:#5f5e5a;--t3:#888780;--bd:rgba(0,0,0,0.1);--bd2:rgba(0,0,0,0.2);--acc:#185FA5;--acc2:#E6F1FB;--acc3:#0C447C;--ok:#3B6D11;--ok2:#EAF3DE;--warn:#854F0B;--warn2:#FAEEDA;--err:#A32D2D;--err2:#FCEBEB;--pur:#534AB7;--pur2:#EEEDFE;--pur3:#3C3489;--hdr:#fafaf8;--font:system-ui,-apple-system,sans-serif}
+[data-theme="slate"]{--bg:#0e1520;--bg2:#162030;--bg3:#1d2d42;--bg4:#243550;--text:#ccd8e8;--t2:#7a9ab8;--t3:#4d6880;--bd:rgba(80,140,210,0.14);--bd2:rgba(80,140,210,0.28);--acc:#5baee8;--acc2:#142236;--acc3:#8ecef8;--ok:#50c896;--ok2:#082018;--warn:#f0b840;--warn2:#201a06;--err:#f07070;--err2:#200c0c;--pur:#8878e8;--pur2:#1a1630;--pur3:#aaa0f8;--hdr:#0a1018;--font:system-ui,-apple-system,sans-serif}
+[data-theme="terminal"]{--bg:#090c09;--bg2:#0e120e;--bg3:#131813;--bg4:#181f18;--text:#22dd44;--t2:#178830;--t3:#0f5520;--bd:rgba(34,200,68,0.18);--bd2:rgba(34,200,68,0.35);--acc:#22dd44;--acc2:#061206;--acc3:#66ee88;--ok:#22dd44;--ok2:#061206;--warn:#ccdd22;--warn2:#181600;--err:#dd3333;--err2:#180808;--pur:#88dd22;--pur2:#111a06;--pur3:#aaf044;--hdr:#060906;--font:monospace}
+[data-theme="terminal"] *{font-family:monospace!important}
+
+#app{background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;line-height:1.5;min-height:calc(100vh - 42px)}
+
+/* ── App header ── */
+.hdr{background:var(--hdr);border-bottom:0.5px solid var(--bd);padding:9px 14px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:42px;z-index:50}
+.brand{font-size:13px;font-weight:600;color:var(--acc);letter-spacing:0.02em}
+.theme-row{display:flex;align-items:center;gap:7px}
+.tlabel{font-size:11px;color:var(--t3)}
+.tdot{width:14px;height:14px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:border-color .12s;flex-shrink:0}
+.tdot.on{border-color:var(--t2)}
+.tdot[data-t=dark]{background:#181c24;outline:0.5px solid #334}
+.tdot[data-t=light]{background:#f0eeea;outline:0.5px solid #ccc}
+.tdot[data-t=slate]{background:#162030;outline:0.5px solid #335}
+.tdot[data-t=terminal]{background:#0e120e;outline:0.5px solid #1a441a}
+
+/* ── Nav ── */
+.nav{display:flex;background:var(--hdr);border-bottom:0.5px solid var(--bd);padding:0 14px;gap:0;overflow-x:auto}
+.ntab{padding:9px 14px;font-size:12px;color:var(--t2);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;user-select:none;transition:color .12s,border-color .12s}
+.ntab:hover{color:var(--text)}
+.ntab.on{color:var(--acc);border-bottom-color:var(--acc)}
+
+/* ── Panels ── */
+.panel{padding:14px 16px;display:none}
+.panel.on{display:block}
+
+/* ── Utility ── */
+.pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:500;padding:2px 8px;border-radius:12px;white-space:nowrap}
+.ok{background:var(--ok2);color:var(--ok)}.warn{background:var(--warn2);color:var(--warn)}.err{background:var(--err2);color:var(--err)}.info{background:var(--acc2);color:var(--acc3)}.gray{background:var(--bg3);color:var(--t2)}.pur{background:var(--pur2);color:var(--pur)}
+.dot{width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block}
+.slabel{font-size:10px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.07em}
+.row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:8px;flex-wrap:wrap}
+.vtog{display:flex;border:0.5px solid var(--bd2);border-radius:5px;overflow:hidden}
+.vbtn{padding:5px 12px;font-size:11px;color:var(--t2);cursor:pointer;background:transparent;border:none;border-right:0.5px solid var(--bd2);font-family:inherit;user-select:none;transition:background .1s,color .1s}
+.vbtn:last-child{border-right:none}
+.vbtn.on{background:var(--acc2);color:var(--acc3)}
+.btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--t2);border:0.5px solid var(--bd2);border-radius:5px;padding:4px 10px;cursor:pointer;background:transparent;font-family:inherit;transition:background .12s;user-select:none}
+.btn:hover{background:var(--bg2)}
+.btn-acc{background:var(--acc2);color:var(--acc3);border-color:var(--acc)}
+.btn-ok{background:var(--ok2);color:var(--ok);border-color:var(--ok)}
+.btn-warn{background:var(--warn2);color:var(--warn);border-color:var(--warn)}
+.mono{font-family:monospace;font-size:10px}
+
+/* ── Project rows (expand-in-place) ── */
+.prow{background:var(--bg2);border:0.5px solid var(--bd);border-radius:8px;margin-bottom:6px;overflow:hidden;transition:border-color .12s}
+.prow:hover{border-color:var(--bd2)}
+.prow.open{border-color:var(--acc)}
+.prow-summary{display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;user-select:none}
+.pmarker{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.pname{font-size:13px;font-weight:500;color:var(--text);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pmeta{font-size:11px;color:var(--t3);flex-shrink:0}
+.pchev{font-size:13px;color:var(--t3);flex-shrink:0;transition:transform .15s;display:inline-block;line-height:1}
+.prow.open .pchev{transform:rotate(90deg)}
+.pdetail{border-top:0.5px solid var(--bd);padding:12px 14px;display:none}
+.prow.open .pdetail{display:block}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dlabel{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;font-weight:500}
+.dval{font-size:12px;color:var(--text);line-height:1.5}
+.dval a{color:var(--acc);font-family:monospace;font-size:11px}
+.milestones{margin-bottom:12px}
+.ms-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:0.5px solid var(--bd);font-size:12px}
+.ms-row:last-child{border-bottom:none}
+.ms-check{width:15px;height:15px;border-radius:3px;border:0.5px solid var(--bd2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;background:var(--bg3)}
+.ms-check.done{background:var(--ok2);border-color:var(--ok);color:var(--ok)}
+.ms-title{flex:1;color:var(--text)}
+.ms-title.done{text-decoration:line-through;color:var(--t3)}
+.ms-due{font-size:10px;color:var(--t3);flex-shrink:0}
+.note-box{background:var(--bg3);border-radius:5px;padding:10px 12px;font-size:12px;color:var(--t2);line-height:1.6;margin-bottom:12px}
+.detail-actions{display:flex;gap:6px;flex-wrap:wrap}
+
+/* ── Inline add form ── */
+.add-form{background:var(--acc2);border:0.5px solid var(--acc);border-radius:8px;padding:14px;margin-bottom:10px}
+.form-row{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.form-field{display:flex;flex-direction:column;gap:3px;flex:1;min-width:120px}
+.form-field label{font-size:10px;color:var(--acc3);font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.form-field input,.form-field select,.form-field textarea{background:var(--bg);border:0.5px solid var(--bd2);border-radius:5px;padding:6px 9px;font-size:12px;color:var(--text);font-family:inherit;outline:none}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--acc)}
+.form-field textarea{resize:vertical;min-height:60px}
+.form-field select option{background:var(--bg);color:var(--text)}
+
+/* ── Kanban ── */
+.kboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kcol{background:var(--bg2);border-radius:7px;padding:9px}
+.kcolhdr{font-size:9px;font-weight:500;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;display:flex;align-items:center;justify-content:space-between}
+.kcard{background:var(--bg);border:0.5px solid var(--bd);border-radius:5px;padding:8px 9px;margin-bottom:5px;cursor:pointer;transition:border-color .12s}
+.kcard:hover{border-color:var(--bd2)}
+.kcard-name{font-size:11px;font-weight:500;color:var(--text)}
+.kcard-meta{font-size:10px;color:var(--t3);margin-top:2px}
+
+/* ── Timeline ── */
+.tbar-hdr{display:flex;align-items:center;margin-bottom:9px;border-bottom:0.5px solid var(--bd);padding-bottom:7px}
+.tbar-label-col{width:140px;font-size:10px;color:var(--t3);flex-shrink:0}
+.tbar-months{display:grid;grid-template-columns:repeat(6,1fr);flex:1;font-size:10px;color:var(--t3);text-align:center}
+.tbar-row{display:flex;align-items:center;margin-bottom:7px}
+.tbar-label{width:140px;font-size:12px;color:var(--text);flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:8px}
+.tbar-track{flex:1;position:relative;height:24px}
+.tbar{position:absolute;top:2px;height:20px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:10px;overflow:hidden;white-space:nowrap}
+
+/* ── Worklog ── */
+.mcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin-bottom:14px}
+.mcard{background:var(--bg2);border-radius:7px;padding:11px}
+.mclabel{font-size:10px;color:var(--t3);margin-bottom:3px}
+.mcval{font-size:20px;font-weight:500;color:var(--text);line-height:1.2}
+.mcsub{font-size:10px;color:var(--t2);margin-top:2px}
+.log-form{background:var(--ok2);border:0.5px solid var(--ok);border-radius:8px;padding:14px;margin-bottom:12px}
+.log-form .lf-label{font-size:10px;color:var(--ok);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;display:block}
+.log-form input,.log-form select{background:var(--bg);border:0.5px solid var(--bd2);border-radius:5px;padding:6px 9px;font-size:12px;color:var(--text);font-family:inherit;outline:none;width:100%}
+.log-form input:focus,.log-form select:focus{border-color:var(--ok)}
+.log-form select option{background:var(--bg);color:var(--text)}
+.wltbl{width:100%;border-collapse:collapse;table-layout:fixed}
+.wltbl th{font-size:9px;font-weight:500;color:var(--t3);text-align:left;padding:5px 8px;border-bottom:0.5px solid var(--bd);text-transform:uppercase;letter-spacing:.05em}
+.wltbl td{padding:7px 8px;border-bottom:0.5px solid var(--bd);font-size:11px;vertical-align:middle}
+.wltbl tr:last-child td{border-bottom:none}
+.wltbl tr:hover td{background:var(--bg3)}
+
+/* ── Machines ── */
+.machine-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:9px;margin-bottom:14px}
+.mach{background:var(--bg2);border:0.5px solid var(--bd);border-radius:8px;overflow:hidden}
+.mach-hdr{padding:10px 12px;border-bottom:0.5px solid var(--bd);display:flex;align-items:flex-start;justify-content:space-between}
+.mach-name{font-size:13px;font-weight:500;color:var(--text)}
+.mach-spec{font-size:10px;color:var(--t3);margin-top:2px}
+.mach-body{padding:10px 12px}
+.res-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.res-label{font-size:10px;color:var(--t3);width:32px;flex-shrink:0}
+.res-bar{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.res-fill{height:100%;border-radius:3px}
+.res-val{font-size:10px;color:var(--t2);width:30px;text-align:right;font-family:monospace}
+.proc-list{margin-top:9px;border-top:0.5px solid var(--bd);padding-top:8px}
+.proc-hdr{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.proc-row{display:flex;align-items:center;gap:6px;padding:3px 0}
+.proc-name{font-size:11px;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.proc-pid{font-size:10px;color:var(--t3);font-family:monospace;width:38px;text-align:right}
+.proc-up{font-size:10px;color:var(--t3);width:38px;text-align:right}
+.action-row{margin-top:9px;display:flex;gap:5px;flex-wrap:wrap}
+.tbl{width:100%;border-collapse:collapse;table-layout:fixed}
+.tbl th{font-size:9px;font-weight:500;color:var(--t3);text-align:left;padding:5px 7px;border-bottom:0.5px solid var(--bd);text-transform:uppercase;letter-spacing:.05em}
+.tbl td{padding:6px 7px;border-bottom:0.5px solid var(--bd);font-size:11px;color:var(--t2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--bg3)}
+
+/* ── Deployment cards ── */
+.dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-bottom:14px}
+.dcard{background:var(--bg2);border:0.5px solid var(--bd);border-radius:8px;padding:11px;cursor:pointer;transition:border-color .12s}
+.dcard:hover{border-color:var(--bd2)}
+.dname{font-size:12px;font-weight:500;color:var(--text)}
+.dmeta{font-size:10px;color:var(--t3);margin-top:2px}
+.durl{font-size:10px;color:var(--acc);font-family:monospace;margin-top:4px}
+.plat{font-size:9px;padding:1px 4px;border-radius:2px;border:0.5px solid var(--bd2);color:var(--t3)}
+.hint{font-size:11px;color:var(--t3);margin-top:9px}
+
+@media(max-width:600px){
+  .detail-grid{grid-template-columns:1fr}
+  .kboard{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Foxxe Labs back bar -->
+<div class="site-hdr">
+  <a href="https://foxxelabs.ie" class="site-back">← foxxelabs.ie</a>
+  <span class="site-title">ops.foxxelabs.ie</span>
+  <span class="site-badge">wireframe</span>
+</div>
+
+<div id="app" data-theme="dark">
+
+<!-- App header -->
+<div class="hdr">
+  <span class="brand">ops.foxxelabs.ie</span>
+  <div class="theme-row">
+    <span class="tlabel">theme</span>
+    <div class="tdot" data-t="dark" onclick="setTheme('dark')" title="Dark"></div>
+    <div class="tdot" data-t="light" onclick="setTheme('light')" title="Light"></div>
+    <div class="tdot" data-t="slate" onclick="setTheme('slate')" title="Slate"></div>
+    <div class="tdot" data-t="terminal" onclick="setTheme('terminal')" title="Terminal"></div>
+  </div>
+</div>
+
+<!-- Nav — Projects first -->
+<div class="nav">
+  <div class="ntab on" data-p="projects">Projects</div>
+  <div class="ntab" data-p="worklog">Work log</div>
+  <div class="ntab" data-p="machines">Machines</div>
+  <div class="ntab" data-p="deployments">Deployments</div>
+  <div class="ntab" data-p="budget">Budget &amp; APIs</div>
+</div>
+
+<!-- ======================== PROJECTS ======================== -->
+<div id="projects" class="panel on">
+  <div class="row">
+    <div style="display:flex;align-items:center;gap:9px">
+      <div class="vtog">
+        <div class="vbtn on" id="v-list">List</div>
+        <div class="vbtn" id="v-kanban">Kanban</div>
+        <div class="vbtn" id="v-timeline">Timeline</div>
+      </div>
+      <span class="slabel">10 projects</span>
+    </div>
+    <button class="btn btn-acc" onclick="toggleAddForm()">+ New project</button>
+  </div>
+
+  <!-- Inline add form -->
+  <div class="add-form" id="add-form" style="display:none">
+    <div class="dlabel" style="margin-bottom:9px;color:var(--acc3);font-size:11px">New project</div>
+    <div class="form-row">
+      <div class="form-field" style="flex:2"><label>Name</label><input type="text" placeholder="e.g. Radharc v2"></div>
+      <div class="form-field"><label>Status</label><select><option>research</option><option>development</option><option>running</option><option>deployed</option><option>paused</option><option>shipped</option></select></div>
+      <div class="form-field"><label>Machine / platform</label><select><option>—</option><option>rose</option><option>iris</option><option>daisy</option><option>lava</option><option>fly.io</option><option>railway</option><option>cf pages</option></select></div>
+    </div>
+    <div class="form-row">
+      <div class="form-field" style="flex:2"><label>Repo URL</label><input type="text" placeholder="https://github.com/todd427/..."></div>
+      <div class="form-field"><label>Current phase</label><input type="text" placeholder="e.g. peekaboo"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-field"><label>Notes</label><textarea placeholder="Free-form context..."></textarea></div>
+    </div>
+    <div style="display:flex;gap:7px">
+      <button class="btn btn-acc" onclick="toggleAddForm()">Save project</button>
+      <button class="btn" onclick="toggleAddForm()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- LIST VIEW -->
+  <div id="pv-list">
+
+    <div class="prow open" id="proj-aislinge">
+      <div class="prow-summary" onclick="toggleProject('proj-aislinge')">
+        <div class="pmarker" style="background:var(--pur)"></div>
+        <span class="pname">Aislinge</span>
+        <span class="pill pur"><span class="dot"></span>running · rose</span>
+        <span class="pmeta">phase 4 eval</span>
+        <span class="pmeta" style="margin-left:auto">2h ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="detail-grid">
+          <div>
+            <div class="dlabel">Description</div>
+            <div class="dval">Dream consolidation runtime. Radharc → Aislinge → Legion. Turns episodic Mnemos snapshots into learning statements — equivalent of what sleep does to human memory.</div>
+          </div>
+          <div>
+            <div class="dlabel">Location</div>
+            <div class="dval">rose · /home/Projects/aislinge · branch: dev</div>
+            <div style="margin-top:8px"><div class="dlabel">Repo</div><div class="dval"><a href="#">github.com/todd427/aislinge</a></div></div>
+          </div>
+        </div>
+        <div class="dlabel" style="margin-bottom:6px">Milestones</div>
+        <div class="milestones">
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">Phase 2 — abstraction pass</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">Phase 3 — ingestion into Mnemos</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Phase 4 — evaluation (in progress)</span><span class="ms-due">active</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Phase 5 — hybrid retrieval layer (FTS5 + RRF)</span><span class="ms-due">next</span></div>
+        </div>
+        <div class="dlabel" style="margin-bottom:5px">Last session note</div>
+        <div class="note-box">Phase 4 eval running on Rose. FTS eval: Aislinge surfaced 4/7 cross-doc refs. Pure dense retrieval missing proper nouns (Aislinge, Radharc, Legion). Hybrid retrieval is Phase 5 — standalone retrieval.py layer.</div>
+        <div class="detail-actions">
+          <button class="btn">Log session</button>
+          <button class="btn">Add milestone</button>
+          <button class="btn">View on Rose</button>
+          <button class="btn" style="margin-left:auto;color:var(--err);border-color:var(--err)">Pause project</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-legion">
+      <div class="prow-summary" onclick="toggleProject('proj-legion')">
+        <div class="pmarker" style="background:var(--pur)"></div>
+        <span class="pname">Legion</span>
+        <span class="pill pur">development</span>
+        <span class="pmeta">peekaboo · iris</span>
+        <span class="pmeta" style="margin-left:auto">2d ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="detail-grid">
+          <div><div class="dlabel">Description</div><div class="dval">Distributed AI swarm. Embodied system at end of Radharc→Aislinge→Legion stack. IRC-based agent-to-agent protocol. SFI funding target Q2.</div></div>
+          <div><div class="dlabel">Location</div><div class="dval">iris · /home/Projects/legion · branch: peekaboo</div></div>
+        </div>
+        <div class="dlabel" style="margin-bottom:6px">Milestones</div>
+        <div class="milestones">
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">IRC scaffold</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Peekaboo — agent-to-agent messaging</span><span class="ms-due">active</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Swarm coordination protocol</span><span class="ms-due">next</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">SFI funding letter — cost breakdown</span><span class="ms-due">Q2</span></div>
+        </div>
+        <div class="dlabel" style="margin-bottom:5px">Last session note</div>
+        <div class="note-box">Peekaboo: basic agent-to-agent messaging over IRC scaffolded. SFI letter needs cost breakdown by Q2. Next: swarm coordination protocol, first two agents wired.</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Add milestone</button><button class="btn">View on Iris</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-uca">
+      <div class="prow-summary" onclick="toggleProject('proj-uca')">
+        <div class="pmarker" style="background:var(--warn)"></div>
+        <span class="pname">UCA Dissertation</span>
+        <span class="pill warn">in progress</span>
+        <span class="pmeta">MSc Cyberpsychology · ATU</span>
+        <span class="pmeta" style="color:var(--warn);font-weight:500;margin-left:auto">due 12 Jun</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="detail-grid">
+          <div><div class="dlabel">Description</div><div class="dval">MSc Cyberpsychology dissertation, ATU Galway. Hard deadline 12 June 2026. Target: 2h/day through May.</div></div>
+          <div><div class="dlabel">Word count</div><div class="dval" style="font-size:20px;font-weight:500">~8,400 <span style="font-size:12px;font-weight:400;color:var(--t3)">/ 15,000</span></div></div>
+        </div>
+        <div class="dlabel" style="margin-bottom:6px">Milestones</div>
+        <div class="milestones">
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">Chapter 1 — Introduction</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">Chapter 2 — Literature review</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Chapter 3 — Cyberpsychology framework</span><span class="ms-due">active</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Chapter 4 — Methodology</span><span class="ms-due">Apr</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Chapter 5 — Analysis &amp; Results</span><span class="ms-due">May</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Final submission</span><span class="ms-due" style="color:var(--warn);font-weight:500">12 Jun</span></div>
+        </div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Add milestone</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-mnemos">
+      <div class="prow-summary" onclick="toggleProject('proj-mnemos')">
+        <div class="pmarker" style="background:var(--ok)"></div>
+        <span class="pname">Mnemos</span>
+        <span class="pill ok"><span class="dot"></span>deployed · fly.io</span>
+        <span class="pmeta">ChromaDB · FastMCP · 33k docs</span>
+        <span class="pmeta" style="margin-left:auto">today</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="detail-grid">
+          <div><div class="dlabel">Live URL</div><div class="dval"><a href="https://mnemos.foxxelabs.ie">mnemos.foxxelabs.ie</a></div><div style="margin-top:8px"><div class="dlabel">Stack</div><div class="dval">ChromaDB · sentence-transformers · FastAPI · FastMCP · Fly.io</div></div></div>
+          <div><div class="dlabel">Documents indexed</div><div class="dval" style="font-size:22px;font-weight:500">33,649</div><div class="dval" style="font-size:11px;color:var(--t3);margin-top:2px">chatgpt 46% · sft 38% · claude 14% · other 2%</div></div>
+        </div>
+        <div class="dlabel" style="margin-bottom:6px">Backlog</div>
+        <div class="milestones">
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">get_doc_count MCP tool deployed</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check done">✓</div><span class="ms-title done">Automated ingestion — email, Anseo, FoxxeLabs</span><span class="ms-due">done</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Hybrid retrieval — standalone FTS5 + RRF layer</span><span class="ms-due">next</span></div>
+          <div class="ms-row"><div class="ms-check">·</div><span class="ms-title">Google Drive ingestion (ingest_gdrive.py)</span><span class="ms-due">pending</span></div>
+        </div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Deploy now</button><button class="btn">View logs</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-anseo">
+      <div class="prow-summary" onclick="toggleProject('proj-anseo')">
+        <div class="pmarker" style="background:var(--ok)"></div>
+        <span class="pname">Anseo</span>
+        <span class="pill ok"><span class="dot"></span>deployed · railway</span>
+        <span class="pmeta">Django · anseo.irish</span>
+        <span class="pmeta" style="margin-left:auto">1d ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="detail-grid">
+          <div><div class="dlabel">Live URLs</div><div class="dval"><a href="https://anseo.irish">anseo.irish</a> &nbsp;·&nbsp; <a href="https://alpha.anseo.irish">alpha.anseo.irish</a></div></div>
+          <div><div class="dlabel">Active branch</div><div class="dval">dev → Railway auto-deploy</div></div>
+        </div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Deploy alpha</button><button class="btn">View logs</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-sceal">
+      <div class="prow-summary" onclick="toggleProject('proj-sceal')">
+        <div class="pmarker" style="background:var(--pur)"></div>
+        <span class="pname">Scéal</span>
+        <span class="pill pur"><span class="dot"></span>training · daisy</span>
+        <span class="pmeta">Irish NLP model</span>
+        <span class="pmeta" style="margin-left:auto">45m ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="note-box">Irish language NLP model training run on Daisy (RTX 5060). Tokeniser experiments — current run: train_model.py. Branch: main, 1 commit ahead.</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">View on Daisy</button><button class="btn">Add milestone</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-foghliam">
+      <div class="prow-summary" onclick="toggleProject('proj-foghliam')">
+        <div class="pmarker" style="background:var(--acc)"></div>
+        <span class="pname">Foghliam</span>
+        <span class="pill info">dev · daisy</span>
+        <span class="pmeta">Irish learning tool</span>
+        <span class="pmeta" style="margin-left:auto">3h ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="note-box">Dev server running on Daisy :8000. Initial scaffold done. Overlaps with Anseo Cúpla Focal module scope (structured Irish learning, foghlaim = to learn).</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">View on Daisy</button><button class="btn">Add milestone</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-afterwords">
+      <div class="prow-summary" onclick="toggleProject('proj-afterwords')">
+        <div class="pmarker" style="background:var(--acc)"></div>
+        <span class="pname">AfterWords / toddBot</span>
+        <span class="pill info">research</span>
+        <span class="pmeta">digital legacy · University of Souls</span>
+        <span class="pmeta" style="margin-left:auto">4d ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="note-box">Digital legacy avatar project. University of Souls framing. toddBot = AI avatar trained on personal history and writings. Conceptual and research phase.</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Add milestone</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-ops">
+      <div class="prow-summary" onclick="toggleProject('proj-ops')">
+        <div class="pmarker" style="background:var(--acc)"></div>
+        <span class="pname">Ops Dashboard</span>
+        <span class="pill info">building</span>
+        <span class="pmeta">FastAPI · fly.io · this project</span>
+        <span class="pmeta" style="margin-left:auto">today</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="note-box">This wireframe. FastAPI + SQLite + APScheduler + Cloudflare Access auth. Projects primary tab. Machine agents (ops-agent) heartbeat 30s with process list + git repo states. Phase 1: Deployments + Projects + Work log.</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">Add milestone</button></div>
+      </div>
+    </div>
+
+    <div class="prow" id="proj-cybersafer">
+      <div class="prow-summary" onclick="toggleProject('proj-cybersafer')">
+        <div class="pmarker" style="background:var(--t3)"></div>
+        <span class="pname">CyberSafer</span>
+        <span class="pill gray">paused</span>
+        <span class="pmeta">CF Pages · cybersafer.uk</span>
+        <span class="pmeta" style="margin-left:auto">1w ago</span>
+        <span class="pchev">›</span>
+      </div>
+      <div class="pdetail">
+        <div class="note-box">v2 deployed. 21 scenarios · 6 categories · 764 test checks. ICO registration (~£40/yr) and WHOIS verification pending. Currently noindex/nofollow.</div>
+        <div class="detail-actions"><button class="btn">Log session</button><button class="btn">View site</button></div>
+      </div>
+    </div>
+
+  </div><!-- /pv-list -->
+
+  <!-- KANBAN VIEW -->
+  <div id="pv-kanban" style="display:none">
+    <div class="kboard">
+      <div class="kcol">
+        <div class="kcolhdr">Research <span style="font-weight:400;color:var(--t3)">2</span></div>
+        <div class="kcard"><div class="kcard-name">AfterWords / toddBot</div><div class="kcard-meta">digital legacy · University of Souls</div></div>
+        <div class="kcard"><div class="kcard-name">UCA Dissertation</div><div class="kcard-meta">ch3 active · due 12 Jun</div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcolhdr">Development <span style="font-weight:400;color:var(--t3)">3</span></div>
+        <div class="kcard"><div class="kcard-name">Foghliam</div><div class="kcard-meta">daisy · dev server :8000</div></div>
+        <div class="kcard"><div class="kcard-name">Ops Dashboard</div><div class="kcard-meta">building now</div></div>
+        <div class="kcard"><div class="kcard-name">Scéal</div><div class="kcard-meta">daisy · tokeniser training</div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcolhdr">Running <span style="font-weight:400;color:var(--t3)">2</span></div>
+        <div class="kcard"><div class="kcard-name">Aislinge</div><div class="kcard-meta">rose · phase 4 eval active</div></div>
+        <div class="kcard"><div class="kcard-name">Legion</div><div class="kcard-meta">iris · peekaboo milestone</div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcolhdr">Deployed <span style="font-weight:400;color:var(--t3)">4</span></div>
+        <div class="kcard"><div class="kcard-name">Mnemos</div><div class="kcard-meta">fly.io · 33,649 docs</div></div>
+        <div class="kcard"><div class="kcard-name">Anseo</div><div class="kcard-meta">railway · anseo.irish</div></div>
+        <div class="kcard"><div class="kcard-name">git-mcp</div><div class="kcard-meta">fly.io · git-mcp-foxxelabs</div></div>
+        <div class="kcard"><div class="kcard-name">CyberSafer</div><div class="kcard-meta">cf pages · paused</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE VIEW -->
+  <div id="pv-timeline" style="display:none">
+    <div class="tbar-hdr">
+      <div class="tbar-label-col">Project</div>
+      <div class="tbar-months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+    </div>
+    <div class="tbar-row"><div class="tbar-label">UCA Dissertation</div><div class="tbar-track"><div class="tbar" style="left:0;width:90%;background:var(--warn2);border:0.5px solid var(--warn);color:var(--warn)">ch3 → ch4 → submit 12 Jun</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Aislinge</div><div class="tbar-track"><div class="tbar" style="left:0;width:100%;background:var(--pur2);border:0.5px solid var(--pur);color:var(--pur)">ongoing · ph4 eval → ph5 hybrid</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Legion</div><div class="tbar-track"><div class="tbar" style="left:33%;width:58%;background:var(--pur2);border:0.5px solid var(--pur);color:var(--pur)">peekaboo → coordination → SFI Q2</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Ops Dashboard</div><div class="tbar-track"><div class="tbar" style="left:33%;width:22%;background:var(--acc2);border:0.5px solid var(--acc);color:var(--acc3)">build · deploy</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Mnemos</div><div class="tbar-track"><div class="tbar" style="left:0;width:100%;background:var(--ok2);border:0.5px solid var(--ok);color:var(--ok)">ongoing — hybrid retrieval Q2</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Foghliam</div><div class="tbar-track"><div class="tbar" style="left:33%;width:50%;background:var(--acc2);border:0.5px solid var(--acc);color:var(--acc3)">scaffold → v1</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Scéal</div><div class="tbar-track"><div class="tbar" style="left:16%;width:67%;background:var(--pur2);border:0.5px solid var(--pur);color:var(--pur)">training runs</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">AfterWords</div><div class="tbar-track"><div class="tbar" style="left:16%;width:75%;background:var(--bg3);border:0.5px solid var(--bd2);color:var(--t3)">research phase</div></div></div>
+    <div class="tbar-row"><div class="tbar-label">Anseo</div><div class="tbar-track"><div class="tbar" style="left:0;width:100%;background:var(--ok2);border:0.5px solid var(--ok);color:var(--ok)">ongoing · live</div></div></div>
+  </div>
+</div>
+
+<!-- ======================== WORKLOG ======================== -->
+<div id="worklog" class="panel">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <span class="slabel">Sessions</span>
+    <button class="btn btn-acc" onclick="toggleLogForm()">+ Log session</button>
+  </div>
+  <div class="log-form" id="log-form" style="display:none">
+    <div class="slabel" style="margin-bottom:9px;color:var(--ok)">Log session</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:9px">
+      <div style="display:flex;flex-direction:column;gap:3px"><span class="lf-label">Project</span><select><option>Aislinge</option><option>Legion</option><option>UCA Dissertation</option><option>Mnemos</option><option>Anseo</option><option>Scéal</option><option>Foghliam</option><option>AfterWords</option><option>Ops Dashboard</option></select></div>
+      <div style="display:flex;flex-direction:column;gap:3px"><span class="lf-label">Type</span><select><option>code</option><option>debug</option><option>deploy</option><option>research</option><option>writing</option><option>design</option><option>meeting</option></select></div>
+      <div style="display:flex;flex-direction:column;gap:3px"><span class="lf-label">Duration (min)</span><input type="number" placeholder="90" min="1" max="720"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:9px"><span class="lf-label">Notes</span><input type="text" placeholder="What did you work on?"></div>
+    <div style="display:flex;gap:7px">
+      <button class="btn btn-ok" onclick="toggleLogForm()">Save</button>
+      <button class="btn" onclick="toggleLogForm()">Cancel</button>
+    </div>
+  </div>
+  <div class="mcards">
+    <div class="mcard"><div class="mclabel">This week</div><div class="mcval">515</div><div class="mcsub">minutes logged</div></div>
+    <div class="mcard"><div class="mclabel">Sessions</div><div class="mcval">5</div><div class="mcsub">last 7 days</div></div>
+    <div class="mcard"><div class="mclabel">Top project</div><div class="mcval" style="font-size:15px">Mnemos</div><div class="mcsub">170 min</div></div>
+    <div class="mcard"><div class="mclabel">Streak</div><div class="mcval">5</div><div class="mcsub">days</div></div>
+  </div>
+  <div style="background:var(--bg2);border:0.5px solid var(--bd);border-radius:8px;overflow:hidden">
+    <table class="wltbl">
+      <thead><tr><th style="width:70px">Date</th><th style="width:80px">Project</th><th style="width:60px">Type</th><th style="width:40px">Min</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">today</td><td><span class="pill info" style="font-size:9px">Mnemos</span></td><td style="font-size:10px;color:var(--t3)">code</td><td class="mono">95</td><td style="font-size:11px;color:var(--t2)">ops dashboard wireframe · foxxelabs demo</td></tr>
+        <tr><td class="mono">2d ago</td><td><span class="pill pur" style="font-size:9px">Aislinge</span></td><td style="font-size:10px;color:var(--t3)">research</td><td class="mono">120</td><td style="font-size:11px;color:var(--t2)">phase 4 evaluation run on Rose</td></tr>
+        <tr><td class="mono">3d ago</td><td><span class="pill ok" style="font-size:9px">Anseo</span></td><td style="font-size:10px;color:var(--t3)">deploy</td><td class="mono">45</td><td style="font-size:11px;color:var(--t2)">governance ingest fix, Railway redeploy</td></tr>
+        <tr><td class="mono">4d ago</td><td><span class="pill warn" style="font-size:9px">UCA</span></td><td style="font-size:10px;color:var(--t3)">writing</td><td class="mono">180</td><td style="font-size:11px;color:var(--t2)">Chapter 3 — cyberpsychology framework</td></tr>
+        <tr><td class="mono">5d ago</td><td><span class="pill pur" style="font-size:9px">Legion</span></td><td style="font-size:10px;color:var(--t3)">code</td><td class="mono">90</td><td style="font-size:11px;color:var(--t2)">IRC scaffold, peekaboo spec</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ======================== MACHINES ======================== -->
+<div id="machines" class="panel">
+  <div class="row"><span class="slabel">Local machines — ops-agent heartbeat 30s</span><button class="btn">↻ Poll now</button></div>
+  <div class="machine-grid">
+    <div class="mach">
+      <div class="mach-hdr">
+        <div><div class="mach-name">Rose</div><div class="mach-spec">RTX 5070 · 64GB · WSL2 · daily use</div></div>
+        <span class="pill ok"><span class="dot"></span>12s ago</span>
+      </div>
+      <div class="mach-body">
+        <div class="res-row"><span class="res-label">CPU</span><div class="res-bar"><div class="res-fill" style="width:34%;background:var(--acc)"></div></div><span class="res-val">34%</span></div>
+        <div class="res-row"><span class="res-label">RAM</span><div class="res-bar"><div class="res-fill" style="width:61%;background:var(--acc)"></div></div><span class="res-val">61%</span></div>
+        <div class="res-row"><span class="res-label">GPU</span><div class="res-bar"><div class="res-fill" style="width:82%;background:var(--pur)"></div></div><span class="res-val">82%</span></div>
+        <div class="proc-list">
+          <div class="proc-hdr">Active processes</div>
+          <div class="proc-row"><span class="pill pur" style="font-size:9px">aislinge</span><span class="proc-name">phase4_eval.py</span><span class="proc-pid">4821</span><span class="proc-up">2h14m</span></div>
+          <div class="proc-row"><span class="pill info" style="font-size:9px">mnemos</span><span class="proc-name">uvicorn server</span><span class="proc-pid">2204</span><span class="proc-up">6d</span></div>
+          <div class="proc-row"><span class="pill gray" style="font-size:9px">ops</span><span class="proc-name">ops-agent</span><span class="proc-pid">3310</span><span class="proc-up">1d</span></div>
+        </div>
+        <div class="action-row">
+          <button class="btn">git pull all</button>
+          <button class="btn">repo status</button>
+          <button class="btn btn-warn">restart aislinge</button>
+        </div>
+      </div>
+    </div>
+    <div class="mach">
+      <div class="mach-hdr">
+        <div><div class="mach-name">Iris</div><div class="mach-spec">RTX 5080 · 128GB · research</div></div>
+        <span class="pill ok"><span class="dot"></span>28s ago</span>
+      </div>
+      <div class="mach-body">
+        <div class="res-row"><span class="res-label">CPU</span><div class="res-bar"><div class="res-fill" style="width:12%;background:var(--acc)"></div></div><span class="res-val">12%</span></div>
+        <div class="res-row"><span class="res-label">RAM</span><div class="res-bar"><div class="res-fill" style="width:28%;background:var(--acc)"></div></div><span class="res-val">28%</span></div>
+        <div class="res-row"><span class="res-label">GPU</span><div class="res-bar"><div class="res-fill" style="width:5%;background:var(--pur)"></div></div><span class="res-val">5%</span></div>
+        <div class="proc-list">
+          <div class="proc-hdr">Active processes</div>
+          <div class="proc-row"><span class="pill pur" style="font-size:9px">legion</span><span class="proc-name">swarm_coordinator.py</span><span class="proc-pid">1188</span><span class="proc-up">idle</span></div>
+          <div class="proc-row"><span class="pill gray" style="font-size:9px">ops</span><span class="proc-name">ops-agent</span><span class="proc-pid">887</span><span class="proc-up">3d</span></div>
+        </div>
+        <div class="action-row"><button class="btn">git pull all</button><button class="btn">repo status</button><button class="btn btn-ok">start legion run</button></div>
+      </div>
+    </div>
+    <div class="mach">
+      <div class="mach-hdr">
+        <div><div class="mach-name">Daisy</div><div class="mach-spec">RTX 5060 · 128GB · Ubuntu · dev</div></div>
+        <span class="pill ok"><span class="dot"></span>8s ago</span>
+      </div>
+      <div class="mach-body">
+        <div class="res-row"><span class="res-label">CPU</span><div class="res-bar"><div class="res-fill" style="width:58%;background:var(--warn)"></div></div><span class="res-val">58%</span></div>
+        <div class="res-row"><span class="res-label">RAM</span><div class="res-bar"><div class="res-fill" style="width:44%;background:var(--acc)"></div></div><span class="res-val">44%</span></div>
+        <div class="res-row"><span class="res-label">GPU</span><div class="res-bar"><div class="res-fill" style="width:71%;background:var(--pur)"></div></div><span class="res-val">71%</span></div>
+        <div class="proc-list">
+          <div class="proc-hdr">Active processes</div>
+          <div class="proc-row"><span class="pill pur" style="font-size:9px">sceal</span><span class="proc-name">train_model.py</span><span class="proc-pid">9204</span><span class="proc-up">45m</span></div>
+          <div class="proc-row"><span class="pill info" style="font-size:9px">foghliam</span><span class="proc-name">dev server :8000</span><span class="proc-pid">8812</span><span class="proc-up">3h</span></div>
+          <div class="proc-row"><span class="pill gray" style="font-size:9px">ops</span><span class="proc-name">ops-agent</span><span class="proc-pid">501</span><span class="proc-up">2d</span></div>
+        </div>
+        <div class="action-row"><button class="btn">git pull all</button><button class="btn">repo status</button><button class="btn btn-warn">kill train_model</button></div>
+      </div>
+    </div>
+    <div class="mach" style="opacity:.5">
+      <div class="mach-hdr">
+        <div><div class="mach-name">Lava</div><div class="mach-spec">laptop · 64GB</div></div>
+        <span class="pill err"><span class="dot"></span>offline</span>
+      </div>
+      <div class="mach-body">
+        <div style="font-size:12px;color:var(--t3);padding:12px 0">Last seen 4h ago · no agent heartbeat</div>
+      </div>
+    </div>
+  </div>
+  <div class="slabel" style="margin-bottom:8px">Repo states — all machines</div>
+  <table class="tbl">
+    <thead><tr><th style="width:55px">Machine</th><th style="width:120px">Repo</th><th style="width:80px">Branch</th><th style="width:65px">Status</th><th style="width:70px">↑/↓</th><th>Last commit</th></tr></thead>
+    <tbody>
+      <tr><td class="mono" style="color:var(--text)">rose</td><td style="color:var(--text)">mnemos</td><td class="mono">main</td><td><span class="pill ok" style="font-size:9px">clean</span></td><td class="mono">0/0</td><td class="mono" style="color:var(--t2)">a3f91c2 add get_doc_count</td></tr>
+      <tr><td class="mono" style="color:var(--text)">rose</td><td style="color:var(--text)">aislinge</td><td class="mono">dev</td><td><span class="pill warn" style="font-size:9px">dirty</span></td><td class="mono">2/0</td><td class="mono" style="color:var(--t2)">f110e3a phase4 eval wip</td></tr>
+      <tr><td class="mono" style="color:var(--text)">iris</td><td style="color:var(--text)">legion</td><td class="mono">peekaboo</td><td><span class="pill ok" style="font-size:9px">clean</span></td><td class="mono">0/0</td><td class="mono" style="color:var(--t2)">c84da1f irc swarm scaffold</td></tr>
+      <tr><td class="mono" style="color:var(--text)">daisy</td><td style="color:var(--text)">sceal</td><td class="mono">main</td><td><span class="pill warn" style="font-size:9px">dirty</span></td><td class="mono">1/0</td><td class="mono" style="color:var(--t2)">d211b00 tokeniser experiments</td></tr>
+      <tr><td class="mono" style="color:var(--text)">daisy</td><td style="color:var(--text)">foghliam</td><td class="mono">dev</td><td><span class="pill ok" style="font-size:9px">clean</span></td><td class="mono">0/0</td><td class="mono" style="color:var(--t2)">e9a0032 initial scaffold</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ======================== DEPLOYMENTS ======================== -->
+<div id="deployments" class="panel">
+  <div class="row"><span class="slabel">Cloud services — 7 monitored</span><button class="btn">↻ Refresh</button></div>
+  <div class="dcards">
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">mnemos</div><div class="dmeta"><span class="plat">fly.io</span> · 2h ago</div></div><span class="pill ok"><span class="dot"></span>healthy</span></div><div class="durl">mnemos.foxxelabs.ie</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">git-mcp-foxxelabs</div><div class="dmeta"><span class="plat">fly.io</span> · 3d ago</div></div><span class="pill ok"><span class="dot"></span>healthy</span></div><div class="durl">git-mcp-foxxelabs.fly.dev</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">ops-dashboard</div><div class="dmeta"><span class="plat">fly.io</span> · not deployed</div></div><span class="pill gray">pending</span></div><div class="durl">ops.foxxelabs.ie</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">anseo</div><div class="dmeta"><span class="plat">railway</span> · 1d ago</div></div><span class="pill ok"><span class="dot"></span>healthy</span></div><div class="durl">anseo.irish</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">anseo-alpha</div><div class="dmeta"><span class="plat">railway</span> · 5h ago</div></div><span class="pill warn"><span class="dot"></span>degraded</span></div><div class="durl">alpha.anseo.irish</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">foxxelabs.ie</div><div class="dmeta"><span class="plat">cf pages</span> · 2d ago</div></div><span class="pill ok"><span class="dot"></span>healthy</span></div><div class="durl">foxxelabs.ie</div></div>
+    <div class="dcard"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px"><div><div class="dname">cybersafer</div><div class="dmeta"><span class="plat">cf pages</span> · 1w ago</div></div><span class="pill ok"><span class="dot"></span>healthy</span></div><div class="durl">cybersafer.uk</div></div>
+  </div>
+  <div class="slabel" style="margin-bottom:8px">Recent deploys</div>
+  <table class="tbl">
+    <thead><tr><th style="width:75px">When</th><th style="width:130px">Service</th><th style="width:75px">Result</th><th>Commit</th><th style="width:65px">Duration</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">today 02:14</td><td style="color:var(--text)">mnemos</td><td><span class="pill ok" style="font-size:9px">success</span></td><td class="mono" style="color:var(--t2)">a3f91c2 add get_doc_count mcp_server</td><td class="mono">1m 22s</td></tr>
+      <tr><td class="mono">yesterday</td><td style="color:var(--text)">anseo</td><td><span class="pill ok" style="font-size:9px">success</span></td><td class="mono" style="color:var(--t2)">b82de11 fix governance ingest</td><td class="mono">3m 08s</td></tr>
+      <tr><td class="mono">3d ago</td><td style="color:var(--text)">git-mcp</td><td><span class="pill ok" style="font-size:9px">success</span></td><td class="mono" style="color:var(--t2)">c91aa44 add git_branch git_checkout</td><td class="mono">2m 41s</td></tr>
+      <tr><td class="mono">5h ago</td><td style="color:var(--text)">anseo-alpha</td><td><span class="pill warn" style="font-size:9px">timeout</span></td><td class="mono" style="color:var(--t2)">f004d2e hybrid retrieval experiment</td><td class="mono">—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ======================== BUDGET & APIs ======================== -->
+<div id="budget" class="panel">
+  <div class="mcards">
+    <div class="mcard"><div class="mclabel">Fly.io / month</div><div class="mcval">£8.40</div><div class="mcsub">mnemos + git-mcp</div></div>
+    <div class="mcard"><div class="mclabel">Railway / month</div><div class="mcval">£5.00</div><div class="mcsub">anseo + alpha</div></div>
+    <div class="mcard"><div class="mclabel">Cloudflare</div><div class="mcval">£0</div><div class="mcsub">free tier</div></div>
+    <div class="mcard"><div class="mclabel">Anthropic 30d</div><div class="mcval">£22.60</div><div class="mcsub">claude api</div></div>
+    <div class="mcard"><div class="mclabel" style="font-weight:500">Total all-in</div><div class="mcval" style="color:var(--acc)">£36</div><div class="mcsub">platform + APIs</div></div>
+  </div>
+  <div class="slabel" style="margin-bottom:8px">API registry</div>
+  <table class="tbl">
+    <thead><tr><th style="width:120px">API</th><th style="width:90px">Provider</th><th style="width:90px">Billing</th><th style="width:70px">Est./mo</th><th style="width:80px">Projects</th><th style="width:70px">Poll</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td style="color:var(--text);font-weight:500">Claude API</td><td>Anthropic</td><td class="mono">per_token</td><td class="mono">£22.60</td><td><span class="pill info" style="font-size:9px">4 projects</span></td><td><span class="pill ok" style="font-size:9px">daily</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+      <tr><td style="color:var(--text);font-weight:500">Fly.io API</td><td>Fly.io</td><td class="mono">included</td><td class="mono">—</td><td><span class="pill info" style="font-size:9px">ops</span></td><td><span class="pill ok" style="font-size:9px">60s</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+      <tr><td style="color:var(--text);font-weight:500">Railway GQL</td><td>Railway</td><td class="mono">included</td><td class="mono">—</td><td><span class="pill info" style="font-size:9px">ops</span></td><td><span class="pill ok" style="font-size:9px">60s</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+      <tr><td style="color:var(--text);font-weight:500">Cloudflare API</td><td>Cloudflare</td><td class="mono">free</td><td class="mono">£0</td><td><span class="pill info" style="font-size:9px">ops</span></td><td><span class="pill ok" style="font-size:9px">5m</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+      <tr><td style="color:var(--text);font-weight:500">GitHub API</td><td>GitHub</td><td class="mono">free</td><td class="mono">£0</td><td><span class="pill info" style="font-size:9px">5 projects</span></td><td><span class="pill ok" style="font-size:9px">5m</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+      <tr><td style="color:var(--text);font-weight:500">Mnemos MCP</td><td>FoxxeLabs</td><td class="mono">self-hosted</td><td class="mono">£0</td><td><span class="pill info" style="font-size:9px">all projects</span></td><td><span class="pill gray" style="font-size:9px">on-demand</span></td><td><span class="pill ok"><span class="dot"></span>active</span></td></tr>
+    </tbody>
+  </table>
+  <div class="hint">API cost attribution by project: pending Anthropic usage API integration. Token-level breakdown will populate automatically when wired.</div>
+</div>
+
+</div><!-- /app -->
+
+<script>
+(function(){
+  const saved = localStorage.getItem('ops-theme') || 'dark';
+  document.getElementById('app').setAttribute('data-theme', saved);
+  document.querySelectorAll('.tdot').forEach(d => d.classList.toggle('on', d.dataset.t === saved));
+})();
+
+function setTheme(t){
+  document.getElementById('app').setAttribute('data-theme', t);
+  document.querySelectorAll('.tdot').forEach(d => d.classList.toggle('on', d.dataset.t === t));
+  localStorage.setItem('ops-theme', t);
+}
+
+document.querySelectorAll('.ntab').forEach(tab => {
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.ntab').forEach(t => t.classList.remove('on'));
+    this.classList.add('on');
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
+    const target = document.getElementById(this.dataset.p);
+    if(target) target.classList.add('on');
+  });
+});
+
+function toggleProject(id){
+  document.getElementById(id).classList.toggle('open');
+}
+
+function toggleAddForm(){
+  const f = document.getElementById('add-form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+
+function toggleLogForm(){
+  const f = document.getElementById('log-form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+
+const pvs = ['list','kanban','timeline'];
+pvs.forEach(v => {
+  const btn = document.getElementById('v-'+v);
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    pvs.forEach(vv => {
+      document.getElementById('v-'+vv).classList.remove('on');
+      const el = document.getElementById('pv-'+vv);
+      if(el) el.style.display = 'none';
+    });
+    this.classList.add('on');
+    const el = document.getElementById('pv-'+v);
+    if(el) el.style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
