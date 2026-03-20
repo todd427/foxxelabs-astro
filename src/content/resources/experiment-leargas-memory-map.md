@@ -1,7 +1,7 @@
 ---
 title: "Experiment Léargas: Memory That Breathes"
 description: "We gave the temporal manifold a body — blobs that grow and fade with sound, Ebbinghaus decay, and a decade of an author's publishing life flowing in from 474 Google Sheets. Here's what emerged."
-publishDate: 2026-03-20
+publishDate: 2026-03-21
 category: "Research"
 tags: ["Léargas", "Mnemos", "temporal-manifold", "memory", "Ebbinghaus", "AuthorsOwn", "ingest"]
 readingTime: "8 min read"
