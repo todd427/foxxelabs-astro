@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Léargas — Research Log #0024 — Foxxe Labs</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Theme tokens (mirrors BaseLayout) ── */
+:root, [data-theme="dark"] {
+  --bg:    #0b0f14;
+  --card:  #121923;
+  --muted: #9fb0c3;
+  --text:  #e9f0f7;
+  --accent:  #7dd3fc;
+  --accent2: #a78bfa;
+  --border:  rgba(255,255,255,.10);
+  --sitebar-bg: rgba(11,15,20,.80);
+}
+[data-theme="light"] {
+  --bg:    #f4f6f9;
+  --card:  #ffffff;
+  --muted: #5a6a7a;
+  --text:  #111820;
+  --accent:  #0369a1;
+  --accent2: #6d28d9;
+  --border:  rgba(0,0,0,.09);
+  --sitebar-bg: rgba(244,246,249,.92);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── Sitebar ── */
+.sitebar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--sitebar-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+.sitebar-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.brand {
+  font-weight: 900;
+  letter-spacing: .2px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+}
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav a:hover { color: var(--text); border-color: rgba(255,255,255,0.12); }
+
+.sound-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  letter-spacing: 0.04em;
+}
+.sound-btn:hover, .sound-btn.active { color: var(--accent); border-color: var(--accent); }
+
+.wave { display: flex; align-items: center; gap: 2px; height: 12px; }
+.wave span {
+  display: block; width: 2px; border-radius: 1px;
+  background: var(--muted); transition: background 0.2s;
+}
+.sound-btn.active .wave span { background: var(--accent); animation: wavebar 0.8s ease-in-out infinite; }
+.sound-btn.active .wave span:nth-child(2) { animation-delay: 0.1s; }
+.sound-btn.active .wave span:nth-child(3) { animation-delay: 0.2s; }
+.sound-btn.active .wave span:nth-child(4) { animation-delay: 0.15s; }
+.sound-btn.active .wave span:nth-child(5) { animation-delay: 0.05s; }
+@keyframes wavebar { 0%,100%{height:3px} 50%{height:10px} }
+
+/* ── Main layout ── */
+main { max-width: 980px; margin: 0 auto; padding: 40px 18px 72px; }
+
+/* ── Post header ── */
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.post-category { color: var(--accent); font-weight: 700; }
+.post-divider { opacity: 0.3; }
+
+.post-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+.post-description {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 680px;
+  margin-bottom: 18px;
+}
+.post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+/* ── Visualization frame ── */
+.viz-wrap {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0a0a0c;
+  margin-bottom: 56px;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+}
+
+/* ── Memory map (self-contained) ── */
+#canvas-wrap {
+  height: 60vh;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+svg { width: 100%; height: 100%; display: block; }
+
+#period-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+#period-label {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  font-family: ui-monospace, Menlo, monospace;
+}
+#doc-count {
+  font-size: 10px;
+  color: rgba(255,255,255,0.14);
+  letter-spacing: 0.12em;
+  margin-top: 6px;
+  font-family: ui-monospace, Menlo, monospace;
+  text-transform: uppercase;
+}
+
+#controls {
+  background: rgba(8,8,10,0.98);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+#play-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+#play-btn:hover { background: rgba(255,255,255,0.1); }
+#scrubber {
+  flex: 1;
+  -webkit-appearance: none; appearance: none;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+#scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+}
+#time-label {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  min-width: 54px;
+  text-align: right;
+  flex-shrink: 0;
+}
+#legend { display: flex; gap: 12px; flex-shrink: 0; }
+.leg {
+  display: flex; align-items: center; gap: 5px;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.06em;
+}
+.leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── Tooltip ── */
+#tooltip {
+  position: fixed;
+  background: rgba(12,12,18,0.98);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  max-width: 280px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s;
+  z-index: 200;
+  line-height: 1.5;
+}
+.tip-label { font-weight: 600; color: var(--text); margin-bottom: 3px; font-size: 11px; }
+.tip-meta  { color: var(--muted); font-size: 10px; font-family: ui-monospace, Menlo, monospace; }
+.tip-weight { color: #5DCAA5; font-size: 10px; font-family: ui-monospace, Menlo, monospace; }
+
+/* ── Post body ── */
+.post-body { max-width: 720px; }
+
+.post-body h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-left: 4px solid var(--accent);
+  padding-left: 16px;
+  margin: 56px 0 18px;
+  line-height: 1.2;
+}
+.post-body p { line-height: 1.8; color: var(--text); margin-bottom: 18px; }
+.post-body code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.87em;
+  background: var(--card);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: #b3e7ff;
+}
+.post-body strong { color: var(--text); }
+.post-body a { color: var(--accent); }
+
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+.data-table th {
+  text-align: left; padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+  color: var(--muted); font-size: 0.78rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  font-family: ui-monospace, Menlo, monospace;
+}
+.data-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+.data-table tr:last-child td { border-bottom: none; }
+.val { color: var(--accent); font-family: ui-monospace, Menlo, monospace; }
+
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+/* ── Footer ── */
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 18px 40px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .sitebar-inner { flex-direction: column; align-items: stretch; }
+  .nav { justify-content: center; }
+  #legend { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ SITEBAR ═══ -->
+<div class="sitebar">
+  <div class="sitebar-inner">
+    <a class="brand" href="https://foxxelabs.ie">Foxxe Labs</a>
+    <nav class="nav">
+      <a href="https://foxxelabs.ie/">Home</a>
+      <a href="https://foxxelabs.ie/resources/">Resources</a>
+      <a href="https://foxxelabs.ie/news/">News</a>
+      <a href="https://foxxelabs.ie/tools/">Tools</a>
+      <a href="https://foxxelabs.ie/about/">About</a>
+      <button class="sound-btn" id="sound-toggle">
+        <div class="wave" id="wave">
+          <span style="height:4px"></span>
+          <span style="height:8px"></span>
+          <span style="height:5px"></span>
+          <span style="height:10px"></span>
+          <span style="height:3px"></span>
+        </div>
+        Sound
+      </button>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<main>
+  <!-- Post Header -->
+  <div class="post-meta">
+    <span class="post-category">Research</span>
+    <span class="post-divider">•</span>
+    <time>20 March 2026</time>
+    <span class="post-divider">•</span>
+    <span>Log #0024</span>
+  </div>
+
+  <h1 class="post-title">Léargas — Memory That Breathes</h1>
+  <p class="post-description">
+    A temporal map of 21,500 documents across three years of an AI-augmented mind.
+    Topic blobs rise and fall with the shape of attention. Sound on for the full experience.
+  </p>
+
+  <div class="post-tags">
+    <span class="tag">#Léargas</span>
+    <span class="tag">#Mnemos</span>
+    <span class="tag">#temporal-manifold</span>
+    <span class="tag">#memory</span>
+    <span class="tag">#Web-Audio</span>
+    <span class="tag">#D3</span>
+  </div>
+
+  <!-- Visualization -->
+  <div class="viz-wrap">
+    <div id="canvas-wrap">
+      <svg id="svg">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g id="blob-layer"></g>
+      </svg>
+      <div id="period-display">
+        <div id="period-label">—</div>
+        <div id="doc-count"></div>
+      </div>
+    </div>
+    <div id="controls">
+      <button id="play-btn" title="Play / Pause">▶</button>
+      <input id="scrubber" type="range" min="0" max="0" value="0" step="1">
+      <div id="time-label">—</div>
+      <div id="legend">
+        <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>project</div>
+        <div class="leg"><div class="leg-dot" style="background:#BA7517"></div>engineering</div>
+        <div class="leg"><div class="leg-dot" style="background:#534AB7"></div>personal</div>
+        <div class="leg"><div class="leg-dot" style="background:#5F5E5A"></div>general</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Body -->
+  <div class="post-body">
+
+    <h2>What you're looking at</h2>
+    <p>
+      Each blob is a topic cluster dominant in that month's conversation history —
+      extracted from 21,500 documents in <a href="https://foxxelabs.ie/resources/experiment-leargas-holographic-memory/">Mnemos</a>
+      using a Bayesian Gaussian Mixture Model per period, embedded with
+      <code>all-MiniLM-L6-v2</code>. Blob size encodes weight × log(doc_count).
+      Colour encodes category: green for project/research, amber for engineering, violet for personal, grey for general.
+    </p>
+    <p>
+      Press ▶ or use ← → arrow keys to step through months. Hit <strong>Sound</strong> to enable
+      the audio layer — each blob entry fires a pitched tone, and the ambient drone scales
+      with memory density. Empty months whisper rather than silence.
+    </p>
+
+    <hr class="divider">
+
+    <h2>The corpus</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Metric</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Total documents</td><td class="val">~21,500</td></tr>
+        <tr><td>Periods</td><td class="val">2023-02 → 2026-03</td></tr>
+        <tr><td>Peak density</td><td class="val">Jun 2025 · 2,952 docs</td></tr>
+        <tr><td>Empty periods</td><td class="val">13 of 38 months</td></tr>
+        <tr><td>Topic model</td><td class="val">BayesianGMM · 30 components</td></tr>
+        <tr><td>Embedding model</td><td class="val">all-MiniLM-L6-v2</td></tr>
+      </tbody>
+    </table>
+
+    <hr class="divider">
+
+    <h2>Sound design</h2>
+    <p>
+      The Web Audio API synthesises distinct sounds per category and event:
+      blob arrivals fire pitched tones (F5 for project, C5 for engineering, E♭5 for personal, G4 for general),
+      staggered so dense periods like June 2025 sound like a chord rather than noise.
+      The ambient drone at 55Hz / 56.2Hz produces a 1.2Hz beating pattern; gain scales
+      logarithmically with <code>doc_count</code> so dense periods have real acoustic weight.
+      Empty periods produce a bandpass-filtered breath — not silence, but hollowness.
+      No audio libraries. No dependencies beyond D3 and the browser.
+    </p>
+
+    <p>
+      <a href="https://foxxelabs.ie/resources/experiment-leargas-memory-map/">Full write-up →</a>
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div>© 2026 Foxxe Labs Limited · Registered in Ireland · <a href="mailto:contact@foxxelabs.ie">contact@foxxelabs.ie</a></div>
+</footer>
+
+<div id="tooltip">
+  <div class="tip-label" id="tip-label"></div>
+  <div class="tip-weight" id="tip-weight"></div>
+  <div class="tip-meta" id="tip-meta"></div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+// Theme init (inherit system preference, no localStorage needed)
+(function(){
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+})();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DATA
+// ─────────────────────────────────────────────────────────────────────────────
+const PERIODS = [{"period": "2023-02", "doc_count": 14, "sparse": false, "empty": false, "components": [{"k": 0, "weight": 0.3999877357889933, "label": "[Space Adventure Awaits] User: Please write ad copy for 'The", "sparse": false}, {"k": 1, "weight": 0.3599929616875042, "label": "[LA Witch Book Ad.] User: Can you generate ad copy for my bo", "sparse": false}, {"k": 3, "weight": 0.144016380460468, "label": "[YA Space Opera Hero.] User: Write an outline for a YA space", "sparse": false}, {"k": 2, "weight": 0.09600292206303446, "label": "[AI Thriller Novel: Ellay] User: Please write ad copy for \"E", "sparse": false}]}, {"period": "2023-03", "doc_count": 5, "sparse": true, "empty": false, "components": [{"k": 0, "weight": 0.2, "label": "[LA Witch: Natasha Rose] User: please write ad copy for \"LA ", "sparse": true}, {"k": 1, "weight": 0.2, "label": "[LA Witch: Natasha Rose] User: please write ad copy for \"LA ", "sparse": true}, {"k": 2, "weight": 0.2, "label": "[LA Witch: Natasha Rose] User: Please write ad copy for \"LA ", "sparse": true}, {"k": 3, "weight": 0.2, "label": "[Rewriting Ad Copy.] User: Could you help me rewrite this ad", "sparse": true}, {"k": 4, "weight": 0.2, "label": "[L.A. Witch: Jesse's Ghost.] User: Please write ad copy for ", "sparse": true}]}, {"period": "2023-04", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2023-05", "doc_count": 9, "sparse": false, "empty": false, "components": [{"k": 0, "weight": 0.5999720082374616, "label": "[Create Ad Copy: \"The Devil May Cry\" by Talla Hill. Xiomara'", "sparse": false}, {"k": 1, "weight": 0.2400008003357413, "label": "[Upload PDF] User: how do i upload a pdf to chatgpt Assistan", "sparse": false}, {"k": 2, "weight": 0.16002719142679725, "label": "[Create Ad Copy: \"The Devil May Cry\" by Talla Hill. Xiomara'", "sparse": false}]}, {"period": "2023-06", "doc_count": 2, "sparse": true, "empty": false, "components": [{"k": 0, "weight": 0.5, "label": "[Dragonriders of Pern: F'lon's Demise] User: please write an", "sparse": true}, {"k": 1, "weight": 0.5, "label": "[Dragonriders of Pern: F'lon's Demise] User: please provide ", "sparse": true}]}, {"period": "2023-07", "doc_count": 1, "sparse": true, "empty": false, "components": [{"k": 0, "weight": 1.0, "label": "[Chapter One: Xiomara Unveiled] User: please write ad copy f", "sparse": true}]}, {"period": "2023-08", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2023-09", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2023-10", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2023-11", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2023-12", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-01", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-02", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-03", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-04", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-05", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-06", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-07", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-08", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-09", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2024-10", "doc_count": 20, "sparse": false, "empty": false, "components": [{"k": 1, "weight": 0.2698364908335898, "label": "[Paranormal Book Suggestions] User: recommend a Facebook tra", "sparse": false}, {"k": 0, "weight": 0.19047219463543122, "label": "[Targeted AMS Ads Books] User: how do you add music to canva", "sparse": false}, {"k": 3, "weight": 0.19027198136427464, "label": "[Paranormal Book Suggestions] User: can you make this list b", "sparse": false}, {"k": 5, "weight": 0.13319942336408805, "label": "[Targeted AMS Ads Books] User: outline a spinoff for War Rin", "sparse": false}, {"k": 4, "weight": 0.13319276505749647, "label": "[Targeted AMS Ads Books] User: outline a sidequel to Anne Mc", "sparse": false}, {"k": 2, "weight": 0.08302714474511996, "label": "[Targeted AMS Ads Books] User: outline a sequel for War Maid", "sparse": false}]}, {"period": "2024-11", "doc_count": 16, "sparse": false, "empty": false, "components": [{"k": 2, "weight": 0.3475851138970293, "label": "[Todd McCaffrey Books List] User: what's the average length ", "sparse": false}, {"k": 0, "weight": 0.2352849533382616, "label": "[Todd McCaffrey Books List] User: what's the difference betw", "sparse": false}, {"k": 1, "weight": 0.21848008559036775, "label": "[Todd McCaffrey Newsletter Draft] User: You said: write a ne", "sparse": false}, {"k": 3, "weight": 0.15890399528117405, "label": "[Todd McCaffrey Books List] User: what do i need to do to ge", "sparse": false}, {"k": 4, "weight": 0.03974585189316729, "label": "[At the Earth's Core Summary] User: write a 2000 word introd", "sparse": false}]}, {"period": "2024-12", "doc_count": 4, "sparse": true, "empty": false, "components": [{"k": 0, "weight": 0.25, "label": "[Todd McCaffrey Books List] User: I need a cover design for ", "sparse": true}, {"k": 1, "weight": 0.25, "label": "[Todd McCaffrey Books List] User: create a map of Europe wit", "sparse": true}, {"k": 2, "weight": 0.25, "label": "[Todd McCaffrey Books List] User: create an image of a missi", "sparse": true}, {"k": 3, "weight": 0.25, "label": "[Todd McCaffrey Books List] User: create an image of a nucle", "sparse": true}]}, {"period": "2025-01", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2025-02", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2025-03", "doc_count": 12, "sparse": false, "empty": false, "components": [{"k": 2, "weight": 0.3671294978984562, "label": "[Naturalizing as an Irish Citizen] User: Tell me more about ", "sparse": false}, {"k": 1, "weight": 0.2797127184388467, "label": "[Moving to Ireland Checklist] User: please format as a PDF A", "sparse": false}, {"k": 0, "weight": 0.2307608950764239, "label": "[Naturalizing as an Irish Citizen] User: I'm a writer, movin", "sparse": false}, {"k": 3, "weight": 0.12239688858627315, "label": "[Moving to Ireland Checklist] User: can you generate a downl", "sparse": false}]}, {"period": "2025-04", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2025-05", "doc_count": 269, "sparse": false, "empty": false, "components": [{"k": 3, "weight": 0.07685464538048198, "label": "[Upload file assistance] User: convert the story in the file", "sparse": false}, {"k": 9, "weight": 0.05679778841353351, "label": "[MeU System Overview] User: You're a professional developer ", "sparse": false}, {"k": 14, "weight": 0.054808923036355796, "label": "[Facebook Ad Campaigns Pern] User: virus scan still failed. ", "sparse": false}, {"k": 7, "weight": 0.05385160264287155, "label": "[KDP API Alternatives] User: recode all this as a Django app", "sparse": false}, {"k": 1, "weight": 0.0516538591473035, "label": "[Abusive Content Filter Django] User: I'm using Django to cr", "sparse": false}, {"k": 4, "weight": 0.05100871379793377, "label": "[Install Docker Guide] User: tell me more about railway, how", "sparse": false}, {"k": 10, "weight": 0.0493855003819842, "label": "[Upload file assistance] User: you need to do better on the ", "sparse": false}, {"k": 12, "weight": 0.04522538476129948, "label": "[MeU System Overview] User: You're a professional developer ", "sparse": false}]}, {"period": "2025-06", "doc_count": 2952, "sparse": false, "empty": false, "components": [{"k": 1, "weight": 0.10189451171348178, "label": "[Django Image Classifier App] User: save all those instructi", "sparse": false}, {"k": 8, "weight": 0.0823430520412504, "label": "[4-Day Site Build Challenge] User: where do I get: Firefox D", "sparse": false}, {"k": 27, "weight": 0.046556397375239866, "label": "[Django Image Classifier App] User: this is what we've got n", "sparse": false}, {"k": 23, "weight": 0.044989023442144026, "label": "[Laptop recommendations 64GB OLED] User: Paperspace -- gradi", "sparse": false}, {"k": 3, "weight": 0.044987453709972564, "label": "[File Request Clarification] User: we're not getting to Redi", "sparse": false}, {"k": 24, "weight": 0.03826207029727017, "label": "[Missing requests package fix] User: when i logout and login", "sparse": false}, {"k": 29, "weight": 0.03710154616868966, "label": "[Mount Google Drive WSL] User: sorry, network problems. You ", "sparse": false}, {"k": 12, "weight": 0.035012528244366056, "label": "[4-Day Site Build Challenge] User: yes, let's add the questi", "sparse": false}]}, {"period": "2025-07", "doc_count": 311, "sparse": false, "empty": false, "components": [{"k": 8, "weight": 0.09014549773383067, "label": "[AA2847 Flight Status] User: thanks. the online assistance w", "sparse": false}, {"k": 2, "weight": 0.08278575582090295, "label": "[LLM Email Integration] User: File has expired. Assistant: Y", "sparse": false}, {"k": 9, "weight": 0.06185212004933372, "label": "[ISP vs Model Load] User: Let's do that but understand that ", "sparse": false}, {"k": 28, "weight": 0.06048067961677195, "label": "[End of Gilded Age] User: After I get my MSc in Cyber psycho", "sparse": false}, {"k": 13, "weight": 0.05429023124286773, "label": "[Update income roadmap] User: You were also suggesting that ", "sparse": false}, {"k": 7, "weight": 0.046836070252373546, "label": "[Statistical Significance Sample Size] User: illuminate me o", "sparse": false}, {"k": 10, "weight": 0.046127006263253244, "label": "[LangChain Overview] User: Thanks. Assistant: You're very we", "sparse": false}, {"k": 12, "weight": 0.03948002070176109, "label": "[LLM Email Integration] User: I like the timeline placement.", "sparse": false}]}, {"period": "2025-08", "doc_count": 1999, "sparse": false, "empty": false, "components": [{"k": 19, "weight": 0.07524570525897342, "label": "[Test/demo box build] User: Warning on line 196, \"Too many e", "sparse": false}, {"k": 12, "weight": 0.06498235961447957, "label": "[vLLM vs llama.cpp comparison] User: nvidia-smi Sun Aug 31 0", "sparse": false}, {"k": 7, "weight": 0.059263283211352887, "label": "[Project setup assistance] User: git lfs fetch --include=\"mo", "sparse": false}, {"k": 8, "weight": 0.05772910547530471, "label": "[Facebook Ads API Overview] User: why are we using \"v19.0\" o", "sparse": false}, {"k": 15, "weight": 0.04499933613555586, "label": "[ASUS ProArt H7606WP review] User: Yes, also figure out when", "sparse": false}, {"k": 6, "weight": 0.04484977572843024, "label": "[RTX 1050 Ti connections] User: todd@Rose:/training$ python ", "sparse": false}, {"k": 26, "weight": 0.04432955905593218, "label": "[Lawsuit against OpenAI] User: Yes. Even though I don't know", "sparse": false}, {"k": 5, "weight": 0.04387977245736174, "label": "[View purchased albums] User: Sigh. poetry run python - << '", "sparse": false}]}, {"period": "2025-09", "doc_count": 782, "sparse": false, "empty": false, "components": [{"k": 7, "weight": 0.07585012583944781, "label": "[Install Spidey on Daisy] User: curl -s http://localhost:800", "sparse": false}, {"k": 23, "weight": 0.06513571417386191, "label": "[Toddric build pipeline summary] User: (ragEnv) todd@Rose:/t", "sparse": false}, {"k": 3, "weight": 0.05342592988327844, "label": "[Twilio alternatives and Signal] User: Yes, please do that. ", "sparse": false}, {"k": 19, "weight": 0.05157408603962344, "label": "[Web interface for toddric] User: Yeah, send me the index.ht", "sparse": false}, {"k": 26, "weight": 0.050494256807104246, "label": "[Why are people stupid] User: We put remember/recall into th", "sparse": false}, {"k": 18, "weight": 0.045584261627839046, "label": "[Install Spidey on Daisy] User: [model] token: present + hf ", "sparse": false}, {"k": 24, "weight": 0.045511165873276443, "label": "[Twilio alternatives and Signal] User: Can you make me a VOI", "sparse": false}, {"k": 2, "weight": 0.04458335795379956, "label": "[Install Spidey on Daisy] User: Still bullshit Assistant: Ye", "sparse": false}]}, {"period": "2025-10", "doc_count": 0, "sparse": true, "empty": true, "components": []}, {"period": "2025-11", "doc_count": 85, "sparse": false, "empty": false, "components": [{"k": 1, "weight": 0.1034042284479061, "label": "[Debugging poor code generation issues] User: Yes, please. L", "sparse": false}, {"k": 8, "weight": 0.08226032827401467, "label": "[API endpoint errors and HTTP status codes] User: Okay, we g", "sparse": false}, {"k": 2, "weight": 0.06802910959786851, "label": "[Debugging poor code generation issues] User: uvicorn cybers", "sparse": false}, {"k": 4, "weight": 0.06606992235731168, "label": "[Fixing PyTorch dtype deprecation warning] User: By the way,", "sparse": false}, {"k": 10, "weight": 0.0591503363200911, "label": "[Fixing PyTorch dtype deprecation warning] User: I don't thi", "sparse": false}, {"k": 3, "weight": 0.05589247218302551, "label": "[Debugging poor code generation issues] User: k Assistant: G", "sparse": false}, {"k": 13, "weight": 0.054660847549138324, "label": "[API endpoint errors and HTTP status codes] User: Okay... th", "sparse": false}, {"k": 6, "weight": 0.05328222409532452, "label": "[Debugging poor code generation issues] User: Nope, still wr", "sparse": false}]}, {"period": "2025-12", "doc_count": 132, "sparse": false, "empty": false, "components": [{"k": 1, "weight": 0.0969919279896162, "label": "[SLAM bridge opening-bid trainer] User: Is this right? Assis", "sparse": false}, {"k": 22, "weight": 0.06794118349239091, "label": "[SLAM bridge opening-bid trainer] User: That showed the HTML", "sparse": false}, {"k": 12, "weight": 0.06646718899733678, "label": "[SLAM bridge opening-bid trainer] User: No, you Assistant: Y", "sparse": false}, {"k": 6, "weight": 0.06418895355966021, "label": "[SLAM bridge opening-bid trainer] User: A. Also, how hard wo", "sparse": false}, {"k": 16, "weight": 0.062050772796439536, "label": "[SLAM bridge opening-bid trainer] User: Tutorial first. Also", "sparse": false}, {"k": 9, "weight": 0.04834678843324527, "label": "[SLAM bridge opening-bid trainer] User: www.slambridge.ie ; ", "sparse": false}, {"k": 10, "weight": 0.04777800937849009, "label": "[SLAM bridge opening-bid trainer] User: okay... how do I got", "sparse": false}, {"k": 11, "weight": 0.04717323210505698, "label": "[SLAM bridge opening-bid trainer] User: 🚀 Running tests... =", "sparse": false}]}, {"period": "2026-01", "doc_count": 10000, "sparse": false, "empty": false, "components": [{"k": 2, "weight": 0.06138100171615633, "label": "Q: Rewrite the passage in simpler, modern language while pre", "sparse": false}, {"k": 7, "weight": 0.05624804573446088, "label": "Q: Summarize the passage (≤4 sentences). Keep names/events a", "sparse": false}, {"k": 8, "weight": 0.05434204036160757, "label": "Q: If present, extract structured fields as JSON: company, a", "sparse": false}, {"k": 1, "weight": 0.05028984144376771, "label": "Q: Extract action items as compact JSON with fields: task, o", "sparse": false}, {"k": 24, "weight": 0.04873916045954981, "label": "Q: Rewrite the passage in simpler, modern language while pre", "sparse": false}, {"k": 21, "weight": 0.044023904829385424, "label": "\u201cI said, miz Holder, that we\u2019re about to jump,\u201d she repeated", "sparse": false}, {"k": 12, "weight": 0.0427260038021517, "label": "Q: Answer concisely: Who are the key characters in this pass", "sparse": false}, {"k": 10, "weight": 0.04154263839339077, "label": "Q: Summarize the passage (≤4 sentences). Keep names/events a", "sparse": false}]}, {"period": "2026-02", "doc_count": 3120, "sparse": false, "empty": false, "components": [{"k": 13, "weight": 0.05353764619141432, "label": "[AI learning course for software engineers] User: Not yet bu", "sparse": false}, {"k": 3, "weight": 0.052492638290930545, "label": "[Post editing bug] User: Pushing. So... let's update the roa", "sparse": false}, {"k": 0, "weight": 0.049663568806342116, "label": "[Oops] User: Ooops. Assistant: Todd is getting a Django erro", "sparse": false}, {"k": 14, "weight": 0.04872946156129025, "label": "[WhatsApp communities for student groups] User: Oh, SO much ", "sparse": false}, {"k": 20, "weight": 0.0469171283306345, "label": "[Canva postcard design for site promotion] User: sorry, you ", "sparse": false}, {"k": 17, "weight": 0.04322663699063582, "label": "[Debugging persistent compilation errors] User: git checkout", "sparse": false}, {"k": 26, "weight": 0.04303023122085444, "label": "[Creating contact.anseo.irish subdomain] User: Give me the p", "sparse": false}, {"k": 29, "weight": 0.04079920938722603, "label": "[Post editing bug] User: On which planet? ls apps/feed/templ", "sparse": false}]}, {"period": "2026-03", "doc_count": 1525, "sparse": false, "empty": false, "components": [{"k": 9, "weight": 0.05595356653364828, "label": "BelTech 2026 Conference Report Titanic Belfast \u2022 Thursday 5 ", "sparse": false}, {"k": 6, "weight": 0.055454007574284536, "label": "13. Success Metrics - Quantifiable surprise signal generated", "sparse": false}, {"k": 15, "weight": 0.051668424639789656, "label": "[Preparing first progress report presentation] User: You sai", "sparse": false}, {"k": 3, "weight": 0.04969939663478824, "label": "[Analyzing AI data and R script optimization] User: You have", "sparse": false}, {"k": 13, "weight": 0.0492235837255892, "label": "Probe: \"parking frustration Letterkenny\" Best cosine: [30] B", "sparse": false}, {"k": 16, "weight": 0.04384544887721235, "label": "[AI consciousness uncertainty] User: It's ChatGPT UI strengt", "sparse": false}, {"k": 23, "weight": 0.043105982459291266, "label": "- Training AI through ego-video (smart glasses, audio/visual", "sparse": false}, {"k": 21, "weight": 0.04082632512280256, "label": "Key findings this session 5.wav was pure noise. spectral fla", "sparse": false}]}];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SOUND ENGINE
+// ─────────────────────────────────────────────────────────────────────────────
+let audioCtx = null, masterGain = null, soundEnabled = false;
+let droneOsc1, droneOsc2, droneGain, droneHarmonicOsc, droneHarmonicGain;
+let noiseNode, noiseGain;
+
+function initAudio() {
+  if (audioCtx) return;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  masterGain = audioCtx.createGain();
+  masterGain.gain.setValueAtTime(0, audioCtx.currentTime);
+  masterGain.connect(audioCtx.destination);
+
+  // Drone — two detuned oscs for beating
+  droneOsc1 = audioCtx.createOscillator();
+  droneOsc1.type = 'sine';
+  droneOsc1.frequency.setValueAtTime(55, audioCtx.currentTime);
+  droneOsc2 = audioCtx.createOscillator();
+  droneOsc2.type = 'sine';
+  droneOsc2.frequency.setValueAtTime(56.2, audioCtx.currentTime);
+  droneGain = audioCtx.createGain();
+  droneGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+  const droneFilter = audioCtx.createBiquadFilter();
+  droneFilter.type = 'lowpass';
+  droneFilter.frequency.setValueAtTime(200, audioCtx.currentTime);
+  droneOsc1.connect(droneFilter); droneOsc2.connect(droneFilter);
+  droneFilter.connect(droneGain); droneGain.connect(masterGain);
+  droneOsc1.start(); droneOsc2.start();
+
+  // Harmonic overtone
+  droneHarmonicOsc = audioCtx.createOscillator();
+  droneHarmonicOsc.type = 'triangle';
+  droneHarmonicOsc.frequency.setValueAtTime(110, audioCtx.currentTime);
+  droneHarmonicGain = audioCtx.createGain();
+  droneHarmonicGain.gain.setValueAtTime(0, audioCtx.currentTime);
+  const harmFilter = audioCtx.createBiquadFilter();
+  harmFilter.type = 'lowpass';
+  harmFilter.frequency.setValueAtTime(180, audioCtx.currentTime);
+  droneHarmonicOsc.connect(harmFilter);
+  harmFilter.connect(droneHarmonicGain);
+  droneHarmonicGain.connect(masterGain);
+  droneHarmonicOsc.start();
+
+  // Noise layer
+  const bufSize = audioCtx.sampleRate * 2;
+  const noiseBuf = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+  const nd = noiseBuf.getChannelData(0);
+  for (let i = 0; i < bufSize; i++) nd[i] = Math.random() * 2 - 1;
+  noiseNode = audioCtx.createBufferSource();
+  noiseNode.buffer = noiseBuf; noiseNode.loop = true;
+  noiseGain = audioCtx.createGain();
+  noiseGain.gain.setValueAtTime(0, audioCtx.currentTime);
+  const noiseFilter = audioCtx.createBiquadFilter();
+  noiseFilter.type = 'bandpass';
+  noiseFilter.frequency.setValueAtTime(80, audioCtx.currentTime);
+  noiseFilter.Q.setValueAtTime(0.8, audioCtx.currentTime);
+  noiseNode.connect(noiseFilter); noiseFilter.connect(noiseGain);
+  noiseGain.connect(masterGain); noiseNode.start();
+}
+
+function setDroneForPeriod(period) {
+  if (!audioCtx || !soundEnabled) return;
+  const now = audioCtx.currentTime, ramp = 0.8;
+  if (period.empty) {
+    droneGain.gain.linearRampToValueAtTime(0.001, now + ramp);
+    droneHarmonicGain.gain.linearRampToValueAtTime(0, now + ramp);
+    noiseGain.gain.linearRampToValueAtTime(0.018, now + ramp);
+  } else {
+    noiseGain.gain.linearRampToValueAtTime(0, now + ramp);
+    const logScale = Math.log10(Math.max(period.doc_count, 1) + 1);
+    droneGain.gain.linearRampToValueAtTime(Math.min(0.22, 0.04 + logScale * 0.028), now + ramp);
+    const harmTarget = period.doc_count > 200 ? Math.min(0.12, (logScale - 2.3) * 0.06) : 0;
+    droneHarmonicGain.gain.linearRampToValueAtTime(Math.max(0, harmTarget), now + ramp);
+  }
+}
+
+function pingBlob(color) {
+  if (!audioCtx || !soundEnabled) return;
+  const freqMap = { '#1D9E75': 698.5, '#BA7517': 523.25, '#534AB7': 622.25, '#5F5E5A': 392.0 };
+  const freq = freqMap[color] || 523.25;
+  const now = audioCtx.currentTime;
+  const osc = audioCtx.createOscillator();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(freq, now);
+  osc.frequency.exponentialRampToValueAtTime(freq * 0.5, now + 0.4);
+  const env = audioCtx.createGain();
+  env.gain.setValueAtTime(0, now);
+  env.gain.linearRampToValueAtTime(0.055, now + 0.01);
+  env.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+  osc.connect(env); env.connect(masterGain);
+  osc.start(now); osc.stop(now + 0.5);
+}
+
+function playTransition(isEmpty) {
+  if (!audioCtx || !soundEnabled) return;
+  const now = audioCtx.currentTime;
+  const buf = audioCtx.createBuffer(1, Math.floor(audioCtx.sampleRate * 0.25), audioCtx.sampleRate);
+  const d = buf.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  const src = audioCtx.createBufferSource();
+  src.buffer = buf;
+  const filter = audioCtx.createBiquadFilter();
+  filter.type = isEmpty ? 'highpass' : 'bandpass';
+  filter.frequency.setValueAtTime(isEmpty ? 1200 : 300, now);
+  filter.Q.setValueAtTime(isEmpty ? 1 : 2, now);
+  const env = audioCtx.createGain();
+  env.gain.setValueAtTime(0, now);
+  env.gain.linearRampToValueAtTime(0.06, now + 0.03);
+  env.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+  src.connect(filter); filter.connect(env); env.connect(masterGain);
+  src.start(now);
+}
+
+document.getElementById('sound-toggle').addEventListener('click', () => {
+  if (!audioCtx) initAudio();
+  soundEnabled = !soundEnabled;
+  const btn = document.getElementById('sound-toggle');
+  const wave = document.getElementById('wave');
+  if (soundEnabled) {
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0.7, audioCtx.currentTime + 0.4);
+    btn.classList.add('active'); wave.classList.add('active');
+    setDroneForPeriod(PERIODS[currentIdx]);
+  } else {
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.4);
+    btn.classList.remove('active'); wave.classList.remove('active');
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// D3 VISUALISATION
+// ─────────────────────────────────────────────────────────────────────────────
+function getColor(label) {
+  const l = label.toLowerCase();
+  if (/legion|anseo|dissertation|aislinge|mnemos|leargas|radharc|survey|research|community|afterwords|toddbot|foxxe|sceal|foghlaim/.test(l)) return '#1D9E75';
+  if (/overwhelm|fear|inadequ|anxiet|personal|reflect|tension|desire|emotion|pressure|validat|ireland|citizen|moving/.test(l)) return '#534AB7';
+  if (/code|debug|django|git|python|script|api|deploy|error|fix|oauth|dns|server|typescript|javascript|vllm|llama|cuda|model|build|pipeline/.test(l)) return '#BA7517';
+  return '#5F5E5A';
+}
+
+const svg = d3.select('#svg');
+const blobLayer = d3.select('#blob-layer');
+const tooltip = document.getElementById('tooltip');
+let W = 0, H = 0;
+
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  W = wrap.clientWidth; H = wrap.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  sim.force('center', d3.forceCenter(W / 2, H / 2).strength(0.04));
+  sim.force('x', d3.forceX(d => categoryX(d.color)).strength(0.06));
+  sim.force('y', d3.forceY(H / 2).strength(0.02));
+  sim.alpha(0.3).restart();
+}
+
+function categoryX(color) {
+  const w = W || 800;
+  if (color === '#1D9E75') return w * 0.30;
+  if (color === '#534AB7') return w * 0.70;
+  return w * 0.50;
+}
+
+function getRadius(weight, docCount) {
+  const scale = Math.log10(Math.max(docCount, 1) + 1);
+  return Math.max(10, Math.min(70, Math.sqrt(weight) * scale * 28));
+}
+
+const sim = d3.forceSimulation([])
+  .force('charge', d3.forceManyBody().strength(d => -d.r * 3.5))
+  .force('collide', d3.forceCollide().radius(d => d.r + 6).strength(0.8))
+  .force('center', d3.forceCenter(400, 300).strength(0.04))
+  .force('x', d3.forceX(400).strength(0.06))
+  .force('y', d3.forceY(300).strength(0.02))
+  .alphaDecay(0.02).velocityDecay(0.4)
+  .on('tick', () => {
+    blobLayer.selectAll('g.blob').attr('transform', d => `translate(${d.x.toFixed(1)},${d.y.toFixed(1)})`);
+  });
+
+let currentIdx = 0, playing = false, playTimer = null;
+
+function showPeriod(idx) {
+  const period = PERIODS[idx];
+  if (!period) return;
+  const isNew = idx !== currentIdx;
+  currentIdx = idx;
+
+  document.getElementById('scrubber').value = idx;
+  document.getElementById('time-label').textContent = period.period;
+  document.getElementById('period-label').textContent = period.period;
+  document.getElementById('doc-count').textContent =
+    period.doc_count > 0 ? `${period.doc_count.toLocaleString()} memories` : 'quiet';
+
+  if (isNew) { playTransition(period.empty); setDroneForPeriod(period); }
+
+  const nodes = (period.components || []).map(c => {
+    const r = getRadius(c.weight, period.doc_count);
+    const color = getColor(c.label);
+    return { id: c.label.slice(0, 48), label: c.label, weight: c.weight,
+      sparse: !!c.sparse, color, r, docCount: period.doc_count, period: period.period,
+      _x: categoryX(color) + (Math.random() - 0.5) * 120,
+      _y: (H || 400) / 2 + (Math.random() - 0.5) * 120 };
+  });
+
+  const join = blobLayer.selectAll('g.blob').data(nodes, d => d.id);
+  join.exit().transition().duration(500).ease(d3.easeCubicIn).style('opacity', 0).remove();
+
+  const enterG = join.enter().append('g').attr('class', 'blob')
+    .attr('transform', d => `translate(${d._x},${d._y})`)
+    .style('opacity', 0).style('cursor', 'pointer');
+
+  enterG.each(d => { setTimeout(() => pingBlob(d.color), Math.random() * 350); });
+
+  enterG.append('circle').attr('class', 'halo')
+    .attr('r', d => d.r * 1.6).attr('fill', d => d.color + '15').attr('filter', 'url(#glow)');
+  enterG.append('circle').attr('class', 'main')
+    .attr('r', d => d.r)
+    .attr('fill', d => d.sparse ? 'none' : d.color + 'bb')
+    .attr('stroke', d => d.color).attr('stroke-width', d => d.sparse ? 1.5 : 0)
+    .attr('stroke-dasharray', d => d.sparse ? '5,4' : 'none')
+    .attr('filter', d => d.weight > 0.08 ? 'url(#glow-soft)' : 'none');
+  enterG.append('text').attr('class', 'lbl').attr('text-anchor', 'middle')
+    .attr('dy', '0.35em').attr('pointer-events', 'none').attr('fill', 'rgba(255,255,255,0.82)')
+    .attr('font-size', d => Math.max(8, Math.min(13, d.r * 0.32)) + 'px')
+    .text(d => d.r > 22 ? (d.label.length > 22 ? d.label.slice(0, 20) + '…' : d.label) : '');
+
+  enterG
+    .on('mouseenter', (event, d) => {
+      tooltip.style.opacity = '1';
+      document.getElementById('tip-label').textContent = d.label;
+      document.getElementById('tip-weight').textContent =
+        d.sparse ? 'first appearance' : `weight ${(d.weight * 100).toFixed(1)}%`;
+      document.getElementById('tip-meta').textContent = `${d.period} · ${d.docCount.toLocaleString()} docs`;
+    })
+    .on('mousemove', event => {
+      tooltip.style.left = (event.clientX + 18) + 'px';
+      tooltip.style.top  = (event.clientY - 48) + 'px';
+    })
+    .on('mouseleave', () => { tooltip.style.opacity = '0'; });
+
+  const all = enterG.merge(join);
+  join.enter().each(d => { if (d.x == null) { d.x = d._x; d.y = d._y; } });
+  all.select('circle.main').transition().duration(600).ease(d3.easeCubicOut)
+    .attr('r', d => d.r).attr('fill', d => d.sparse ? 'none' : d.color + 'bb').attr('stroke', d => d.color);
+  all.select('circle.halo').transition().duration(600)
+    .attr('r', d => d.r * 1.6).attr('fill', d => d.color + '15');
+  all.select('text.lbl').transition().duration(600)
+    .attr('font-size', d => Math.max(8, Math.min(13, d.r * 0.32)) + 'px')
+    .text(d => d.r > 22 ? (d.label.length > 22 ? d.label.slice(0, 20) + '…' : d.label) : '');
+  all.transition().duration(600).ease(d3.easeCubicOut).style('opacity', 1);
+
+  const existingById = {};
+  sim.nodes().forEach(n => { existingById[n.id] = n; });
+  nodes.forEach(n => {
+    const e = existingById[n.id];
+    if (e) { n.x = e.x; n.y = e.y; n.vx = e.vx; n.vy = e.vy; }
+    else { n.x = n._x; n.y = n._y; }
+  });
+  sim.nodes(nodes); sim.alpha(0.6).restart();
+}
+
+function togglePlay() {
+  playing = !playing;
+  document.getElementById('play-btn').textContent = playing ? '⏸' : '▶';
+  if (playing) {
+    playTimer = setInterval(() => {
+      showPeriod(currentIdx + 1 >= PERIODS.length ? 0 : currentIdx + 1);
+    }, 2200);
+  } else { clearInterval(playTimer); playTimer = null; }
+}
+
+window.addEventListener('resize', resize);
+document.getElementById('play-btn').addEventListener('click', togglePlay);
+document.getElementById('scrubber').addEventListener('input', function() {
+  if (playing) togglePlay();
+  showPeriod(parseInt(this.value));
+});
+document.addEventListener('keydown', e => {
+  if (e.key === ' ')          { e.preventDefault(); togglePlay(); }
+  if (e.key === 'ArrowRight') { showPeriod(Math.min(currentIdx + 1, PERIODS.length - 1)); }
+  if (e.key === 'ArrowLeft')  { showPeriod(Math.max(currentIdx - 1, 0)); }
+});
+
+document.getElementById('scrubber').max = PERIODS.length - 1;
+resize();
+showPeriod(0);
+</script>
+</body>
+</html>
