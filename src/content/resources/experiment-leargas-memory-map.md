@@ -33,6 +33,16 @@ That's what we built today.
 
 ---
 
+## <span style="color:#1F4E79">The live map</span>
+
+Play it below. Press ▶ or use arrow keys to step through months. Click the 🔊 first to enable sound — deeper tones for larger thoughts, bright clicks for brief ones. Hover any blob to see what it represents and how strongly it's remembered.
+
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
+  <iframe src="/leargas/memory_map.html" width="100%" height="540" style="border:none;background:#0a0a0c;" title="Léargas — Memory Map"></iframe>
+</div>
+
+---
+
 ## <span style="color:#1F4E79">The temporal manifold</span>
 
 The underlying data structure is a timeline of periods — each period a GMM snapshot of the documents active in that window. For each period, we fetch documents from Mnemos by date range, embed them with `all-MiniLM-L6-v2`, and fit a Bayesian GMM. Each component becomes a labelled attractor: a cognitive cluster dominant in that period.
