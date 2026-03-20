@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Léargas — Cognitive Manifold Explorer</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0d0d0f;
+  color: #e2e0d8;
+  min-height: 100vh;
+  padding: 0;
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  padding: 16px 24px 12px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+#header h1 { font-size: 15px; font-weight: 500; color: #e2e0d8; letter-spacing: 0.02em; }
+#header p { font-size: 12px; color: #888780; }
+#controls {
+  padding: 10px 24px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+  color: #888780;
+}
+#controls span { display: flex; align-items: center; gap: 6px; }
+.legend-dot {
+  width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+}
+#canvas-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+canvas { position: absolute; top: 0; left: 0; cursor: crosshair; }
+#tooltip {
+  position: absolute;
+  background: rgba(20,20,24,0.96);
+  border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  max-width: 280px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+#tooltip .tip-label { font-weight: 500; color: #e2e0d8; margin-bottom: 4px; font-size: 13px; }
+#tooltip .tip-weight { color: #9FE1CB; font-size: 11px; margin-bottom: 3px; }
+#tooltip .tip-text { color: #b4b2a9; line-height: 1.5; }
+#info {
+  padding: 10px 24px;
+  font-size: 11px;
+  color: #5F5E5A;
+  border-top: 0.5px solid rgba(255,255,255,0.05);
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <h1>Léargas — cognitive manifold</h1>
+    <p>2,000-document sample · 50 GMM components · 2026-03-20</p>
+  </div>
+  <div id="controls">
+    <span><span class="legend-dot" style="background:#5DCAA5"></span>project / research</span>
+    <span><span class="legend-dot" style="background:#7F77DD"></span>personal / psychological</span>
+    <span><span class="legend-dot" style="background:#EF9F27"></span>engineering / code</span>
+    <span><span class="legend-dot" style="background:#888780"></span>document processing</span>
+    <span style="margin-left:auto">bubble size = component weight</span>
+  </div>
+  <div id="canvas-wrap">
+    <canvas id="c"></canvas>
+    <div id="tooltip">
+      <div class="tip-label" id="tip-label"></div>
+      <div class="tip-weight" id="tip-weight"></div>
+      <div class="tip-text" id="tip-text"></div>
+    </div>
+  </div>
+  <div id="info">Hover to explore components · positions reflect semantic proximity in embedding space</div>
+</div>
+
+<script>
+const COMPONENTS = [
+  { k:23, w:0.0399, label:"Legion somatic unity", detail:"8.1 Somatic Unity — Legion must maintain a unified self-model spanning all active limbs", cat:"project", x:0.38, y:0.22 },
+  { k:32, w:0.0385, label:"Django migration debugging", detail:"Migrate Django App Guide — TypeError at /orders/admin, OAuth test user setup", cat:"code", x:0.72, y:0.58 },
+  { k:33, w:0.0384, label:"Overwhelm — growing project complexity", detail:"The underlying tension of feeling overwhelmed by the complexity of managing a growing interconnected project", cat:"personal", x:0.55, y:0.35 },
+  { k:19, w:0.0336, label:"Anseo bug reports", detail:"Anseo bug report — Tips for great feedback needs to be theme aware. Severity: Medium", cat:"code", x:0.65, y:0.45 },
+  { k:4,  w:0.0329, label:"Show/chunks/file work", detail:"Show — can you give me a new copy of the file with chunks", cat:"code", x:0.78, y:0.38 },
+  { k:8,  w:0.0329, label:"Anseo roadmap Feb 2026", detail:"Anseo Roadmap — February 7, 2026. Communities Phase 1 & 2 completed", cat:"project", x:0.42, y:0.48 },
+  { k:46, w:0.0317, label:"Emotional data research", detail:"Emotional data research project — clean dataset for cyberpsychology analysis", cat:"project", x:0.30, y:0.60 },
+  { k:0,  w:0.0300, label:"Dissertation calendar / survey pressure", detail:"Dissertation Calendar — how do you expect to get surveys when the target audience doesn't know you exist?", cat:"personal", x:0.22, y:0.42 },
+  { k:28, w:0.0289, label:"Text-to-speech / language detection", detail:"Text-to-speech with language detection — I'm logged in, good question", cat:"code", x:0.60, y:0.72 },
+  { k:29, w:0.0284, label:"Anseo roadmap Feb 2026 v2", detail:"Anseo Roadmap Updated February 2, 2026 — Communities Phases 1–4 completed", cat:"project", x:0.48, y:0.52 },
+  { k:24, w:0.0276, label:"Cyberpsychology / cyber-aggression", detail:"Preliminary Analysis Report — Understanding Cyber-Aggression and Moral Disengagement", cat:"project", x:0.18, y:0.55 },
+  { k:26, w:0.0275, label:"Killing ELLAY — passage summaries", detail:"Summarize the passage (4 sentences). Title: Kill... [Killing ELLAY]", cat:"doc", x:0.85, y:0.25 },
+  { k:40, w:0.0268, label:"Document Q&A patterns", detail:"Answer concisely: Who are the key characters in this passage and what is happening?", cat:"doc", x:0.82, y:0.72 },
+  { k:11, w:0.0244, label:"Full-stack development reflection", detail:"The individual is reflecting on developing a full-stack application and its impact", cat:"personal", x:0.45, y:0.70 },
+  { k:1,  w:0.0240, label:"Anseo comprehensive development", detail:"Working through development and refinement of a comprehensive Anseo platform", cat:"project", x:0.35, y:0.38 },
+  { k:30, w:0.0196, label:"Bus Éireann / transport UX", detail:"Bus Éireann Ticket Options — TFI Live App UX/HCI work, Irish transport infrastructure", cat:"project", x:0.25, y:0.75 },
+  { k:14, w:0.0182, label:"Fear of inadequacy / validation", detail:"Fear of inadequacy and the need for validation — consolidated from claude↔anseo sessions", cat:"personal", x:0.50, y:0.20 },
+  { k:21, w:0.0171, label:"AfterWords / digital legacy", detail:"Working on AfterWords — digital legacy avatars, toddBot architecture", cat:"project", x:0.15, y:0.32 },
+  { k:35, w:0.0168, label:"System that teaches people", detail:"We need a system that teaches people to think critically about AI-generated information", cat:"project", x:0.12, y:0.68 },
+  { k:3,  w:0.0155, label:"Dissertation thesis review", detail:"Thesis inspiration paper review — title correction, academic supervision friction", cat:"personal", x:0.62, y:0.20 },
+];
+
+const COLORS = {
+  project:  "#5DCAA5",
+  personal: "#7F77DD",
+  code:     "#EF9F27",
+  doc:      "#888780",
+};
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const wrap = document.getElementById('canvas-wrap');
+const tip = document.getElementById('tooltip');
+const tipLabel = document.getElementById('tip-label');
+const tipWeight = document.getElementById('tip-weight');
+const tipText = document.getElementById('tip-text');
+
+let W, H, nodes = [];
+
+function resize() {
+  W = wrap.clientWidth;
+  H = wrap.clientHeight;
+  canvas.width = W;
+  canvas.height = H;
+  buildNodes();
+  draw();
+}
+
+function buildNodes() {
+  const maxW = Math.max(...COMPONENTS.map(c => c.w));
+  const pad = 80;
+  nodes = COMPONENTS.map(c => ({
+    ...c,
+    px: pad + c.x * (W - 2*pad),
+    py: pad + c.y * (H - 2*pad),
+    r: 10 + (c.w / maxW) * 36,
+  }));
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Draw faint connections between related nodes
+  const pairs = [
+    [23, 33], [33, 0], [0, 24], [24, 46], [8, 29], [8, 1],
+    [19, 4], [32, 28], [26, 40], [14, 33], [21, 14], [30, 0],
+  ];
+  for (const [a, b] of pairs) {
+    const na = nodes.find(n => n.k === a);
+    const nb = nodes.find(n => n.k === b);
+    if (!na || !nb) continue;
+    ctx.beginPath();
+    ctx.moveTo(na.px, na.py);
+    ctx.lineTo(nb.px, nb.py);
+    ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+  }
+
+  // Draw nodes
+  for (const n of nodes) {
+    const col = COLORS[n.cat] || '#888780';
+
+    // Glow ring
+    ctx.beginPath();
+    ctx.arc(n.px, n.py, n.r + 3, 0, Math.PI * 2);
+    ctx.fillStyle = col + '18';
+    ctx.fill();
+
+    // Main circle
+    ctx.beginPath();
+    ctx.arc(n.px, n.py, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = col + '30';
+    ctx.fill();
+    ctx.strokeStyle = col + 'aa';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+
+    // Weight label
+    if (n.r > 18) {
+      ctx.fillStyle = col;
+      ctx.font = '500 10px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText((n.w * 100).toFixed(1) + '%', n.px, n.py);
+    }
+  }
+}
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  let hit = null;
+  for (const n of nodes) {
+    const dx = mx - n.px, dy = my - n.py;
+    if (Math.sqrt(dx*dx + dy*dy) < n.r + 4) { hit = n; break; }
+  }
+
+  if (hit) {
+    tipLabel.textContent = hit.label;
+    tipWeight.textContent = `component [${hit.k}] · weight ${(hit.w * 100).toFixed(2)}%`;
+    tipText.textContent = hit.detail;
+    tip.style.opacity = '1';
+    let tx = e.clientX - wrap.getBoundingClientRect().left + 16;
+    let ty = e.clientY - wrap.getBoundingClientRect().top - 20;
+    if (tx + 300 > W) tx = e.clientX - wrap.getBoundingClientRect().left - 300;
+    tip.style.left = tx + 'px';
+    tip.style.top = ty + 'px';
+    canvas.style.cursor = 'pointer';
+  } else {
+    tip.style.opacity = '0';
+    canvas.style.cursor = 'crosshair';
+  }
+});
+
+canvas.addEventListener('mouseleave', () => { tip.style.opacity = '0'; });
+
+window.addEventListener('resize', resize);
+resize();
+</script>
+</body>
+</html>
