@@ -1,0 +1,593 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="ATU Parking App — Research Survey · Foxxe Labs" description="Help us understand the parking problem at ATU Letterkenny. 2-minute survey with app wireframe.">
+  <div class="tool-page">
+    <header class="tool-header">
+      <h1>ATU Parking — Would This App Help?</h1>
+      <p class="sub">
+        We're researching whether a real-time parking availability app would actually solve the ATU Letterkenny parking problem.
+        Takes about 2 minutes. No account needed.
+      </p>
+      <div class="pillrow">
+        <span class="pill">~2 minutes</span>
+        <span class="pill">Anonymous</span>
+        <span class="pill">ATU Letterkenny focus</span>
+      </div>
+    </header>
+
+    <main class="survey-wrap">
+
+      <!-- ── Intro ── -->
+      <section class="card intro-card">
+        <p class="muted">
+          Parking at ATU Letterkenny is consistently the <strong>#1 complaint</strong> from students.
+          We're looking at whether a simple mobile app — showing which car parks are likely to have spaces
+          <em>before you drive in</em> — would make a real difference. We need your honest opinion to find out.
+        </p>
+      </section>
+
+      <form id="surveyForm" action="https://formspree.io/f/REPLACE_ME" method="POST">
+
+        <!-- ── Q1 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q1</div>
+          <h2>How often do you have difficulty finding parking at ATU?</h2>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q1_frequency" value="daily" required> Almost every day</label>
+            <label class="choice-row"><input type="radio" name="q1_frequency" value="several"> A few times a week</label>
+            <label class="choice-row"><input type="radio" name="q1_frequency" value="occasionally"> Occasionally</label>
+            <label class="choice-row"><input type="radio" name="q1_frequency" value="rarely"> Rarely or never</label>
+            <label class="choice-row"><input type="radio" name="q1_frequency" value="notdrive"> I don't drive to ATU</label>
+          </div>
+        </section>
+
+        <!-- ── Q2 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q2</div>
+          <h2>On a bad day, how much time do you lose looking for parking?</h2>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q2_time" value="under5" required> Under 5 minutes</label>
+            <label class="choice-row"><input type="radio" name="q2_time" value="5to10"> 5–10 minutes</label>
+            <label class="choice-row"><input type="radio" name="q2_time" value="10to20"> 10–20 minutes</label>
+            <label class="choice-row"><input type="radio" name="q2_time" value="over20"> More than 20 minutes</label>
+            <label class="choice-row"><input type="radio" name="q2_time" value="na"> Not applicable</label>
+          </div>
+        </section>
+
+        <!-- ── Wireframe 1: Main screen ── -->
+        <section class="card wireframe-card">
+          <div class="wf-label">App concept — main screen</div>
+          <p class="muted wf-desc">This is what the app would look like when you open it near ATU. Car parks shown with live availability colour.</p>
+          <div class="wireframe" aria-label="App wireframe: main parking screen">
+            <div class="phone-shell">
+              <div class="phone-bar">
+                <span class="phone-dot"></span><span class="phone-dot"></span><span class="phone-dot"></span>
+              </div>
+              <div class="phone-screen">
+                <div class="app-header">
+                  <span class="app-logo">🅿 ParkATU</span>
+                  <span class="app-time">Now · Tue 9:05am</span>
+                </div>
+                <div class="app-subtitle muted-wf">Near ATU Letterkenny</div>
+                <div class="park-list">
+                  <div class="park-item red">
+                    <div class="park-dot red-dot"></div>
+                    <div class="park-info">
+                      <div class="park-name">Main Campus Car Park</div>
+                      <div class="park-status">Likely full — 0–2 spaces</div>
+                    </div>
+                    <div class="park-dist">0.1km</div>
+                  </div>
+                  <div class="park-item amber">
+                    <div class="park-dot amber-dot"></div>
+                    <div class="park-info">
+                      <div class="park-name">Port Road Overflow</div>
+                      <div class="park-status">Filling up — ~8 spaces</div>
+                    </div>
+                    <div class="park-dist">0.3km</div>
+                  </div>
+                  <div class="park-item green">
+                    <div class="park-dot green-dot"></div>
+                    <div class="park-info">
+                      <div class="park-name">Pearse Road Car Park</div>
+                      <div class="park-status">Available — plenty of space</div>
+                    </div>
+                    <div class="park-dist">0.5km</div>
+                  </div>
+                </div>
+                <div class="app-footer muted-wf">Based on 14 reports in the last 30 min</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Q3 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q3</div>
+          <h2>If an app showed you the screen above before you left home, would it change your behaviour?</h2>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q3_behaviour" value="leave_earlier" required> I'd leave earlier to beat the rush</label>
+            <label class="choice-row"><input type="radio" name="q3_behaviour" value="different_carpark"> I'd go straight to the available car park</label>
+            <label class="choice-row"><input type="radio" name="q3_behaviour" value="both"> Both of the above</label>
+            <label class="choice-row"><input type="radio" name="q3_behaviour" value="bus"> I'd take the bus instead</label>
+            <label class="choice-row"><input type="radio" name="q3_behaviour" value="no_change"> Probably wouldn't change much</label>
+          </div>
+        </section>
+
+        <!-- ── Wireframe 2: Report screen ── -->
+        <section class="card wireframe-card">
+          <div class="wf-label">App concept — quick report</div>
+          <p class="muted wf-desc">The app improves as more people use it. This is the one-tap report screen — takes 3 seconds after you park.</p>
+          <div class="wireframe" aria-label="App wireframe: quick report screen">
+            <div class="phone-shell">
+              <div class="phone-bar">
+                <span class="phone-dot"></span><span class="phone-dot"></span><span class="phone-dot"></span>
+              </div>
+              <div class="phone-screen">
+                <div class="app-header">
+                  <span class="app-logo">🅿 ParkATU</span>
+                  <span class="app-chip">You're at Main Campus</span>
+                </div>
+                <div class="report-prompt">How was parking just now?</div>
+                <div class="report-btns">
+                  <button type="button" class="report-btn green-btn">😌 Easy</button>
+                  <button type="button" class="report-btn amber-btn">😐 Tight</button>
+                  <button type="button" class="report-btn red-btn">😤 Nightmare</button>
+                </div>
+                <div class="app-footer muted-wf">Your report helps the next person. Takes 3 seconds.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Q4 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q4</div>
+          <h2>Would you tap a quick report button (like above) after parking?</h2>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q4_report" value="yes_always" required> Yes, I'd do it every time</label>
+            <label class="choice-row"><input type="radio" name="q4_report" value="yes_sometimes"> Probably sometimes, not always</label>
+            <label class="choice-row"><input type="radio" name="q4_report" value="only_bad"> Only when parking was really bad</label>
+            <label class="choice-row"><input type="radio" name="q4_report" value="no"> Probably not — too much friction</label>
+          </div>
+        </section>
+
+        <!-- ── Q5 — the critical geo question ── -->
+        <section class="card q-card highlight-card">
+          <div class="q-label">Q5 — important</div>
+          <h2>The app works better if it can learn passively from where people park.</h2>
+          <p class="muted">
+            Instead of asking you to tap anything, the app could use your phone's location in the background
+            to infer whether a car park was busy — based on how long people spent there, whether they circled,
+            and which car park they ended up in. <strong>No route data stored. Only car park zone events.</strong>
+          </p>
+          <p class="muted">Would you allow this?</p>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q5_geo" value="yes_fine" required> Yes, fine with that</label>
+            <label class="choice-row"><input type="radio" name="q5_geo" value="yes_if_clear"> Yes, if the privacy policy was clear</label>
+            <label class="choice-row"><input type="radio" name="q5_geo" value="no_manual"> No — I'd rather just tap manually</label>
+            <label class="choice-row"><input type="radio" name="q5_geo" value="no_never"> No — I don't want any location use</label>
+          </div>
+        </section>
+
+        <!-- ── Q6 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q6</div>
+          <h2>Would you use this app if enough other ATU students were using it?</h2>
+          <p class="muted">(The app only works well with enough users — honest answer needed here.)</p>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="radio" name="q6_use" value="yes_definitely" required> Yes, definitely</label>
+            <label class="choice-row"><input type="radio" name="q6_use" value="yes_probably"> Probably yes</label>
+            <label class="choice-row"><input type="radio" name="q6_use" value="maybe"> Maybe — depends how good it was</label>
+            <label class="choice-row"><input type="radio" name="q6_use" value="no"> Probably not</label>
+          </div>
+        </section>
+
+        <!-- ── Q7 ── -->
+        <section class="card q-card">
+          <div class="q-label">Q7</div>
+          <h2>What would most put you off using an app like this?</h2>
+          <div class="choices-vert">
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="battery"> Battery / data usage</label>
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="privacy"> Privacy concerns</label>
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="effort"> Too much effort to set up</label>
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="accuracy"> Worried it wouldn't be accurate</label>
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="noone"> If none of my friends used it</label>
+            <label class="choice-row"><input type="checkbox" name="q7_barriers" value="nothing"> Nothing — I'd use it</label>
+          </div>
+        </section>
+
+        <!-- ── Q8 open ── -->
+        <section class="card q-card">
+          <div class="q-label">Q8 — optional</div>
+          <h2>Anything else you'd want the app to do, or reasons it would / wouldn't work at ATU?</h2>
+          <textarea name="q8_open" rows="4" placeholder="Free text — completely optional"></textarea>
+        </section>
+
+        <!-- ── Submit ── -->
+        <section class="card q-card submit-card">
+          <p class="muted">Anonymous. No email required. Results used only for FoxxeLabs research.</p>
+          <div class="actions">
+            <button type="submit" id="submitBtn">Submit responses</button>
+          </div>
+          <div id="thankYou" class="thankyou" style="display:none">
+            ✅ Thanks — that's really useful. Results will shape whether (and how) this gets built.
+          </div>
+        </section>
+
+      </form>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-header {
+    padding: 28px 18px 10px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0 0 8px 0;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+  }
+
+  .sub {
+    color: var(--muted);
+    margin: 0;
+    max-width: 65ch;
+  }
+
+  .pillrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .pill {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 10px;
+    color: var(--muted);
+    font-size: .85rem;
+    background: rgba(255,255,255,.03);
+  }
+
+  .survey-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px 18px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .intro-card p {
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .q-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .q-card h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  .q-label {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .highlight-card {
+    border-color: rgba(125,211,252,.35);
+    background: rgba(125,211,252,.04);
+  }
+
+  .choices-vert {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .choice-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,.02);
+    transition: border-color .15s;
+  }
+
+  .choice-row:hover {
+    border-color: rgba(125,211,252,.4);
+  }
+
+  .choice-row input {
+    accent-color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  textarea {
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: .95rem;
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: rgba(125,211,252,.4);
+  }
+
+  /* ── Wireframe ── */
+  .wireframe-card {
+    gap: 12px;
+  }
+
+  .wf-label {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(167,139,250,.8);
+  }
+
+  .wf-desc {
+    margin: 0;
+    font-size: .9rem;
+  }
+
+  .wireframe {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone-shell {
+    width: 260px;
+    background: #0d1117;
+    border: 2px solid rgba(255,255,255,.15);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,.5);
+  }
+
+  .phone-bar {
+    display: flex;
+    gap: 5px;
+    padding: 10px 14px 6px;
+    align-items: center;
+    background: #0a0e14;
+  }
+
+  .phone-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+  }
+
+  .phone-screen {
+    padding: 12px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 220px;
+  }
+
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .app-logo {
+    font-weight: 800;
+    font-size: .95rem;
+    color: #7dd3fc;
+  }
+
+  .app-time, .app-chip {
+    font-size: .72rem;
+    color: rgba(255,255,255,.4);
+  }
+
+  .app-chip {
+    background: rgba(125,211,252,.1);
+    border: 1px solid rgba(125,211,252,.2);
+    border-radius: 999px;
+    padding: 2px 8px;
+    color: #7dd3fc;
+  }
+
+  .app-subtitle {
+    font-size: .78rem;
+    margin-bottom: 4px;
+  }
+
+  .muted-wf {
+    color: rgba(255,255,255,.35);
+    font-size: .75rem;
+  }
+
+  .park-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .park-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+
+  .park-item.red    { background: rgba(239,68,68,.08);  border-color: rgba(239,68,68,.2); }
+  .park-item.amber  { background: rgba(251,191,36,.08); border-color: rgba(251,191,36,.2); }
+  .park-item.green  { background: rgba(52,211,153,.08); border-color: rgba(52,211,153,.2); }
+
+  .park-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .red-dot   { background: #ef4444; }
+  .amber-dot { background: #fbbf24; }
+  .green-dot { background: #34d399; }
+
+  .park-info {
+    flex: 1;
+  }
+
+  .park-name {
+    font-size: .78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.85);
+  }
+
+  .park-status {
+    font-size: .7rem;
+    color: rgba(255,255,255,.4);
+    margin-top: 1px;
+  }
+
+  .park-dist {
+    font-size: .7rem;
+    color: rgba(255,255,255,.3);
+    flex-shrink: 0;
+  }
+
+  .app-footer {
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  /* Report screen */
+  .report-prompt {
+    font-weight: 700;
+    font-size: .95rem;
+    text-align: center;
+    margin: 12px 0 8px;
+    color: rgba(255,255,255,.85);
+  }
+
+  .report-btns {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .report-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: .8rem;
+    cursor: default;
+    font-weight: 600;
+  }
+
+  .green-btn { background: rgba(52,211,153,.2); color: #34d399; }
+  .amber-btn { background: rgba(251,191,36,.2); color: #fbbf24; }
+  .red-btn   { background: rgba(239,68,68,.2);  color: #ef4444; }
+
+  /* Submit */
+  .submit-card {
+    align-items: flex-start;
+  }
+
+  .submit-card .muted {
+    margin: 0;
+    font-size: .88rem;
+  }
+
+  .actions {
+    margin-top: 4px;
+  }
+
+  button[type="submit"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 11px 24px;
+    background: linear-gradient(180deg, rgba(125,211,252,.22), rgba(167,139,250,.10));
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  button[type="submit"]:hover {
+    border-color: rgba(255,255,255,.22);
+  }
+
+  .thankyou {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border: 1px solid rgba(52,211,153,.3);
+    border-radius: 12px;
+    background: rgba(52,211,153,.06);
+    color: #34d399;
+    font-weight: 600;
+  }
+</style>
+
+<script>
+(function(){
+  const form = document.getElementById('surveyForm') as HTMLFormElement;
+  const thankYou = document.getElementById('thankYou') as HTMLElement;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+
+  if (!form || !thankYou || !submitBtn) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit responses';
+        alert('Something went wrong — please try again.');
+      }
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit responses';
+      alert('Network error — please check your connection and try again.');
+    }
+  });
+})();
+</script>
