@@ -2,7 +2,9 @@
 ## Personal Worldline Data Collection
 
 **Date:** 2026-03-21  
+**Domain:** lorg.ie (registered)  
 **Repo:** todd427/lorg (new repo, create it)  
+**Platform:** Android (Expo/React Native)  
 **Goal:** Get data flowing. No visualisation yet. Just collect.
 
 Read docs/lorg-prd.md in todd427/foxxelabs-astro for full context.
@@ -14,7 +16,7 @@ Read docs/lorg-prd.md in todd427/foxxelabs-astro for full context.
 Three things:
 
 1. **FastAPI backend** on Fly.io — receives and stores samples
-2. **React Native mobile app** — collects GPS + steps + screen state, pushes to backend
+2. **React Native / Expo mobile app** — collects GPS + steps + screen state, pushes to backend
 3. **Mnemos daily summary ingestion** — generates a daily summary document and pushes to Mnemos
 
 No visualisation. No wearables. No bank integration yet. Just the pipe.
@@ -93,24 +95,24 @@ CREATE INDEX idx_weather_ts ON weather (ts DESC);
 
 -- Daily summaries (generated at midnight)
 CREATE TABLE daily_summaries (
-  date        DATE PRIMARY KEY,
-  steps_total INTEGER,
-  active_minutes INTEGER,
-  locations   JSONB,          -- [{lat, lng, name, duration_min}]
-  weather_avg JSONB,          -- {temp_c, condition, humidity}
-  mnemos_ingested BOOLEAN DEFAULT FALSE,
-  created_at  TIMESTAMPTZ DEFAULT NOW()
+  date             DATE PRIMARY KEY,
+  steps_total      INTEGER,
+  active_minutes   INTEGER,
+  locations        JSONB,    -- [{lat, lng, name, duration_min}]
+  weather_avg      JSONB,    -- {temp_c, condition, humidity}
+  mnemos_ingested  BOOLEAN DEFAULT FALSE,
+  created_at       TIMESTAMPTZ DEFAULT NOW()
 );
 ```
 
 ### API endpoints
 
 ```
-POST /api/samples         — receive batch of samples from mobile
-POST /api/weather         — receive weather update from mobile
-GET  /api/status          — health check, returns doc count + last sample time
-GET  /api/day/{date}      — return all samples + weather for a given date (YYYY-MM-DD)
-GET  /api/worm?start=&end= — return samples for a time range (for visualisation, Phase 1)
+POST /api/samples              — receive batch of samples from mobile
+POST /api/weather              — receive weather update from mobile
+GET  /api/status               — health check, returns doc count + last sample time
+GET  /api/day/{date}           — return all samples + weather for a given date (YYYY-MM-DD)
+GET  /api/worm?start=&end=     — return samples for a time range (for visualisation, Phase 1)
 POST /api/summaries/generate?date= — trigger daily summary generation
 ```
 
@@ -123,9 +125,9 @@ Key stored as Fly.io secret: `LORG_API_KEY`.
 Run at midnight (or triggered manually). For a given date:
 
 1. Query all samples for that date
-2. Compute: total steps, active minutes (periods with steps_delta > 0), location clusters
+2. Compute: total steps, active minutes, location clusters
 3. Query weather for that date — average temp, dominant condition
-4. Format as a plain-text document:
+4. Format as plain-text document:
 
 ```
 2026-03-21 — Daily Summary (Lorg)
@@ -145,90 +147,82 @@ Screen on: 6h 22m
    - `metadata.date: "2026-03-21"`
    - `metadata.type: "daily_summary"`
 
-### Env vars / secrets needed on Fly.io
+### Fly.io secrets required
 ```
 LORG_API_KEY          — auth key for mobile → backend
 DATABASE_URL          — Fly Postgres connection string
 MNEMOS_URL            — https://mnemos.foxxelabs.ie
 MNEMOS_API_KEY        — Mnemos API key
-OPENWEATHER_API_KEY   — OpenWeatherMap key (Todd to supply)
+OPENWEATHER_API_KEY   — OpenWeatherMap key (Todd to supply when key activates)
 ```
 
 ### Fly.io deployment
 App name: `lorg-foxxelabs`  
 Region: `lhr` (London, same as Mnemos)  
-Machine: shared-cpu-1x, 256MB RAM (tiny — just storing JSON)  
+Machine: shared-cpu-1x, 256MB RAM  
 Postgres: Fly managed Postgres (free tier)
 
 ---
 
-## Component 2: React Native Mobile App
+## Component 2: React Native / Expo Mobile App
+
+### Platform: Android only for Phase 0. iOS later.
 
 ### Setup
 ```bash
 npx create-expo-app lorg-mobile --template blank
 cd lorg-mobile
-npx expo install expo-location expo-sensors expo-task-manager expo-background-fetch
+npx expo install expo-location expo-sensors expo-task-manager expo-background-fetch @react-native-async-storage/async-storage
 ```
 
-### LocationService.js
-
-Background GPS sampling every 5 minutes.
+### LocationService.js — background GPS every 5 minutes
 
 ```js
 import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
 
 const LOCATION_TASK = 'lorg-location';
-const SAMPLE_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+const SAMPLE_INTERVAL_MS = 5 * 60 * 1000;
 
 TaskManager.defineTask(LOCATION_TASK, async ({ data, error }) => {
   if (error) return;
   const { locations } = data;
-  // Store locally, sync later
+  const loc = locations[0];
   await SyncService.queueSample({
-    ts: new Date().toISOString(),
-    lat: locations[0].coords.latitude,
-    lng: locations[0].coords.longitude,
-    altitude: locations[0].coords.altitude,
-    accuracy: locations[0].coords.accuracy,
+    ts:       new Date().toISOString(),
+    lat:      loc.coords.latitude,
+    lng:      loc.coords.longitude,
+    altitude: loc.coords.altitude,
+    accuracy: loc.coords.accuracy,
   });
 });
 
 export async function startTracking() {
   const { status } = await Location.requestBackgroundPermissionsAsync();
   if (status !== 'granted') throw new Error('Location permission denied');
-
   await Location.startLocationUpdatesAsync(LOCATION_TASK, {
-    accuracy: Location.Accuracy.Balanced,
-    timeInterval: SAMPLE_INTERVAL_MS,
-    distanceInterval: 50,  // also trigger if moved 50m
-    showsBackgroundLocationIndicator: true,
+    accuracy:        Location.Accuracy.Balanced,
+    timeInterval:    SAMPLE_INTERVAL_MS,
+    distanceInterval: 50,
     foregroundService: {
       notificationTitle: 'Lorg',
-      notificationBody: 'Tracking your trail',
+      notificationBody:  'Tracking your trail',
     },
   });
 }
 ```
 
-### BiometricService.js
-
-Steps from pedometer. Screen state from AppState.
+### BiometricService.js — steps + screen state
 
 ```js
 import { Pedometer } from 'expo-sensors';
 import { AppState } from 'react-native';
 
-let lastStepCount = 0;
 let screenOn = true;
-
-AppState.addEventListener('change', state => {
-  screenOn = state === 'active';
-});
+AppState.addEventListener('change', s => { screenOn = s === 'active'; });
 
 export async function getStepDelta() {
-  const end = new Date();
+  const end   = new Date();
   const start = new Date(end - 5 * 60 * 1000);
   const result = await Pedometer.getStepCountAsync(start, end);
   return result.steps;
@@ -237,9 +231,7 @@ export async function getStepDelta() {
 export function isScreenOn() { return screenOn; }
 ```
 
-### WeatherService.js
-
-Call OpenWeatherMap every 30 minutes based on current location.
+### WeatherService.js — OpenWeatherMap every 30 min
 
 ```js
 const OWM_KEY = process.env.EXPO_PUBLIC_OWM_KEY;
@@ -249,69 +241,55 @@ export async function fetchWeather(lat, lng) {
   const resp = await fetch(url);
   const data = await resp.json();
   return {
-    ts: new Date().toISOString(),
+    ts:         new Date().toISOString(),
     lat, lng,
-    temp_c: data.main.temp,
+    temp_c:     data.main.temp,
     feels_like: data.main.feels_like,
-    condition: data.weather[0].main.toLowerCase(),
-    humidity: data.main.humidity,
-    wind_kph: data.wind.speed * 3.6,
-    wind_dir: degToCompass(data.wind.deg),
-    uv_index: null,  // requires separate OWM call, add in Phase 2
+    condition:  data.weather[0].main.toLowerCase(),
+    humidity:   data.main.humidity,
+    wind_kph:   data.wind.speed * 3.6,
+    wind_dir:   degToCompass(data.wind.deg),
+    uv_index:   null,
   };
 }
 
 function degToCompass(deg) {
-  const dirs = ['N','NE','E','SE','S','SW','W','NW'];
-  return dirs[Math.round(deg / 45) % 8];
+  return ['N','NE','E','SE','S','SW','W','NW'][Math.round(deg / 45) % 8];
 }
 ```
 
-### SyncService.js
-
-Queue samples locally (AsyncStorage), push to backend when on WiFi or every 15 minutes.
+### SyncService.js — queue locally, flush to backend
 
 ```js
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import NetInfo from '@react-native-community/netinfo';
 
-const BACKEND = process.env.EXPO_PUBLIC_LORG_URL; // https://lorg-foxxelabs.fly.dev
+const BACKEND = process.env.EXPO_PUBLIC_LORG_URL;
 const API_KEY = process.env.EXPO_PUBLIC_LORG_KEY;
 
 export async function queueSample(sample) {
   const existing = JSON.parse(await AsyncStorage.getItem('lorg_queue') || '[]');
   existing.push(sample);
   await AsyncStorage.setItem('lorg_queue', JSON.stringify(existing));
-
-  // Try to sync if queue is getting large
   if (existing.length >= 12) await sync();
 }
 
 export async function sync() {
   const queue = JSON.parse(await AsyncStorage.getItem('lorg_queue') || '[]');
   if (!queue.length) return;
-
   try {
     const resp = await fetch(`${BACKEND}/api/samples`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-API-Key': API_KEY,
-      },
-      body: JSON.stringify({ samples: queue }),
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'X-API-Key': API_KEY },
+      body:    JSON.stringify({ samples: queue }),
     });
-    if (resp.ok) {
-      await AsyncStorage.setItem('lorg_queue', '[]');
-    }
+    if (resp.ok) await AsyncStorage.setItem('lorg_queue', '[]');
   } catch (e) {
-    // Network unavailable — keep in queue
+    // Network unavailable — keep in queue, retry next cycle
   }
 }
 ```
 
-### HomeScreen.js — minimal status UI
-
-Just enough to confirm it's working:
+### HomeScreen.js — minimal status display
 
 ```
 LORG                                    [● tracking]
@@ -327,36 +305,36 @@ Weather: 9°C  ⛅ Overcast
                               [Settings]
 ```
 
-No maps, no charts — that's Phase 1. This screen just confirms the service is running and data is flowing.
+No maps, no charts — that's Phase 1.
 
-### app.json permissions needed
+### app.json
 ```json
 {
   "expo": {
+    "name": "Lorg",
+    "slug": "lorg",
+    "platforms": ["android"],
     "plugins": [
       ["expo-location", {
-        "locationAlwaysAndWhenInUsePermission": "Lorg tracks your location to build your personal timeline.",
-        "isIosBackgroundLocationEnabled": true
+        "locationAlwaysAndWhenInUsePermission": "Lorg tracks your location to build your personal timeline."
       }]
     ],
-    "ios": {
-      "infoPlist": {
-        "NSMotionUsageDescription": "Lorg uses motion data to count your steps."
-      }
+    "android": {
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACTIVITY_RECOGNITION"
+      ]
     }
   }
 }
 ```
 
----
-
-## Environment Variables
-
-Create `.env` in the mobile app root (gitignored):
+### .env (gitignored)
 ```
 EXPO_PUBLIC_LORG_URL=https://lorg-foxxelabs.fly.dev
-EXPO_PUBLIC_LORG_KEY=    ← ask Todd for this (same as LORG_API_KEY on Fly)
-EXPO_PUBLIC_OWM_KEY=     ← ask Todd for this (OpenWeatherMap API key)
+EXPO_PUBLIC_LORG_KEY=        ← set when Fly secret is created
+EXPO_PUBLIC_OWM_KEY=         ← set when OpenWeatherMap key activates (~2hr after signup)
 ```
 
 ---
@@ -364,38 +342,38 @@ EXPO_PUBLIC_OWM_KEY=     ← ask Todd for this (OpenWeatherMap API key)
 ## Definition of Done — Phase 0
 
 ### Backend
-- [ ] FastAPI app created with `samples`, `weather`, `daily_summaries` tables
+- [ ] FastAPI app with `samples`, `weather`, `daily_summaries` tables
 - [ ] `POST /api/samples` accepts batches, stores to DB
-- [ ] `POST /api/weather` accepts weather updates, stores to DB
+- [ ] `POST /api/weather` accepts weather updates
 - [ ] `GET /api/status` returns health + last sample timestamp
-- [ ] `GET /api/day/{date}` returns day's data as JSON
+- [ ] `GET /api/day/{date}` returns JSON
 - [ ] `ingest_mnemos.py` generates daily summary + POSTs to Mnemos
-- [ ] Deployed to Fly.io as `lorg-foxxelabs` in `lhr` region
+- [ ] Deployed to Fly.io `lorg-foxxelabs` in `lhr`
 - [ ] All secrets set via `fly secrets set`
 
-### Mobile app
-- [ ] Background GPS sampling runs every 5 minutes
-- [ ] Steps counted per sample window
+### Mobile
+- [ ] Background GPS every 5 minutes (survives phone restart)
+- [ ] Steps per sample window
 - [ ] Screen state captured
-- [ ] Weather fetched every 30 minutes
-- [ ] Samples queued locally, synced to backend every 15 min or on queue size
-- [ ] HomeScreen shows today's steps, active time, last sync time, current weather
-- [ ] App survives phone restart and resumes tracking
+- [ ] Weather every 30 minutes
+- [ ] Queue-and-sync to backend
+- [ ] HomeScreen shows steps, active time, last sync, weather
 
 ### Integration
-- [ ] At least one full day of samples in the backend DB
-- [ ] Daily summary generated for that day
-- [ ] Summary ingested into Mnemos
-- [ ] Query Mnemos for "lorg" — returns the summary
+- [ ] One full day of samples in DB
+- [ ] Daily summary generated
+- [ ] Summary visible in Mnemos (`query: "lorg daily summary"`)
 
 ---
 
 ## Notes for Claude Code
 
-- Todd is on Android (Rose/Daisy/Lava are all PCs, but his phone is Android — ask him to confirm before finalising iOS-specific code)
-- Expo is preferred over bare React Native — easier deployment and OTA updates
-- The backend pattern should follow Mnemos (FastAPI + Fly.io) — Todd knows that stack
-- Battery efficiency is important — 5-minute GPS is the minimum that gives a useful trail; don't go shorter
-- The queue-and-sync pattern in SyncService is deliberate — don't switch to real-time WebSockets, it kills battery
-- OpenWeatherMap free tier is sufficient — don't suggest paid tiers
-- For the Mnemos daily summary, use the same POST /api/ingest pattern as all other ingest scripts
+- **Android only for Phase 0.** Do not write iOS-specific code yet.
+- **Expo preferred** over bare React Native — OTA updates, simpler builds.
+- **Backend pattern = Mnemos.** FastAPI + Fly.io. Todd knows this stack.
+- **Battery:** 5-minute GPS is the floor. Do not go shorter.
+- **Queue-and-sync is deliberate.** No WebSockets, no real-time push — they drain battery.
+- **OpenWeatherMap free tier only.** No paid tier suggestions.
+- **Mnemos ingest:** use the same `POST /api/ingest` pattern as all other Mnemos ingest scripts.
+- **Fly.io secrets** are secure — AES-256 at rest, injected as env vars at runtime, values never exposed via API or dashboard.
+- **Domain:** lorg.ie is registered. The visualisation frontend (Phase 1) will live there. Backend can use `lorg-foxxelabs.fly.dev` for now.

@@ -2,10 +2,11 @@
 ## Personal Worldline Visualisation
 
 **Irish:** *lorg* — track, trail, trace, footprint  
-**Status:** Concept — pre-development  
+**Domain:** lorg.ie (registered 2026-03-21)  
+**Status:** Phase 0 in development  
 **Owner:** Todd McCaffrey / FoxxeLabs  
 **Date:** 2026-03-21  
-**Version:** 0.1
+**Version:** 0.2
 
 ---
 
@@ -116,149 +117,107 @@ A Three.js `TubeGeometry` following a series of GPS-timestamped points, with Z a
 ## 4. Architecture
 
 ### 4.1 Mobile App (data collection)
-**React Native** — single codebase for iOS and Android.
+**React Native / Expo** — Android first (Todd is on Android), iOS later.
 
 Core modules:
 - `LocationService` — background GPS sampling, geofence management
-- `BiometricService` — steps (Pedometer API), heart rate (HealthKit/Health Connect), ambient light
+- `BiometricService` — steps (Pedometer API), heart rate (Health Connect), ambient light
 - `WeatherService` — periodic OpenWeatherMap calls, cached by location cluster
 - `SyncService` — batches samples and pushes to Lorg backend every 15 minutes, or immediately on WiFi
 
 The app runs as a background service. UI is minimal — a status indicator, a quick day-view of the current day's worm, and settings.
 
 ### 4.2 Backend (data store + API)
-**FastAPI on Fly.io** (same pattern as Mnemos).
+**FastAPI on Fly.io** — same pattern as Mnemos, region lhr (London).
 
 Endpoints:
-- `POST /samples` — receive batched samples from mobile
-- `GET /worm?start=&end=` — return processed worm data for a time range
-- `GET /day/{date}` — full day data including weather and transactions
-- `POST /transactions/sync` — webhook receiver for TrueLayer
-- `GET /export` — full data export (JSON / CSV)
+- `POST /api/samples` — receive batched samples from mobile
+- `POST /api/weather` — receive weather updates from mobile
+- `GET /api/status` — health check, last sample time
+- `GET /api/day/{date}` — full day data including weather and transactions
+- `GET /api/worm?start=&end=` — return samples for a time range (Phase 1)
+- `POST /api/transactions/sync` — webhook receiver for TrueLayer (Phase 4)
+- `GET /api/export` — full data export (JSON / CSV)
 
-Storage:
-- **TimescaleDB** or plain **PostgreSQL with time-series partitioning** — samples are append-only time-series data
-- Alternatively: **InfluxDB** (purpose-built for this pattern)
-- Transactions in a separate table, linked to samples by timestamp interpolation
+Storage: PostgreSQL (Fly managed Postgres, free tier). Time-series partitioned by month.
+
+Secrets (Fly.io):
+- `LORG_API_KEY` — mobile → backend auth
+- `DATABASE_URL` — Fly Postgres
+- `MNEMOS_URL` + `MNEMOS_API_KEY` — daily summary ingest
+- `OPENWEATHER_API_KEY` — weather calls
 
 ### 4.3 Visualisation (web)
-Static HTML + Three.js + Mapbox GL JS. Lives at `lorg.foxxelabs.ie` (or `lorg.irish`).
-
-Data is fetched from the backend API, rendered client-side. No server-side rendering needed.
+Static HTML + Three.js + Mapbox GL JS at `lorg.ie`.
+Data fetched from backend API, rendered client-side.
 
 ### 4.4 Mnemos Integration
-The Lorg backend periodically generates daily summary documents and ingests them into Mnemos:
+Daily summary documents ingested at midnight. Format:
 
 ```
-2024-08-19 — Daily Summary
-Steps: 3,240 (low)
-Active periods: 08:15–08:45 (walk), 13:00–13:20 (lunch walk)
-Resting heart rate: 68bpm (elevated vs 60bpm baseline)
-Sleep: 5.4 hours (poor, estimated)
-Weather: 22°C, clear, SW wind 12km/h
-Expenditure: €2.80 Spar (coffee 08:47), €8.40 SuperValu (groceries 18:22)
-Location: Letterkenny (home + town centre)
+2026-03-21 — Daily Summary (Lorg)
+Location: Letterkenny, Co. Donegal, Ireland
+Steps: 4,280 | Active: 38 minutes
+Weather: 9°C, overcast, humidity 78%
+Active periods:
+  08:15–08:47 (walk, 1.2km)
+  13:05–13:22 (walk, 0.6km)
+Screen on: 6h 22m
 ```
-
-This makes the physical record searchable via Mnemos and visible as anchors in Léargas.
 
 ---
 
 ## 5. Integrations
 
 ### 5.1 OpenWeatherMap
-- Free tier: 60 calls/minute, 1M/month
-- One API key, stored as Fly.io secret
-- Called by backend on behalf of user — not client-side
+Free tier: 60 calls/minute, 1M/month. Key stored as Fly.io secret.
 
-### 5.2 TrueLayer (PSD2 Banking)
-- OAuth 2.0 flow: user connects bank account in-app
-- Webhook receives new transaction notifications
-- Supported Irish banks: AIB, Bank of Ireland, Permanent TSB, Ulster Bank, Revolut, N26, KBC
-- TrueLayer free tier: up to 100 end-users (more than sufficient for personal use)
-- Credentials stored as Fly.io secrets
+### 5.2 TrueLayer (PSD2 Banking) — Phase 4
+OAuth 2.0. Supported Irish banks: AIB, Bank of Ireland, PTSB, Revolut, N26.
+Free tier: up to 100 end-users.
 
-### 5.3 HealthKit (iOS) / Health Connect (Android)
-- Read-only permissions: steps, heart rate, HRV, sleep
-- User grants permission on first launch
-- Data pulled on a schedule, not real-time push
+### 5.3 Health Connect (Android) — Phase 2
+Read-only: steps, heart rate, HRV, sleep. Permission granted on first launch.
 
-### 5.4 Wearables (optional)
-- Apple Watch: via HealthKit, automatic
-- Wear OS (Google): via Health Connect, automatic
-- Garmin / Fitbit / Whoop: via their respective SDKs or Health Connect bridge
+### 5.4 Wearables — Phase 2+
+Wear OS via Health Connect automatic. Garmin/Fitbit via Health Connect bridge.
 
 ---
 
 ## 6. Privacy
 
-- **All data is personal and private** — no sharing, no analytics, no third-party access
-- Location data is stored server-side (user's own Fly.io instance or self-hosted)
-- TrueLayer tokens stored encrypted, never logged
-- Export is always available — full data portability
-- **Privacy mode in visualisation:** blur to city level, hide amounts, shareable
-- No data is sent to Mnemos without explicit daily summary generation
+- All data personal and private — no sharing, no analytics, no third-party access
+- Location stored on user's own Fly.io instance
+- TrueLayer tokens encrypted, never logged
+- Full data export always available
+- Privacy mode in visualisation: blur to city level, hide amounts
+- No Mnemos ingest without explicit daily summary generation
+- GDPR: Irish DPC jurisdiction, personal use exemption applies
 
 ---
 
-## 7. Platform Considerations for Ireland
+## 7. Phased Development
 
-- PSD2 mandates bank API access — TrueLayer covers all major Irish banks
-- GPS accuracy is good in urban Letterkenny; rural Donegal may have gaps
-- Weather: OpenWeatherMap has good Irish Met Éireann-calibrated data for Ireland
-- Irish Data Protection Commission (DPC) jurisdiction — GDPR applies; personal use exemption covers single-user deployment
-
----
-
-## 8. Phased Development
-
-### Phase 0 — Data capture only (MVP)
-- Mobile app collects GPS + steps + screen state
-- Pushes to backend
-- No visualisation
-- Goal: get the data flowing, validate battery impact
-
-### Phase 1 — Basic worm
-- 3D tube visualisation of GPS track over time
-- Colour by time-of-day (no biometrics yet)
-- Timeline scrubber
-- Map view
-
-### Phase 2 — Biometrics
-- Add heart rate (wearable)
-- Colour by heart rate
-- Thickness by step cadence
-- Sleep window detection
-
-### Phase 3 — Weather
-- OpenWeatherMap integration
-- Ambient weather glow on worm
-- Day view shows weather background
-
-### Phase 4 — Expenditure
-- TrueLayer bank integration
-- Transaction event markers on worm
-- Day view transaction list
-- Merchant categorisation
-
-### Phase 5 — Mnemos integration
-- Daily summary generation + ingest
-- Léargas anchor markers (cognitive events on physical worm)
-- "What was happening here?" queries
+| Phase | Scope | Status |
+|-------|-------|--------|
+| 0 | GPS + steps + screen state → backend → Mnemos daily summary | **In development** |
+| 1 | 3D worm visualisation at lorg.ie, time scrubber, map view | Planned |
+| 2 | Heart rate + HRV (Health Connect), colour/thickness encoding | Planned |
+| 3 | Weather — OpenWeatherMap, ambient glow on worm | Planned |
+| 4 | Expenditure — TrueLayer PSD2, transaction markers | Planned |
+| 5 | Léargas integration — cognitive anchors on physical worm | Planned |
 
 ---
 
-## 9. Open Questions
+## 8. Open Questions
 
-1. **Self-hosted vs managed backend?** Fly.io personal instance (most private) vs a managed Lorg service (more scalable for AuthorsOwn expansion)
-2. **InfluxDB vs PostgreSQL?** InfluxDB is purpose-built for time-series but adds operational complexity
-3. **React Native vs Flutter?** Either works; React Native preferred given existing JS/TS stack
-4. **Domain:** `lorg.irish`? `lorg.foxxelabs.ie`? `lorg.agora.irish`?
-5. **Battery impact:** 5-minute GPS sampling in background — needs real-device testing on both iOS and Android
+1. **InfluxDB vs PostgreSQL?** PostgreSQL chosen for Phase 0 (simpler ops). Revisit if query performance degrades at scale.
+2. **Battery impact** — 5-minute GPS needs real-device testing. May need to relax to 10 minutes.
+3. **Wearable?** No wearable yet. Heart rate deferred to Phase 2.
 
 ---
 
-## 10. Why This Matters
+## 9. Why This Matters
 
 The worm is not a productivity tool. It is not a health dashboard. It is a memory — the physical complement to the cognitive memory that Léargas builds from conversations and documents.
 
@@ -268,4 +227,4 @@ That is as close as software can come to genuine episodic memory.
 
 ---
 
-*PRD status: first draft. Awaiting architectural review before development begins. Post-viva priority.*
+*PRD v0.2 — domain confirmed lorg.ie, Phase 0 in active development.*
