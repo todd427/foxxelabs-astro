@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duel — Two Claudes, One Problem</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Themes ─────────────────────────────────────────────────── */
+:root {
+  --bg:           #0c0e12;
+  --surface:      #13161c;
+  --surface2:     #1a1e26;
+  --border:       rgba(255,255,255,0.07);
+  --text:         #dde0e8;
+  --text-dim:     rgba(221,224,232,0.45);
+  --text-faint:   rgba(221,224,232,0.2);
+  --shadow:       rgba(0,0,0,0.4);
+
+  --left-accent:  #2ec4b6;
+  --left-glow:    rgba(46,196,182,0.12);
+  --right-accent: #9b72cf;
+  --right-glow:   rgba(155,114,207,0.12);
+
+  --send-bg:      #dde0e8;
+  --send-text:    #0c0e12;
+
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+  --font-prose:   'DM Sans', sans-serif;
+  --radius:       10px;
+}
+
+[data-theme="light"] {
+  --bg:           #f5f2ec;
+  --surface:      #eae7df;
+  --surface2:     #dedad0;
+  --border:       rgba(0,0,0,0.1);
+  --text:         #1a1a1a;
+  --text-dim:     rgba(26,26,26,0.55);
+  --text-faint:   rgba(26,26,26,0.25);
+  --shadow:       rgba(0,0,0,0.12);
+
+  --left-accent:  #0a8f84;
+  --left-glow:    rgba(10,143,132,0.1);
+  --right-accent: #7040b0;
+  --right-glow:   rgba(112,64,176,0.1);
+
+  --send-bg:      #1a1a1a;
+  --send-text:    #f5f2ec;
+}
+
+[data-theme="paper"] {
+  --bg:           #fdf8f0;
+  --surface:      #f0ead8;
+  --surface2:     #e8e0ca;
+  --border:       rgba(120,100,70,0.15);
+  --text:         #2c2416;
+  --text-dim:     rgba(44,36,22,0.5);
+  --text-faint:   rgba(44,36,22,0.22);
+  --shadow:       rgba(120,100,70,0.15);
+
+  --left-accent:  #b35c00;
+  --left-glow:    rgba(179,92,0,0.1);
+  --right-accent: #5c3d8f;
+  --right-glow:   rgba(92,61,143,0.1);
+
+  --send-bg:      #2c2416;
+  --send-text:    #fdf8f0;
+
+  --font-prose:   'Lora', serif;
+}
+
+[data-theme="slate"] {
+  --bg:           #1e2433;
+  --surface:      #252d40;
+  --surface2:     #2d3652;
+  --border:       rgba(255,255,255,0.08);
+  --text:         #c8d0e0;
+  --text-dim:     rgba(200,208,224,0.45);
+  --text-faint:   rgba(200,208,224,0.2);
+
+  --left-accent:  #56c0e8;
+  --left-glow:    rgba(86,192,232,0.12);
+  --right-accent: #e87856;
+  --right-glow:   rgba(232,120,86,0.12);
+
+  --send-bg:      #c8d0e0;
+  --send-text:    #1e2433;
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface);
+  gap: 12px;
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.wordmark em { color: var(--text); font-style: normal; }
+.wordmark small {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-left: 6px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.api-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+#apiKey {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  width: 230px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+#apiKey:focus { border-color: rgba(255,255,255,0.2); }
+#apiKey::placeholder { color: var(--text-faint); }
+[data-theme="light"] #apiKey:focus,
+[data-theme="paper"] #apiKey:focus { border-color: rgba(0,0,0,0.25); }
+
+.theme-pick { display: flex; gap: 4px; flex-shrink: 0; }
+.theme-dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.theme-dot:hover { transform: scale(1.15); }
+.theme-dot.active { border-color: var(--text); }
+.theme-dot[data-t="dark"]  { background: #0c0e12; box-shadow: 0 0 0 1px rgba(255,255,255,0.15); }
+.theme-dot[data-t="light"] { background: #f5f2ec; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); }
+.theme-dot[data-t="paper"] { background: #fdf8f0; box-shadow: 0 0 0 1px rgba(120,100,70,0.3); }
+.theme-dot[data-t="slate"] { background: #1e2433; box-shadow: 0 0 0 1px rgba(255,255,255,0.15); }
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+.icon-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+[data-theme="light"] .icon-btn:hover,
+[data-theme="paper"] .icon-btn:hover { border-color: rgba(0,0,0,0.25); }
+
+/* ── Pane area ───────────────────────────────────────────────── */
+.panes {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 1px;
+  background: var(--border);
+}
+
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.pane-left  { border-top: 2px solid var(--left-accent); }
+.pane-right { border-top: 2px solid var(--right-accent); }
+
+.pane-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.pane-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.pane-left  .pane-label { background: var(--left-glow);  color: var(--left-accent); }
+.pane-right .pane-label { background: var(--right-glow); color: var(--right-accent); }
+
+.pane-header select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.pane-sys {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 8px;
+  outline: none;
+  resize: none;
+  flex: 1;
+  max-height: 46px;
+  line-height: 1.45;
+}
+.pane-sys::placeholder { color: var(--text-faint); }
+
+.btn-sm {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.btn-sm:hover { border-color: rgba(255,255,255,0.2); color: var(--text-dim); }
+[data-theme="light"] .btn-sm:hover,
+[data-theme="paper"] .btn-sm:hover { border-color: rgba(0,0,0,0.25); color: var(--text); }
+
+/* ── Messages ────────────────────────────────────────────────── */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128,128,128,0.2) transparent;
+}
+.messages::-webkit-scrollbar       { width: 4px; }
+.messages::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.2); border-radius: 2px; }
+
+.msg { display: flex; gap: 8px; animation: fadeUp 0.18s ease; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.msg-role {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 3px;
+  flex-shrink: 0;
+  width: 44px;
+  text-align: right;
+}
+.msg.user .msg-role { color: var(--text-faint); }
+.pane-left  .msg.assistant .msg-role { color: var(--left-accent);  opacity: 0.8; }
+.pane-right .msg.assistant .msg-role { color: var(--right-accent); opacity: 0.8; }
+
+.msg-content { flex: 1; min-width: 0; }
+
+.msg-body {
+  font-family: var(--font-prose);
+  line-height: 1.68;
+  color: var(--text);
+  font-size: 13.5px;
+}
+.msg.user .msg-body { color: var(--text-dim); }
+.msg-body p { margin-bottom: 0.5em; }
+.msg-body p:last-child { margin-bottom: 0; }
+
+.msg-body pre {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  overflow-x: auto;
+  margin: 6px 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.msg-body code {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: var(--surface2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.msg-body pre code { background: none; padding: 0; }
+
+/* Cross-send actions */
+.msg-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  flex-wrap: wrap;
+}
+.msg:hover .msg-actions { opacity: 1; }
+
+.action-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.action-btn:hover          { color: var(--text-dim); border-color: rgba(128,128,128,0.3); }
+.action-btn.to-left:hover  { color: var(--left-accent);  border-color: var(--left-accent); }
+.action-btn.to-right:hover { color: var(--right-accent); border-color: var(--right-accent); }
+
+/* Thinking dots */
+.thinking { display: flex; gap: 8px; align-items: center; opacity: 0.6; }
+.thinking .msg-role {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 44px;
+  text-align: right;
+}
+.dots { display: flex; gap: 4px; }
+.dots span {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+.pane-left  .dots span { background: var(--left-accent); }
+.pane-right .dots span { background: var(--right-accent); }
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes pulse {
+  0%,80%,100% { transform: scale(0.65); opacity: 0.35; }
+  40%         { transform: scale(1.0);  opacity: 0.9; }
+}
+
+.error-msg {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #d05050;
+  background: rgba(208,80,80,0.08);
+  border: 1px solid rgba(208,80,80,0.2);
+  border-radius: 6px;
+  padding: 7px 11px;
+  margin: 2px 0;
+}
+
+/* ── Input area ──────────────────────────────────────────────── */
+.input-area {
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.routing-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.routing-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+
+.route-btns { display: flex; gap: 3px; }
+
+.route-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  padding: 5px 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.route-btn:hover { border-color: rgba(128,128,128,0.3); color: var(--text-dim); }
+.route-btn.active-left  { background: var(--left-glow);  border-color: var(--left-accent);  color: var(--left-accent); }
+.route-btn.active-both  { background: var(--surface2); border-color: rgba(200,200,200,0.3); color: var(--text); }
+.route-btn.active-right { background: var(--right-glow); border-color: var(--right-accent); color: var(--right-accent); }
+
+.status-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.compose-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+#prompt {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 9px 13px;
+  resize: none;
+  outline: none;
+  min-height: 42px;
+  max-height: 150px;
+  transition: border-color 0.15s;
+}
+#prompt:focus { border-color: rgba(128,128,128,0.35); }
+#prompt::placeholder { color: var(--text-faint); }
+
+.send-btn {
+  background: var(--send-bg);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--send-text);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 10px 18px;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+  align-self: flex-end;
+  height: 42px;
+}
+.send-btn:hover    { opacity: 0.85; }
+.send-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+  <div class="wordmark"><em>Duel</em><small>by agora.irish</small></div>
+  <div class="header-controls">
+    <span class="api-label">Key</span>
+    <input type="password" id="apiKey" placeholder="sk-ant-…" autocomplete="off">
+    <div class="theme-pick">
+      <div class="theme-dot active" data-t="dark"  title="Dark"  onclick="setTheme('dark')"></div>
+      <div class="theme-dot"        data-t="slate" title="Slate" onclick="setTheme('slate')"></div>
+      <div class="theme-dot"        data-t="light" title="Light" onclick="setTheme('light')"></div>
+      <div class="theme-dot"        data-t="paper" title="Paper" onclick="setTheme('paper')"></div>
+    </div>
+    <button class="icon-btn" onclick="exportSession()">⬇ Export</button>
+  </div>
+</header>
+
+<div class="panes">
+
+  <!-- LEFT PANE — Alpha -->
+  <div class="pane pane-left" id="pane-left">
+    <div class="pane-header">
+      <span class="pane-label">Alpha</span>
+      <select id="model-left">
+        <option value="claude-opus-4-6">Opus 4.6</option>
+        <option value="claude-sonnet-4-6" selected>Sonnet 4.6</option>
+        <option value="claude-haiku-4-5-20251001">Haiku 4.5</option>
+      </select>
+      <textarea class="pane-sys" id="sys-left" rows="2" placeholder="System prompt (optional)…"></textarea>
+      <button class="btn-sm" onclick="clearPane('left')">Clear</button>
+    </div>
+    <div class="messages" id="msgs-left"></div>
+  </div>
+
+  <!-- RIGHT PANE — Beta -->
+  <div class="pane pane-right" id="pane-right">
+    <div class="pane-header">
+      <span class="pane-label">Beta</span>
+      <select id="model-right">
+        <option value="claude-opus-4-6">Opus 4.6</option>
+        <option value="claude-sonnet-4-6" selected>Sonnet 4.6</option>
+        <option value="claude-haiku-4-5-20251001">Haiku 4.5</option>
+      </select>
+      <textarea class="pane-sys" id="sys-right" rows="2" placeholder="System prompt (optional)…"></textarea>
+      <button class="btn-sm" onclick="clearPane('right')">Clear</button>
+    </div>
+    <div class="messages" id="msgs-right"></div>
+  </div>
+
+</div>
+
+<div class="input-area">
+  <div class="routing-row">
+    <span class="routing-label">Send to</span>
+    <div class="route-btns">
+      <button class="route-btn" id="btn-left"  onclick="setRoute('left')">◀ Alpha</button>
+      <button class="route-btn active-both" id="btn-both" onclick="setRoute('both')">⬤ Both</button>
+      <button class="route-btn" id="btn-right" onclick="setRoute('right')">Beta ▶</button>
+    </div>
+    <span class="status-pill" id="status">Ready</span>
+  </div>
+  <div class="compose-row">
+    <textarea id="prompt" placeholder="Enter for newlines — click Send to send" rows="2"></textarea>
+    <button class="send-btn" id="sendBtn" onclick="send()">Send</button>
+  </div>
+</div>
+
+<script>
+const histories = { left: [], right: [] };
+let route = 'both';
+let busy  = false;
+
+function setTheme(t) {
+  document.body.setAttribute('data-theme', t);
+  document.querySelectorAll('.theme-dot').forEach(d =>
+    d.classList.toggle('active', d.dataset.t === t));
+  localStorage.setItem('duel_theme', t);
+}
+const savedTheme = localStorage.getItem('duel_theme');
+if (savedTheme) setTheme(savedTheme);
+
+function setRoute(r) {
+  route = r;
+  document.getElementById('btn-left').className  = 'route-btn' + (r==='left'  ? ' active-left'  : '');
+  document.getElementById('btn-both').className  = 'route-btn' + (r==='both'  ? ' active-both'  : '');
+  document.getElementById('btn-right').className = 'route-btn' + (r==='right' ? ' active-right' : '');
+}
+
+function clearPane(side) {
+  histories[side] = [];
+  document.getElementById('msgs-' + side).innerHTML = '';
+}
+
+function renderMarkdown(text) {
+  return text
+    .replace(/```(\w*)\n?([\s\S]*?)```/g, (_, lang, code) =>
+      `<pre><code>${esc(code.trim())}</code></pre>`)
+    .replace(/`([^`\n]+)`/g, (_, c) => `<code>${esc(c)}</code>`)
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
+    .split(/\n\n+/)
+    .map(p => p.trim() ? `<p>${p.replace(/\n/g,'<br>')}</p>` : '')
+    .join('');
+}
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function appendMsg(side, role, content) {
+  const container = document.getElementById('msgs-' + side);
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+
+  const roleEl = document.createElement('div');
+  roleEl.className = 'msg-role';
+  roleEl.textContent = role === 'user' ? 'you' : side === 'left' ? 'α' : 'β';
+
+  const contentWrap = document.createElement('div');
+  contentWrap.className = 'msg-content';
+
+  const body = document.createElement('div');
+  body.className = 'msg-body';
+  body.innerHTML = renderMarkdown(content);
+  contentWrap.appendChild(body);
+
+  if (role === 'assistant') {
+    const actions = document.createElement('div');
+    actions.className = 'msg-actions';
+
+    const crossBtn = document.createElement('button');
+    if (side === 'left') {
+      crossBtn.className = 'action-btn to-right';
+      crossBtn.textContent = '→ send to Beta';
+      crossBtn.onclick = () => crossSend('right', content);
+    } else {
+      crossBtn.className = 'action-btn to-left';
+      crossBtn.textContent = '→ send to Alpha';
+      crossBtn.onclick = () => crossSend('left', content);
+    }
+    actions.appendChild(crossBtn);
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'action-btn';
+    copyBtn.textContent = 'copy';
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(content);
+      copyBtn.textContent = 'copied ✓';
+      setTimeout(() => copyBtn.textContent = 'copy', 1500);
+    };
+    actions.appendChild(copyBtn);
+
+    const useBtn = document.createElement('button');
+    useBtn.className = 'action-btn';
+    useBtn.textContent = 'use as prompt';
+    useBtn.onclick = () => {
+      document.getElementById('prompt').value = content;
+      document.getElementById('prompt').focus();
+      autoResize();
+    };
+    actions.appendChild(useBtn);
+
+    contentWrap.appendChild(actions);
+  }
+
+  div.appendChild(roleEl);
+  div.appendChild(contentWrap);
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+async function crossSend(targetSide, sourceText) {
+  if (busy) return;
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!apiKey) { setStatus('⚠ Enter API key first'); return; }
+
+  appendMsg(targetSide, 'user', sourceText);
+  showThinking(targetSide);
+  busy = true;
+  document.getElementById('sendBtn').disabled = true;
+  setStatus('Thinking…');
+
+  try {
+    const text = await callClaude(targetSide, sourceText);
+    hideThinking(targetSide);
+    appendMsg(targetSide, 'assistant', text);
+  } catch(e) {
+    hideThinking(targetSide);
+    showError(targetSide, e.message);
+  }
+
+  busy = false;
+  document.getElementById('sendBtn').disabled = false;
+  setStatus('Ready');
+}
+
+function showThinking(side) {
+  const container = document.getElementById('msgs-' + side);
+  const div = document.createElement('div');
+  div.className = 'thinking';
+  div.id = 'thinking-' + side;
+  const roleEl = document.createElement('div');
+  roleEl.className = 'msg-role';
+  roleEl.textContent = side === 'left' ? 'α' : 'β';
+  const dots = document.createElement('div');
+  dots.className = 'dots';
+  dots.innerHTML = '<span></span><span></span><span></span>';
+  div.appendChild(roleEl);
+  div.appendChild(dots);
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function hideThinking(side) {
+  const el = document.getElementById('thinking-' + side);
+  if (el) el.remove();
+}
+
+async function callClaude(side, userText) {
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!apiKey) throw new Error('No API key');
+
+  const model   = document.getElementById('model-' + side).value;
+  const sysText = document.getElementById('sys-' + side).value.trim();
+
+  histories[side].push({ role: 'user', content: userText });
+
+  const body = { model, max_tokens: 2048, messages: histories[side] };
+  if (sysText) body.system = sysText;
+
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    throw new Error(err?.error?.message || `HTTP ${resp.status}`);
+  }
+
+  const data = await resp.json();
+  const text = data.content?.[0]?.text || '';
+  histories[side].push({ role: 'assistant', content: text });
+  return text;
+}
+
+async function send() {
+  if (busy) return;
+  const prompt = document.getElementById('prompt').value.trim();
+  if (!prompt) return;
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!apiKey) { setStatus('⚠ Enter API key first'); return; }
+
+  const sides = route === 'both' ? ['left','right'] : [route];
+  busy = true;
+  document.getElementById('sendBtn').disabled = true;
+  document.getElementById('prompt').value = '';
+  autoResize();
+  setStatus('Thinking…');
+
+  sides.forEach(s => appendMsg(s, 'user', prompt));
+  sides.forEach(s => showThinking(s));
+
+  await Promise.all(sides.map(s =>
+    callClaude(s, prompt)
+      .then(text => { hideThinking(s); appendMsg(s, 'assistant', text); })
+      .catch(err  => { hideThinking(s); showError(s, err.message); })
+  ));
+
+  setStatus('Ready');
+  busy = false;
+  document.getElementById('sendBtn').disabled = false;
+  document.getElementById('prompt').focus();
+}
+
+function exportSession() {
+  const lines = ['# Duel — Session Export', `Exported: ${new Date().toISOString()}`, ''];
+  for (const side of ['left','right']) {
+    const label = side === 'left' ? 'Alpha' : 'Beta';
+    const model = document.getElementById('model-' + side).value;
+    const sys   = document.getElementById('sys-' + side).value.trim();
+    if (!histories[side].length) continue;
+    lines.push(`## ${label} (${model})`);
+    if (sys) lines.push(`> System: ${sys}\n`);
+    for (const msg of histories[side]) {
+      const role = msg.role === 'user' ? '**You**' : `**${label}**`;
+      lines.push(`${role}\n\n${msg.content}\n\n---`);
+    }
+    lines.push('');
+  }
+  const blob = new Blob([lines.join('\n')], { type: 'text/markdown' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = `duel-${new Date().toISOString().slice(0,16).replace(/[:T]/g,'-')}.md`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function showError(side, msg) {
+  const container = document.getElementById('msgs-' + side);
+  const el = document.createElement('div');
+  el.className = 'error-msg';
+  el.textContent = '⚠ ' + msg;
+  container.appendChild(el);
+  container.scrollTop = container.scrollHeight;
+}
+
+function setStatus(msg) { document.getElementById('status').textContent = msg; }
+
+function autoResize() {
+  const el = document.getElementById('prompt');
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 150) + 'px';
+}
+
+document.getElementById('prompt').addEventListener('input', autoResize);
+
+const keyInput = document.getElementById('apiKey');
+const saved = sessionStorage.getItem('duel_key');
+if (saved) keyInput.value = saved;
+keyInput.addEventListener('input', () => sessionStorage.setItem('duel_key', keyInput.value));
+</script>
+</body>
+</html>
