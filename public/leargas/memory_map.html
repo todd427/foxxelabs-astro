@@ -57,11 +57,12 @@
   #legend { display: flex; gap: 16px; flex-shrink: 0; }
   .leg { display: flex; align-items: center; gap: 5px; font-size: 10px; color: rgba(255,255,255,0.3); }
   .leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  #sound-btn {
+  #sound-btn, #privacy-btn {
     font-size: 16px; background: none; border: none;
     cursor: pointer; opacity: 0.4; transition: opacity 0.15s; flex-shrink: 0;
   }
-  #sound-btn:hover { opacity: 0.8; }
+  #sound-btn:hover, #privacy-btn:hover { opacity: 0.8; }
+  #privacy-btn.active { opacity: 0.9; filter: drop-shadow(0 0 4px #c9a84c); }
   #tooltip {
     position: fixed; background: rgba(14,14,18,0.97);
     border: 0.5px solid rgba(255,255,255,0.1); border-radius: 10px;
@@ -73,6 +74,15 @@
   .tip-heat   { color: #c9a84c; font-size: 11px; }
   .tip-weight { color: #5DCAA5; font-size: 11px; }
   .tip-meta   { color: rgba(255,255,255,0.35); font-size: 10px; margin-top: 2px; }
+  #privacy-banner {
+    display: none; position: absolute; top: 10px; left: 50%;
+    transform: translateX(-50%);
+    background: rgba(201,168,76,0.12); border: 0.5px solid rgba(201,168,76,0.3);
+    border-radius: 6px; padding: 4px 12px;
+    font-size: 10px; color: rgba(201,168,76,0.7);
+    letter-spacing: 0.1em; pointer-events: none;
+  }
+  #privacy-banner.visible { display: block; }
 </style>
 </head>
 <body>
@@ -95,6 +105,7 @@
     <div id="period-label">—</div>
     <div id="doc-count"></div>
   </div>
+  <div id="privacy-banner">PRIVATE VIEW</div>
 </div>
 
 <div id="controls">
@@ -102,6 +113,7 @@
   <input id="scrubber" type="range" min="0" max="0" value="0" step="1">
   <div id="time-label">2023-02</div>
   <button id="sound-btn" title="Toggle sound">🔊</button>
+  <button id="privacy-btn" title="Toggle privacy mode — hides project names">👁</button>
   <div id="legend">
     <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>project</div>
     <div class="leg"><div class="leg-dot" style="background:#BA7517"></div>engineering</div>
@@ -126,6 +138,39 @@ const DECAY = 0.62;
 const MIN_OPACITY = 0.04;
 let _audioCtx = null;
 let soundEnabled = true;
+let privacyMode = false;
+
+// ── Privacy mode ──────────────────────────────────────────────────────────────
+// Maps blob colour to a generic category label shown instead of the real title.
+const COLOR_LABEL = {
+  '#E8A020': 'Writing',
+  '#1D9E75': 'Project',
+  '#534AB7': 'Personal',
+  '#BA7517': 'Engineering',
+  '#5F5E5A': 'General',
+};
+
+function blobDisplayTitle(d) {
+  if (!privacyMode) return d.r > 20 ? (d.convTitle.length > 24 ? d.convTitle.slice(0, 22) + '…' : d.convTitle) : '';
+  return d.r > 20 ? (COLOR_LABEL[d.color] || 'Activity') : '';
+}
+
+function refreshPrivacy() {
+  blobLayer.selectAll('g.blob').select('text.lbl')
+    .text(d => blobDisplayTitle(d));
+  // Hide tooltip on mode switch
+  document.getElementById('tooltip').style.opacity = '0';
+  document.getElementById('privacy-banner').classList.toggle('visible', privacyMode);
+  const btn = document.getElementById('privacy-btn');
+  btn.classList.toggle('active', privacyMode);
+  btn.title = privacyMode ? 'Privacy mode ON — click to show details' : 'Privacy mode — hides project names';
+}
+
+document.getElementById('privacy-btn').addEventListener('click', function() {
+  getAudioCtx();
+  privacyMode = !privacyMode;
+  refreshPrivacy();
+});
 
 function getAudioCtx() {
   if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -256,19 +301,30 @@ function showPeriod(idx) {
   const enterG = join.enter().append('g').attr('class', 'blob').attr('transform', d => `translate(${d.x},${d.y})`).style('opacity', 0).style('cursor', 'pointer');
   enterG.append('circle').attr('class', 'halo').attr('r', d => d.r * 1.7).attr('fill', d => d.color + '12').attr('filter', 'url(#glow)');
   enterG.append('circle').attr('class', 'main').attr('r', d => d.r).attr('fill', d => d.sparse ? 'none' : d.color + 'c0').attr('stroke', d => d.color).attr('stroke-width', d => d.sparse ? 1.5 : 0).attr('stroke-dasharray', d => d.sparse ? '5,4' : 'none').attr('filter', d => d.convHeat > 0.5 ? 'url(#glow-soft)' : 'none');
-  enterG.append('text').attr('class', 'lbl').attr('text-anchor', 'middle').attr('dy', '0.35em').attr('pointer-events', 'none').attr('fill', 'rgba(255,255,255,0.85)').attr('font-size', d => Math.max(7, Math.min(13, d.r * 0.28)) + 'px').text(d => d.r > 20 ? (d.convTitle.length > 24 ? d.convTitle.slice(0, 22) + '…' : d.convTitle) : '');
+  enterG.append('text').attr('class', 'lbl').attr('text-anchor', 'middle').attr('dy', '0.35em').attr('pointer-events', 'none').attr('fill', 'rgba(255,255,255,0.85)').attr('font-size', d => Math.max(7, Math.min(13, d.r * 0.28)) + 'px').text(d => blobDisplayTitle(d));
   const allG = enterG.merge(join);
   allG.on('mouseenter', function(event, d) {
-    tooltip.style.opacity = '1';
-    document.getElementById('tip-title').textContent = d.convTitle;
-    document.getElementById('tip-heat').textContent = d.active ? `heat ${(d.convHeat * 100).toFixed(0)}% — ${d.convHeat > 0.6 ? 'deeply explored' : d.convHeat > 0.3 ? 'substantial' : 'brief'}` : `memory — fading (${(d.targetOpacity * 100).toFixed(0)}% strength)`;
-    document.getElementById('tip-weight').textContent = d.sparse ? 'first appearance' : `period weight ${(d.weight * 100).toFixed(1)}%`;
-    document.getElementById('tip-meta').textContent = `${d.period} · ${d.docCount.toLocaleString()} docs`;
+    if (privacyMode) {
+      // In privacy mode: show only category + heat level, no title
+      tooltip.style.opacity = '1';
+      document.getElementById('tip-title').textContent = COLOR_LABEL[d.color] || 'Activity';
+      document.getElementById('tip-heat').textContent = d.active
+        ? `${d.convHeat > 0.6 ? 'high' : d.convHeat > 0.3 ? 'medium' : 'low'} engagement`
+        : `fading (${(d.targetOpacity * 100).toFixed(0)}% strength)`;
+      document.getElementById('tip-weight').textContent = d.sparse ? 'first appearance' : `period weight ${(d.weight * 100).toFixed(1)}%`;
+      document.getElementById('tip-meta').textContent = `${d.period} · ${d.docCount.toLocaleString()} memories`;
+    } else {
+      tooltip.style.opacity = '1';
+      document.getElementById('tip-title').textContent = d.convTitle;
+      document.getElementById('tip-heat').textContent = d.active ? `heat ${(d.convHeat * 100).toFixed(0)}% — ${d.convHeat > 0.6 ? 'deeply explored' : d.convHeat > 0.3 ? 'substantial' : 'brief'}` : `memory — fading (${(d.targetOpacity * 100).toFixed(0)}% strength)`;
+      document.getElementById('tip-weight').textContent = d.sparse ? 'first appearance' : `period weight ${(d.weight * 100).toFixed(1)}%`;
+      document.getElementById('tip-meta').textContent = `${d.period} · ${d.docCount.toLocaleString()} docs`;
+    }
   }).on('mousemove', e => { tooltip.style.left = (e.clientX + 18) + 'px'; tooltip.style.top = (e.clientY - 52) + 'px'; }).on('mouseleave', () => { tooltip.style.opacity = '0'; });
   allG.transition().duration(700).ease(d3.easeCubicOut).style('opacity', d => d.targetOpacity).style('pointer-events', d => d.active ? 'all' : 'none');
   allG.select('circle.main').transition().duration(700).ease(d3.easeCubicOut).attr('r', d => d.active ? d.r : d.r * 0.75).attr('fill', d => d.sparse ? 'none' : d.color + 'c0');
   allG.select('circle.halo').transition().duration(700).attr('r', d => d.active ? d.r * 1.7 : d.r * 1.1);
-  allG.select('text.lbl').transition().duration(700).attr('font-size', d => Math.max(7, Math.min(13, d.r * 0.28)) + 'px').style('opacity', d => d.active ? 1 : 0);
+  allG.select('text.lbl').transition().duration(700).attr('font-size', d => Math.max(7, Math.min(13, d.r * 0.28)) + 'px').style('opacity', d => d.active ? 1 : 0).text(d => blobDisplayTitle(d));
   sim.force('x', d3.forceX(d => categoryX(d.color)).strength(d => d.active ? 0.07 : 0.008));
   sim.force('y', d3.forceY(H / 2).strength(d => d.active ? 0.02 : 0.004));
   sim.force('charge', d3.forceManyBody().strength(d => d.active ? -d.r * 4 : -d.r));
