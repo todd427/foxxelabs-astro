@@ -19,9 +19,7 @@ draft: false
 
 Not in photographs. Not in calendar entries. But as a continuous trail through space and time — every walk to the shop, every evening at home, every drive to Derry, rendered as a glowing worm threading through four dimensions.
 
-That's Lorg.
-
-The Irish word means *track, trail, footprint*. The system collects GPS position, step count, screen state, battery level, and weather from an Android phone, stores it in a time-series database, and will eventually render it as a 3D tube at [lorg.ie](https://lorg.ie) — latitude and longitude as X/Y, time as the Z axis, step cadence as thickness, weather as ambient colour.
+That's Lorg (pronounced *lorr-ug*, from the Irish *lorg* — track, trail, footprint). The system collects GPS position, step count, screen state, battery level, and weather from an Android phone, stores it in a time-series database, and will eventually render it as a 3D tube at [lorg.ie](https://lorg.ie) — latitude and longitude as X/Y, time as the Z axis, step cadence as thickness, weather as ambient colour.
 
 Phase 0 is the pipe. No visualisation yet. Just get the data flowing. On the evening of 21 March 2026, we sat down with an empty repository, a Phase 0 brief, and Claude Code. Seven hours later, the pipe was built, data was flowing, and the first daily summary was searchable in [Mnemos](/resources/experiment-leargas-memory-map).
 
