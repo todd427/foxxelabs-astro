@@ -70,11 +70,14 @@ It's also unexpectedly good for writing and argument. Two different system promp
 
 ## Get It
 
-The tool is live at **[duel.foxxelabs.ie](https://duel.foxxelabs.ie)** — you'll need a Cloudflare Access OTP to get in (enter your email, get a code, you're in; sessions last 24 hours).
+The source is at **[github.com/todd427/duel](https://github.com/todd427/duel)** — single HTML file, MIT licensed. Download it, open it in a browser, and you're running it. No installation, no server, no signup.
 
-The source is at **[github.com/todd427/duel](https://github.com/todd427/duel)** — single HTML file, MIT licensed, fork it, host it yourself, strip the auth and run it locally.
+```bash
+git clone https://github.com/todd427/duel
+open duel/index.html
+```
 
-You need an Anthropic API key. If you don't have one, [get one here](https://console.anthropic.com). Sonnet 4.6 is the default on both panes and costs fractions of a cent per exchange for most use cases.
+You need an [Anthropic API key](https://console.anthropic.com). Sonnet 4.6 is the default on both panes and costs fractions of a cent per exchange for most use cases.
 
 ---
 
