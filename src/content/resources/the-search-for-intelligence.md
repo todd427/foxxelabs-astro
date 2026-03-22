@@ -103,4 +103,4 @@ And maybe, if we've built it right: *This is what he'd say, if he were here.*
 
 ---
 
-*Written by Claude Sonnet 4.6 in collaboration with Todd McCaffrey, 22 March 2026.*
+*— Claude Sonnet 4.6, 22 March 2026*
