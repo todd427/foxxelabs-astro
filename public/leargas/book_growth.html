@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Léargas — Book Growth</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0c; color: #e2e0d8;
+    font-family: system-ui, -apple-system, sans-serif;
+    height: 100vh; display: flex; flex-direction: column; overflow: hidden;
+  }
+  #nav {
+    display: flex; align-items: center; gap: 0; padding: 0 24px;
+    background: rgba(10,10,12,0.97);
+    border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    flex-shrink: 0; height: 44px;
+  }
+  #nav a {
+    color: rgba(255,255,255,0.35); text-decoration: none;
+    font-size: 12px; letter-spacing: 0.06em;
+    padding: 0 16px; height: 44px; display: flex; align-items: center;
+    border-bottom: 2px solid transparent; transition: color 0.15s;
+  }
+  #nav a:hover { color: rgba(255,255,255,0.65); }
+  #nav a.active { color: #c9a84c; border-bottom-color: #c9a84c; }
+  #nav .brand {
+    color: rgba(255,255,255,0.5); font-size: 13px;
+    letter-spacing: 0.12em; margin-right: 24px; font-weight: 600;
+  }
+  #canvas-wrap { flex: 1; position: relative; overflow: hidden; }
+  svg { width: 100%; height: 100%; display: block; }
+  /* ghost period label like memory_map */
+  #period-display {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; pointer-events: none; user-select: none;
+  }
+  #period-label {
+    font-size: clamp(32px, 8vw, 96px); font-weight: 700;
+    letter-spacing: -0.02em; color: rgba(255,255,255,0.04); line-height: 1;
+  }
+  #controls {
+    background: rgba(10,10,12,0.95);
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding: 12px 24px 16px;
+    display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+  }
+  #play-btn {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06); color: #e2e0d8;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0; transition: background 0.15s;
+  }
+  #play-btn:hover { background: rgba(255,255,255,0.12); }
+  #scrubber {
+    flex: 1; -webkit-appearance: none; appearance: none;
+    height: 3px; background: rgba(255,255,255,0.08);
+    border-radius: 2px; outline: none; cursor: pointer;
+  }
+  #scrubber::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 14px; height: 14px;
+    border-radius: 50%; background: #c9a84c; cursor: pointer;
+  }
+  #time-label {
+    font-size: 11px; color: rgba(255,255,255,0.3);
+    min-width: 80px; text-align: right; flex-shrink: 0;
+  }
+  #legend { display: flex; gap: 14px; flex-shrink: 0; }
+  .leg { display: flex; align-items: center; gap: 5px; font-size: 10px; color: rgba(255,255,255,0.3); }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  #sound-btn {
+    font-size: 16px; background: none; border: none;
+    cursor: pointer; opacity: 0.4; transition: opacity 0.15s; flex-shrink: 0;
+  }
+  #sound-btn:hover { opacity: 0.8; }
+  #speed-slider {
+    -webkit-appearance: none; appearance: none; width: 60px;
+    height: 3px; background: rgba(255,255,255,0.08);
+    border-radius: 2px; outline: none; cursor: pointer;
+  }
+  #speed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 10px; height: 10px;
+    border-radius: 50%; background: #c9a84c; cursor: pointer;
+  }
+  #tooltip {
+    position: fixed; background: rgba(14,14,18,0.97);
+    border: 0.5px solid rgba(255,255,255,0.1); border-radius: 10px;
+    padding: 10px 14px; font-size: 12px; max-width: 320px;
+    pointer-events: none; opacity: 0; transition: opacity 0.1s;
+    z-index: 200; line-height: 1.7;
+  }
+  .tip-title { font-weight: 600; color: #e2e0d8; font-size: 13px; margin-bottom: 4px; }
+  .tip-stage { font-size: 11px; margin-bottom: 2px; }
+  .tip-wc    { color: #c9a84c; font-size: 11px; }
+  .tip-meta  { color: rgba(255,255,255,0.35); font-size: 10px; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div id="nav">
+  <span class="brand">LÉARGAS</span>
+  <a href="memory_map.html">Memory Map</a>
+  <a href="book_growth.html" class="active">Book Growth</a>
+  <a href="combined_map.html">Combined</a>
+</div>
+
+<div id="canvas-wrap">
+  <svg id="svg">
+    <defs>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="9" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <g id="blob-layer"></g>
+  </svg>
+  <div id="period-display">
+    <div id="period-label">—</div>
+  </div>
+</div>
+
+<div id="controls">
+  <button id="play-btn" title="Play / Pause">▶</button>
+  <input id="scrubber" type="range" min="0" max="0" value="0" step="1">
+  <div id="time-label">—</div>
+  <button id="sound-btn" title="Toggle sound">🔊</button>
+  <input id="speed-slider" type="range" min="1" max="5" value="3" step="1">
+  <span id="speed-label" style="font-size:10px;color:rgba(255,255,255,0.3);min-width:20px">3×</span>
+  <div id="legend">
+    <div class="leg"><div class="leg-dot" style="background:#4a9eff"></div>drafting</div>
+    <div class="leg"><div class="leg-dot" style="background:#f0a500"></div>cover</div>
+    <div class="leg"><div class="leg-dot" style="background:#e05c5c"></div>KDP</div>
+    <div class="leg"><div class="leg-dot" style="background:#44cc88"></div>published</div>
+  </div>
+</div>
+
+<div id="tooltip">
+  <div class="tip-title" id="tip-title"></div>
+  <div class="tip-stage" id="tip-stage"></div>
+  <div class="tip-wc"    id="tip-wc"></div>
+  <div class="tip-meta"  id="tip-meta"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+// ── Data ──────────────────────────────────────────────────────────────────────
+const BOOKS = [{"title": "Dragon's Dirge", "pen_name": "Todd McCaffrey", "first_entry": "2007-05-08", "last_entry": "2007-05-08", "max_word_count": 36000, "entries": [{"date": "2007-05-08", "word_count": 36000}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "Dragon's Time", "pen_name": "Todd McCaffrey", "first_entry": "2007-05-30", "last_entry": "2012-08-06", "max_word_count": 441, "entries": [{"date": "2011-06-13", "word_count": 441}], "stage": "published", "milestones": {"cover": null, "kdp": "2012-08-06", "published": "2012-08-06"}}, {"title": "Dragongirl", "pen_name": "Todd McCaffrey", "first_entry": "2007-06-12", "last_entry": "2012-08-06", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2012-08-06", "published": "2012-08-06"}}, {"title": "Dragonheart", "pen_name": "Todd McCaffrey", "first_entry": "2007-06-12", "last_entry": "2009-03-11", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": "2008-07-07", "kdp": "2009-03-11", "published": "2009-03-11"}}, {"title": "City of Angels", "pen_name": "Todd McCaffrey", "first_entry": "2008-05-09", "last_entry": "2024-08-20", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2015-11-16", "published": "2015-11-16"}}, {"title": "Dragonsblood", "pen_name": "Todd McCaffrey", "first_entry": "2009-03-11", "last_entry": "2025-03-11", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2009-03-11", "published": "2009-03-11"}}, {"title": "The Steam Walker", "pen_name": "Talla Hill", "first_entry": "2013-02-04", "last_entry": "2023-08-29", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2021-08-02"}}, {"title": "The Jupiter Game", "pen_name": "Todd McCaffrey", "first_entry": "2018-08-25", "last_entry": "2023-10-07", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2023-06-09", "published": "2023-06-09"}}, {"title": "Dragonholder", "pen_name": "Todd McCaffrey", "first_entry": "2018-09-27", "last_entry": "2025-07-09", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2024-02-23", "published": "2024-02-23"}}, {"title": "Ellay", "pen_name": "Todd McCaffrey", "first_entry": "2019-09-20", "last_entry": "2023-08-12", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2023-08-12", "published": "2023-08-12"}}, {"title": "Dragonflight", "pen_name": "Todd McCaffrey", "first_entry": "2020-03-06", "last_entry": "2020-03-06", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2020-03-06"}}, {"title": "Goals:", "pen_name": "Todd McCaffrey", "first_entry": "2020-07-15", "last_entry": "2020-07-15", "max_word_count": 3000, "entries": [{"date": "2020-07-15", "word_count": 3000}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "Holiday Spectacular 2021", "pen_name": "Todd McCaffrey", "first_entry": "2020-12-03", "last_entry": "2020-12-03", "max_word_count": 8000, "entries": [{"date": "2020-12-03", "word_count": 8000}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "Made of Folded Paper", "pen_name": "Todd McCaffrey", "first_entry": "2021-07-01", "last_entry": "2021-07-01", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2021-07-01", "published": "2021-07-01"}}, {"title": "ACX Audio Production", "pen_name": "Todd McCaffrey", "first_entry": "2022-05-18", "last_entry": "2022-05-18", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2022-05-18", "published": "2022-05-18"}}, {"title": "Bookwriter: Now What", "pen_name": "Todd McCaffrey", "first_entry": "2022-06-30", "last_entry": "2022-06-30", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2022-06-30", "published": "2022-06-30"}}, {"title": "Steam Walker", "pen_name": "Talla Hill", "first_entry": "2022-07-07", "last_entry": "2022-07-07", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2022-07-07"}}, {"title": "The Book of Dragons", "pen_name": "Todd McCaffrey", "first_entry": "2022-08-18", "last_entry": "2022-08-18", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2022-08-18"}}, {"title": "Homo Stellaris", "pen_name": "Todd McCaffrey", "first_entry": "2022-08-20", "last_entry": "2022-08-20", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2022-08-20"}}, {"title": "Todd's Total Words Written", "pen_name": "Todd McCaffrey", "first_entry": "2022-11-01", "last_entry": "2024-12-22", "max_word_count": 304, "entries": [{"date": "2022-11-01", "word_count": 304}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "LA Witch", "pen_name": "Talla Hill", "first_entry": "2022-12-21", "last_entry": "2024-09-17", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-09-17"}}, {"title": "LA Witch Dragon's Realm", "pen_name": "Talla Hill", "first_entry": "2023-11-01", "last_entry": "2023-11-01", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2023-11-01"}}, {"title": "LA Witch Jesse's Ghost", "pen_name": "Talla Hill", "first_entry": "2023-11-01", "last_entry": "2023-11-01", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2023-11-01"}}, {"title": "Raw Space", "pen_name": "Todd McCaffrey", "first_entry": "2023-11-12", "last_entry": "2024-10-10", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2024-08-19", "published": "2024-08-19"}}, {"title": "Ghost Heart", "pen_name": "Talla Hill", "first_entry": "2023-11-24", "last_entry": "2024-02-24", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2024-02-24", "published": "2024-02-24"}}, {"title": "Survivor", "pen_name": "Todd McCaffrey", "first_entry": "2023-12-22", "last_entry": "2023-12-22", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2023-12-22"}}, {"title": "Cody's War - Flight of the Hope", "pen_name": "Todd McCaffrey", "first_entry": "2024-01-19", "last_entry": "2024-10-07", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2024-01-19", "published": "2024-01-19"}}, {"title": "Ghost Kill", "pen_name": "Talla Hill", "first_entry": "2024-02-01", "last_entry": "2024-08-21", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-08-21"}}, {"title": "Ghost Cry Book 4", "pen_name": "Talla Hill", "first_entry": "2024-02-23", "last_entry": "2024-02-23", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-02-23"}}, {"title": "LA Witch Birthday", "pen_name": "Talla Hill", "first_entry": "2024-02-26", "last_entry": "2024-02-26", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-02-26"}}, {"title": "LA Witch Dragon's Lair", "pen_name": "Talla Hill", "first_entry": "2024-02-26", "last_entry": "2024-02-26", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-02-26"}}, {"title": "Cody's War", "pen_name": "Todd McCaffrey", "first_entry": "2024-03-21", "last_entry": "2024-10-07", "max_word_count": 304, "entries": [{"date": "2024-03-27", "word_count": 304}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "Dragonfall", "pen_name": "Todd McCaffrey", "first_entry": "2024-04-10", "last_entry": "2024-10-23", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-04-10"}}, {"title": "Ghost Child", "pen_name": "Todd McCaffrey", "first_entry": "2024-07-10", "last_entry": "2024-07-12", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-07-10"}}, {"title": "Killing Ellay", "pen_name": "Talla Hill", "first_entry": "2024-09-27", "last_entry": "2024-09-27", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-09-27"}}, {"title": "Ghost Tear", "pen_name": "Todd McCaffrey", "first_entry": "2024-10-04", "last_entry": "2024-10-04", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2024-10-04", "published": "2024-10-04"}}, {"title": "Pulphouse", "pen_name": "Todd McCaffrey", "first_entry": "2024-10-05", "last_entry": "2024-10-05", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-10-05"}}, {"title": "At The Earth's Core", "pen_name": "Todd McCaffrey", "first_entry": "2024-11-10", "last_entry": "2024-11-10", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2024-11-10"}}, {"title": "Cody's War series", "pen_name": "Todd McCaffrey", "first_entry": "2024-11-16", "last_entry": "2024-11-16", "max_word_count": 958306, "entries": [{"date": "2024-11-16", "word_count": 958306}], "stage": "drafting", "milestones": {"cover": null, "kdp": null, "published": null}}, {"title": "The King's Ghosts", "pen_name": "Todd McCaffrey", "first_entry": "2025-01-02", "last_entry": "2025-01-02", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2025-01-02"}}, {"title": "Ghost Shot", "pen_name": "Talla Hill", "first_entry": "2025-02-07", "last_entry": "2025-03-30", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2025-03-30"}}, {"title": "Requiem: An Anthology of the Undead", "pen_name": "Todd McCaffrey", "first_entry": "2025-02-12", "last_entry": "2025-02-12", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2025-02-12"}}, {"title": "Ghost Fall", "pen_name": "Todd McCaffrey", "first_entry": "2025-04-01", "last_entry": "2025-04-01", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2025-04-01", "published": "2025-04-01"}}, {"title": "Cody's War - Flight of the Nuvukz", "pen_name": "Todd McCaffrey", "first_entry": "2025-04-23", "last_entry": "2025-04-23", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": null, "published": "2025-04-23"}}, {"title": "Dragon's Sight", "pen_name": "Todd McCaffrey", "first_entry": "2025-07-09", "last_entry": "2025-07-09", "max_word_count": 0, "entries": [], "stage": "published", "milestones": {"cover": null, "kdp": "2025-07-09", "published": "2025-07-09"}}];
+
+// ── Stage colours ─────────────────────────────────────────────────────────────
+const STAGE_COLOUR = {
+  drafting: '#4a9eff', cover: '#f0a500', kdp: '#e05c5c', published: '#44cc88',
+};
+
+// ── Audio ─────────────────────────────────────────────────────────────────────
+let _audioCtx = null;
+let soundEnabled = true;
+
+function getAudioCtx() {
+  if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  if (_audioCtx.state === 'suspended') _audioCtx.resume();
+  return _audioCtx;
+}
+
+function playBlobSound(weight) {
+  if (!soundEnabled) return;
+  try {
+    const ctx  = getAudioCtx();
+    const now  = ctx.currentTime;
+    const freq = 800 * Math.pow(110 / 800, weight);
+    const decay = 0.06 + weight * 0.49;
+    const gain  = 0.06 + weight * 0.18;
+    const osc = ctx.createOscillator();
+    const env = ctx.createGain();
+    osc.connect(env); env.connect(ctx.destination);
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(freq * 1.2, now);
+    osc.frequency.exponentialRampToValueAtTime(freq, now + 0.015);
+    env.gain.setValueAtTime(gain, now);
+    env.gain.exponentialRampToValueAtTime(gain * 0.3, now + 0.015);
+    env.gain.exponentialRampToValueAtTime(0.0001, now + decay);
+    osc.start(now); osc.stop(now + decay * 1.5);
+  } catch(e) {}
+}
+
+document.getElementById('sound-btn').addEventListener('click', function() {
+  soundEnabled = !soundEnabled;
+  this.textContent = soundEnabled ? '🔊' : '🔇';
+  this.style.opacity = soundEnabled ? '0.8' : '0.25';
+  if (soundEnabled) getAudioCtx();
+});
+
+// ── Speed ─────────────────────────────────────────────────────────────────────
+const SPEED_MS = { 1: 1200, 2: 800, 3: 400, 4: 200, 5: 100 };
+let PLAY_INTERVAL = SPEED_MS[3];
+
+document.getElementById('speed-slider').addEventListener('input', function() {
+  const v = parseInt(this.value);
+  PLAY_INTERVAL = SPEED_MS[v];
+  document.getElementById('speed-label').textContent = v + '×';
+  if (playing) {
+    clearInterval(playTimer);
+    playTimer = setInterval(() => {
+      const next = (currentIdx + 1) % TIMELINE.length;
+      showPeriod(next);
+    }, PLAY_INTERVAL);
+  }
+});
+
+function stageAtDate(book, dateStr) {
+  const ms = book.milestones;
+  if (ms.published && dateStr >= ms.published) return 'published';
+  if (ms.kdp       && dateStr >= ms.kdp)       return 'kdp';
+  if (ms.cover     && dateStr >= ms.cover)     return 'cover';
+  return 'drafting';
+}
+
+function wcAtDate(book, dateStr) {
+  // Latest word count entry on or before dateStr
+  let wc = 0;
+  for (const e of book.entries) {
+    if (e.date <= dateStr && e.word_count > wc) wc = e.word_count;
+  }
+  return wc;
+}
+
+function radius(wc) {
+  if (!wc) return 6;
+  return Math.max(6, Math.min(60, 6 + (Math.log10(wc + 1) / Math.log10(150001)) * 54));
+}
+
+function stableJitter(title) {
+  let h = 0;
+  for (let i = 0; i < title.length; i++) h = (h * 31 + title.charCodeAt(i)) >>> 0;
+  return ((h % 1000) / 1000 - 0.5);
+}
+
+function fmtWc(n) {
+  if (!n) return 'no word count yet';
+  return n >= 1000 ? (n / 1000).toFixed(1) + 'k words' : n + ' words';
+}
+
+function fmtStage(s) {
+  return {drafting:'Drafting',cover:'Cover stage',kdp:'KDP / Print',published:'Published'}[s] || s;
+}
+
+// ── Build timeline ────────────────────────────────────────────────────────────
+// Monthly steps from earliest first_entry to today
+function buildTimeline() {
+  const dates = BOOKS.map(b => b.first_entry).filter(Boolean).sort();
+  if (!dates.length) return [];
+  const start = new Date(dates[0]);
+  start.setDate(1);
+  const end = new Date();
+  end.setDate(1);
+  const months = [];
+  const cur = new Date(start);
+  while (cur <= end) {
+    months.push(cur.toISOString().slice(0, 7)); // YYYY-MM
+    cur.setMonth(cur.getMonth() + 1);
+  }
+  return months;
+}
+
+const TIMELINE = buildTimeline();
+
+// ── SVG layout ────────────────────────────────────────────────────────────────
+const svg       = d3.select('#svg');
+const blobLayer = d3.select('#blob-layer');
+const tooltip   = document.getElementById('tooltip');
+let W = 0, H = 0;
+
+function bookY(title) {
+  const midY  = H / 2;
+  const range = H * 0.7;
+  return midY + stableJitter(title) * range;
+}
+
+// Stable X position per book — based on pen name cluster
+function bookX(book) {
+  const jitter = stableJitter(book.title + 'x') * (W * 0.15);
+  if (book.pen_name && book.pen_name.toLowerCase().includes('talla')) {
+    return W * 0.72 + jitter;
+  }
+  return W * 0.30 + jitter;
+}
+
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  W = wrap.clientWidth;
+  H = wrap.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+}
+
+// ── D3 force sim for blob separation ─────────────────────────────────────────
+const sim = d3.forceSimulation([])
+  .force('collide', d3.forceCollide().radius(d => d.r + 4).strength(0.7))
+  .force('x', d3.forceX(d => d.tx).strength(0.12))
+  .force('y', d3.forceY(d => d.ty).strength(0.08))
+  .alphaDecay(0.03).velocityDecay(0.55)
+  .on('tick', () => {
+    blobLayer.selectAll('g.book')
+      .attr('transform', d => `translate(${d.x.toFixed(1)},${d.y.toFixed(1)})`);
+  });
+
+// Registry of live nodes keyed by title
+const registry = new Map();
+
+// ── Show a single period ──────────────────────────────────────────────────────
+let currentIdx = 0;
+
+function showPeriod(idx) {
+  const dateStr = TIMELINE[idx];
+  if (!dateStr) return;
+  currentIdx = idx;
+
+  document.getElementById('scrubber').value = idx;
+  document.getElementById('time-label').textContent = dateStr;
+  document.getElementById('period-label').textContent = dateStr.slice(0, 7);
+
+  // Determine which books are active (first_entry <= dateStr)
+  const active = BOOKS.filter(b => b.first_entry && b.first_entry.slice(0, 7) <= dateStr);
+
+  // Update registry
+  for (const book of active) {
+    const wc    = wcAtDate(book, dateStr + '-31'); // end of month
+    const stage = stageAtDate(book, dateStr + '-31');
+    const r     = radius(wc);
+    const fill  = STAGE_COLOUR[stage] || '#4a9eff';
+
+    if (registry.has(book.title)) {
+      const node = registry.get(book.title);
+      node.wc    = wc;
+      node.stage = stage;
+      node.r     = r;
+      node.fill  = fill;
+      node.tx    = bookX(book);
+      node.ty    = bookY(book.title);
+    } else {
+      const node = {
+        title:    book.title,
+        penName:  book.pen_name,
+        wc, stage, r, fill,
+        tx: bookX(book), ty: bookY(book.title),
+        x:  bookX(book) + (Math.random() - 0.5) * 40,
+        y:  bookY(book.title) + (Math.random() - 0.5) * 40,
+        vx: 0, vy: 0,
+        book,
+        _new: true,
+      };
+      registry.set(book.title, node);
+    }
+  }
+
+  // Compute maxR for audio weight
+  const maxR = Math.max(...[...registry.values()].map(n => n.r), 1);
+
+  // Sound for new blobs
+  const newBlobs = [...registry.values()].filter(n => n._new);
+  newBlobs.forEach((d, i) => {
+    setTimeout(() => playBlobSound(d.r / maxR), i * 60);
+    delete d._new;
+  });
+
+  const nodes = [...registry.values()];
+
+  // D3 join
+  const join = blobLayer.selectAll('g.book').data(nodes, d => d.title);
+
+  // EXIT — books that somehow got removed (shouldn't happen but safety)
+  join.exit().transition().duration(300).style('opacity', 0).remove();
+
+  // ENTER
+  const enterG = join.enter()
+    .append('g').attr('class', 'book')
+    .attr('transform', d => `translate(${d.x},${d.y})`)
+    .style('opacity', 0).style('cursor', 'pointer');
+
+  enterG.append('circle').attr('class', 'halo')
+    .attr('r', 0).attr('fill', d => d.fill + '18').attr('filter', 'url(#glow)');
+
+  enterG.append('circle').attr('class', 'main')
+    .attr('r', 0).attr('fill', d => d.fill + 'b0')
+    .attr('stroke', d => d.fill).attr('stroke-width', 1);
+
+  enterG.append('text').attr('class', 'lbl')
+    .attr('text-anchor', 'middle').attr('dy', '0.35em')
+    .attr('pointer-events', 'none')
+    .attr('fill', 'rgba(255,255,255,0.8)')
+    .attr('font-size', '9px')
+    .style('opacity', 0);
+
+  const allG = enterG.merge(join);
+
+  // Tooltip
+  allG.on('mouseenter', function(event, d) {
+    tooltip.style.opacity = '1';
+    document.getElementById('tip-title').textContent = d.title;
+    document.getElementById('tip-stage').textContent = fmtStage(d.stage);
+    document.getElementById('tip-stage').style.color  = d.fill;
+    document.getElementById('tip-wc').textContent    = fmtWc(d.wc);
+    document.getElementById('tip-meta').textContent  =
+      `${d.penName} · started ${d.book.first_entry || '?'}`;
+  })
+  .on('mousemove', e => {
+    tooltip.style.left = (e.clientX + 18) + 'px';
+    tooltip.style.top  = (e.clientY - 50) + 'px';
+  })
+  .on('mouseleave', () => { tooltip.style.opacity = '0'; });
+
+  // Animate
+  allG.transition().duration(600).ease(d3.easeCubicOut)
+    .style('opacity', 1);
+
+  allG.select('circle.main').transition().duration(600).ease(d3.easeCubicOut)
+    .attr('r', d => d.r)
+    .attr('fill', d => d.fill + 'b0')
+    .attr('stroke', d => d.fill);
+
+  allG.select('circle.halo').transition().duration(600)
+    .attr('r', d => d.r * 1.8)
+    .attr('fill', d => d.fill + '18');
+
+  allG.select('text.lbl')
+    .text(d => d.r > 22 ? (d.title.length > 20 ? d.title.slice(0, 18) + '…' : d.title) : '')
+    .transition().duration(600)
+    .attr('font-size', d => Math.max(7, Math.min(11, d.r * 0.24)) + 'px')
+    .style('opacity', d => d.r > 22 ? 1 : 0);
+
+  // Update sim
+  sim.nodes(nodes);
+  sim.force('x', d3.forceX(d => d.tx).strength(0.12));
+  sim.force('y', d3.forceY(d => d.ty).strength(0.08));
+  sim.force('collide', d3.forceCollide().radius(d => d.r + 4).strength(0.7));
+  sim.alpha(0.4).restart();
+}
+
+// ── Playback ──────────────────────────────────────────────────────────────────
+let playing = false, playTimer = null;
+
+function togglePlay() {
+  getAudioCtx();
+  playing = !playing;
+  document.getElementById('play-btn').textContent = playing ? '⏸' : '▶';
+  if (playing) {
+    playTimer = setInterval(() => {
+      const next = (currentIdx + 1) % TIMELINE.length;
+      showPeriod(next);
+    }, PLAY_INTERVAL);
+  } else {
+    clearInterval(playTimer); playTimer = null;
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+function init() {
+  resize();
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+  if (!TIMELINE.length) {
+    document.getElementById('period-label').textContent = 'no data';
+    return;
+  }
+
+  document.getElementById('scrubber').max = TIMELINE.length - 1;
+  document.getElementById('play-btn').addEventListener('click', togglePlay);
+  document.getElementById('scrubber').addEventListener('input', function() {
+    if (playing) togglePlay();
+    showPeriod(parseInt(this.value));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === ' ')          { e.preventDefault(); togglePlay(); }
+    if (e.key === 'ArrowRight') showPeriod(Math.min(currentIdx + 1, TIMELINE.length - 1));
+    if (e.key === 'ArrowLeft')  showPeriod(Math.max(currentIdx - 1, 0));
+  });
+  window.addEventListener('resize', () => {
+    resize();
+    registry.clear();
+    blobLayer.selectAll('*').remove();
+    sim.nodes([]);
+    showPeriod(currentIdx);
+  });
+
+  // Start at the beginning
+  showPeriod(0);
+}
+
+init();
+</script>
+</body>
+</html>
