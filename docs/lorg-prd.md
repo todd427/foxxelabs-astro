@@ -6,7 +6,7 @@
 **Status:** Phase 0 in development  
 **Owner:** Todd McCaffrey / FoxxeLabs  
 **Date:** 2026-03-21  
-**Version:** 0.2
+**Version:** 0.3
 
 ---
 
@@ -33,6 +33,12 @@ Léargas maps what you were *thinking* — conversations, writing sessions, rese
 Lorg maps what you were *doing and experiencing* — where you were, how you felt physically, what the weather was, what you spent. It is an episodic map.
 
 Together they form a complete personal intelligence layer. The writing sprint that produced Dutch Boy in August 2024 shows up in Léargas as a dominant topic. Lorg shows that during that same period, sleep quality degraded, resting heart rate elevated, steps dropped, and the weather was warm. The cognitive and physical records correlate into a coherent memory of that time.
+
+### 1.3 Relationship to George
+
+George is a separate service that reads the lorg telemetry feed and acts as a curiosity engine — deciding when something in the stream is worth noticing, and requesting a photo. Lorg is George's eyes and hands: it sends the telemetry, delivers image requests to Todd as cards, and provides the camera for capture and sending.
+
+The camera is a lorg feature. George is the mind that interprets what the camera sends.
 
 ---
 
@@ -70,7 +76,16 @@ Together they form a complete personal intelligence layer. The writing sprint th
 - Transactions arrive hours to days after the event — the worm is annotated retroactively
 - Revolut additionally exports real-time push notifications — higher fidelity for Revolut users
 
-### 2.5 Derived / Computed
+### 2.5 Images (user-initiated + George-requested)
+- Single JPEG captures from device camera
+- Two paths:
+  - **Voluntary:** Todd taps the camera button on the lorg home screen — "look here"
+  - **George-requested:** George sends a curiosity request; lorg displays it as a card; Todd taps to respond
+- Both paths package the current telemetry context (GPS, weather, steps, screen state, timestamp) with the image and POST to the George service
+- Optional long-press on the camera button flags the resulting memory for the Someday vault
+- Images are not stored in lorg — they are sent to George, which files them and ingests a caption to Mnemos
+
+### 2.6 Derived / Computed
 - **Place detection:** cluster GPS points into named places (home, work, specific shops) using DBSCAN on historical data
 - **Journey detection:** identify transitions between places, mode of transport (walking/driving inferred from speed)
 - **Sleep windows:** infer from screen-off + low movement + time of day + heart rate drop
@@ -94,6 +109,7 @@ A Three.js `TubeGeometry` following a series of GPS-timestamped points, with Z a
 | Ambient glow | Weather | Blue haze = rain, warm glow = sunny, white = fog |
 | Event markers | Expenditure | Small glowing spheres floating off the tube at transaction location/time |
 | Mnemos anchors | Cognitive events | Larger, labelled markers: "Writing: Dutch Boy", "Meeting: ATU viva" |
+| Photo markers | George memories | Small camera icon on the worm at capture location/time; tap to view caption |
 
 ### 3.3 Views
 
@@ -108,6 +124,7 @@ A Three.js `TubeGeometry` following a series of GPS-timestamped points, with Z a
 ### 3.4 Interaction
 - **Scrub:** Time slider moves a highlight along the worm
 - **Tap/click an event marker:** Expand transaction or Léargas anchor details
+- **Tap a photo marker:** Show the George caption for that image
 - **Pinch/zoom:** Drill into a time period
 - **Long-press a segment:** "What was happening here?" — queries Mnemos for context from that date/time
 - **Privacy mode:** Blur location to city-level, hide expenditure amounts — shareable version
@@ -124,10 +141,32 @@ Core modules:
 - `BiometricService` — steps (Pedometer API), heart rate (Health Connect), ambient light
 - `WeatherService` — periodic OpenWeatherMap calls, cached by location cluster
 - `SyncService` — batches samples and pushes to Lorg backend every 15 minutes, or immediately on WiFi
+- `GeorgeService` — polls George /observe endpoint on each telemetry sync; displays curiosity request cards; handles camera capture and POST to George /look
 
 The app runs as a background service. UI is minimal — a status indicator, a quick day-view of the current day's worm, and settings.
 
-### 4.2 Backend (data store + API)
+### 4.2 George Integration (mobile)
+
+The home screen has a camera icon in the card row alongside weather, steps, and distance.
+
+**Voluntary send (tap camera button):**
+1. Device camera opens
+2. On capture: lorg packages current telemetry context + JPEG → POST to George `/look`
+3. Lorg shows a brief "sent to George" confirmation
+
+**Voluntary send with Someday flag (long-press camera button):**
+1. Same as above, but lorg includes `someday: true` in the context payload
+2. George routes the resulting memory to the Someday vault in addition to Mnemos
+
+**George-requested image (curiosity card):**
+1. GeorgeService receives a non-null `request` string from George `/observe`
+2. Lorg displays a dismissible card above the home screen data: e.g. *"George wants to see what you're looking at"*
+3. Tap card → camera opens; capture sends to George `/look`
+4. Swipe away → dismissed; no image sent; George is not informed
+
+The lorg backend proxies image POSTs to George — the mobile app never calls George directly. This keeps George's API key server-side.
+
+### 4.3 Backend (data store + API)
 **FastAPI on Fly.io** — same pattern as Mnemos, region lhr (London).
 
 Endpoints:
@@ -136,6 +175,8 @@ Endpoints:
 - `GET /api/status` — health check, last sample time
 - `GET /api/day/{date}` — full day data including weather and transactions
 - `GET /api/worm?start=&end=` — return samples for a time range (Phase 1)
+- `POST /api/look` — receive image + telemetry from mobile, forward to George (Phase 1)
+- `GET /api/george/request` — return current George curiosity request if any (Phase 1)
 - `POST /api/transactions/sync` — webhook receiver for TrueLayer (Phase 4)
 - `GET /api/export` — full data export (JSON / CSV)
 
@@ -146,12 +187,13 @@ Secrets (Fly.io):
 - `DATABASE_URL` — Fly Postgres
 - `MNEMOS_URL` + `MNEMOS_API_KEY` — daily summary ingest
 - `OPENWEATHER_API_KEY` — weather calls
+- `GEORGE_URL` + `GEORGE_API_KEY` — George service integration (Phase 1)
 
-### 4.3 Visualisation (web)
+### 4.4 Visualisation (web)
 Static HTML + Three.js + Mapbox GL JS at `lorg.ie`.
 Data fetched from backend API, rendered client-side.
 
-### 4.4 Mnemos Integration
+### 4.5 Mnemos Integration
 Daily summary documents ingested at midnight. Format:
 
 ```
@@ -163,6 +205,7 @@ Active periods:
   08:15–08:47 (walk, 1.2km)
   13:05–13:22 (walk, 0.6km)
 Screen on: 6h 22m
+George memories: 2
 ```
 
 ---
@@ -172,14 +215,17 @@ Screen on: 6h 22m
 ### 5.1 OpenWeatherMap
 Free tier: 60 calls/minute, 1M/month. Key stored as Fly.io secret.
 
-### 5.2 TrueLayer (PSD2 Banking) — Phase 4
+### 5.2 George
+George (george-foxxelabs.fly.dev) reads the lorg telemetry feed and returns curiosity scores and image requests. Lorg proxies image sends to George on behalf of the mobile app. See the George PRD for George's architecture and API.
+
+### 5.3 TrueLayer (PSD2 Banking) — Phase 4
 OAuth 2.0. Supported Irish banks: AIB, Bank of Ireland, PTSB, Revolut, N26.
 Free tier: up to 100 end-users.
 
-### 5.3 Health Connect (Android) — Phase 2
+### 5.4 Health Connect (Android) — Phase 2
 Read-only: steps, heart rate, HRV, sleep. Permission granted on first launch.
 
-### 5.4 Wearables — Phase 2+
+### 5.5 Wearables — Phase 2+
 Wear OS via Health Connect automatic. Garmin/Fitbit via Health Connect bridge.
 
 ---
@@ -189,6 +235,7 @@ Wear OS via Health Connect automatic. Garmin/Fitbit via Health Connect bridge.
 - All data personal and private — no sharing, no analytics, no third-party access
 - Location stored on user's own Fly.io instance
 - TrueLayer tokens encrypted, never logged
+- Images are sent to George and not retained by lorg; George files them locally on Daisy
 - Full data export always available
 - Privacy mode in visualisation: blur to city level, hide amounts
 - No Mnemos ingest without explicit daily summary generation
@@ -201,7 +248,7 @@ Wear OS via Health Connect automatic. Garmin/Fitbit via Health Connect bridge.
 | Phase | Scope | Status |
 |-------|-------|--------|
 | 0 | GPS + steps + screen state → backend → Mnemos daily summary | **In development** |
-| 1 | 3D worm visualisation at lorg.ie, time scrubber, map view | Planned |
+| 1 | 3D worm visualisation at lorg.ie; camera button + George integration (curiosity cards, image send, Someday flag) | Planned |
 | 2 | Heart rate + HRV (Health Connect), colour/thickness encoding | Planned |
 | 3 | Weather — OpenWeatherMap, ambient glow on worm | Planned |
 | 4 | Expenditure — TrueLayer PSD2, transaction markers | Planned |
@@ -214,6 +261,7 @@ Wear OS via Health Connect automatic. Garmin/Fitbit via Health Connect bridge.
 1. **InfluxDB vs PostgreSQL?** PostgreSQL chosen for Phase 0 (simpler ops). Revisit if query performance degrades at scale.
 2. **Battery impact** — 5-minute GPS needs real-device testing. May need to relax to 10 minutes.
 3. **Wearable?** No wearable yet. Heart rate deferred to Phase 2.
+4. **George poll frequency** — GeorgeService polls /observe on each telemetry sync (every 5 min). May need a push mechanism if George requests become time-sensitive.
 
 ---
 
@@ -223,8 +271,8 @@ The worm is not a productivity tool. It is not a health dashboard. It is a memor
 
 When you look back at August 2024 in Léargas and see "Dutch Boy — intense writing sprint," the worm will show you what that felt like in your body: the reduced sleep, the elevated heart rate, the afternoons you barely moved, the coffees you bought to push through. The two systems together answer both "what were you thinking?" and "what were you experiencing?"
 
-That is as close as software can come to genuine episodic memory.
+A photo of the breakfast you made on a Tuesday in March, grounded in GPS, weather, and what project you were thinking about — that is memoir. That is what the camera adds to the worm.
 
 ---
 
-*PRD v0.2 — domain confirmed lorg.ie, Phase 0 in active development.*
+*PRD v0.3 — George integration added (camera button, curiosity cards, image proxy, Someday flag).*
