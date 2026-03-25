@@ -69,4 +69,4 @@ We have met the AI, and he is us.
 
 ---
 
-*Todd McCaffrey is a New York Times bestselling author, founder of FoxxeLabs Limited, and an MSc candidate in Cyberpsychology at ATU Letterkenny.*
+*Todd McCaffrey is a New York Times bestselling author, founder of FoxxeLabs Limited, and an MSc candidate in Cyberpsychology at ATU Letterkenny. This piece was written in collaboration with Claude (Anthropic). Given its subject matter, that transparency is essential rather than optional.*
