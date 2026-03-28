@@ -21,16 +21,24 @@ Usage:
 
 No external dependencies — stdlib only (urllib, json, subprocess).
 
-Secrets (pulled from Rialú at runtime, or set as env vars):
-  RIALU_API_KEY       — Rialú API key (required if not using env vars below)
-  AZURE_SPEECH_KEY    — Azure Speech resource key
-  AZURE_SPEECH_REGION — e.g. northeurope
+Secrets:
+  Azure credentials are fetched from Rialú at runtime.
+  Rialú is protected by Cloudflare Access — the CF service token headers
+  are embedded below (rialu-agent service token, read-only to key vault).
+
+  To add the Azure keys to Rialú (one-time setup):
+    curl -s -X POST https://rialu.ie/api/keys \\
+      -H "CF-Access-Client-Id: <id>" \\
+      -H "CF-Access-Client-Secret: <secret>" \\
+      -H "Content-Type: application/json" \\
+      -d '{"name":"azure-speech-key","provider":"microsoft","value":"<key>","env_var":"AZURE_SPEECH_KEY","notes":"Azure Speech resource key for ga-say / gen_pronunciations"}'
+    curl -s -X POST https://rialu.ie/api/keys \\
+      ... -d '{"name":"azure-speech-region","provider":"microsoft","value":"northeurope","env_var":"AZURE_SPEECH_REGION"}'
 
 Cron entry (add to Daisy crontab):
   0 2 * * 0 cd /home/Projects/foxxelabs-astro && python scripts/gen_pronunciations.py >> /home/Projects/logs/gen_pronunciations.log 2>&1
 """
 
-import argparse
 import json
 import os
 import subprocess
@@ -38,6 +46,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import argparse
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -54,8 +63,13 @@ VOICE_COLM = "ga-IE-ColmNeural"
 TTS_RATE   = "0.85"
 OUTPUT_FMT = "audio-24khz-48kbitrate-mono-mp3"
 
-# ── Rialú ─────────────────────────────────────────────────────────────────────
-RIALU_API = "https://rialu.ie/api"
+# ── Rialú — Cloudflare Access service token (rialu-agent) ────────────────────
+RIALU_BASE   = "https://rialu.ie"
+CF_CLIENT_ID     = "e04fa1c2d87bd99cae792c0c2866457e.access"
+CF_CLIENT_SECRET = "c4cc54bcd7fdcdfd04a17c8efa70853657cfcc0b342a39a6917d3a81581670ae"
+
+AZURE_KEY_NAME    = "azure-speech-key"
+AZURE_REGION_NAME = "azure-speech-region"
 
 
 def log(msg):
@@ -63,41 +77,52 @@ def log(msg):
     print(f"{ts} {LOG_PREFIX} {msg}", flush=True)
 
 
-def http_get(url: str, headers: dict) -> bytes:
-    req = urllib.request.Request(url, headers=headers, method="GET")
+# ── Rialú HTTP helpers ────────────────────────────────────────────────────────
+
+def _rialu_headers():
+    return {
+        "CF-Access-Client-Id":     CF_CLIENT_ID,
+        "CF-Access-Client-Secret": CF_CLIENT_SECRET,
+        "Content-Type":            "application/json",
+    }
+
+
+def _http(method: str, url: str, body: bytes = None) -> dict:
+    req = urllib.request.Request(url, data=body, headers=_rialu_headers(), method=method)
     with urllib.request.urlopen(req, timeout=10) as resp:
-        return resp.read()
+        return json.loads(resp.read())
 
 
-def http_post(url: str, headers: dict, body: bytes) -> bytes:
-    req = urllib.request.Request(url, data=body, headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read()
+def rialu_find_key_id(name: str) -> int:
+    """Return the numeric ID for a key by name, or raise."""
+    keys = _http("GET", f"{RIALU_BASE}/api/keys")
+    for k in keys:
+        if k["name"] == name:
+            return k["id"]
+    raise KeyError(f"Key '{name}' not found in Rialú. See docstring for how to add it.")
 
 
-def get_rialu_secret(key_name: str) -> str:
-    api_key = os.environ.get("RIALU_API_KEY")
-    if not api_key:
-        raise RuntimeError("RIALU_API_KEY not set in environment")
-    raw = http_get(
-        f"{RIALU_API}/keys/{key_name}",
-        headers={"Authorization": f"Bearer {api_key}"},
-    )
-    data = json.loads(raw)
+def rialu_reveal(name: str) -> str:
+    """Return the decrypted value of a key by name."""
+    key_id = rialu_find_key_id(name)
+    data = _http("POST", f"{RIALU_BASE}/api/keys/{key_id}/reveal")
     return data["value"]
 
 
 def get_azure_creds() -> tuple[str, str]:
+    """Return (key, region) — from env vars if set, otherwise Rialú."""
     key    = os.environ.get("AZURE_SPEECH_KEY")
     region = os.environ.get("AZURE_SPEECH_REGION")
     if key and region:
         log("Using AZURE_SPEECH_KEY/REGION from environment")
         return key, region
     log("Fetching Azure credentials from Rialú...")
-    key    = get_rialu_secret("AZURE_SPEECH_KEY")
-    region = get_rialu_secret("AZURE_SPEECH_REGION")
+    key    = rialu_reveal(AZURE_KEY_NAME)
+    region = rialu_reveal(AZURE_REGION_NAME)
     return key, region
 
+
+# ── Azure TTS ─────────────────────────────────────────────────────────────────
 
 def azure_tts(text: str, key: str, region: str, voice: str) -> bytes:
     ssml = (
@@ -107,38 +132,38 @@ def azure_tts(text: str, key: str, region: str, voice: str) -> bytes:
         f"</voice></speak>"
     )
     endpoint = f"https://{region}.tts.speech.microsoft.com/cognitiveservices/v1"
-    return http_post(
+    req = urllib.request.Request(
         endpoint,
+        data=ssml.encode("utf-8"),
         headers={
             "Ocp-Apim-Subscription-Key": key,
             "Content-Type": "application/ssml+xml",
             "X-Microsoft-OutputFormat": OUTPUT_FMT,
             "User-Agent": "foxxelabs-gen-pronunciations",
         },
-        body=ssml.encode("utf-8"),
+        method="POST",
     )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return resp.read()
 
+
+# ── Audio generation ──────────────────────────────────────────────────────────
 
 def generate_audio(entries: list, key: str, region: str, force: bool, dry_run: bool) -> list[str]:
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     changed = []
-
     for entry in entries:
         slug  = entry["slug"]
         irish = entry["irish"]
-
         for voice_key, voice_name in [("orla", VOICE_ORLA), ("colm", VOICE_COLM)]:
             out_path = AUDIO_DIR / f"{slug}-{voice_key}.mp3"
-
             if out_path.exists() and not force:
                 log(f"  skip  {out_path.name} (exists)")
                 continue
-
             log(f"  gen   {out_path.name}  ← '{irish}'")
             if dry_run:
                 log(f"  [dry-run] would write {out_path}")
                 continue
-
             try:
                 mp3_bytes = azure_tts(irish, key, region, voice_name)
             except urllib.error.HTTPError as e:
@@ -147,14 +172,14 @@ def generate_audio(entries: list, key: str, region: str, force: bool, dry_run: b
             except Exception as e:
                 log(f"  ERROR Azure TTS for '{irish}': {e}")
                 continue
-
             out_path.write_bytes(mp3_bytes)
             changed.append(out_path.name)
             log(f"  wrote {out_path.name} ({len(mp3_bytes):,} bytes)")
             time.sleep(0.3)
-
     return changed
 
+
+# ── HTML generation ───────────────────────────────────────────────────────────
 
 def generate_html(entries: list, dry_run: bool) -> bool:
     rows = ""
@@ -182,8 +207,7 @@ def generate_html(entries: list, dry_run: bool) -> bool:
   :root {{
     --bg: #0d0e10; --bg2: #141618; --border: #2a2e35; --border2: #3a3f48;
     --text: #d4d7dc; --text2: #8a8f99; --text3: #555c66;
-    --teal: #3eada0; --teal-bg: #091614; --teal-bd: #1e5a55;
-    --amber: #d4950f;
+    --teal: #3eada0; --amber: #d4950f;
   }}
   body {{ background:var(--bg); color:var(--text); font-family:'DM Mono','Fira Mono',monospace; font-size:13px; padding:16px 20px 20px; }}
   .header {{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }}
@@ -252,6 +276,8 @@ function speak(btn, slug, voice) {{
     return True
 
 
+# ── Git ───────────────────────────────────────────────────────────────────────
+
 def git_commit_push(changed_files: list[str], dry_run: bool):
     if not changed_files:
         log("Nothing to commit.")
@@ -266,6 +292,8 @@ def git_commit_push(changed_files: list[str], dry_run: bool):
     subprocess.run(["git", "-C", str(REPO_DIR), "push"], check=True)
     log("Pushed to origin.")
 
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Generate FoxxeLabs Irish pronunciation MP3s")
@@ -287,6 +315,10 @@ def main():
 
     try:
         key, region = get_azure_creds()
+    except KeyError as e:
+        log(f"ERROR: {e}")
+        log("Add the Azure Speech keys to Rialú — see docstring for curl commands.")
+        sys.exit(1)
     except Exception as e:
         log(f"ERROR: could not get Azure credentials: {e}")
         sys.exit(1)
