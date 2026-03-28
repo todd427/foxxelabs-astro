@@ -186,22 +186,11 @@ The naming is also a position: this is Irish-built infrastructure, grounded in I
 
 ## <span style="color:#1F4E79">Pronunciation guide</span>
 
-Irish orthography is not intuitive for non-native readers. Here are all the component names with phonetic guides and IPA for those who want precision.
+Irish orthography is not intuitive for non-native readers. Click ▶ on any row to hear the name spoken by a native Irish voice. Orla and Colm are Azure Neural Irish voices — not TTS approximations.
 
-| Name | Say it | IPA | Meaning |
-|---|---|---|---|
-| **Colainn** | KUL-in | /ˈkɔlɪɲ/ | body, physical form |
-| **Mnemos** | NEE-mos | /ˈniːmɒs/ | memory (Greek) |
-| **Léargas** | LYAR-gəs | /ˈlʲeːɾˠɡəs/ | insight, perception |
-| **Radharc** | RY-ark | /ˈɾˠaɪəɾk/ | view, sight, vision |
-| **Aislinge** | ASH-ling-ə | /ˈaʃlʲɪŋʲə/ | dream-vision, reverie |
-| **Mothú** | MO-hoo | /mɔˈhuː/ | feeling, sensing, emotion |
-| **Lorg** | LORG | /lɔɾˠɡ/ | track, trace |
-| **Rialú** | REE-a-loo | /ˈɾʲiːəluː/ | control, regulation |
-| **Scéal** | SHKYAL | /ʃkʲeːl/ | story, tale |
-| **Faire** | FAR-ə | /ˈfaɾʲə/ | watching, vigilance |
-
-A note on Irish phonology: the language distinguishes *broad* and *slender* consonants — the same letter sounds different depending on the vowels around it. The *lʲ* in Léargas is a palatalised L, softer and further forward in the mouth than English L. The *ɾˠ* in Radharc is a velarised tap, closer to a light rolled R than the English approximant. These distinctions are what give Irish its characteristic sound — not harder to pronounce than French, just different.
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:1.5rem 0;border:0.5px solid rgba(128,128,128,0.15);">
+  <iframe src="/pronunciation/" width="100%" height="430" style="border:none;background:#0d0e10;" title="FoxxeLabs — Irish pronunciation guide with Orla and Colm voices"></iframe>
+</div>
 
 ---
 

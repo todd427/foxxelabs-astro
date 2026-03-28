@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ga">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoxxeLabs — Pronunciation Guide</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #0d0e10;
+    --bg2:     #141618;
+    --border:  #2a2e35;
+    --border2: #3a3f48;
+    --text:    #d4d7dc;
+    --text2:   #8a8f99;
+    --text3:   #555c66;
+    --teal:    #3eada0;
+    --teal-bg: #091614;
+    --teal-bd: #1e5a55;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', 'Fira Mono', monospace;
+    font-size: 13px;
+    padding: 16px 20px 20px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .header-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+
+  .voice-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .voice-toggle label {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+
+  .voice-btn {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    color: var(--text2);
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+
+  .voice-btn.active {
+    border-color: var(--teal-bd);
+    background: var(--teal-bg);
+    color: var(--teal);
+  }
+
+  .voice-btn:hover:not(.active) {
+    border-color: var(--border2);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+
+  td {
+    padding: 9px 6px;
+    vertical-align: middle;
+  }
+
+  td.name {
+    font-weight: 500;
+    color: var(--text);
+    width: 110px;
+  }
+
+  td.phonetic {
+    color: var(--teal);
+    width: 120px;
+    font-size: 12px;
+  }
+
+  td.ipa {
+    color: var(--text3);
+    font-size: 11px;
+    width: 150px;
+  }
+
+  td.meaning {
+    color: var(--text2);
+    font-size: 11px;
+  }
+
+  .speak-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 28px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--text2);
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.15s, color 0.15s;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  .speak-btn:hover {
+    border-color: var(--teal-bd);
+    color: var(--teal);
+  }
+
+  .speak-btn.playing {
+    border-color: var(--teal-bd);
+    color: var(--teal);
+    opacity: 0.6;
+  }
+
+  .note {
+    margin-top: 14px;
+    font-size: 10px;
+    color: var(--text3);
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="header-label">Pronunciation — click ▶ to hear</span>
+  <div class="voice-toggle">
+    <label>voice</label>
+    <button class="voice-btn active" id="btn-orla" onclick="setVoice('orla')">Orla</button>
+    <button class="voice-btn" id="btn-colm" onclick="setVoice('colm')">Colm</button>
+  </div>
+</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td class="name">Colainn</td>
+      <td class="phonetic">KUL-in</td>
+      <td class="ipa">/ˈkɔlɪɲ/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Colainn')">▶</button>body, physical form</td>
+    </tr>
+    <tr>
+      <td class="name">Mnemos</td>
+      <td class="phonetic">NEE-mos</td>
+      <td class="ipa">/ˈniːmɒs/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Mnemos')">▶</button>memory (Greek)</td>
+    </tr>
+    <tr>
+      <td class="name">Léargas</td>
+      <td class="phonetic">LYAR-gəs</td>
+      <td class="ipa">/ˈlʲeːɾˠɡəs/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Léargas')">▶</button>insight, perception</td>
+    </tr>
+    <tr>
+      <td class="name">Radharc</td>
+      <td class="phonetic">RY-ark</td>
+      <td class="ipa">/ˈɾˠaɪəɾk/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Radharc')">▶</button>view, sight, vision</td>
+    </tr>
+    <tr>
+      <td class="name">Aislinge</td>
+      <td class="phonetic">ASH-ling-ə</td>
+      <td class="ipa">/ˈaʃlʲɪŋʲə/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Aislinge')">▶</button>dream-vision, reverie</td>
+    </tr>
+    <tr>
+      <td class="name">Mothú</td>
+      <td class="phonetic">MO-hoo</td>
+      <td class="ipa">/mɔˈhuː/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Mothú')">▶</button>feeling, emotion</td>
+    </tr>
+    <tr>
+      <td class="name">Lorg</td>
+      <td class="phonetic">LORG</td>
+      <td class="ipa">/lɔɾˠɡ/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Lorg')">▶</button>track, trace</td>
+    </tr>
+    <tr>
+      <td class="name">Rialú</td>
+      <td class="phonetic">REE-a-loo</td>
+      <td class="ipa">/ˈɾʲiːəluː/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Rialú')">▶</button>control, regulation</td>
+    </tr>
+    <tr>
+      <td class="name">Scéal</td>
+      <td class="phonetic">SHKYAL</td>
+      <td class="ipa">/ʃkʲeːl/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Scéal')">▶</button>story, tale</td>
+    </tr>
+    <tr>
+      <td class="name">Faire</td>
+      <td class="phonetic">FAR-ə</td>
+      <td class="ipa">/ˈfaɾʲə/</td>
+      <td class="meaning"><button class="speak-btn" onclick="speak(this,'Faire')">▶</button>watching, vigilance</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="note">Voices: Orla and Colm are Azure Neural Irish (ga-IE) voices — native Irish speakers, not TTS approximations. Irish broad/slender consonant distinction is genuine in these voices. Powered by <a href="https://ga-say.sionnach.ie" style="color:var(--teal);">ga-say</a>.</p>
+
+<script>
+const TTS_TOKEN_URL = 'https://ga-say.sionnach.ie/speech-token';
+const VOICES = { orla: 'ga-IE-OrlaNeural', colm: 'ga-IE-ColmNeural' };
+
+let _token = null, _region = null, _expiry = 0, _audio = null;
+let _voice = 'orla';
+
+function setVoice(v) {
+  _voice = v;
+  document.getElementById('btn-orla').classList.toggle('active', v === 'orla');
+  document.getElementById('btn-colm').classList.toggle('active', v === 'colm');
+}
+
+async function getToken() {
+  if (_token && Date.now() < _expiry) return { token: _token, region: _region };
+  try {
+    const r = await fetch(TTS_TOKEN_URL);
+    if (!r.ok) return null;
+    const d = await r.json();
+    if (!d.token) return null;
+    _token = d.token; _region = d.region;
+    _expiry = Date.now() + 9 * 60 * 1000;
+    return { token: _token, region: _region };
+  } catch { return null; }
+}
+
+async function speak(btn, text) {
+  if (_audio) { _audio.pause(); _audio = null; }
+  document.querySelectorAll('.speak-btn.playing').forEach(b => b.classList.remove('playing'));
+  btn.classList.add('playing');
+
+  const auth = await getToken();
+  if (!auth) { fallback(text, btn); return; }
+
+  const ssml = `<speak version='1.0' xml:lang='ga-IE'><voice name='${VOICES[_voice]}'><prosody rate='0.85'>${text}</prosody></voice></speak>`;
+  const endpoint = `https://${auth.region}.tts.speech.microsoft.com/cognitiveservices/v1`;
+
+  try {
+    const r = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${auth.token}`,
+        'Content-Type': 'application/ssml+xml',
+        'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
+        'User-Agent': 'foxxelabs-pronunciation'
+      },
+      body: ssml
+    });
+    if (!r.ok) { fallback(text, btn); return; }
+    const blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    const audio = new Audio(url);
+    _audio = audio;
+    audio.onended = () => { URL.revokeObjectURL(url); _audio = null; btn.classList.remove('playing'); };
+    audio.onerror = () => { _audio = null; btn.classList.remove('playing'); };
+    audio.play();
+  } catch { fallback(text, btn); }
+}
+
+function fallback(text, btn) {
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'ga'; u.rate = 0.75;
+  u.onend = () => btn.classList.remove('playing');
+  window.speechSynthesis.speak(u);
+}
+</script>
+</body>
+</html>
