@@ -5,6 +5,8 @@ publishDate: 2026-03-28
 category: "Research"
 tags: ["Legion", "Léargas", "Mnemos", "Aislinge", "Colainn", "Mothú", "cognitive-architecture", "continual-learning"]
 readingTime: "12 min read"
+heroImage: "/images/resources/the-foxxelabs-cognitive-stack-hero.jpg"
+heroImageAlt: "Gaussian mixture model probability field — the Léargas cognitive manifold visualised as overlapping luminous blobs across semantic space"
 furtherReading:
   - title: "Experiment Léargas: A Holographic Map of Memory"
     url: "/resources/experiment-leargas-holographic-memory"
