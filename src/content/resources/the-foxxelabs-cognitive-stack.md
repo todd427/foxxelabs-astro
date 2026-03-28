@@ -6,7 +6,7 @@ category: "Research"
 tags: ["Legion", "Léargas", "Mnemos", "Aislinge", "Colainn", "Mothú", "cognitive-architecture", "continual-learning"]
 readingTime: "12 min read"
 heroImage: "/images/resources/the-foxxelabs-cognitive-stack-hero.jpg"
-heroImageAlt: "Gaussian mixture model probability field — the Léargas cognitive manifold visualised as overlapping luminous blobs across semantic space"
+heroImageAlt: "The Léargas combined map — memory blobs and book rings on the same animated canvas"
 furtherReading:
   - title: "Experiment Léargas: A Holographic Map of Memory"
     url: "/resources/experiment-leargas-holographic-memory"
@@ -58,6 +58,10 @@ The stack is structured on a vertical axis from homeostatic sensing at the botto
 | Embodied action | **Legion** | Motor cortex + body | Distributed swarm, agent-to-agent protocol |
 
 The horizontal axis — the infrastructure running alongside this vertical pipeline — includes **Rialú** (key vault, command centre), **Sentinel** (threat monitoring), and **Faire** (desktop integration layer). These are not cognitive components; they are the environmental conditions the stack runs in.
+
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(128,128,128,0.15);">
+  <iframe src="/stack/" width="100%" height="680" style="border:none;background:#0d0e10;" title="FoxxeLabs Cognitive Stack — interactive diagram"></iframe>
+</div>
 
 ---
 
@@ -124,6 +128,12 @@ Three theoretical pillars underlie this architecture:
 **Information geometry for distant connections.** The natural metric over the space of probability distributions is the Fisher-Rao metric — the geodesic on the statistical manifold. In flat Euclidean space, *bus timetable* and *ATU Galway parking* are unrelated. On a personal manifold built from years of Irish transport frustration, a short curved path connects them. This is spreading activation along manifold geometry, not a programmed rule.
 
 Five query modes are implemented in the Léargas API: `probe(seed, hops)` for spreading activation, `reconstruct(fragment)` for holographic partial-cue recovery, `diff(t1, t2)` for snapshot comparison, `frontier()` for highest-entropy clusters (REM targets), and `decay_alerts()` for what is fading.
+
+The combined view below shows the live Léargas manifold — memory blobs (GMM components, coloured by source) alongside book blobs (dashed rings, sized by word count) on a shared timeline. Scrub through years of accumulated thought and production simultaneously.
+
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
+  <iframe src="/leargas/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — Combined Map: memory and writing on the same canvas"></iframe>
+</div>
 
 ---
 
