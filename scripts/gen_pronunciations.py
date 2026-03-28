@@ -226,12 +226,36 @@ def generate_html(entries: list, dry_run: bool) -> bool:
     <span><span class="legend-dot dot-colm"></span>Colm (m)</span>
   </div>
 </div>
-<table><tbody>
-{rows}</tbody></table>
-<p class="note">Native Irish voices · Azure Neural ga-IE · static MP3 · <a href="https://ga-say.sionnach.ie">ga-say</a></p>
+<table><tbody id="tbody"></tbody></table>
+<p class="note">Native Irish voices · Azure Neural ga-IE · static MP3 · <a href="https://gaeltacht.sionnach.ie">gaeltacht</a></p>
 <script>
 const BASE = '/pronunciation/audio/';
 let _cur = null;
+
+async function loadEntries() {{
+  try {{
+    const r = await fetch('/pronunciation/pronunciations.json');
+    const data = await r.json();
+    const tbody = document.getElementById('tbody');
+    data.entries.forEach(e => {{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="name">${{e.name}}</td>
+        <td class="phonetic">${{e.phonetic}}</td>
+        <td class="ipa">${{e.ipa}}</td>
+        <td class="meaning">
+          <button class="speak-btn" onclick="speak(this,'${{e.slug}}','orla')" title="Orla">▶</button>
+          <button class="speak-btn colm-btn" onclick="speak(this,'${{e.slug}}','colm')" title="Colm">▶</button>
+          ${{e.meaning}}
+        </td>`;
+      tbody.appendChild(tr);
+    }});
+  }} catch(err) {{
+    document.getElementById('tbody').innerHTML =
+      '<tr><td colspan="4" style="color:var(--text3);padding:12px">Could not load entries.</td></tr>';
+  }}
+}}
+
 function speak(btn, slug, voice) {{
   if (_cur) {{ _cur.pause(); _cur = null; }}
   document.querySelectorAll('.speak-btn.playing').forEach(b => b.classList.remove('playing'));
@@ -247,6 +271,8 @@ function speak(btn, slug, voice) {{
   }};
   a.play();
 }}
+
+loadEntries();
 </script>
 </body>
 </html>
