@@ -184,16 +184,6 @@ The naming is also a position: this is Irish-built infrastructure, grounded in I
 
 ---
 
-## <span style="color:#1F4E79">Pronunciation guide</span>
-
-Irish orthography is not intuitive for non-native readers. Click ▶ on any row to hear the name spoken by a native Irish voice. Orla and Colm are Azure Neural Irish voices — not TTS approximations.
-
-<div style="width:100%;border-radius:8px;overflow:hidden;margin:1.5rem 0;border:0.5px solid rgba(128,128,128,0.15);">
-  <iframe src="/pronunciation/" width="100%" height="430" style="border:none;background:#0d0e10;" title="FoxxeLabs — Irish pronunciation guide with Orla and Colm voices"></iframe>
-</div>
-
----
-
 ## <span style="color:#1F4E79">Why this is different</span>
 
 The AI memory field right now is building better databases. MemGPT, Letta, various RAG-plus-knowledge-graph hybrids are all solving the right problem with the wrong substrate. More metadata, more graph edges, better indexing, smarter retrieval. Sophisticated engineering on top of a fundamentally record-oriented model.
