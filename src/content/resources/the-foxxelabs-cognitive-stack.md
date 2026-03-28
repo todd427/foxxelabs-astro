@@ -146,7 +146,7 @@ Aislinge replicates both. The nightly pipeline on Daisy runs:
 1. **Slow-wave pass** — absorb queued embeddings from Mnemos into the Léargas GMM via online EM (fast, structural)
 2. **REM pass** — for each high-entropy embedding (Léargas `frontier()` results), use a small language model to generate a bridging statement connecting the two nearest attractors. Embed the bridging statement. Apply it as a perturbation vector to the nearby components.
 3. **Ebbinghaus decay** — reduce component weights according to time-elapsed and activation frequency
-4. **Serialise → push** — updated manifold pushed to Fly.io persistent volume; hot-swapped into the serving API
+4. **Serialise → push** — updated manifold serialised and pushed to cloud storage; hot-swapped into the serving API
 
 The REM-generated text is discarded. Only the deformation persists. This is biologically faithful: we do not remember the content of dreams; we retain the reorganisation they enacted on existing memories. The computational cost of the full nightly pipeline, including the dual-model REM pass, is approximately €0.04 per night at current API pricing.
 
