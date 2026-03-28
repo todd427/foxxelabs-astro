@@ -21,6 +21,9 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   month: 'long',
   day: 'numeric'
 });
+
+// Show pronunciation widget on any Research post
+const showPronunciation = category === 'Research';
 ---
 
 <BaseLayout title={`${title} | Foxxe Labs`} description={description} image={heroImage} type="article">
@@ -63,6 +66,25 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         <Content />
       </div>
     </div>
+
+    {showPronunciation && (
+      <div class="post-pronunciation">
+        <div class="container-narrow">
+          <h2>Irish pronunciation</h2>
+          <p class="pronunciation-intro">All FoxxeLabs components are named in Irish. Click ▶ to hear each name spoken by a native Irish voice.</p>
+          <div class="pronunciation-frame">
+            <iframe
+              src="/pronunciation/"
+              width="100%"
+              height="430"
+              style="border:none;background:#0d0e10;"
+              title="FoxxeLabs Irish pronunciation guide"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    )}
     
     {'furtherReading' in entry.data && entry.data.furtherReading && entry.data.furtherReading.length > 0 && (
       <div class="post-further-reading">
@@ -182,7 +204,6 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     margin-bottom: 64px;
   }
 
-  /* Section headings — gap above, accent left border, gap after bar */
   .post-content :global(h2) {
     margin-top: 64px;
     margin-bottom: 20px;
@@ -276,7 +297,6 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     text-decoration-color: var(--color-accent-bright);
   }
 
-  /* Tables */
   .post-content :global(table) {
     width: 100%;
     border-collapse: collapse;
@@ -305,11 +325,35 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     border-bottom: none;
   }
 
-  /* Horizontal rule as section divider */
   .post-content :global(hr) {
     border: none;
     border-top: 1px solid var(--border);
     margin: 48px 0;
+  }
+
+  /* ── Pronunciation widget ── */
+  .post-pronunciation {
+    padding: 48px 0 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-pronunciation h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+  }
+
+  .pronunciation-intro {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .pronunciation-frame {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
   }
 
   /* ── Further reading ── */
@@ -363,7 +407,6 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     margin-left: 6px;
   }
 
-  /* ── Responsive ── */
   @media (max-width: 768px) {
     .post-title {
       font-size: 2rem;
