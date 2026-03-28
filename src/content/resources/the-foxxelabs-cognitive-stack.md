@@ -5,8 +5,6 @@ publishDate: 2026-03-28
 category: "Research"
 tags: ["Legion", "Léargas", "Mnemos", "Aislinge", "Colainn", "Mothú", "cognitive-architecture", "continual-learning"]
 readingTime: "12 min read"
-heroImage: "/images/resources/the-foxxelabs-cognitive-stack-hero.jpg"
-heroImageAlt: "The Léargas combined map — memory blobs and book rings on the same animated canvas"
 furtherReading:
   - title: "Experiment Léargas: A Holographic Map of Memory"
     url: "/resources/experiment-leargas-holographic-memory"
@@ -28,6 +26,10 @@ furtherReading:
     source: "Research Ireland"
 draft: false
 ---
+
+<div style="width:100%;border-radius:8px;overflow:hidden;margin:0 0 2.5rem 0;border:0.5px solid rgba(255,255,255,0.08);">
+  <iframe src="/leargas/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — live cognitive manifold: memory and writing on the same animated canvas"></iframe>
+</div>
 
 ## <span style="color:#1F4E79">The question we kept asking</span>
 
@@ -60,7 +62,7 @@ The stack is structured on a vertical axis from homeostatic sensing at the botto
 The horizontal axis — the infrastructure running alongside this vertical pipeline — includes **Rialú** (key vault, command centre), **Sentinel** (threat monitoring), and **Faire** (desktop integration layer). These are not cognitive components; they are the environmental conditions the stack runs in.
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(128,128,128,0.15);">
-  <iframe src="/stack/" width="100%" height="680" style="border:none;background:#0d0e10;" title="FoxxeLabs Cognitive Stack — interactive diagram"></iframe>
+  <iframe src="/stack/" width="100%" height="680" style="border:none;background:#0d0e10;" title="FoxxeLabs Cognitive Stack — interactive architecture diagram"></iframe>
 </div>
 
 ---
@@ -69,13 +71,13 @@ The horizontal axis — the infrastructure running alongside this vertical pipel
 
 The system begins with sensing — not document ingestion, but physical state.
 
-**Lorg** (*Irish: track, trace*) is a mobile telemetry application that logs GPS traces, environmental data, and behavioural patterns in the field. It uses a lightweight on-device model and feeds structured data continuously.
+**Lorg** (*LORG — Irish: track, trace*) is a mobile telemetry application that logs GPS traces, environmental data, and behavioural patterns in the field. It uses a lightweight on-device model and feeds structured data continuously.
 
 **Withings BPM Core** measures blood pressure, heart rate, ECG, and stethoscope audio (valvular assessment) via a single device. ECG sessions, heart sounds, and raw biometric readings flow in through the Withings API.
 
 **George** (*named for Curious George*) is a vision-language memory service running [moondream2](https://github.com/vikhyat/moondream) on local hardware. It watches incoming photograph and video streams, captions them, scores visual novelty against a rolling baseline, and ingests both the caption and the novelty score into the stack.
 
-**Mothú** (*Irish: feeling, sensing, emotion*) is our emotional AI layer — a pipeline of VADER compound scoring, NRC EmoLex categorical emotion extraction (Plutchik's eight primary emotions), and a HuggingFace transformer producing Ekman six-emotion probability distributions across the personal conversation corpus in Mnemos. Mothú's primary signal is *affective distinctiveness* — deviation from personal emotional baseline — not raw sentiment score. A neutral high-effort document is not the same as a brief high-distress entry, even if their raw scores look similar.
+**Mothú** (*MO-hoo — Irish: feeling, sensing, emotion*) is our emotional AI layer — a pipeline of VADER compound scoring, NRC EmoLex categorical emotion extraction (Plutchik's eight primary emotions), and a HuggingFace transformer producing Ekman six-emotion probability distributions across the personal conversation corpus in Mnemos. Mothú's primary signal is *affective distinctiveness* — deviation from personal emotional baseline — not raw sentiment score. A neutral high-effort document is not the same as a brief high-distress entry, even if their raw scores look similar.
 
 All four sensing layers feed structured readings into a single time-series store.
 
@@ -83,7 +85,7 @@ All four sensing layers feed structured readings into a single time-series store
 
 ## <span style="color:#1F4E79">The medulla: Colainn</span>
 
-**Colainn** (*Irish: body, physical form*) is the biometric homeostatic layer — what we call the medulla of the stack.
+**Colainn** (*KUL-in — Irish: body, physical form*) is the biometric homeostatic layer — what we call the medulla of the stack.
 
 The medulla oblongata is among the most ancient parts of the vertebrate brain. It runs the things that cannot be allowed to fail: heart rate, respiration, blood pressure regulation. It does not think. It maintains the conditions under which thinking can occur. It is the part of the brain whose job is to keep the whole system alive.
 
@@ -99,7 +101,7 @@ The philosophical premise beneath all of this: **homeostasis may be load-bearing
 
 ## <span style="color:#1F4E79">The hippocampus: Mnemos</span>
 
-**Mnemos** (*Greek: memory; also Irish, via the mnemonic tradition*) is the episodic memory store — the hippocampus of the stack.
+**Mnemos** (*NEE-mos — Greek: memory*) is the episodic memory store — the hippocampus of the stack.
 
 57,664 documents as of March 2026: years of ChatGPT conversation history, Claude session histories, research notes, book drafts, emails, code, Git commit logs, location traces, photography captions, and Aislinge consolidation statements. Every document is embedded using `all-MiniLM-L6-v2`, stored in ChromaDB with full metadata, and queryable via a FastAPI server at [mnemos.foxxelabs.ie](https://mnemos.foxxelabs.ie) and via a FastMCP endpoint accessible from Claude.ai sessions.
 
@@ -113,7 +115,7 @@ Mnemos is the fast layer. It encodes fast, retrieves fast, and does not try to b
 
 ## <span style="color:#1F4E79">The neocortex: Léargas</span>
 
-**Léargas** (*Irish: insight, perception, understanding*) sits above Mnemos the way the neocortex sits above the hippocampus. It does not store documents. It stores the *shape* that documents carve into semantic space.
+**Léargas** (*LYAR-gəs — Irish: insight, perception, understanding*) sits above Mnemos the way the neocortex sits above the hippocampus. It does not store documents. It stores the *shape* that documents carve into semantic space.
 
 The technical implementation is a Bayesian Gaussian Mixture Model over the 384-dimensional sentence-transformer embedding space. Each component carries a centroid (mean vector), covariance (cluster shape), weight (accumulated mass), and decay rate (forgetting curve parameter). New documents are absorbed via online expectation-maximisation — a vectorised update pass on GPU that takes 0.03 seconds. Ebbinghaus decay curves reduce component weights over time, with deeper sleep consolidation cycles capable of temporarily reversing decay for repeatedly activated components.
 
@@ -129,17 +131,13 @@ Three theoretical pillars underlie this architecture:
 
 Five query modes are implemented in the Léargas API: `probe(seed, hops)` for spreading activation, `reconstruct(fragment)` for holographic partial-cue recovery, `diff(t1, t2)` for snapshot comparison, `frontier()` for highest-entropy clusters (REM targets), and `decay_alerts()` for what is fading.
 
-The combined view below shows the live Léargas manifold — memory blobs (GMM components, coloured by source) alongside book blobs (dashed rings, sized by word count) on a shared timeline. Scrub through years of accumulated thought and production simultaneously.
-
-<div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
-  <iframe src="/leargas/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — Combined Map: memory and writing on the same canvas"></iframe>
-</div>
+The combined map above shows the live Léargas manifold — memory blobs (GMM components, coloured by source) alongside book blobs (dashed rings, sized by word count) on a shared timeline. Scrub through years of accumulated thought and production simultaneously.
 
 ---
 
 ## <span style="color:#1F4E79">Geometry: Radharc</span>
 
-**Radharc** (*Irish: view, sight, vision*) is the geometry layer — a set of UMAP projections, divergence measurements, and topology tools that map the manifold's structure and track how it evolves over time.
+**Radharc** (*RY-ark — Irish: view, sight, vision*) is the geometry layer — a set of UMAP projections, divergence measurements, and topology tools that map the manifold's structure and track how it evolves over time.
 
 Where Léargas is the manifold, Radharc is the cartography of it. Snapshot diffs produce information-geometric measurements of how the shape of thought has changed between two points in time. KL divergence between GMM states is a real measurement: *what was the cognitive distance between January and March?* is a question Radharc can answer.
 
@@ -149,7 +147,7 @@ The biological analogue is the entorhinal cortex and the parahippocampal cortex 
 
 ## <span style="color:#1F4E79">Sleep: Aislinge</span>
 
-**Aislinge** (*Irish: dream, vision, reverie*) is the consolidation process — the sleep cycle of the stack.
+**Aislinge** (*ASH-ling-ə — Irish: dream-vision, reverie*) is the consolidation process — the sleep cycle of the stack.
 
 Biological sleep does two distinct things for memory: slow-wave sleep drives hippocampus-to-neocortex transfer (structural consolidation), and REM sleep drives the associative reorganisation that produces creative connection and emotional processing (integrative consolidation). The two phases are not redundant; they are complementary. Disrupting REM specifically disrupts emotional memory processing and creative insight. Disrupting slow-wave specifically disrupts factual consolidation.
 
@@ -183,6 +181,27 @@ Everything is named in Irish. This is not decoration.
 The Irish language is one of the oldest continuously used languages in Europe, with a sophisticated vocabulary for interior experience — emotion, perception, landscape, time — that does not always have clean English equivalents. *Léargas* (insight) is not quite the same as *understanding*; it carries a sense of seeing through something to its nature. *Aislinge* (dream-vision) is the literary form of revelatory dream, cognate with prophecy. *Colainn* (body, physical form) locates the sensing layer in the embodied rather than the digital.
 
 The naming is also a position: this is Irish-built infrastructure, grounded in Irish intellectual tradition, designed to run on Irish compute. At a time when the global AI stack is being consolidated into a very small number of very large American companies, small sovereign stacks matter. The Irish language has survived because communities decided it mattered enough to maintain. We think the same principle applies to cognitive infrastructure.
+
+---
+
+## <span style="color:#1F4E79">Pronunciation guide</span>
+
+Irish orthography is not intuitive for non-native readers. Here are all the component names with phonetic guides and IPA for those who want precision.
+
+| Name | Say it | IPA | Meaning |
+|---|---|---|---|
+| **Colainn** | KUL-in | /ˈkɔlɪɲ/ | body, physical form |
+| **Mnemos** | NEE-mos | /ˈniːmɒs/ | memory (Greek) |
+| **Léargas** | LYAR-gəs | /ˈlʲeːɾˠɡəs/ | insight, perception |
+| **Radharc** | RY-ark | /ˈɾˠaɪəɾk/ | view, sight, vision |
+| **Aislinge** | ASH-ling-ə | /ˈaʃlʲɪŋʲə/ | dream-vision, reverie |
+| **Mothú** | MO-hoo | /mɔˈhuː/ | feeling, sensing, emotion |
+| **Lorg** | LORG | /lɔɾˠɡ/ | track, trace |
+| **Rialú** | REE-a-loo | /ˈɾʲiːəluː/ | control, regulation |
+| **Scéal** | SHKYAL | /ʃkʲeːl/ | story, tale |
+| **Faire** | FAR-ə | /ˈfaɾʲə/ | watching, vigilance |
+
+A note on Irish phonology: the language distinguishes *broad* and *slender* consonants — the same letter sounds different depending on the vowels around it. The *lʲ* in Léargas is a palatalised L, softer and further forward in the mouth than English L. The *ɾˠ* in Radharc is a velarised tap, closer to a light rolled R than the English approximant. These distinctions are what give Irish its characteristic sound — not harder to pronounce than French, just different.
 
 ---
 
