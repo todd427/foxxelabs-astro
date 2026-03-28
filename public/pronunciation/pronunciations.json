@@ -1,0 +1,108 @@
+{
+  "entries": [
+    {
+      "slug": "colainn",
+      "name": "Colainn",
+      "irish": "Colainn",
+      "phonetic": "KUL-in",
+      "ipa": "/ˈkɔlɪɲ/",
+      "meaning": "body, physical form"
+    },
+    {
+      "slug": "mnemos",
+      "name": "Mnemos",
+      "irish": "Mnemos",
+      "phonetic": "NEE-mos",
+      "ipa": "/ˈniːmɒs/",
+      "meaning": "memory (Greek)"
+    },
+    {
+      "slug": "leargas",
+      "name": "Léargas",
+      "irish": "Léargas",
+      "phonetic": "LYAR-gəs",
+      "ipa": "/ˈlʲeːɾˠɡəs/",
+      "meaning": "insight, perception"
+    },
+    {
+      "slug": "radharc",
+      "name": "Radharc",
+      "irish": "Radharc",
+      "phonetic": "RY-ark",
+      "ipa": "/ˈɾˠaɪəɾk/",
+      "meaning": "view, sight, vision"
+    },
+    {
+      "slug": "aislinge",
+      "name": "Aislinge",
+      "irish": "Aislinge",
+      "phonetic": "ASH-ling-ə",
+      "ipa": "/ˈaʃlʲɪŋʲə/",
+      "meaning": "dream-vision, reverie"
+    },
+    {
+      "slug": "mothu",
+      "name": "Mothú",
+      "irish": "Mothú",
+      "phonetic": "MO-hoo",
+      "ipa": "/mɔˈhuː/",
+      "meaning": "feeling, sensing, emotion"
+    },
+    {
+      "slug": "lorg",
+      "name": "Lorg",
+      "irish": "Lorg",
+      "phonetic": "LORG",
+      "ipa": "/lɔɾˠɡ/",
+      "meaning": "track, trace"
+    },
+    {
+      "slug": "rialu",
+      "name": "Rialú",
+      "irish": "Rialú",
+      "phonetic": "REE-a-loo",
+      "ipa": "/ˈɾʲiːəluː/",
+      "meaning": "control, regulation"
+    },
+    {
+      "slug": "sceal",
+      "name": "Scéal",
+      "irish": "Scéal",
+      "phonetic": "SHKYAL",
+      "ipa": "/ʃkʲeːl/",
+      "meaning": "story, tale"
+    },
+    {
+      "slug": "faire",
+      "name": "Faire",
+      "irish": "Faire",
+      "phonetic": "FAR-ə",
+      "ipa": "/ˈfaɾʲə/",
+      "meaning": "watching, vigilance"
+    },
+    {
+      "slug": "foghlaim",
+      "name": "Foghlaim",
+      "irish": "Foghlaim",
+      "phonetic": "FOW-lim",
+      "ipa": "/ˈfɔlɪm/",
+      "meaning": "learning, study"
+    },
+    {
+      "slug": "anseo",
+      "name": "Anseo",
+      "irish": "Anseo",
+      "phonetic": "AN-shoh",
+      "ipa": "/ˈanʃoː/",
+      "meaning": "here, present"
+    },
+    {
+      "slug": "taisce",
+      "name": "Taisce",
+      "irish": "Taisce",
+      "phonetic": "TASH-kə",
+      "ipa": "/ˈtaʃkʲə/",
+      "meaning": "treasure, vault"
+    }
+  ]
+}
