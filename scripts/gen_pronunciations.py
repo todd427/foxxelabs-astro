@@ -21,19 +21,9 @@ Usage:
 
 No external dependencies — stdlib only (urllib, json, subprocess).
 
-Secrets:
-  Azure credentials are fetched from Rialú at runtime.
-  Rialú is protected by Cloudflare Access — the CF service token headers
-  are embedded below (rialu-agent service token, read-only to key vault).
-
-  To add the Azure keys to Rialú (one-time setup):
-    curl -s -X POST https://rialu.ie/api/keys \\
-      -H "CF-Access-Client-Id: <id>" \\
-      -H "CF-Access-Client-Secret: <secret>" \\
-      -H "Content-Type: application/json" \\
-      -d '{"name":"azure-speech-key","provider":"microsoft","value":"<key>","env_var":"AZURE_SPEECH_KEY","notes":"Azure Speech resource key for ga-say / gen_pronunciations"}'
-    curl -s -X POST https://rialu.ie/api/keys \\
-      ... -d '{"name":"azure-speech-region","provider":"microsoft","value":"northeurope","env_var":"AZURE_SPEECH_REGION"}'
+Secrets pulled from Rialú at runtime:
+  "Azure Speech API"     (env_var: AZURE_SPEECH_KEY)
+  "azure-speech-region"  (env_var: AZURE_SPEECH_REGION)
 
 Cron entry (add to Daisy crontab):
   0 2 * * 0 cd /home/Projects/foxxelabs-astro && python scripts/gen_pronunciations.py >> /home/Projects/logs/gen_pronunciations.log 2>&1
@@ -64,11 +54,12 @@ TTS_RATE   = "0.85"
 OUTPUT_FMT = "audio-24khz-48kbitrate-mono-mp3"
 
 # ── Rialú — Cloudflare Access service token (rialu-agent) ────────────────────
-RIALU_BASE   = "https://rialu.ie"
+RIALU_BASE       = "https://rialu.ie"
 CF_CLIENT_ID     = "e04fa1c2d87bd99cae792c0c2866457e.access"
 CF_CLIENT_SECRET = "c4cc54bcd7fdcdfd04a17c8efa70853657cfcc0b342a39a6917d3a81581670ae"
 
-AZURE_KEY_NAME    = "azure-speech-key"
+# Key names as stored in Rialú
+AZURE_KEY_NAME    = "Azure Speech API"
 AZURE_REGION_NAME = "azure-speech-region"
 
 
@@ -94,23 +85,20 @@ def _http(method: str, url: str, body: bytes = None) -> dict:
 
 
 def rialu_find_key_id(name: str) -> int:
-    """Return the numeric ID for a key by name, or raise."""
     keys = _http("GET", f"{RIALU_BASE}/api/keys")
     for k in keys:
         if k["name"] == name:
             return k["id"]
-    raise KeyError(f"Key '{name}' not found in Rialú. See docstring for how to add it.")
+    raise KeyError(f"Key '{name}' not found in Rialú.")
 
 
 def rialu_reveal(name: str) -> str:
-    """Return the decrypted value of a key by name."""
     key_id = rialu_find_key_id(name)
     data = _http("POST", f"{RIALU_BASE}/api/keys/{key_id}/reveal")
     return data["value"]
 
 
 def get_azure_creds() -> tuple[str, str]:
-    """Return (key, region) — from env vars if set, otherwise Rialú."""
     key    = os.environ.get("AZURE_SPEECH_KEY")
     region = os.environ.get("AZURE_SPEECH_REGION")
     if key and region:
@@ -317,7 +305,6 @@ def main():
         key, region = get_azure_creds()
     except KeyError as e:
         log(f"ERROR: {e}")
-        log("Add the Azure Speech keys to Rialú — see docstring for curl commands.")
         sys.exit(1)
     except Exception as e:
         log(f"ERROR: could not get Azure credentials: {e}")
