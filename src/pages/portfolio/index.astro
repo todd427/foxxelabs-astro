@@ -1,0 +1,446 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    number: '01 / 05',
+    tag: 'White-label Commerce',
+    name: 'Stór',
+    pronunciation: 'STORE · Irish for "treasure"',
+    url: 'stor.irish',
+    pitch: 'A direct-to-audience storefront platform for the internet age — where creators sell directly to their audience, and keep what they\'ve earned.',
+    body: 'Stór is a white-label platform for direct-to-audience commerce. The architecture supports any creator or independent business that wants to own their customer relationship rather than rent it from a marketplace. Currently deployed as an author bookstore — the seed instance is Foxxe Frey, selling forty titles via Stripe checkout with BookFunnel delivery. Phase 2 opens the platform to other creators: each gets their own branded storefront with Stripe Connect so revenue goes direct. Near-100% margin minus payment processing, versus splitting with a retailer.',
+    pills: ['Live · Railway', 'White-label SaaS', 'Stripe Connect', 'Any Creator'],
+    live: [true, false, false, false],
+  },
+  {
+    number: '02 / 05',
+    tag: 'Community Platform',
+    name: 'Anseo',
+    pronunciation: 'AN-shuh · Irish for "here / present"',
+    url: 'anseo.irish',
+    pitch: 'A community platform built for organisations that want to bring people together in a digital space that respects their attention instead of exploiting it.',
+    body: 'A community platform built on Calm Design principles — no algorithmic feeds, no likes, no infinite scroll — for educational institutions, cultural communities, civic organisations, and anyone who believes their members deserve better than attention-harvesting social media. White-label architecture (Stór is one instance). Supports 58 languages across 9 regional groups with Azure Neural TTS voices and dialect-aware Irish built in. Validated with ATU Letterkenny students. Infrastructure cost: €7–13/month.',
+    pills: ['Live · Railway', '58 Languages', 'Calm Design', 'White-label'],
+    live: [true, false, false, false],
+  },
+  {
+    number: '03 / 05',
+    tag: 'Cybersecurity Training',
+    name: 'CyberSafer',
+    pronunciation: null,
+    url: 'cybersafer.uk',
+    pitch: 'The flight simulator for online safety — chat with AI scammers, phishers, and manipulators in a safe environment, earn recognition skills, and never be caught out in the real world.',
+    body: 'Interactive cybersecurity awareness training through AI-powered conversations with realistic adversary personas: phishers, scammers, social engineers. Safe failure environment — users learn recognition patterns without real-world consequences. Mobile-first, free at point of use. Includes grooming awareness scenarios (content-warned, pedagogically responsible) — coverage most tools avoid entirely. Deployed on Cloudflare Pages. White-label commercial pathways for schools, banks, insurers, and government campaigns.',
+    pills: ['Deployed · CF Pages', 'Mobile-first', 'B2C + B2B + Gov', 'White-label'],
+    live: [true, false, false, false],
+  },
+  {
+    number: '04 / 05',
+    tag: 'Operations Security',
+    name: 'Rialú',
+    pronunciation: 'REE-ah-loo · Irish for "control"',
+    url: 'rialu.ie',
+    pitch: 'Gives small organisations the same operational security and project intelligence as a Fortune 500 company — without the enterprise overhead.',
+    body: 'An integrated platform combining an encrypted secrets vault (Shamir\'s Secret Sharing), threat intelligence via the Sentinel microservice, project registry, worklog, and deployment tracking — with a full MCP server for AI integration. Production-ready and battle-tested: currently managing the entire FoxxeLabs infrastructure estate across multiple machines and cloud platforms. The architecture is replicable for any organisation handling sensitive credentials across distributed teams.',
+    pills: ['Live · Fly.io', 'Shamir Vault', 'MCP Server', 'Threat Intelligence'],
+    live: [true, false, false, false],
+  },
+  {
+    number: '05 / 05',
+    tag: 'Digital Legacy',
+    name: 'Someday',
+    pronunciation: null,
+    url: 'someday.irish',
+    pitch: 'Ensures your digital life becomes your family\'s inheritance — not just your photos and files, but your stories, your voice, and your wisdom, preserved for the people who matter most.',
+    body: 'A digital legacy platform focused on emotional inheritance: voice recordings, life stories, relationship maps, personal wisdom — preserved in formats designed to outlast the technology used to create them. 4.4 billion people have digital assets with no clear inheritance plan. The bigger problem is that most of what makes someone irreplaceable — their voice, their stories, their way of seeing the world — disappears with them entirely. Someday is about meaning transfer, not asset transfer. Applications in hospice care, estate planning, family heritage, and insurance products.',
+    pills: ['Research Stage', 'Digital Legacy', 'Estate Planning', 'Hospice Care'],
+    live: [false, false, false, false],
+  },
+];
+
+const reading = [
+  { title: 'The FoxxeLabs Cognitive Stack', slug: 'the-foxxelabs-cognitive-stack' },
+  { title: 'Human-AI Collaborative Development', slug: 'human-ai-collaborative-development' },
+  { title: 'The Accidental Revolution: Claude Code', slug: 'the-accidental-revolution-claude-code' },
+];
+---
+
+<BaseLayout
+  title="Portfolio · March 2026 · Foxxe Labs"
+  description="FoxxeLabs builds experimental technology at the edges of AI, education, and human experience. Five of our top projects."
+>
+
+  <!-- Hero -->
+  <section class="port-hero">
+    <p class="port-eyebrow">Portfolio Overview · March 2026</p>
+    <h1 class="port-h1">Five things worth <em>talking about</em></h1>
+    <p class="port-lead">
+      FoxxeLabs builds experimental technology at the edges of AI, education, and human experience.
+      Here are five of our top projects.
+    </p>
+    <div class="port-stats">
+      <div class="stat">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Featured Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">58</span>
+        <span class="stat-label">Languages Supported</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">57K+</span>
+        <span class="stat-label">Docs in Memory</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="port-divider">
+    <span class="port-divider-label">The Work</span>
+    <span class="port-divider-line"></span>
+  </div>
+
+  <!-- Project grid -->
+  <div class="port-grid">
+    {projects.map((p) => (
+      <article class="port-card">
+        <p class="port-num">{p.number}</p>
+        <span class="port-tag">{p.tag}</span>
+        <h2 class="port-name">{p.name}</h2>
+        {p.pronunciation && <p class="port-pron">{p.pronunciation}</p>}
+        <p class="port-url">{p.url}</p>
+        <blockquote class="port-pitch">"{p.pitch}"</blockquote>
+        <p class="port-body">{p.body}</p>
+        <div class="port-pills">
+          {p.pills.map((pill, i) => (
+            <span class={`port-pill${p.live[i] ? ' live' : ''}`}>{pill}</span>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <!-- Footer section -->
+  <div class="port-footer-section">
+    <div class="card port-more">
+      <p class="port-more-text">
+        FoxxeLabs maintains a broader technology portfolio —
+        <a href="mailto:contact@foxxelabs.ie">get in touch</a> to discuss additional opportunities and partnerships.
+        Also live: slambridge.ie &amp; slambridge.us — an AI-powered contract bridge bidding trainer.
+      </p>
+
+      <div class="port-reading">
+        <p class="port-reading-label">Further Reading</p>
+        <ul class="port-reading-list">
+          {reading.map((r) => (
+            <li><a href={`/resources/${r.slug}/`}>{r.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .port-hero {
+    padding: 56px 0 40px;
+  }
+
+  .port-eyebrow {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.68rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+
+  .port-h1 {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin: 0 0 20px;
+  }
+
+  [data-theme="editorial"] .port-h1 { font-weight: 700; }
+
+  .port-h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .port-lead {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 540px;
+    margin: 0 0 40px;
+  }
+
+  [data-theme="editorial"] .port-lead { font-family: var(--font-body); }
+
+  .port-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+
+  .stat-num {
+    display: block;
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  [data-theme="editorial"] .stat-num { font-weight: 700; }
+
+  .stat-label {
+    display: block;
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── Divider ── */
+  .port-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0 36px;
+  }
+
+  .port-divider-label {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .port-divider-line {
+    flex: 1;
+    height: 1px;
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+
+  /* ── Grid ── */
+  .port-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  /* ── Card ── */
+  .port-card {
+    background: color-mix(in srgb, var(--card) 92%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 28px 24px;
+    box-shadow: 0 14px 36px rgba(0,0,0,.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+
+  .port-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .port-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 20px 48px rgba(0,0,0,.18);
+  }
+
+  .port-card:hover::before { opacity: 1; }
+
+  .port-num {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.58rem;
+    letter-spacing: 3px;
+    color: var(--muted);
+    opacity: 0.45;
+    margin: 0 0 14px;
+  }
+
+  .port-tag {
+    display: inline-block;
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  .port-name {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 1.1;
+    color: var(--text);
+    margin: 0 0 3px;
+  }
+
+  [data-theme="editorial"] .port-name { font-weight: 700; }
+
+  .port-pron {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+    color: var(--muted);
+    opacity: 0.65;
+    margin: 0 0 3px;
+  }
+
+  .port-url {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.62rem;
+    color: var(--accent2);
+    opacity: 0.8;
+    margin: 0 0 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .port-pitch {
+    font-family: var(--font-display, Georgia, serif);
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--muted);
+    border-left: 2px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    padding-left: 12px;
+    margin: 0 0 16px;
+  }
+
+  [data-theme="editorial"] .port-pitch { font-family: var(--font-body); }
+
+  .port-body {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--muted) 80%, transparent);
+    margin: 0 0 24px;
+  }
+
+  .port-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  .port-pill {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: color-mix(in srgb, var(--muted) 8%, transparent);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+
+  .port-pill.live {
+    color: #4ade80;
+    background: rgba(74,222,128,.08);
+    border-color: rgba(74,222,128,.25);
+  }
+
+  /* ── Footer section ── */
+  .port-footer-section {
+    margin-bottom: 20px;
+  }
+
+  .port-more {
+    text-align: center;
+    padding: 28px 32px;
+  }
+
+  .port-more-text {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0 0 24px;
+    line-height: 1.7;
+  }
+
+  .port-more-text a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .port-more-text a:hover { text-decoration: underline; }
+
+  .port-reading {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .port-reading-label {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  .port-reading-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: center;
+  }
+
+  .port-reading-list li a {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .port-reading-list li a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .port-grid { grid-template-columns: 1fr; }
+    .port-stats { gap: 24px; }
+    .port-reading-list { flex-direction: column; align-items: center; }
+  }
+</style>
