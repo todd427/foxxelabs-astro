@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What the Dream Found — FoxxeLabs</title>
+<meta name="description" content="I built a system that watches everything I write and, while I sleep, quietly locates what I believe. Last week it found something I had never named.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  (function(){
+    var s=localStorage.getItem('foxxe-theme');
+    var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var v=['dark','light','editorial'];
+    document.documentElement.setAttribute('data-theme', v.includes(s)?s:d?'dark':'light');
+  })();
+</script>
+<style>
+/* ── Foxxelabs theme tokens ───────────────────────────────────────── */
+:root,[data-theme="dark"]{
+  --bg:#0b0f14;--card:#121923;--muted:#9fb0c3;--text:#e9f0f7;
+  --accent:#7dd3fc;--accent2:#a78bfa;--border:rgba(255,255,255,.10);
+  --sitebar-bg:rgba(11,15,20,.72);
+  --body-gradient:
+    radial-gradient(1200px 800px at 15% 10%,rgba(167,139,250,.18),transparent 55%),
+    radial-gradient(1000px 700px at 85% 20%,rgba(125,211,252,.16),transparent 55%),
+    var(--bg);
+  --color-bg:var(--bg);--color-text:var(--text);--color-text-muted:var(--muted);
+  --color-accent:var(--accent);--color-accent-bright:#b3e7ff;
+  --color-accent-dim:rgba(125,211,252,.18);
+  --color-surface:var(--card);--color-surface-elevated:#1a2535;
+  --color-border:var(--border);
+  --font-body:'Lora',Georgia,serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --node-a-bg:rgba(138,127,212,.12);--node-a-border:rgba(138,127,212,.28);--node-a-tag:#a78bfa;
+  --node-b-bg:rgba(212,114,111,.12);--node-b-border:rgba(212,114,111,.28);--node-b-tag:#d4726f;
+  --blockquote-bg:rgba(125,211,252,.06);--blockquote-border:var(--accent);
+  --cosine-track:#1a2535;--cosine-fill:linear-gradient(90deg,#a78bfa,#7dd3fc,#d4726f);
+  --c-bridge:#a78bfa;--c-bridge-area:rgba(167,139,250,.10);
+  --c-cluster:#7dd3fc;--c-cluster-area:rgba(125,211,252,.08);
+  --c-infer:rgba(255,255,255,.12);--c-grid:rgba(255,255,255,.05);
+  --c-tick:#5a6a7a;--c-axis:rgba(255,255,255,.15);
+  --c-new:#3B6D11;--c-grew:#5db89a;--c-shifted:#c9a84c;--c-dissolved:#d4726f;
+  --c-point-stroke:#0b0f14;
+}
+[data-theme="light"]{
+  --bg:#f4f6f9;--card:#ffffff;--muted:#5a6a7a;--text:#111820;
+  --accent:#0369a1;--accent2:#6d28d9;--border:rgba(0,0,0,.09);
+  --sitebar-bg:rgba(244,246,249,.85);
+  --body-gradient:
+    radial-gradient(1200px 800px at 15% 10%,rgba(109,40,217,.06),transparent 55%),
+    radial-gradient(1000px 700px at 85% 20%,rgba(3,105,161,.07),transparent 55%),
+    var(--bg);
+  --color-bg:var(--bg);--color-text:var(--text);--color-text-muted:var(--muted);
+  --color-accent:var(--accent);--color-accent-bright:#0284c7;
+  --color-accent-dim:rgba(3,105,161,.15);
+  --color-surface:var(--card);--color-surface-elevated:#f0f2f5;
+  --color-border:var(--border);
+  --font-body:'Lora',Georgia,serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --node-a-bg:rgba(109,40,217,.07);--node-a-border:rgba(109,40,217,.2);--node-a-tag:#6d28d9;
+  --node-b-bg:rgba(192,57,43,.07);--node-b-border:rgba(192,57,43,.2);--node-b-tag:#c0392b;
+  --blockquote-bg:rgba(3,105,161,.05);--blockquote-border:var(--accent);
+  --cosine-track:#dde3ea;--cosine-fill:linear-gradient(90deg,#6d28d9,#0369a1,#c0392b);
+  --c-bridge:#6d28d9;--c-bridge-area:rgba(109,40,217,.08);
+  --c-cluster:#0369a1;--c-cluster-area:rgba(3,105,161,.07);
+  --c-infer:rgba(0,0,0,.12);--c-grid:rgba(0,0,0,.05);
+  --c-tick:#8a9aaa;--c-axis:rgba(0,0,0,.12);
+  --c-new:#2d5a0a;--c-grew:#0f6e56;--c-shifted:#7a5c00;--c-dissolved:#c0392b;
+  --c-point-stroke:#f4f6f9;
+}
+[data-theme="editorial"]{
+  --bg:#f5f0e8;--card:#ede8de;--muted:#6b6560;--text:#1a1814;
+  --accent:#c0392b;--accent2:#b8860b;--border:rgba(26,24,20,.12);
+  --sitebar-bg:rgba(245,240,232,.90);--body-gradient:var(--bg);
+  --color-bg:var(--bg);--color-text:var(--text);--color-text-muted:var(--muted);
+  --color-accent:var(--accent);--color-accent-bright:#922b21;
+  --color-accent-dim:rgba(192,57,43,.12);
+  --color-surface:var(--card);--color-surface-elevated:#e8e2d6;
+  --color-border:var(--border);
+  --font-body:'Source Serif 4',Georgia,serif;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --node-a-bg:rgba(184,134,11,.10);--node-a-border:rgba(184,134,11,.25);--node-a-tag:#7a5c00;
+  --node-b-bg:rgba(192,57,43,.09);--node-b-border:rgba(192,57,43,.22);--node-b-tag:#922b21;
+  --blockquote-bg:rgba(192,57,43,.05);--blockquote-border:var(--accent);
+  --cosine-track:#d8d2c6;--cosine-fill:linear-gradient(90deg,#7a5c00,#c0392b,#922b21);
+  --c-bridge:#b8860b;--c-bridge-area:rgba(184,134,11,.10);
+  --c-cluster:#c0392b;--c-cluster-area:rgba(192,57,43,.08);
+  --c-infer:rgba(26,24,20,.15);--c-grid:rgba(26,24,20,.06);
+  --c-tick:#9a9590;--c-axis:rgba(26,24,20,.15);
+  --c-new:#2d5a0a;--c-grew:#0f6e56;--c-shifted:#7a5c00;--c-dissolved:#922b21;
+  --c-point-stroke:#f5f0e8;
+}
+.cg text{font-family:var(--font-mono);fill:var(--c-tick);}
+.cg .grid{stroke:var(--c-grid);stroke-width:1;}
+.cg .axis{stroke:var(--c-axis);stroke-width:1;}
+.cg .area-bridge{fill:var(--c-bridge-area);}
+.cg .area-cluster{fill:var(--c-cluster-area);}
+.cg .line-bridge{stroke:var(--c-bridge);stroke-width:2.5;fill:none;}
+.cg .line-cluster{stroke:var(--c-cluster);stroke-width:2.5;fill:none;}
+.cg .line-infer{stroke:var(--c-infer);stroke-width:1.5;fill:none;stroke-dasharray:5,4;}
+.cg .dot-bridge{fill:var(--c-bridge);stroke:var(--c-point-stroke);stroke-width:2.5;}
+.cg .dot-cluster{fill:var(--c-cluster);stroke:var(--c-point-stroke);stroke-width:2.5;}
+.cg .dot-infer{fill:var(--c-infer);stroke:var(--c-point-stroke);stroke-width:2;}
+.cg .lbl-bridge{fill:var(--c-bridge);}
+.cg .lbl-cluster{fill:var(--c-cluster);}
+.bt .bar-new{fill:var(--c-new);}
+.bt .bar-grew{fill:var(--c-grew);}
+.bt .bar-shifted{fill:var(--c-shifted);}
+.bt .bar-dissolved{fill:var(--c-dissolved);}
+.bt text{font-family:var(--font-mono);fill:var(--c-tick);}
+.bt .axis{stroke:var(--c-axis);stroke-width:1;}
+.bt .tick{stroke:var(--c-axis);stroke-width:1;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:18px;scroll-behavior:smooth;}
+body{background:var(--body-gradient);color:var(--color-text);font-family:var(--font-body);line-height:1.85;-webkit-font-smoothing:antialiased;transition:background .2s,color .2s;}
+.sitebar{position:sticky;top:0;z-index:50;background:var(--sitebar-bg);border-bottom:1px solid var(--color-border);backdrop-filter:blur(10px);transition:background .2s,border-color .2s;}
+.sitebar-inner{max-width:980px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.brand{font-family:var(--font-display);font-weight:900;font-style:italic;text-decoration:none;color:var(--color-text);font-size:1.1rem;}
+.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.nav a{color:var(--color-text-muted);text-decoration:none;font-size:.82rem;font-weight:500;padding:5px 10px;border-radius:999px;border:1px solid transparent;transition:color .15s,border-color .15s;}
+.nav a:hover{color:var(--color-text);border-color:var(--color-border);}
+.theme-btn{background:transparent;border:1px solid var(--color-border);border-radius:999px;color:var(--color-text-muted);cursor:pointer;font-size:13px;padding:5px 10px;transition:color .15s,border-color .15s;}
+.theme-btn:hover{color:var(--color-text);}
+.wrap{max-width:680px;margin:0 auto;padding:0 2rem;}
+.wrap--wide{max-width:860px;margin:0 auto;padding:0 2rem;}
+.hero{padding:5rem 2rem 3.5rem;max-width:680px;margin:0 auto;opacity:0;animation:up .7s .1s ease forwards;}
+.kicker{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;color:var(--color-accent);text-transform:uppercase;margin-bottom:1.8rem;}
+h1{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,6.5vw,4.2rem);line-height:1.08;letter-spacing:-.015em;color:var(--color-text);margin-bottom:1.3rem;}
+h1 em{font-style:italic;color:var(--color-accent);}
+.deck{font-family:var(--font-display);font-size:1.15rem;font-style:italic;line-height:1.55;color:var(--color-text-muted);margin-bottom:2.5rem;}
+.byline{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;color:var(--color-text-muted);border-top:1px solid var(--color-border);padding-top:1.1rem;}
+.byline-sep{opacity:.3;}
+article{padding-bottom:7rem;opacity:0;animation:up .8s .25s ease forwards;}
+p{margin-bottom:1.4rem;color:var(--color-text);}
+h2{font-family:var(--font-display);font-weight:500;font-size:1.85rem;line-height:1.15;color:var(--color-text);margin:3.8rem 0 1.1rem;letter-spacing:-.01em;}
+strong{font-weight:500;}
+hr{border:none;border-top:1px solid var(--color-border);margin:3.2rem 0;}
+.drop-cap::first-letter{font-family:var(--font-display);font-size:4rem;font-weight:600;line-height:.78;float:left;margin:.12em .1em 0 0;color:var(--color-accent);}
+blockquote{margin:2.5rem 0;padding:1.3rem 1.8rem;border-left:2px solid var(--blockquote-border);background:var(--blockquote-bg);border-radius:0 6px 6px 0;}
+blockquote p{font-family:var(--font-display);font-size:1.28rem;font-style:italic;line-height:1.5;margin:0;color:var(--color-text);}
+.concept{background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px;padding:1.5rem 1.7rem;margin:2.3rem 0;display:grid;gap:1.1rem;}
+.concept-item{display:grid;grid-template-columns:100px 1fr;gap:1rem;align-items:start;}
+.concept-term{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;padding-top:.2rem;color:var(--color-accent);}
+.concept-def{font-size:.86rem;line-height:1.75;color:var(--color-text-muted);}
+.concept-sep{border:none;border-top:1px solid var(--color-border);margin:0;}
+.node-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:2rem 0 1rem;}
+.node{border-radius:8px;padding:1.3rem;border:1px solid var(--color-border);}
+.node--a{background:var(--node-a-bg);border-color:var(--node-a-border);}
+.node--b{background:var(--node-b-bg);border-color:var(--node-b-border);}
+.node-tag{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.55rem;}
+.node--a .node-tag{color:var(--node-a-tag);}
+.node--b .node-tag{color:var(--node-b-tag);}
+.node-heading{font-family:var(--font-display);font-size:1.02rem;font-weight:500;line-height:1.3;color:var(--color-text);margin-bottom:.45rem;}
+.node-body{font-size:.78rem;line-height:1.7;color:var(--color-text-muted);font-style:italic;}
+.cosine-bridge{background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px;padding:1.3rem 1.5rem;margin-bottom:1.8rem;}
+.cosine-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.65rem;}
+.cosine-meta-label{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-muted);}
+.cosine-meta-value{font-family:var(--font-display);font-size:1.3rem;font-weight:500;color:var(--color-accent);}
+.cosine-track{height:5px;background:var(--cosine-track);border-radius:3px;overflow:hidden;margin-bottom:.65rem;}
+.cosine-bar{height:100%;width:0%;border-radius:3px;background:var(--cosine-fill);transition:width 1.4s cubic-bezier(.16,1,.3,1);}
+.cosine-reading{font-size:.73rem;font-style:italic;color:var(--color-text-muted);}
+.chart-block{background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px;overflow:hidden;margin:2.3rem 0;}
+.chart-head{padding:1.1rem 1.4rem .8rem;border-bottom:1px solid var(--color-border);}
+.chart-head-label{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.2rem;}
+.chart-head-desc{font-size:.76rem;font-style:italic;color:var(--color-text-muted);}
+.chart-body{padding:1.2rem 1.4rem;}
+.chart-foot{padding:.75rem 1.4rem 1rem;border-top:1px solid var(--color-border);font-size:.71rem;font-style:italic;color:var(--color-text-muted);line-height:1.6;}
+.legend{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;}
+.legend-item{display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.06em;color:var(--color-text-muted);text-transform:uppercase;}
+.sw{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.sw--bridge{background:var(--c-bridge);}
+.sw--cluster{background:var(--c-cluster);}
+.sw--infer{background:transparent;border:1px dashed var(--c-infer);}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:2.3rem 0;}
+.stat{background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px;padding:1rem 1.1rem;}
+.stat-label{font-family:var(--font-mono);font-size:.53rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:6px;}
+.stat-value{font-family:var(--font-display);font-size:1.9rem;font-weight:300;line-height:1;color:var(--color-accent);}
+.stat-sub{font-size:.66rem;color:var(--color-text-muted);font-style:italic;margin-top:4px;}
+.footnote-block{margin-top:4.5rem;border-top:1px solid var(--color-border);padding-top:2.2rem;}
+.footnote-title{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:1.2rem;}
+.footnote-body p{font-size:.76rem;line-height:1.8;color:var(--color-text-muted);margin-bottom:.75rem;}
+.footnote-body p:last-child{margin-bottom:0;}
+code{font-family:var(--font-mono);font-size:.7rem;color:var(--color-accent);background:var(--color-accent-dim);padding:.1em .4em;border-radius:3px;}
+footer{border-top:1px solid var(--color-border);padding:2.5rem 2rem;max-width:680px;margin:0 auto;}
+.footer-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;}
+.footer-brand{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-muted);line-height:2;}
+.footer-links{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted);text-align:right;line-height:2.2;}
+.footer-links a{color:var(--color-accent);text-decoration:none;}
+@keyframes up{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:580px){
+  html{font-size:16px;}
+  .hero{padding:3rem 1.5rem 2.5rem;}
+  .wrap,.wrap--wide{padding:0 1.5rem;}
+  .node-pair{grid-template-columns:1fr;}
+  .concept-item{grid-template-columns:1fr;gap:.25rem;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .footer-row{flex-direction:column;}
+  .footer-links{text-align:left;}
+  .sitebar-inner{flex-direction:column;align-items:stretch;}
+  .nav{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="sitebar"><div class="sitebar-inner">
+  <a class="brand" href="/">Foxxe Labs</a>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/resources/">Resources</a>
+    <a href="/news/">News</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"><span class="theme-icon"></span></button>
+  </nav>
+</div></div>
+
+<header class="hero">
+  <p class="kicker">FoxxeLabs · Aislinge · March 2026</p>
+  <h1>What the <em>Dream</em> Found</h1>
+  <p class="deck">I built a system that watches everything I write and, while I sleep, quietly locates what I believe. Last week it found something I had never named.</p>
+  <div class="byline">
+    <span>Todd Johnson McCaffrey</span><span class="byline-sep">·</span>
+    <span>FoxxeLabs Limited</span><span class="byline-sep">·</span>
+    <span>30 March 2026</span>
+  </div>
+</header>
+
+<article>
+<div class="wrap">
+
+<blockquote><p>The system separated my intellectual engagement with AI from my fear of it — without being asked to look. These two things live close together. They are not the same. I did not know that until the geometry told me.</p></blockquote>
+
+<hr>
+
+<h2>The question I started with</h2>
+
+<p class="drop-cap">All AI systems share a flaw: they do not learn from experience. A language model trained on a snapshot of human knowledge is frozen at the moment of that training. Every conversation begins from the same fixed prior, regardless of what happened the day before. This is not a criticism — it is a structural fact. But for a system meant to model a specific person's mind over time, it is fatal.</p>
+
+<p>I have been building that system. The goal is something that accumulates knowledge about one person the way a long friendship does: not through explicit instruction but through accumulated exposure to how that person thinks, what they return to, what worries them, what excites them. The question was whether this was even possible without retraining the underlying model.</p>
+
+<p>The answer I found is a nightly process I named Aislinge — the Old Irish word for prophetic dream.</p>
+
+<p>Every night, while I sleep, a pipeline runs on my development machine. It processes over twenty years of my own writing — conversations with AI systems, code commits, research notes, email, half-finished essays — and looks for structure in it. Not structure I put there. Structure that emerges from the shape of what I wrote about, and when, and how often.</p>
+
+<p>Last week it found something I had not expected.</p>
+
+<hr>
+
+<h2>How the dream works</h2>
+
+<p>The system operates in three stages, each compressing the previous one into something denser and more abstract.</p>
+
+<div class="concept">
+  <div class="concept-item">
+    <div class="concept-term">Bridges</div>
+    <div class="concept-def">When two documents from different parts of my writing life happen to concern the same thing — even if they never reference each other — the system finds them and generates a short statement connecting them. Not a summary of either document; a statement about the relationship between them. "The anxiety about shipping software too fast mirrors the anxiety about AI systems moving faster than ethical frameworks." These are bridges. Found connections, not written ones.</div>
+  </div>
+  <hr class="concept-sep">
+  <div class="concept-item">
+    <div class="concept-term">Clusters</div>
+    <div class="concept-def">219 bridges now exist. The system maps them into geometric space — each bridge a point, proximity meaning similarity — and finds where they converge. A cluster is a region where many bridges arrive from different directions, meaning my mind keeps returning to that territory through multiple routes. Not a topic. An attractor.</div>
+  </div>
+  <hr class="concept-sep">
+  <div class="concept-item">
+    <div class="concept-term">Beliefs</div>
+    <div class="concept-def">Each cluster gets distilled into a single statement. A language model reads all the bridges inside a cluster and articulates what their convergence implies. "The underlying preoccupation is fear of loss of control and autonomy." That statement — not typed by me, not asked for, extracted from the geometry of twenty years of writing — is a belief. It is stored and retrieved when relevant to future conversations.</div>
+  </div>
+</div>
+
+<p>The pipeline holds 219 bridges, 15 clusters, 15 belief statements. Every night, automatically, the whole process runs again — new writing absorbed, new pairs examined, new bridges formed, the clusters reshaped by whatever arrived. The numbers grow slowly — which is, it turns out, exactly the behaviour you want.</p>
+
+</div>
+
+<div class="wrap--wide">
+<div class="chart-block">
+  <div class="chart-head">
+    <div class="chart-head-label">System growth · March 2026</div>
+    <div class="chart-head-desc">Bridge count and belief clusters across confirmed snapshots. Dashed: inferred trajectory from nightly run.</div>
+  </div>
+  <div class="chart-body">
+    <div class="legend">
+      <div class="legend-item"><span class="sw sw--bridge"></span>Bridges (found connections)</div>
+      <div class="legend-item"><span class="sw sw--cluster"></span>Belief clusters</div>
+      <div class="legend-item"><span class="sw sw--infer"></span>Inferred</div>
+    </div>
+    <svg class="cg" viewBox="0 0 600 290" width="100%" style="display:block;overflow:visible;">
+      <line class="grid" x1="60" y1="240" x2="540" y2="240"/>
+      <line class="grid" x1="60" y1="167" x2="540" y2="167"/>
+      <line class="grid" x1="60" y1="93"  x2="540" y2="93"/>
+      <line class="grid" x1="60" y1="20"  x2="540" y2="20"/>
+      <line class="axis" x1="60" y1="240" x2="540" y2="240"/>
+      <polygon class="area-bridge"  points="220,176 380,79 380,240 220,240"/>
+      <polygon class="area-cluster" points="60,120 220,100 380,90 380,240 60,240"/>
+      <polyline class="line-infer"   points="380,79 540,51"/>
+      <polyline class="line-bridge"  points="220,176 380,79"/>
+      <polyline class="line-cluster" points="60,120 220,100 380,90"/>
+      <circle class="dot-bridge"  cx="220" cy="176" r="5"/>
+      <circle class="dot-bridge"  cx="380" cy="79"  r="5"/>
+      <circle class="dot-cluster" cx="60"  cy="120" r="5"/>
+      <circle class="dot-cluster" cx="220" cy="100" r="5"/>
+      <circle class="dot-cluster" cx="380" cy="90"  r="5"/>
+      <circle class="dot-infer"   cx="540" cy="51"  r="4"/>
+      <text x="60"  y="265" text-anchor="middle" font-size="11">Mar 17</text>
+      <text x="220" y="265" text-anchor="middle" font-size="11">Mar 19</text>
+      <text x="380" y="265" text-anchor="middle" font-size="11">Mar 29</text>
+      <text x="540" y="265" text-anchor="middle" font-size="11">Mar 30+</text>
+      <text x="55" y="244" text-anchor="end" font-size="10" class="lbl-bridge">0</text>
+      <text x="55" y="171" text-anchor="end" font-size="10" class="lbl-bridge">100</text>
+      <text x="55" y="97"  text-anchor="end" font-size="10" class="lbl-bridge">200</text>
+      <text x="55" y="24"  text-anchor="end" font-size="10" class="lbl-bridge">300</text>
+      <text x="8"  y="140" text-anchor="middle" font-size="9" class="lbl-bridge" transform="rotate(-90,8,140)">bridges</text>
+      <text x="545" y="244" text-anchor="start" font-size="10" class="lbl-cluster">0</text>
+      <text x="545" y="144" text-anchor="start" font-size="10" class="lbl-cluster">10</text>
+      <text x="545" y="44"  text-anchor="start" font-size="10" class="lbl-cluster">20</text>
+      <text x="592" y="140" text-anchor="middle" font-size="9" class="lbl-cluster" transform="rotate(90,592,140)">clusters</text>
+    </svg>
+  </div>
+  <div class="chart-foot">Three confirmed snapshots: first belief extraction run (19 Mar, 87 bridges, 14 clusters), cross-corpus run (29 Mar, 219 bridges, 15 clusters). The nightly pipeline has been running since. More data exists on disk — not yet surfaced into the queryable memory store. That changes this week.</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<p>Between 19 March and 29 March, bridge count grew by two and a half times. Cluster count moved from 14 to 15. One new belief region formed. Two dissolved. The topology stabilised rather than exploded. A system that keeps generating new belief regions with every run is finding noise. A system where clusters grow slowly while bridges multiply inside existing regions is finding structure.</p>
+
+<hr>
+
+<h2>The finding</h2>
+
+<p>In the 29 March snapshot, two belief clusters sit close to each other in semantic space. Close enough that a similarity measure of 0.758 — on a scale where 1.0 means identical — links them as the strongest pair in the entire belief graph. They concern the same subject. They are not the same thing.</p>
+
+<div class="node-pair">
+  <div class="node node--a">
+    <div class="node-tag">Node 5 · 94% intellectual · 19 bridges</div>
+    <div class="node-heading">AGI ethics — engagement and inquiry</div>
+    <div class="node-body">Arguments, frameworks, positions. The intellectual work of thinking about what artificial general intelligence means and what we should do about it. The mind as analyst.</div>
+  </div>
+  <div class="node node--b">
+    <div class="node-tag">Node 8 · 92% emotional · 13 bridges</div>
+    <div class="node-heading">AI ethics — anxiety and dread</div>
+    <div class="node-body">Preoccupation, concern, the weight of stakes. The feeling underneath the thinking. The mind as subject of its own worry.</div>
+  </div>
+</div>
+
+<div class="cosine-bridge">
+  <div class="cosine-meta">
+    <span class="cosine-meta-label">Cosine similarity · Node 5 ↔ Node 8 · strongest link in belief graph</span>
+    <span class="cosine-meta-value">0.758</span>
+  </div>
+  <div class="cosine-track"><div class="cosine-bar" id="cosineFill"></div></div>
+  <p class="cosine-reading">Two clusters about the same subject, separated cleanly along an intellectual / emotional axis — without being told to look for one.</p>
+</div>
+
+<p>What does this mean in plain terms? I hold two distinct cognitive objects about the same subject. When I engage with questions about artificial general intelligence — its alignment, its ethics, its trajectory — I do so in two separate modes. One is intellectual: frameworks, arguments, positions, genuine curiosity. The other is emotional: anxiety, dread, the personal weight of believing the stakes are real. These two modes co-exist. They do not collapse into each other. They are strongly connected — but they remain structurally separate.</p>
+
+<p>I could have told you I think about AI ethics a great deal. I could not have told you — with any confidence — that the intellectual engagement and the emotional response are two structurally distinct objects living side by side. Aislinge found that without being asked.</p>
+
+<hr>
+
+<h2>Found, not reported</h2>
+
+<p>Every psychological instrument in common use is a reporting instrument. You answer questions. You rate statements. You choose between options. What is measured is what you say. The assumption — usually reasonable — is that self-report is a usable proxy for underlying belief.</p>
+
+<p>It often is. But it has well-known limits. You may not know how to articulate something. You may report the belief you think you should hold rather than the one you do. And there are things — like the dissociation between intellectual position and emotional reaction — that are genuinely difficult to report, not because of dishonesty but because they are not the kind of thing that surfaces in direct questioning. Nobody has asked me: "Do you feel differently about AI than you think about it?"</p>
+
+<blockquote><p>The instrument does not measure what you say you believe. It measures what the pattern of your saying implies you believe. These are not always the same thing.</p></blockquote>
+
+<p>Aislinge produces beliefs that are <strong>passive</strong> (it asks you nothing), <strong>longitudinal</strong> (it operates across years, not a sitting), <strong>emergent</strong> (the beliefs are not predicted — they appear from geometry), and <strong>epistemic</strong> (they concern the structure of knowledge, not just sentiment). This is a genuinely different kind of evidence from a questionnaire. Not better — different in kind. The same way a long friend who has watched you for years sometimes knows something about you that you do not know about yourself.</p>
+
+<hr>
+
+<h2>What it gets right — and where it is still early</h2>
+
+<p>The belief retrieval evaluation is encouraging. The system runs 29 queries — including six specifically designed to test whether the belief documents surface when asked relevant questions. All six return the correct belief at rank one or two. Ask about fear of loss of control, and the belief document about fear of loss of control arrives first. Ask about the desire for community, and that cluster surfaces. The structure is not latent noise; it can be queried.</p>
+
+</div>
+
+<div class="wrap--wide">
+<div class="stats">
+  <div class="stat">
+    <div class="stat-label">Belief recall</div>
+    <div class="stat-value">6/6</div>
+    <div class="stat-sub">All belief queries returning correct cluster at rank 1–2</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Total bridges</div>
+    <div class="stat-value">219</div>
+    <div class="stat-sub">Found connections across twenty years of writing</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Belief clusters</div>
+    <div class="stat-value">15</div>
+    <div class="stat-sub">Stable attractors in the belief topology</div>
+  </div>
+</div>
+
+<div class="chart-block">
+  <div class="chart-head">
+    <div class="chart-head-label">Belief state transition · Mar 19 → Mar 29</div>
+    <div class="chart-head-desc">Classification of all belief slots across the two snapshots.</div>
+  </div>
+  <div class="chart-body">
+    <div class="legend">
+      <div class="legend-item"><span class="sw" style="background:var(--c-new);"></span>New (8)</div>
+      <div class="legend-item"><span class="sw" style="background:var(--c-grew);"></span>Grew (6)</div>
+      <div class="legend-item"><span class="sw" style="background:var(--c-shifted);"></span>Shifted (4)</div>
+      <div class="legend-item"><span class="sw" style="background:var(--c-dissolved);"></span>Dissolved (2)</div>
+    </div>
+    <svg class="bt" viewBox="0 0 560 90" width="100%" style="display:block;">
+      <rect class="bar-new"       x="60"  y="20" width="167" height="36" rx="3"/>
+      <rect class="bar-grew"      x="227" y="20" width="126" height="36" rx="3"/>
+      <rect class="bar-shifted"   x="353" y="20" width="84"  height="36" rx="3"/>
+      <rect class="bar-dissolved" x="437" y="20" width="42"  height="36" rx="3"/>
+      <text x="143" y="43" text-anchor="middle" font-size="11" font-weight="500" fill="white">8</text>
+      <text x="290" y="43" text-anchor="middle" font-size="11" font-weight="500" fill="white">6</text>
+      <text x="395" y="43" text-anchor="middle" font-size="11" font-weight="500" fill="white">4</text>
+      <text x="458" y="43" text-anchor="middle" font-size="11" font-weight="500" fill="white">2</text>
+      <line class="axis" x1="60" y1="56" x2="520" y2="56"/>
+      <line class="tick" x1="60"  y1="56" x2="60"  y2="62"/>
+      <line class="tick" x1="165" y1="56" x2="165" y2="62"/>
+      <line class="tick" x1="269" y1="56" x2="269" y2="62"/>
+      <line class="tick" x1="374" y1="56" x2="374" y2="62"/>
+      <line class="tick" x1="478" y1="56" x2="478" y2="62"/>
+      <text x="60"  y="74" text-anchor="middle" font-size="10">0</text>
+      <text x="165" y="74" text-anchor="middle" font-size="10">5</text>
+      <text x="269" y="74" text-anchor="middle" font-size="10">10</text>
+      <text x="374" y="74" text-anchor="middle" font-size="10">15</text>
+      <text x="478" y="74" text-anchor="middle" font-size="10">20</text>
+      <text x="520" y="74" text-anchor="start"  font-size="9" style="fill:var(--color-text-muted)">beliefs</text>
+    </svg>
+  </div>
+  <div class="chart-foot">14 of 20 total belief slots changed state in 10 days. High churn is expected at this stage — the manifold is still settling. The 2 dissolved beliefs were Anseo-specific clusters correctly absorbed into broader themes.</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<p>The honest limitations: two confirmed snapshots is not a longitudinal study. It is a proof of concept with a structurally interesting finding in it. The Node 5 / Node 8 dissociation is real — visible in the geometry — but whether it replicates over time, whether it would appear in anyone else's corpus, whether it corresponds to anything clinically meaningful: all of that is open. One subject. Ten days of confirmed data.</p>
+
+<p>The primary thing I am watching now is whether the cosine between those two nodes drifts over time. If it rises toward 1.0, the dissociation is collapsing — one mode overwhelming the other. If it falls, the emotional cluster is developing its own independent territory. If it holds flat, the split is structural. All three trajectories are meaningful. None can be observed from two data points. That is the work ahead.</p>
+
+<hr>
+
+<h2>Why it matters beyond the personal</h2>
+
+<p>The architecture is not person-specific. Given any sufficiently large corpus of natural language activity from a single individual — a few years of emails, a journal, conversation logs — the same pipeline should surface structure. The beliefs would be different. The mechanism is the same.</p>
+
+<p>The question this raises — which I am not yet positioned to answer — is whether the beliefs that emerge from personal writing geometry correspond to anything meaningful beyond the data they were extracted from. The early signal says yes. The system surfaces the correct belief document when the corresponding question is asked, immediately, without ambiguity. The structure responds correctly to queries about things it was never told to look for.</p>
+
+<p>That is what I mean by what the dream found. Not a feature I designed. A structure that was already there, in the accumulated residue of twenty years of thinking out loud, waiting for a geometry to make it visible.</p>
+
+<div class="footnote-block">
+  <div class="footnote-title">Technical note — for readers who want it</div>
+  <div class="footnote-body">
+    <p><strong>Corpus:</strong> ~59,000 documents in Mnemos, a personal episodic memory store. Sources: Claude and ChatGPT conversation histories, writing platform documents and code commits, SFT training data, research notes. All documents chunked at paragraph boundaries and embedded as 384-dimensional vectors using <code>all-MiniLM-L6-v2</code>. Date range: October 2004 to present.</p>
+    <p><strong>Bridge generation:</strong> Radharc cross-references document pairs from specified sources by cosine similarity. Aislinge runs <code>microsoft/Phi-3.5-mini-instruct</code> (4-bit quantised) on each high-similarity pair to generate conceptual and emotional bridge statements. Deterministic MD5-based IDs prevent duplicates on re-run.</p>
+    <p><strong>Belief extraction:</strong> All bridge documents are retrieved, re-embedded, projected via UMAP, and grouped by agglomerative clustering. A second consolidation pass reads each cluster and generates a belief statement, ingested back into the memory store with tag <code>belief</code>.</p>
+    <p><strong>The nightly pipeline:</strong> <code>nightly_consolidation.sh</code> runs at 03:00 on a local development machine (Ubuntu 24, RTX 5060 Ti GPU), chaining a manifold update pass (Léargas — a Gaussian Mixture Model over the full corpus) with the Aislinge bridge, cluster, and belief steps. Push notifications confirm each run.</p>
+    <p><strong>Limitations:</strong> Single subject. Two confirmed snapshots. Cluster IDs are not stable across runs — semantic identity is tracked by embedding similarity, not position. The Node 5 / Node 8 finding is structurally coherent. It is not a clinical diagnosis. No clinical validation has been attempted.</p>
+  </div>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-row">
+    <div class="footer-brand">FoxxeLabs Limited<br>foxxelabs.ie<br>&copy; 2026 Todd Johnson McCaffrey<br>All findings preliminary</div>
+    <div class="footer-links">
+      <a href="https://foxxelabs.ie">foxxelabs.ie</a><br>
+      <a href="/resources/experiment-aislinge-dream-consolidation/">Earlier Aislinge experiment</a><br>
+      <a href="https://github.com/todd427/aislinge">todd427/aislinge</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=btn.querySelector('.theme-icon');
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  var ICONS={dark:'☽',light:'☀',editorial:'ƒ',system:'⊙'};
+  var CYCLE={dark:'light',light:'editorial',editorial:'system',system:'dark'};
+  var LABELS={dark:'Dark',light:'Light',editorial:'Editorial',system:'System'};
+  function getStored(){return localStorage.getItem('foxxe-theme')||'system';}
+  function applyTheme(mode){
+    var resolved=mode==='system'?(mq.matches?'dark':'light'):mode;
+    document.documentElement.setAttribute('data-theme',resolved);
+    btn.title='Theme: '+LABELS[mode];
+    icon.textContent=ICONS[mode];
+  }
+  function cycleTheme(){
+    var next=CYCLE[getStored()]||'dark';
+    if(next==='system') localStorage.removeItem('foxxe-theme');
+    else localStorage.setItem('foxxe-theme',next);
+    applyTheme(next);
+  }
+  applyTheme(getStored());
+  btn.addEventListener('click',cycleTheme);
+  mq.addEventListener('change',function(){if(getStored()==='system') applyTheme('system');});
+  var bar=document.getElementById('cosineFill');
+  var obs=new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){setTimeout(function(){bar.style.width='75.8%';},100);obs.disconnect();}
+  },{threshold:0.6});
+  obs.observe(bar);
+})();
+</script>
+</body>
+</html>
