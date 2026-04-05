@@ -23,6 +23,10 @@ if (!apiKey) {
 
 const client = new Anthropic({ apiKey });
 
+// Model — Haiku for all generation tasks (search + write).
+// Switch to claude-sonnet-4-20250514 here if quality needs a boost.
+const MODEL = 'claude-haiku-4-5-20251001';
+
 // Supabase configuration (optional — pipeline still works without it)
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
@@ -71,6 +75,43 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
       }
     }
   }
+}
+
+/**
+ * Read existing news article titles published in the last N days.
+ * Extracts the title field from frontmatter without a heavy parser —
+ * the frontmatter format is consistent (title: "...") so a regex is fine.
+ */
+function getRecentTitles(daysBack = 7) {
+  const newsDir = path.join(__dirname, '..', 'src', 'content', 'news');
+  if (!fs.existsSync(newsDir)) return [];
+
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - daysBack);
+
+  const titles = [];
+
+  for (const file of fs.readdirSync(newsDir)) {
+    if (!file.endsWith('.md')) continue;
+    try {
+      const content = fs.readFileSync(path.join(newsDir, file), 'utf-8');
+
+      // Extract publishDate
+      const dateMatch = content.match(/^publishDate:\s*(\S+)/m);
+      if (dateMatch) {
+        const pubDate = new Date(dateMatch[1]);
+        if (pubDate < cutoff) continue; // older than window, skip
+      }
+
+      // Extract title
+      const titleMatch = content.match(/^title:\s*"(.+?)"/m);
+      if (titleMatch) titles.push(titleMatch[1]);
+    } catch {
+      // unreadable file — skip
+    }
+  }
+
+  return titles;
 }
 
 /**
@@ -165,7 +206,7 @@ async function searchForContent(topic, daysBack) {
     : '';
 
   return await callWithRetry(() => client.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: MODEL,
     max_tokens: 4000,
     tools: [{ type: 'web_search_20250305', name: 'web_search' }],
     messages: [{
@@ -175,7 +216,7 @@ async function searchForContent(topic, daysBack) {
   }));
 }
 
-async function generateNewsPost(searchResults, topic) {
+async function generateNewsPost(searchResults, topic, existingTitles = []) {
   console.log(`✍️  Generating news post...`);
 
   const topicSources = getSourcesForTopic(topic);
@@ -183,8 +224,12 @@ async function generateNewsPost(searchResults, topic) {
     ? `Preferred sources for citation: ${topicSources.join(', ')}. Cite these where the search results include them.`
     : '';
 
-  const prompt = `Based on the search results, write a news post for Foxxe Labs following this format:
+  const dedupNote = existingTitles.length
+    ? `\nIMPORTANT — AVOID DUPLICATION: The following articles were published in the last 7 days. Do NOT generate a post covering the same story or angle. Choose a meaningfully different angle, event, or development:\n${existingTitles.slice(0, 30).map(t => `  - ${t}`).join('\n')}\n`
+    : '';
 
+  const prompt = `Based on the search results, write a news post for Foxxe Labs following this format:
+${dedupNote}
 REQUIREMENTS:
 - Title: Clear, specific headline
 - Description: One compelling sentence (120-160 chars)
@@ -221,7 +266,7 @@ Search results context: ${topic}
 Generate the post as JSON only, no additional text.`;
 
   const response = await callWithRetry(() => client.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: MODEL,
     max_tokens: 4000,
     messages: [
       {
@@ -290,7 +335,7 @@ Output as JSON:
 }`;
 
   const response = await callWithRetry(() => client.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: MODEL,
     max_tokens: 8000,
     tools: [{ type: 'web_search_20250305', name: 'web_search' }],
     messages: [{ role: 'user', content: prompt }]
@@ -359,6 +404,7 @@ tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
 
 async function main() {
   console.log('🚀 Foxxe Labs Content Generator\n');
+  console.log(`🤖 Model: ${MODEL}\n`);
 
   if (contentType === 'resource') {
     const topic = specificTopic || 'AI security best practices';
@@ -379,16 +425,26 @@ async function main() {
   } else if (contentType === 'news') {
     console.log(`📰 Searching for AI news from the past ${daysBack} day(s) [${intervalArg}]...\n`);
 
+    // Load recent titles once for the whole run
+    const recentTitles = getRecentTitles(7);
+    if (recentTitles.length) {
+      console.log(`🗂️  Dedup: ${recentTitles.length} articles published in the last 7 days will be excluded\n`);
+    }
+
     const topics = specificTopic ? [specificTopic] : config.topics;
     const posts = [];
+    // Accumulate titles generated this run so intra-run dedup works too
+    const sessionTitles = [...recentTitles];
 
     for (const topic of topics) {
       try {
         const searchResults = await searchForContent(topic, daysBack);
-        const postData = await generateNewsPost(searchResults, topic);
+        const postData = await generateNewsPost(searchResults, topic, sessionTitles);
         const slug = createMarkdownFile(postData, 'news');
         await saveToSupabase(postData, topic, slug);
         posts.push(slug);
+        // Add to session dedup list
+        if (postData.title) sessionTitles.push(postData.title);
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
       }
