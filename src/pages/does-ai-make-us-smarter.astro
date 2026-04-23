@@ -1,0 +1,303 @@
+---
+// src/pages/does-ai-make-us-smarter.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Does AI Make Us Smarter? | Foxxe Labs"
+  description="The augmentation case, and why the panic literature is looking in the wrong place. A 44× multiplier on project creation rate, the heavy-user cohort nobody studies, and what the Kosmyna/Lee/Gerlich studies are actually measuring."
+>
+
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs Research</div>
+    <h1>Does AI Make Us Smarter?</h1>
+    <p class="sub">The augmentation case, and why the panic literature is looking in the wrong place.</p>
+    <p class="lede">
+      A 44× multiplier on one practitioner's project-initiation rate, across four discrete regimes
+      of AI integration. The heavy-user cohort the atrophy studies cannot reach. What the
+      Kosmyna/Lee/Gerlich papers are actually measuring — and why the interesting question about
+      AI and cognition is not "is atrophy occurring" but "how much is reach being extended,
+      under what conditions, for which users."
+    </p>
+    <div class="meta muted">
+      <span>23 April 2026</span>
+      <span class="sep">·</span>
+      <span>Todd McCaffrey, Foxxe Labs</span>
+      <span class="sep">·</span>
+      <span>~13 min read</span>
+    </div>
+  </header>
+
+  <article class="essay card">
+
+    <p>I have over fifty years of programming experience. I have been shipping code since the punch-card era and writing fiction professionally since the 1990s. For most of my working life my project-initiation rate hovered around 0.06 per week — roughly one new project every four months, whether it was a book, a piece of software, a business venture, or a research line. Some of those projects were large; they had to be, because the overhead of starting a project at all was significant and you didn't start one lightly.</p>
+
+    <p>In the current regime — the seven and a half weeks since I moved my work fully into an agentic coding environment — that rate has been <strong>2.67 new projects per week</strong>. A 44× multiplier. The complexity of the individual projects is at or above what I produced before — not dumbed down, not diluted, not the same work broken into smaller pieces. I am currently maintaining a small infrastructure stack, running a cyberpsychology dissertation, drafting theoretical papers, building a personal LLM pipeline, writing fiction under multiple pen names, and keeping a publishing business moving, and the honest truth is that the constraint on my output is no longer cognitive. It is sleep.</p>
+
+    <p>The progression from 0.06 to 2.67 wasn't a smooth curve. It was four discrete regimes, each triggered by a specific change in how I was integrating AI into my work: <strong>pre-AI</strong> (2023–2024, unaided), <strong>copy-paste</strong> (Q4 2025, clipboard chat AI), <strong>direct integration</strong> (January–February 2026, AI writing directly to the repositories via MCP), and <strong>full agency</strong> (March 2026 onward, agentic coding with terminal and filesystem access). Each regime shift roughly tripled or quintupled the prior rate. The acceleration is not a rate change; it is a regime change.</p>
+
+    <figure class="chart-embed">
+      <iframe src="/velocity/index.html" title="Project creation velocity — four methodology eras" loading="lazy"></iframe>
+      <figcaption>Figure 1. Project creation velocity across four methodology eras. Interactive: toggle between rate and cumulative views. Data current to 23 April 2026.</figcaption>
+    </figure>
+
+    <p>By the prevailing press narrative about AI and cognition, I should be in accelerating decline. I am not. I am doing the best work of my life, at an age when most people have retired, and the tool is a central reason why.</p>
+
+    <p>I want to take this observation — which is not just mine, which is visible anywhere you look for it, and which almost nobody is studying — and turn it into the question nobody is asking.</p>
+
+    <p>Instead of "is AI making us stupid?" — let's ask <strong>does AI make us smarter?</strong></p>
+
+    <h2>Three senses of the word</h2>
+
+    <p>The question sounds straightforward. It isn't, because "smarter" carries three different meanings and they answer differently.</p>
+
+    <p><strong>Smarter in the substrate sense.</strong> More working memory. Faster processing. Higher IQ. The raw machinery of the brain improved. Does AI use produce this? Almost certainly not. Claiming it does would be the strong atrophy claim in reverse — equally unfalsifiable, equally unsupported. Nobody's neurons get better because they use Claude. The wetware is the wetware.</p>
+
+    <p><strong>Smarter in the reach sense.</strong> More problems you can actually solve. Harder work you can actually do. Bigger systems you can actually build. The effective cognitive range of the person-plus-tool exceeds what the person alone could accomplish. Does AI use produce this? Yes, clearly, and measurably, in augmentation-mode use. This is where my 44× lives. This is where the frontier AI labs doing increasingly ambitious mechanistic interpretability work live. This is where thousands of professionals across engineering, law, research, and writing live.</p>
+
+    <p><strong>Smarter in the epistemic sense.</strong> Better beliefs. More accurate reasoning. Fewer errors. Does AI use produce this? Contingent. Augmentation-mode use probably yes, because iteration, challenge, and rejection are exactly the operations that improve epistemic quality. Substitution-mode use probably no, because first-pass acceptance doesn't produce better beliefs, it produces faster-arrived-at beliefs that may or may not be any good. The tool doesn't determine which. The user does.</p>
+
+    <p>The interesting answer is the reach claim. It is also the claim the public discussion keeps missing, because the discussion is framed almost entirely in substrate terms — are our brains getting worse, are our brains getting better — when the actual game is happening at a different layer.</p>
+
+    <p>This isn't a new argument, incidentally. J. C. R. Licklider laid out "man-computer symbiosis" in 1960. Doug Engelbart titled his 1962 manifesto "Augmenting Human Intellect." The whole intellectual tradition that produced the personal computer, the mouse, the hypertext system, and eventually the internet was built on the observation that the interesting thing about cognitive tools is not what they do to the substrate but what they let the substrate accomplish. We knew this sixty years ago. We have somehow forgotten it in the current panic.</p>
+
+    <h2>The centaur observation</h2>
+
+    <p>The clean case study is chess.</p>
+
+    <p>After Deep Blue beat Kasparov in 1997, Kasparov did something more interesting than retire in protest. He invented what he called "advanced chess" or "centaur chess" — human players with access to engine analysis, competing against other such pairs. For a good long window — roughly a decade and a half — centaur teams beat both pure humans <em>and</em> pure engines. The strongest chess on Earth was being played by combinations neither component could achieve alone.</p>
+
+    <p>The centaur didn't win because the human's substrate had improved. The human was the same human. The centaur won because the effective cognitive system — the tight loop of human judgement, engine calculation, human meta-evaluation, engine search — could reach board positions and tactical configurations that were out of reach for either alone.</p>
+
+    <p>That is exactly the shape of what AI-augmented professional cognition looks like in 2026. The augmented human is not a better human. The augmented human is a more capable <em>system</em>, in which the human still supplies judgement, taste, goal-setting, and the decisive rejection of bad outputs, and the tool supplies draft generation, breadth of recall, tireless iteration, and parallelism at scales the human cannot manage alone.</p>
+
+    <p>Eventually engines got strong enough to beat centaurs at pure chess. That is worth noting, but it's a specific claim about chess, not a general one about cognition. In open-ended professional work — where the problem itself has to be defined, where the goal shifts, where judgement calls determine what counts as "done" — the centaur architecture isn't a transitional phase. It's the actual working configuration for any serious cognitive output in the current moment. And the people running that configuration hardest are producing the hardest work.</p>
+
+    <h2>The heavy-user cohort is the evidence</h2>
+
+    <p>Consider the population on Earth that uses AI hardest. Not casually. Not occasionally. Hardest.</p>
+
+    <p>The engineering and research staff at the frontier AI labs — Anthropic, OpenAI, DeepMind, and their peers. Two to three years of daily, all-day intensive use of the most capable models, inside the most cognitively demanding work environment that exists. If heavy AI use was going to damage cognition, these people would be the first and most obvious casualties. They are instead producing novel research in mechanistic interpretability, alignment theory, predictive scaling, and safety evaluation at a cognitive complexity <em>above</em> what the same labs were doing before the tools existed. The problems being attempted are harder. The solutions being produced are more sophisticated. The individual researchers continue to do novel cognitively demanding work, and the rate at which they do it has accelerated.</p>
+
+    <p>This is not the pattern the "AI makes us stupid" thesis predicts. It is the positive case the augmentation thesis predicts. Extended reach. Harder problems attempted. Novel work appearing. The humans are still the humans; the system they're running is more capable.</p>
+
+    <p>Add the adjacent professional cohorts. Software engineering in general, where AI-augmented coding is now mainstream and the working velocity of individual senior engineers has risen substantially. Legal practice, where the best firms are quietly becoming centaur operations and their output per lawyer has changed enough to show up in utilisation metrics. Academic research in quantitative fields. Serious journalism that has integrated the tools carefully. Independent technical writers and researchers. The intensity is lower than the frontier labs but still well above anything in the published studies, and the pattern is consistent: preserved or enhanced substrate, expanded reach, more ambitious work attempted.</p>
+
+    <p>Add the n=1 I opened with. One data point is one data point. But combined with the cohort evidence, there is a large and visible pattern of humans whose effective cognitive reach has expanded, whose output has risen in both quantity and complexity, and who are currently producing the most demanding work of their lives. This is the evidence base for the augmentation claim. It is publicly observable, it is happening at scale, and it has been happening for long enough that if it were going to reverse, it would have started to do so by now.</p>
+
+    <p>And almost none of it appears in any of the published studies on AI and cognition.</p>
+
+    <h2>What the panic studies are actually measuring</h2>
+
+    <p>Quickly, because the atrophy literature needs to be handled but should not be the centre of the argument.</p>
+
+    <p>The three most-cited papers in the current panic are the MIT EEG study (Kosmyna and colleagues), the Microsoft/Carnegie Mellon knowledge-worker survey (Lee and colleagues), and Gerlich's <em>Societies</em> paper on cognitive offloading. Read them carefully and here is what they actually find.</p>
+
+    <p><strong>Kosmyna et al.:</strong> fifty-four undergraduates, paid thirty-three dollars per session, writing twenty-minute SAT essays across four months under EEG. The LLM group showed weaker neural connectivity <em>during AI use</em>, and when switched to a no-tool condition in the fourth session, showed weaker recall of what they'd written. Observation: when you pay someone to produce low-stakes output fast and give them a tool that can do it, they switch to substitution mode almost immediately. The researchers noticed this — by the third session, participants were "just giving the prompt to ChatGPT and having it do almost all of the work" — but did not treat it as an experimental variable. A formal methodological critique appeared on arXiv within six months. The study measures what substitution-mode use looks like on EEG. It does not measure what augmentation-mode use looks like, because augmentation-mode use was not in the design.</p>
+
+    <p><strong>Lee et al.:</strong> three hundred nineteen knowledge workers self-reporting. Their actual finding — buried under press headlines about AI eroding critical thinking — is that higher confidence in AI was associated with less critical thinking, but higher <em>self</em>-confidence was associated with more of it. Put plainly: the tool doesn't determine the cognitive outcome. The user's relationship to the tool does. Which is the augmentation-versus-substitution distinction, arrived at from a different direction, and it should have been the headline.</p>
+
+    <p><strong>Gerlich:</strong> six hundred sixty-six UK participants in a cross-sectional correlational design. A negative correlation between AI use and critical thinking scores, mediated by cognitive offloading. The paper had a formal correction published in September 2025. Correlational, cross-sectional, mixed-mode users, no tool-withdrawal condition, no longitudinal follow-up. A snapshot of a lightly-exposed mixed population at one moment in time, which cannot tell you anything about substrate change.</p>
+
+    <p>All three describe a phenomenon that is real, narrow, and uninteresting: when people use a tool, they engage less during use in the part of the task the tool does. This is the definition of what the tool is for. Calling it "cognitive decline" is like saying cars cause paralysis because your leg muscles activate less while driving. When you get out of the car, you can still walk.</p>
+
+    <p>The studies don't measure the interesting question. They can't. Their sampling frame makes them unable to. And the interesting question is what I've been talking about all along.</p>
+
+    <h2>The honest limits</h2>
+
+    <p>I need to be careful not to overreach here, because the positive thesis has real limits and it's worth naming them plainly.</p>
+
+    <p><strong>It isn't universal.</strong> Not everyone using AI is getting smarter in the reach sense. Substitution-mode users — people who paste the prompt, accept the first output, and ship — probably aren't getting any reach expansion at all, and may be accumulating mild subskill deconditioning in the specific things they've stopped practising. That's the calculator effect: you lose some of the fluency you're not exercising. It has been happening to humans for five thousand years and has never caused general cognitive decline. But it's real, it's specific, and it's worth noticing.</p>
+
+    <p><strong>It requires a competent human.</strong> The augmentation case is genuinely contingent on the human supplying judgement. Centaur chess worked because the humans were chess players. If you don't know when the engine's wrong, you can't correct it, and the centaur collapses into whatever the engine produces. This is the honest answer to the worry about AI and education — students who never develop the underlying judgement before they start offloading to the tool may end up with neither the substrate skills nor the augmentation reach. The moderate version of that worry is well-founded. The alarmist version — in which AI exposure per se produces cognitive damage — is not.</p>
+
+    <p><strong>The tool keeps changing.</strong> What I'm describing is the current equilibrium. Three years from now the tools will be different, the working patterns will be different, and the human role in the centaur system may look different again. The augmentation thesis isn't a permanent claim about AI. It's the correct characterisation of what the evidence shows right now, for the current generation of tools, used by the current population of heavy users.</p>
+
+    <p><strong>Substrate effects remain open over longer timescales.</strong> I don't think multi-year intensive AI use degrades the substrate — the evidence runs the other way. But nobody has run the tool-withdrawal study on a heavy-user population, which is the study that would actually settle it. Until that study runs, everyone on both sides of this argument is making claims their evidence can't quite close. I'm more confident in the augmentation case than anyone should be in the strong atrophy case, but I'm not infinitely confident, and anyone selling you certainty on this question is selling you a prior, not a result.</p>
+
+    <h2>What a serious research programme would look like</h2>
+
+    <p>If you actually want to know what AI is doing to cognition, the question to ask is not "is atrophy occurring" — it is "how much is reach being extended, under what conditions, for which users."</p>
+
+    <p><strong>Measure the right population.</strong> Stop studying undergraduates who tried ChatGPT for ten minutes. Go find the people who have been using AI hardest for longest and study them. They exist. They are accessible. Frontier labs. Heavy-use professional firms. Individual high-output augmentation-mode operators. This is the population where the reach effect should be largest and where it's actually visible.</p>
+
+    <p><strong>Measure the right thing.</strong> Output. Problem complexity. Work attempted. Rate of production. Quality of production. Not EEG during tool use. The signal of augmentation is not in neural engagement patterns during a task; it is in the things the augmented system is capable of doing that the unaugmented human couldn't.</p>
+
+    <p><strong>Stratify by use mode.</strong> Build a real instrument for the augmentation-versus-substitution distinction. Iteration rates. Rejection rates. Revision patterns. Call it an Augmentation Index. Without it, any effect estimate is a confounded average over two populations behaving completely differently, which is not an effect estimate at all.</p>
+
+    <p><strong>Run the tool-withdrawal probe anyway.</strong> Even though the headline question is about reach extension rather than substrate damage, the tool-withdrawal design is still the clean way to separate the three atrophy claims and to check that the reach extension isn't hiding substrate loss underneath. Baseline under tool-absent conditions. Heavy use for three months. Re-test tool-absent. Four-week abstinence. Test a third time. If substrate is intact and only reach is extended, the three measurements should be roughly equal and the substantial signal should be in the work the person produces <em>with</em> the tool. If substrate has genuinely atrophied, the T1 and T2 measurements should both be worse than T0.</p>
+
+    <p><strong>Do the multi-year follow-up.</strong> Substrate changes, if they happen, happen slowly. Reach extension, by contrast, is visible in months. Both can be measured, but they require different time horizons. Cross-sectional snapshots can tell you nothing about either.</p>
+
+    <p><strong>Pre-register the definitions.</strong> State in advance what pattern of results would constitute evidence for each of the three augmentation claims and each of the three atrophy claims. Then run the study. Then report what you actually found. Basic hygiene, rarely practised.</p>
+
+    <h2>The clock-speed problem</h2>
+
+    <p>One last thing, because it's the part that makes this whole discussion harder than it needs to be.</p>
+
+    <p>The journal system in academic psychology runs at roughly a year and a half from study design to publication. A paper appearing in 2026 is describing a world that existed in 2024. In most fields, that's fine. In fields where the object of study is changing every six months, it's structural obsolescence. The literature cannot be current, and the conclusions it supports no longer apply to any population that exists by the time those conclusions arrive.</p>
+
+    <p>This is why the most informative evidence on AI and cognition right now is sitting outside the journals. It's in the public output of professional cohorts using the tools at maximum intensity. It's in preprint critiques appearing the week after a study drops. It's in the distributed peer review that happens when someone sits down on a Thursday morning and writes a seven-thousand-word argument, and other people read it, and push back where the writer is wrong, and build on it where the writer is right. It's in the fast channels that the current publication system treats as unserious.</p>
+
+    <p>That is a diagnosis, not a complaint. If you want reliable understanding of fast-moving phenomena, you have to build infrastructure that runs at the speed of the phenomenon. Journals aren't that infrastructure and probably can't become it. Something else has to carry the weight — preprints, working papers, public essays, direct lab correspondence, podcasts — and we are right now in the transition.</p>
+
+    <p>Meanwhile, the evidence for the augmentation case is piling up where the current research programme can't see it. Heavy users are doing their best work. Frontier labs are attempting harder problems than they've ever attempted. Individual practitioners are producing at rates that would have been cognitively impossible for them alone. The picture is reasonably clear if you are willing to look at where the picture is being painted.</p>
+
+    <h2>The answer</h2>
+
+    <p>Does AI make us smarter?</p>
+
+    <p>In the substrate sense — no, and anyone claiming otherwise is selling you the mirror image of the atrophy panic.</p>
+
+    <p>In the reach sense — yes, substantially, for augmentation-mode users, in a way that is visible at the individual level, the professional-cohort level, and the frontier-lab level, and that has been visible for long enough and at large enough scale that the evidence is no longer ambiguous. The effective cognitive system of a competent human plus capable AI, working in iterative partnership, can accomplish work that neither component could accomplish alone. This is what sixty-five years of work on man-computer symbiosis predicted would happen, and it is what has in fact happened, and the current panic literature is measuring the wrong thing at the wrong scale to notice.</p>
+
+    <p>In the epistemic sense — it depends on whether you use the tool to check your thinking or to replace it. If you iterate, reject, argue, revise, and refuse bad outputs, your reasoning improves. If you paste and ship, it doesn't. The tool is neutral. You aren't.</p>
+
+    <p>The strong augmentation claim — that AI use fundamentally upgrades the human — is false and should be resisted with the same firmness as the strong atrophy claim. But the moderate augmentation claim — that competent humans working in augmentation mode can reach further than they could alone, and that the reach extension is large enough to change what a single person can produce — is correct, is already measurable, and is the central cognitive fact of the current moment.</p>
+
+    <p>Anyone writing about AI and cognition who cannot explain why a single independent researcher with fifty years of programming behind him is currently running a dissertation, an infrastructure stack, a publishing business, and a theoretical-research programme simultaneously, and producing the best work of his life in all four domains at once, is not yet looking at the phenomenon. That is happening. It is not unusual for people in augmentation-mode use of these tools. The panic literature cannot see it because the panic literature is asking the wrong question of the wrong population on the wrong timescale.</p>
+
+    <p>Ask the right question instead. The answer is there. It has been there for years, and it is getting more visible, not less, by the month.</p>
+
+    <hr />
+
+    <p class="byline"><em>Todd McCaffrey is a New York Times bestselling author, founder of FoxxeLabs Limited, and an MSc candidate in Cyberpsychology at ATU Letterkenny. This piece was written in collaboration with Claude (Anthropic). The 44× multiplier is real, the four-era data is derived from first-commit dates across 37 active git repositories cross-referenced with the Mnemos conversational record, and the methodological critique of Kosmyna/Lee/Gerlich is offered in good faith.</em></p>
+
+  </article>
+
+  <footer class="page-footer card">
+    <p>
+      Related research: &nbsp;
+      <a href="/ai-timeline/">AI Model Performance Timeline</a>
+      &nbsp;·&nbsp;
+      <a href="/after-the-bubble/index.html">After the Bubble: What Comes Next?</a>
+      &nbsp;·&nbsp;
+      <a href="/ai-bubble/index.html">Managing the AI Bubble</a>
+    </p>
+  </footer>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 18px;
+  }
+
+  .eyebrow {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .page-header h1 {
+    font-size: 2.3rem;
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+
+  .sub {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0 0 16px;
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 72ch;
+    margin: 0 0 14px;
+  }
+
+  .meta {
+    font-size: .85rem;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .sep { opacity: .4; }
+
+  .essay {
+    max-width: 72ch;
+    margin: 0 auto 18px;
+  }
+
+  .essay p {
+    color: var(--text);
+    font-size: 1.02rem;
+    line-height: 1.72;
+    margin: 0 0 1.1em;
+  }
+
+  .essay h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 2.2em 0 .8em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .essay strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .essay em {
+    color: var(--muted);
+  }
+
+  .essay hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 2em 0;
+  }
+
+  .essay .byline {
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+
+  .chart-embed {
+    margin: 2em 0;
+    max-width: 100%;
+  }
+
+  .chart-embed iframe {
+    width: 100%;
+    height: 1400px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #F5F1EA;
+    display: block;
+  }
+
+  .chart-embed figcaption {
+    margin-top: 12px;
+    font-size: .88rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (max-width: 760px) {
+    .chart-embed iframe {
+      height: 1800px;
+    }
+  }
+
+  .page-footer {
+    font-size: .95rem;
+  }
+
+  .page-footer p {
+    margin: 0;
+    color: var(--muted);
+  }
+</style>
