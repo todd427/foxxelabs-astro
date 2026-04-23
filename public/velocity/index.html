@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project creation velocity — four methodology eras</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Public+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F5F1EA;
+    --bg-inset: #EEE8DD;
+    --ink: #1C1917;
+    --ink-soft: #44403C;
+    --ink-fainter: #78716C;
+    --rule: #D6D3D1;
+    --rule-faint: #E7E5E4;
+    --accent: #881337;
+    --accent-bright: #9F1239;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 32px 72px;
+  }
+
+  .masthead {
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 20px 0 24px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: end;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-fainter);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 96, "SOFT" 20;
+    color: var(--ink);
+  }
+
+  h1 em { font-style: italic; font-weight: 400; }
+
+  .subtitle {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    font-variation-settings: "opsz" 14;
+  }
+
+  .headline-stat {
+    text-align: right;
+    border-left: 1px solid var(--rule);
+    padding-left: 24px;
+  }
+
+  .headline-stat .number {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 62px;
+    line-height: 0.95;
+    font-weight: 500;
+    color: var(--accent);
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.02em;
+  }
+
+  .headline-stat .label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-fainter);
+    margin-top: 8px;
+    max-width: 180px;
+    margin-left: auto;
+    line-height: 1.3;
+  }
+
+  .dek {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin-bottom: 36px;
+    font-variation-settings: "opsz" 18;
+  }
+
+  .dek strong { color: var(--ink); font-weight: 500; }
+
+  .controls {
+    display: flex;
+    gap: 0;
+    margin-bottom: 28px;
+    border: 1px solid var(--rule);
+    background: var(--bg-inset);
+    width: fit-content;
+    padding: 3px;
+  }
+
+  .controls button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 0;
+    color: var(--ink-fainter);
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+
+  .controls button:hover { color: var(--ink); }
+  .controls button.active { background: var(--ink); color: var(--bg); }
+
+  .chart-frame {
+    background: var(--bg);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 24px 0 8px;
+    margin-bottom: 36px;
+    position: relative;
+  }
+
+  #chart { width: 100%; height: auto; display: block; overflow: visible; }
+
+  .axis text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    fill: var(--ink-fainter);
+  }
+
+  .axis .era-label {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    font-variation-settings: "opsz" 14;
+    fill: var(--ink-soft);
+  }
+
+  .axis line, .axis path {
+    stroke: var(--rule);
+    shape-rendering: crispEdges;
+  }
+
+  .grid line { stroke: var(--rule-faint); stroke-dasharray: 2 3; }
+  .grid path { display: none; }
+
+  .bar { fill: var(--accent); transition: fill 0.2s ease; }
+  .bar:hover { fill: var(--accent-bright); }
+
+  .value-label {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 14px;
+    font-weight: 500;
+    fill: var(--ink);
+    font-variation-settings: "opsz" 14;
+  }
+
+  .area { fill: var(--accent); fill-opacity: 0.14; }
+  .area-line { fill: none; stroke: var(--accent); stroke-width: 2; }
+  .area-point { fill: var(--bg); stroke: var(--accent); stroke-width: 2; }
+
+  .methodology {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+
+  .method-cell {
+    padding: 16px 16px 18px;
+    border-right: 1px solid var(--rule);
+  }
+  .method-cell:last-child { border-right: 0; }
+
+  .method-cell .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-fainter);
+    margin-bottom: 4px;
+  }
+
+  .method-cell h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+    font-variation-settings: "opsz" 14;
+  }
+
+  .method-cell .window {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-fainter);
+    margin-bottom: 8px;
+  }
+
+  .method-cell p {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+
+  .data-table-wrap { margin-bottom: 40px; }
+
+  .data-table-wrap h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-variation-settings: "opsz" 14;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+  }
+
+  thead th {
+    text-align: left;
+    padding: 8px 12px 8px 0;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-fainter);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  thead th:not(:first-child) { text-align: right; }
+
+  tbody td {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid var(--rule-faint);
+    color: var(--ink);
+  }
+
+  tbody td:first-child {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 14px;
+    font-variation-settings: "opsz" 14;
+  }
+
+  tbody td:not(:first-child) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  tbody tr:last-child td { color: var(--accent); font-weight: 500; }
+  tbody tr:last-child td:first-child { font-weight: 500; }
+
+  .colophon {
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-fainter);
+    line-height: 1.7;
+  }
+
+  .colophon p + p { margin-top: 4px; }
+
+  @media (max-width: 700px) {
+    .container { padding: 32px 20px 48px; }
+    .masthead { grid-template-columns: 1fr; gap: 20px; }
+    .headline-stat { text-align: left; border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 16px; }
+    .headline-stat .label { margin-left: 0; }
+    h1 { font-size: 34px; }
+    .headline-stat .number { font-size: 52px; }
+    .methodology { grid-template-columns: 1fr; }
+    .method-cell { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .method-cell:last-child { border-bottom: 0; }
+  }
+
+  .tooltip {
+    position: absolute;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 8px 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    line-height: 1.45;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    border-radius: 2px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+  .tooltip.visible { opacity: 1; }
+
+  .tooltip .t-era {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 3px;
+    font-variation-settings: "opsz" 14;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="masthead">
+    <div>
+      <div class="eyebrow">Figure 1 · Project velocity</div>
+      <h1>Four methodology eras,<br><em>one acceleration curve</em></h1>
+      <p class="subtitle">New project initiations per week, by AI-integration regime</p>
+    </div>
+    <div class="headline-stat">
+      <span class="number">44×</span>
+      <span class="label">increase from pre-AI baseline to current regime</span>
+    </div>
+  </header>
+
+  <p class="dek">
+    A single practitioner's project-initiation rate across four consecutive regimes of AI integration, from clipboard-mediated copy-paste with chat AI in 2023–2024, through direct repository access in early 2026, to full agentic coding with Claude Code from March 2026 onward. <strong>The acceleration is not a rate change; it is a regime change.</strong>
+  </p>
+
+  <div class="controls" role="tablist" aria-label="Chart view">
+    <button id="view-rate" class="active" role="tab" aria-selected="true">Rate · projects / week</button>
+    <button id="view-cumulative" role="tab" aria-selected="false">Cumulative · total projects</button>
+  </div>
+
+  <div class="chart-frame">
+    <svg id="chart" viewBox="0 0 800 440" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="tooltip" id="tooltip"></div>
+  </div>
+
+  <div class="methodology">
+    <div class="method-cell">
+      <div class="num">I</div>
+      <h3>Pre-AI</h3>
+      <div class="window">2023 – dec 2024</div>
+      <p>Unaided work. Manual research, coding, drafting. No chat AI in regular workflow.</p>
+    </div>
+    <div class="method-cell">
+      <div class="num">II</div>
+      <h3>Copy-paste</h3>
+      <div class="window">q4 2025</div>
+      <p>Chat AI via clipboard. Hand-carried context between assistant and codebase. Bottleneck: human cycle.</p>
+    </div>
+    <div class="method-cell">
+      <div class="num">III</div>
+      <h3>Direct integration</h3>
+      <div class="window">jan – feb 2026</div>
+      <p>Assistant writes directly to repositories via MCP. Context persists across sessions. Clipboard removed from loop.</p>
+    </div>
+    <div class="method-cell">
+      <div class="num">IV</div>
+      <h3>Full agency</h3>
+      <div class="window">mar 2026 – present</div>
+      <p>Agentic coding assistant with filesystem and terminal access. Bottleneck shifts from implementation to decision.</p>
+    </div>
+  </div>
+
+  <div class="data-table-wrap">
+    <h2>Underlying data</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Era</th>
+          <th>Weeks</th>
+          <th>Projects</th>
+          <th>Rate (proj/wk)</th>
+          <th>Cumulative</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Pre-AI</td><td>104</td><td>6</td><td>0.06</td><td>6</td></tr>
+        <tr><td>Copy-paste</td><td>13</td><td>3</td><td>0.23</td><td>9</td></tr>
+        <tr><td>Direct integration</td><td>8</td><td>4</td><td>0.50</td><td>13</td></tr>
+        <tr><td>Full agency</td><td>7.5</td><td>20</td><td>2.67</td><td>33</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="colophon">
+    <p>Data current as of 23 april 2026. Full-agency window covers 1 march – 23 april 2026. Project count smoothed across full window to remove catch-up registration effects.</p>
+    <p>Methodology: project-initiation events tallied from Mnemos conversational record and cross-checked against git first-commit dates across 37 active repositories.</p>
+  </div>
+
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const DATA = [
+  { era: "Pre-AI",              short: "I",   rate: 0.06, projects: 6,  cumulative: 6,  weeks: 104 },
+  { era: "Copy-paste",          short: "II",  rate: 0.23, projects: 3,  cumulative: 9,  weeks: 13  },
+  { era: "Direct integration",  short: "III", rate: 0.50, projects: 4,  cumulative: 13, weeks: 8   },
+  { era: "Full agency",         short: "IV",  rate: 2.67, projects: 20, cumulative: 33, weeks: 7.5 }
+];
+
+const SVG_W = 800, SVG_H = 440;
+const M = { top: 28, right: 32, bottom: 72, left: 56 };
+const W = SVG_W - M.left - M.right;
+const H = SVG_H - M.top - M.bottom;
+
+const svg = d3.select("#chart");
+const g   = svg.append("g").attr("transform", `translate(${M.left},${M.top})`);
+
+const x = d3.scaleBand()
+  .domain(DATA.map(d => d.era))
+  .range([0, W])
+  .paddingInner(0.38)
+  .paddingOuter(0.16);
+
+const yRate = d3.scaleLinear().domain([0, 3.0]).range([H, 0]);
+const yCumulative = d3.scaleLinear().domain([0, 35]).range([H, 0]);
+
+const gridG   = g.append("g").attr("class", "grid");
+const yAxisG  = g.append("g").attr("class", "axis y-axis");
+const xAxisG  = g.append("g").attr("class", "axis x-axis").attr("transform", `translate(0,${H})`);
+
+const fmtRate = d3.format(".2f");
+const fmtInt  = d3.format(".0f");
+
+function drawAxes(mode) {
+  const yScale = mode === "rate" ? yRate : yCumulative;
+  const ticks  = mode === "rate" ? [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0] : [0, 5, 10, 15, 20, 25, 30, 35];
+  const fmt    = mode === "rate" ? fmtRate : fmtInt;
+
+  const grid = gridG.selectAll("line").data(ticks);
+  grid.enter().append("line")
+    .merge(grid)
+    .transition().duration(700).ease(d3.easeCubicInOut)
+    .attr("x1", 0).attr("x2", W)
+    .attr("y1", d => yScale(d)).attr("y2", d => yScale(d));
+  grid.exit().remove();
+
+  const yAxis = d3.axisLeft(yScale).tickValues(ticks).tickFormat(fmt).tickSize(0).tickPadding(12);
+  yAxisG.transition().duration(700).ease(d3.easeCubicInOut).call(yAxis);
+  yAxisG.select(".domain").remove();
+
+  let caption = yAxisG.selectAll(".y-caption").data([mode]);
+  caption.enter().append("text")
+    .attr("class", "y-caption")
+    .attr("x", 0).attr("y", -12)
+    .style("font-family", "'IBM Plex Mono', monospace")
+    .style("font-size", "10px")
+    .style("letter-spacing", "0.08em")
+    .style("text-transform", "uppercase")
+    .style("fill", "var(--ink-fainter)")
+    .merge(caption)
+    .text(mode === "rate" ? "projects / week" : "total projects");
+
+  xAxisG.selectAll("*").remove();
+  const tick = xAxisG.selectAll(".tick")
+    .data(DATA)
+    .enter().append("g")
+    .attr("class", "tick")
+    .attr("transform", d => `translate(${x(d.era) + x.bandwidth() / 2},0)`);
+
+  tick.append("text")
+    .attr("y", 22)
+    .attr("text-anchor", "middle")
+    .style("font-family", "'IBM Plex Mono', monospace")
+    .style("font-size", "10px")
+    .style("letter-spacing", "0.14em")
+    .style("fill", "var(--ink-fainter)")
+    .text(d => d.short);
+
+  tick.append("text")
+    .attr("class", "era-label")
+    .attr("y", 44)
+    .attr("text-anchor", "middle")
+    .text(d => d.era);
+
+  xAxisG.append("line")
+    .attr("x1", 0).attr("x2", W)
+    .attr("stroke", "var(--rule)")
+    .attr("shape-rendering", "crispEdges");
+}
+
+const barsG = g.append("g").attr("class", "bars");
+const valuesG = g.append("g").attr("class", "values");
+
+function drawBars(entering = false) {
+  const bars = barsG.selectAll(".bar").data(DATA, d => d.era);
+
+  bars.enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", d => x(d.era))
+    .attr("width", x.bandwidth())
+    .attr("y", yRate(0))
+    .attr("height", 0)
+    .on("mousemove", (e, d) => tooltip.show(e, d, "rate"))
+    .on("mouseleave", tooltip.hide)
+    .merge(bars)
+    .transition().duration(entering ? 900 : 700).ease(d3.easeCubicOut)
+    .delay((d, i) => entering ? i * 90 : 0)
+    .attr("x", d => x(d.era))
+    .attr("width", x.bandwidth())
+    .attr("y", d => yRate(d.rate))
+    .attr("height", d => H - yRate(d.rate))
+    .attr("opacity", 1);
+
+  bars.exit()
+    .transition().duration(400)
+    .attr("y", yRate(0))
+    .attr("height", 0)
+    .attr("opacity", 0)
+    .remove();
+
+  const labels = valuesG.selectAll(".value-label").data(DATA, d => d.era);
+
+  labels.enter().append("text")
+    .attr("class", "value-label")
+    .attr("x", d => x(d.era) + x.bandwidth() / 2)
+    .attr("y", yRate(0))
+    .attr("text-anchor", "middle")
+    .attr("opacity", 0)
+    .text(d => fmtRate(d.rate))
+    .merge(labels)
+    .transition().duration(entering ? 900 : 700).ease(d3.easeCubicOut)
+    .delay((d, i) => entering ? i * 90 + 300 : 0)
+    .attr("x", d => x(d.era) + x.bandwidth() / 2)
+    .attr("y", d => yRate(d.rate) - 10)
+    .attr("opacity", 1)
+    .text(d => fmtRate(d.rate));
+
+  labels.exit()
+    .transition().duration(400)
+    .attr("opacity", 0)
+    .remove();
+}
+
+const cumulG = g.append("g").attr("class", "cumul");
+
+function drawCumulative(entering = false) {
+  barsG.selectAll(".bar")
+    .transition().duration(400)
+    .attr("y", yRate(0)).attr("height", 0).attr("opacity", 0)
+    .remove();
+
+  valuesG.selectAll(".value-label")
+    .transition().duration(400)
+    .attr("opacity", 0)
+    .remove();
+
+  const cx = d => x(d.era) + x.bandwidth() / 2;
+
+  const area = d3.area()
+    .x(cx)
+    .y0(yCumulative(0))
+    .y1(d => yCumulative(d.cumulative))
+    .curve(d3.curveMonotoneX);
+
+  const line = d3.line()
+    .x(cx)
+    .y(d => yCumulative(d.cumulative))
+    .curve(d3.curveMonotoneX);
+
+  let areaPath = cumulG.selectAll(".area").data([DATA]);
+  areaPath.enter().append("path")
+    .attr("class", "area")
+    .attr("d", area(DATA.map(d => ({ ...d, cumulative: 0 }))))
+    .merge(areaPath)
+    .transition().duration(900).ease(d3.easeCubicOut)
+    .attr("d", area);
+
+  let linePath = cumulG.selectAll(".area-line").data([DATA]);
+  linePath.enter().append("path")
+    .attr("class", "area-line")
+    .attr("d", line(DATA.map(d => ({ ...d, cumulative: 0 }))))
+    .merge(linePath)
+    .transition().duration(900).ease(d3.easeCubicOut)
+    .attr("d", line);
+
+  const pts = cumulG.selectAll(".area-point").data(DATA, d => d.era);
+  pts.enter().append("circle")
+    .attr("class", "area-point")
+    .attr("r", 5)
+    .attr("cx", cx)
+    .attr("cy", yCumulative(0))
+    .on("mousemove", (e, d) => tooltip.show(e, d, "cumulative"))
+    .on("mouseleave", tooltip.hide)
+    .merge(pts)
+    .transition().duration(900).ease(d3.easeCubicOut)
+    .delay((d, i) => i * 110)
+    .attr("cx", cx)
+    .attr("cy", d => yCumulative(d.cumulative));
+
+  const clabels = cumulG.selectAll(".cumul-label").data(DATA, d => d.era);
+  clabels.enter().append("text")
+    .attr("class", "cumul-label value-label")
+    .attr("x", cx)
+    .attr("y", yCumulative(0))
+    .attr("text-anchor", "middle")
+    .attr("opacity", 0)
+    .text(d => d.cumulative)
+    .merge(clabels)
+    .transition().duration(900)
+    .delay((d, i) => i * 110 + 400)
+    .attr("x", cx)
+    .attr("y", d => yCumulative(d.cumulative) - 14)
+    .attr("opacity", 1)
+    .text(d => d.cumulative);
+}
+
+function clearCumulative() {
+  cumulG.selectAll(".area, .area-line")
+    .transition().duration(400)
+    .attr("opacity", 0)
+    .remove();
+  cumulG.selectAll(".area-point, .cumul-label")
+    .transition().duration(300)
+    .attr("opacity", 0)
+    .remove();
+}
+
+const tooltip = (() => {
+  const el = d3.select("#tooltip");
+  return {
+    show(event, d, mode) {
+      const html = `
+        <div class="t-era">${d.era}</div>
+        ${mode === "rate"
+          ? `${fmtRate(d.rate)} projects / week<br>${d.projects} projects in ${d.weeks} wk`
+          : `${d.cumulative} projects cumulative<br>+${d.projects} this era`}
+      `;
+      el.html(html)
+        .style("left", (event.pageX - svg.node().getBoundingClientRect().left + 20) + "px")
+        .style("top",  (event.pageY - svg.node().getBoundingClientRect().top  - 10) + "px")
+        .classed("visible", true);
+    },
+    hide() { el.classed("visible", false); }
+  };
+})();
+
+let currentMode = "rate";
+
+function render(mode, entering = false) {
+  drawAxes(mode);
+  if (mode === "rate") {
+    clearCumulative();
+    drawBars(entering);
+  } else {
+    drawCumulative(entering);
+  }
+  currentMode = mode;
+}
+
+d3.select("#view-rate").on("click", function () {
+  if (currentMode === "rate") return;
+  d3.selectAll(".controls button").classed("active", false).attr("aria-selected", "false");
+  d3.select(this).classed("active", true).attr("aria-selected", "true");
+  render("rate");
+});
+
+d3.select("#view-cumulative").on("click", function () {
+  if (currentMode === "cumulative") return;
+  d3.selectAll(".controls button").classed("active", false).attr("aria-selected", "false");
+  d3.select(this).classed("active", true).attr("aria-selected", "true");
+  render("cumulative");
+});
+
+render("rate", true);
+</script>
+
+</body>
+</html>
