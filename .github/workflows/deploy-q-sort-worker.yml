@@ -1,0 +1,136 @@
+name: Deploy q-sort Worker
+
+# Auto-deploys the Cloudflare Worker at worker/q-sort/ whenever its
+# source changes on master. Mirrors the auto-deploy behaviour that
+# Cloudflare Pages already provides for the static site.
+#
+# ─────────────────────────────────────────────────────────────────────
+# ONE-TIME SETUP (from GitHub repo Settings → Secrets and variables → Actions)
+#
+#   Secrets:
+#     CLOUDFLARE_API_TOKEN   — create at https://dash.cloudflare.com/profile/api-tokens
+#                              Use the "Edit Cloudflare Workers" template.
+#                              Permissions needed:
+#                                Account → Workers Scripts → Edit
+#                                Account → Workers KV Storage → Edit
+#                                Zone   → Workers Routes → Edit  (for foxxelabs.ie)
+#     CLOUDFLARE_ACCOUNT_ID  — from any Workers/Pages page in the dashboard,
+#                              right sidebar, "Account ID".
+#
+#   Variables (not secrets — these are non-sensitive):
+#     KV_NAMESPACE_ID        — created automatically on first workflow run
+#                              if not set. The workflow will fail with a
+#                              clear message telling you to set it. Just
+#                              copy the id it prints into the variable.
+# ─────────────────────────────────────────────────────────────────────
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'worker/q-sort/**'
+      - '.github/workflows/deploy-q-sort-worker.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worker/q-sort
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install wrangler
+        run: npm install
+
+      - name: Verify Cloudflare credentials are present
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CF_TOKEN" ] || [ -z "$CF_ACCOUNT" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID must be set as repo secrets."
+            echo "::error::See the header comment in this workflow file for setup instructions."
+            exit 1
+          fi
+          echo "✅ Cloudflare credentials present."
+
+      - name: Resolve KV namespace id
+        id: kv
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          KV_VAR: ${{ vars.KV_NAMESPACE_ID }}
+        run: |
+          if [ -n "$KV_VAR" ]; then
+            echo "Using KV_NAMESPACE_ID variable: $KV_VAR"
+            echo "id=$KV_VAR" >> $GITHUB_OUTPUT
+          else
+            echo "::warning::KV_NAMESPACE_ID variable is not set. Attempting to create one..."
+            CREATE_OUTPUT=$(npx wrangler kv namespace create Q_SORTS 2>&1) || true
+            echo "$CREATE_OUTPUT"
+
+            # Try to extract id from "id = "..."
+            NEW_ID=$(echo "$CREATE_OUTPUT" | grep -oE 'id\s*=\s*"[a-f0-9]+"' | head -1 | sed -E 's/.*"([a-f0-9]+)".*/\1/')
+
+            if [ -z "$NEW_ID" ]; then
+              # Maybe the namespace already exists — list and find Q_SORTS
+              LIST_JSON=$(npx wrangler kv namespace list 2>/dev/null || echo "[]")
+              NEW_ID=$(echo "$LIST_JSON" | python3 -c "
+          import sys, json
+          try:
+              data = json.load(sys.stdin)
+              for ns in data:
+                  if ns.get('title', '').endswith('Q_SORTS') or ns.get('title') == 'Q_SORTS':
+                      print(ns['id']); break
+          except Exception: pass
+          ")
+            fi
+
+            if [ -z "$NEW_ID" ]; then
+              echo "::error::Could not create or find a KV namespace named Q_SORTS."
+              echo "::error::Create one manually: npx wrangler kv namespace create Q_SORTS"
+              echo "::error::Then add its id as a repo Variable named KV_NAMESPACE_ID."
+              exit 1
+            fi
+
+            echo "::notice::KV namespace ready (id=$NEW_ID)."
+            echo "::notice::IMPORTANT: copy this id into a repo Variable named KV_NAMESPACE_ID"
+            echo "::notice::(Settings → Secrets and variables → Actions → Variables tab)"
+            echo "::notice::so future runs do not need to look it up."
+            echo "id=$NEW_ID" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Inject KV namespace id into wrangler.toml
+        env:
+          KV_ID: ${{ steps.kv.outputs.id }}
+        run: |
+          sed -i "s/REPLACE_WITH_KV_NAMESPACE_ID/${KV_ID}/" wrangler.toml
+          echo "── wrangler.toml after injection ──"
+          cat wrangler.toml
+
+      - name: Deploy Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy
+
+      - name: Smoke test
+        run: |
+          sleep 5  # give Cloudflare a moment to propagate
+          RESP=$(curl -sf https://q-sort-api.foxxelabs.ie/count?study=phones-q-sort || echo "FAIL")
+          echo "Worker responded: $RESP"
+          if [ "$RESP" = "FAIL" ]; then
+            echo "::error::Smoke test failed — Worker not reachable at q-sort-api.foxxelabs.ie"
+            echo "::error::Check the Cloudflare dashboard. The deploy may have succeeded but DNS/route may need a moment."
+            exit 1
+          fi
+          echo "✅ Worker live and responding."

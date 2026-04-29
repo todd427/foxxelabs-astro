@@ -1,6 +1,6 @@
 # q-sort-worker
 
-Cloudflare Worker that holds the live tally for `/phones-q-sort/` on foxxelabs.ie. Replaces the jsonbin.io approach. No third-party services, no API key, no signup.
+Cloudflare Worker that holds the live tally for `/phones-q-sort/` on foxxelabs.ie. No third-party services, no API key, no signup, no per-user configuration.
 
 ## Live URL
 
@@ -18,39 +18,46 @@ All accept an optional `?study=<name>` query param (defaults to `phones-q-sort`)
 
 The Worker drops anything in the POST body other than `ts` and `sort` — no IPs, fingerprints, or arbitrary fields land in storage.
 
-## Deploy (one-time, ~3 minutes)
+## Deployment
 
-You need `wrangler` installed and logged into the Cloudflare account that owns `foxxelabs.ie`. If you've already deployed `duel-worker`, you have wrangler set up.
+Auto-deploys via GitHub Actions on any push to master that touches `worker/q-sort/**`. See `.github/workflows/deploy-q-sort-worker.yml`.
+
+### One-time setup (per repo, ~3 min)
+
+In GitHub repo **Settings → Secrets and variables → Actions**:
+
+**Secrets** (sensitive):
+- `CLOUDFLARE_API_TOKEN` — create at <https://dash.cloudflare.com/profile/api-tokens>. Use the **Edit Cloudflare Workers** template. The token needs:
+  - Account → Workers Scripts → Edit
+  - Account → Workers KV Storage → Edit
+  - Zone → Workers Routes → Edit (for `foxxelabs.ie`)
+- `CLOUDFLARE_ACCOUNT_ID` — visible on any Workers/Pages page in the dashboard, right sidebar.
+
+**Variables** (non-sensitive):
+- `KV_NAMESPACE_ID` — created automatically on the first workflow run. After the first deploy, copy the id from the Actions log into this variable so future runs skip the lookup step.
+
+That's the entire setup. Push the repo and the Worker deploys.
+
+### Manual deploy fallback
+
+If you need to deploy from your local machine instead of GitHub Actions:
 
 ```bash
 cd worker/q-sort
-npm install                                  # installs wrangler locally if not global
-
-# Create the KV namespace (one-time per account)
-npx wrangler kv namespace create Q_SORTS
-# Output looks like:
-#   [[kv_namespaces]]
-#   binding = "Q_SORTS"
-#   id = "abc123def456..."
-
-# Paste that `id` value into wrangler.toml, replacing REPLACE_WITH_KV_NAMESPACE_ID
-
-# Deploy
+npm install
+npx wrangler kv namespace create Q_SORTS   # one-time, copy the printed id
+# Paste that id into wrangler.toml, replacing REPLACE_WITH_KV_NAMESPACE_ID
 npx wrangler deploy
 ```
 
-That's it. The Worker is live at `q-sort-api.foxxelabs.ie/sorts`. DNS auto-provisions because the zone is already in your Cloudflare account.
-
-Verify with:
+## Verifying
 
 ```bash
 curl https://q-sort-api.foxxelabs.ie/count
 # {"study":"phones-q-sort","count":0}
 ```
 
-## Wiring the frontend
-
-Once the Worker is deployed, the `/phones-q-sort/` and `/phones-q-sort/live/` pages already point at it via `CONFIG.WORKER_URL`. No editing required — that's the "automagic" part. If you ever change the Worker hostname, update `WORKER_URL` in both `public/phones-q-sort/index.html` and `public/phones-q-sort/live/index.html`.
+The deploy workflow runs this same check automatically and fails the build if the Worker is unreachable after deploy.
 
 ## Adding a new study
 
@@ -58,16 +65,16 @@ Reuse the same Worker for any future Q-sort:
 
 1. Build the new sort page under `public/<new-q-sort>/index.html`.
 2. Set `CONFIG.STUDY_NAME = "<new-q-sort>"` and `CONFIG.WORKER_URL = "https://q-sort-api.foxxelabs.ie"`.
-3. Deploy. The Worker auto-namespaces under the new study key.
+3. Push. The Worker auto-namespaces under the new study key — no redeploy needed.
 
 ## Operations
 
 ```bash
-# Live logs
-npx wrangler tail
+# Live logs (from your local machine, requires wrangler login)
+cd worker/q-sort && npx wrangler tail
 
 # Reset a study (deletes all submissions)
-npx wrangler kv key delete --binding=Q_SORTS "phones-q-sort"
+npx wrangler kv key delete --namespace-id=$KV_NAMESPACE_ID "phones-q-sort"
 
 # Export sorts to a file for offline analysis
 curl https://q-sort-api.foxxelabs.ie/sorts > phones-sorts-$(date +%Y%m%d).json

@@ -7,21 +7,11 @@ A Q-methodology sort hosted at `/phones-q-sort/` with a presenter live tally at 
 - **`index.html`** — participant page. 30 statements about mobile phones in schools, drag-and-drop onto a forced 7-column quasi-normal grid (2-4-5-8-5-4-2). On submit, computes similarity to five viewpoint templates and shows the closest match, then POSTs the sort to the Worker.
 - **`live/index.html`** — presenter page. Polls the Worker every 5 seconds, shows mean placement and distribution per statement, sortable by mean or variance, plus most-agreed/disagreed/divisive stats.
 
-Both pages talk to a Cloudflare Worker at `q-sort-api.foxxelabs.ie` for cross-visitor aggregation. **Once the Worker is deployed, no further config is needed.**
+Both pages talk to a Cloudflare Worker at `q-sort-api.foxxelabs.ie` for cross-visitor aggregation. **The Worker auto-deploys via GitHub Actions on every push to master that touches `worker/q-sort/**`.** No manual deploy step.
 
-## Deploying
+## First-time bring-up
 
-The Worker source lives in `worker/q-sort/` at the repo root. To bring the live tally online for the first time:
-
-```bash
-cd worker/q-sort
-npm install
-npx wrangler kv namespace create Q_SORTS
-# Paste the printed `id` into wrangler.toml
-npx wrangler deploy
-```
-
-That's it. Roughly 3 minutes total. See `worker/q-sort/README.md` for the full deploy notes including how to verify and how to reset the data between cohorts.
+The Worker needs two repo-level Cloudflare credentials before its first auto-deploy can run. See `worker/q-sort/README.md` for the 3-minute setup.
 
 If the Worker isn't deployed yet, the participant page still works — sorts cache in localStorage and the user sees their result — but the live tally page will show "Worker offline" until the Worker is up.
 
@@ -57,4 +47,4 @@ CONFIG.WORKER_URL = "https://q-sort-api.foxxelabs.ie";
 CONFIG.STUDY_NAME = "your-new-study-name";   // alnum/-/_, ≤64 chars
 ```
 
-The Worker auto-namespaces under the new study key. No redeploy required.
+Push to master. The Worker auto-namespaces under the new study key. No worker redeploy required (no `worker/q-sort/**` files changed, so the deploy workflow doesn't even run).
