@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones Q-Sort — UI Wireframes v3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .slide { display: none; }
+        .slide.active { display: flex; }
+
+        .slide { animation: fadeIn 0.3s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .progress-dot { transition: all 0.2s ease; }
+        .progress-dot.active { transform: scale(1.3); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-xl md:text-2xl font-bold text-teal-400">Phones Q-Sort</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-400 text-sm">UI wireframes v3</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 text-sm" id="slide-counter">1 / 6</span>
+                <a href="https://foxxelabs.ie" class="text-slate-500 hover:text-teal-400 text-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    foxxelabs.ie
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress dots -->
+    <div class="fixed top-14 left-0 right-0 z-40 bg-slate-800/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-center gap-3">
+            <button onclick="goToSlide(0)" class="progress-dot w-2.5 h-2.5 rounded-full bg-teal-400 active" data-slide="0" title="Cover"></button>
+            <button onclick="goToSlide(1)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="1" title="Welcome"></button>
+            <button onclick="goToSlide(2)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="2" title="Sort"></button>
+            <button onclick="goToSlide(3)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="3" title="Submitting"></button>
+            <button onclick="goToSlide(4)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="4" title="Result"></button>
+            <button onclick="goToSlide(5)" class="progress-dot w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500" data-slide="5" title="Notes"></button>
+        </div>
+    </div>
+
+    <!-- Slides -->
+    <div class="pt-24 pb-20 min-h-screen">
+
+        <!-- ───────── 0: COVER ───────── -->
+        <div class="slide active flex-col items-center justify-center min-h-[calc(100vh-11rem)] px-4" data-slide="0">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <span class="material-symbols-outlined text-7xl md:text-8xl text-teal-400">poll</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                    <span class="text-teal-400">Phones</span> in Schools
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-2">A cyberpsychology Q-sort</p>
+                <p class="text-md text-slate-500 mb-10">Wireframes v3 &mdash; mobile-first, one-statement-at-a-time</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-rose-400 mb-1">waving_hand</span>
+                        <p class="text-sm font-medium">Welcome</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-teal-400 mb-1">touch_app</span>
+                        <p class="text-sm font-medium">Sort</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-amber-400 mb-1">sync</span>
+                        <p class="text-sm font-medium">Submit</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                        <span class="material-symbols-outlined text-2xl text-emerald-400 mb-1">insights</span>
+                        <p class="text-sm font-medium">Result</p>
+                    </div>
+                </div>
+
+                <button onclick="nextSlide()" class="px-8 py-3 bg-teal-500 hover:bg-teal-400 text-slate-900 rounded-xl font-medium transition flex items-center gap-2 mx-auto">
+                    View wireframes
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <p class="text-slate-600 text-sm mt-6">URL: <code class="text-teal-500">foxxelabs.ie/p/</code> &middot; QR-friendly</p>
+            </div>
+        </div>
+
+        <!-- ───────── 1: WELCOME SCREEN ───────── -->
+        <div class="slide flex-col items-center px-4" data-slide="1">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-rose-400 mb-2">waving_hand</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Welcome screen</h2>
+                    <p class="text-slate-400">Lead with the question, not the methodology. Optional disclosure for the curious.</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-700/50 px-4 py-2 flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs text-slate-500 ml-2">mock-1-welcome.html</span>
+                        <a href="mock-1-welcome.html" target="_blank" class="ml-auto text-xs text-slate-400 hover:text-teal-400 flex items-center gap-1">
+                            Open full <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                    <iframe src="mock-1-welcome.html" class="w-full h-[600px] md:h-[680px] bg-slate-900"></iframe>
+                </div>
+
+                <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-teal-400">Question first</p>
+                        <p class="text-xs text-slate-500 mt-1">Method explained only on tap</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-rose-400">~3 min</p>
+                        <p class="text-xs text-slate-500 mt-1">Honest time estimate</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-emerald-400">Anonymous</p>
+                        <p class="text-xs text-slate-500 mt-1">Stated upfront</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ───────── 2: SORT SCREEN ───────── -->
+        <div class="slide flex-col items-center px-4" data-slide="2">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-teal-400 mb-2">touch_app</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">The sort &mdash; one card, five faces</h2>
+                    <p class="text-slate-400">Big readable statement. Tap a face. Next statement. No grid, no chips, no decoder ring.</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-700/50 px-4 py-2 flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs text-slate-500 ml-2">mock-2-sort.html</span>
+                        <a href="mock-2-sort.html" target="_blank" class="ml-auto text-xs text-slate-400 hover:text-teal-400 flex items-center gap-1">
+                            Open full <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                    <iframe src="mock-2-sort.html" class="w-full h-[600px] md:h-[680px] bg-slate-900"></iframe>
+                </div>
+
+                <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-teal-400">5 faces</p>
+                        <p class="text-xs text-slate-500 mt-1">😠 🙁 😐 🙂 😄</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-emerald-400">Color-coded</p>
+                        <p class="text-xs text-slate-500 mt-1">Red &rarr; grey &rarr; green</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-amber-400">Big tap targets</p>
+                        <p class="text-xs text-slate-500 mt-1">~64px, thumb-friendly</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-rose-400">Back, no skip</p>
+                        <p class="text-xs text-slate-500 mt-1">Single back undoes last</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ───────── 3: SUBMITTING ───────── -->
+        <div class="slide flex-col items-center px-4" data-slide="3">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-amber-400 mb-2">sync</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Brief transition</h2>
+                    <p class="text-slate-400">A breath between the last tap and the result &mdash; lets the result feel earned.</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-700/50 px-4 py-2 flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs text-slate-500 ml-2">mock-3-submitting.html</span>
+                        <a href="mock-3-submitting.html" target="_blank" class="ml-auto text-xs text-slate-400 hover:text-teal-400 flex items-center gap-1">
+                            Open full <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                    <iframe src="mock-3-submitting.html" class="w-full h-[500px] md:h-[560px] bg-slate-900"></iframe>
+                </div>
+
+                <div class="mt-4 grid grid-cols-2 gap-3 text-center">
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-amber-400">~1 second</p>
+                        <p class="text-xs text-slate-500 mt-1">Behind the scenes: snap to 2&middot;4&middot;5&middot;8&middot;5&middot;4&middot;2 grid + POST to Worker</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-emerald-400">Auto-advance</p>
+                        <p class="text-xs text-slate-500 mt-1">No button to tap; animation only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ───────── 4: RESULT ───────── -->
+        <div class="slide flex-col items-center px-4" data-slide="4">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-emerald-400 mb-2">insights</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Your result</h2>
+                    <p class="text-slate-400">Matched viewpoint + how close to all five + your own three strongest agreements.</p>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-700/50 px-4 py-2 flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs text-slate-500 ml-2">mock-4-result.html</span>
+                        <a href="mock-4-result.html" target="_blank" class="ml-auto text-xs text-slate-400 hover:text-teal-400 flex items-center gap-1">
+                            Open full <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                    <iframe src="mock-4-result.html" class="w-full h-[700px] md:h-[780px] bg-slate-900"></iframe>
+                </div>
+
+                <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-teal-400">Closest match</p>
+                        <p class="text-xs text-slate-500 mt-1">Hero card, full description</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-emerald-400">All 5 viewpoints</p>
+                        <p class="text-xs text-slate-500 mt-1">Bars, % similarity</p>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+                        <p class="text-sm font-bold text-rose-400">Your top 3</p>
+                        <p class="text-xs text-slate-500 mt-1">Reflects what they said</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ───────── 5: NOTES / DECISIONS ───────── -->
+        <div class="slide flex-col items-center px-4" data-slide="5">
+            <div class="max-w-3xl mx-auto w-full">
+                <div class="text-center mb-6">
+                    <span class="material-symbols-outlined text-4xl text-pink-400 mb-2">edit_note</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Design decisions</h2>
+                    <p class="text-slate-400">What changed from v2 and why</p>
+                </div>
+
+                <div class="space-y-3">
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-rose-400">close</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">Killed the grid</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">The 7-column 2&middot;4&middot;5&middot;8&middot;5&middot;4&middot;2 forced grid is researcher tooling. Showing it to the participant made them learn methodology to do the task. Now hidden &mdash; participant taps faces, server snaps to grid behind the scenes.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-teal-400">sentiment_satisfied</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">Five faces, not seven thumbs</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">😠 🙁 😐 🙂 😄 reads in &lt;1s. 👎👎👎 vs 👎👎 vs 👎 needed a decoder ring. Five points is what humans natively do on Likert.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-amber-400">format_size</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">One statement, big and centered</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">v2 showed all 30 sentences as a wall. v3 shows one at a time, 1.8rem font, breathing room around it. You can read it on a phone in portrait without zooming.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-emerald-400">accessibility_new</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">Pinch-zoom re-enabled</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">v2 had <code>maximum-scale=1, user-scalable=no</code> &mdash; that disables every browser accessibility feature. Removed.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-purple-400">edit</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">Intro is a question, not a method explainer</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">"What do you actually think about phones in schools?" instead of "A Q-sort is a research method for finding distinct viewpoints&hellip;" People care about the question, not the technique.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-blue-400">person</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold mb-1">Result shows the participant their own answers</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">"Your three strongest agreements" gives them ownership of the result. It&rsquo;s reflecting back what they actually said, not labelling them.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 bg-amber-500/10 border border-amber-500/30 rounded-xl p-4">
+                    <p class="text-amber-300 text-sm font-semibold mb-2">Honest caveat (researcher-facing)</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        This is a 5-point Likert rated card-by-card, then snapped server-side onto a 2&middot;4&middot;5&middot;8&middot;5&middot;4&middot;2 distribution. It produces Q-sort-shaped output without requiring participants to actively rank within buckets. For 6th Form classroom use this is the right trade-off. For dissertation work you&rsquo;d run a proper rank-within-bucket Q on a smaller, more motivated sample. Both raw 5-point data and snapped grid positions get stored, so cross-validation is possible.
+                    </p>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-slate-600 text-sm">Wireframes: 2026-04-29 &middot; Built for foxxelabs.ie/p/</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer nav -->
+    <footer class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur border-t border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <button onclick="prevSlide()" id="prev-btn" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition flex items-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed" disabled>
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="hidden sm:inline">Prev</span>
+            </button>
+            <p class="text-xs text-slate-600 hidden md:block">← → arrow keys to navigate</p>
+            <button onclick="nextSlide()" id="next-btn" class="px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-900 transition flex items-center gap-2 font-medium">
+                <span class="hidden sm:inline">Next</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 6;
+
+        function showSlide(index) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.querySelector(`.slide[data-slide="${index}"]`).classList.add('active');
+
+            document.querySelectorAll('.progress-dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active', 'bg-teal-400');
+                    dot.classList.remove('bg-slate-600');
+                } else {
+                    dot.classList.remove('active', 'bg-teal-400');
+                    dot.classList.add('bg-slate-600');
+                }
+            });
+
+            document.getElementById('slide-counter').textContent = `${index + 1} / ${totalSlides}`;
+            document.getElementById('prev-btn').disabled = (index === 0);
+
+            const nextBtn = document.getElementById('next-btn');
+            if (index === totalSlides - 1) {
+                nextBtn.innerHTML = '<span class="hidden sm:inline">Restart</span><span class="material-symbols-outlined">replay</span>';
+            } else {
+                nextBtn.innerHTML = '<span class="hidden sm:inline">Next</span><span class="material-symbols-outlined">arrow_forward</span>';
+            }
+
+            currentSlide = index;
+            window.scrollTo(0, 0);
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) showSlide(currentSlide + 1);
+            else showSlide(0);
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) { showSlide(index); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            else if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        showSlide(0);
+    </script>
+
+</body>
+</html>

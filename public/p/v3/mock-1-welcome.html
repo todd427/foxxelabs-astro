@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock 1 — Welcome</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+
+  <!-- Top bar -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-sm font-bold text-teal-400">Foxxe Labs</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-400 text-sm">Phones in Schools</span>
+      </div>
+      <a href="https://foxxelabs.ie" class="text-slate-500 hover:text-teal-400 text-xs">foxxelabs.ie</a>
+    </div>
+  </header>
+
+  <!-- Hero / question -->
+  <main class="flex-1 flex flex-col items-center justify-center px-6 py-12">
+    <div class="max-w-xl text-center">
+
+      <p class="text-teal-400 text-sm font-semibold uppercase tracking-widest mb-4">A Cyberpsychology Q-sort</p>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+        What do you <span class="text-teal-400">actually think</span> about phones in schools?
+      </h1>
+
+      <p class="text-slate-300 text-lg leading-relaxed mb-2">
+        Thirty quick reactions. About three minutes.
+      </p>
+      <p class="text-slate-400 text-base leading-relaxed mb-10">
+        We&rsquo;ll show you which of five common viewpoints your answers most resemble &mdash; and how everyone else has answered.
+      </p>
+
+      <button class="px-10 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 rounded-xl text-lg font-bold transition shadow-lg shadow-teal-500/30">
+        Let&rsquo;s go &rarr;
+      </button>
+
+      <p class="text-slate-600 text-xs mt-8">
+        Anonymous. No account. No personal data stored.
+      </p>
+
+      <details class="mt-10 text-left">
+        <summary class="text-slate-500 text-sm cursor-pointer hover:text-slate-300 text-center list-none">
+          <span class="text-teal-500">▸</span> What&rsquo;s a Q-sort? (optional)
+        </summary>
+        <div class="mt-4 bg-slate-800/60 border border-slate-700 rounded-lg p-4 text-sm text-slate-300 leading-relaxed">
+          <p class="mb-2">
+            Q-methodology is a research technique developed by William Stephenson in 1935. Instead of rating each statement on its own scale &mdash; which lets you say "I agree with everything" &mdash; you have to <em>commit</em> to which statements you agree with most strongly, and which bother you most.
+          </p>
+          <p>
+            That forced commitment is what reveals distinct viewpoints in a group. It&rsquo;s how cyberpsychologists, political scientists, and policy researchers find the actual disagreement underneath the noise.
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+</body>
+</html>
