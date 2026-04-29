@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Tally &mdash; Phones in Schools Q-Sort &mdash; Foxxe Labs</title>
+<meta name="description" content="Live tally for the Phones in Schools Q-sort. Aggregate, anonymous, refreshes every 10 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:      #1a1a2e;
+    --surface: #16213e;
+    --surface-2: #1f2a4a;
+    --border:  rgba(45, 212, 191, 0.15);
+    --cyan:    #2dd4bf;
+    --cyan-bright: #5eead4;
+    --warm:    #f59e0b;
+    --hot:     #ef4444;
+    --text:    #e2e8f0;
+    --muted:   #64748b;
+    --nav-h:   48px;
+  }
+
+  html, body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topnav {
+    height: var(--nav-h);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .topnav-left { display: flex; align-items: center; gap: 12px; }
+  .topnav-title { font-weight: 700; font-size: 0.95rem; color: var(--cyan); }
+  .topnav-sep   { color: var(--muted); font-weight: 300; }
+  .topnav-sub   { font-size: 0.85rem; color: var(--muted); }
+  .topnav-right a {
+    font-size: 0.82rem; color: var(--muted); text-decoration: none;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .topnav-right a:hover { color: var(--text); }
+
+  .main { max-width: 80rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+
+  .header-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;
+  }
+  .header-row h1 { font-size: 1.5rem; font-weight: 700; }
+  .header-row .meta {
+    font-size: 0.85rem; color: var(--muted);
+    display: flex; gap: 1rem; align-items: center;
+  }
+  .meta .live-dot {
+    display: inline-block; width: 8px; height: 8px;
+    border-radius: 50%; background: var(--cyan);
+    animation: pulse 1.5s ease-in-out infinite;
+    margin-right: 0.4rem;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .meta .count-big {
+    color: var(--cyan-bright); font-weight: 600; font-size: 1rem;
+  }
+
+  .stmt-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .stmt-num { font-weight: 600; color: var(--cyan); font-size: 0.85rem; text-align: right; }
+  .stmt-text { font-size: 0.85rem; line-height: 1.4; }
+  .stmt-mean { text-align: right; font-size: 0.8rem; color: var(--muted); }
+  .stmt-mean .value { font-weight: 600; font-size: 1.1rem; }
+  .stmt-mean .value.pos { color: var(--cyan); }
+  .stmt-mean .value.neg { color: var(--hot); }
+  .stmt-mean .value.neut { color: var(--text); }
+
+  .stmt-dist {
+    grid-column: 2 / 4;
+    display: flex; gap: 2px;
+    margin-top: 0.5rem;
+    height: 28px;
+  }
+  .dist-cell {
+    flex: 1; background: var(--surface-2);
+    border-radius: 3px; position: relative;
+    overflow: hidden;
+    display: flex; align-items: flex-end;
+  }
+  .dist-cell .dist-fill {
+    width: 100%; background: var(--cyan);
+    transition: height 0.6s ease-out;
+    opacity: 0.85;
+  }
+  .dist-cell.col-0 .dist-fill { background: var(--hot); }
+  .dist-cell.col-1 .dist-fill { background: #ef4444; opacity: 0.6; }
+  .dist-cell.col-2 .dist-fill { background: #f59e0b; opacity: 0.6; }
+  .dist-cell.col-3 .dist-fill { background: var(--muted); }
+  .dist-cell.col-4 .dist-fill { background: #84cc16; opacity: 0.6; }
+  .dist-cell.col-5 .dist-fill { background: #22c55e; opacity: 0.7; }
+  .dist-cell.col-6 .dist-fill { background: var(--cyan); }
+  .dist-cell .dist-label {
+    position: absolute; bottom: 1px; left: 0; right: 0;
+    text-align: center; font-size: 0.6rem;
+    color: rgba(255,255,255,0.7); font-weight: 500;
+    pointer-events: none;
+  }
+
+  .controls {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .sort-select {
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border); border-radius: 0.4rem;
+    padding: 0.35rem 0.6rem;
+    font-family: inherit; font-size: 0.85rem;
+  }
+
+  .empty {
+    text-align: center; padding: 4rem 2rem;
+    color: var(--muted); font-size: 0.95rem;
+  }
+  .empty .big { font-size: 2rem; color: var(--cyan); margin-bottom: 1rem; }
+
+  .stats-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    font-size: 0.85rem;
+  }
+  .stat { color: var(--muted); }
+  .stat .stat-num {
+    color: var(--cyan-bright); font-weight: 600;
+    font-size: 1.05rem; margin-right: 0.4rem;
+  }
+
+  @media (max-width: 640px) {
+    .topnav { padding: 0 12px; }
+    .topnav-sub { display: none; }
+    .main { padding: 1rem 0.5rem 3rem; }
+    .stmt-row { grid-template-columns: 2rem 1fr 3.5rem; }
+    .stmt-text { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-left">
+    <span class="topnav-title">Foxxe Labs</span>
+    <span class="topnav-sep">|</span>
+    <span class="topnav-sub">Live Tally &mdash; Phones in Schools</span>
+  </div>
+  <div class="topnav-right">
+    <a href="../">&larr; Back to sort</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <div class="header-row">
+    <h1>Phones in Schools &mdash; Live Tally</h1>
+    <div class="meta">
+      <span><span class="live-dot"></span>Live &middot; refreshes every 10s</span>
+      <span><span class="count-big" id="count">0</span> sorts so far</span>
+    </div>
+  </div>
+
+  <div class="stats-panel" id="stats-panel" style="display:none;">
+    <div class="stat"><span class="stat-num" id="stat-most-agree">&mdash;</span>most-agreed statement</div>
+    <div class="stat"><span class="stat-num" id="stat-most-disagree">&mdash;</span>most-disagreed statement</div>
+    <div class="stat"><span class="stat-num" id="stat-most-divisive">&mdash;</span>most divisive (highest variance)</div>
+  </div>
+
+  <div class="controls" id="controls" style="display:none;">
+    <div style="font-size: 0.85rem; color: var(--muted);">Each row shows the distribution of placements across the 7 columns. Right-most column = most agreed. Mean shown on right.</div>
+    <select class="sort-select" id="sort-by">
+      <option value="number">Sort by statement number</option>
+      <option value="mean-desc">Sort by mean (most agreed first)</option>
+      <option value="mean-asc">Sort by mean (most disagreed first)</option>
+      <option value="variance">Sort by divisiveness (most divisive first)</option>
+    </select>
+  </div>
+
+  <div id="content">
+    <div class="empty" id="empty">
+      <div class="big">&#9203;</div>
+      <p>Waiting for sort submissions.</p>
+      <p style="font-size: 0.8rem; margin-top: 0.5rem;">Once participants begin submitting their sorts, results will appear here.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+"use strict";
+
+const CONFIG = {
+  // Must match the values in ../index.html
+  BIN_URL: "",
+  BIN_KEY: "",
+  REFRESH_MS: 10000,
+  COL_LABELS: ["\u22123","\u22122","\u22121","0","+1","+2","+3"],
+  COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
+};
+
+const STATEMENTS = [
+  { n: 1,  text: "Mobile phones should be banned from school grounds entirely." },
+  { n: 2,  text: "Phones should be allowed in school but not in classrooms." },
+  { n: 3,  text: "Teachers should be able to confiscate phones if students break the rules." },
+  { n: 4,  text: "Banning phones would just make students sneakier about using them." },
+  { n: 5,  text: "Schools that ban phones are out of touch with how the world works now." },
+  { n: 6,  text: "Apps like Google Classroom and Microsoft Teams have made school work easier to manage." },
+  { n: 7,  text: "Looking things up on my phone during class helps me learn faster." },
+  { n: 8,  text: "I get distracted by notifications even when I'm trying to focus on schoolwork." },
+  { n: 9,  text: "Phones are useful in school as long as they're being used for schoolwork." },
+  { n: 10, text: "The best learning happens when there are no phones in the room." },
+  { n: 11, text: "Group chats are how my friend group actually stays connected." },
+  { n: 12, text: "Without my phone at school I would feel cut off from my friends." },
+  { n: 13, text: "Some of the worst arguments between students happen on social media." },
+  { n: 14, text: "Phones make it harder to actually talk to the people sitting next to you." },
+  { n: 15, text: "Most of the bullying that goes on now happens online, not in person." },
+  { n: 16, text: "Time on my phone makes me feel worse about myself." },
+  { n: 17, text: "I check my phone more often than I want to." },
+  { n: 18, text: "Apps like TikTok and Instagram are designed to be addictive." },
+  { n: 19, text: "Phones are a useful way to take a break from stress at school." },
+  { n: 20, text: "I would feel anxious if I didn't have my phone with me during the school day." },
+  { n: 21, text: "Banning phones would unfairly punish students who use them to help with learning differences." },
+  { n: 22, text: "Not every student can afford the latest phone, and that creates problems." },
+  { n: 23, text: "Students with parents who work late need their phones to coordinate with family." },
+  { n: 24, text: "Schools shouldn't decide what technology students use \u2014 that's up to families." },
+  { n: 25, text: "By the age of 16 students should be trusted to manage their own phone use." },
+  { n: 26, text: "Schools that don't allow phones don't trust their students." },
+  { n: 27, text: "Adults are worse at managing their phone use than students are." },
+  { n: 28, text: "Teachers complaining about phones are mostly worried about losing classroom control." },
+  { n: 29, text: "The real problem isn't phones \u2014 it's that nobody has been taught how to use them well." },
+  { n: 30, text: "If schools don't address phone use, nobody will." },
+];
+
+const $ = id => document.getElementById(id);
+const escapeHtml = s => String(s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+let allSorts = [];
+let sortMode = 'number';
+
+async function loadSorts() {
+  if (CONFIG.BIN_URL && CONFIG.BIN_KEY) {
+    try {
+      const r = await fetch(CONFIG.BIN_URL + '/latest', {
+        headers: { 'X-Master-Key': CONFIG.BIN_KEY },
+        cache: 'no-store',
+      });
+      if (!r.ok) throw new Error('Bin fetch ' + r.status);
+      const data = await r.json();
+      return (data && data.record && data.record.sorts) || [];
+    } catch (err) {
+      console.warn('Bin fetch failed, falling back to localStorage:', err);
+    }
+  }
+  try {
+    return JSON.parse(localStorage.getItem('phones-q-sorts') || '[]');
+  } catch (err) { return []; }
+}
+
+function aggregate(sorts) {
+  const byStmt = {};
+  for (const s of STATEMENTS) {
+    byStmt[s.n] = { counts: [0,0,0,0,0,0,0], sum: 0, sumSq: 0, n: 0 };
+  }
+  for (const sort of sorts) {
+    const placement = sort.sort || {};
+    for (const n of Object.keys(placement)) {
+      const v = placement[n];
+      const colIdx = CONFIG.COL_VALUES.indexOf(v);
+      if (colIdx < 0) continue;
+      const stat = byStmt[n];
+      if (!stat) continue;
+      stat.counts[colIdx]++;
+      stat.sum += v;
+      stat.sumSq += v * v;
+      stat.n++;
+    }
+  }
+  for (const n of Object.keys(byStmt)) {
+    const s = byStmt[n];
+    s.mean = s.n > 0 ? s.sum / s.n : 0;
+    s.variance = s.n > 0 ? (s.sumSq / s.n) - (s.mean * s.mean) : 0;
+  }
+  return byStmt;
+}
+
+function render() {
+  const count = allSorts.length;
+  $('count').textContent = count;
+
+  if (count === 0) {
+    $('content').innerHTML = '<div class="empty"><div class="big">&#9203;</div><p>Waiting for sort submissions.</p><p style="font-size: 0.8rem; margin-top: 0.5rem;">Once participants begin submitting their sorts, results will appear here.</p></div>';
+    $('controls').style.display = 'none';
+    $('stats-panel').style.display = 'none';
+    return;
+  }
+
+  $('controls').style.display = 'flex';
+  $('stats-panel').style.display = 'flex';
+  const agg = aggregate(allSorts);
+
+  let mostAgree = STATEMENTS[0], mostDisagree = STATEMENTS[0], mostDivisive = STATEMENTS[0];
+  for (const s of STATEMENTS) {
+    if (agg[s.n].mean > agg[mostAgree.n].mean) mostAgree = s;
+    if (agg[s.n].mean < agg[mostDisagree.n].mean) mostDisagree = s;
+    if (agg[s.n].variance > agg[mostDivisive.n].variance) mostDivisive = s;
+  }
+  $('stat-most-agree').textContent    = '#' + mostAgree.n;
+  $('stat-most-disagree').textContent = '#' + mostDisagree.n;
+  $('stat-most-divisive').textContent = '#' + mostDivisive.n;
+
+  let ordered = [...STATEMENTS];
+  if (sortMode === 'mean-desc')      ordered.sort((a, b) => agg[b.n].mean - agg[a.n].mean);
+  else if (sortMode === 'mean-asc')  ordered.sort((a, b) => agg[a.n].mean - agg[b.n].mean);
+  else if (sortMode === 'variance')  ordered.sort((a, b) => agg[b.n].variance - agg[a.n].variance);
+
+  const content = $('content');
+  content.innerHTML = '';
+  for (const s of ordered) {
+    const stat = agg[s.n];
+    const maxCount = Math.max(...stat.counts, 1);
+    const meanRounded = stat.mean.toFixed(2);
+    const meanClass = stat.mean > 0.3 ? 'pos' : stat.mean < -0.3 ? 'neg' : 'neut';
+    const meanSign = stat.mean > 0 ? '+' : '';
+
+    let distHtml = '';
+    for (let c = 0; c < 7; c++) {
+      const cnt = stat.counts[c];
+      const heightPct = (cnt / maxCount) * 100;
+      distHtml += '<div class="dist-cell col-' + c + '"><div class="dist-fill" style="height:' + heightPct + '%"></div>' +
+                  (cnt > 0 ? '<div class="dist-label">' + cnt + '</div>' : '') + '</div>';
+    }
+
+    const row = document.createElement('div');
+    row.className = 'stmt-row';
+    row.innerHTML =
+      '<div class="stmt-num">#' + s.n + '</div>' +
+      '<div class="stmt-text">' + escapeHtml(s.text) + '</div>' +
+      '<div class="stmt-mean">mean<br><span class="value ' + meanClass + '">' + meanSign + meanRounded + '</span></div>' +
+      '<div class="stmt-dist">' + distHtml + '</div>';
+    content.appendChild(row);
+  }
+}
+
+async function tick() {
+  allSorts = await loadSorts();
+  render();
+}
+
+$('sort-by').addEventListener('change', e => {
+  sortMode = e.target.value;
+  render();
+});
+
+tick();
+setInterval(tick, CONFIG.REFRESH_MS);
+</script>
+</body>
+</html>

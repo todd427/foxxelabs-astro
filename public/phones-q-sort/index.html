@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phones in Schools — A Q-Sort — Foxxe Labs</title>
+<meta name="description" content="A Q-methodology sort on mobile phones in schools. Drag the statements onto the grid. Your contribution joins a live anonymous tally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:      #1a1a2e;
+    --surface: #16213e;
+    --surface-2: #1f2a4a;
+    --border:  rgba(45, 212, 191, 0.15);
+    --border-strong: rgba(45, 212, 191, 0.4);
+    --cyan:    #2dd4bf;
+    --cyan-bright: #5eead4;
+    --warn:    #f59e0b;
+    --text:    #e2e8f0;
+    --muted:   #64748b;
+    --nav-h:   48px;
+  }
+
+  html, body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+  }
+  body { touch-action: manipulation; }
+
+  .topnav {
+    height: var(--nav-h);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .topnav-left { display: flex; align-items: center; gap: 12px; }
+  .topnav-title { font-weight: 700; font-size: 0.95rem; color: var(--cyan); }
+  .topnav-sep   { color: var(--muted); font-weight: 300; }
+  .topnav-sub   { font-size: 0.85rem; color: var(--muted); }
+  .topnav-right a {
+    font-size: 0.82rem; color: var(--muted); text-decoration: none;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .topnav-right a:hover { color: var(--text); }
+
+  .main { max-width: 64rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+
+  .page-header { margin-bottom: 1.25rem; }
+  .page-header h1 { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+  .page-header p  { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+
+  .screen { display: none; }
+  .screen.show { display: block; }
+
+  .intro-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+  .intro-card h2 { font-size: 1.1rem; color: var(--cyan); margin-bottom: 0.6rem; }
+  .intro-card p { margin-bottom: 0.75rem; }
+  .intro-card ol { padding-left: 1.4rem; margin: 0.5rem 0 0.75rem; }
+  .intro-card li { margin-bottom: 0.4rem; }
+  .intro-card .privacy {
+    font-size: 0.8rem; color: var(--muted);
+    margin-top: 1rem; padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.5;
+  }
+
+  .btn {
+    padding: 0.55rem 1.3rem;
+    border-radius: 0.5rem; border: none;
+    background: var(--cyan); color: var(--bg);
+    cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    font-family: inherit; transition: background 0.12s;
+    margin-top: 1rem;
+  }
+  .btn:hover:not(:disabled) { background: var(--cyan-bright); }
+  .btn:disabled { background: var(--muted); cursor: not-allowed; }
+  .btn-secondary {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.04); }
+
+  .sort-progress {
+    font-size: 0.85rem; color: var(--muted);
+    margin-bottom: 0.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .sort-progress .placed { color: var(--cyan); font-weight: 500; }
+
+  .deck-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem; margin-bottom: 1rem;
+    min-height: 80px;
+  }
+  .deck-label {
+    font-size: 0.75rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+  }
+  .deck { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .card-stmt {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem; line-height: 1.35; color: var(--text);
+    cursor: grab; user-select: none; -webkit-user-select: none;
+    touch-action: none; max-width: 100%;
+    transition: border-color 0.12s, box-shadow 0.12s, transform 0.05s;
+    position: relative;
+  }
+  .card-stmt:hover { border-color: var(--border-strong); }
+  .card-stmt.floating {
+    position: fixed; z-index: 1000; pointer-events: none;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+    border-color: var(--cyan);
+    transform: rotate(-2deg) scale(1.04);
+    max-width: 280px;
+  }
+  .card-num {
+    display: inline-block; color: var(--cyan); font-weight: 600;
+    margin-right: 0.35rem; font-size: 0.75rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+  .col {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.3rem;
+    min-height: 320px;
+    display: flex; flex-direction: column;
+    transition: background 0.12s, border-color 0.12s;
+  }
+  .col.drop-target {
+    background: rgba(45, 212, 191, 0.1);
+    border-color: var(--cyan);
+  }
+  .col.full { background: rgba(245, 158, 11, 0.05); }
+  .col-header {
+    text-align: center; font-size: 0.7rem; color: var(--muted);
+    margin-bottom: 0.3rem; line-height: 1.2;
+  }
+  .col-header .label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+  .col-header .count {
+    display: block; margin-top: 0.15rem;
+    font-size: 0.7rem; color: var(--cyan); font-weight: 500;
+  }
+  .col-header .count.over { color: var(--warn); }
+  .col-extreme .label { color: var(--cyan-bright); }
+  .col-cards {
+    display: flex; flex-direction: column; gap: 0.3rem; flex-grow: 1;
+  }
+  .col-cards .card-stmt {
+    font-size: 0.7rem; padding: 0.35rem 0.45rem; line-height: 1.3;
+  }
+
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.2rem; }
+    .col { padding: 0.25rem 0.15rem; min-height: 280px; }
+    .col-header { font-size: 0.6rem; }
+    .col-header .label { font-size: 0.7rem; }
+    .col-cards .card-stmt { font-size: 0.6rem; padding: 0.25rem 0.3rem; }
+    .card-num { font-size: 0.6rem; }
+  }
+
+  .submit-area {
+    margin-top: 1.25rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .submit-status { font-size: 0.85rem; color: var(--muted); }
+  .submit-status.ready { color: var(--cyan); }
+
+  .results-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem; line-height: 1.65;
+  }
+  .results-card h2 { font-size: 1.15rem; color: var(--cyan); margin-bottom: 0.75rem; }
+  .results-card p { font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .results-card .closest {
+    background: var(--surface-2);
+    border-left: 3px solid var(--cyan);
+    padding: 0.85rem 1rem; margin: 0.75rem 0 1rem;
+    border-radius: 0.3rem;
+  }
+  .results-card .closest .vp-name {
+    font-weight: 600; color: var(--cyan-bright); font-size: 0.95rem;
+  }
+  .results-card .closest .vp-desc {
+    font-size: 0.85rem; color: var(--text);
+    margin-top: 0.4rem; line-height: 1.55;
+  }
+  .all-vps { margin-top: 1rem; }
+  .all-vps h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0.5rem; }
+  .vp-row {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 0.4rem; font-size: 0.8rem;
+  }
+  .vp-row .vp-label { width: 11rem; color: var(--text); }
+  .vp-row .vp-bar {
+    flex-grow: 1; height: 8px;
+    background: var(--surface-2); border-radius: 4px; overflow: hidden;
+  }
+  .vp-row .vp-fill {
+    height: 100%; background: var(--cyan); transition: width 0.4s;
+  }
+  .vp-row .vp-pct {
+    color: var(--muted); font-size: 0.75rem;
+    min-width: 2.5rem; text-align: right;
+  }
+
+  .live-link {
+    display: inline-block; margin-top: 1rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--border-strong);
+    color: var(--cyan-bright);
+    text-decoration: none; border-radius: 0.4rem; font-size: 0.85rem;
+  }
+  .live-link:hover { background: rgba(45, 212, 191, 0.18); }
+
+  .toast {
+    position: fixed; bottom: 1rem; right: 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--muted); padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem; font-size: 0.75rem;
+    opacity: 0; transition: opacity 0.3s;
+    pointer-events: none; z-index: 100;
+  }
+  .toast.show { opacity: 1; }
+  .toast.ok { color: var(--cyan); }
+  .toast.warn { color: var(--warn); }
+
+  @media (max-width: 640px) {
+    .topnav { padding: 0 12px; }
+    .topnav-sub { display: none; }
+    .main { padding: 1rem 0.5rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-left">
+    <span class="topnav-title">Foxxe Labs</span>
+    <span class="topnav-sep">|</span>
+    <span class="topnav-sub">Phones in Schools &mdash; A Q-Sort</span>
+  </div>
+  <div class="topnav-right">
+    <a href="https://foxxelabs.ie">&#9862; foxxelabs.ie</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <div class="page-header">
+    <h1>Phones in Schools</h1>
+    <p>A Q-sort on mobile devices in education</p>
+  </div>
+
+  <div class="screen show" id="screen-intro">
+    <div class="intro-card">
+      <h2>What is this?</h2>
+      <p>A Q-sort is a research method for finding the distinct viewpoints people hold on a contested topic. Instead of rating each statement on a 1-to-5 scale in isolation, you arrange all 30 statements relative to each other on a forced grid &mdash; committing to which agreements you hold most strongly and which disagreements bother you most.</p>
+      <p><strong>How it works:</strong></p>
+      <ol>
+        <li>Drag each of the 30 statements into one of seven columns, from <em>strongly disagree</em> (left) to <em>strongly agree</em> (right).</li>
+        <li>Each column has a fixed number of slots. The forcing is the point &mdash; it surfaces what you actually prioritise.</li>
+        <li>When all 30 are placed, submit your sort. You&rsquo;ll see which of five viewpoints your sort most resembles, and your contribution joins a live tally.</li>
+      </ol>
+      <p>Allow about 8 minutes. Works on phone, tablet, or desktop.</p>
+      <button class="btn" id="btn-start">Start the sort &rarr;</button>
+      <div class="privacy">
+        This page tallies how visitors arrange these statements. <strong>No personal information is collected.</strong> Your individual sort is not stored as a profile &mdash; only its contribution to the running totals (which statement landed at which position, with a date stamp). The live tally is visible to the lesson presenter at <a href="live/" style="color: var(--cyan);">/live</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-sort">
+    <div class="sort-progress">
+      <span><span class="placed" id="progress-placed">0</span> of 30 placed</span>
+      <span id="progress-status">Drag a statement onto the grid</span>
+    </div>
+
+    <div class="deck-wrap" id="deck-wrap">
+      <div class="deck-label">Statements to sort</div>
+      <div class="deck" id="deck"></div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="submit-area">
+      <span class="submit-status" id="submit-status">Place all 30 statements to submit.</span>
+      <div>
+        <button class="btn btn-secondary" id="btn-reset" type="button">Reset</button>
+        <button class="btn" id="btn-submit" type="button" disabled>Submit sort</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-results">
+    <div class="results-card">
+      <h2>Your sort is in</h2>
+      <p>Your sort most closely resembles this viewpoint:</p>
+      <div class="closest">
+        <div class="vp-name" id="closest-name"></div>
+        <div class="vp-desc" id="closest-desc"></div>
+      </div>
+      <p>Similarity to all five viewpoints (higher = closer match):</p>
+      <div class="all-vps" id="all-vps"></div>
+      <p style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted);">These viewpoints are not labels you have to accept &mdash; they&rsquo;re starting points for thinking about why people hold the positions they do. Two people whose sorts both match &ldquo;the autonomy advocate&rdquo; can still disagree sharply on individual statements.</p>
+      <a href="live/" class="live-link" target="_blank">View the live tally &rarr;</a>
+      <button class="btn btn-secondary" id="btn-restart" type="button" style="margin-left: 0.5rem;">Sort again</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+const CONFIG = {
+  // To enable cross-visitor live tally, see SETUP.md in the repo.
+  // Leave blank to use localStorage only (each browser sees only its own sorts).
+  BIN_URL: "",
+  BIN_KEY: "",
+  COL_COUNTS: [2, 4, 5, 8, 5, 4, 2],
+  COL_LABELS: ["Strongly disagree","","","Neutral","","","Strongly agree"],
+  COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
+};
+
+const STATEMENTS = [
+  { n: 1,  text: "Mobile phones should be banned from school grounds entirely." },
+  { n: 2,  text: "Phones should be allowed in school but not in classrooms." },
+  { n: 3,  text: "Teachers should be able to confiscate phones if students break the rules." },
+  { n: 4,  text: "Banning phones would just make students sneakier about using them." },
+  { n: 5,  text: "Schools that ban phones are out of touch with how the world works now." },
+  { n: 6,  text: "Apps like Google Classroom and Microsoft Teams have made school work easier to manage." },
+  { n: 7,  text: "Looking things up on my phone during class helps me learn faster." },
+  { n: 8,  text: "I get distracted by notifications even when I'm trying to focus on schoolwork." },
+  { n: 9,  text: "Phones are useful in school as long as they're being used for schoolwork." },
+  { n: 10, text: "The best learning happens when there are no phones in the room." },
+  { n: 11, text: "Group chats are how my friend group actually stays connected." },
+  { n: 12, text: "Without my phone at school I would feel cut off from my friends." },
+  { n: 13, text: "Some of the worst arguments between students happen on social media." },
+  { n: 14, text: "Phones make it harder to actually talk to the people sitting next to you." },
+  { n: 15, text: "Most of the bullying that goes on now happens online, not in person." },
+  { n: 16, text: "Time on my phone makes me feel worse about myself." },
+  { n: 17, text: "I check my phone more often than I want to." },
+  { n: 18, text: "Apps like TikTok and Instagram are designed to be addictive." },
+  { n: 19, text: "Phones are a useful way to take a break from stress at school." },
+  { n: 20, text: "I would feel anxious if I didn't have my phone with me during the school day." },
+  { n: 21, text: "Banning phones would unfairly punish students who use them to help with learning differences." },
+  { n: 22, text: "Not every student can afford the latest phone, and that creates problems." },
+  { n: 23, text: "Students with parents who work late need their phones to coordinate with family." },
+  { n: 24, text: "Schools shouldn't decide what technology students use \u2014 that's up to families." },
+  { n: 25, text: "By the age of 16 students should be trusted to manage their own phone use." },
+  { n: 26, text: "Schools that don't allow phones don't trust their students." },
+  { n: 27, text: "Adults are worse at managing their phone use than students are." },
+  { n: 28, text: "Teachers complaining about phones are mostly worried about losing classroom control." },
+  { n: 29, text: "The real problem isn't phones \u2014 it's that nobody has been taught how to use them well." },
+  { n: 30, text: "If schools don't address phone use, nobody will." },
+];
+
+const VIEWPOINTS = {
+  restrictionist: {
+    name: "The pragmatic restrictionist",
+    desc: "Phones are addictive by design and the school environment should be a phones-off zone. The aim is removing temptation, not punishing students.",
+    target: { 1: 3, 10: 3, 18: 2, 16: 2, 8: 2, 14: 1, 13: 1, 17: 1,
+              4: -3, 5: -3, 26: -2, 27: -2, 7: -1, 11: -1, 25: -1, 24: -1 },
+  },
+  autonomy: {
+    name: "The autonomy advocate",
+    desc: "Sixteen-year-olds should be trusted to manage their own phone use. The issue is teaching responsibility, not removing the choice. Top-down bans are infantilising.",
+    target: { 25: 3, 29: 3, 27: 2, 26: 2, 4: 2, 5: 1, 24: 1, 28: 1,
+              1: -3, 10: -3, 3: -2, 16: -2, 18: -1, 13: -1, 14: -1, 20: -1 },
+  },
+  connection: {
+    name: "The connection-first user",
+    desc: "The social cost of being phone-less in a school day is real. Friendships, family coordination and a sense of being included all depend on the device.",
+    target: { 11: 3, 12: 3, 23: 2, 20: 2, 19: 2, 5: 1, 25: 1, 22: 1,
+              1: -3, 10: -3, 3: -2, 16: -2, 8: -1, 13: -1, 18: -1, 14: -1 },
+  },
+  pedagogical: {
+    name: "The pedagogical optimist",
+    desc: "Apps have genuinely improved how learning is organised. The problem is design and norms, not the device itself.",
+    target: { 6: 3, 9: 3, 7: 2, 29: 2, 19: 1, 25: 1, 27: 1, 4: 1,
+              1: -3, 10: -3, 5: -1, 16: -2, 13: -1, 18: -2, 28: -1, 14: -1 },
+  },
+  equity: {
+    name: "The equity-concerned",
+    desc: "Phone bans hit some students harder than others \u2014 those with learning differences, those with caregiving responsibilities, those whose families rely on coordination.",
+    target: { 21: 3, 23: 3, 22: 2, 24: 2, 12: 1, 11: 1, 5: 1, 29: 1,
+              1: -3, 10: -3, 3: -2, 28: -1, 18: -1, 16: -2, 4: -1, 14: -1 },
+  },
+};
+
+const state = { placement: {} };
+STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+
+const $ = id => document.getElementById(id);
+const showScreen = id => {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('show'));
+  $(id).classList.add('show');
+};
+const toast = (msg, kind) => {
+  const t = $('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + (kind || '');
+  setTimeout(() => { t.className = 'toast ' + (kind || ''); }, 2200);
+};
+const escapeHtml = s => String(s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function renderGrid() {
+  const grid = $('grid');
+  grid.innerHTML = '';
+  for (let c = 0; c < 7; c++) {
+    const col = document.createElement('div');
+    col.className = 'col' + ((c === 0 || c === 6) ? ' col-extreme' : '');
+    col.dataset.col = c;
+    const placedHere = Object.entries(state.placement)
+      .filter(([_, ci]) => parseInt(ci, 10) === c)
+      .map(([n, _]) => parseInt(n, 10));
+    const target = CONFIG.COL_COUNTS[c];
+    const isFull = placedHere.length >= target;
+    const isOver = placedHere.length > target;
+    if (isFull) col.classList.add('full');
+    col.innerHTML =
+      '<div class="col-header">' +
+        '<div class="label">' + (CONFIG.COL_LABELS[c] || '&nbsp;') + '</div>' +
+        '<div>' + (CONFIG.COL_VALUES[c] >= 0 ? '+' : '') + CONFIG.COL_VALUES[c] + '</div>' +
+        '<div class="count' + (isOver ? ' over' : '') + '">' + placedHere.length + ' / ' + target + '</div>' +
+      '</div>' +
+      '<div class="col-cards" data-col-cards="' + c + '"></div>';
+    grid.appendChild(col);
+    const cardsBox = col.querySelector('.col-cards');
+    placedHere.forEach(n => {
+      const stmt = STATEMENTS.find(s => s.n === n);
+      cardsBox.appendChild(makeCard(stmt));
+    });
+  }
+}
+
+function renderDeck() {
+  const deck = $('deck');
+  deck.innerHTML = '';
+  STATEMENTS.forEach(s => {
+    if (state.placement[s.n] === -1) deck.appendChild(makeCard(s));
+  });
+  if (deck.children.length === 0) {
+    deck.innerHTML = '<div style="font-size: 0.8rem; color: var(--muted); padding: 0.5rem;">All statements placed. Drag between columns to adjust.</div>';
+  }
+}
+
+function makeCard(stmt) {
+  const el = document.createElement('div');
+  el.className = 'card-stmt';
+  el.dataset.stmtN = stmt.n;
+  el.innerHTML = '<span class="card-num">' + stmt.n + '.</span>' + escapeHtml(stmt.text);
+  attachDrag(el);
+  return el;
+}
+
+function updateProgress() {
+  const placed = Object.values(state.placement).filter(c => c >= 0).length;
+  $('progress-placed').textContent = placed;
+  let fits = true;
+  for (let c = 0; c < 7; c++) {
+    const here = Object.values(state.placement).filter(ci => ci === c).length;
+    if (here !== CONFIG.COL_COUNTS[c]) { fits = false; break; }
+  }
+  const submitBtn = $('btn-submit');
+  const status = $('submit-status');
+  if (placed < 30) {
+    status.textContent = (30 - placed) + ' to go.';
+    status.classList.remove('ready');
+    submitBtn.disabled = true;
+  } else if (!fits) {
+    status.textContent = 'All placed, but column counts don\u2019t match the grid yet.';
+    status.classList.remove('ready');
+    submitBtn.disabled = true;
+  } else {
+    status.textContent = 'Sort complete. Submit when ready.';
+    status.classList.add('ready');
+    submitBtn.disabled = false;
+  }
+}
+
+let drag = null;
+
+function attachDrag(card) {
+  card.addEventListener('pointerdown', onPointerDown);
+}
+
+function onPointerDown(e) {
+  if (e.button !== undefined && e.button !== 0) return;
+  e.preventDefault();
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+  drag = {
+    card,
+    stmtN: parseInt(card.dataset.stmtN, 10),
+    offsetX: e.clientX - rect.left,
+    offsetY: e.clientY - rect.top,
+    width: rect.width,
+    started: false,
+    startX: e.clientX,
+    startY: e.clientY,
+  };
+  try { card.setPointerCapture(e.pointerId); } catch (err) {}
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup', onPointerUp);
+  document.addEventListener('pointercancel', onPointerUp);
+}
+
+function onPointerMove(e) {
+  if (!drag) return;
+  const dx = e.clientX - drag.startX;
+  const dy = e.clientY - drag.startY;
+  if (!drag.started && (Math.abs(dx) > 4 || Math.abs(dy) > 4)) {
+    drag.started = true;
+    drag.card.classList.add('floating');
+    drag.card.style.width = drag.width + 'px';
+  }
+  if (drag.started) {
+    drag.card.style.left = (e.clientX - drag.offsetX) + 'px';
+    drag.card.style.top  = (e.clientY - drag.offsetY) + 'px';
+    highlightDropTarget(e.clientX, e.clientY);
+  }
+}
+
+function onPointerUp(e) {
+  if (!drag) return;
+  document.removeEventListener('pointermove', onPointerMove);
+  document.removeEventListener('pointerup', onPointerUp);
+  document.removeEventListener('pointercancel', onPointerUp);
+  if (drag.started) {
+    const target = findDropTarget(e.clientX, e.clientY);
+    clearDropHighlights();
+    if (target !== null) placeStatement(drag.stmtN, target);
+    else placeStatement(drag.stmtN, -1);
+  }
+  drag = null;
+}
+
+function findDropTarget(x, y) {
+  const cols = document.querySelectorAll('.col');
+  for (const col of cols) {
+    const r = col.getBoundingClientRect();
+    if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
+      return parseInt(col.dataset.col, 10);
+    }
+  }
+  const deck = $('deck-wrap');
+  if (deck) {
+    const r = deck.getBoundingClientRect();
+    if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return -1;
+  }
+  return null;
+}
+
+function highlightDropTarget(x, y) {
+  document.querySelectorAll('.col.drop-target').forEach(c => c.classList.remove('drop-target'));
+  const t = findDropTarget(x, y);
+  if (t !== null && t >= 0) {
+    const col = document.querySelector('.col[data-col="' + t + '"]');
+    if (col) col.classList.add('drop-target');
+  }
+}
+
+function clearDropHighlights() {
+  document.querySelectorAll('.col.drop-target').forEach(c => c.classList.remove('drop-target'));
+}
+
+function placeStatement(n, col) {
+  state.placement[n] = col;
+  renderGrid();
+  renderDeck();
+  updateProgress();
+}
+
+function similarityToTarget(target) {
+  let dist = 0, count = 0;
+  for (const n of Object.keys(target)) {
+    const t = target[n];
+    const placed = CONFIG.COL_VALUES[state.placement[n]];
+    if (placed === undefined) continue;
+    dist += Math.abs(t - placed);
+    count++;
+  }
+  const maxDist = count * 6;
+  return 1 - (dist / maxDist);
+}
+
+function showResults() {
+  showScreen('screen-results');
+  const scores = {};
+  for (const key of Object.keys(VIEWPOINTS)) {
+    scores[key] = similarityToTarget(VIEWPOINTS[key].target);
+  }
+  const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const closest = ranked[0];
+  $('closest-name').textContent = VIEWPOINTS[closest[0]].name;
+  $('closest-desc').textContent = VIEWPOINTS[closest[0]].desc;
+
+  const allVps = $('all-vps');
+  allVps.innerHTML = '';
+  for (const [key, score] of ranked) {
+    const pct = Math.round(score * 100);
+    const row = document.createElement('div');
+    row.className = 'vp-row';
+    row.innerHTML =
+      '<div class="vp-label">' + escapeHtml(VIEWPOINTS[key].name) + '</div>' +
+      '<div class="vp-bar"><div class="vp-fill" style="width: ' + pct + '%"></div></div>' +
+      '<div class="vp-pct">' + pct + '%</div>';
+    allVps.appendChild(row);
+  }
+}
+
+async function submitSort() {
+  const record = { ts: new Date().toISOString(), sort: {} };
+  for (const s of STATEMENTS) {
+    record.sort[s.n] = CONFIG.COL_VALUES[state.placement[s.n]];
+  }
+
+  try {
+    const local = JSON.parse(localStorage.getItem('phones-q-sorts') || '[]');
+    local.push(record);
+    localStorage.setItem('phones-q-sorts', JSON.stringify(local));
+  } catch (err) { console.warn('localStorage write failed:', err); }
+
+  if (CONFIG.BIN_URL && CONFIG.BIN_KEY) {
+    try {
+      const r = await fetch(CONFIG.BIN_URL + '/latest', {
+        headers: { 'X-Master-Key': CONFIG.BIN_KEY },
+      });
+      const data = await r.json();
+      const sorts = (data && data.record && data.record.sorts) || [];
+      sorts.push(record);
+      await fetch(CONFIG.BIN_URL, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': CONFIG.BIN_KEY,
+        },
+        body: JSON.stringify({ sorts }),
+      });
+      toast('Submitted to live tally', 'ok');
+    } catch (err) {
+      console.warn('Bin sync failed:', err);
+      toast('Saved locally \u2014 live tally unavailable', 'warn');
+    }
+  } else {
+    toast('Saved locally', 'ok');
+  }
+
+  showResults();
+}
+
+$('btn-start').addEventListener('click', () => {
+  showScreen('screen-sort');
+  renderGrid();
+  renderDeck();
+  updateProgress();
+});
+
+$('btn-reset').addEventListener('click', () => {
+  if (!confirm('Reset all placements?')) return;
+  STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+  renderGrid();
+  renderDeck();
+  updateProgress();
+});
+
+$('btn-submit').addEventListener('click', submitSort);
+
+$('btn-restart').addEventListener('click', () => {
+  STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+  showScreen('screen-intro');
+});
+</script>
+</body>
+</html>
