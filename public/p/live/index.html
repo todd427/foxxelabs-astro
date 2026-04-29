@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Tally — Phones in Schools — Foxxe Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --surface-2: #1f2a4a;
+    --border: rgba(45, 212, 191, 0.18);
+    --cyan: #2dd4bf;
+    --cyan-bright: #5eead4;
+    --hot: #ef4444;
+    --text: #e2e8f0;
+    --muted: #64748b;
+  }
+  html, body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    position: sticky; top: 0; z-index: 50;
+  }
+  .bar-left { display: flex; gap: 0.5rem; align-items: center; }
+  .bar-title { font-weight: 600; color: var(--cyan); }
+  .bar-meta { color: var(--muted); display: flex; gap: 0.75rem; align-items: center; }
+  .live-dot {
+    display: inline-block; width: 8px; height: 8px;
+    border-radius: 50%; background: var(--cyan);
+    animation: pulse 1.5s ease-in-out infinite;
+    margin-right: 0.4rem;
+  }
+  .live-dot.offline { background: var(--hot); animation: none; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .count-big { color: var(--cyan-bright); font-weight: 700; font-size: 1.05rem; }
+  .bar a { color: var(--muted); text-decoration: none; font-size: 0.8rem; }
+
+  .main { max-width: 80rem; margin: 0 auto; padding: 1rem; }
+
+  .hint {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+  }
+  .sort-select {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.35rem 0.6rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+  }
+
+  .stmt-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.85rem;
+    margin-bottom: 0.4rem;
+    display: grid;
+    grid-template-columns: 2.2rem 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .stmt-num { font-weight: 700; color: var(--cyan); font-size: 0.85rem; text-align: right; }
+  .stmt-text { font-size: 0.85rem; line-height: 1.3; }
+  .stmt-mean { text-align: right; font-size: 0.75rem; color: var(--muted); }
+  .stmt-mean .v { font-weight: 700; font-size: 1.05rem; display: block; }
+  .stmt-mean .v.pos { color: var(--cyan); }
+  .stmt-mean .v.neg { color: var(--hot); }
+  .stmt-mean .v.neut { color: var(--text); }
+  .stmt-dist {
+    grid-column: 2 / 4;
+    display: flex; gap: 2px;
+    margin-top: 0.4rem;
+    height: 24px;
+  }
+  .dist-cell {
+    flex: 1;
+    background: var(--surface-2);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: flex-end;
+  }
+  .dist-cell .fill {
+    width: 100%; opacity: 0.85;
+    transition: height 0.5s ease-out;
+  }
+  .dist-cell.c0 .fill { background: var(--hot); }
+  .dist-cell.c1 .fill { background: #ef4444; opacity: 0.6; }
+  .dist-cell.c2 .fill { background: #f59e0b; opacity: 0.6; }
+  .dist-cell.c3 .fill { background: var(--muted); }
+  .dist-cell.c4 .fill { background: #84cc16; opacity: 0.6; }
+  .dist-cell.c5 .fill { background: #22c55e; opacity: 0.7; }
+  .dist-cell.c6 .fill { background: var(--cyan); }
+  .dist-cell .lbl {
+    position: absolute; bottom: 1px; left: 0; right: 0;
+    text-align: center; font-size: 0.6rem;
+    color: rgba(255,255,255,0.7); font-weight: 600;
+    pointer-events: none;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 5rem 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .empty .icon { font-size: 1.75rem; opacity: 0.5; margin-bottom: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .stmt-row { grid-template-columns: 1.8rem 1fr 3rem; padding: 0.5rem 0.6rem; gap: 0.4rem; }
+    .stmt-text { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-left">
+    <span class="bar-title">Live Tally</span>
+    <a href="../">&larr; back</a>
+  </div>
+  <div class="bar-meta">
+    <span><span class="live-dot" id="live-dot"></span><span id="live-status">refreshes every 5s</span></span>
+    <span><span class="count-big" id="count">0</span> sorts</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <div id="content">
+    <div class="empty">
+      <div class="icon">&#9203;</div>
+      <p>Waiting for the first sort.</p>
+    </div>
+  </div>
+
+  <div class="controls" id="controls" style="display:none;">
+    <select class="sort-select" id="sort-by">
+      <option value="number">Sort by statement #</option>
+      <option value="mean-desc">Most agreed first</option>
+      <option value="mean-asc">Most disagreed first</option>
+      <option value="variance">Most divisive first</option>
+    </select>
+  </div>
+
+</div>
+
+<script>
+"use strict";
+const CONFIG = {
+  WORKER_URL: "https://q-sort-api.foxxelabs.ie",
+  STUDY_NAME: "phones-q-sort",
+  REFRESH_MS: 5000,
+  COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
+};
+
+const STATEMENTS = [
+  { n: 1,  text: "Mobile phones should be banned from school grounds entirely." },
+  { n: 2,  text: "Phones should be allowed in school but not in classrooms." },
+  { n: 3,  text: "Teachers should be able to confiscate phones if students break the rules." },
+  { n: 4,  text: "Banning phones would just make students sneakier about using them." },
+  { n: 5,  text: "Schools that ban phones are out of touch with how the world works now." },
+  { n: 6,  text: "Apps like Google Classroom and Microsoft Teams have made school work easier to manage." },
+  { n: 7,  text: "Looking things up on my phone during class helps me learn faster." },
+  { n: 8,  text: "I get distracted by notifications even when I'm trying to focus on schoolwork." },
+  { n: 9,  text: "Phones are useful in school as long as they're being used for schoolwork." },
+  { n: 10, text: "The best learning happens when there are no phones in the room." },
+  { n: 11, text: "Group chats are how my friend group actually stays connected." },
+  { n: 12, text: "Without my phone at school I would feel cut off from my friends." },
+  { n: 13, text: "Some of the worst arguments between students happen on social media." },
+  { n: 14, text: "Phones make it harder to actually talk to the people sitting next to you." },
+  { n: 15, text: "Most of the bullying that goes on now happens online, not in person." },
+  { n: 16, text: "Time on my phone makes me feel worse about myself." },
+  { n: 17, text: "I check my phone more often than I want to." },
+  { n: 18, text: "Apps like TikTok and Instagram are designed to be addictive." },
+  { n: 19, text: "Phones are a useful way to take a break from stress at school." },
+  { n: 20, text: "I would feel anxious if I didn't have my phone with me during the school day." },
+  { n: 21, text: "Banning phones would unfairly punish students who use them to help with learning differences." },
+  { n: 22, text: "Not every student can afford the latest phone, and that creates problems." },
+  { n: 23, text: "Students with parents who work late need their phones to coordinate with family." },
+  { n: 24, text: "Schools shouldn't decide what technology students use \u2014 that's up to families." },
+  { n: 25, text: "By the age of 16 students should be trusted to manage their own phone use." },
+  { n: 26, text: "Schools that don't allow phones don't trust their students." },
+  { n: 27, text: "Adults are worse at managing their phone use than students are." },
+  { n: 28, text: "Teachers complaining about phones are mostly worried about losing classroom control." },
+  { n: 29, text: "The real problem isn't phones \u2014 it's that nobody has been taught how to use them well." },
+  { n: 30, text: "If schools don't address phone use, nobody will." },
+];
+
+const $ = id => document.getElementById(id);
+const escapeHtml = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+let allSorts = [];
+let sortMode = 'number';
+let lastCount = -1;
+
+function setStatus(online) {
+  $('live-dot').classList.toggle('offline', !online);
+  $('live-status').textContent = online ? 'refreshes every 5s' : 'offline — retrying';
+}
+
+async function loadSorts() {
+  try {
+    const r = await fetch(CONFIG.WORKER_URL + '/sorts?study=' + encodeURIComponent(CONFIG.STUDY_NAME), { cache: 'no-store' });
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    setStatus(true);
+    return Array.isArray(data.sorts) ? data.sorts : [];
+  } catch (e) {
+    setStatus(false);
+    return null;
+  }
+}
+
+function aggregate(sorts) {
+  const by = {};
+  for (const s of STATEMENTS) by[s.n] = { counts: [0,0,0,0,0,0,0], sum: 0, sumSq: 0, n: 0 };
+  for (const sort of sorts) {
+    const p = sort.sort || {};
+    for (const n of Object.keys(p)) {
+      const v = p[n];
+      const ci = CONFIG.COL_VALUES.indexOf(v);
+      if (ci < 0) continue;
+      const st = by[n];
+      if (!st) continue;
+      st.counts[ci]++;
+      st.sum += v;
+      st.sumSq += v * v;
+      st.n++;
+    }
+  }
+  for (const n of Object.keys(by)) {
+    const s = by[n];
+    s.mean = s.n > 0 ? s.sum / s.n : 0;
+    s.variance = s.n > 0 ? (s.sumSq / s.n) - s.mean * s.mean : 0;
+  }
+  return by;
+}
+
+function render() {
+  const count = allSorts.length;
+  $('count').textContent = count;
+
+  if (count === 0) {
+    $('content').innerHTML = '<div class="empty"><div class="icon">&#9203;</div><p>Waiting for the first sort.</p></div>';
+    $('controls').style.display = 'none';
+    return;
+  }
+
+  $('controls').style.display = 'flex';
+  const agg = aggregate(allSorts);
+
+  let ordered = [...STATEMENTS];
+  if (sortMode === 'mean-desc')      ordered.sort((a, b) => agg[b.n].mean - agg[a.n].mean);
+  else if (sortMode === 'mean-asc')  ordered.sort((a, b) => agg[a.n].mean - agg[b.n].mean);
+  else if (sortMode === 'variance')  ordered.sort((a, b) => agg[b.n].variance - agg[a.n].variance);
+
+  const c = $('content');
+  c.innerHTML = '';
+  for (const s of ordered) {
+    const stat = agg[s.n];
+    const maxC = Math.max(...stat.counts, 1);
+    const m = stat.mean.toFixed(2);
+    const cls = stat.mean > 0.3 ? 'pos' : stat.mean < -0.3 ? 'neg' : 'neut';
+    const sign = stat.mean > 0 ? '+' : '';
+    let dist = '';
+    for (let i = 0; i < 7; i++) {
+      const cn = stat.counts[i];
+      const h = (cn / maxC) * 100;
+      dist += '<div class="dist-cell c' + i + '"><div class="fill" style="height:' + h + '%"></div>' + (cn > 0 ? '<div class="lbl">' + cn + '</div>' : '') + '</div>';
+    }
+    const row = document.createElement('div');
+    row.className = 'stmt-row';
+    row.innerHTML =
+      '<div class="stmt-num">' + s.n + '</div>' +
+      '<div class="stmt-text">' + escapeHtml(s.text) + '</div>' +
+      '<div class="stmt-mean">mean<span class="v ' + cls + '">' + sign + m + '</span></div>' +
+      '<div class="stmt-dist">' + dist + '</div>';
+    c.appendChild(row);
+  }
+}
+
+async function tick() {
+  const next = await loadSorts();
+  if (next === null) return;
+  if (next.length !== lastCount) {
+    allSorts = next;
+    lastCount = next.length;
+    render();
+  }
+}
+
+$('sort-by').addEventListener('change', e => { sortMode = e.target.value; render(); });
+
+tick();
+setInterval(tick, CONFIG.REFRESH_MS);
+</script>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Phones in Schools — Q-Sort</title>
+<meta name="description" content="Tap to sort 30 statements about phones in schools. Anonymous, ~5 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --surface-2: #1f2a4a;
+    --surface-3: #2a3a6a;
+    --border: rgba(45, 212, 191, 0.18);
+    --border-strong: rgba(45, 212, 191, 0.55);
+    --cyan: #2dd4bf;
+    --cyan-bright: #5eead4;
+    --warn: #f59e0b;
+    --hot: #ef4444;
+    --good: #22c55e;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --muted-light: #94a3b8;
+  }
+  html, body {
+    min-height: 100%;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+  }
+  body { touch-action: manipulation; overflow-x: hidden; }
+
+  /* Compact bar */
+  .bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    position: sticky; top: 0; z-index: 50;
+    font-size: 0.85rem;
+  }
+  .bar-title { font-weight: 600; color: var(--cyan); }
+  .bar-prog { color: var(--muted); }
+  .bar-prog .placed { color: var(--cyan); font-weight: 600; }
+  .bar-prog .ready { color: var(--good); font-weight: 600; }
+
+  .main {
+    padding: 0.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── Intro ── */
+  .screen { display: none; }
+  .screen.show { display: block; }
+
+  .intro {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+  }
+  .intro h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .intro p {
+    color: var(--muted-light);
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .intro p.sub {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin: 0.75rem 0 1.75rem;
+  }
+  .btn-go {
+    background: var(--cyan);
+    color: var(--bg);
+    border: none;
+    padding: 0.85rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(45, 212, 191, 0.3);
+  }
+  .btn-go:active { transform: scale(0.97); }
+
+  details.more {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  details.more summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 0.8rem;
+    list-style: none;
+    text-align: center;
+  }
+  details.more summary::-webkit-details-marker { display: none; }
+  details.more summary::before { content: "▸ "; color: var(--cyan); }
+  details.more[open] summary::before { content: "▾ "; }
+  details.more .body {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--muted-light);
+    line-height: 1.6;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  details.more .body p { margin-bottom: 0.6rem; }
+
+  /* ── Sort screen ── */
+
+  /* The grid sits at the top — always visible */
+  .grid-section {
+    margin-bottom: 0.75rem;
+  }
+  .grid-instr {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+  .grid-instr .selected-card {
+    color: var(--cyan-bright);
+    font-weight: 600;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+  }
+  .col {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.15rem;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.12s, border-color 0.12s, transform 0.08s;
+    cursor: pointer;
+  }
+  .col.target {
+    background: rgba(45, 212, 191, 0.15);
+    border-color: var(--cyan);
+    transform: scale(1.02);
+  }
+  .col.full { background: rgba(245, 158, 11, 0.06); }
+  .col.over { border-color: var(--hot); background: rgba(239, 68, 68, 0.1); }
+  .col-head {
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .col-head .num {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .col-head .lbl {
+    font-size: 0.55rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 0.1rem;
+    min-height: 0.7rem;
+  }
+  .col-head .cnt {
+    font-size: 0.7rem;
+    color: var(--cyan);
+    font-weight: 600;
+    display: block;
+    margin-top: 0.15rem;
+  }
+  .col-head .cnt .need { color: var(--muted); font-weight: 400; }
+  .col-head .cnt.over { color: var(--hot); }
+  .col-head .cnt.full { color: var(--good); }
+
+  /* Cards inside columns: just the number, tappable */
+  .col-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6rem;
+    height: 1.4rem;
+    padding: 0 0.3rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background 0.1s, transform 0.05s;
+  }
+  .chip:active { transform: scale(0.92); }
+  .chip:hover { background: var(--surface-3); }
+  .chip.selected {
+    background: var(--cyan);
+    color: var(--bg);
+    border-color: var(--cyan-bright);
+    box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.3);
+  }
+
+  /* The current statement display — big and obvious */
+  .current {
+    background: var(--surface);
+    border: 1.5px solid var(--cyan);
+    border-radius: 0.5rem;
+    padding: 0.85rem 1rem;
+    margin: 0.75rem 0 0.5rem;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.08);
+  }
+  .current.empty {
+    border-color: var(--border);
+    border-style: dashed;
+    box-shadow: none;
+  }
+  .current.empty .current-text {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+  .current-num {
+    flex-shrink: 0;
+    background: var(--cyan);
+    color: var(--bg);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .current.empty .current-num {
+    background: var(--surface-2);
+    color: var(--muted);
+  }
+  .current-text {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  /* Deck of unplaced cards */
+  .deck-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.5rem 0 0.4rem;
+  }
+  .deck {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-height: 50px;
+  }
+  .deck .chip {
+    min-width: 1.8rem;
+    height: 1.6rem;
+    font-size: 0.75rem;
+  }
+
+  .deck-empty {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-style: italic;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Submit area */
+  .submit-area {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--cyan);
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .btn:disabled { background: var(--muted); cursor: not-allowed; opacity: 0.6; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { color: var(--text); }
+
+  /* ── Results screen ── */
+  .results {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-top: 1rem;
+  }
+  .results h2 { color: var(--cyan); font-size: 1.15rem; margin-bottom: 0.75rem; }
+  .results p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.6rem; }
+  .results .closest {
+    background: var(--surface-2);
+    border-left: 3px solid var(--cyan);
+    padding: 0.85rem 1rem;
+    margin: 0.75rem 0 1rem;
+    border-radius: 0.25rem;
+  }
+  .results .closest .vp-name {
+    color: var(--cyan-bright);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .results .closest .vp-desc { font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+  .vp-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .vp-row .vp-label {
+    flex-basis: 11rem;
+    flex-shrink: 0;
+    color: var(--text);
+  }
+  .vp-row .vp-bar {
+    flex-grow: 1;
+    height: 6px;
+    background: var(--surface-2);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .vp-row .vp-fill { height: 100%; background: var(--cyan); transition: width 0.5s; }
+  .vp-row .vp-pct { color: var(--muted); font-size: 0.75rem; min-width: 2.5rem; text-align: right; }
+  .results-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .results-actions a {
+    text-decoration: none;
+    background: rgba(45, 212, 191, 0.12);
+    color: var(--cyan-bright);
+    border: 1px solid var(--border-strong);
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 200;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  }
+  .toast.show { opacity: 1; }
+  .toast.ok { border-color: var(--cyan); }
+  .toast.warn { border-color: var(--warn); color: var(--warn); }
+
+  /* Tablet+ */
+  @media (min-width: 700px) {
+    .col { min-height: 200px; padding: 0.5rem 0.3rem; }
+    .col-head .num { font-size: 1rem; }
+    .col-head .lbl { font-size: 0.65rem; }
+    .col-head .cnt { font-size: 0.8rem; }
+    .chip { min-width: 1.9rem; height: 1.6rem; font-size: 0.8rem; }
+    .deck .chip { min-width: 2rem; height: 1.8rem; font-size: 0.85rem; }
+    .current { padding: 1rem 1.2rem; }
+    .current-text { font-size: 1.05rem; }
+    .grid { gap: 5px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="bar-title">Phones in Schools</span>
+  <span class="bar-prog" id="bar-prog">tap a card</span>
+</div>
+
+<div class="main">
+
+  <!-- ── Intro ── -->
+  <div class="screen show" id="screen-intro">
+    <div class="intro">
+      <h1>Phones in Schools</h1>
+      <p>Sort 30 statements onto a grid &mdash; from disagree on the left to agree on the right.</p>
+      <p class="sub">Anonymous &middot; ~5 minutes &middot; works on any device</p>
+      <button class="btn-go" id="btn-start">Start &rarr;</button>
+
+      <details class="more">
+        <summary>How it works</summary>
+        <div class="body">
+          <p><strong>Tap a card to pick it up</strong> &mdash; it shows up at the top.</p>
+          <p><strong>Tap a column to drop it.</strong> Each column has a fixed number of slots: <em>2&middot;4&middot;5&middot;8&middot;5&middot;4&middot;2</em>. The middle column ("Neutral") holds the most. The forcing is the point &mdash; you can&rsquo;t put everything at +1.</p>
+          <p>When all 30 are placed, hit Submit. You&rsquo;ll see which of five viewpoints your sort most resembles, and your contribution joins the live tally.</p>
+          <p style="font-size: 0.75rem; color: var(--muted); margin-top: 0.75rem;">No personal data collected. Sort positions only.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── Sort ── -->
+  <div class="screen" id="screen-sort">
+
+    <!-- Grid at the very top -->
+    <div class="grid-section">
+      <div class="grid-instr" id="grid-instr">Tap a card from the deck below, then tap a column.</div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <!-- Currently selected card (or empty placeholder) -->
+    <div class="current empty" id="current">
+      <div class="current-num" id="current-num">?</div>
+      <div class="current-text" id="current-text">Tap a card below to pick it up.</div>
+    </div>
+
+    <!-- Deck of remaining cards -->
+    <div class="deck-label" id="deck-label">Cards left to place</div>
+    <div class="deck" id="deck"></div>
+
+    <div class="submit-area">
+      <button class="btn btn-ghost" id="btn-reset" type="button">Reset</button>
+      <button class="btn" id="btn-submit" type="button" disabled>Submit</button>
+    </div>
+  </div>
+
+  <!-- ── Results ── -->
+  <div class="screen" id="screen-results">
+    <div class="results">
+      <h2>Done!</h2>
+      <p>Your sort most closely resembles:</p>
+      <div class="closest">
+        <div class="vp-name" id="closest-name"></div>
+        <div class="vp-desc" id="closest-desc"></div>
+      </div>
+      <p style="margin-top: 1rem;">How close to each viewpoint:</p>
+      <div id="all-vps"></div>
+      <div class="results-actions">
+        <a href="live/" target="_blank">See live tally &rarr;</a>
+        <button class="btn btn-ghost" id="btn-restart" type="button">Sort again</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+const CONFIG = {
+  WORKER_URL: "https://q-sort-api.foxxelabs.ie",
+  STUDY_NAME: "phones-q-sort",
+  COL_COUNTS: [2, 4, 5, 8, 5, 4, 2],
+  COL_LABELS: ["Strongly\ndisagree", "", "", "Neutral", "", "", "Strongly\nagree"],
+  COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
+};
+
+const STATEMENTS = [
+  { n: 1,  text: "Mobile phones should be banned from school grounds entirely." },
+  { n: 2,  text: "Phones should be allowed in school but not in classrooms." },
+  { n: 3,  text: "Teachers should be able to confiscate phones if students break the rules." },
+  { n: 4,  text: "Banning phones would just make students sneakier about using them." },
+  { n: 5,  text: "Schools that ban phones are out of touch with how the world works now." },
+  { n: 6,  text: "Apps like Google Classroom and Microsoft Teams have made school work easier to manage." },
+  { n: 7,  text: "Looking things up on my phone during class helps me learn faster." },
+  { n: 8,  text: "I get distracted by notifications even when I'm trying to focus on schoolwork." },
+  { n: 9,  text: "Phones are useful in school as long as they're being used for schoolwork." },
+  { n: 10, text: "The best learning happens when there are no phones in the room." },
+  { n: 11, text: "Group chats are how my friend group actually stays connected." },
+  { n: 12, text: "Without my phone at school I would feel cut off from my friends." },
+  { n: 13, text: "Some of the worst arguments between students happen on social media." },
+  { n: 14, text: "Phones make it harder to actually talk to the people sitting next to you." },
+  { n: 15, text: "Most of the bullying that goes on now happens online, not in person." },
+  { n: 16, text: "Time on my phone makes me feel worse about myself." },
+  { n: 17, text: "I check my phone more often than I want to." },
+  { n: 18, text: "Apps like TikTok and Instagram are designed to be addictive." },
+  { n: 19, text: "Phones are a useful way to take a break from stress at school." },
+  { n: 20, text: "I would feel anxious if I didn't have my phone with me during the school day." },
+  { n: 21, text: "Banning phones would unfairly punish students who use them to help with learning differences." },
+  { n: 22, text: "Not every student can afford the latest phone, and that creates problems." },
+  { n: 23, text: "Students with parents who work late need their phones to coordinate with family." },
+  { n: 24, text: "Schools shouldn't decide what technology students use \u2014 that's up to families." },
+  { n: 25, text: "By the age of 16 students should be trusted to manage their own phone use." },
+  { n: 26, text: "Schools that don't allow phones don't trust their students." },
+  { n: 27, text: "Adults are worse at managing their phone use than students are." },
+  { n: 28, text: "Teachers complaining about phones are mostly worried about losing classroom control." },
+  { n: 29, text: "The real problem isn't phones \u2014 it's that nobody has been taught how to use them well." },
+  { n: 30, text: "If schools don't address phone use, nobody will." },
+];
+
+const VIEWPOINTS = {
+  restrictionist: {
+    name: "The pragmatic restrictionist",
+    desc: "Phones are addictive by design and the school environment should be a phones-off zone. The aim is removing temptation, not punishing students.",
+    target: { 1: 3, 10: 3, 18: 2, 16: 2, 8: 2, 14: 1, 13: 1, 17: 1,
+              4: -3, 5: -3, 26: -2, 27: -2, 7: -1, 11: -1, 25: -1, 24: -1 },
+  },
+  autonomy: {
+    name: "The autonomy advocate",
+    desc: "Sixteen-year-olds should be trusted to manage their own phone use. The issue is teaching responsibility, not removing the choice.",
+    target: { 25: 3, 29: 3, 27: 2, 26: 2, 4: 2, 5: 1, 24: 1, 28: 1,
+              1: -3, 10: -3, 3: -2, 16: -2, 18: -1, 13: -1, 14: -1, 20: -1 },
+  },
+  connection: {
+    name: "The connection-first user",
+    desc: "The social cost of being phone-less in a school day is real. Friendships, family coordination and a sense of being included all depend on the device.",
+    target: { 11: 3, 12: 3, 23: 2, 20: 2, 19: 2, 5: 1, 25: 1, 22: 1,
+              1: -3, 10: -3, 3: -2, 16: -2, 8: -1, 13: -1, 18: -1, 14: -1 },
+  },
+  pedagogical: {
+    name: "The pedagogical optimist",
+    desc: "Apps have genuinely improved how learning is organised. The problem is design and norms, not the device itself.",
+    target: { 6: 3, 9: 3, 7: 2, 29: 2, 19: 1, 25: 1, 27: 1, 4: 1,
+              1: -3, 10: -3, 5: -1, 16: -2, 13: -1, 18: -2, 28: -1, 14: -1 },
+  },
+  equity: {
+    name: "The equity-concerned",
+    desc: "Phone bans hit some students harder than others \u2014 those with learning differences, those with caregiving responsibilities, those whose families rely on coordination.",
+    target: { 21: 3, 23: 3, 22: 2, 24: 2, 12: 1, 11: 1, 5: 1, 29: 1,
+              1: -3, 10: -3, 3: -2, 28: -1, 18: -1, 16: -2, 4: -1, 14: -1 },
+  },
+};
+
+// State: each statement is at column 0..6 or -1 (unplaced)
+const state = {
+  placement: {},
+  selected: null,    // statement number currently picked up
+};
+STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+
+const $ = id => document.getElementById(id);
+const showScreen = id => {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('show'));
+  $(id).classList.add('show');
+};
+const toast = (msg, kind) => {
+  const t = $('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + (kind || '');
+  setTimeout(() => { t.className = 'toast ' + (kind || ''); }, 2200);
+};
+const escapeHtml = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function colCount(c) {
+  return Object.values(state.placement).filter(ci => ci === c).length;
+}
+
+function renderGrid() {
+  const grid = $('grid');
+  grid.innerHTML = '';
+  for (let c = 0; c < 7; c++) {
+    const col = document.createElement('div');
+    col.className = 'col';
+    col.dataset.col = c;
+    const here = colCount(c);
+    const target = CONFIG.COL_COUNTS[c];
+    const isFull = here >= target;
+    const isOver = here > target;
+    if (isFull && !isOver) col.classList.add('full');
+    if (isOver) col.classList.add('over');
+
+    const sign = CONFIG.COL_VALUES[c] > 0 ? '+' : (CONFIG.COL_VALUES[c] < 0 ? '' : '');
+    col.innerHTML =
+      '<div class="col-head">' +
+        '<div class="num">' + sign + CONFIG.COL_VALUES[c] + '</div>' +
+        '<div class="lbl">' + (CONFIG.COL_LABELS[c] || '&nbsp;').replace(/\n/g, '<br>') + '</div>' +
+        '<div class="cnt' + (isOver ? ' over' : (isFull ? ' full' : '')) + '">' + here + '<span class="need">/' + target + '</span></div>' +
+      '</div>' +
+      '<div class="col-cards" data-col="' + c + '"></div>';
+    grid.appendChild(col);
+
+    const cards = col.querySelector('.col-cards');
+    Object.keys(state.placement).forEach(n => {
+      const nn = parseInt(n, 10);
+      if (state.placement[nn] === c) {
+        cards.appendChild(makeChip(nn, true));
+      }
+    });
+
+    col.addEventListener('click', e => {
+      // ignore clicks on chips inside; they handle themselves
+      if (e.target.closest('.chip')) return;
+      handleColumnTap(c);
+    });
+  }
+  refreshTargetHighlight();
+}
+
+function makeChip(n, inGrid) {
+  const el = document.createElement('div');
+  el.className = 'chip';
+  el.dataset.n = n;
+  el.textContent = n;
+  if (state.selected === n) el.classList.add('selected');
+  el.addEventListener('click', e => {
+    e.stopPropagation();
+    selectCard(n);
+  });
+  return el;
+}
+
+function renderDeck() {
+  const deck = $('deck');
+  deck.innerHTML = '';
+  const unplaced = STATEMENTS.filter(s => state.placement[s.n] === -1);
+  if (unplaced.length === 0) {
+    deck.innerHTML = '<div class="deck-empty">All cards placed. Tap any chip in the grid to move it.</div>';
+  } else {
+    unplaced.forEach(s => deck.appendChild(makeChip(s.n, false)));
+  }
+}
+
+function selectCard(n) {
+  state.selected = state.selected === n ? null : n;
+  renderGrid();
+  renderDeck();
+  renderCurrent();
+  refreshInstr();
+}
+
+function renderCurrent() {
+  const cur = $('current');
+  const numEl = $('current-num');
+  const txtEl = $('current-text');
+  if (state.selected === null) {
+    cur.classList.add('empty');
+    numEl.textContent = '?';
+    txtEl.textContent = 'Tap a card below to pick it up.';
+  } else {
+    cur.classList.remove('empty');
+    const stmt = STATEMENTS.find(s => s.n === state.selected);
+    numEl.textContent = state.selected;
+    txtEl.textContent = stmt.text;
+  }
+}
+
+function refreshTargetHighlight() {
+  document.querySelectorAll('.col').forEach(col => col.classList.remove('target'));
+  if (state.selected === null) return;
+  // Highlight columns that aren't full yet
+  document.querySelectorAll('.col').forEach(col => {
+    const c = parseInt(col.dataset.col, 10);
+    if (colCount(c) < CONFIG.COL_COUNTS[c] || state.placement[state.selected] === c) {
+      col.classList.add('target');
+    }
+  });
+}
+
+function refreshInstr() {
+  const instr = $('grid-instr');
+  if (state.selected === null) {
+    instr.innerHTML = 'Tap a card from the deck below, then tap a column.';
+  } else {
+    const stmt = STATEMENTS.find(s => s.n === state.selected);
+    instr.innerHTML = '<span class="selected-card">Card ' + state.selected + ' selected</span> — tap a column to place it.';
+  }
+}
+
+function handleColumnTap(c) {
+  if (state.selected === null) return;
+  const here = colCount(c);
+  const target = CONFIG.COL_COUNTS[c];
+  // Allow if there's room, OR if the selected card is already in this column (no-op move)
+  if (here >= target && state.placement[state.selected] !== c) {
+    toast('Column ' + (CONFIG.COL_VALUES[c] > 0 ? '+' : '') + CONFIG.COL_VALUES[c] + ' is full', 'warn');
+    return;
+  }
+  state.placement[state.selected] = c;
+  state.selected = null;
+  renderGrid();
+  renderDeck();
+  renderCurrent();
+  refreshInstr();
+  updateProgress();
+}
+
+function updateProgress() {
+  const placed = Object.values(state.placement).filter(c => c >= 0).length;
+  let allFit = true;
+  for (let c = 0; c < 7; c++) {
+    if (colCount(c) !== CONFIG.COL_COUNTS[c]) { allFit = false; break; }
+  }
+  const bar = $('bar-prog');
+  if (allFit && placed === 30) {
+    bar.innerHTML = '<span class="ready">All 30 placed — submit ready</span>';
+    $('btn-submit').disabled = false;
+  } else {
+    bar.innerHTML = '<span class="placed">' + placed + '</span> of 30 placed';
+    $('btn-submit').disabled = true;
+  }
+}
+
+function similarityToTarget(target) {
+  let dist = 0, count = 0;
+  for (const n of Object.keys(target)) {
+    const t = target[n];
+    const placed = CONFIG.COL_VALUES[state.placement[n]];
+    if (placed === undefined) continue;
+    dist += Math.abs(t - placed);
+    count++;
+  }
+  return 1 - (dist / (count * 6));
+}
+
+function showResults() {
+  showScreen('screen-results');
+  const scores = {};
+  for (const k of Object.keys(VIEWPOINTS)) scores[k] = similarityToTarget(VIEWPOINTS[k].target);
+  const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  $('closest-name').textContent = VIEWPOINTS[ranked[0][0]].name;
+  $('closest-desc').textContent = VIEWPOINTS[ranked[0][0]].desc;
+  const all = $('all-vps');
+  all.innerHTML = '';
+  for (const [k, s] of ranked) {
+    const pct = Math.round(s * 100);
+    const row = document.createElement('div');
+    row.className = 'vp-row';
+    row.innerHTML =
+      '<div class="vp-label">' + escapeHtml(VIEWPOINTS[k].name) + '</div>' +
+      '<div class="vp-bar"><div class="vp-fill" style="width:' + pct + '%"></div></div>' +
+      '<div class="vp-pct">' + pct + '%</div>';
+    all.appendChild(row);
+  }
+}
+
+async function submitSort() {
+  const record = { ts: new Date().toISOString(), sort: {} };
+  for (const s of STATEMENTS) record.sort[s.n] = CONFIG.COL_VALUES[state.placement[s.n]];
+
+  try {
+    const local = JSON.parse(localStorage.getItem('phones-q-sorts') || '[]');
+    local.push(record);
+    localStorage.setItem('phones-q-sorts', JSON.stringify(local));
+  } catch (e) {}
+
+  try {
+    const r = await fetch(CONFIG.WORKER_URL + '/sorts?study=' + encodeURIComponent(CONFIG.STUDY_NAME), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(record),
+    });
+    if (!r.ok) throw new Error('Worker ' + r.status);
+    const result = await r.json();
+    toast("You're #" + result.count, 'ok');
+  } catch (err) {
+    toast('Saved locally — live tally unavailable', 'warn');
+  }
+  showResults();
+}
+
+$('btn-start').addEventListener('click', () => {
+  showScreen('screen-sort');
+  renderGrid();
+  renderDeck();
+  renderCurrent();
+  refreshInstr();
+  updateProgress();
+});
+
+$('btn-reset').addEventListener('click', () => {
+  if (!confirm('Reset all placements?')) return;
+  STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+  state.selected = null;
+  renderGrid();
+  renderDeck();
+  renderCurrent();
+  refreshInstr();
+  updateProgress();
+});
+
+$('btn-submit').addEventListener('click', submitSort);
+
+$('btn-restart').addEventListener('click', () => {
+  STATEMENTS.forEach(s => { state.placement[s.n] = -1; });
+  state.selected = null;
+  showScreen('screen-intro');
+});
+</script>
+</body>
+</html>
