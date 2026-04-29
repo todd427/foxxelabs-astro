@@ -349,11 +349,13 @@
 <script>
 "use strict";
 
+// ───────────────────────────────────────────────────────────────────────────
+// CONFIG — points at the q-sort-worker on Cloudflare. No keys needed.
+// To deploy the Worker, see worker/q-sort/README.md in the repo.
+// ───────────────────────────────────────────────────────────────────────────
 const CONFIG = {
-  // To enable cross-visitor live tally, see SETUP.md in the repo.
-  // Leave blank to use localStorage only (each browser sees only its own sorts).
-  BIN_URL: "",
-  BIN_KEY: "",
+  WORKER_URL: "https://q-sort-api.foxxelabs.ie",
+  STUDY_NAME: "phones-q-sort",
   COL_COUNTS: [2, 4, 5, 8, 5, 4, 2],
   COL_LABELS: ["Strongly disagree","","","Neutral","","","Strongly agree"],
   COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
@@ -655,35 +657,28 @@ async function submitSort() {
     record.sort[s.n] = CONFIG.COL_VALUES[state.placement[s.n]];
   }
 
+  // Always cache locally — used as a fallback if the Worker is unreachable
+  // and viewable on the live page if the operator wants per-browser preview.
   try {
     const local = JSON.parse(localStorage.getItem('phones-q-sorts') || '[]');
     local.push(record);
     localStorage.setItem('phones-q-sorts', JSON.stringify(local));
   } catch (err) { console.warn('localStorage write failed:', err); }
 
-  if (CONFIG.BIN_URL && CONFIG.BIN_KEY) {
-    try {
-      const r = await fetch(CONFIG.BIN_URL + '/latest', {
-        headers: { 'X-Master-Key': CONFIG.BIN_KEY },
-      });
-      const data = await r.json();
-      const sorts = (data && data.record && data.record.sorts) || [];
-      sorts.push(record);
-      await fetch(CONFIG.BIN_URL, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Master-Key': CONFIG.BIN_KEY,
-        },
-        body: JSON.stringify({ sorts }),
-      });
-      toast('Submitted to live tally', 'ok');
-    } catch (err) {
-      console.warn('Bin sync failed:', err);
-      toast('Saved locally \u2014 live tally unavailable', 'warn');
-    }
-  } else {
-    toast('Saved locally', 'ok');
+  // Submit to the Worker.
+  try {
+    const url = CONFIG.WORKER_URL + '/sorts?study=' + encodeURIComponent(CONFIG.STUDY_NAME);
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(record),
+    });
+    if (!r.ok) throw new Error('Worker returned ' + r.status);
+    const result = await r.json();
+    toast('Submitted \u2014 you are #' + result.count, 'ok');
+  } catch (err) {
+    console.warn('Worker submit failed:', err);
+    toast('Saved locally \u2014 will not appear on live tally', 'warn');
   }
 
   showResults();

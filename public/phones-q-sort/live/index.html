@@ -68,6 +68,10 @@
     animation: pulse 1.5s ease-in-out infinite;
     margin-right: 0.4rem;
   }
+  .meta .live-dot.offline {
+    background: var(--hot);
+    animation: none;
+  }
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
@@ -185,7 +189,7 @@
   <div class="header-row">
     <h1>Phones in Schools &mdash; Live Tally</h1>
     <div class="meta">
-      <span><span class="live-dot"></span>Live &middot; refreshes every 10s</span>
+      <span><span class="live-dot" id="live-dot"></span><span id="live-status">Live &middot; refreshes every 5s</span></span>
       <span><span class="count-big" id="count">0</span> sorts so far</span>
     </div>
   </div>
@@ -219,11 +223,13 @@
 <script>
 "use strict";
 
+// ───────────────────────────────────────────────────────────────────────────
+// CONFIG — must match ../index.html
+// ───────────────────────────────────────────────────────────────────────────
 const CONFIG = {
-  // Must match the values in ../index.html
-  BIN_URL: "",
-  BIN_KEY: "",
-  REFRESH_MS: 10000,
+  WORKER_URL: "https://q-sort-api.foxxelabs.ie",
+  STUDY_NAME: "phones-q-sort",
+  REFRESH_MS: 5000,
   COL_LABELS: ["\u22123","\u22122","\u22121","0","+1","+2","+3"],
   COL_VALUES: [-3, -2, -1, 0, 1, 2, 3],
 };
@@ -268,24 +274,28 @@ const escapeHtml = s => String(s)
 
 let allSorts = [];
 let sortMode = 'number';
+let lastCount = -1;
+
+function setStatus(online) {
+  $('live-dot').classList.toggle('offline', !online);
+  $('live-status').textContent = online
+    ? 'Live \u00b7 refreshes every ' + (CONFIG.REFRESH_MS / 1000) + 's'
+    : 'Worker offline \u2014 retrying';
+}
 
 async function loadSorts() {
-  if (CONFIG.BIN_URL && CONFIG.BIN_KEY) {
-    try {
-      const r = await fetch(CONFIG.BIN_URL + '/latest', {
-        headers: { 'X-Master-Key': CONFIG.BIN_KEY },
-        cache: 'no-store',
-      });
-      if (!r.ok) throw new Error('Bin fetch ' + r.status);
-      const data = await r.json();
-      return (data && data.record && data.record.sorts) || [];
-    } catch (err) {
-      console.warn('Bin fetch failed, falling back to localStorage:', err);
-    }
-  }
   try {
-    return JSON.parse(localStorage.getItem('phones-q-sorts') || '[]');
-  } catch (err) { return []; }
+    const url = CONFIG.WORKER_URL + '/sorts?study=' + encodeURIComponent(CONFIG.STUDY_NAME);
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) throw new Error('Worker fetch ' + r.status);
+    const data = await r.json();
+    setStatus(true);
+    return Array.isArray(data.sorts) ? data.sorts : [];
+  } catch (err) {
+    console.warn('Worker fetch failed:', err);
+    setStatus(false);
+    return null;   // null = no update; keep previous sorts on screen
+  }
 }
 
 function aggregate(sorts) {
@@ -374,8 +384,14 @@ function render() {
 }
 
 async function tick() {
-  allSorts = await loadSorts();
-  render();
+  const next = await loadSorts();
+  if (next === null) return;       // Worker unreachable, keep last view
+  // Only re-render if count changed (avoid pointless DOM thrash)
+  if (next.length !== lastCount) {
+    allSorts = next;
+    lastCount = next.length;
+    render();
+  }
 }
 
 $('sort-by').addEventListener('change', e => {
