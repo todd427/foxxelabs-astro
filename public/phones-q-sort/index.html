@@ -62,24 +62,58 @@
   .screen { display: none; }
   .screen.show { display: block; }
 
+  /* ── Intro: minimal, one sentence + button, rest hidden ── */
   .intro-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 0.75rem;
     padding: 1.5rem;
-    line-height: 1.65;
+    line-height: 1.6;
     font-size: 0.95rem;
   }
-  .intro-card h2 { font-size: 1.1rem; color: var(--cyan); margin-bottom: 0.6rem; }
-  .intro-card p { margin-bottom: 0.75rem; }
-  .intro-card ol { padding-left: 1.4rem; margin: 0.5rem 0 0.75rem; }
-  .intro-card li { margin-bottom: 0.4rem; }
-  .intro-card .privacy {
-    font-size: 0.8rem; color: var(--muted);
-    margin-top: 1rem; padding-top: 1rem;
-    border-top: 1px solid var(--border);
-    line-height: 1.5;
+  .intro-lead {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
   }
+  .intro-tiny {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 1rem;
+    line-height: 1.4;
+  }
+  .intro-tiny a { color: var(--cyan); }
+
+  /* Disclosure for "what's a Q-sort?" */
+  details.intro-more {
+    margin-top: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+  details.intro-more > summary {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 0.8rem;
+    list-style: none;
+    user-select: none;
+    padding: 0.25rem 0;
+  }
+  details.intro-more > summary::-webkit-details-marker { display: none; }
+  details.intro-more > summary::before {
+    content: "▸ ";
+    color: var(--cyan);
+    font-size: 0.7rem;
+  }
+  details.intro-more[open] > summary::before { content: "▾ "; }
+  details.intro-more > summary:hover { color: var(--text); }
+  details.intro-more .more-body {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  details.intro-more .more-body p { margin-bottom: 0.5rem; }
+  details.intro-more .more-body strong { color: var(--text); }
 
   .btn {
     padding: 0.55rem 1.3rem;
@@ -87,7 +121,6 @@
     background: var(--cyan); color: var(--bg);
     cursor: pointer; font-size: 0.9rem; font-weight: 600;
     font-family: inherit; transition: background 0.12s;
-    margin-top: 1rem;
   }
   .btn:hover:not(:disabled) { background: var(--cyan-bright); }
   .btn:disabled { background: var(--muted); cursor: not-allowed; }
@@ -288,19 +321,19 @@
 
   <div class="screen show" id="screen-intro">
     <div class="intro-card">
-      <h2>What is this?</h2>
-      <p>A Q-sort is a research method for finding the distinct viewpoints people hold on a contested topic. Instead of rating each statement on a 1-to-5 scale in isolation, you arrange all 30 statements relative to each other on a forced grid &mdash; committing to which agreements you hold most strongly and which disagreements bother you most.</p>
-      <p><strong>How it works:</strong></p>
-      <ol>
-        <li>Drag each of the 30 statements into one of seven columns, from <em>strongly disagree</em> (left) to <em>strongly agree</em> (right).</li>
-        <li>Each column has a fixed number of slots. The forcing is the point &mdash; it surfaces what you actually prioritise.</li>
-        <li>When all 30 are placed, submit your sort. You&rsquo;ll see which of five viewpoints your sort most resembles, and your contribution joins a live tally.</li>
-      </ol>
-      <p>Allow about 8 minutes. Works on phone, tablet, or desktop.</p>
-      <button class="btn" id="btn-start">Start the sort &rarr;</button>
-      <div class="privacy">
-        This page tallies how visitors arrange these statements. <strong>No personal information is collected.</strong> Your individual sort is not stored as a profile &mdash; only its contribution to the running totals (which statement landed at which position, with a date stamp). The live tally is visible to the lesson presenter at <a href="live/" style="color: var(--cyan);">/live</a>.
-      </div>
+      <p class="intro-lead">Sort 30 statements about phones in schools onto a grid &mdash; from strongly disagree to strongly agree.</p>
+      <button class="btn" id="btn-start">Start &rarr;</button>
+
+      <details class="intro-more">
+        <summary>What&rsquo;s a Q-sort? (optional)</summary>
+        <div class="more-body">
+          <p>A Q-sort is a research method for finding the distinct viewpoints people hold on a contested topic. Instead of rating each statement on its own scale, you arrange all 30 relative to each other on a forced grid &mdash; committing to which agreements you hold most strongly and which disagreements bother you most.</p>
+          <p>Each column has a fixed number of slots. <strong>The forcing is the point</strong> &mdash; it surfaces what you actually prioritise. When you&rsquo;re done, you&rsquo;ll see which of five viewpoints your sort most resembles, and your contribution joins the live tally.</p>
+          <p>Allow about 8 minutes. Works on phone, tablet, or desktop.</p>
+        </div>
+      </details>
+
+      <p class="intro-tiny">No personal information collected. Anonymous sort positions only. Live tally at <a href="live/">/live</a>.</p>
     </div>
   </div>
 
@@ -336,7 +369,7 @@
       </div>
       <p>Similarity to all five viewpoints (higher = closer match):</p>
       <div class="all-vps" id="all-vps"></div>
-      <p style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted);">These viewpoints are not labels you have to accept &mdash; they&rsquo;re starting points for thinking about why people hold the positions they do. Two people whose sorts both match &ldquo;the autonomy advocate&rdquo; can still disagree sharply on individual statements.</p>
+      <p style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted);">These viewpoints are not labels you have to accept &mdash; they&rsquo;re starting points for thinking about why people hold the positions they do.</p>
       <a href="live/" class="live-link" target="_blank">View the live tally &rarr;</a>
       <button class="btn btn-secondary" id="btn-restart" type="button" style="margin-left: 0.5rem;">Sort again</button>
     </div>

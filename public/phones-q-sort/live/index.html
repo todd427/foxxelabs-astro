@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Live Tally &mdash; Phones in Schools Q-Sort &mdash; Foxxe Labs</title>
-<meta name="description" content="Live tally for the Phones in Schools Q-sort. Aggregate, anonymous, refreshes every 10 seconds.">
+<meta name="description" content="Live tally for the Phones in Schools Q-sort. Aggregate, anonymous, refreshes every 5 seconds.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,10 +142,17 @@
   }
 
   .empty {
-    text-align: center; padding: 4rem 2rem;
-    color: var(--muted); font-size: 0.95rem;
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
   }
-  .empty .big { font-size: 2rem; color: var(--cyan); margin-bottom: 1rem; }
+  .empty .big {
+    font-size: 1.75rem;
+    color: var(--cyan);
+    opacity: 0.5;
+    margin-bottom: 0.75rem;
+  }
 
   .stats-panel {
     background: var(--surface);
@@ -201,7 +208,7 @@
   </div>
 
   <div class="controls" id="controls" style="display:none;">
-    <div style="font-size: 0.85rem; color: var(--muted);">Each row shows the distribution of placements across the 7 columns. Right-most column = most agreed. Mean shown on right.</div>
+    <div style="font-size: 0.85rem; color: var(--muted);">Each row shows the distribution across the 7 columns. Right-most = most agreed. Mean shown on right.</div>
     <select class="sort-select" id="sort-by">
       <option value="number">Sort by statement number</option>
       <option value="mean-desc">Sort by mean (most agreed first)</option>
@@ -211,10 +218,9 @@
   </div>
 
   <div id="content">
-    <div class="empty" id="empty">
+    <div class="empty">
       <div class="big">&#9203;</div>
-      <p>Waiting for sort submissions.</p>
-      <p style="font-size: 0.8rem; margin-top: 0.5rem;">Once participants begin submitting their sorts, results will appear here.</p>
+      <p>Waiting for the first sort.</p>
     </div>
   </div>
 
@@ -330,7 +336,7 @@ function render() {
   $('count').textContent = count;
 
   if (count === 0) {
-    $('content').innerHTML = '<div class="empty"><div class="big">&#9203;</div><p>Waiting for sort submissions.</p><p style="font-size: 0.8rem; margin-top: 0.5rem;">Once participants begin submitting their sorts, results will appear here.</p></div>';
+    $('content').innerHTML = '<div class="empty"><div class="big">&#9203;</div><p>Waiting for the first sort.</p></div>';
     $('controls').style.display = 'none';
     $('stats-panel').style.display = 'none';
     return;
