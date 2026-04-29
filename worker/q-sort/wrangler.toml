@@ -2,6 +2,10 @@ name = "q-sort-worker"
 main = "src/index.js"
 compatibility_date = "2024-09-01"
 
+# Also expose at the workers.dev subdomain (free, auto-provisioned)
+# alongside the custom domain. Useful as a fallback while DNS propagates.
+workers_dev = true
+
 # Bind the KV namespace where sort arrays are stored.
 # Replace `id` with the value printed by:
 #   wrangler kv namespace create Q_SORTS
@@ -9,10 +13,15 @@ compatibility_date = "2024-09-01"
 binding = "Q_SORTS"
 id = "REPLACE_WITH_KV_NAMESPACE_ID"
 
-# Public hostname. Cloudflare auto-creates the DNS record on deploy
-# because foxxelabs.ie is in the same account.
+# Public hostname. `custom_domain = true` tells Cloudflare to auto-create
+# the DNS record (an AAAA record pointing at the Worker) the first time
+# this is deployed — no manual DNS step needed.
+#
+# Note: the older `[[routes]]` style with `pattern` + `zone_name` does
+# NOT auto-create DNS — it requires a pre-existing record at the
+# subdomain. `custom_domain = true` is the modern auto-provisioning path.
 [[routes]]
-pattern = "q-sort-api.foxxelabs.ie/*"
-zone_name = "foxxelabs.ie"
+pattern = "q-sort-api.foxxelabs.ie"
+custom_domain = true
 
 # No secrets needed — the Worker IS the API. No third-party calls.
