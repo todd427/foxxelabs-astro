@@ -15,6 +15,10 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPath = Astro.url.pathname;
+
+// Cloudflare Web Analytics — env-gated. Set PUBLIC_CF_BEACON_TOKEN in
+// Cloudflare Pages env vars to activate. No-op until then.
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
 
 <!DOCTYPE html>
@@ -63,6 +67,14 @@ const currentPath = Astro.url.pathname;
       document.documentElement.setAttribute('data-theme', resolved);
     })();
   </script>
+
+  {cfBeaconToken && (
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${cfBeaconToken}"}`}
+    ></script>
+  )}
 </head>
 <body>
   <div class="sitebar">
