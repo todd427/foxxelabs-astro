@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="multTitle multDesc" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <title id="multTitle">Three ways of counting output</title>
+  <desc id="multDesc">Horizontal bar chart comparing visible breadth at five and a half times, felt productivity at four and a half times, and finished output at two times baseline.</desc>
+  <rect x="0" y="0" width="640" height="280" fill="#ffffff"/>
+  <text x="320" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Three ways of counting output</text>
+  <line x1="200" y1="60" x2="200" y2="240" stroke="#555555" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="200" y="255" text-anchor="middle" font-size="11" fill="#333333">1× (no AI)</text>
+  <rect x="200" y="75" width="290" height="32" fill="#054b41"/>
+  <text x="20" y="96" font-size="13" font-weight="600" fill="#1a1a1a">Visible breadth</text>
+  <text x="20" y="111" font-size="11" fill="#333333">projects in flight</text>
+  <text x="500" y="98" font-size="20" font-weight="700" fill="#054b41">5.5×</text>
+  <rect x="200" y="135" width="225" height="32" fill="#054b41"/>
+  <text x="20" y="156" font-size="13" font-weight="600" fill="#1a1a1a">Felt productivity</text>
+  <text x="20" y="171" font-size="11" fill="#333333">things-on-paper per day</text>
+  <text x="435" y="158" font-size="20" font-weight="700" fill="#054b41">4.5×</text>
+  <rect x="200" y="195" width="80" height="32" fill="#054b41"/>
+  <text x="20" y="216" font-size="13" font-weight="600" fill="#1a1a1a">Finished output</text>
+  <text x="20" y="231" font-size="11" fill="#333333">work that actually shipped</text>
+  <text x="290" y="218" font-size="20" font-weight="700" fill="#054b41">2×</text>
+</svg>

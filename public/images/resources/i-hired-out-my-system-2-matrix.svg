@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="matrixTitle matrixDesc" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <title id="matrixTitle">Cognitive division of labor — empirical sample</title>
+  <desc id="matrixDesc">A 2x2 matrix mapping Todd's mode (System 1 versus System 2) against Claude's role (thinking versus doing), with empirical percentages from a 25-chunk sample.</desc>
+  <rect x="0" y="0" width="640" height="480" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Where the work happens (n=25)</text>
+  <text x="40" y="160" font-size="12" fill="#333333" transform="rotate(-90 40 160)" text-anchor="middle">Claude: thinking</text>
+  <text x="40" y="340" font-size="12" fill="#333333" transform="rotate(-90 40 340)" text-anchor="middle">Claude: doing</text>
+  <rect x="80" y="60" width="260" height="180" fill="#dbe9e6" stroke="#054b41" stroke-width="1.5"/>
+  <rect x="340" y="60" width="260" height="180" fill="#d4e6e3" stroke="#054b41" stroke-width="1.5"/>
+  <rect x="80" y="240" width="260" height="180" fill="#d4e6e3" stroke="#054b41" stroke-width="1.5"/>
+  <rect x="340" y="240" width="260" height="180" fill="#f3f8f7" stroke="#054b41" stroke-width="1.5"/>
+  <text x="100" y="90" font-size="13" font-weight="600" fill="#1a1a1a">Delegated analysis</text>
+  <text x="100" y="108" font-size="11" fill="#1a1a1a">debugging, synthesis, drafts</text>
+  <text x="320" y="225" text-anchor="end" font-size="36" font-weight="700" fill="#054b41">28%</text>
+  <text x="360" y="90" font-size="13" font-weight="600" fill="#1a1a1a">Joint deep work</text>
+  <text x="360" y="108" font-size="11" fill="#1a1a1a">architecture, theory, trade-offs</text>
+  <text x="580" y="225" text-anchor="end" font-size="36" font-weight="700" fill="#054b41">32%</text>
+  <text x="100" y="270" font-size="13" font-weight="600" fill="#1a1a1a">Rapid procedural</text>
+  <text x="100" y="288" font-size="11" fill="#1a1a1a">status checks, tool calls</text>
+  <text x="320" y="405" text-anchor="end" font-size="36" font-weight="700" fill="#054b41">32%</text>
+  <text x="360" y="270" font-size="13" font-weight="600" fill="#1a1a1a">Directed production</text>
+  <text x="360" y="288" font-size="11" fill="#1a1a1a">voice writing, editorial</text>
+  <text x="580" y="405" text-anchor="end" font-size="36" font-weight="700" fill="#054b41">8%</text>
+  <text x="210" y="450" text-anchor="middle" font-size="12" fill="#333333">Todd: System 1 (fast)</text>
+  <text x="470" y="450" text-anchor="middle" font-size="12" fill="#333333">Todd: System 2 (deliberate)</text>
+</svg>
