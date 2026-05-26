@@ -13,16 +13,16 @@ furtherReading:
     url: "/resources/the-foxxelabs-cognitive-stack"
     source: "FoxxeLabs"
   - title: "Interactive: The Agentic Pipeline (full screen)"
-    url: "/pipeline/"
+    url: "/pipeline/index.html"
     source: "FoxxeLabs"
 draft: false
 ---
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:0 0 1rem 0;border:0.5px solid rgba(128,128,128,0.15);">
-  <iframe src="/pipeline/" width="100%" height="900" style="border:none;background:#0c0d10;" title="The agentic pipeline — clickable flowchart. Each node is a tool that removed a human bottleneck; the loops are the feedback that compounds into 44× throughput."></iframe>
+  <iframe src="/pipeline/index.html" width="100%" height="900" style="border:none;background:#0c0d10;" title="The agentic pipeline — clickable flowchart. Each node is a tool that removed a human bottleneck; the loops are the feedback that compounds into 44× throughput."></iframe>
 </div>
 
-<p style="text-align:center;margin:0 0 2.5rem 0;font-size:0.9rem;"><a href="/pipeline/">Open the flowchart full screen →</a> &nbsp;(every node is clickable)</p>
+<p style="text-align:center;margin:0 0 2.5rem 0;font-size:0.9rem;"><a href="/pipeline/index.html">Open the flowchart full screen →</a> &nbsp;(every node is clickable)</p>
 
 ## <span style="color:#1F4E79">Why this matters</span>
 
