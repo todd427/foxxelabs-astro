@@ -4,6 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { loadCorpusWindow, findDuplicate, appendUpdate, NEWS_DIR } from './dedupe.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -75,43 +76,6 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
       }
     }
   }
-}
-
-/**
- * Read existing news article titles published in the last N days.
- * Extracts the title field from frontmatter without a heavy parser —
- * the frontmatter format is consistent (title: "...") so a regex is fine.
- */
-function getRecentTitles(daysBack = 7) {
-  const newsDir = path.join(__dirname, '..', 'src', 'content', 'news');
-  if (!fs.existsSync(newsDir)) return [];
-
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - daysBack);
-
-  const titles = [];
-
-  for (const file of fs.readdirSync(newsDir)) {
-    if (!file.endsWith('.md')) continue;
-    try {
-      const content = fs.readFileSync(path.join(newsDir, file), 'utf-8');
-
-      // Extract publishDate
-      const dateMatch = content.match(/^publishDate:\s*(\S+)/m);
-      if (dateMatch) {
-        const pubDate = new Date(dateMatch[1]);
-        if (pubDate < cutoff) continue; // older than window, skip
-      }
-
-      // Extract title
-      const titleMatch = content.match(/^title:\s*"(.+?)"/m);
-      if (titleMatch) titles.push(titleMatch[1]);
-    } catch {
-      // unreadable file — skip
-    }
-  }
-
-  return titles;
 }
 
 /**
@@ -216,7 +180,7 @@ async function searchForContent(topic, daysBack) {
   }));
 }
 
-async function generateNewsPost(searchResults, topic, existingTitles = []) {
+async function generateNewsPost(searchResults, topic) {
   console.log(`✍️  Generating news post...`);
 
   const topicSources = getSourcesForTopic(topic);
@@ -224,12 +188,13 @@ async function generateNewsPost(searchResults, topic, existingTitles = []) {
     ? `Preferred sources for citation: ${topicSources.join(', ')}. Cite these where the search results include them.`
     : '';
 
-  const dedupNote = existingTitles.length
-    ? `\nIMPORTANT — AVOID DUPLICATION: The following articles were published in the last 7 days. Do NOT generate a post covering the same story or angle. Choose a meaningfully different angle, event, or development:\n${existingTitles.slice(0, 30).map(t => `  - ${t}`).join('\n')}\n`
-    : '';
+  // NOTE: the old title-list "avoid duplication" instruction has been removed.
+  // It asked the model for "a meaningfully different angle" on the same story,
+  // which is precisely what produced near-duplicates. Deduplication is now
+  // handled deterministically post-generation by the dedupe gate (dedupe.js).
 
   const prompt = `Based on the search results, write a news post for Foxxe Labs following this format:
-${dedupNote}
+
 REQUIREMENTS:
 - Title: Clear, specific headline
 - Description: One compelling sentence (120-160 chars)
@@ -371,6 +336,15 @@ tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
   if (type === 'news') {
     if (postData.source)    frontmatter += `\nsource: "${postData.source}"`;
     if (postData.sourceUrl) frontmatter += `\nsourceUrl: "${postData.sourceUrl}"`;
+    if (postData.significance) frontmatter += `\nsignificance: "${postData.significance}"`;
+    if (Array.isArray(postData.entities) && postData.entities.length) {
+      const ents = postData.entities.map(e => `"${String(e).replace(/"/g, "'")}"`).join(', ');
+      frontmatter += `\nentities: [${ents}]`;
+    }
+    if (typeof postData.irish_eu_angle === 'boolean') {
+      frontmatter += `\nirishEuAngle: ${postData.irish_eu_angle}`;
+    }
+    frontmatter += `\nupdates: []`;
   } else if (type === 'resource') {
     if (postData.readingTime) frontmatter += `\nreadingTime: "${postData.readingTime}"`;
     if (postData.furtherReading?.length) {
@@ -387,19 +361,22 @@ tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
 
   const fullContent = frontmatter + postData.content;
   const outputDir = path.join(__dirname, '..', 'src', 'content', type);
-  const outputPath = path.join(outputDir, `${slug}.md`);
 
-  if (fs.existsSync(outputPath)) {
-    console.log(`⚠️  File already exists: ${slug}.md`);
-    const newSlug = `${slug}-${now.getTime()}`;
-    fs.writeFileSync(path.join(outputDir, `${newSlug}.md`), fullContent);
-    console.log(`✅ Created: ${newSlug}.md (with timestamp to avoid conflict)`);
-    return newSlug;
+  // Deterministic collision handling. With the dedupe gate upstream, a genuine
+  // collision here means a distinct story that happens to share a slug — so
+  // increment rather than stamping with Date.now() (which silently accumulated
+  // near-duplicate twins under the old code).
+  let finalSlug = slug;
+  let outputPath = path.join(outputDir, `${finalSlug}.md`);
+  let n = 2;
+  while (fs.existsSync(outputPath)) {
+    finalSlug = `${slug}-${n++}`;
+    outputPath = path.join(outputDir, `${finalSlug}.md`);
   }
 
   fs.writeFileSync(outputPath, fullContent);
-  console.log(`✅ Created: ${slug}.md`);
-  return slug;
+  console.log(`✅ Created: ${finalSlug}.md`);
+  return finalSlug;
 }
 
 async function main() {
@@ -425,33 +402,65 @@ async function main() {
   } else if (contentType === 'news') {
     console.log(`📰 Searching for AI news from the past ${daysBack} day(s) [${intervalArg}]...\n`);
 
-    // Load recent titles once for the whole run
-    const recentTitles = getRecentTitles(7);
-    if (recentTitles.length) {
-      console.log(`🗂️  Dedup: ${recentTitles.length} articles published in the last 7 days will be excluded\n`);
+    // Story-identity gate: load existing stories within the dedupe window once.
+    // Each candidate is checked against this set (plus stories created earlier
+    // in THIS run) so persistent slow-moving stories fold into one timeline
+    // instead of being regenerated as near-duplicate articles every cycle.
+    const corpus = loadCorpusWindow();
+    if (corpus.length) {
+      console.log(`🗂️  Dedupe window: ${corpus.length} existing stories in scope\n`);
     }
 
+    const todayStr = new Date().toISOString().split('T')[0];
     const topics = specificTopic ? [specificTopic] : config.topics;
-    const posts = [];
-    // Accumulate titles generated this run so intra-run dedup works too
-    const sessionTitles = [...recentTitles];
+    const created = [];
+    const folded = [];
 
     for (const topic of topics) {
       try {
         const searchResults = await searchForContent(topic, daysBack);
-        const postData = await generateNewsPost(searchResults, topic, sessionTitles);
+        const postData = await generateNewsPost(searchResults, topic);
+
+        const candidate = {
+          title:       postData.title,
+          description: postData.description,
+          entities:    Array.isArray(postData.entities) ? postData.entities : [],
+        };
+
+        const hit = findDuplicate(candidate, corpus);
+        if (hit) {
+          appendUpdate(hit.match.file, {
+            date:      todayStr,
+            note:      postData.description,
+            sourceUrl: postData.sourceUrl,
+          });
+          console.log(`↳ Duplicate of "${hit.match.slug}" ` +
+            `(c=${hit.score.combined.toFixed(2)} e=${hit.score.ent.toFixed(2)} t=${hit.score.txt.toFixed(2)}) ` +
+            `— folded into its timeline, no new article.`);
+          folded.push(hit.match.slug);
+          continue;
+        }
+
         const slug = createMarkdownFile(postData, 'news');
         await saveToSupabase(postData, topic, slug);
-        posts.push(slug);
-        // Add to session dedup list
-        if (postData.title) sessionTitles.push(postData.title);
+        created.push(slug);
+
+        // Make this run's new story immediately matchable by later topics.
+        corpus.push({
+          file:        path.join(NEWS_DIR, `${slug}.md`),
+          slug,
+          title:       postData.title,
+          description: postData.description,
+          entities:    candidate.entities,
+          publishDate: todayStr,
+        });
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
       }
     }
 
-    console.log(`\n✨ Done! Generated ${posts.length} news post(s)`);
-    console.log('📄 Review drafts in: src/content/news/');
+    console.log(`\n✨ Done! ${created.length} new article(s), ${folded.length} folded into existing timelines.`);
+    if (created.length) console.log('📄 New drafts in: src/content/news/');
 
   } else {
     console.error('❌ Invalid content type. Use "news" or "resource"');
