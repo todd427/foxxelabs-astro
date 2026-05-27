@@ -4,7 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { loadCorpusWindow, findDuplicate, appendUpdate, NEWS_DIR } from './dedupe.js';
+import { loadCorpusWindow, findDuplicate, appendUpdate, makeStory, NEWS_DIR } from './dedupe.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -421,11 +421,12 @@ async function main() {
         const searchResults = await searchForContent(topic, daysBack);
         const postData = await generateNewsPost(searchResults, topic);
 
-        const candidate = {
+        const candidate = makeStory({
           title:       postData.title,
           description: postData.description,
+          content:     postData.content,
           entities:    Array.isArray(postData.entities) ? postData.entities : [],
-        };
+        });
 
         const hit = findDuplicate(candidate, corpus);
         if (hit) {
@@ -446,14 +447,15 @@ async function main() {
         created.push(slug);
 
         // Make this run's new story immediately matchable by later topics.
-        corpus.push({
+        corpus.push(makeStory({
           file:        path.join(NEWS_DIR, `${slug}.md`),
           slug,
           title:       postData.title,
           description: postData.description,
+          content:     postData.content,
           entities:    candidate.entities,
           publishDate: todayStr,
-        });
+        }));
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
       }
