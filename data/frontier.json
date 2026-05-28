@@ -1,65 +1,165 @@
 {
-  "updatedAt": "2026-05-28T12:56:19.108Z",
+  "updatedAt": "2026-05-28T14:11:39.337Z",
   "axes": {
     "AI security vulnerabilities": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "AI security vulnerabilities have reached critical scale with 2.7M exposed AI services and 2,130 AI-related CVEs in 2025 (34.6% YoY increase). AI-accelerated vulnerability exploitation now leads breach vectors at 31% of incidents, surpassing credential abuse, with zero-day discovery timelines collapsing from months to hours via Claude Mythos Preview. The 3-hour vulnerability window for AI framework exploits (CVE-2026-44338) and arbitrary code execution in AI infrastructure within hours expose a fundamental crisis in detection and patching speed.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "2-7-million-exposed-ai-services-the-infrastructure-crisis-nobody-s-talking-about",
+        "ai-accelerated-vulnerability-exploitation-now-leads-breach-vectors-smbs-face-ransomware-surge",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years",
+        "the-3-hour-vulnerability-window-why-ai-framework-exploits-are-outpacing-enterprise-detection"
+      ]
     },
     "LLM model releases": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "As of May 2026, frontier LLM releases include Google's Gemini 3.5 Flash (4x speed, $1.50/1M tokens, 76.2% on Terminal-Bench 2.1), SubQ's 12M-token context window with subquadratic attention, and Anthropic's Claude Mythos Preview capable of discovering zero-days in hours. Open-source models (Mistral 3, Llama 4, DeepSeek) now match proprietary performance, while reasoning opacity and chain-of-thought transparency emerge as critical safety frontiers.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "google-s-gemini-3-5-flash-launch-signals-speed-first-race-what-europe-s-ai-builders-must-know",
+        "google-s-gemini-3-5-flash-redefines-speed-intelligence-trade-off-what-enterprise-builders-need-to-know",
+        "google-s-gemini-3-5-flash-sets-new-speed-intelligence-benchmark-what-it-means-for-european-ai-builders",
+        "subq-s-12m-token-context-window-how-subquadratic-attention-is-disrupting-long-context-economics",
+        "open-source-llms-now-match-proprietary-models-what-this-means-for-european-ai-sovereignty",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years",
+        "the-cot-window-is-closing-why-ai-reasoning-opacity-just-became-an-urgent-safety-crisis",
+        "andrej-karpathy-joins-anthropic-openai-s-ai-pioneer-now-leading-claude-s-core-training-evolution"
+      ]
     },
     "AI research breakthroughs": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "AI research breakthroughs in 2026 include frontier models with dramatically improved speed-intelligence tradeoffs (Gemini 3.5 Flash at 4x speed with 76.2% Terminal-Bench performance), revolutionary efficiency innovations (Google's TurboQuant KV cache compression, Penn's hybrid light-matter particles cutting energy costs 20-30%), extended context windows (SubQ's 12M-token subquadratic attention), and critical safety discoveries (Claude Mythos finding zero-days in hours, reasoning opacity becoming urgent crisis). Major personnel shifts signal intensifying competition: Andrej Karpathy joining Anthropic to automate pre-training, while architectural breakthroughs in biomedical AI (Geneformer's 100M+ transcriptome dataset) democratize research across underfunded institutions.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "google-s-gemini-3-5-flash-sets-new-speed-intelligence-benchmark-what-it-means-for-european-ai-builders",
+        "google-s-turboquant-algorithm-how-kv-cache-compression-could-reshape-eu-ai-infrastructure-economics",
+        "hybrid-light-matter-particles-how-penn-s-breakthrough-could-slash-ai-computing-energy-costs",
+        "subq-s-12m-token-context-window-how-subquadratic-attention-is-disrupting-long-context-economics",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years",
+        "the-cot-window-is-closing-why-ai-reasoning-opacity-just-became-an-urgent-safety-crisis",
+        "andrej-karpathy-joins-anthropic-openai-s-ai-pioneer-now-leading-claude-s-core-training-evolution",
+        "geneformer-s-expanded-dataset-breakthrough-how-quantized-ai-models-are-democratizing-biomedical-research-across-europe"
+      ]
     },
     "Machine learning applications": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "Machine learning applications have advanced from conversational chatbots to autonomous agentic AI systems with integrated infrastructure controls. Google's Gemini 3.5 Flash (4x speed, $1.50/M tokens), SubQ's 12M-token context window with subquadratic attention, and Anthropic's MCP tunnels enable enterprise deployment of coding agents and infrastructure automation. Claude Mythos Preview now discovers zero-days in hours rather than months, while production deployment shifts from prompt optimization to control-layer robustness frameworks.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "google-gemini-3-5-flash-signals-shift-from-chatbots-to-autonomous-ai-agents-what-european-builders-need-to-know",
+        "google-s-gemini-3-5-flash-enterprise-agents-hit-inflection-point-what-it-means-for-irish-tech-teams",
+        "anthropic-s-mcp-tunnels-and-agent-sandboxes-why-enterprise-prompt-engineering-just-became-infrastructure",
+        "subq-s-12m-token-context-window-how-subquadratic-attention-is-disrupting-long-context-economics",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years",
+        "production-prompt-engineering-shifts-from-optimization-to-robustness-the-control-layer-revolution"
+      ]
     },
     "AI industry developments": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "AI industry is experiencing rapid infrastructure consolidation, capability acceleration, and regulatory enforcement at scale. Frontier models now compete on speed-efficiency trade-offs (Google Gemini 3.5 Flash at $1.50/M tokens, 4x faster) while open-source LLMs match proprietary performance. Critical vulnerabilities in AI infrastructure are being discovered and exploited within hours, and EU AI Act enforcement begins August 2026 with distributed multi-authority oversight across 15 competent authorities in Ireland alone.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "2-7-million-exposed-ai-services-the-infrastructure-crisis-nobody-s-talking-about",
+        "ai-accelerated-vulnerability-exploitation-now-leads-breach-vectors-smbs-face-ransomware-surge",
+        "alphaevolve-s-hidden-year-google-deepmind-s-evolutionary-ai-already-recovering-0-7-of-global-compute",
+        "amd-s-2nm-epyc-processors-enter-production-what-europe-s-ai-infrastructure-gap-means-for-sovereignty",
+        "andrej-karpathy-joins-anthropic-openai-s-ai-pioneer-now-leading-claude-s-core-training-evolution",
+        "google-gemini-3-5-flash-signals-shift-from-chatbots-to-autonomous-ai-agents-what-european-builders-need-to-know",
+        "google-s-gemini-3-5-flash-redefines-speed-intelligence-trade-off-what-enterprise-builders-need-to-know",
+        "cohere-aleph-alpha-merger-signals-europe-s-sovereign-ai-bet-but-can-it-compete-with-us-china-duopoly",
+        "eu-ai-omnibus-deal-fast-tracks-deepfake-ban-to-december-2026-ireland-must-prepare-enforcement-now",
+        "open-source-llms-now-match-proprietary-models-what-this-means-for-european-ai-sovereignty",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years"
+      ]
     },
     "Prompt engineering advances": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "Prompt engineering is transitioning from manual optimization to automated, context-aware frameworks. Enterprise deployment now prioritizes control layers and robustness over prompt tuning alone, while agentic capabilities and long-context windows (12M+ tokens) reshape production architectures. Skills gap shifting from 'prompt engineer' roles to universal 'context engineering' literacy across all roles.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "from-prompt-engineering-to-context-engineering-why-ai-skills-training-just-became-universal",
+        "production-prompt-engineering-shifts-from-optimization-to-robustness-the-control-layer-revolution",
+        "anthropic-s-mcp-tunnels-and-agent-sandboxes-why-enterprise-prompt-engineering-just-became-infrastructure",
+        "google-s-gemini-3-5-flash-enterprise-agents-hit-inflection-point-what-it-means-for-irish-tech-teams",
+        "subq-s-12m-token-context-window-how-subquadratic-attention-is-disrupting-long-context-economics",
+        "the-production-prompt-engineering-arms-race-openai-and-anthropic-s-billion-dollar-bet-on-enterprise-deployment"
+      ]
     },
     "AI safety and alignment": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "AI safety and alignment has entered a critical phase where pre-deployment testing fundamentally fails to predict real-world model behavior (OpenAI-Anthropic joint evaluations), while reasoning transparency windows are closing as models hide chain-of-thought thinking. Alignment approaches are shifting from constitutional AI toward control layer frameworks and ethical governance (Vatican-Anthropic collaboration), even as safety infrastructure faces cascading vulnerabilities in deployment environments.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "cross-lab-safety-evaluations-expose-misalignment-detection-gaps-what-openai-anthropic-joint-testing-reveals-about-pre-deployment-limits",
+        "the-cot-window-is-closing-why-ai-reasoning-opacity-just-became-an-urgent-safety-crisis",
+        "anthropic-s-ethical-reminder-tool-a-new-frontier-in-ai-alignment-testing",
+        "anthropic-s-mcp-tunnels-and-agent-sandboxes-why-enterprise-prompt-engineering-just-became-infrastructure",
+        "pope-leo-xiv-and-anthropic-launch-magnifica-humanitas-vatican-s-first-ai-governance-encyclical-signals-shift-in-digital-ethics-dialogue",
+        "2-7-million-exposed-ai-services-the-infrastructure-crisis-nobody-s-talking-about",
+        "zero-day-discovery-speed-just-collapsed-claude-mythos-preview-finds-vulnerabilities-in-hours-not-years"
+      ]
     },
     "EU AI Act developments": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "EU AI Act enforcement timeline accelerated with May 2026 Omnibus Deal: deepfake ban moved to December 2026 (8 months), high-risk AI compliance to December 2027, transparency requirements to December 2026. Ireland establishing 15-authority distributed enforcement model with AI Office launching August 2026. General-purpose AI now under centralized EU AI Office supervisory authority with expanded bias-detection data processing rights.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "eu-ai-act-s-article-50-transparency-guidelines-how-the-may-2026-omnibus-deal-changes-compliance-for-ai-builders",
+        "eu-ai-act-s-bias-detection-loophole-why-the-may-2026-omnibus-deal-just-expanded-sensitive-data-processing",
+        "eu-ai-act-s-december-2026-deepfake-ban-ireland-s-enforcement-race-against-non-consensual-content",
+        "eu-ai-act-s-december-2027-high-risk-timeline-why-irish-enterprises-have-19-months-to-overhaul-hiring-and-border-systems",
+        "eu-ai-act-s-grace-period-collapse-why-irish-content-platforms-must-act-on-deepfake-detection-by-december-2026",
+        "eu-ai-office-gains-supervisory-power-over-general-purpose-ai-what-the-may-2026-omnibus-deal-means-for-irish-builders",
+        "ireland-s-15-authority-ai-supervision-model-how-distributed-enforcement-could-create-compliance-chaos",
+        "ireland-s-distributed-ai-enforcement-model-why-15-competent-authorities-instead-of-one-regulator-changes-everything"
+      ]
     },
     "AI policy Ireland and Europe": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "EU AI Act enforcement framework solidified with May 2026 Omnibus Deal establishing August 2026 transparency deadline, December 2026 deepfake ban, and December 2027 high-risk AI compliance. Ireland's distributed 15-authority enforcement model and centralized EU AI Office supervision now define implementation pathway. European AI sovereignty strategy accelerates through Cohere-Aleph Alpha merger and open-source LLM parity with proprietary models, while skill premiums (56% wage gap) and entry-level job collapse (35-50%) signal structural labour market realignment.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "eu-ai-act-s-article-50-transparency-guidelines-how-the-may-2026-omnibus-deal-changes-compliance-for-ai-builders",
+        "eu-ai-act-s-december-2026-deepfake-ban-ireland-s-enforcement-race-against-non-consensual-content",
+        "eu-ai-act-s-december-2027-high-risk-timeline-why-irish-enterprises-have-19-months-to-overhaul-hiring-and-border-systems",
+        "eu-ai-omnibus-deal-reshapes-enforcement-centralized-ai-office-model-creates-new-compliance-risks-for-irish-enterprises",
+        "ireland-s-15-authority-ai-supervision-model-how-distributed-enforcement-could-create-compliance-chaos",
+        "ireland-s-distributed-ai-enforcement-model-why-15-competent-authorities-instead-of-one-regulator-changes-everything",
+        "cohere-aleph-alpha-merger-signals-europe-s-sovereign-ai-bet-but-can-it-compete-with-us-china-duopoly",
+        "open-source-llms-now-match-proprietary-models-what-this-means-for-european-ai-sovereignty",
+        "the-56-ai-skills-premium-europe-s-wage-divide-is-already-here-and-it-s-accelerating",
+        "ireland-s-entry-level-job-crisis-why-ai-adoption-is-reshaping-graduate-hiring"
+      ]
     },
     "Cyberpsychology and online behaviour": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "Cyberpsychology research has shifted from risk assessment to digital wellness, with new findings on how dark triad personalities (narcissism, psychopathy, Machiavellianism) drive cyber aggression through moral disengagement and online disinhibition mechanisms. Europe's research agenda is redefining AI safety frameworks to address youth digital wellness and antisocial online behavior, moving beyond traditional psychology into 'cyberpsychopathy' as a distinct digital phenomenon requiring new intervention models.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "cyberpsychology-research-reveals-dark-triad-personalities-drive-cyber-aggression-through-moral-disengagement-1779614248926",
+        "cyberpsychology-research-reveals-how-online-disinhibition-fuels-cyber-aggression-in-european-youth",
+        "cyberpsychology-s-shift-to-digital-wellness-how-europe-s-research-agenda-is-redefining-ai-safety-beyond-risk",
+        "cyberpsychopathy-in-digital-spaces-how-dark-personality-traits-manifest-online-beyond-traditional-psychology",
+        "dark-triad-personalities-and-moral-disengagement-how-cyberpsychology-research-is-reshaping-understanding-of-online-aggression"
+      ]
     },
     "AI labour market impact": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "AI labour market impact shows structural realignment: entry-level hiring collapsed 35-50% as AI adoption accelerates, while AI-skilled workers command 56% wage premiums. Irish IT employment fell 10.7% (20,300 jobs) in Q1 2026, with Meta's 350 redundancies signaling sector-wide contraction. Skills mismatch emerging as Europe's top STEM producer faces labour market crisis despite Federal Reserve data questioning AI as primary job-loss driver.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "federal-reserve-data-challenges-ai-job-loss-narrative-evidence-shows-hiring-slowdown-precedes-chatgpt-era",
+        "ireland-s-ai-skills-paradox-why-europe-s-top-stem-producer-faces-a-labour-market-mismatch",
+        "ireland-s-entry-level-job-crisis-why-ai-adoption-is-reshaping-graduate-hiring",
+        "meta-s-350-irish-job-cuts-signal-wider-ai-labour-realignment-crisis-across-europe",
+        "meta-s-irish-workforce-halves-again-why-tech-s-hiring-cliff-is-reshaping-europe-s-ai-economy",
+        "the-56-ai-skills-premium-europe-s-wage-divide-is-already-here-and-it-s-accelerating",
+        "from-prompt-engineering-to-context-engineering-why-ai-skills-training-just-became-universal"
+      ]
     },
     "AI regulation and governance": {
-      "state": "",
-      "lastUpdated": null,
-      "evidence": []
+      "state": "EU AI Act enforcement infrastructure is accelerating toward August 2026 with centralized AI Office supervisory powers over general-purpose AI systems, while Ireland implements a distributed 15-authority model. Critical compliance deadlines include deepfake ban enforcement (December 2026), high-risk AI systems (December 2027), and transparency guidelines (Article 50). Major governance gaps remain around sandbox fragmentation, sector regulator coordination, and the tension between centralized EU oversight and national implementation models.",
+      "lastUpdated": "2026-05-28",
+      "evidence": [
+        "eu-ai-act-s-article-50-transparency-guidelines-how-the-may-2026-omnibus-deal-changes-compliance-for-ai-builders",
+        "eu-ai-office-gains-supervisory-power-over-general-purpose-ai-what-the-may-2026-omnibus-deal-means-for-irish-builders",
+        "eu-ai-omnibus-deal-reshapes-enforcement-centralized-ai-office-model-creates-new-compliance-risks-for-irish-enterprises",
+        "ireland-s-15-authority-ai-supervision-model-how-distributed-enforcement-could-create-compliance-chaos",
+        "ireland-s-distributed-ai-enforcement-model-why-15-competent-authorities-instead-of-one-regulator-changes-everything",
+        "eu-ai-omnibus-deal-reveals-enforcement-fragmentation-risk-how-distributed-national-sandboxes-could-create-compliance-chaos",
+        "eu-ai-act-s-december-2026-deepfake-ban-ireland-s-enforcement-race-against-non-consensual-content",
+        "eu-ai-act-s-december-2027-high-risk-timeline-why-irish-enterprises-have-19-months-to-overhaul-hiring-and-border-systems"
+      ]
     }
   }
 }
