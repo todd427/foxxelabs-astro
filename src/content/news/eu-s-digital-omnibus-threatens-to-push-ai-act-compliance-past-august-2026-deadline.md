@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "Regulatory Timeline", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "August 2, 2026", "December 2027", "GDPR", "European Commission", "European Parliament", "Council of the EU", "Irish Data Protection Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

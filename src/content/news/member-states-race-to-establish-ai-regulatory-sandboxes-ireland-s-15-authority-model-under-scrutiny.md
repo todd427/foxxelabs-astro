@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Sandboxes", "Irish Compliance", "Enforcement"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://www.artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2026", "Ireland", "15 sectoral regulators", "Data Protection Commission", "Central Bank", "Health Information and Quality Authority", "Irish Human Rights and Equality Commission", "Digital Omnibus", "€63.2M", "November 2025", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

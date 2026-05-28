@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["model-efficiency", "open-source-ai", "meta-muse", "compute-optimization"]
 source: "Meta Superintelligence Labs announcement"
 sourceUrl: "https://about.meta.com/superintelligence/"
+entities: ["Meta", "Muse Spark", "Superintelligence Labs", "Llama 4", "Anthropic", "Claude Mythos", "Google", "Gemma 4", "Apache 2.0", "EU AI Act", "March 2026", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

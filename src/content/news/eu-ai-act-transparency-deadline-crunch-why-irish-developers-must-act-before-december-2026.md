@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "transparency requirements", "Irish compliance", "AI-generated content"]
 source: "EU Council Presidency & European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU AI omnibus amendment", "Ireland AI Office", "December 2026", "August 2026", "May 7 2026", "3-month grace period", "Council presidency", "European Parliament"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

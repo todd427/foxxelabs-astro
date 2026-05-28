@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Watermarking", "Transparency", "Ireland Compliance"]
 source: "EU Council & European Parliament AI Omnibus Agreement"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Digital Omnibus on AI", "December 2, 2026", "August 2, 2026", "May 7, 2026", "Ireland's AI Office", "August 1, 2026", "EU AI Act", "CEN/CENELEC", "Anthropic", "OpenAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

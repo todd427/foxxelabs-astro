@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Governance", "EU AI Act", "Ireland", "Regulatory Strategy"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Data Protection Commission", "Department of Enterprise, Trade and Employment", "AI Office", "August 2026", "General Scheme of the Regulation of Artificial Intelligence Bill", "France", "Germany", "Italy", "Department of Health"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

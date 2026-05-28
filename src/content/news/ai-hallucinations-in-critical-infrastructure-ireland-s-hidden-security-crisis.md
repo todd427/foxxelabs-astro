@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI hallucinations", "critical infrastructure", "decision-making risk"]
 source: "Cybersecurity Research Analysis"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["Ireland", "ESO", "EU AI Act", "August 2 2026", "40 AI models"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Implementation", "Compliance"]
 source: "Oireachtas Enterprise Committee"
 sourceUrl: "https://www.oireachtas.ie"
+entities: ["Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "15 competent authorities", "EU AI Omnibus agreement", "May 7 2026", "August 1 2026", "December 2 2026", "August 2 2027", "December 2 2027", "August 2 2028", "Data Protection Commissioner", "Health Products Regulatory Authority", "Central Bank", "Department of Enterprise, Trade and Employment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

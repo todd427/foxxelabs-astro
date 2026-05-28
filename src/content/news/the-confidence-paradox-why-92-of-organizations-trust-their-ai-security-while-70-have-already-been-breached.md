@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerability Detection", "Enterprise Risk", "Code Safety"]
 source: "Vibe Security Radar & Georgia Tech Systems Software & Security Lab"
 sourceUrl: "https://www.georgiatech.edu"
+entities: ["92%", "70.4%", "March 2026", "35 CVE", "Georgia Tech Vibe Security Radar", "GitHub Copilot", "Claude", "Anthropic Project Glasswing", "Claude Mythos Preview", "Google DeepMind", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["specialized-models", "enterprise-ai", "model-architecture"]
 source: "AI Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["GPT-5", "Claude 4", "EU AI Act", "$7.51 billion", "27.3%", "2026", "40%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "High-Risk AI", "Compliance", "Digital Omnibus"]
 source: "European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Parliament", "EU AI Act", "Digital Omnibus package", "March 26 2026", "December 2 2027", "August 2 2028", "August 2025", "August 2026", "€35 million", "7% global turnover", "27 EU member states"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

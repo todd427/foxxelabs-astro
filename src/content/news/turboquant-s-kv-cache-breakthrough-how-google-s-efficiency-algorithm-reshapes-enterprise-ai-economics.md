@@ -6,6 +6,9 @@ category: "Research"
 tags: ["efficiency", "inference-optimization", "enterprise-infrastructure"]
 source: "Google Research / ICLR 2026"
 sourceUrl: "https://research.google/"
+entities: ["Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quantized Johnson-Lindenstrauss", "GPT-5.5", "Claude Opus 4.6", "Gemini 3.1 Ultra", "Mistral Medium 3", "EU AI Act", "vLLM", "TensorRT-LLM"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

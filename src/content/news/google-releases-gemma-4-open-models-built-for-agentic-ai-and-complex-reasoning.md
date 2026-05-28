@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-models", "agentic-ai", "google-gemma"]
 source: "Google AI Research"
 sourceUrl: "https://google.com/ai"
+entities: ["Google", "Gemma 4", "EU AI Act", "August 2, 2026", "Claude", "GPT-4"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

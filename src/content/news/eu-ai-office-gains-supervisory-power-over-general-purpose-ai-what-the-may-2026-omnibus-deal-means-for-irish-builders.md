@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Governance", "General-Purpose AI", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu/"
+entities: ["EU AI Office", "EU AI Act", "May 2026 Digital Omnibus Agreement", "General-Purpose AI", "OpenAI", "GPT", "Anthropic", "Claude", "August 2026", "August 2027", "July 2026", "Ireland", "HRAIS"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

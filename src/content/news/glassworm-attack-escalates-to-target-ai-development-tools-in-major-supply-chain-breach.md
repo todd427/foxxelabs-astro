@@ -6,6 +6,9 @@ category: "Security"
 tags: ["supply-chain", "ai-security", "developer-tools", "malware"]
 source: "Security Research"
 sourceUrl: "https://thehackernews.com"
+entities: ["GlassWorm", "72 malicious extensions", "Claude Code", "Codex", "Google Antigravity", "Open VSX", "EU AI Act", "March 3-9 2026", "151 GitHub repositories", "January 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

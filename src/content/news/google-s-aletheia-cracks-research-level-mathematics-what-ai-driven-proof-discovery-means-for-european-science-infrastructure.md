@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI research", "mathematics", "automated reasoning", "DeepMind"]
 source: "Google DeepMind Research"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "Aletheia", "Gemini 3 Deep Think", "FirstProof challenge", "IMO-ProofBench", "EU AI Act", "Ireland EU presidency", "AI Office of Ireland", "June 30 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

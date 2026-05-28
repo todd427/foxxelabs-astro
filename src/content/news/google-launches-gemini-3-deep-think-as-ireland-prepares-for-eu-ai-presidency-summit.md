@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Gemini", "EU AI Act", "Ireland", "Google"]
 source: "Multiple AI industry sources"
 sourceUrl: "https://gemini.google.com"
+entities: ["Google", "Gemini 3 Deep Think", "Ireland", "EU AI Act", "AI Office of Ireland", "August 1, 2026", "International AI Summit Dublin", "October 14, 2026", "Ireland EU Council Presidency", "OpenAI", "Sora", "Disney", "Anthropic", "Mistral", "Small 4", "Lyria 3"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

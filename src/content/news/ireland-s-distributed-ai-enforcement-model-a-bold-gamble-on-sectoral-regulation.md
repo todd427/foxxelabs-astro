@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Ireland regulation", "enforcement model", "sectoral oversight"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU AI Act", "August 2026", "15 sectoral regulators", "AI Office of Ireland", "Central Bank", "HSE", "Department of Enterprise, Tourism and Employment", "Data Protection Commission", "EU Digital Omnibus", "November 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI labour", "DeepMind", "worker rights", "Pentagon contracts"]
 source: "Multiple sources"
 sourceUrl: "https://deepmind.google/"
+entities: ["Google DeepMind", "Pentagon", "OpenAI", "Microsoft", "Nvidia", "Anthropic", "Dario Amodei", "Pete Hegseth", "EU AI Act", "August 2026", "December 2027", "Dublin"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

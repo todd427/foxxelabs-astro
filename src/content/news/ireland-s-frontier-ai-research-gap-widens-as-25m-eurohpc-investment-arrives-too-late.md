@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI infrastructure", "research capacity", "EuroHPC", "Irish tech"]
 source: "EuroHPC JU / ICHEC"
 sourceUrl: "https://eurohpc-ju.europa.eu/"
+entities: ["Ireland", "CASPIr", "€25M", "EuroHPC", "University of Galway", "ICHEC", "March 2026", "2027", "Germany", "France", "Belgium", "May 2026", "October 2026", "EU Presidency"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

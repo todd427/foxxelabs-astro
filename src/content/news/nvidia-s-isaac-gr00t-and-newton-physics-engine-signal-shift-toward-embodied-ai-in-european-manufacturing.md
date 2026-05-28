@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["robotics", "embodied-ai", "manufacturing", "eu-automation"]
 source: "NVIDIA Developer Blog"
 sourceUrl: "https://developer.nvidia.com/isaac"
+entities: ["NVIDIA", "Isaac GR00T", "Newton 1.0", "EU", "Germany", "Italy", "Benelux", "Ireland", "Boston Dynamics", "Tesla", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

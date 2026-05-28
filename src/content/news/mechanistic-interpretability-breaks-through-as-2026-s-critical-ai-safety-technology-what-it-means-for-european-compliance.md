@@ -6,6 +6,9 @@ category: "Research"
 tags: ["mechanistic-interpretability", "AI-safety", "EU-compliance"]
 source: "MIT Technology Review / Anthropic"
 sourceUrl: "https://www.anthropic.com/news"
+entities: ["MIT Technology Review", "Anthropic", "EU AI Act", "August 2, 2026", "Article 50", "Ireland's AI Office", "General Scheme of the Regulation of Artificial Intelligence Bill", "International AI Summit Dublin", "October 14, 2026", "mechanistic interpretability"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

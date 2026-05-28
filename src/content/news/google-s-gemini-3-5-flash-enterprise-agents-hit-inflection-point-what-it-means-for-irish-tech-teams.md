@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI agents", "enterprise automation", "Google Gemini"]
 source: "Google I/O 2026"
 sourceUrl: "https://google.com/io"
+entities: ["Google", "Gemini 3.5 Flash", "I/O 2026", "Terminal-Bench 2.1", "MCP Atlas", "CharXiv", "Gemini 3.1 Pro", "Gemini Omni", "Antigravity", "AutoGPT", "Zoom", "PwC", "Claude", "GPT-4", "EU AI Act", "€25M", "CASPIr", "ICHEC", "International AI Summit October 2026", "Article 50", "Article 26", "Anthropic", "Stainless"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

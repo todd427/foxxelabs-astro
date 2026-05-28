@@ -6,6 +6,9 @@ category: "Research"
 tags: ["neuromorphic-computing", "energy-efficiency", "scientific-computing", "hardware"]
 source: "Neuromorphic Computing Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["neuromorphic processors", "physics simulations", "Horizon Europe", "CERN", "EU AI and digital infrastructure strategy", "GPUs", "exascale computing", "edge deployment"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "High-Risk Classification", "Compliance", "Implementation"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Commission", "EU AI Act", "Article 6", "May 19 2026", "February 2 2026", "Digital Omnibus", "Article 50", "Ireland AI Office", "August 2026", "June 23 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

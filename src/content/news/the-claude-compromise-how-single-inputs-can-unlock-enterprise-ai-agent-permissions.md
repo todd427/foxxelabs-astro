@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI agents", "enterprise security", "vulnerability disclosure"]
 source: "Oasis Threat Research Team"
 sourceUrl: "https://example.com/oasis-claude-vulnerability"
+entities: ["Anthropic", "Claude", "Oasis Threat Research Team", "GDPR", "EU AI Act", "August 2026", "MCP servers", "74%", "21%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

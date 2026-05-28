@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["ai-skills-gap", "wage-inequality", "labour-market", "eu-workforce"]
 source: "PwC Analysis / McKinsey Pulse of Work Survey"
 sourceUrl: "https://www.mckinsey.com/insights"
+entities: ["PwC", "McKinsey", "Revelio Labs", "World Economic Forum", "EU AI Act", "56% wage premium", "35% entry-level job collapse", "65% employee upskilling gap", "78 million net jobs by 2030", "12% McKinsey entry-level hiring increase 2026", "Article 50", "Article 28"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -5,6 +5,9 @@ publishDate: 2026-03-29
 category: "Policy"
 tags: ["EU AI Act", "regulation", "governance", "compliance"]
 source: "Multiple regulatory sources"
+entities: ["Ireland", "EU AI Act", "August 2026", "Oifig Intleachta Shaorga na hÉireann (AI Office of Ireland)", "Department of Enterprise, Tourism and Employment", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "White House", "Congress", "California's Transparency in Frontier Artificial Intelligence Act", "Trump"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Transparency", "Regulatory Risk", "Digital Rights"]
 source: "Amnesty International"
 sourceUrl: "https://www.amnesty.org/en/"
+entities: ["Amnesty International", "EU Digital Omnibus", "EU AI Act", "European Commission", "EU Council", "November 2025", "2 April 2026", "2 December 2027", "2 August 2028", "Ireland", "AI Office", "1 August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

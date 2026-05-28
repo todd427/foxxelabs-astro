@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerability Research", "Zero-Day", "Open Source"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "Claude Opus 4.6", "Mozilla Firefox", "OpenAI", "Codex Security", "OpenSSH", "PHP", "Chromium", "hackerbot-claw", "Microsoft", "Datadog", "Aqua Security", "Google Chrome", "Gemini AI", "CVE-2026-0628", "CVE-2026-26118", "Microsoft Azure MCP Server", "EU AI Act", "February 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

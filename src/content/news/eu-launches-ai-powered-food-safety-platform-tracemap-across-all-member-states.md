@@ -5,6 +5,9 @@ publishDate: 2026-03-31
 category: "Policy"
 tags: ["food safety", "EU policy", "traceability", "public health"]
 source: "European Commission"
+entities: ["European Commission", "TraceMap", "EU", "27 member states", "infant milk formula", "ARA oil", "China"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

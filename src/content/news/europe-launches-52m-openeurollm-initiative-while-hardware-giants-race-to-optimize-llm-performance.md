@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["OpenEuroLLM", "hardware optimization", "EU AI sovereignty", "infrastructure"]
 source: "Multiple industry sources"
 sourceUrl: "https://euractiv.com"
+entities: ["OpenEuroLLM", "€52M", "Charles University", "Peter Sarlin", "Aleph Alpha", "CSC", "Intel", "OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM", "Micron", "256GB SOCAMM2", "Apple", "M5", "Anthropic", "$20B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

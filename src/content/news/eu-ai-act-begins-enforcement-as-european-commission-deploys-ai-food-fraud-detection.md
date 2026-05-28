@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "food safety", "enforcement", "regulation"]
 source: "Industry AI News"
 sourceUrl: "https://example.com"
+entities: ["EU AI Act", "European Commission", "EU Food Traceability System", "Irish food exporters", "UK AI Safety Institute", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

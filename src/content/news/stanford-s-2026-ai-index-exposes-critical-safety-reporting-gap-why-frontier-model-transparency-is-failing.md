@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Responsible AI", "Transparency", "Benchmarking"]
 source: "Stanford 2026 AI Index Report"
 sourceUrl: "https://aiindex.stanford.edu"
+entities: ["Stanford 2026 AI Index", "Claude Opus 4.5", "EU AI Act", "AI Office of Ireland", "August 2026 enforcement framework"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Food Safety", "Regulatory Technology"]
 source: "European Commission"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["European Commission", "TraceMap", "EU AI Act", "August 2, 2026", "27 EU member states", "Food Safety Authority of Ireland", "FSAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

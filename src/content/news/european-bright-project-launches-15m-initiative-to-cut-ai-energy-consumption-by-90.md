@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["neuromorphic computing", "sustainability", "European research", "energy efficiency"]
 source: "European Commission Research Initiative"
 sourceUrl: "https://ec.europa.eu/research/"
+entities: ["BRIGHT project", "€15M", "LED technology", "neuromorphic computing", "Technische Universität Braunschweig", "Leibniz University Hannover", "Ostfalia University of Applied Sciences", "Physikalisch-Technische Bundesanstalt", "EU", "90% energy reduction"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

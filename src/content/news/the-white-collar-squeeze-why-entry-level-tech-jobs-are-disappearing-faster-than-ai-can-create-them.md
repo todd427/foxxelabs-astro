@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI adoption", "labour market", "junior roles", "Europe"]
 source: "European Central Bank & Labour Market Analysis"
 sourceUrl: "https://www.ecb.europa.eu"
+entities: ["European Central Bank", "Microsoft", "Meta", "Apple", "Amazon", "Salesforce", "Ireland", "EU", "European AI Social Compact", "35%", "204%", "71%", "4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

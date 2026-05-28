@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Irish implementation", "regulatory deadline", "high-risk systems"]
 source: "Amnesty International / European Commission"
 sourceUrl: "https://www.artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "August 1, 2026", "EU Digital Omnibus", "February 4, 2026", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "April 2, 2026", "Amnesty International", "European Commission", "November 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

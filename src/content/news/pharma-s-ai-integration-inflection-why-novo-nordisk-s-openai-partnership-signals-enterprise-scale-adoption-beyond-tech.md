@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "pharma-innovation", "ai-integration"]
 source: "AI Industry Developments"
 sourceUrl: "https://foxxe-labs.com"
+entities: ["Novo Nordisk", "OpenAI", "EMA", "FDA", "EU AI Act", "Pfizer", "Janssen", "GlaxoSmithKline", "€20+ billion", "end of 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

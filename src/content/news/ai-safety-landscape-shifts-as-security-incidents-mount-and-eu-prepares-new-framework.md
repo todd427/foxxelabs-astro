@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Security", "EU AI Act", "Enterprise AI"]
 source: "Multiple Industry Reports"
 sourceUrl: "https://www.wsj.com"
+entities: ["Anthropic", "Claude Code", "OpenAI", "ThroughLine", "Yoshua Bengio", "OECD", "EU", "UN", "2026 International AI Safety Report", "Henna Virkkunen", "European Commission", "EU AI Act", "Canada", "New Delhi", "500000 lines of code", "2000 files", "$600 million", "$2 billion", "32%", "25%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

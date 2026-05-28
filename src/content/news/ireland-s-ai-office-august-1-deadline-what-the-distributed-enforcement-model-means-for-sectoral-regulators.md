@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Office of Ireland", "distributed enforcement", "sectoral regulation", "AI Act implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland's AI Office", "August 1 2026", "EU AI Act", "Data Protection Commission", "Central Bank", "Digital Omnibus", "May 2026", "December 2027", "Market Surveillance Authority", "Single Point of Contact (SPOC)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

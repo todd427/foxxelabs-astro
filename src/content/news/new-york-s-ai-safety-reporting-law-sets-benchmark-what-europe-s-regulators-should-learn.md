@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "transparency requirements", "regulatory precedent"]
 source: "White House and New York State Legislative Updates"
 sourceUrl: "https://www.governor.ny.gov/news"
+entities: ["New York", "Kathy Hochul", "72-hour incident reporting requirement", "AI Act Article 50", "August 2, 2026", "White House", "FDA", "EU AI Act", "December 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Labour Market", "EU AI Act", "Ireland Regulation", "Workforce Impact"]
 source: "Artificial Intelligence Act Analysis"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Canada", "Ireland", "EU AI Act", "August 2, 2026", "Evan Solomon", "Data Protection Commission", "Labour Court", "May 4, 2026", "15-authority model", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Sandboxes", "Compliance Risk"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU AI Omnibus", "May 7, 2026", "August 2, 2026", "August 2, 2027", "Ireland", "EU AI Office", "August 2026", "27 Member States"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

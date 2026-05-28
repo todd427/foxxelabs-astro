@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "governance", "regulation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "February 2025", "2 August 2026", "August 2027", "December 2027", "August 2028", "Digital Omnibus", "European Commission", "Code of Practice on Transparency of AI-Generated Content", "EU common icon", "Chief AI Officers", "EU Cloud and AI Development Act", "Q1 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "productivity", "llm-optimization", "ai-frameworks"]
 source: "Academic Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["APPO", "CHI Conference", "February 2026", "Claude 4.0", "Amazon Bedrock", "Anthropic", "Jina AI", "OpenAI", "Gemini", "PROMPT-SE", "EASE 2026", "March 2026", "11.4x"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

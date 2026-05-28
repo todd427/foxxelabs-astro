@@ -6,6 +6,9 @@ category: "Research"
 tags: ["computer-vision", "multimodal-ai", "foundation-models", "deepmind"]
 source: "Google DeepMind"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "Vision Banana", "Nano Banana Pro", "EU AI Act", "Aleph Alpha", "October 2026 International AI Summit", "April 22 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

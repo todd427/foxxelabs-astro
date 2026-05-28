@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "implementation"]
 source: "Euractiv"
 sourceUrl: "https://euractiv.com"
+entities: ["EU AI Act", "European Commission", "Digital Omnibus", "2 August 2026", "2 February 2026", "2 December 2027", "2 August 2028", "November 2025", "Article 57", "Cloud and AI Development Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Implementation", "Regulation"]
 source: "Various EU AI Act sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "Regulation of Artificial Intelligence Bill 2026", "August 1 2026", "European Commission", "March 27", "13 Market Surveillance Authorities", "Health Products Regulatory Authority", "Grok", "November 2025 Digital Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Summit", "AI Policy", "European Innovation"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["Ireland", "Dublin", "European Commission", "EU AI Act", "October 14, 2026", "August 2026", "European AI Innovation Month", "Peter Burke", "Harvey", "27 EU member states"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

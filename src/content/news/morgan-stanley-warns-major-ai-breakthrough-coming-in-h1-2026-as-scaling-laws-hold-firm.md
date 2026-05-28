@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["scaling laws", "compute", "breakthrough", "foundation models"]
 source: "Morgan Stanley Research"
 sourceUrl: "https://morganstanley.com/ideas/ai-breakthrough-2026"
+entities: ["Morgan Stanley", "OpenAI", "GPT-5.4", "H1 2026", "GDPVal benchmark", "83.0%", "Elon Musk", "10x compute", "Anthropic", "Claude for Life Sciences", "NVIDIA GTC 2026", "September 2026", "March 2028"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

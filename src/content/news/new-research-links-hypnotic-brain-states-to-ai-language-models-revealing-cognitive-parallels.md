@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI cognition", "hypnosis", "LLM research", "cyberpsychology"]
 source: "Cyberpsychology, Behaviour, and Social Networking"
 sourceUrl: "https://www.liebertpub.com/journal/cyb"
+entities: ["ChatGPT", "Cyberpsychology, Behaviour, and Social Networking", "March 8, 2026", "Ireland", "6th BPS Cyberpsychology Conference", "University of York", "July 6-7, 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

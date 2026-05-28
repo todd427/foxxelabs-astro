@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI adoption", "workforce development", "Ireland", "skills gap"]
 source: "AI Economy in Ireland Report"
 sourceUrl: "https://www.siliconrepublic.com"
+entities: ["Ireland", "91%", "49%", "EU AI Act", "EU Council Presidency 2026", "International AI Summit Dublin October 2026", "December 2027", "May 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

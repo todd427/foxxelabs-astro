@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Irish AI regulation", "EU AI Act", "compliance"]
 source: "Irish Government"
 sourceUrl: "https://www.gov.ie/"
+entities: ["Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office", "13 sectoral regulators", "7% worldwide turnover penalties", "August 1, 2026", "National AI Regulatory Sandbox", "EU AI Act", "August 2, 2026", "EU Digital Omnibus Package"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

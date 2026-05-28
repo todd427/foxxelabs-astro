@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "US federal enforcement", "interstate commerce", "regulatory fragmentation"]
 source: "Department of Justice"
 sourceUrl: "https://www.justice.gov/"
+entities: ["US Department of Justice", "AI Litigation Task Force", "New York RAISE Act", "Indiana", "Utah", "Washington", "EU AI Act", "August 2 2026", "January 2026", "March 19 2026", "Commerce Clause"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

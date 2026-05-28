@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Compliance", "Enforcement"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Parliament", "Council of the EU", "European Commission", "Ireland", "28 April 2026", "30 June 2026", "1 August 2026", "60%", "€250 million", "Q1 2026", "Data Protection Commission", "95 days"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI readiness", "trillion-parameter models", "workforce", "EU presidency"]
 source: "IMF Global AI Readiness Report"
 sourceUrl: "https://www.imf.org/en/Publications/WP/Issues/2024/01/14/Labor-Market-Exposure-to-AI"
+entities: ["Ireland", "IMF", "OpenAI", "GPT-5.4", "Anthropic", "Claude Mythos 5", "OSWorld benchmark", "EU AI Act", "AI Office of Ireland", "2026", "Dublin", "Trinity Business School", "€250 billion", "$267.2 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

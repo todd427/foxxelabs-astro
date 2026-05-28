@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Coding Agents", "Vulnerability Management", "Enterprise Risk"]
 source: "DryRun Security Research"
 sourceUrl: "https://www.dryrunsecurity.com"
+entities: ["DryRun Security", "GitHub Copilot", "EU AI Act", "Georgia Tech Vibe Security Radar", "87%", "26 of 30 pull requests", "35 CVEs March 2026", "2,130 AI-related CVEs 2025", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

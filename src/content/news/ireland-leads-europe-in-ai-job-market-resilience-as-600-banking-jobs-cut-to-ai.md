@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["employment", "ireland", "automation", "skills"]
 source: "Irish Times"
 sourceUrl: "https://irishtimes.com/technology"
+entities: ["Ireland", "Close Brothers", "Goldman Sachs Research", "Anthropic", "EU", "Italy", "Netherlands", "France", "March 23 2026", "January 2026", "AI agents", "5.9%", "5.4%", "7.2%", "11%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

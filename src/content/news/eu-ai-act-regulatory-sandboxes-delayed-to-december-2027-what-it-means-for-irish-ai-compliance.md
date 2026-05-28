@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulatory sandboxes", "compliance"]
 source: "European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "AI Omnibus amendments", "August 2, 2026", "December 2, 2027", "Ireland", "Irish AI Office", "August 1, 2026", "European Parliament", "Data Protection Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

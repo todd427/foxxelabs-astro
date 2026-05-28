@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Model", "Enforcement"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU AI Act", "15 national competent authorities", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "September 2025", "August 2026", "EU Presidency 2026", "International AI Summit", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

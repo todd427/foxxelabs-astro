@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI therapy", "cyberpsychology", "digital health", "CBT"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["Nature Medicine", "British Psychological Society", "Cyberpsychology Section", "Dr David Harley", "Cyberpsychology.eu", "BPS Cyberpsychology Conference 2026", "University of York", "Prof. Paul Cairns", "Prof. Amy Orben", "Perlis et al 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

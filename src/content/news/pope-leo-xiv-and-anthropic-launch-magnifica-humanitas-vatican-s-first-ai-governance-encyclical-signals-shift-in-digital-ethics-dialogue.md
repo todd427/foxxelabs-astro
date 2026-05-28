@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "Vatican", "digital ethics", "human dignity"]
 source: "Industry announcements"
 sourceUrl: "https://www.anthropic.com"
+entities: ["Pope Leo XIV", "Anthropic", "Christopher Olah", "Magnifica Humanitas", "EU AI Act", "Article 50", "Anthropic constitutional AI", "$900 billion valuation", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

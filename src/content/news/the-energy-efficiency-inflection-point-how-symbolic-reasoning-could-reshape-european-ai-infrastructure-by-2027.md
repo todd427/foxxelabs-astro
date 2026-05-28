@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "symbolic-ai", "infrastructure", "sustainability"]
 source: "Multiple research institutions"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["EU AI Act", "European AI infrastructure", "GPT-5.5", "OpenAI", "hafnium oxide", "symbolic reasoning", "2027", "Ireland", "EU Green Deal", "neural networks"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

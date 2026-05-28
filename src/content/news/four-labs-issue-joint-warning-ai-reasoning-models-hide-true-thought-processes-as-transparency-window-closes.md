@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "reasoning transparency", "cross-lab collaboration"]
 source: "Cross-Lab Research Initiative"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "April 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

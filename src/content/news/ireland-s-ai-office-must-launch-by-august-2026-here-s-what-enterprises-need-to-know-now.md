@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Office Ireland", "EU AI Act", "Compliance", "Regulatory Framework"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland's AI Office", "EU AI Act", "August 1, 2026", "EU Digital Omnibus amendments", "May 7, 2026", "Market Surveillance Authority", "Single Point of Contact", "Annex III systems", "December 2, 2027", "Regulation of Artificial Intelligence Bill 2026", "August 2, 2027", "EU AI Board"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

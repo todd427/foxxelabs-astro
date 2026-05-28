@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "global inequality", "tech policy"]
 source: "UN Digital World Conference"
 sourceUrl: "https://www.un.org/en/conferences"
+entities: ["Geoffrey Hinton", "UN Digital World Conference", "OpenAI", "DeepSeek", "Google", "Tesla", "EU AI Act", "August 2026", "$4.8T", "$189B", "€25B", "$5.2M"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

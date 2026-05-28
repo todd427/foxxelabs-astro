@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Transparency", "Chain-of-Thought", "Alignment"]
 source: "OpenAI, Google DeepMind, Anthropic, Meta Joint Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "chain-of-thought", "EU AI Act", "August 2026", "reward hacking"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

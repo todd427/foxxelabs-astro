@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "AI skills", "workforce training"]
 source: "AI Research Analysis"
 sourceUrl: "https://foxxe.ai"
+entities: ["Google Research", "Gemini Flash-Lite", "GPT-4o-mini", "Claude", "EU AI Act", "Article 50", "March 2026", "68%", "21%", "97%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

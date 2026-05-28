@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "transparency", "compliance", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "August 2026", "European Commission", "Q2 2026", "Digital Omnibus", "2 August 2026", "Code of Practice on marking and labelling AI-generated content", "Guidelines on transparent AI systems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

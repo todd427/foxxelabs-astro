@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI labour market", "job displacement", "workforce transition", "EU policy"]
 source: "Goldman Sachs Economic Research / Stanford Digital Economy Lab"
 sourceUrl: "https://www.goldmansachs.com"
+entities: ["Goldman Sachs", "Cognizant", "Pinterest", "Project Leap", "EU AI Act", "Erik Brynjolfsson", "Stanford Digital Economy Lab", "Ireland", "World Economic Forum", "92 million jobs displaced by 2030", "16,000 net jobs monthly", "25% early-career hiring collapse", "August 2026 AI transparency deadline", "December 2027 and August 2028 compliance deadline"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

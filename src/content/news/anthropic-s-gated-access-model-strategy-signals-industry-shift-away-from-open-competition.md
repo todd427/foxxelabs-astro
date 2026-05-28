@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["frontier models", "AI access", "research equity", "security"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Mythos", "Claude Opus 4.6", "Project Glasswing", "50 organizations", "12 launch partners", "$100M", "Zhipu AI", "GLM-5.1", "744B MoE", "GPT-5.4", "Google", "Gemma 4", "Apache 2.0", "Microsoft", "Alibaba", "EU AI Act", "Qwen 3.6"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

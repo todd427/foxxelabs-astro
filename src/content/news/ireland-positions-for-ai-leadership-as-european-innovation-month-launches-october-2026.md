@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Summit", "European AI", "Dublin", "Innovation"]
 source: "European Commission Partnership"
 sourceUrl: "https://example.com/ai-summit-2026"
+entities: ["Ireland", "Dublin", "October 14 2026", "European AI Innovation Month", "European Commission", "European Parliament", "Committee on the Internal Market and Consumer Protection", "AI omnibus", "Mistral AI", "$14 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

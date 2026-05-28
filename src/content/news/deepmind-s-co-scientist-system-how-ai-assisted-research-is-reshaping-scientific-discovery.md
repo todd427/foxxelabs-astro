@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI research", "multi-agent systems", "scientific discovery"]
 source: "DeepMind/Nature"
 sourceUrl: "https://deepmind.google/research"
+entities: ["DeepMind", "Co-Scientist", "Nature", "May 19 2026", "Gemini", "OpenAI", "GPT-5.5 Instant", "Google", "Gemini 3.5 Flash", "Anthropic", "Andrej Karpathy"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

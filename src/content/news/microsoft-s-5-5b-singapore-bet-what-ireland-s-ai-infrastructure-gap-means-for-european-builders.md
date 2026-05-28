@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Infrastructure", "Cloud Computing", "Regional Strategy"]
 source: "Microsoft Announcements"
 sourceUrl: "https://microsoft.com"
+entities: ["Microsoft", "Singapore", "$5.5B", "2025-2029", "Ireland", "EU AI Act", "Anthropic", "Google", "OpenAI", "xAI", "AI Office of Ireland", "August 2, 2026", "$5B investment 2020", "Cornell Lab", "Azure"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

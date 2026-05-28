@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "enforcement"]
 source: "European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Parliament", "EU AI Act", "Digital Omnibus AI", "Ireland", "Department of Enterprise, Tourism and Employment", "Oifig Intleachta Shaorga na hÉireann", "August 2025", "August 2026", "CEN", "CENELEC", "December 2027", "August 2028", "2026 EU Presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

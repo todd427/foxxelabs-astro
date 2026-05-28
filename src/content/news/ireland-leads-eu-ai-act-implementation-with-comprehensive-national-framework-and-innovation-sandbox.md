@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulation", "innovation sandbox"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "Oifig Intleachta Shaorga na hÉireann (AI Office of Ireland)", "Department of Enterprise, Tourism and Employment", "August 1, 2026", "August 2026", "15 enforcement authorities", "Enterprise Ireland", "Observatory for Business AI Readiness (OBAIR)", "European Commission", "2026 EU Council Presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

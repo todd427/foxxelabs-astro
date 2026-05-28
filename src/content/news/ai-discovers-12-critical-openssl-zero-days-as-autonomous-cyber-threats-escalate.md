@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerability-research", "ai-security", "openssl", "cyber-threats"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://example.com/ai-safety-report-2026"
+entities: ["AISLE AI", "OpenSSL", "CVE-2025-15467", "January 27 2026", "Docker", "Ask Gordon", "DockerDash", "Google", "UNC2970", "North Korea", "Gemini AI", "Anthropic", "Claude Code AI", "Chinese cyberspies", "November 2025", "Docker Desktop 4.50.0", "International AI Safety Report"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

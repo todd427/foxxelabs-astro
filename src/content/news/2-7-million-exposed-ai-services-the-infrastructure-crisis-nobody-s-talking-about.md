@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI infrastructure", "CVE", "code execution", "DevOps"]
 source: "The Hacker News / Krebs on Security"
 sourceUrl: "https://thehackernews.com"
+entities: ["Microsoft", "Semantic Kernel", "CVE-2026-25592", "CVE-2026-26030", "2 million hosts", "1 million exposed AI services", "2,130 AI-related CVEs", "2025", "34.6% YoY increase", "EU AI Act", "GDPR", "Article 15"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

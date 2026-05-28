@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["food safety", "EU AI Act", "supply chain", "fraud detection"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["European Commission", "TraceMap", "EU", "27 EU member states", "Ireland", "RASFF", "TRACES", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

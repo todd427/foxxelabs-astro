@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Summit", "EU Presidency", "AI Governance", "Irish AI Policy"]
 source: "European Commission"
 sourceUrl: "https://digital-strategy.ec.europa.eu/"
+entities: ["Ireland", "EU AI Act", "International AI Summit", "October 14, 2026", "Dublin", "Council of the European Union Presidency", "Regulation of Artificial Intelligence Bill 2026", "Oifig Intleachta Shaorga na hÉireann", "AI Office of Ireland", "European AI Innovation Month"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

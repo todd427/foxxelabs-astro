@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "Claude", "LLM-behavior", "developer-impact"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Opus 4.7", "Claude 3.5 Sonnet", "Claude Managed Agents", "Claude Code", "Universal Conditional Logic (UCL)", "29.8%"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

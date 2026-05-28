@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment", "Robustness"]
 source: "arxiv.org"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["EU AI Act", "Constitutional AI", "RLHF", "August 2026", "intent laundering attacks", "90-98%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-skills", "enterprise-adaptation", "EU-AI-Act"]
 source: "The Wall Street Journal / Industry Analysis"
 sourceUrl: "https://www.wsj.com"
+entities: ["EU AI Act", "August 2026", "Ireland", "The Wall Street Journal", "RAG (Retrieval-Augmented Generation)"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "ai-productivity", "anthropic"]
 source: "Industry Research Reports"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude 4", "GPT-5", "Gemini 2 Ultra", "Dario Amodei", "APPO", "11.4x speedup", "$505.43M 2025", "$6.7B 2034", "Davos", "N-shot prompting", "40%", "context engineering"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

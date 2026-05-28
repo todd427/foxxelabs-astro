@@ -6,6 +6,9 @@ category: "Research"
 tags: ["DeepMind", "Robotics", "Materials Science", "UK Innovation"]
 source: "Google DeepMind"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "UK", "2026", "Gemini Robotics-ER 1.6", "superconductor", "British government", "Horizon Europe", "post-Brexit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

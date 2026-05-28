@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI infrastructure", "European Union", "compute scaling", "quantum computing"]
 source: "EuroHPC Joint Undertaking"
 sourceUrl: "https://eurohpc-ju.europa.eu"
+entities: ["European Union", "EuroHPC", "€1.5B", "2026", "Morgan Stanley", "OpenAI", "GPT-5.4", "GDPVal", "IBM", "Digital Europe Programme", "Horizon Europe", "Dublin", "8,000", "EU AI Act", "Scale Ireland", "35.4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

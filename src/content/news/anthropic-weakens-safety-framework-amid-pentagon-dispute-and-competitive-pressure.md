@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Anthropic", "Pentagon", "Alignment"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "OpenAI", "Google DeepMind", "Pentagon", "Responsible Scaling Policy", "US Department of Defense"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

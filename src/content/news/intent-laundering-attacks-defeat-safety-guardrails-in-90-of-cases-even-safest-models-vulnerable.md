@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "alignment vulnerabilities", "security research"]
 source: "AI Safety Research Community"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Intent Laundering", "Gemini 3 Pro", "Claude Sonnet 3.7", "EU AI Act", "August 2026", "RLHF", "RLAIF", "OpenAI", "April 2026", "90-98.55%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

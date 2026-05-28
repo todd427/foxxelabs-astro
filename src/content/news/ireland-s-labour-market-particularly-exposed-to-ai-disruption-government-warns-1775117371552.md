@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["labour-market", "ireland", "ai-impact", "employment"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie/finance"
+entities: ["Ireland Department of Finance", "Anthropic", "Mercer", "Goldman Sachs Research", "International AI Summit", "October 14 2026", "EU Presidency", "4%", "28%", "40%", "14%", "12,000 European firms"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

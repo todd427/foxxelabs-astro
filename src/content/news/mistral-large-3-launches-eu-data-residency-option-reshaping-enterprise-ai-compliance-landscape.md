@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["mistral-ai", "eu-compliance", "data-sovereignty", "enterprise-ai"]
 source: "Mistral AI Product Release"
 sourceUrl: "https://mistral.ai/news/large-3-release"
+entities: ["Mistral AI", "Large 3", "La Plateforme", "EU AI Act", "GDPR", "March 2026", "4% global revenue", "Claude Opus 4.6", "Google", "Dublin", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

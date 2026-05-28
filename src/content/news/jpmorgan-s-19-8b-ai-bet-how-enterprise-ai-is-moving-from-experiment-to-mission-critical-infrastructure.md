@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "infrastructure", "financial-services", "ai-investment"]
 source: "AI Industry Developments - May 2026"
 sourceUrl: "https://foxxelabs.com/news"
+entities: ["JPMorgan Chase", "$19.8B", "2,000 staff", "2026", "$2.5B", "EU AI Act", "Novo Nordisk", "OpenAI", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

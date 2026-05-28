@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI cognition", "hypnosis research", "LLM behavior"]
 source: "Cyberpsychology, Behaviour, and Social Networking"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology, Behaviour, and Social Networking", "ChatGPT", "British Psychological Society", "University of York", "Paul Cairns", "Amy Orben", "20%", "2025"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

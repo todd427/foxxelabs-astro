@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "industrial AI", "regulatory burden"]
 source: "Siemens Chief Executive Statement"
 sourceUrl: "https://www.euractiv.com/section/artificial-intelligence"
+entities: ["Siemens", "Roland Busch", "€1B", "EU AI Act", "Data Act", "Ireland AI Office", "August 1 2026", "Digital Omnibus", "August 2 2026", "December 2 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

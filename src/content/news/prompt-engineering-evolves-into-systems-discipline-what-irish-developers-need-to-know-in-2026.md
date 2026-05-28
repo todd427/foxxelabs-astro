@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-development", "developer-skills"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxe.io"
+entities: ["Ireland", "EU", "LinkedIn", "August 2026", "41%", "434%", "135.8%", "Ireland's AI Office", "EU AI Act", "MCP"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

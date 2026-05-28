@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "US-EU divergence", "constitutional law"]
 source: "AI Regulation and Governance Research"
 sourceUrl: "https://www.artificialintelligenceact.eu"
+entities: ["US Federal AI Litigation Task Force", "EU AI Act", "Executive Order", "EU Council", "December 2, 2027", "August 2, 2028", "August 2, 2026", "Article 50", "OpenAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

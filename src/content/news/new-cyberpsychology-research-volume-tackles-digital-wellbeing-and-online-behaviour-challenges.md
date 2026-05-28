@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital wellbeing", "online behaviour", "mental health"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "2026 Volume 1", "ChatGPT", "Professor John McAlaney", "British Psychological Society", "DSTL", "US Army", "EU AI Act", "Digital Services Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

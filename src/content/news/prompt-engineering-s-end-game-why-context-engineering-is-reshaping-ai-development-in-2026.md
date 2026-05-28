@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "AI-architecture", "developer-tools"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Claude Opus 4.7", "GPT-5.5", "EU AI Act", "May 2026", "Q3 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

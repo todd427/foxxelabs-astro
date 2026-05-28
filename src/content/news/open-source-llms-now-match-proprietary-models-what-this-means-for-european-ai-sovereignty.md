@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-source", "LLM", "AI sovereignty", "Europe"]
 source: "LLM Model Release Analysis"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Mistral 3", "Llama 4", "DeepSeek", "OpenAI", "Google", "Gemini 3.1 Flash-Lite", "Zhipu AI GLM-4.7", "EU AI Act", "December 2027", "May 2026", "GDPR", "August 2026", "OVHcloud", "Scaleway"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

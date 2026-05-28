@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["context-engineering", "AI-production", "LLM-best-practices"]
 source: "Anthropic Engineering Blog"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "GPT-5.2", "Claude Opus 4.6", "Gemini 2.5 Ultra", "Claude 4.x", "RAG", "2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

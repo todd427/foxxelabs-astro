@@ -6,6 +6,9 @@ category: "Research"
 tags: ["privacy-preserving-AI", "edge-computing", "federated-learning"]
 source: "MIT"
 sourceUrl: "https://news.mit.edu"
+entities: ["MIT", "81% speedup", "federated learning", "EU AI Act", "GDPR", "Article 6", "August 2026", "PyTorch", "TensorFlow"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

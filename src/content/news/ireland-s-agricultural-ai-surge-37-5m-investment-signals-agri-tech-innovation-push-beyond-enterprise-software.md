@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["agri-tech", "Ireland", "sectoral-AI", "sustainable-innovation"]
 source: "Department of Agriculture, Food and the Marine"
 sourceUrl: "https://www.agriculture.gov.ie"
+entities: ["Ireland", "€37.5M", "Department of Agriculture", "EU AI Act", "August 2026", "Ireland's AI Office", "15 sectoral authorities", "December 2027", "Common Agricultural Policy"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

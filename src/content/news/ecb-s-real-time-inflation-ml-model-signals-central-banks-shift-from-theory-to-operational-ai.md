@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["machine learning", "monetary policy", "ECB", "fintech"]
 source: "European Central Bank"
 sourceUrl: "https://www.ecb.europa.eu"
+entities: ["European Central Bank", "ECB", "machine learning model", "inflation forecasting", "April 21, 2026", "eurozone", "EU AI Act", "Irish fintech", "national central banks"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

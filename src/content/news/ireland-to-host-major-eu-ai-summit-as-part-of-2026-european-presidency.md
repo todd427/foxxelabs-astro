@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU Presidency", "AI Summit", "Policy", "Dublin"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU", "October 14 2026", "International AI Summit", "Dublin", "Council of the European Union", "Niamh Smyth", "OpenAI", "$25 billion", "EU AI Act", "August 2026", "European Commission", "February", "AI Ireland", "74%", "Harvey", "20 jobs", "Microsoft"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["healthcare-AI", "clinical-validation", "EU-regulation"]
 source: "Science / Harvard Medical School & Beth Israel Deaconess Medical Center"
 sourceUrl: "https://science.org"
+entities: ["OpenAI reasoning model", "Harvard Medical School", "Beth Israel Deaconess Medical Center", "Science", "EU AI Act", "August 2026", "Ireland's AI Office", "Boston emergency department"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-orchestration", "enterprise-ai", "multimodal"]
 source: "Academic Research Survey"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["prompt engineering", "AI orchestration", "March 2025", "multi-agent workflows", "prompt injection", "LinkedIn", "token economics", "multimodal integration"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

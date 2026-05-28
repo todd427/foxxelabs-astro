@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "regulation", "high-risk AI"]
 source: "EU AI Act Implementation Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Parliament", "EU", "December 2027", "August 2026", "General Purpose AI (GPAI)", "March 2026", "European Commission", "European AI Office", "Article 50", "August 2 2026", "Q2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

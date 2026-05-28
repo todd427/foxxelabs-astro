@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behaviour", "mental-health", "dark-triad"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "British Psychological Society Cyberpsychology Section", "Dark Triad traits", "EU Digital Services Act", "BPS Cyberpsychology Section Annual Conference July 2026", "Volume 20 Issue 1"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

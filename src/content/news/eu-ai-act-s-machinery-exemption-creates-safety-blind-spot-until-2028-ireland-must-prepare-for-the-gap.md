@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "machinery safety", "compliance timeline", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 7 2026", "EU AI Omnibus", "August 2 2028", "Machinery Directive", "Annex I", "Annex III", "Ireland AI Office", "August 2026", "artificialintelligenceact.eu"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

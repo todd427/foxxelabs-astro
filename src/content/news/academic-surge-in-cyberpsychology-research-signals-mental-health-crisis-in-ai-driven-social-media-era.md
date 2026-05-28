@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "social-media", "adolescents"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20, Issue 1 (2026)", "ChatGPT", "EU AI Act", "August 2026", "Digital Services Act", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

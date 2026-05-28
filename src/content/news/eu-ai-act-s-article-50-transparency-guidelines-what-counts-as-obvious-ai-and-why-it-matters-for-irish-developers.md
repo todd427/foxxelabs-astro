@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "transparency", "compliance", "Article 50"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act Article 50", "European Commission", "May 8 2026", "June 3 2026", "August 2 2026", "December 2 2027", "May 7 2026 EU AI Omnibus agreement"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-jobs", "enterprise-AI", "career-shifts"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Gartner", "May 2026", "May 7, 2026", "70%", "Ireland", "EU", "2024-2025"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

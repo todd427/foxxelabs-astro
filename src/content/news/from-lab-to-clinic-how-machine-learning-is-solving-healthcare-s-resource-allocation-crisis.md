@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["healthcare", "machine-learning", "resource-optimization"]
 source: "Nature"
 sourceUrl: "https://www.nature.com"
+entities: ["HSE", "Ireland", "EU", "GDPR", "machine learning medicine allocation tool", "national-scale deployment"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

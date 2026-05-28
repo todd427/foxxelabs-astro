@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland governance", "regulatory enforcement", "sectoral regulators"]
 source: "Irish Government Announcement"
 sourceUrl: "https://www.gov.ie/en/"
+entities: ["Ireland", "EU AI Act", "August 2, 2026", "Regulation of Artificial Intelligence Bill 2026", "National AI Office", "Central Bank of Ireland", "Health Products Regulatory Authority", "Department of Enterprise, Trade and Employment", "Competition and Consumer Protection Commission", "Department of Education"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

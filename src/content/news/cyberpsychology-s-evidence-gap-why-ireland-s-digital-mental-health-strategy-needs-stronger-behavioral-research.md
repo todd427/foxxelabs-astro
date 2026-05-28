@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "online-behavior"]
 source: "Cyberpsychology Journal"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Ireland", "EU AI Act", "Cyberpsychology Journal", "Deloitte 2026 Digital Consumer Trends", "IADT MSc Cyberpsychology", "BPS Cyberpsychology Section", "ChatGPT", "August 2026", "July 2026", "82%", "43%", "16"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

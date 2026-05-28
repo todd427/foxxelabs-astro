@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "skills gap", "Ireland employment", "STEM graduates"]
 source: "Nevin Economic Research Institute Labour Market Conference"
 sourceUrl: "https://www.neri.ie"
+entities: ["Ireland", "EU", "IMF", "Goldman Sachs", "Morgan Stanley", "Department of Finance", "Nevin Economic Research Institute", "Q1 2025", "May 25", "May 26", "20,300 ICT jobs", "40% jobs affected by AI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

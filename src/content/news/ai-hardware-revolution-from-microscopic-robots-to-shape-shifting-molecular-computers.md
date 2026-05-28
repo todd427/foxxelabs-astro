@@ -6,6 +6,9 @@ category: "Research"
 tags: ["hardware", "molecular-computing", "robotics", "breakthrough"]
 source: "Multiple Research Sources"
 sourceUrl: "https://research.stanford.edu"
+entities: ["NVIDIA", "Vera Rubin platform", "CES 2026", "molecular AI hardware", "microscopic robots", "shape-shifting molecular devices", "4x energy efficiency"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

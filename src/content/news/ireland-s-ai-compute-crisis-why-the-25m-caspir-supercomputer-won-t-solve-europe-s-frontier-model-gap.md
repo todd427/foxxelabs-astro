@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Infrastructure", "Compute Bottleneck", "EuroHPC", "Ireland"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxelabs.com"
+entities: ["CASPIr", "€25M", "Ireland", "EuroHPC", "Anthropic", "Google", "Gemini 4.0", "SpaceX Colossus", "220,000 GPU", "$30B", "James Lawless", "EU AI Omnibus", "7 May 2026", "ICHEC"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

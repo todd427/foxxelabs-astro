@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance timeline", "high-risk systems", "regulatory fragmentation"]
 source: "EU AI Act Omnibus Agreement (May 7, 2026)"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU AI Omnibus Agreement", "December 2027", "August 2028", "August 2027", "May 7 2026", "Ireland", "EU Commission", "AI Office", "August 2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

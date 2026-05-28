@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["cyberpsychology", "mental-health", "ireland-policy", "ai-harms"]
 source: "Irish Government Health Strategy"
 sourceUrl: "https://www.irishtimes.com/technology"
+entities: ["Ireland", "€7M", "cyberpsychology research", "EU AI Act", "Erasmus+ Cyberpsychology Programme", "May 2026", "Cyberpsychology, Behavior, and Social Networking", "August 2026", "15-authority AI enforcement model", "National Economic and Social Council", "Dr Nicola Fox Hamilton", "IADT"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

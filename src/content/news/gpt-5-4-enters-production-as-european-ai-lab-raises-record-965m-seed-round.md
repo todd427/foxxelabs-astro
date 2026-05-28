@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["GPT-5", "funding", "autonomous-ai", "europe"]
 source: "Multiple Tech Sources"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["OpenAI", "GPT-5.4", "March 5, 2026", "Yann LeCun", "AMI Labs", "€965M", "€3.3B", "Paris", "EU AI Act", "Google", "Microsoft", "Meta", "Amazon", "MIT"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI sovereignty", "EU regulation", "military AI", "autonomous systems"]
 source: "Industry reporting on Pentagon contracts and Anthropic policy"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Anthropic", "Claude", "Pentagon", "May 1 2026", "Pete Hegseth", "March 2026", "EU AI Act", "August 2026", "December 2027", "Google DeepMind", "Microsoft", "xAI", "Ireland", "€200B", "€1.5B", "Goldman Sachs", "Cyprus Trilogue"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

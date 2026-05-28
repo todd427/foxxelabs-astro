@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["pharmaceutical-ai", "enterprise-deployment", "openai-partnerships"]
 source: "Machine Learning Applications Report"
 sourceUrl: "https://foxxelabs.com/ml-developments"
+entities: ["Novo Nordisk", "OpenAI", "Eli Lilly", "EU AI Act", "Irish AI Office", "end of 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["talent-shift", "frontier-models", "anthropic", "ai-competition"]
 source: "Anthropic News"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Andrej Karpathy", "OpenAI", "Anthropic", "Claude", "May 19 2026", "Gates Foundation", "$200 million", "GPT", "Google DeepMind", "xAI"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

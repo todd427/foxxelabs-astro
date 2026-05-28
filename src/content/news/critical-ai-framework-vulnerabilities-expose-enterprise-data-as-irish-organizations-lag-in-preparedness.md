@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Zero-Day", "Enterprise Risk", "EU Compliance"]
 source: "The Hacker News"
 sourceUrl: "https://thehackernews.com"
+entities: ["Chrome", "CVE-2026-5281", "CISA", "WebGPU", "Google Cloud Vertex AI", "Palo Alto Networks Unit 42", "LangChain", "CVE-2026-34070", "CVE-2025-68664", "Vladimir Tokarev", "Anthropic Claude Opus 4.6", "Firefox", "PwC 2026 Global Digital Trust Insights", "EU AI Act", "August 2026", "7% global turnover"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI security", "agent governance", "vulnerability disclosure"]
 source: "AI Security Research"
 sourceUrl: "https://foxxe.io"
+entities: ["Claude", "OpenClaw", "CVE-2026-26144", "Claude Mythos Preview", "Firefox 150", "360 Digital Security Group", "CrowdStrike", "Project QuiltWorks", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

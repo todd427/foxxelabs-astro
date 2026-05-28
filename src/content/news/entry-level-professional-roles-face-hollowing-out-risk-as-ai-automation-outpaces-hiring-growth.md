@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "entry-level jobs", "workforce development"]
 source: "Anthropic"
 sourceUrl: "https://www.anthropic.com"
+entities: ["Anthropic", "March 2026", "World Economic Forum Future of Jobs Report 2025", "EU AI Act", "Ireland", "78 million jobs", "170 million created", "92 million displaced", "40%", "60%", "27%", "33%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

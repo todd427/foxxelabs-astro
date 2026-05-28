@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["funding", "enterprise-ai", "microsoft", "openai"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://www.theverge.com/ai-artificial-intelligence"
+entities: ["OpenAI", "$122B", "$852B", "Microsoft", "MAI-Transcribe-1", "MAI-Voice-1", "MAI-Image-2", "Mustafa Suleyman", "EU AI Act", "$2B monthly revenue"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

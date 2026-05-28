@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Labour Market", "Ireland Employment", "Skills Gap", "Youth Workforce"]
 source: "Challenger, Gray & Christmas / Indeed Job Postings Analysis"
 sourceUrl: "https://www.challengergray.com/"
+entities: ["Ireland", "Indeed", "Taoiseach", "ChatGPT", "11%", "20%", "13%", "2023-2025", "November 2025", "April 2026", "Challenger Gray & Christmas"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

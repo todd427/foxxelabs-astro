@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["ireland", "funding", "adoption", "europe"]
 source: "Trinity Business School & AI Ireland Research"
 sourceUrl: "https://www.tcd.ie/business/"
+entities: ["Trinity Business School", "AI Ireland", "Nscale", "€2 billion", "91%", "49%", "74%", "€250 billion", "October 14, 2026", "Dublin", "OpenAI", "SME Booster", "Department for Enterprise, Tourism and Employment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

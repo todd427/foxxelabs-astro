@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "HRAIS compliance", "Ireland regulation"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU AI Omnibus", "May 7 2026", "Annex III HRAIS", "August 2 2026", "December 2 2027", "Article 50", "Ireland AI Office", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

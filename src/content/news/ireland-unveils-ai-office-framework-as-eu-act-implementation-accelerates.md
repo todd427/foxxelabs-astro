@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "regulatory framework", "compliance"]
 source: "Silicon Republic"
 sourceUrl: "https://siliconrepublic.com"
+entities: ["EU AI Act", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Oifig Intleachta Shaorga na hÉireann", "15 National Competent Authorities", "August 1, 2026", "Single Point of Contact", "Scale Ireland", "35.4%", "36%", "7%", "Anthropic", "200 Dublin jobs", "2026 EU Presidency", "International AI and Digital Summit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

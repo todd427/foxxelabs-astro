@@ -6,6 +6,9 @@ category: "Research"
 tags: ["mathematical-reasoning", "ai-agents", "research-infrastructure"]
 source: "Google DeepMind Research"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "AI Co-Mathematician", "FrontierMath", "Tier 4", "48%", "23 out of 48", "Max Planck institutes", "Trinity College Dublin", "University College Dublin", "Waterford Institute", "Lean 4", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

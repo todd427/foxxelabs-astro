@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "deepfake regulation", "content moderation", "compliance deadline"]
 source: "European Council & Parliament Negotiations (May 7, 2026)"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 2026 omnibus agreement", "December 2, 2026", "3-month grace period", "6-month grace period", "August 2026", "16-month extension", "EU AI Office", "Data Protection Commission", "Ireland", "non-consensual sexual and intimate content ban", "August 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

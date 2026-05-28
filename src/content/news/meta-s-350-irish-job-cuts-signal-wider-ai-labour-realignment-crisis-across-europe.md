@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["employment", "ireland-tech", "ai-automation", "labour-market"]
 source: "Central Statistics Office Ireland / Meta announcements"
 sourceUrl: "https://www.cso.ie"
+entities: ["Meta", "350 Irish job cuts", "10% global workforce reduction", "Ireland Central Statistics Office (CSO)", "20,300 IT positions lost", "10.7% employment decline", "Q1 2026", "16,200 programming roles", "EU Presidency H2 2026", "EU AI Act", "May 2026 Omnibus Deal", "December 2026 transparency deadlines", "August 2026 employment compliance deadline", "AI Research Centre of Scale", "Quantum Centre of Excellence"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

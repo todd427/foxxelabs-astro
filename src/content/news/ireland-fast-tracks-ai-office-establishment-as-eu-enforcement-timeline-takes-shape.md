@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "enforcement", "compliance"]
 source: "AI Act Implementation Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Oifig Intleachta Shaorga na hÉireann", "Department of Enterprise, Tourism and Employment", "EU Council", "December 2027", "August 2028", "August 2026", "91%", "$250 billion by 2035", "2026 EU Council Presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

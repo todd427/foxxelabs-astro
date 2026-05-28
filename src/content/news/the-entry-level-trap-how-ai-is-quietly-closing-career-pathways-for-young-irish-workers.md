@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour-market", "entry-level-jobs", "career-pathways", "skills-gap"]
 source: "AI Labour Market Impact Research (March 2026)"
 sourceUrl: "https://ainowinstitute.org"
+entities: ["Ireland", "EU", "Dublin", "March 2026", "generative AI", "22-25 age group", "60% job exposure", "3.6% employment gap", "AI Now Institute"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

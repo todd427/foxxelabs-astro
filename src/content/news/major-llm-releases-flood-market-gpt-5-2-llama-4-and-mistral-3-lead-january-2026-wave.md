@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["model-releases", "gpt-5", "llama-4", "mistral"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://openai.com/releases/gpt-5-2"
+entities: ["OpenAI", "GPT-5.2", "Meta", "Llama 4", "Mistral Large 3", "Google", "Gemini 3 Flash", "FunctionGemma", "400K token context window", "10 million token context window", "675B parameters", "AIME 2025", "January 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

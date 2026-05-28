@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["gemini", "claude", "coding-capabilities", "competitive-dynamics"]
 source: "Internal Google DeepMind reporting"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "Anthropic", "Claude Opus 4.7", "Gemini", "Sergey Brin", "SWE-bench Verified", "GPQA", "87.6%", "94.2%", "April 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

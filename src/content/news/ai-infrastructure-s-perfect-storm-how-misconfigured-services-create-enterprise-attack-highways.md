@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI infrastructure", "access control", "enterprise security"]
 source: "Security Research"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["ClawdBot", "Claude", "GPT", "EU AI Act", "August 2026", "1 million exposed AI services", "2 million hosts", "2.6 CVEs per day"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

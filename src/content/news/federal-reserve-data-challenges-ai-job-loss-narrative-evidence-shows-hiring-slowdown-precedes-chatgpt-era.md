@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labor market", "employment", "federal reserve analysis"]
 source: "Federal Reserve Bank of New York"
 sourceUrl: "https://www.newyorkfed.org"
+entities: ["Federal Reserve Bank of New York", "ChatGPT", "May 14 2026", "European Training Foundation", "EU AI Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

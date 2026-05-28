@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Implementation", "Compliance", "Ireland & EU"]
 source: "European Commission AI Act Implementation Reports"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2026", "12 member states", "19 member states", "France", "Germany", "Ireland", "Digital Omnibus", "December 2027", "2 August 2028", "2 December 2027", "Cypriot Presidency", "26 March 2026", "2 August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

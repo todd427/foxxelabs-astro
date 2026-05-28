@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["ai-skills", "irish-workforce", "labour-market", "reskilling"]
 source: "Irish Government Cabinet Strategy & Labour Market Analysis"
 sourceUrl: "https://www.irishtimes.com/technology"
+entities: ["Ireland", "63% job exposure", "Cabinet adaptation strategy", "Israel", "EU AI Act", "Harvard Kennedy School", "August 2026 AI Office", "December 2027", "15 authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

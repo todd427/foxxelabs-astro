@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Infrastructure", "Model Efficiency", "European AI", "KV Cache"]
 source: "Google Research / ICLR 2026"
 sourceUrl: "https://iclr.cc/"
+entities: ["Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quantized Johnson-Lindenstrauss", "Gemma 4", "Apache 2.0", "vLLM", "LiteLLM", "Ireland", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

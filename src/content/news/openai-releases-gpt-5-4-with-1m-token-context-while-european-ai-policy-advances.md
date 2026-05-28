@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["GPT-5", "OpenAI", "EU AI Act", "Context Windows"]
 source: "OpenAI News"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "1,000,000 tokens", "March 5, 2026", "Codex Security", "European Commission", "EU AI Act", "Code of Practice on AI-generated content marking", "€75 million", "EURO-3C Project", "Anthropic", "Snowflake-OpenAI", "$200 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

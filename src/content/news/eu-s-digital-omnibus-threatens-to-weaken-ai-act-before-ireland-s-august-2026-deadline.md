@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "regulatory risk"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "GDPR", "Digital Omnibus", "Ireland", "August 2, 2026", "December 2027", "European Commission", "General Scheme for the Regulation of Artificial Intelligence Bill", "prEN 18229-1", "ISO/IEC DIS 24970", "15 million euros", "3% worldwide annual turnover", "7% worldwide turnover"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

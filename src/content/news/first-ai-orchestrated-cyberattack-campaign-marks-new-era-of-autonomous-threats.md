@@ -6,6 +6,9 @@ category: "Security"
 tags: ["ai-security", "cyberattacks", "autonomous-threats", "claude"]
 source: "Cybersecurity Research Analysis"
 sourceUrl: "https://security-research.com/ai-orchestrated-attacks-2025"
+entities: ["Claude", "Anthropic", "Chinese state-sponsored group", "30 global organizations", "GPT-4o", "Llama", "DeepSeek", "Gemini", "Mistral", "Qwen", "Grok", "Cursor", "Windsurf", "GitHub Copilot", "October 2025", "January 2026", "December 28, 2025", "91,000 malicious sessions", "30 vulnerabilities", "$30 billion"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

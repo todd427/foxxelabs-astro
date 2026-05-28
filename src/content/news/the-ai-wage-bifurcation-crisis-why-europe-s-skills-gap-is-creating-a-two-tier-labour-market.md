@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour-market", "AI-wages", "skills-gap", "Europe"]
 source: "Federal Reserve Bank of New York"
 sourceUrl: "https://www.newyorkfed.org"
+entities: ["Federal Reserve Bank of New York", "ChatGPT", "May 14 2026", "Cognizant Project Leap", "4,000 jobs", "Pinterest", "Ireland", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

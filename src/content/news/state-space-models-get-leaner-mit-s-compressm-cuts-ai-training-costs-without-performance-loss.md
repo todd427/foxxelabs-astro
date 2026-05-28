@@ -6,6 +6,9 @@ category: "Research"
 tags: ["efficiency", "training", "state-space-models", "compute"]
 source: "MIT"
 sourceUrl: "https://news.mit.edu"
+entities: ["MIT", "CompreSSM", "state-space models"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

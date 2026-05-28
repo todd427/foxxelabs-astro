@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "ECB research", "workforce transformation"]
 source: "European Central Bank"
 sourceUrl: "https://www.ecb.europa.eu"
+entities: ["European Central Bank", "ECB", "EU AI Act", "August 2026", "5,000 euro-area firms", "IBM", "Ireland", "15 million workers", "11 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

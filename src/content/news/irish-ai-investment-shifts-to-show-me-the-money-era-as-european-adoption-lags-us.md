@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["investment", "adoption", "europe", "roi"]
 source: "Industry Research"
 sourceUrl: "https://example.com/ai-investment-ireland"
+entities: ["Flock.ie", "Jiahao Sun", "EU AI Act", "Ireland", "United States", "70%", "9%", "52%", "6%", "2026", "2030", "Forrester"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

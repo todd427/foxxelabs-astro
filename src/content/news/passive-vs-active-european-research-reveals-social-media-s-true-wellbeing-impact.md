@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "social-media-wellbeing", "mental-health", "european-research"]
 source: "European Commission Joint Research Centre"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["European Commission Joint Research Centre", "World Happiness Report 2026", "University of Oxford", "Ireland", "European Journal of Social Psychology", "Cyberpsychology Journal Volume 20", "EU digital regulations", "TikTok", "Snapchat", "Discord"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

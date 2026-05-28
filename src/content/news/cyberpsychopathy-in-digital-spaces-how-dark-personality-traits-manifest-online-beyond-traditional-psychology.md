@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behavior", "digital-ethics"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Masaryk University", "EU AI Act", "BPS Cyberpsychology Conference", "University of York", "July 6-7"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

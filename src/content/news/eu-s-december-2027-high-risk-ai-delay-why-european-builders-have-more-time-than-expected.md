@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "High-Risk AI", "Compliance Timeline"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "August 2, 2026", "December 2027", "Ireland", "AIReady.ie", "Executive Order 14179", "Texas"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

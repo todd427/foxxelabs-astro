@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "market-analysis", "enterprise-ai", "productivity"]
 source: "Industry Analysis"
 sourceUrl: "https://example.com/prompt-engineering-market-2026"
+entities: ["€505.43M prompt engineering market 2025", "€6.7B projected 2034", "11.4× speedup", "3.55 hours to 18.7 minutes", "chain-of-thought prompting", "38.5% to 12.3% iteration reduction", "Apple M5 chips", "M4 models", "4× faster LLM processing", "EASE 2026 conference", "two million tokens", "€300k 2023 salaries", "€140k-€210k 2026 salaries", "Permuta Technologies"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Omnibus", "Compliance Timeline", "Sectoral Regulation"]
 source: "EU Legislative Process"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "EU AI Act", "August 2, 2027", "December 2, 2026", "May 7, 2026", "June 30, 2026", "Ireland EU presidency", "AI Office", "medical devices", "law enforcement"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

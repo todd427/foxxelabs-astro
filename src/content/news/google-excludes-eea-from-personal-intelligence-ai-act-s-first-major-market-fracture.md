@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "market fragmentation", "regulatory impact", "AI access"]
 source: "EU AI Act Implementation Tracker"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Google", "Personal Intelligence", "EU AI Act", "European Economic Area", "April 14 2026", "August 2026", "Switzerland", "United Kingdom"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerabilities", "enterprise-security", "ai-agents", "code-security"]
 source: "The Hacker News"
 sourceUrl: "https://thehackernews.com"
+entities: ["Anthropic", "Claude Code", "CVE-2026-21852", "OpenAI", "Codex Security", "CVE-2025-32711", "EchoLeak", "Microsoft 365 Copilot", "EU AI Act", "August 2026", "7% global turnover"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

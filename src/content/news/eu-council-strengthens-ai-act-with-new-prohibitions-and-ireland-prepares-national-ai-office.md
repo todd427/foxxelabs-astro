@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "AI Governance", "EU Presidency"]
 source: "EU Council"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "AI Act", "Omnibus VII", "Ireland", "Oifig Intleachta Shaorga na hÉireann", "Department of Enterprise, Tourism and Employment", "December 2, 2027", "August 2, 2028", "August 2, 2026", "EU Presidency 2026", "$250 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

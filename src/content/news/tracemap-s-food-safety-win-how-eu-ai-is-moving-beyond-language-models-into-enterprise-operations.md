@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["EU AI", "Food Safety", "Enterprise AI", "AI Applications"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/"
+entities: ["TraceMap", "European Commission", "EU", "27 EU member states", "AI Act", "Yann LeCun", "AMI Labs", "Ireland", "€14.5B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

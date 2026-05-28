@@ -6,6 +6,9 @@ category: "Security"
 tags: ["cybersecurity", "model-releases", "AI-safety"]
 source: "OpenAI News"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4-Cyber", "GPT-6", "Anthropic", "Claude Mythos Preview", "Google", "Gemini 4", "Meta", "Llama", "EU AI Act", "April 15 2026", "April 2026", "Apache 2.0"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

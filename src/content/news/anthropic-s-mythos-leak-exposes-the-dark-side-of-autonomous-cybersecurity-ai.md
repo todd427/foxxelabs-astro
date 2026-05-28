@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Anthropic", "Vulnerability Management", "Risk Assessment"]
 source: "The Verge"
 sourceUrl: "https://www.theverge.com/ai-artificial-intelligence"
+entities: ["Anthropic", "Claude Mythos", "EU AI Act", "August 2026", "FreeBSD", "GDPR", "Google", "$10 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

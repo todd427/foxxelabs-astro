@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "regulatory timeline", "compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "April 28 2026", "August 2 2026", "Annex III", "Ireland", "EU Parliament", "Council", "ANSSI", "AESIA", "December 2027", "Market Surveillance Authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

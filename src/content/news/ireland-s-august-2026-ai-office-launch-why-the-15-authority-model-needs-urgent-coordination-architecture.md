@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "Ireland", "EU AI Act", "regulatory coordination"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "Regulation of Artificial Intelligence Bill 2026", "August 2, 2026", "Department of Enterprise, Tourism and Employment", "Central Bank", "Data Protection Commission", "Competition and Consumer Protection Commission", "EU AI Board", "Omnibus Reform", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

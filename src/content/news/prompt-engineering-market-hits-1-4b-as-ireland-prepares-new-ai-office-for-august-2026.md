@@ -5,6 +5,9 @@ publishDate: 2026-03-26
 category: "Policy"
 tags: ["prompt engineering", "AI regulation", "Ireland", "EU AI Act"]
 source: "Industry Research"
+entities: ["Ireland", "EU AI Act", "€1.4B", "€1.13B", "€1.52B", "August 2026", "Prochemy", "GPT-4o", "ChatGPT", "Google Gemini", "Article 57", "135.8%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

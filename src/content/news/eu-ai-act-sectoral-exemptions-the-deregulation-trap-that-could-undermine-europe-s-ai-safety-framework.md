@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "sectoral exemptions", "compliance", "AI governance"]
 source: "EU AI Act Trilogue Developments"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Medical Devices Directive", "Machinery Directive", "Michael McNamara", "Ireland", "August 2 2026", "June 30 2026", "April 28 2026", "€250 million", "60%", "50 cases", "mid-May"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

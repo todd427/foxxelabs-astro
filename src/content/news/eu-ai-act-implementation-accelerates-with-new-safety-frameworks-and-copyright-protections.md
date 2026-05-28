@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Safety", "Copyright", "Regulation"]
 source: "European Parliament"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "European Parliament", "Council of the EU", "December 2, 2027", "August 2, 2026", "Second Draft Code of Practice on AI-generated content marking and labeling", "2026 International AI Safety Report", "Intent Laundering", "AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

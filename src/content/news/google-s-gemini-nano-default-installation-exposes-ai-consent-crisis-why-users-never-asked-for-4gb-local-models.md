@@ -6,6 +6,9 @@ category: "Security"
 tags: ["privacy", "chrome", "consent", "gemini"]
 source: "Ars Technica"
 sourceUrl: "https://arstechnica.com/ai"
+entities: ["Google", "Gemini Nano", "Chrome", "EU AI Act", "GDPR", "August 2026", "4GB", "Ars Technica"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

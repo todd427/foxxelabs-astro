@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI Safety", "Government Relations", "Claude", "Industry Standards"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Pentagon", "Claude", "March 9 2026", "OpenAI", "Google DeepMind", "Microsoft", "EU AI Act", "August 2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

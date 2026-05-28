@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Infrastructure", "EU Funding", "CeADAR", "Innovation Hubs"]
 source: "European Digital Innovation Hub Programme"
 sourceUrl: "https://ceadar.ie"
+entities: ["CeADAR", "€5.675M", "European Digital Innovation Hub Programme", "EU AI Act", "August 2, 2026", "OpenAI", "$25B", "Anthropic", "$19B", "Google TurboQuant", "GPT-5.4", "Gartner", "Oracle", "Block", "Claude Code", "Eli Lilly"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

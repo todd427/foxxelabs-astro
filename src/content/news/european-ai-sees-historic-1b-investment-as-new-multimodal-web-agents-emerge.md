@@ -6,6 +6,9 @@ category: "Research"
 tags: ["multimodal-ai", "european-funding", "web-agents", "research"]
 source: "Multiple AI Research Sources"
 sourceUrl: "https://research.google/blog/"
+entities: ["AMI Labs", "Yann LeCun", "€1.03B", "€3.5B", "Nvidia", "Bezos Expeditions", "Temasek", "Fotor", "ICLR 2026", "Web-CogDataset", "1.4 GW AI campus France", "Nebius", "Finland", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

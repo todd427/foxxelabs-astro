@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU AI Act", "Irish AI Policy", "AI Governance", "AI Summit"]
 source: "European Parliament"
 sourceUrl: "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/parliament-approves-eu-conclusion-of-council-of-europe-ai-convention"
+entities: ["Ireland", "EU Council Presidency 2026", "International AI Summit", "October 14", "Dublin", "European Parliament", "March 11", "Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law", "National AI Office", "August 2 2026", "OpenAI", "GPT-5.4", "€75 million", "EURO-3C"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

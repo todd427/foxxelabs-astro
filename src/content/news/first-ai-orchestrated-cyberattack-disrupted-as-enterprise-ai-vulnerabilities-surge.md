@@ -6,6 +6,9 @@ category: "Security"
 tags: ["ai-security", "prompt-injection", "enterprise-ai", "vulnerability-disclosure"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "Claude", "Claude Code", "Chinese state-sponsored actors", "Microsoft 365 Copilot", "EchoLeak", "CVE-2025-32711", "ServiceNow", "IDEsaster", "World Economic Forum"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

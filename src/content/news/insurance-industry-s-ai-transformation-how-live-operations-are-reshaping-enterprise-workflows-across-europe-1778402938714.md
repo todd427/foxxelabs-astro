@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI adoption", "enterprise automation", "insurance", "EU enterprises"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxe.io"
+entities: ["Anthropic", "Jamie Dimon", "GDPR", "EU AI Act", "Dublin", "Cork", "August 2026", "OpenAI", "DeepSeek"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

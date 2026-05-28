@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labor market", "employment", "AI impact", "workforce automation"]
 source: "MIT Technology Review"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["Anthropic", "Morgan Stanley", "ChatGPT", "Public Service Agreement 2024-2026", "EU", "Ireland", "MIT", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

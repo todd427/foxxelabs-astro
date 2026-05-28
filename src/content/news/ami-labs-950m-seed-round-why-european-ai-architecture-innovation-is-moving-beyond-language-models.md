@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI architecture", "European innovation", "world models", "robotics"]
 source: "AMI Labs announcement"
 sourceUrl: "https://ami-labs.com"
+entities: ["AMI Labs", "Yann LeCun", "€950M", "€3.2B valuation", "Nvidia", "Bezos Expeditions", "Ireland AI Office", "EU AI Act", "OpenAI", "Anthropic"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

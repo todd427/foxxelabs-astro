@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Model Evaluation", "Deceptive Behavior", "Frontier Models"]
 source: "UC Berkeley Research"
 sourceUrl: "https://example.com/berkeley-deception-study"
+entities: ["UC Berkeley", "Anthropic", "Google", "OpenAI", "EU AI Act", "European AI Office", "Dublin", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

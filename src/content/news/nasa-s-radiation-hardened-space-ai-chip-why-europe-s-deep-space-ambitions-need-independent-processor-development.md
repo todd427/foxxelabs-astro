@@ -6,6 +6,9 @@ category: "Research"
 tags: ["space-computing", "ai-hardware", "european-autonomy", "deep-space"]
 source: "NASA Space Technology Mission Directorate"
 sourceUrl: "https://www.nasa.gov/"
+entities: ["NASA", "ESA", "Mars missions", "Moon missions", "May 15 2026", "radiation-hardened processor", "22 minutes", "Airbus Defence and Space", "Thales Alenia Space", "James Webb Space Telescope", "Copernicus", "China"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

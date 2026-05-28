@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Sandbox", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "August 2, 2026", "Annex III", "Department of Enterprise, Tourism and Employment", "15 national competent authorities", "€15 million", "3% of global annual turnover", "EU Presidency 2026", "International AI Summit October 14", "RDS Dublin"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Ireland", "EU AI Act", "AI Governance", "European Innovation"]
 source: "Irish Government - Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU Presidency 2026", "International AI Summit", "European AI Innovation Month", "European Commission", "EU AI Act", "August 2 2026", "AI Office of Ireland", "Annex III", "Department of Enterprise Tourism and Employment", "7% turnover penalties", "April 13 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

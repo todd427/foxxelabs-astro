@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behaviour", "moral-psychology"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Dark Triad", "British Psychological Society Cyberpsychology Section", "EU", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

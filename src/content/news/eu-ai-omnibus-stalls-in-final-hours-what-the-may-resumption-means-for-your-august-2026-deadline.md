@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance deadline", "regulatory uncertainty", "AI governance"]
 source: "EU AI Policy Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "EU AI Act", "August 2, 2026", "December 2, 2027", "August 2, 2028", "Article 50", "European Parliament", "EU member states", "UK", "£500 million", "May trilogue"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

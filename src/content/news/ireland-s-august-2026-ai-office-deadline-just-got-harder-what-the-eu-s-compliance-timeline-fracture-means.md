@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Ireland compliance", "EU regulation", "high-risk systems"]
 source: "EU Council Presidency & European Parliament Negotiators"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland's AI Office", "August 1 2026", "December 2 2027", "August 2 2028", "Regulation of Artificial Intelligence Bill 2026", "European AI Office", "May 7 2026", "December 2 2026", "August 2 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

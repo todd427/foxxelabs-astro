@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "Ireland tech jobs", "junior developers", "employment displacement"]
 source: "Stanford AI Index Report / Irish Government AI Labour Market Assessment"
 sourceUrl: "https://aiindex.stanford.edu"
+entities: ["Stanford AI Index Report", "April 13 2026", "Ireland", "20% junior developer employment decline", "Claude", "GPT-4", "ESRI", "7% job displacement", "April 21 2026", "Irish government"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

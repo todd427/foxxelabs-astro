@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "Ireland", "Employment"]
 source: "AI Industry Developments"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "August 2026", "Ireland", "EU Commission", "Digital Omnibus", "December 2027", "California SB 53"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

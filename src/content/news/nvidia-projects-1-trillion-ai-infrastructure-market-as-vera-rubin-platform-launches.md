@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["hardware", "infrastructure", "enterprise-ai", "nvidia"]
 source: "NVIDIA GTC 2026"
 sourceUrl: "https://nvidia.com/gtc"
+entities: ["NVIDIA", "Vera Rubin", "Blackwell", "Jensen Huang", "GTC 2026", "$1 trillion", "3.6 exaflops", "NVLink 6", "Hopper H200", "NVIDIA Groq 3 LPU", "$20 billion", "December 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

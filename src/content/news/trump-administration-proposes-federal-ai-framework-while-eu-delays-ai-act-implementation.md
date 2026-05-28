@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Trump Administration", "EU regulation", "federal preemption"]
 source: "White House AI Framework"
 sourceUrl: "https://whitehouse.gov"
+entities: ["Trump Administration", "EU Council", "AI Act", "March 20, 2026", "December 2027", "August 2028", "Omnibus VII", "Irish Times", "Regulation of Artificial Intelligence Bill 2026", "16 months"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

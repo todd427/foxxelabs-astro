@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["jobs", "dublin", "ai-studio", "eu-presidency"]
 source: "Silicon Republic"
 sourceUrl: "https://siliconrepublic.com"
+entities: ["Version 1", "Dublin", "Ireland", "250 jobs", "EU Presidency 2026", "International AI Summit", "October 14 2026", "EU AI Act", "Enterprise Ireland", "Kevin Sherry", "Northern Ireland 400 jobs", "December 2027", "August 2028"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

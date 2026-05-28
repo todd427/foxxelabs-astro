@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["Claude", "Anthropic", "AI Safety", "Cybersecurity"]
 source: "Fortune"
 sourceUrl: "https://fortune.com"
+entities: ["Anthropic", "Claude Mythos", "Fortune", "OpenAI", "GPT-5.3-Codex", "Claude Opus 4.6", "Preparedness Framework", "February"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

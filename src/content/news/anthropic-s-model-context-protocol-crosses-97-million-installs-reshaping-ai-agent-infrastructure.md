@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["MCP", "AI infrastructure", "agent development", "open governance"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Anthropic", "Model Context Protocol", "MCP", "97 million installs", "Linux Foundation", "EU AI Act", "GDPR", "OpenAI", "Google", "Meta", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

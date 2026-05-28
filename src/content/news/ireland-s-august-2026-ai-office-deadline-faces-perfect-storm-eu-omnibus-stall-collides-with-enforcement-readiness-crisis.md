@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Ireland", "EU Regulation", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "EU AI Omnibus", "EU AI Office", "1 August 2026", "2 August 2026", "28 April 2026", "Department of Enterprise, Tourism and Employment", "European Parliament", "European Council", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

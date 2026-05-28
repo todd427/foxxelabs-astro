@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "LLM-optimization", "Google-Research"]
 source: "Google Research"
 sourceUrl: "https://research.google/"
+entities: ["Google Research", "OpenAI", "Anthropic", "Google", "DeepSeek", "Gemini Flash-Lite", "GPT-4o-mini", "NameIndex", "OpenBookQA", "EU AI Act", "EuroLLM-22B", "December 2025"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "online-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Ireland", "EU AI Act", "National Digital Mental Health Programme", "€7M", "August 2026", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "2026 journal issues", "15-authority enforcement model"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

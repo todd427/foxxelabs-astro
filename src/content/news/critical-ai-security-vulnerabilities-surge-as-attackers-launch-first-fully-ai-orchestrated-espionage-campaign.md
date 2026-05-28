@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerabilities", "Cyber Attacks", "Enterprise Security"]
 source: "Multiple Security Research Sources"
 sourceUrl: "https://thehackernews.com"
+entities: ["OpenClaw", "CVSS 9.9", "LangChain", "CVE-2026-34070", "CVE-2025-68664", "Palo Alto Networks Unit 42", "Google Cloud Vertex AI", "Claude", "Microsoft", "Cyber Cert Labs", "EU Cyber Resilience Act", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

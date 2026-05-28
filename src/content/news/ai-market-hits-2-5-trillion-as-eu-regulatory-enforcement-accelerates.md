@@ -5,6 +5,9 @@ publishDate: 2026-03-30
 category: "Industry"
 tags: ["market-growth", "regulation", "ai-act", "enterprise"]
 source: "Industry Analysis"
+entities: ["Gartner", "$2.52 trillion", "2026", "GPT-5.4", "Gemini 3.1 Ultra", "Grok 4.20", "$1.37 trillion", "Model Context Protocol", "97 million installs", "Meta", "Microsoft", "Alphabet", "$600 billion", "EU AI Act", "UK Communications and Digital Committee", "OpenAI", "Sora", "March 24th", "GTC 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

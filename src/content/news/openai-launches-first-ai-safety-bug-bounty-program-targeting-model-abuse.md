@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Bug Bounty", "Security", "OpenAI"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Bugcrowd", "Model Context Protocol", "GPT-5", "METR", "Geoffrey Hinton", "Yoshua Bengio", "EU AI Act", "August 2026", "€15 million", "97 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

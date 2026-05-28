@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "adversarial attacks", "alignment fragility"]
 source: "AI Safety Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Intent Laundering", "Claude Sonnet 3.7", "Gemini 3 Pro", "Anthropic", "Google", "EU AI Act", "August 2, 2026", "Ireland's AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

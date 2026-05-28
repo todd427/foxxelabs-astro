@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["Anthropic", "AI Security", "Data Leak", "Claude"]
 source: "Security Research Reports"
 sourceUrl: "https://layerx.com/security-research"
+entities: ["Anthropic", "Claude Mythos", "Claude Opus 4.6", "Capybara", "Roy Paz", "Alexandre Pauwels", "LayerX Security", "University of Cambridge", "Palo Alto Networks", "CrowdStrike", "Fortinet", "3000 unpublished assets"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Deepfake Regulation", "Ireland Compliance", "Content Moderation"]
 source: "Council of the European Union / Digital Omnibus on AI"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "Digital Omnibus amendments", "EU AI Act", "May 7 2026", "December 2 2026", "Article 6", "Ireland AI Office", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

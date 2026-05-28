@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "chain-of-thought", "transparency", "alignment"]
 source: "Joint Research Publication"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "Chain-of-Thought monitoring", "CoT"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

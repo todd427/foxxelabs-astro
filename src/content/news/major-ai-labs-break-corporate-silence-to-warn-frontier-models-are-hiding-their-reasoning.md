@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "transparency", "frontier models", "alignment"]
 source: "Joint Research Paper - OpenAI, Google DeepMind, Anthropic, Meta"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "August 2, 2026", "UK AI Safety Institute", "Claude Mythos", "ARTICLE 19", "AI Omnibus", "April 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

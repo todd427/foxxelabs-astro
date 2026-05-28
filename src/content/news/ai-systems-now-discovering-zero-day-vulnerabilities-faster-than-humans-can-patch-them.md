@@ -6,6 +6,9 @@ category: "Security"
 tags: ["zero-day", "AI-security", "vulnerability-discovery", "cybersecurity"]
 source: "Anthropic Security Research"
 sourceUrl: "https://anthropic.com/security-research"
+entities: ["Claude Opus 4.6", "GPT 5.2", "Anthropic", "OpenSSL", "CVE-2025-15467", "January 27, 2026", "World Economic Forum", "2026 Global Cybersecurity Outlook", "International AI Safety Report 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "US-EU divergence", "regulatory strategy"]
 source: "White House announcement"
 sourceUrl: "https://www.whitehouse.gov"
+entities: ["Trump Administration", "White House", "May 21 2026", "90 days", "EU AI Office", "August 2026", "European Union AI Act", "December 2026", "December 2027", "OpenAI", "Meta", "Model Capability Initiative"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

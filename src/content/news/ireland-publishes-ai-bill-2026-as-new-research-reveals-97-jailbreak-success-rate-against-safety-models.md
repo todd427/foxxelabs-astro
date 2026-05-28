@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Safety", "EU AI Act", "Alignment", "Regulation"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "AI Bill 2026", "EU AI Act", "AI Office of Ireland", "1 August 2026", "97.14% jailbreak success rate", "Nature Communications", "Large Reasoning Models", "Anthropic", "alignment faking", "RASA", "Mixture-of-Experts", "Oireachtas", "METR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

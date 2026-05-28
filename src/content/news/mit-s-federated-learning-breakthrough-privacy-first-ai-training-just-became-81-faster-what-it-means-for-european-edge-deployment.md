@@ -6,6 +6,9 @@ category: "Research"
 tags: ["federated-learning", "privacy-preserving-ai", "edge-computing", "enterprise-infrastructure"]
 source: "MIT Computer Science and Artificial Intelligence Laboratory"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["MIT", "FTTE", "EU AI Act", "Articles 13-15", "GDPR", "August 2026", "October 2026", "Ireland", "International AI Summit", "PyTorch", "TensorFlow", "81%", "80%", "69%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

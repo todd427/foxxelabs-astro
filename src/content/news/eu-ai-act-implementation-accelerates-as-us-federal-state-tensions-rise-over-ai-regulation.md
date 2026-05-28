@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "regulation", "governance", "compliance"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Data Protection Supervisor", "EDPS", "August 2026", "Trump administration", "AI Litigation Task Force", "$42 billion", "Colorado", "June 2026", "Code of Practice on AI-generated content", "Scott Bessent", "US Treasury AI Innovation Series"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

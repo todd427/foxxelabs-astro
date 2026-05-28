@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Strategy", "Enforcement"]
 source: "Department of Enterprise, Tourism and Employment / EU AI Act Implementation"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "13 sectoral regulators", "National AI Office", "Financial Conduct Authority", "Health Information and Quality Authority", "Data Protection Commission", "Digital Services Coordinator", "7% of worldwide turnover", "2 August 2026", "16 September 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

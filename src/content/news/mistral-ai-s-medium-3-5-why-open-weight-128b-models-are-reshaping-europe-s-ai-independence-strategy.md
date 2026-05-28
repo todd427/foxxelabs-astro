@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-weight-models", "european-ai", "agentic-ai", "mistral"]
 source: "Mistral AI Official Release"
 sourceUrl: "https://mistral.ai"
+entities: ["Mistral AI", "Medium 3.5", "128B", "EU AI Act", "August 2026", "MIT license", "4 GPUs", "Model Context Protocol", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

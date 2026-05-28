@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour market", "generative AI", "entry-level hiring", "workforce impact"]
 source: "Anthropic March 2026 Labour Market Research"
 sourceUrl: "https://www.anthropic.com"
+entities: ["Anthropic", "March 2026", "Claude", "ChatGPT", "EU AI Act", "Ireland", "Germany", "France", "22-25 age cohort"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

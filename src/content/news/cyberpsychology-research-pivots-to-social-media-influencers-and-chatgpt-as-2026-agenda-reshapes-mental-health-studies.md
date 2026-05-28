@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "social-media", "generative-ai", "mental-health"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "ChatGPT", "EU AI Act", "August 2026", "€15+ billion", "Prof. Mary Aiken", "Capitol Technology University", "Interpol Global Cybercrime Expert Group", "ESRI/BlockW", "February 2026", "6th BPS Cyberpsychology Conference", "July 6-7 2026", "University of York", "Prof. Paul Cairns", "Prof. Amy Orben"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

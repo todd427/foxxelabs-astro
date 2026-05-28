@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "developer skills", "agentic AI", "workforce transformation"]
 source: "Technology Review / ArsTechnica"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["prompt engineering", "135.8%", "2025", "agentic AI", "LLMs", "Ireland", "EU AI Act", "August 2026", "AWS", "Azure", "Google Cloud"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "Ireland", "EU AI Act implementation", "regulatory coordination"]
 source: "European Commission & Irish Government"
 sourceUrl: "https://www.dccae.gov.ie/"
+entities: ["Ireland", "AI Office of Ireland", "August 2026", "EU AI Act", "May 2026", "December 2026", "August 2027", "Data Protection Commissioner", "Central Bank", "Health Products Regulatory Authority", "EU AI Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

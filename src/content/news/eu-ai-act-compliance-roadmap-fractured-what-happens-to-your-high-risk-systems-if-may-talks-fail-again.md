@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance deadline", "high-risk systems", "regulatory uncertainty"]
 source: "EU Legislative Council & European Parliament"
 sourceUrl: "https://www.artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "European Parliament", "Council", "Commission", "August 2 2026", "December 2 2027", "Annex III", "Annex I Section A", "Annex I Section B", "April 28 2026", "MDR", "GPSD"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

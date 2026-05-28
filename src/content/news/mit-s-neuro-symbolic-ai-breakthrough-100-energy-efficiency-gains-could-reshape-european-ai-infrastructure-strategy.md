@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "sustainable-ai", "EU-competitiveness"]
 source: "MIT Technology Review / Recent AI Research Announcements"
 sourceUrl: "https://www.technologyreview.com/"
+entities: ["MIT", "Neuro-Symbolic AI", "100× energy efficiency", "EU AI Act", "August 2026", "Ireland's October 2026 International AI Summit", "XAI (Explainable AI)", "Germany", "Italy", "Ireland", "8% Irish CEOs AI implementation"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

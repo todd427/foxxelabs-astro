@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour-market", "ai-impact", "generational-divide", "employment"]
 source: "Anthropic Labour Market Research"
 sourceUrl: "https://www.anthropic.com"
+entities: ["Anthropic", "March 2026", "ChatGPT", "14%", "ages 22–25", "EU AI Act", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

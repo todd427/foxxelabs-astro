@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulation", "Implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "Central Bank of Ireland", "Data Protection Commission", "European Commission", "March 13 2026", "August 2026", "December 2027", "August 2028", "March 27"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

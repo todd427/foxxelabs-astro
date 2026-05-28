@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "employment law", "Ireland", "high-risk systems"]
 source: "Ireland's Enterprise Committee Pre-Legislative Scrutiny"
 sourceUrl: "https://www.oireachtas.ie/en/"
+entities: ["Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "August 2026", "Ireland's AI Office", "13 Market Surveillance Authorities", "EU AI Act", "ChatGPT", "May 6 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

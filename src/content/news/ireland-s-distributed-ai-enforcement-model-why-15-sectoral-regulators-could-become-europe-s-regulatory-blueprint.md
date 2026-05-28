@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Enforcement", "Distributed Governance"]
 source: "Irish Department of Enterprise, Trade and Employment"
 sourceUrl: "https://www.gov.ie/en/publication/regulation-of-artificial-intelligence-bill/"
+entities: ["Ireland", "EU AI Act", "August 2026", "AI Office of Ireland", "15 sectoral regulators", "General Scheme of the Regulation of Artificial Intelligence Bill", "Health Products Regulatory Authority", "Central Bank of Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

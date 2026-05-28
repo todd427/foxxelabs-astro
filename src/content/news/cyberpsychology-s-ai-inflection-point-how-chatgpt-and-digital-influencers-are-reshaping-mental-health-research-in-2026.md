@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-impact", "digital-influencers"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["ChatGPT", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "British Psychological Society Cyberpsychology Section Annual Conference 2026", "IADT Dublin", "Atlantic Technological University Donegal", "EU AI Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

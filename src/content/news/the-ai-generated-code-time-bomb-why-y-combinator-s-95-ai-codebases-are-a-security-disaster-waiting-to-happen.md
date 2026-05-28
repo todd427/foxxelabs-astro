@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI-generated code", "vulnerability management", "startup security"]
 source: "Security Research Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Y Combinator", "Winter 2025", "EU AI Act", "August 2026", "95% AI-generated code", "2,000+ vulnerabilities", "400+ exposed secrets", "5,600 applications scanned", "25% of Y Combinator startups", "20% of files with sensitive data"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

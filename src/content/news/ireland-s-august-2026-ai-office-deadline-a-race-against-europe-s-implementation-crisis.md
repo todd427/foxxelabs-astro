@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulation", "Enforcement"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "August 1 2026", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "Data Protection Commissioner", "CRU", "CCPC", "Digital Omnibus", "19 EU member states"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

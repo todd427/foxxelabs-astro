@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU Presidency", "AI Summit", "European Innovation", "Dublin"]
 source: "Government announcement"
 sourceUrl: "https://enterprise.gov.ie"
+entities: ["Ireland", "European AI Innovation Month", "14 October 2026", "International AI Summit Dublin", "17 November", "EU Council Presidency", "Peter Burke TD", "OpenAI", "OpenAI for Europe", "France", "Germany", "Italy", "Poland", "UK"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

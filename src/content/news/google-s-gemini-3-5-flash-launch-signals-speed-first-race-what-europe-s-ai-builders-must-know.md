@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM releases", "model pricing", "frontier models", "enterprise AI"]
 source: "Google AI/Gemini announcements"
 sourceUrl: "https://google.com/news"
+entities: ["Google", "Gemini 3.5 Flash", "May 23, 2026", "$1.50 per 1M input tokens", "$9 per 1M output tokens", "1M token context", "76.2% Terminal-Bench 2.1", "EU AI Act", "GDPR", "Anthropic Claude", "OpenAI", "Alibaba Qwen3 Coder Next", "MiniMax M2.5 Highspeed", "EuroLLM-22B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

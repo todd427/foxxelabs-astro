@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "structured-outputs", "AI-development", "best-practices"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "schema-based prompting", "JSON structures", "March 2026", "135.8%"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

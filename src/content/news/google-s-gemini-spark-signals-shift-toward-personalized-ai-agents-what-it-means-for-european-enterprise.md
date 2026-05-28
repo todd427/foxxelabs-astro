@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI agents", "Google Gemini", "enterprise AI", "EU compliance"]
 source: "The Verge"
 sourceUrl: "https://theverge.com/ai-artificial-intelligence"
+entities: ["Google", "Gemini Spark", "Gemini 3.5 Flash", "EU AI Act", "GDPR", "Article 50", "NIST AI Risk Management Framework"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

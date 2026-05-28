@@ -6,6 +6,9 @@ category: "Research"
 tags: ["quantum-computing", "algorithms", "performance", "google"]
 source: "Google Research"
 sourceUrl: "https://research.google.com/quantum-echoes-2026"
+entities: ["Google", "Quantum Echoes", "13,000x", "Niels Bohr Institute", "NBI"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

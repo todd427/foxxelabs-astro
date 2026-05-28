@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI research", "teen behaviour", "social media"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20, Issue 1", "ChatGPT", "British Psychological Society", "420 adolescents aged 14-17", "Singapore"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

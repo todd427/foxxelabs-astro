@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "workflow-automation", "claude-code", "developer-tools"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Code", "Routines", "April 14 2026", "August 2026 EU AI Act", "Ireland", "webhook", "CI/CD"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

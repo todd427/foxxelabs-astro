@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "EU-collaboration", "ChatGPT"]
 source: "Institute of Art, Design and Technology (IADT)"
 sourceUrl: "https://www.iadt.ie"
+entities: ["IADT", "Erasmus+", "Tallinn University", "Hochschule der Medien Stuttgart", "ChatGPT", "Psychological Society of Ireland", "SIGMAC", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "EU AI Act", "February 2026", "November 2024", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

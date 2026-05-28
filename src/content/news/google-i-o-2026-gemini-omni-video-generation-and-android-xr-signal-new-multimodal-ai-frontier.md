@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Google", "Gemini", "Video Generation", "Multimodal AI"]
 source: "Google I/O 2026 Keynote"
 sourceUrl: "https://google.com/io"
+entities: ["Google", "Gemini Omni", "Google I/O 2026", "Android XR", "EU AI Act Article 50", "EU AI Omnibus Deal", "December 2026", "Cohere-Aleph Alpha merger", "GDPR", "Meta", "OpenAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

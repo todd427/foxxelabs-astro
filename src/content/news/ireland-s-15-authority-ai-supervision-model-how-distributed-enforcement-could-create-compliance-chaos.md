@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "Ireland", "regulatory fragmentation", "enforcement"]
 source: "Oireachtas Enterprise Committee"
 sourceUrl: "https://www.oireachtas.ie/"
+entities: ["Ireland", "EU AI Act", "15 competent authorities", "August 1, 2026", "Irish AI Office", "Regulation of Artificial Intelligence Bill 2026", "Oireachtas Enterprise Committee", "May 6, 2026", "Central Bank of Ireland", "Health Information and Quality Authority (HIQA)", "Workplace Relations Commission", "Data Protection Commission", "Broadcasting Authority of Ireland", "EU Omnibus", "750 employees", "€150 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

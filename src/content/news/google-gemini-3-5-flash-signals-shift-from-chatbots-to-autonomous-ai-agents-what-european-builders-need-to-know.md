@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI agents", "Google Gemini", "agentic AI", "frontier models"]
 source: "Google I/O 2026"
 sourceUrl: "https://google.com/io"
+entities: ["Google", "Gemini 3.5 Flash", "Gemini 3.1 Pro", "Gemini 3.5 Pro", "EU AI Act", "Terminal-Bench 2.1", "MCP Atlas", "Model Context Protocol", "Sundar Pichai", "May 19", "$1.50/million input tokens", "$9/million output tokens", "Subquadratic", "12M-token context window", "May 5", "Article 50", "December 2026", "August 2027", "EU AI Omnibus Deal"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

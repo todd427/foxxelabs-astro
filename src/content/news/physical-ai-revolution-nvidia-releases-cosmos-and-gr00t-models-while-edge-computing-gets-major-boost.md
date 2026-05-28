@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["physical-ai", "edge-computing", "robotics", "model-releases"]
 source: "NVIDIA"
 sourceUrl: "https://blogs.nvidia.com/blog/ces-2025-physical-ai/"
+entities: ["NVIDIA", "Cosmos", "GR00T", "Falcon-H1R 7B", "Qwen 30B", "Raspberry Pi", "Isaac Lab-Arena", "OSMO", "Hugging Face", "LeRobot", "Technology Innovation Institute", "ByteShape", "ShapeLearn GGUF", "Jetson T4000", "Jensen Huang"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

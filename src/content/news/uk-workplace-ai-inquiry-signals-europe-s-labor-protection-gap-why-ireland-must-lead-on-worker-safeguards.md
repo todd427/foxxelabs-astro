@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "worker protection", "UK regulation", "employment law"]
 source: "House of Commons Business and Trade Committee"
 sourceUrl: "https://www.parliament.uk/business/committees/"
+entities: ["House of Commons Business and Trade Committee", "EU AI Act", "OpenAI", "Google DeepMind", "August 2, 2026", "December 2, 2027", "Annex III"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

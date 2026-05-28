@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["Claude", "LLM", "Ireland", "EU AI Act"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Opus 4.6", "1M context window", "NVIDIA", "Nemotron 3 Super", "120B", "Apple M5 Pro/Max", "EU AI Act", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office August 2026", "Dublin summit October"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

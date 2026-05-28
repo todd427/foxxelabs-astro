@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Claude Agents", "Enterprise AI", "MCP Tunnels", "AI Infrastructure"]
 source: "Anthropic News"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "MCP tunnels", "Code with Claude London", "EU AI Act", "Article 5", "Article 6", "EDPB", "OpenAI", "Project Prometheus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

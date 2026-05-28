@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["OpenAI", "Sora", "Disney", "enterprise-ai"]
 source: "Multiple industry sources"
 sourceUrl: "https://techcrunch.com"
+entities: ["OpenAI", "Sora", "Disney", "$1 billion", "GPT-5.4", "Appfigures", "Gartner", "March 2026", "December 2025", "January 2026", "one-million-token context window", "75%", "72.4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

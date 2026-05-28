@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["multimodal AI", "enterprise infrastructure", "Microsoft MAI"]
 source: "Microsoft AI Blog"
 sourceUrl: "https://microsoft.com/en-us/ai/news"
+entities: ["Microsoft", "MAI Foundational Models", "MAI-Transcribe-1", "MAI-Voice-1", "MAI-Image-2", "Microsoft Foundry", "MAI Playground", "Mustafa Suleyman", "EU AI Act", "August 2026", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

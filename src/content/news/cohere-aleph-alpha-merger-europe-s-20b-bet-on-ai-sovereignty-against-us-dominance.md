@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI sovereignty", "European strategy", "enterprise AI"]
 source: "Multiple sources"
 sourceUrl: "https://www.siliconrepublic.com"
+entities: ["Cohere", "Aleph Alpha", "Schwarz Group", "$20B", "$600M", "April 24 2026", "Anthropic", "$900B", "$44B", "August 2 2026", "AI Act", "Karsten Wildberger", "Evan Solomon"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Large Language Models", "Enterprise AI", "Google Gemini", "AI Economics"]
 source: "Google I/O 2026"
 sourceUrl: "https://google.com/io"
+entities: ["Google", "Gemini 3.5 Flash", "1M context window", "$1.50 per 1M input tokens", "$9 per 1M output tokens", "76.2% Terminal-Bench 2.1", "Claude 3.5 Sonnet", "GPT-4o", "EU AI Act", "Mistral", "Aleph Alpha"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

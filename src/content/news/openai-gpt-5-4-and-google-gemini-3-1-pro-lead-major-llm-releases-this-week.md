@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["GPT-5.4", "Gemini 3.1", "Enterprise AI", "Model Releases"]
 source: "Multiple AI Company Announcements"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "Google", "Gemini 3.1 Pro", "Gemini 3.1 Flash-Lite", "March 5 2026", "March 3 2026", "March 11 2026", "1M token context", "GDPval test", "HLA benchmark", "DeepSeek V4"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

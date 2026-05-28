@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["cost-economics", "frontier-models", "competitive-dynamics"]
 source: "LLM Model Releases Analysis"
 sourceUrl: "https://foxxelabs.io"
+entities: ["Zhipu AI", "GLM-4.7", "Huawei Ascend", "Anthropic", "Claude Opus", "OpenAI", "GPT-4 Turbo", "EU AI Act", "$0.11 per million tokens", "$15 per million tokens", "1.2% hallucination rate"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

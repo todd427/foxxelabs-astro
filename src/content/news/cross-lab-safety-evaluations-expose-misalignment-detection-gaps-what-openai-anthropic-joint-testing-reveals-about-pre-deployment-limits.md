@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "model evaluation", "alignment testing", "frontier models"]
 source: "Anthropic, OpenAI"
 sourceUrl: "https://anthropic.com/news"
+entities: ["OpenAI", "Anthropic", "EU AI Act", "Articles 13-15", "Claude", "GPT", "RLHF", "DPO", "constitutional AI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

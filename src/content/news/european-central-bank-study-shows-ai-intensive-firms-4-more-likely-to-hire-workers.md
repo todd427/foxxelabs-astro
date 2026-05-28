@@ -6,6 +6,9 @@ category: "Research"
 tags: ["employment", "productivity", "european-union", "research"]
 source: "European Central Bank"
 sourceUrl: "https://www.ecb.europa.eu"
+entities: ["European Central Bank", "EU AI Act", "European Policy Centre", "AI Social Compact", "5,000+ European firms", "March 2026", "4% hiring increase", "4% productivity gain", "16% youth employment fall (22-25)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

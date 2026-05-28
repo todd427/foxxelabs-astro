@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI research", "mathematics", "computational infrastructure", "DeepMind"]
 source: "Machine Learning Developments"
 sourceUrl: "https://www.technologyreview.mit.edu"
+entities: ["Google DeepMind", "FrontierMath", "stateful reasoning", "EuroHPC", "Digital Europe Programme", "EU AI Act", "August 2026 transparency enforcement deadline", "Tier 4-level problems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

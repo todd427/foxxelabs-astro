@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-evaluation", "research-frameworks", "ai-development"]
 source: "arXiv Research Papers"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["PEEM", "Prompt Engineering Evaluation Metrics", "Reverse Prompt Engineering", "Promptware Engineering", "Green Prompt Engineering", "€1.4 billion", "2026"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

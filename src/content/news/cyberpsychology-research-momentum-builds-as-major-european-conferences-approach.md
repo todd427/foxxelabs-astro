@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-ethics", "academic-research"]
 source: "Multiple Academic Sources"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "Cyberpsychology, Behavior, and Social Networking", "ELIZA", "Woebot", "Replika", "ChatGPT", "IADT", "BPS Cyberpsychology Section Annual Conference", "July 6-7 York", "CYPSY29", "June 30-July 2 Porto"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

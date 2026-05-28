@@ -6,6 +6,9 @@ category: "Research"
 tags: ["interpretability", "ai-safety", "research", "transparency"]
 source: "MIT Technology Review"
 sourceUrl: "https://www.technologyreview.com/2025/01/07/1109553/breakthrough-technologies-2025/"
+entities: ["MIT", "Anthropic", "OpenAI", "mechanistic interpretability", "chain-of-thought monitoring", "Gartner", "40% enterprise AI agents by 2026"]
+significance: "high"
+irishEuAngle: false
 draft: true
 ---
 

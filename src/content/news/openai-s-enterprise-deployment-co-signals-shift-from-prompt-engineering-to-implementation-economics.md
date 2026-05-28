@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Enterprise AI", "AI Deployment", "OpenAI", "Implementation Strategy"]
 source: "OpenAI News"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Deployment Co.", "$4B", "GPT-4", "EU AI Act", "August 2026", "Ireland", "Dublin", "Frankfurt", "Anthropic", "Google"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

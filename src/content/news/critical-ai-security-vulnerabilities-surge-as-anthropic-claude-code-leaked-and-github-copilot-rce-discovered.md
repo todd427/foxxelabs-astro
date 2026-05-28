@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Code Injection", "Supply Chain", "EU AI Act"]
 source: "Multiple Security Sources"
 sourceUrl: "https://thehackernews.com"
+entities: ["Anthropic", "Claude Code", "GitHub Copilot", "CVE-2025-53773", "npm package version 2.1.88", "OpenAI Codex", "Claude Opus", "EU AI Act", "August 2026", "7% of global turnover", "BeyondTrust"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

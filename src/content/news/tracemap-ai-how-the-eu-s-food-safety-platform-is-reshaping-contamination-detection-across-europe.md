@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["EU AI applications", "food safety", "supply chain AI"]
 source: "European Commission"
 sourceUrl: "https://food.ec.europa.eu"
+entities: ["European Commission", "TraceMap", "EU member states", "Ireland", "baby formula recalls", "Chinese ingredients", "EU food safety framework"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

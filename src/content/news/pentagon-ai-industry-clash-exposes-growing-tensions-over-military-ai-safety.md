@@ -6,6 +6,9 @@ category: "Security"
 tags: ["ai-safety", "military-ai", "ethics", "regulation"]
 source: "Multiple Industry Reports"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "Pentagon", "OpenAI", "Google DeepMind", "Jeff Dean", "March 2026", "February 2026", "METR", "5.38%", "86.79%"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

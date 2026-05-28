@@ -6,6 +6,9 @@ category: "Research"
 tags: ["Claude AI", "Scientific Research", "Academic AI", "Physics"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Harvard", "Matthew Schwartz", "Anthropic", "Claude", "Claude Opus 4.5", "Claude Code", "OpenAI", "GPT-5.4", "GDPVal", "Google", "Gemini 3.1 Flash-Lite", "March 24"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-weight models", "multimodal AI", "Meta Llama 4", "European AI infrastructure"]
 source: "Meta AI Research"
 sourceUrl: "https://meta.com/news"
+entities: ["Meta", "Llama 4 Scout", "Llama 4 Maverick", "Llama 4 Behemoth", "MoE architecture", "200K context window", "Apache 2.0", "Claude Sonnet 3.7", "Gemini 2.0 Pro", "GPT-4.5", "MATH-500", "GPQA Diamond", "EU AI Act", "August 2026", "GDPR", "Digital Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

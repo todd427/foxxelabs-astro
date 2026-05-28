@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "healthcare AI", "compliance", "medical devices"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Commission", "EU AI Act", "Healthcare AI Study", "March 17 2026", "Code of Practice on AI-generated content", "August 2026", "Medical Device Regulation", "75%", "Class IIa", "November 2025", "187 written submissions", "May-June 2026", "12 member states", "France", "Germany", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

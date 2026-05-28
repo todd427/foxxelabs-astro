@@ -6,6 +6,9 @@ category: "Research"
 tags: ["materials-science", "energy-efficiency", "semiconductor-innovation"]
 source: "MIT Research"
 sourceUrl: "https://news.mit.edu"
+entities: ["MIT", "EU Chips Act", "Europe 2050 climate neutrality targets", "Max Planck Institute", "EU AI Act", "Ireland", "semiconductor manufacturing", "renewable energy systems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

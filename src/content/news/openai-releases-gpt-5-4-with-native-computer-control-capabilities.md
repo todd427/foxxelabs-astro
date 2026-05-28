@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["GPT-5.4", "OpenAI", "AI Agents", "Computer Use"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4 Thinking", "GPT-5.2", "ChatGPT Plus", "Anthropic", "Claude Computer Use", "Automated Alignment Agent (A3)", "Intel", "OpenVINO 2026.0", "EU AI Act", "89.3%", "33%", "9%", "52%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

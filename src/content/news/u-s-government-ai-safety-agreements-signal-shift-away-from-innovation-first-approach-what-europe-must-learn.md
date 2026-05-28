@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "U.S. policy", "EU alignment", "safety oversight"]
 source: "U.S. Commerce Department"
 sourceUrl: "https://www.commerce.gov/"
+entities: ["U.S. Commerce Department", "Google DeepMind", "Microsoft", "xAI", "May 5, 2026", "EU AI Act", "August 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

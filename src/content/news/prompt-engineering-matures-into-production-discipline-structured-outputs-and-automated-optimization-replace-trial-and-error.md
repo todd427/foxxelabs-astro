@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "production-ai", "structured-outputs", "developer-tools"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["OpenAI", "structured outputs API", "late 2025", "April 2026", "12.3%", "135.8%", "Anthropic"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

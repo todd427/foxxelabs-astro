@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "Regulatory Sandbox", "Compliance"]
 source: "Department of Enterprise, Tourism and Employment / artificialintelligenceact.eu"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "August 2 2026", "Annex III", "Department of Enterprise Tourism and Employment", "Regulation of Artificial Intelligence Bill 2026", "15 national competent authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

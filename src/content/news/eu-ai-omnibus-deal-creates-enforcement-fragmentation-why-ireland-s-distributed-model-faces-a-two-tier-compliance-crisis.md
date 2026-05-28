@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland regulation", "compliance timeline", "enforcement fragmentation"]
 source: "EU Legislative Council / artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "EU AI Act", "May 7 2026", "August 2027", "December 2 2026", "Ireland", "AI Office of Ireland", "Regulation of Artificial Intelligence Bill 2026", "15 competent authorities", "Article 6", "Article 50"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

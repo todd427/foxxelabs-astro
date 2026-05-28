@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulatory sandboxes", "Ireland compliance", "implementation timeline"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "August 2 2026", "Article 57", "Digital Omnibus", "General Purpose AI (GPAI)", "Annex III", "December 2027", "Ireland's AI Office", "DJEI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

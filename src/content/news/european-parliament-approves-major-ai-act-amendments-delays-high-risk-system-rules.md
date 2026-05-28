@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "high-risk AI", "deepfakes"]
 source: "European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Parliament", "EU AI Act", "Digital Omnibus proposal", "569-45 vote", "high-risk AI systems", "December 2027", "nudifier apps", "November 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

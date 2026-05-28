@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "deradicalisation", "human-AI collaboration", "content moderation"]
 source: "Recent AI Policy Development"
 sourceUrl: "https://www.foxxelabs.com"
+entities: ["New Zealand", "ChatGPT", "Anthropic", "Claude", "EU AI Act", "Digital Services Act", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

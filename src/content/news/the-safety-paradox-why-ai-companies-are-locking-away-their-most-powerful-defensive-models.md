@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "Cybersecurity", "Restricted access models"]
 source: "Anthropic and OpenAI"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "OpenAI", "Claude Mythos", "CyberGym", "April 2026", "April 14", "EU AI Act", "August 2026", "Automated Alignment Researchers", "Safety Fellowship"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Safety", "Talent Development", "Mechanistic Interpretability"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Fellows Program", "EU AI Act", "Article 50", "mechanistic interpretability", "scalable oversight", "adversarial robustness", "AI welfare", "August 2026", "December 2027", "EU AI Liability Directive", "Dublin", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

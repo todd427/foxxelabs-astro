@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "SME compliance", "regulatory relief", "Irish AI sector"]
 source: "European Commission & Council Presidency"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 7 2026", "Small mid-caps (SMCs)", "€10-50 million revenue", "European AI Office", "AI Office of Ireland", "August 2026", "16 months", "June 2026", "Data Protection Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["defense-ai", "anthropic", "autonomous-weapons", "ai-governance"]
 source: "Department of Defense"
 sourceUrl: "https://www.defense.gov"
+entities: ["Pentagon", "DoD", "OpenAI", "Google", "Microsoft", "Nvidia", "AWS", "SpaceX", "Reflection AI", "Anthropic", "Claude", "Trump administration", "EU AI Act", "August 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-creativity", "stanford-research"]
 source: "Stanford University Research"
 sourceUrl: "https://www.stanford.edu/"
+entities: ["Stanford University", "ChatGPT", "Verbalized Sampling", "8 words", "December 2025", "Claude", "Gemini", "2×", "40%", "135.8%", "32.10%"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

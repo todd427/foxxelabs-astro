@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "autonomous-agents", "enterprise-adoption"]
 source: "Machine Learning Developments"
 sourceUrl: "https://www.nvidia.com/en-us/ai/"
+entities: ["Nvidia Agent Toolkit", "Adobe", "Salesforce", "SAP", "ServiceNow", "Siemens", "EU AI Act", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

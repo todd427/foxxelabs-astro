@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI governance", "defense technology", "anthropic", "autonomous weapons"]
 source: "AI Industry News"
 sourceUrl: "https://example.com/dod-ai-agreement"
+entities: ["Pentagon", "Department of Defense", "Anthropic", "Claude", "OpenAI", "Google", "Microsoft", "Nvidia", "AWS", "Oracle", "SpaceX", "Reflection", "EU AI Act", "$32 billion", "2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

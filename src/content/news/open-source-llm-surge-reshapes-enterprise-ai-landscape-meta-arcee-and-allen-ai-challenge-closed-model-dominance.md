@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-source-ai", "model-releases", "enterprise-ai"]
 source: "AI Model Tracking Platforms"
 sourceUrl: "https://huggingface.co/"
+entities: ["Meta", "Spark Muse", "Arcee", "Trinity", "Allen AI", "OLMo 3", "Inception", "Mercury 2", "Apache 2.0", "EU AI Act", "August 2026", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

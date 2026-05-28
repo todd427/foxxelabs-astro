@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Enforcement", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "August 2 2026", "Digital Market Act", "15 competent authorities", "7% worldwide turnover", "35% Europe's AI infrastructure", "June 30 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-act", "enterprise-ai", "structured-outputs"]
 source: "Market Research Analysis"
 sourceUrl: "https://anthropic.com/news"
+entities: ["EU AI Act", "August 2, 2026", "$1.52 billion", "OpenAI", "structured outputs API", "RCCF framework", "Anthropic", "Claude Opus 4.5", "Claude Opus 4.6", "135.8%", "12.3%", "11.4×"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

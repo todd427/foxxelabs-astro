@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI skills gap", "labour market", "Ireland tech", "workforce transformation"]
 source: "Labour market analysis - May 2026"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Ireland", "204%", "Cognizant", "Project Leap", "Block", "Pinterest", "May 2026", "EU", "6.5%", "84%", "August 2026", "4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

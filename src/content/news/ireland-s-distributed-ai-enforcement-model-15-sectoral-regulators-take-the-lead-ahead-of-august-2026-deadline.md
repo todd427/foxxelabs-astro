@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Irish regulation", "enforcement", "compliance"]
 source: "Irish Department of Enterprise, Trade and Employment"
 sourceUrl: "https://www.enterprise.gov.ie/"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill", "August 2, 2026", "AI Office of Ireland", "Central Bank of Ireland", "Coimisiún na Meán", "Commission for Regulation of Utilities", "Marine Survey Office", "Annex III", "15 sectoral regulators"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

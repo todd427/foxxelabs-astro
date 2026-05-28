@@ -6,6 +6,9 @@ category: "Research"
 tags: ["medical-ai", "diagnostics", "neuroimaging", "healthcare"]
 source: "University of Michigan Research"
 sourceUrl: "https://medicine.umich.edu/news/ai-breakthrough-brain-mri-analysis"
+entities: ["University of Michigan", "brain MRI analysis", "neurological conditions", "coronary microvascular dysfunction", "CMVD", "EKG strips"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

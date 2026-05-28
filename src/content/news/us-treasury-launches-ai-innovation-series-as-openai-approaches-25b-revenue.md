@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["regulation", "revenue", "financial-services", "government-policy"]
 source: "Treasury Department"
 sourceUrl: "https://home.treasury.gov"
+entities: ["US Treasury Department", "OpenAI", "$25B revenue", "Anthropic", "$19B revenue", "FSOC", "AITO", "Scott Bessent", "Sora", "Disney", "EU AI Act", "Morgan Stanley", "H1 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

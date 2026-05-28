@@ -6,6 +6,9 @@ category: "Security"
 tags: ["prompt-engineering", "ai-security", "context-architecture", "vulnerability-detection"]
 source: "Industry Analysis"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Opus 4.6", "Claude Code Security", "OpenAI", "Codex Security", "March 6th", "OpenSSH", "GnuTLS", "Chromium", "14 CVEs", "792 critical findings", "1.2 million commits", "500 vulnerabilities", "Pentagon", "EU AI Act", "€140,000-€210,000", "PROMPT-SE", "EASE 2026", "Glasgow", "June 9-12"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "EU AI Act", "Pre-deployment Testing", "Compliance Risk"]
 source: "2026 International AI Safety Report"
 sourceUrl: "https://www.international-ai-safety-report.com"
+entities: ["EU AI Act", "August 2026", "2026 International AI Safety Report", "OpenAI o3", "OpenAI o4-mini", "Anthropic", "Mythos Preview", "DeepMind", "UK AI Security Institute", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment Research", "Frontier Models", "Safety Fellowship"]
 source: "OpenAI Safety Fellowship Announcement"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Anthropic", "Google DeepMind", "Meta", "OpenAI Safety Fellowship", "Project Glasswing", "Mythos", "EU AI Act", "August 2 2026", "April 6 2026", "September 2026–February 2027", "May 3", "July 25", "2026 International AI Safety Report", "New Delhi AI Summit", "Yoshua Bengio"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

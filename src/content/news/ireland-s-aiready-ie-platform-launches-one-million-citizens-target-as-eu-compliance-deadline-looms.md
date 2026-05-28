@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI skills", "EU AI Act", "Irish policy", "workforce development"]
 source: "Irish Government / AIReady.ie Initiative"
 sourceUrl: "https://aiready.ie"
+entities: ["Ireland", "AIReady.ie", "EU AI Act", "August 2, 2026", "one million citizens", "24% EU enterprises", "Further Education and Training (FET)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

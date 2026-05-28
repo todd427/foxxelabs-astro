@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI labour market", "Meta layoffs", "Ireland tech sector", "European employment"]
 source: "Central Statistics Office Ireland / Meta announcements"
 sourceUrl: "https://www.cso.ie"
+entities: ["Meta", "Ireland", "350 jobs", "3,000 to 1,500 headcount", "Q1 2026", "10.7% contraction", "20,300 jobs lost", "16,200 programming roles", "EU AI Act", "August 2026", "European Training Foundation"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

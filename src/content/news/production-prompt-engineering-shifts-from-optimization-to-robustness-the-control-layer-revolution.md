@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "enterprise-ai", "production-deployment", "ai-reliability"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Anthropic", "MCP Tunnels", "EU AI Act", "Claude", "GPT", "OpenAI", "May 2026", "Article 14", "KYC screening", "Foxxe Labs"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Safety", "EU AI Act", "Testing Gap", "Alignment"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://www.aisafetyreport.org"
+entities: ["International AI Safety Report 2026", "Yoshua Bengio", "European Union AI Act", "August 2026", "Turing Award", "DeepMind", "RLHF", "Direct Preference Optimization", "Ireland Data Protection Commission", "AI Office", "Anthropic Fellows Program", "May 2026", "July 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

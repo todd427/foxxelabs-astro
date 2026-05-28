@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-ethics", "youth-online-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Spain", "529 Spanish youth (13-23)", "Cyberpsychology journal", "EU AI Act", "Digital Services Act (DSA)", "Michal Molcho", "NUI Galway", "2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

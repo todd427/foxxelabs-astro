@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance deadline", "high-risk AI", "regulatory uncertainty"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2 2026", "Digital Omnibus", "Annex III", "GPAI", "December 2027", "April 28", "Cyprus Presidency", "EDPB", "EDPS", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

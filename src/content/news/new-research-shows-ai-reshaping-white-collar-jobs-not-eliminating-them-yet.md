@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labor market", "employment", "research", "Europe"]
 source: "Harvard Business Review"
 sourceUrl: "https://hbr.org"
+entities: ["Harvard Business Review", "Anthropic", "Yale Budget Lab", "Ireland Department of Finance", "Morgan McKinley Ireland", "Peterson Institute", "ChatGPT", "11%", "4%", "20%", "14%", "6.1%", "November 2024", "2023-2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Claude", "Risk Assessment", "Alignment"]
 source: "METR"
 sourceUrl: "https://metr.org"
+entities: ["Anthropic", "Claude Opus 4.6", "METR", "March 12 2026", "arXiv", "50% reliability", "7 months", "2019", "2020", "4-hour tasks"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

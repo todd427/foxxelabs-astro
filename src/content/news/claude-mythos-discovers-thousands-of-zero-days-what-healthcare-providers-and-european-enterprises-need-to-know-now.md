@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI security", "zero-day vulnerabilities", "healthcare", "enterprise risk"]
 source: "The Hacker News"
 sourceUrl: "https://thehackernews.com"
+entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "AWS", "Apple", "Google", "Microsoft", "OpenEMR", "OpenSSL", "AISLE", "Firefox 150", "EU AI Act", "GDPR", "HSE", "January 27 2026", "100,000+", "12", "271", "1000s"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Data Privacy", "Compliance", "Bias Detection"]
 source: "European Council & European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 2026 Omnibus Deal", "GDPR Article 9", "Article 34", "Article 10(6)", "August 2026 high-risk AI deadline", "December 2026 transparency deadline", "AI Office", "Article 50", "May 7 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

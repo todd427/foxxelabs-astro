@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "Ireland", "AI behaviour", "mental health"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace & IADT"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["IADT", "MSc Cyberpsychology", "ChatGPT", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "6th British Psychological Society Cyberpsychology Conference", "University of York", "July 2026", "Prof. Paul Cairns", "Prof. Amy Orben", "EU AI Act", "CAMHS"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

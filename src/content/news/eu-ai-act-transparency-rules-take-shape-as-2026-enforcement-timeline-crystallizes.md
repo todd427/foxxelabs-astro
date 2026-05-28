@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "transparency", "regulation", "enforcement"]
 source: "European Commission AI Act Implementation"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Code of Practice on transparency of AI-generated content", "EU common icon", "August 2, 2026", "June 2026", "March 27th", "European Commission", "AI Office", "Denmark", "Stanford University", "AI Index Report"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

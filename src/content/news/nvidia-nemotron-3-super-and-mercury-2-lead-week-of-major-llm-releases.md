@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["model-releases", "performance", "open-source", "inference"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://nvidia.com"
+entities: ["NVIDIA Nemotron 3 Super", "Mercury 2", "GPT-5 Mini", "Claude 4.5 Haiku Reasoning", "DeepSeek V4", "Inception", "March 10 2026", "February 24 2026", "120-billion-parameter", "1M token context", "AIME 2025", "NVFP4", "Intel OpenVINO 2026.0", "Hopper"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

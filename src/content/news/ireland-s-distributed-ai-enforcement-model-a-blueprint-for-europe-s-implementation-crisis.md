@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulation", "Implementation"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["EU AI Act", "Ireland", "AI Office of Ireland", "Article 70", "Digital Omnibus on AI", "Data Protection Commission", "Central Bank", "Health Service Executive", "19 EU states", "August 2025 deadline", "September 2025", "General Scheme of the Regulation of Artificial Intelligence Bill"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["regulation", "policy", "AI Act", "safety"]
 source: "White House AI Policy Initiative"
 sourceUrl: "https://whitehouse.gov"
+entities: ["White House", "EU Council", "EU AI Act", "Omnibus VII", "OpenAI", "The Alignment Project", "UK AI Security Institute", "Anthropic", "Responsible Scaling Policy", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

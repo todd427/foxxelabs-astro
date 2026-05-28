@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Office of Ireland", "EU AI Act implementation", "regulatory enforcement", "market surveillance"]
 source: "European Commission & Irish Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland's AI Office", "EU AI Act", "August 1 2026", "May 2026 Omnibus agreement", "August 2 2027", "December 2027", "August 2028", "June 23 2026", "Central Bank", "Health Products Regulatory Authority", "EU Commission", "Irish Department of Enterprise, Tourism and Employment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

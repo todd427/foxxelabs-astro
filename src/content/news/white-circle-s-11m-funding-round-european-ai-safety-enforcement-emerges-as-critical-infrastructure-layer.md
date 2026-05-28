@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Safety", "European Startups", "Content Moderation"]
 source: "OpenAI EU Announcements"
 sourceUrl: "https://openai.com/news"
+entities: ["White Circle", "€11M", "OpenAI", "Anthropic", "DeepMind", "Mistral", "Hugging Face", "EU AI Act", "August 2026", "Paris", "London", "Amsterdam"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

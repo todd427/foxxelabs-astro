@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-wellbeing", "AI-research", "social-media"]
 source: "Cyberpsychology.eu"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology.eu", "Volume 20", "British Psychological Society", "Cyberpsychology Section", "Annual Conference 2026", "July 6-7", "York St John University", "Prof. Paul Cairns", "Prof. Amy Orben", "ChatGPT", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

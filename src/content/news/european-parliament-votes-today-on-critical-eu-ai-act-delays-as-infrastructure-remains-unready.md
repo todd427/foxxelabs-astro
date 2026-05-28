@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "regulation", "enforcement"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Parliament", "Digital Omnibus AI", "Michael McNamara", "Renew Europe", "Cyprus Presidency", "Annex III", "Annex I", "December 2 2027", "August 2 2028", "November 2026", "August 2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulation", "Enforcement"]
 source: "Irish Government & EU Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "August 2, 2026", "August 2, 2027", "Digital Markets Act", "May 3, 2026", "Annex I", "€100 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

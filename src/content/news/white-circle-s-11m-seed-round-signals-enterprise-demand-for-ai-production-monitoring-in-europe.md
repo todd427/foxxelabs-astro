@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Safety", "Enterprise Security", "Funding"]
 source: "AI Safety Developments"
 sourceUrl: "https://foxxe.labs"
+entities: ["White Circle", "$11M", "Denis Shilov", "OpenAI", "Anthropic", "DeepMind", "EU AI Act", "December 2026", "Ireland AI Office", "August 2026", "Article 50", "GPT-5.5-Cyber"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

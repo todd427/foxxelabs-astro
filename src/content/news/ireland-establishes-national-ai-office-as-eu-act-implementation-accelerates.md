@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Policy", "Governance"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "National AI Office", "Peter Burke", "August 2, 2026", "August 2027", "EURO-3C Project", "€75 million", "March 3rd", "March 5th", "Code of Practice on AI content marking and labelling", "Digital Omnibus", "Scale Ireland", "October 14th", "International AI Summit Dublin", "NIS2", "DORA"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

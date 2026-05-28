@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulation", "implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "National AI Office", "15 National Competent Authorities", "Regulation of Artificial Intelligence Bill 2026", "Google", "Meta", "Apple", "February 2025", "August 2025", "August 2027", "August 2026", "Code of Practice on AI-generated content"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

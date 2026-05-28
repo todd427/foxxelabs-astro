@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour market", "youth employment", "ICT sector", "economic policy"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://www.gov.ie/en/department/finance/"
+entities: ["Ireland", "Department of Finance", "Indeed", "Anthropic", "EU", "Stanford University", "ICT sector", "20% youth employment drop 2023-2025", "11% AI job postings November 2025", "4% productivity gain"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

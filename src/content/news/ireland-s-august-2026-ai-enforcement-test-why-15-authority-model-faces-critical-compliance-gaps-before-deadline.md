@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland regulation", "enforcement coordination", "August 2026"]
 source: "AI Regulation Analysis"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "15 authorities", "Data Protection Commission", "Central Bank", "2 August 2026", "EU Omnibus", "28 April", "13 May", "30 June 2026", "Workplace Relations Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-optimization", "enterprise-ai", "skills-gap"]
 source: "IEEE Spectrum"
 sourceUrl: "https://spectrum.ieee.org"
+entities: ["IEEE Spectrum", "IEEE", "EU AI Act", "May 2025", "August 2026", "Dublin", "Berlin", "Amsterdam", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

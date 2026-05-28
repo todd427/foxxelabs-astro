@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Supply Chain", "Vulnerability Management", "Microsoft"]
 source: "Multiple Security Sources"
 sourceUrl: "https://example.com/ai-security-developments"
+entities: ["Microsoft", "GitHub Copilot", "VS Code", "Visual Studio", "JetBrains", "CVE-2026-21516", "CVE-2026-21523", "CVE-2026-21256", "Cline", "Issue #8904", "OpenAI", "Codex Security", "Fortinet FortiGate", "CyberStrikeAI", "Anthropic", "EU AI Act", "February 2026 Patch Tuesday", "$15 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Governance", "Ireland Compliance"]
 source: "Council of the European Union / artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU Council", "European Parliament", "May 7 2026", "August 2 2027", "August 2 2026", "Ireland", "AI Office", "15 competent authorities", "SME", "small mid-caps"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

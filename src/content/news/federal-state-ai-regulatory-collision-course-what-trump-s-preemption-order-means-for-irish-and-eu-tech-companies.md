@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "US policy", "compliance", "preemption"]
 source: "AI Regulation and Governance Analysis"
 sourceUrl: "https://www.foxxelabs.com"
+entities: ["Trump", "December 11 2025", "California TFAIA", "Texas RAIGA", "Colorado AI Act", "EU AI Act", "August 2026", "January 1 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

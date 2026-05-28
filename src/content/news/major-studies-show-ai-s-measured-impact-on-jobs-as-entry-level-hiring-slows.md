@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour-market", "employment", "generative-ai", "skills"]
 source: "Nature"
 sourceUrl: "https://nature.com"
+entities: ["Nature", "ECB", "Harvard Business Review", "ChatGPT", "Anthropic", "European Central Bank", "Ireland", "Indeed", "CSO", "Stanford", "Morgan Stanley", "PwC", "OpenAI", "Jobs Platform", "IMF", "Goldman Sachs", "2019-2025", "2022", "mid-2026", "13%", "20%", "4%", "15%", "16%", "212,000", "56%", "40%", "300 million", "25%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

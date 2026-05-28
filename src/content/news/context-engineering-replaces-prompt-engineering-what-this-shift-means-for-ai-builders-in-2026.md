@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-design", "AI-methodology", "developer-tools"]
 source: "Anthropic Engineering Blog"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "context engineering", "prompt engineering", "RAG", "DeepSeek V4", "EU AI Act", "million-token contexts"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

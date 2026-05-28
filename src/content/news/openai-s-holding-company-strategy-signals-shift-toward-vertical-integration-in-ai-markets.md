@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["OpenAI", "M&A", "AI consolidation", "market structure"]
 source: "Industry tracking sources"
 sourceUrl: "https://foxxe.labs"
+entities: ["OpenAI", "Hiro", "GPT-5.5 Instant", "Cohere", "Aleph Alpha", "Meta Manus", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

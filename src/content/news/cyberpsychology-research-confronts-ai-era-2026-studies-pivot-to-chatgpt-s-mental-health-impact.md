@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-impact", "digital-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["ChatGPT", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "British Psychological Society Cyberpsychology Section", "Dr Lisa Orchard", "University of Wolverhampton", "6th BPS Cyberpsychology Conference", "University of York", "Prof Paul Cairns", "Prof Amy Orben", "EU AI Act", "August 2026", "97-million installation base", "41% Ireland organisations"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

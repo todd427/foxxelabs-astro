@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["EU AI Act", "industrial-ai", "competitiveness", "regulatory-burden"]
 source: "Hanover Trade Fair / Siemens CEO Statement"
 sourceUrl: "https://www.siemens.com"
+entities: ["Siemens", "Roland Busch", "EU AI Act", "Data Act", "€1 billion", "$1.2 billion", "Hanover trade fair", "Annex III", "December 2027", "August 2028", "Ireland", "Council Presidency", "AI Omnibus", "28 April"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

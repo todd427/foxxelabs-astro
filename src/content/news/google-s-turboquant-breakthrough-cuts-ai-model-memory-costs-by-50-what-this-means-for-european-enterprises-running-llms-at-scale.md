@@ -6,6 +6,9 @@ category: "Research"
 tags: ["model-optimization", "enterprise-ai", "cost-efficiency"]
 source: "Google DeepMind / ICLR 2026"
 sourceUrl: "https://iclr.cc/"
+entities: ["Google DeepMind", "TurboQuant", "KV cache", "ICLR 2026", "AI Economy Ireland 2026", "October 2026 International AI Summit", "August 2026 EU AI Act", "Claude", "GPT-5.5", "UCD €1.5M livestock AI project", "PyTorch", "TensorFlow"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

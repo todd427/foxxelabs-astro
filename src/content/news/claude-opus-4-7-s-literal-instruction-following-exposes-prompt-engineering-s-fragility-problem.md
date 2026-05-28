@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "model-updates", "AI-builders", "instruction-design"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Opus 4.7", "EU AI Act", "December 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

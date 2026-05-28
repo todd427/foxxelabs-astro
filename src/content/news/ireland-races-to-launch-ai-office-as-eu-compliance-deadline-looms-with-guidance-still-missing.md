@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "Ireland", "regulation"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "August 2, 2026", "€35M", "7% global annual turnover", "Regulation of Artificial Intelligence Bill 2026", "Oifig Intleachta Shaorga na hÉireann", "European Commission", "February 2026", "Digital Omnibus", "December 2027", "August 2028", "Code of Practice on AI-generated content marking", "March 5, 2026", "Department of Enterprise, Tourism and Employment", "Coimisiún na Meán", "Jeremy Godfrey"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

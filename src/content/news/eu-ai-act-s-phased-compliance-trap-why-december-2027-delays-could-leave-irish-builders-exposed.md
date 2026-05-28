@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "high-risk AI", "implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "August 2 2026", "December 2027", "Annex III", "GPAI", "European Data Protection Board", "European Data Protection Supervisor", "Cyprus Council Presidency", "April 28 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

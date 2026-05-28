@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU Presidency", "AI Summit", "European AI", "Ireland"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["Ireland", "October 14, 2026", "International AI Summit", "EU Presidency", "European AI Innovation Month", "Niamh Smyth", "European Commission", "European Central Bank", "EU AI Act", "Council of the European Union", "Morgan Stanley", "Stanford SIEPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

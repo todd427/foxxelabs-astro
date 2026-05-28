@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-productivity", "research", "llm-optimization"]
 source: "arXiv"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Claude 4.0", "GPT-5", "arXiv", "11.4x productivity gain", "$1.52B", "$3.43B", "32.10% CAGR", "3.55 hours to 18.7 minutes", "400ms", "8.4 seconds", "12.7 seconds", "23% XML accuracy", "40% hallucination reduction", "6.5x latency penalty"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

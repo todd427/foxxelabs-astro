@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance deadline", "high-risk AI", "Digital Omnibus"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "European Parliament", "Council of the European Union", "Annex III", "Annex I", "December 2, 2027", "August 2, 2028", "Digital Omnibus", "Data Protection Commission", "CEN/CENELEC"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

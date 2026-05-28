@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI alignment", "AI governance", "safety research", "pluralistic values"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://www.internationalaIsafetyreport.com"
+entities: ["International AI Safety Report 2026", "Yoshua Bengio", "EU AI Act", "August 2026", "Anthropic", "RLHF", "DPO", "pluralistic alignment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

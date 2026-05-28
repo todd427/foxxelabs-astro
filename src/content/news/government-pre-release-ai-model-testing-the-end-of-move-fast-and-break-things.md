@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "frontier models", "safety testing", "government oversight"]
 source: "AI Industry Developments - May 2026"
 sourceUrl: "https://foxxelabs.com"
+entities: ["NSA", "Office of the National Cyber Director", "EU AI Act", "Ireland", "US", "European regulators"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

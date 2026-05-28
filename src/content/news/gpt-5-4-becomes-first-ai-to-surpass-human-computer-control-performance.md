@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["GPT-5.4", "computer-control", "benchmarks", "agents"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "March 4, 2026", "OSWorld-Verified", "75.0%", "72.4%", "1M token context window", "GDPval", "83.0%", "GPT-5.2", "Anthropic", "Claude Opus 4.6", "Eli Lilly", "LillyPod"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

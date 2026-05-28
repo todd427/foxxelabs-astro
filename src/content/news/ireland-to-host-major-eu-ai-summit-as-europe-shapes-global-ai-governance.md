@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU AI Summit", "Irish Presidency", "AI Governance", "European AI Policy"]
 source: "European Commission"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["Ireland", "EU Presidency", "International AI Summit", "Dublin", "14 October 2026", "Court of Justice of the European Union", "Like Company v Google Ireland Limited", "Google Ireland", "Yann LeCun", "AMI Labs", "$1.03 billion", "European AI Innovation Month"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

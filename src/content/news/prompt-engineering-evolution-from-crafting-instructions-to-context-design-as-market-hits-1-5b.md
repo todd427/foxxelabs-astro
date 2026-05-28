@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "context-design", "agentic-ai", "market-growth"]
 source: "HTF Market Intelligence"
 sourceUrl: "https://www.htfmarketintelligence.com"
+entities: ["HTF Market Intelligence", "$1.5B", "$12.8B", "24.1% CAGR", "RCCF", "47 developers", "3.48 hours", "19.4 minutes", "38.5%", "12.3%", "LinkedIn", "Anthropic", "OpenAI", "40%", "27%", "Q3 2026"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "skills policy", "workforce transformation"]
 source: "European Training Foundation / Irish Economic and Social Research Institute"
 sourceUrl: "https://www.esri.ie"
+entities: ["Ireland", "EU", "European Training Foundation", "ESRI", "11%", "7%", "AI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

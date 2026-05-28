@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "Ireland"]
 source: "HSE and Department of Health"
 sourceUrl: "https://www.hse.ie/eng/services/digital/"
+entities: ["Ireland", "HSE", "Department of Health", "Sharing the Vision Digital Mental Health Strategy 2026-2030", "€7M", "€1M", "SpunOut Navigator", "University of Limerick", "June 2025", "Dun Laoghaire Institute of Art, Design and Technology", "MSc in Cyberpsychology", "EU AI Act", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

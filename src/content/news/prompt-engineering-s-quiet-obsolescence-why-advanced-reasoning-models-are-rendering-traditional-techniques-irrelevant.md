@@ -6,6 +6,9 @@ category: "Research"
 tags: ["reasoning models", "AI development", "model capabilities"]
 source: "arXiv"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI o1", "DeepSeek R1", "GPT-3", "GPT-4", "March 2025"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

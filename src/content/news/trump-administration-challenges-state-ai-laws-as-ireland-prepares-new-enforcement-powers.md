@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "federal preemption", "Ireland AI Office", "enforcement"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Trump administration", "December 11 executive order", "AI Litigation Task Force", "California Transparency in Frontier Artificial Intelligence Act", "Texas Responsible Artificial Intelligence Governance Act", "Ireland", "AI Office of Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "7% turnover penalties", "August 1 2026", "May-June 2026", "38 states", "13 sectoral regulators"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-development", "developer-tools"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "August 2026", "Ireland", "Gemma 4", "135.8%"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

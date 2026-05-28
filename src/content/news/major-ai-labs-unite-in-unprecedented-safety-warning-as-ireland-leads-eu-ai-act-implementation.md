@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Safety", "EU AI Act", "Cross-lab Collaboration", "AI Transparency"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "Geoffrey Hinton", "Ilya Sutskever", "Samuel Bowman", "EU AI Act", "Ireland", "Peter Burke", "AI Office of Ireland", "August 2026", "METR", "chain-of-thought monitoring", "4 hours"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

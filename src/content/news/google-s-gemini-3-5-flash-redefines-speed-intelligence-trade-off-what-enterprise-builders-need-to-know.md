@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM-releases", "compute-economics", "frontier-models"]
 source: "Google I/O 2026"
 sourceUrl: "https://google.com/events/io-2026"
+entities: ["Google", "Gemini 3.5 Flash", "$1.50 pricing", "76.2% Terminal-Bench 2.1", "4x speed", "1M context window", "Gemini API", "Antigravity platform", "AlphaEvolve", "Empirical Research Assistance (ERA)", "NotebookLM", "EU AI Act", "GDPR", "Cohere-Aleph Alpha"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

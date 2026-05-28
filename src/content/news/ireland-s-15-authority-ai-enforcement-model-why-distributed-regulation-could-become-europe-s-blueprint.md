@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory Enforcement", "Competent Authorities"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU AI Act", "15 competent authorities", "Peter Burke", "AI Office of Ireland", "Annex III", "August 2, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

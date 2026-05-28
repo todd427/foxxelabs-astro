@@ -6,6 +6,9 @@ category: "Research"
 tags: ["open-source-ai", "model-efficiency", "physics-informed-ml", "european-competitiveness"]
 source: "Google Research / ICLR 2026"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Google", "Gemma 4", "Mixture of Experts", "Physics-Informed Neural Networks", "PINNs", "EU AI Act", "August 2 2026", "May 4 2026", "Mistral", "Hugging Face", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

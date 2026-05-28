@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AGI", "benchmarking", "frontier-models", "capabilities"]
 source: "Multiple AI Research Sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["NVIDIA", "Jensen Huang", "Lex Fridman", "Mark Gubrud", "ARC-AGI-3", "GPT-5.4", "Claude Opus", "Intercom Apex 1.0", "Model Context Protocol", "Anthropic", "Stripe Projects", "Ramp Labs", "Mark Warner", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

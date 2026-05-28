@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["agentic-ai", "eu-ai-act", "governance"]
 source: "EU AI Act Developments"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2, 2026", "Article 5", "Digital Omnibus", "Irish Data Protection Commissioner", "agentic AI systems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

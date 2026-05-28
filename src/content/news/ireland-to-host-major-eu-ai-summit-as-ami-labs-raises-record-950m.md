@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Summit", "European Innovation", "Venture Capital", "AI Investment"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/"
+entities: ["Ireland", "EU", "International AI Summit", "October 14, 2026", "Dublin", "AMI Labs", "Yann LeCun", "€950M", "€3.2B", "Nvidia", "Bezos Expeditions", "Temasek", "Henna Virkkunen"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

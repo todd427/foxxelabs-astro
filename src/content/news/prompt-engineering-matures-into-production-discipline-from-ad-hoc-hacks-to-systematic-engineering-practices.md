@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-engineering", "development-practices", "automation"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxe.io"
+entities: ["prompt engineering", "real-time optimization tools", "multimodal prompting", "adaptive systems", "Foxxe Labs Research"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

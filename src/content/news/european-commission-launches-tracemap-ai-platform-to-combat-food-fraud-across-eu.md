@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["food safety", "EU policy", "AI applications", "public health"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["European Commission", "TraceMap", "EU AI Act", "EU member states", "baby formula recalls", "China", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

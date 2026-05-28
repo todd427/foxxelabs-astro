@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["long-context", "architecture", "cost-efficiency", "transformer-alternatives"]
 source: "Subquadratic May 2026 Release"
 sourceUrl: "https://subquadratic.ai"
+entities: ["SubQ", "SubQ 1M-Preview", "12 million token context window", "May 5 2026", "Google Gemini 3.5 Flash", "OpenAI GPT-5.5 Instant", "EU AI Act", "GDPR", "Terminal-Bench", "MMLU", "GSM8K", "HumanEval"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

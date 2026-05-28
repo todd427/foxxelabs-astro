@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "grok-ai", "market-growth", "automation"]
 source: "Industry Reports"
 sourceUrl: "https://example.com"
+entities: ["Grok AI", "xAI", "Elon Musk", "Universal Conditional Logic", "Over-Specification Paradox", "Claude Mythos", "Anthropic", "OpenAI", "GPT-5.4", "$1.52B", "32.10% CAGR", "$6.7B", "2034", "0.509", "29.8%", "38%", "Q3 2026"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

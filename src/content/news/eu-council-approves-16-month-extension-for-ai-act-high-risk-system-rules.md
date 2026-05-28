@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "high-risk AI", "compliance", "standards"]
 source: "Council of the European Union"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Council of the European Union", "March 13, 2026", "16-month extension", "Annex III systems", "Annex I systems", "December 2, 2027", "August 2, 2028", "CEN-CENELEC Joint Technical Committee 21", "August 2026", "Omnibus VII", "Article 50(2)", "February 2, 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

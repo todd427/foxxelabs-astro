@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Ireland", "workforce-impact", "AI-regulation", "labor-policy"]
 source: "Irish Government Cabinet Decision"
 sourceUrl: "https://www.gov.ie"
+entities: ["Ireland", "Cabinet", "National Economic Social Council (NESC)", "EU AI Act", "August 2, 2026", "63%", "April 28, 2026", "June 30", "Dublin tech corridor", "15 separate authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

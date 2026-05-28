@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "omnibus", "parliament"]
 source: "European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Parliament", "AI Act", "European Commission", "Digital Omnibus", "Amnesty International", "December 2, 2027", "August 2, 2028", "August 2026", "569 votes to 45", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

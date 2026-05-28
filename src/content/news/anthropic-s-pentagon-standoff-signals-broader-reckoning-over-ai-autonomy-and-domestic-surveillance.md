@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI governance", "defense policy", "autonomous weapons", "Anthropic"]
 source: "Pentagon AI Contracts Announcement"
 sourceUrl: "https://defense.gov"
+entities: ["Anthropic", "Claude", "Pentagon", "OpenAI", "Google", "Microsoft", "AWS", "Nvidia", "SpaceX", "Reflection AI", "EU AI Act", "Ireland AI Office", "May 1 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

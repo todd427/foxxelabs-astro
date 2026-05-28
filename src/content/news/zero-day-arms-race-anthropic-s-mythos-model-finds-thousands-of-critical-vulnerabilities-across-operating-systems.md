@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerability-disclosure", "ai-security", "zero-day"]
 source: "Security Research"
 sourceUrl: "https://www.krebsonsecurity.com"
+entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "Amazon Web Services", "Apple", "Broadcom", "Cisco", "CrowdStrike", "Google", "JPMorgan Chase", "Linux Foundation", "Microsoft", "NVIDIA", "Palo Alto Networks", "OpenBSD", "MCP", "2025", "34.6%", "2,130"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

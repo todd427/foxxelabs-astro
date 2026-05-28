@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI security", "code quality", "vulnerability disclosure"]
 source: "Cybersecurity vendor reports and CVE databases"
 sourceUrl: "https://www.thehackernews.com"
+entities: ["CVE", "Anthropic", "Claude Code", "Project Glasswing", "EU AI Act", "August 2026", "233%", "6 CVE (January 2026)", "15 CVE (February 2026)", "35 CVE (March 2026)", "2,000 source code files", "500,000 lines of code"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

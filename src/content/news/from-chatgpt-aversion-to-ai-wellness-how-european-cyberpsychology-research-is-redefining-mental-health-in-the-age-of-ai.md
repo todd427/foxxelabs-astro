@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "AI-wellness"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20 2026", "Institute of Art, Design and Technology Dublin", "EU Erasmus+ Blended Intensive Programme", "Tallinn University", "Hochschule der Medien Stuttgart", "Psychological Society of Ireland", "SIGMAC", "February 2026", "November 2024"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

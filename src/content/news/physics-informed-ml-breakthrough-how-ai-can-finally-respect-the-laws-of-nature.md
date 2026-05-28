@@ -6,6 +6,9 @@ category: "Research"
 tags: ["Physics-Informed ML", "Climate Science", "Algorithm Design"]
 source: "University of Hawaiʻi Research"
 sourceUrl: "https://www.hawaii.edu"
+entities: ["University of Hawaiʻi", "physics-informed machine learning", "EU AI Act", "Ireland", "International AI Summit October 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

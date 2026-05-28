@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "ethics", "surveillance", "legal"]
 source: "Federal Court Filing"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Google DeepMind", "Microsoft", "OpenAI", "Pentagon", "Jeff Dean", "March 25, 2026", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

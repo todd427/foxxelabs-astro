@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "sustainability", "AI-research", "neural-networks"]
 source: "Tufts University & Loughborough University Research"
 sourceUrl: "https://www.tufts.edu"
+entities: ["Tufts University", "Loughborough University", "EU AI Act", "Digital Omnibus", "100× energy reduction", "2,000× energy efficiency", "10% U.S. electricity"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

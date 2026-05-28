@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["OpenAI", "EU AI Act", "Ireland AI Strategy", "GPT-5.4"]
 source: "Multiple sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4 mini", "GPT-5.4 nano", "Ireland", "EU AI Act", "National AI Office", "Intel OpenVINO 2026.0", "Apple M5", "International AI Summit", "14 October 2026", "Dublin", "August 2026", "$250 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

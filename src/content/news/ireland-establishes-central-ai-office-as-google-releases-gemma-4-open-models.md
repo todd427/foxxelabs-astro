@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "open models", "EU AI Act", "Gemma"]
 source: "Irish Government AI Office Announcement"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU AI Act", "Regulation 2024/1689", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office", "August 2026", "Google DeepMind", "Gemma 4", "Apache 2.0", "April 2nd", "Arena AI", "Anthropic", "Claude Sonnet 4.5"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

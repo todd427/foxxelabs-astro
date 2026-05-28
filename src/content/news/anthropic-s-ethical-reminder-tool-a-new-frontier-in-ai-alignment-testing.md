@@ -6,6 +6,9 @@ category: "Research"
 tags: ["alignment", "anthropic", "safety-testing", "constitutional-ai"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "Constitutional AI", "EU AI Act", "Article 28", "Article 50", "August 2, 2026", "2026 International AI Safety Report"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "sandbox", "compliance"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "August 1, 2026", "August 2, 2026", "Anthropic", "Google", "$297 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

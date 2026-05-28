@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-agents", "anthropic", "developer-tools"]
 source: "Industry Analysis"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Model Context Protocol", "MCP", "97M installations", "Claude Mythos 5", "Gemini 3.1", "EU AI Act", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

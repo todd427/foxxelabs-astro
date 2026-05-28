@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment", "EU Compliance", "Reward Hacking"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "meta-feedback", "reward hacking", "EU AI Act", "August 2026", "Ireland", "15-authority enforcement model", "OpenAI Safety Fellowship", "May 3", "Anthropic", "DeepMind"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

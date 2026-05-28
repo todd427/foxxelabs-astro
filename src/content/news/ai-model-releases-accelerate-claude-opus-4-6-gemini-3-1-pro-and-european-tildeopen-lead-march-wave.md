@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM", "model-releases", "european-ai", "claude"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Opus 4.6", "Google DeepMind", "Gemini 3.1 Pro", "Genie 3", "Tilde", "TildeOpen LLM", "BigLaw Bench", "ARC-AGI-2", "EuroHPC LUMI", "EU AI Act", "Micron", "Apple M5"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

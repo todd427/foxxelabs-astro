@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "Digital Regulation", "Data Protection"]
 source: "Multiple EU Policy Sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "February 2026", "August 2, 2026", "Digital Omnibus", "November 2025", "Q2 2026", "15 National Competent Authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

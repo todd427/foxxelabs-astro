@@ -6,6 +6,9 @@ category: "Research"
 tags: ["transparency", "AI governance", "foundation models", "accountability"]
 source: "Stanford AI Index 2026"
 sourceUrl: "https://aiindex.stanford.edu"
+entities: ["Stanford AI Index 2026", "Foundation Model Transparency Index", "Anthropic", "Google", "OpenAI", "EU AI Act", "Irish AI Office", "Ireland EU Presidency", "Claude Opus 4.6", "Gemini 3.1 Pro", "58 points", "40 points", "31%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

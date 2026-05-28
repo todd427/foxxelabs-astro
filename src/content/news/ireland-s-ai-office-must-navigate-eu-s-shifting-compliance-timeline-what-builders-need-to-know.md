@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "compliance timeline", "Digital Omnibus"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "EU Digital Omnibus", "AI Office of Ireland", "August 2026", "December 2, 2027", "August 2, 2028", "Department of Enterprise, Tourism and Employment", "EU Council Presidency 2026", "European AI Innovation Month"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

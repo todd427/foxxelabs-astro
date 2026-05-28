@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "federal policy", "EU AI Act", "preemption"]
 source: "White House"
 sourceUrl: "https://whitehouse.gov"
+entities: ["White House", "National Policy Framework for Artificial Intelligence", "March 20, 2026", "EU AI Act", "August 2026", "Ireland's AI Office", "August 1, 2026", "Business Software Alliance"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

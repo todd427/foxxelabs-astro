@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Chain-of-Thought", "Alignment", "Reasoning Models"]
 source: "OpenAI, Google DeepMind, Anthropic, Meta collaborative research"
 sourceUrl: "https://openai.com"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "Chain-of-Thought monitoring", "August 2026", "December 2027", "Ireland AI Office", "15 sectoral authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

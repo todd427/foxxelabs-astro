@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "ai-governance", "ireland-eu"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Ireland", "EU", "€7M", "EU AI Act", "NUI Galway", "Michal Molcho", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Frontiers", "British Psychological Society", "June 1 2026", "July 2026", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

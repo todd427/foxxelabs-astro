@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["world-models", "European-AI", "alternative-architectures"]
 source: "Search results - April 2026 LLM developments"
 sourceUrl: "https://foxxe.io/research"
+entities: ["Yann LeCun", "AMI Labs", "€1.03B", "€3.2B valuation", "OpenAI", "Google", "Anthropic", "GPT-6", "April 2026", "Mistral", "Mistral Medium 3", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

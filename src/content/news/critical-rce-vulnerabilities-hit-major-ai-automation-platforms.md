@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerability", "rce", "automation", "supply-chain"]
 source: "Multiple Security Advisories"
 sourceUrl: "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68668"
+entities: ["n8n", "ServiceNow", "CVE-2025-68668", "CVE-2026-21858", "OpenAI", "Google Drive", "Salesforce", "Microsoft", "npm", "Copilot"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

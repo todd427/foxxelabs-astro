@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Compliance", "Regulation"]
 source: "Irish Government"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "Oifig Intleachta Shaorga na hÉireann", "Department of Enterprise, Tourism and Employment", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "August 2026", "Large Energy User Action Plan (LEAP)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

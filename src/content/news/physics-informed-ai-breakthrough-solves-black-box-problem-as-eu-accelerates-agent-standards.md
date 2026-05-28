@@ -6,6 +6,9 @@ category: "Research"
 tags: ["physics-informed-ai", "ai-agents", "eu-presidency", "ai-standards"]
 source: "AIP Advances"
 sourceUrl: "https://aip.scitation.org/journal/adv"
+entities: ["University of Hawaiʻi at Mānoa", "AIP Advances", "NIST AI Agent Standards Initiative", "Anthropic", "OpenAI", "Model Context Protocol", "Block", "Linux Foundation", "Ireland 2026 EU Presidency", "International AI Summit Dublin", "October 14th", "Disseqt AI", "$6M"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

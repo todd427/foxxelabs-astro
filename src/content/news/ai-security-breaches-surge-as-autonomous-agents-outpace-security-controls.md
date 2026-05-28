@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerabilities", "Autonomous Agents", "Cybersecurity"]
 source: "Multiple Security Reports"
 sourceUrl: "https://thehackernews.com"
+entities: ["CVE-2026-21536", "XBOW", "Microsoft", "CVE-2026-26118", "Azure Model Context Protocol", "Google", "CVE-2026-0628", "Chrome Gemini", "OpenClaw", "CNCERT", "Langflow", "CVE-2026-33017", "IBM"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

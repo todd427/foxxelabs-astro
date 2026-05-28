@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Transparency", "Compliance", "AI-Generated Content"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Article 50", "August 2, 2026", "European Commission", "Code of Practice on Transparency of AI-Generated Content", "EU common icon", "187 written submissions"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

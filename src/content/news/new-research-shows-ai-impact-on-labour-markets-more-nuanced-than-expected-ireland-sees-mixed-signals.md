@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour-market", "employment", "ireland", "research"]
 source: "Multiple research sources"
 sourceUrl: "https://example.com"
+entities: ["Anthropic", "March 2026", "ChatGPT", "Yale Budget Lab", "Version 1", "€355,000", "16%", "Goldman Sachs Research", "European Central Bank", "European Commission", "AI Act", "March 27th", "PwC 2025 Global AI Jobs Barometer", "56%", "64%", "RTÉ"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

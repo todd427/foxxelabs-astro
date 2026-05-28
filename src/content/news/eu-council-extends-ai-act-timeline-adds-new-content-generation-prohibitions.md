@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "digital policy"]
 source: "EU Council"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "Digital Omnibus VII", "December 2, 2027", "August 2, 2028", "European Commission", "European AI Office", "March 27, 2026", "June 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

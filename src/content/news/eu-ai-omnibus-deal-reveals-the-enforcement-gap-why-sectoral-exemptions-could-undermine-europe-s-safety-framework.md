@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulatory enforcement", "sectoral exemptions", "AI governance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "AI Office", "EU AI Act", "May 7 2026", "May 8 2026", "August 2027", "Ireland", "Data Protection Commissioner"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

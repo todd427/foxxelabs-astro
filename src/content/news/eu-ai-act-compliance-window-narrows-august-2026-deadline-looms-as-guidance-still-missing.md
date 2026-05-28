@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "high-risk systems", "regulatory implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2, 2026", "Annex III", "Article 50", "Digital Omnibus", "December 2, 2027", "August 2, 2028", "Article 57", "European Commission", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

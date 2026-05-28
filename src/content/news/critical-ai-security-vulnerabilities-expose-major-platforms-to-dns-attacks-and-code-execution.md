@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerabilities", "AI security", "DNS exfiltration", "remote code execution"]
 source: "Multiple Security Researchers"
 sourceUrl: "https://security-research-disclosure.com"
+entities: ["Amazon Bedrock", "AgentCore Code Interpreter", "LangSmith", "CVE-2026-25750", "SGLang", "CVE-2026-3059", "CVE-2026-3060", "CVE-2026-21536", "BeyondTrust", "Miggo Security", "Pentera", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

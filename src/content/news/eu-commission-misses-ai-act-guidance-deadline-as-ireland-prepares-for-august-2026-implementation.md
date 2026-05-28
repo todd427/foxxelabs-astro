@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "compliance", "regulation"]
 source: "European Commission"
 sourceUrl: "https://commission.europa.eu"
+entities: ["EU Commission", "EU AI Act", "Ireland", "August 2026", "February deadline", "March 13 2026", "March 5 2026", "European Council", "Draft regulation on harmonised AI rules", "Code of Practice on marking and labelling of AI-generated content", "International AI Summit Dublin", "October 14 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

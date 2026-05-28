@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-source", "enterprise-ai", "model-efficiency", "agentic-ai"]
 source: "TechCrunch"
 sourceUrl: "https://techcrunch.com"
+entities: ["Lightricks", "LTX 2.3", "ByteDance", "Helios", "Peking University", "Canva", "OpenAI", "GPT-5.4", "Alibaba", "Qwen 3.5", "Anthropic", "Model Context Protocol", "Linux Foundation", "Agentic AI Foundation", "Microsoft", "AT&T", "Ireland", "CASPIr", "AI Office", "Ireland AI Act", "NVIDIA H100", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

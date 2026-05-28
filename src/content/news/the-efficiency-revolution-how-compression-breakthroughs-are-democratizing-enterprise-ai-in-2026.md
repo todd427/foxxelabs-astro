@@ -6,6 +6,9 @@ category: "Research"
 tags: ["model-compression", "AI-efficiency", "enterprise-AI"]
 source: "arxiv.org/list/cs.AI"
 sourceUrl: "https://arxiv.org/"
+entities: ["Caltech", "Google", "OpenAI", "Anthropic", "1-Bit Compression", "TurboQuant", "ICLR 2026", "PolarQuant", "Quantized Johnson-Lindenstrauss", "GLM-5.1", "SWE-Bench Pro", "Gemma 4", "Mistral", "EU AI Act", "August 2026", "April 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-misinformation", "Ireland"]
 source: "Psychological Society of Ireland & IADT Erasmus+ Programme"
 sourceUrl: "https://www.psychologicalSociety.ie"
+entities: ["Psychological Society of Ireland", "SIGMAC", "Institute of Art, Design and Technology", "EU Erasmus+ Cyberpsychology Blended Intensive Program", "February 2026", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20, 2026", "EU AI Act", "Digital Services Act", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

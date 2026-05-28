@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "implementation", "Ireland"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.gov.ie/en/press-release/ireland-ai-act-implementation/"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Peter Burke", "15 National Competent Authorities", "HubSpot", "€40.35m", "Microsoft", "€4m", "EU Presidency 2026", "International AI Summit Dublin", "October 14, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

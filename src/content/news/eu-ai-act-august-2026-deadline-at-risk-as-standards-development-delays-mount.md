@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "standards", "transparency", "regulation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2026", "CEN", "CENELEC", "Digital Omnibus", "December 2027", "August 2028", "Article 50", "Luxembourg", "CSSF", "28%", "22%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

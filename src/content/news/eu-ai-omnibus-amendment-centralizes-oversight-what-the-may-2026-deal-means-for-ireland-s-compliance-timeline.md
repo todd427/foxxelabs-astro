@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Compliance", "AI Governance", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus Amendment", "EU AI Act", "EU AI Office", "May 2026", "August 2026", "Ireland", "EU product safety laws"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

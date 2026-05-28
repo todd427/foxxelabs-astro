@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "LLM-optimization", "production-practices"]
 source: "Foxxe Labs Research Synthesis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["RSIP", "CAD", "MPS", "CHI", "CCP", "Claude", "GPT-4o", "April 2026", "Q3 2026", "Andrej Karpathy", "Foxxe Labs"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

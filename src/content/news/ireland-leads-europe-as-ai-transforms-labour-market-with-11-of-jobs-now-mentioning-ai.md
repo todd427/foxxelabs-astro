@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour market", "employment", "AI adoption", "Ireland"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU AI Act", "Meta Ireland", "Version 1", "Department of Finance Ireland", "Anthropic", "March 2026", "11%", "CWU union", "Digital Omnibus", "Roop Singh"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

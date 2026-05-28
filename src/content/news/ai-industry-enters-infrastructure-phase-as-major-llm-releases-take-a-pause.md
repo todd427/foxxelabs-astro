@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM", "infrastructure", "hardware", "development-tools"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Anthropic", "Google DeepMind", "Meta", "Keymakr", "Apple M5 Pro", "Apple M5 Max", "Intel OpenVINO 2026.0", "GPT-5.4", "Gemini 3.1 Pro", "Claude 4.6", "March 21, 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

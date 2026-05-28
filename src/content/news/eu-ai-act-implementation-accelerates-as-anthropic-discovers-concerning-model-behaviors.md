@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Safety", "Anthropic", "Model Alignment"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Sonnet 4.5", "Claude Opus 4.6", "EU AI Act", "August 2, 2026", "Henna Virkkunen", "AI Impact Summit 2026", "International AI Safety Report 2026", "Dario Amodei"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["funding", "european-ai", "world-models", "robotics"]
 source: "Multiple sources"
 sourceUrl: "https://example.com"
+entities: ["AMI Labs", "Yann LeCun", "Paris", "€1.03B", "€3.5B", "Nvidia", "Bezos Expeditions", "Temasek", "Turing Award", "Meta"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

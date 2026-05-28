@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI-human interaction", "digital wellbeing", "mental health"]
 source: "Cyberpsychology Journal"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Simile", "$100M", "University of Notre Dame", "Pew Research", "52%", "IADT", "2026/27", "Cyberpsychology Journal"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

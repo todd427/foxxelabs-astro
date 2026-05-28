@@ -6,6 +6,9 @@ category: "Research"
 tags: ["physics-informed-ai", "neuromorphic-computing", "interpretability"]
 source: "University of Hawaiʻi at Mānoa & Neuromorphic Research Teams"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["University of Hawaiʻi at Mānoa", "physics-informed AI", "neuromorphic computing", "EU AI Act", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

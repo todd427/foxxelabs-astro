@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "economic impact", "worker welfare"]
 source: "Goldman Sachs Research"
 sourceUrl: "https://www.goldmansachs.com"
+entities: ["Goldman Sachs", "Morgan Stanley", "Deutsche Bank", "EU AI Act", "Q1 2026", "52,050 job cuts", "15,341 cuts", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

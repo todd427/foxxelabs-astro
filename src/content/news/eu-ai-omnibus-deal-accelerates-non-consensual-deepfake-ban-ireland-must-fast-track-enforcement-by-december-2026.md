@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "deepfake regulation", "Ireland compliance", "AI safety"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus Amendment", "EU AI Act", "Ireland", "Data Protection Commission", "December 2 2026", "May 7 2026", "nudifier applications", "Article 50", "European AI Office", "Europol"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

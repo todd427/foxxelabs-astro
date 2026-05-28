@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["context-windows", "ai-architecture", "european-strategy"]
 source: "DeepSeek Research"
 sourceUrl: "https://deepseek.com/research"
+entities: ["DeepSeek V4 Flash", "DeepSeek V4 Pro", "1M token context window", "Hybrid Attention Architecture", "April 24, 2026", "GDPR", "MTIA", "Meta", "Google TPU", "Llama", "Mistral"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

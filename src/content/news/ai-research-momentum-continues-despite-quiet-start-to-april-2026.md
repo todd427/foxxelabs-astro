@@ -6,6 +6,9 @@ category: "Research"
 tags: ["research trends", "industry analysis", "AI development"]
 source: "ArXiv AI Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "GPT-5.4", "Google DeepMind", "AlphaEvolve", "Gemini", "Anthropic", "Claude", "DeepSeek-R1", "EPFL", "Gemini 3.1 Flash-Lite", "April 2026", "$25 billion"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

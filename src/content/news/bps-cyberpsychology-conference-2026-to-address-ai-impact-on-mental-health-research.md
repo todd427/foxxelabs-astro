@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental health", "AI research", "digital wellbeing"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["British Psychological Society", "6th Cyberpsychology Conference", "July 6-7 2026", "University of York", "Prof. Paul Cairns", "Prof. Amy Orben", "University of Cambridge", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Dr Lisa Orchard", "University of Wolverhampton", "GDPR", "£6,000"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "deepfakes", "regulation", "implementation"]
 source: "Council of the European Union"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "Omnibus VII", "March 13 2026", "December 2 2027", "August 2 2028", "Michael McNamara", "European Commission", "Article 6", "February 2 deadline"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

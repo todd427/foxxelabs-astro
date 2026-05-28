@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "federal preemption", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Trump administration", "White House", "National AI Legislative Framework", "March 20th", "EU AI Act", "Ireland", "General Scheme of AI Regulation Bill 2026", "Colorado's AI Act", "AI Litigation Task Force", "Central Bank", "Coimisiún na Meán", "Data Protection Commission", "Texas TRAIGA", "California AI Transparency Acts", "January 2026", "European Commission", "March 27th", "Q2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

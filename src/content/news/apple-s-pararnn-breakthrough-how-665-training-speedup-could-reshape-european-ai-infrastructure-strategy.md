@@ -6,6 +6,9 @@ category: "Research"
 tags: ["neural-architecture", "training-efficiency", "compute-infrastructure"]
 source: "Apple Research / ICLR 2026"
 sourceUrl: "https://arxiv.org/search/?query=ParaRNN"
+entities: ["Apple", "ParaRNN", "7B-parameter RNN", "665× speedup", "ICLR 2026", "CoreWeave", "€570M", "Google TPU 8t", "EU AI Act", "August 2026", "Carnegie Mellon LoongRL"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "mental health", "cyberpsychology", "EU AI Act"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["EU AI Act", "2024", "Cyberpsychology journal", "Volume 20, 2026", "European Commission", "UNICEF", "Commissioner Várhelyi", "WHO", "Dr. Hans Henri Kluge", "FDA Digital Health Advisory Committee", "November 2025", "World Economic Forum", "€75 million EURO-3C Project"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

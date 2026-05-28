@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["GPU infrastructure", "AI networking", "enterprise AI", "compute strategy"]
 source: "OpenAI News"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "AMD", "Broadcom", "Intel", "Microsoft", "NVIDIA", "MRC protocol", "May 5, 2026", "AWS", "Azure", "Google Cloud", "OVH", "Scaleway"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

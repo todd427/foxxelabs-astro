@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["workforce", "automation", "tech-layoffs", "labor-market"]
 source: "Multiple Industry Reports"
 sourceUrl: "https://example.com/ai-layoffs-march-2026"
+entities: ["Amazon", "Google", "Microsoft", "HSBC", "Atlassian", "Block Inc.", "ChatGPT", "Goldman Sachs Research", "PwC", "EU AI Act", "45,000", "52%", "20,000", "1,600", "10%", "March 2026", "56%", "6-7%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

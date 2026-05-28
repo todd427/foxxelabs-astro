@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Ireland", "Regulatory enforcement", "Distributed governance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Oireachtas Enterprise Committee", "Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Central Bank", "Data Protection Commissioner", "Annex 3", "December 2, 2027", "August 2026", "May 6, 2026", "May 19"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

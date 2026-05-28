@@ -6,6 +6,9 @@ category: "Security"
 tags: ["agentic-ai", "supply-chain-attacks", "ai-governance"]
 source: "Krebs on Security / The Hacker News"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["ClawHavoc", "ClawHub", "1,100 malicious skills", "early 2026", "EU AI Act", "August 2026 enforcement", "IRISA Cert", "CVE", "SBOM"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

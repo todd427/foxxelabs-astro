@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-effects", "youth-online-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "ChatGPT", "EU AI Act", "Ireland AI Office", "August 2026", "December 2027", "bps.org.uk"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

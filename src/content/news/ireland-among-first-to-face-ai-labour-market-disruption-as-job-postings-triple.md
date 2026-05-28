@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour market", "employment", "AI adoption", "Ireland"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "Department of Finance", "European Central Bank", "EU", "US", "Version 1", "Anthropic", "11%", "4%", "15%", "250", "400", "November 2025", "2023-2025", "European AI Social Compact"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

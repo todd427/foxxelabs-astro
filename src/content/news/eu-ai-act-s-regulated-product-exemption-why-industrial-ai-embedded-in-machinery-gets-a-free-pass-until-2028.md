@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "regulated products", "industrial AI", "compliance"]
 source: "EU Council AI Act Amendment Agreement"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Parliament", "May 7 2026", "August 2 2028", "December 2 2027", "CE marking", "Irish AI Office", "August 1 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

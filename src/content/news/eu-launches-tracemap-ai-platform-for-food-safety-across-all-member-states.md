@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["food safety", "EU policy", "traceability", "supply chain"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_24_6234"
+entities: ["European Commission", "TraceMap", "EU", "27 member states", "Ireland", "ARA oil", "China", "2024 AI innovation package", "19 AI factories", "16 member states"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

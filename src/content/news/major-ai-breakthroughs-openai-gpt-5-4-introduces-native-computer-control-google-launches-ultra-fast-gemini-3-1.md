@@ -6,6 +6,9 @@ category: "Research"
 tags: ["GPT-5", "Gemini", "Computer Control", "EU AI"]
 source: "OpenAI News"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "Google", "Gemini 3.1 Flash-Lite", "Anthropic", "Jack Clark", "March 5", "March 3", "March 11", "1 million token context window", "€107 million RAISE initiative"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

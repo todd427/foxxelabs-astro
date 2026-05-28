@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "alignment research", "model evaluation", "frontier AI"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Safety Fellowship", "April 6 2026", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

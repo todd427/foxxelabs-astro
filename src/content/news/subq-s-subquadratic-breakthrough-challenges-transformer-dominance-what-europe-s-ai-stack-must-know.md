@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM Architecture", "Context Windows", "Enterprise AI", "Compute Efficiency"]
 source: "SubQ Product Launch"
 sourceUrl: "https://subquadratic.ai"
+entities: ["SubQ", "1M-Preview", "$29M", "12M-token", "GPT-5.5 Instant", "EU AI Act", "Article 50", "May 5 2026", "August 2 2026", "4M-token"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 
