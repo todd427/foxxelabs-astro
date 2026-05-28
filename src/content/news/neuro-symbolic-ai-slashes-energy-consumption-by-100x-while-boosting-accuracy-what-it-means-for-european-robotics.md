@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "robotics", "sustainability"]
 source: "International Conference of Robotics and Automation"
 sourceUrl: "https://www.icra2026.org"
+entities: ["Neuro-Symbolic AI", "neural networks", "symbolic reasoning", "International Conference of Robotics and Automation (ICRA)", "Vienna", "May 2026", "EU AI Act", "August 2026", "Ireland", "100x energy reduction"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

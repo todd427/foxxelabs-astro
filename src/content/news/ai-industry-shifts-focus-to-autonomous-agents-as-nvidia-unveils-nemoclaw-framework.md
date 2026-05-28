@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["autonomous-agents", "nvidia", "local-ai", "agentic-ai"]
 source: "NVIDIA GTC 2026"
 sourceUrl: "https://nvidia.com"
+entities: ["NVIDIA", "NemoClaw", "GTC 2026", "Nemotron 3 Super", "120-billion-parameter", "85.6% PinchBench", "Cursor AI", "Composer 2", "Google DeepMind", "Gemini 3.1 Pro", "1M-token context", "77.1% ARC-AGI-2", "Inception Mercury 2", "1,000 tokens/second", "Claude 4.5 Haiku", "GPT 5.2 Mini", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

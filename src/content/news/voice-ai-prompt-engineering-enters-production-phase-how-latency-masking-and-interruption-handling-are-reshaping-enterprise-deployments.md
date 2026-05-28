@@ -6,6 +6,9 @@ category: "Research"
 tags: ["voice-ai", "prompt-engineering", "production-infrastructure", "latency-optimization"]
 source: "Technical Framework Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "Article 50", "Ireland August 2026 AI Transparency Enforcement Deadline", "500-800ms latency", "1.5 seconds latency"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

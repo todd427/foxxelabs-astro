@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "Regulatory enforcement", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "15 national competent authorities", "National AI Office", "August 2, 2026", "December 27, 2027", "August 2, 2028", "Digital Omnibus", "EU presidency June 30 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

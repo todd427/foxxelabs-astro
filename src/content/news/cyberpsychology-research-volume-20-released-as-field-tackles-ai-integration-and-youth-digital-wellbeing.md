@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI research", "digital wellbeing", "youth behavior"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "ChatGPT", "British Psychological Society", "Cyberpsychology Section", "2026 Annual Conference", "Dr Nicola Fox Hamilton", "Dún Laoghaire Institute of Art, Design and Technology", "Professor John McAlaney", "CYPSY29", "Porto", "June 30-July 2"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

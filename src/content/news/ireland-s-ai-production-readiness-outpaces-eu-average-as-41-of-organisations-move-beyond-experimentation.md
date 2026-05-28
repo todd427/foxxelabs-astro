@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI adoption", "Irish tech", "production deployment", "enterprise AI"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Ireland", "EU", "41%", "33%", "International AI Summit", "2026 Presidency of the Council of the European Union", "14 October 2026", "RDS Dublin", "EU AI Act", "74%", "August 2026", "Google Gemma 4"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

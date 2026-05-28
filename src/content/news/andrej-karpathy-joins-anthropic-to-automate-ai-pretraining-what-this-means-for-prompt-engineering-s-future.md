@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["anthropic", "ai-pretraining", "prompt-engineering-evolution"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Andrej Karpathy", "Anthropic", "Claude", "Tesla", "OpenAI", "Model Context Protocol", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

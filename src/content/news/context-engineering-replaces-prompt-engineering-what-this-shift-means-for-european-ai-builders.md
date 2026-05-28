@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "AI-development", "best-practices"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxe.ai"
+entities: ["OpenAI", "Anthropic", "APE (Automatic Prompt Engineer)", "OPRO", "AI Act", "context engineering", "prompt engineering"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "Ireland", "regulation"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["EU AI Act", "Ireland", "August 2, 2026", "Oifig Intleachta Shaorga na hÉireann (AI Office of Ireland)", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "European Commission", "Central Bank", "State Examinations Commission", "March 17, 2026", "Q2 2026", "$492 million", "$1 billion by 2030"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

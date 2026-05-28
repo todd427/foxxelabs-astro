@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland regulation", "compliance timeline", "AI governance"]
 source: "Oireachtas Enterprise Committee"
 sourceUrl: "https://www.oireachtas.ie/en/business/"
+entities: ["Oireachtas Enterprise Committee", "Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "Digital Omnibus", "May 6 2026", "May 7 2026", "August 2026", "December 2027", "August 2 2027", "Article 50", "EU AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

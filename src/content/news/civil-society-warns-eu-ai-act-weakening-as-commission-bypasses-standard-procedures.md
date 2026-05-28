@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Civil Society", "Regulatory Transparency", "Digital Omnibus"]
 source: "ARTICLE 19"
 sourceUrl: "https://www.article19.org"
+entities: ["EU AI Act", "Digital Omnibus", "ARTICLE 19", "European Commission", "European Parliament", "Ireland AI Office", "December 2027", "August 2028", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

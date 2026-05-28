@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI", "cognitive-science", "hypnosis"]
 source: "Cyberpsychology, Behaviour, and Social Networking"
 sourceUrl: "https://www.liebertpub.com/doi/abs/10.1089/cyber.2025.0123"
+entities: ["Cyberpsychology, Behaviour, and Social Networking", "March 2026", "ChatGPT", "British Psychological Society", "Cyberpsychology Section", "2026 conference"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

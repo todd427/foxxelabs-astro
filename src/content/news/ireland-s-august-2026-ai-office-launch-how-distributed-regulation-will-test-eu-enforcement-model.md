@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Ireland", "EU AI Act", "Governance", "Enforcement"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Regulation of Artificial Intelligence Bill 2026", "Oifig Intleachta Shaorga na hÉireann", "AI Office of Ireland", "August 1, 2026", "August 2, 2026", "Department of Enterprise, Tourism and Employment", "15-authority model"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

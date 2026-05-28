@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "enterprise-ai", "deployment-infrastructure"]
 source: "Multiple sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Anthropic", "Tomoro", "Blackstone", "Hellman & Friedman", "Goldman Sachs", "Apollo", "General Atlantic", "GIC", "Sequoia", "$1.5B", "May 2026", "Claude Opus 4.7"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

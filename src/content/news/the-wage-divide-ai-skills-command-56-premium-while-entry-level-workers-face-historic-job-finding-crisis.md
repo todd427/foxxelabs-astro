@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI skills gap", "wage polarization", "labour market", "entry-level employment"]
 source: "Indeed Hiring Lab / Goldman Sachs Analysis"
 sourceUrl: "https://www.indeedhiringlabs.com"
+entities: ["Goldman Sachs", "Indeed Hiring Lab", "Meta", "Ireland", "EU", "56% wage premium", "March 2026", "5.6 million jobs projection", "2040"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

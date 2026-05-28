@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Infrastructure", "EU Sovereignty", "Compute Capacity"]
 source: "Anthropic partnership announcement"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "SpaceX", "220,000 GPUs", "Colossus 1", "NVIDIA", "300 megawatts", "Amazon", "EU AI Act", "August 2026", "Q1 2026", "80x growth"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

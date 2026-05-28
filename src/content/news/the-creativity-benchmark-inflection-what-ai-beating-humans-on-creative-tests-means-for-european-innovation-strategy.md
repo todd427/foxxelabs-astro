@@ -6,6 +6,9 @@ category: "Research"
 tags: ["generative-ai", "creativity-benchmarks", "competitive-advantage", "ai-capabilities"]
 source: "AI Industry Research Study"
 sourceUrl: "https://example.com"
+entities: ["DeepSeek V4", "Google", "Anthropic", "OpenAI", "EU AI Act", "GDPR", "100,000+ people creativity study"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

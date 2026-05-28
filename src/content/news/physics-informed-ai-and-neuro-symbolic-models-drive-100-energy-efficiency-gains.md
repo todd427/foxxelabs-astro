@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "physics-informed-ml", "sustainable-ai"]
 source: "International Conference of Robotics and Automation"
 sourceUrl: "https://www.icra2026.org"
+entities: ["neuro-symbolic AI", "physics-informed machine learning", "International Conference of Robotics and Automation Vienna", "University of Hawaiʻi at Mānoa", "Google", "Ireland EU Presidency 2026", "International AI Summit 14 October RDS Dublin", "Research Ireland", "€17m STEM infrastructure investment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

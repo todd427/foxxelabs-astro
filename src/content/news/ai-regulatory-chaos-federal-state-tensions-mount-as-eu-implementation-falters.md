@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "compliance", "governance"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "Article 6", "December 2027", "August 2026", "President Trump", "December executive order", "Colorado", "California", "Texas", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "National AI Office", "Scale Ireland", "35.4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

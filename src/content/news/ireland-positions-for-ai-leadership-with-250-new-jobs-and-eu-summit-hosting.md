@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["jobs", "investment", "AI Summit", "EU Presidency"]
 source: "Silicon Republic"
 sourceUrl: "https://siliconrepublic.com"
+entities: ["Version 1", "Ireland", "250 AI jobs", "Dublin", "EU Presidency 2026", "International AI Summit October 14 2026", "European AI Innovation Month November 17", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "National AI Office August 2026", "EU AI Act", "Intel OpenVINO 2026.0"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

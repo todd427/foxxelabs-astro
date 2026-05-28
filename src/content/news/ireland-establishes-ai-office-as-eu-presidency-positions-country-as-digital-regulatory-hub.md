@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "governance", "digital policy"]
 source: "Irish Government"
 sourceUrl: "https://www.gov.ie"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "2026 EU Presidency", "International AI Summit Dublin", "14 October 2026", "1 August 2026", "Department of Enterprise, Tourism and Employment", "OpenAI", "Mistral", "Gartner", "$1.37 trillion", "$2.52 trillion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

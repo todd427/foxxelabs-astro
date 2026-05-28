@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM releases", "Apple M5", "Intel OpenVINO", "Irish AI investment"]
 source: "Multiple AI tracking sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Apple M5", "Apple M4", "Apple M1", "Intel OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM", "OpenAI", "Google Gemini 3.1 Flash Lite", "Mistral AI", "EU AI Act", "Forvis Mazars C-suite Barometer", "PwC", "Scale Ireland", "March 26 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

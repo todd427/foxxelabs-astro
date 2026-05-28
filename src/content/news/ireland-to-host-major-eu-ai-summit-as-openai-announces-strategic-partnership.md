@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU Presidency", "AI Summit", "OpenAI", "Policy"]
 source: "European Commission"
 sourceUrl: "https://irish-presidency.consilium.europa.eu/"
+entities: ["Ireland", "OpenAI", "EU Council Presidency 2026", "International AI Summit", "October 14 2026", "Dublin", "EU AI Act", "Department for Enterprise, Tourism and Employment", "SME Booster programme", "European Commission", "Digital Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

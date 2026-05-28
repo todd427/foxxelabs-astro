@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["research", "policy", "anthropic", "pentagon"]
 source: "ArXiv"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Anthropic", "Pentagon", "OpenAI", "Google DeepMind", "Jeff Dean", "NeuroHex", "Alien Science", "EU AI Act", "NVIDIA GB300", "Andrej Karpathy"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

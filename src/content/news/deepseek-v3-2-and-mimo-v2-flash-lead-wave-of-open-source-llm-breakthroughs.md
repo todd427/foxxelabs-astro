@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["open-source", "reasoning", "efficiency", "MoE"]
 source: "Multiple industry sources"
 sourceUrl: "https://huggingface.co"
+entities: ["DeepSeek-V3.2", "DeepSeek Sparse Attention", "DeepSeek-V3.2-Speciale", "GPT-5", "MiMo-V2-Flash", "Xiaomi", "AIME", "HMMT 2025", "MIT", "Recursive Language Models", "Falcon-H1R", "NVIDIA", "Alpamayo", "Nemotron Speech ASR", "Claude 3.7 Sonnet", "GPT-4.1", "Stanford", "$5.2B", "$200B", "2024", "2034", "256K context window"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

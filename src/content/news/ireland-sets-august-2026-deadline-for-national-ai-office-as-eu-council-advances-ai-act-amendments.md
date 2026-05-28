@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Office Ireland", "enforcement", "regulation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "1 August 2026", "EU Council", "Omnibus VII", "December 2027", "August 2028", "€35M", "€15M", "7%", "3%", "GDPR", "27 March 2026", "October 2026 AI Summit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

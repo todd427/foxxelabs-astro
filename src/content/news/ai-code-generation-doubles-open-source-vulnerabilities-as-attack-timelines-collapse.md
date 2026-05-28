@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Code Generation", "Vulnerability Research", "Penetration Testing"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://example.com/ai-security-vulnerabilities-2026"
+entities: ["2026 OSSRA report", "581 vulnerabilities", "CVE-2026-25724", "Anthropic Claude Code", "Terra Security", "32% CVE exploitation on disclosure", "2026 State of Software Security report", "82% organizations affected", "OpenClaw Audit", "41.7% AI skills vulnerabilities"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

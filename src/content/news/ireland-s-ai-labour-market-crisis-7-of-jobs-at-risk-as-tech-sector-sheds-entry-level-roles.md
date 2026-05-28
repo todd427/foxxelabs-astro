@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "Ireland", "job displacement", "ESRI"]
 source: "ESRI and Department of Finance"
 sourceUrl: "https://www.esri.ie"
+entities: ["ESRI", "Department of Finance", "Ireland", "EU", "7%", "20%", "13.7%", "11.4%", "10.6%", "11%", "4%", "2023", "2025", "November 2024"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

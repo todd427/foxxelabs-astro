@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI employment", "labour market", "job displacement"]
 source: "Goldman Sachs Economic Research"
 sourceUrl: "https://www.goldmansachs.com"
+entities: ["Goldman Sachs", "Gen Z", "US labour market", "25,000 jobs", "9,000 jobs", "16,000 net jobs monthly", "Q1 2026", "52,050 job cuts", "March 2026", "15,341 layoffs", "Deutsche Bank", "EU"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

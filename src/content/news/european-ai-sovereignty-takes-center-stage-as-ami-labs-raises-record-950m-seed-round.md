@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["funding", "european-ai", "world-models", "yann-lecun"]
 source: "Multiple industry sources"
 sourceUrl: "https://example.com"
+entities: ["AMI Labs", "Yann LeCun", "€950M", "$1.03B seed round", "$3.5B valuation", "Nvidia", "Bezos Expeditions", "Temasek", "world models", "Paris"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

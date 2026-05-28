@@ -6,6 +6,9 @@ category: "Security"
 tags: ["supply-chain", "ai-infrastructure", "threat-landscape"]
 source: "Security Research Sources"
 sourceUrl: "https://thehackernews.com"
+entities: ["LiteLLM", "EU AI Act", "August 2026", "128K+ token contexts", "context window poisoning"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

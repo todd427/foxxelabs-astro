@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU AI Act", "compliance", "regulation", "Ireland"]
 source: "EU Council"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["Ireland", "EU AI Act", "Ireland's AI Office", "August 2026", "France", "Germany", "EU Council", "European AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

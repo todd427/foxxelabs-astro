@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-weights", "EU-AI-sovereignty", "multilingual-models"]
 source: "University of Edinburgh / Barcelona Supercomputing Center"
 sourceUrl: "https://www.bsc.es/"
+entities: ["EuroLLM-22B", "University of Edinburgh", "MareNostrum 5", "Barcelona Supercomputing Center", "EU AI Act", "August 2, 2026", "24 EU official languages", "Llama 4 Scout", "ZAYA1-8B", "GPT-5.5", "Claude Opus 4.7", "Article 50", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

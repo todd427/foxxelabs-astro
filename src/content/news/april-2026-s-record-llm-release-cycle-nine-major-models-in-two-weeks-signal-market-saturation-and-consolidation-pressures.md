@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM releases", "market consolidation", "AI infrastructure", "European AI"]
 source: "LLM tracking analysis"
 sourceUrl: "https://example.com/april-2026-releases"
+entities: ["Anthropic", "OpenAI", "Google", "Mistral Medium 3", "Claude Opus 4.7", "EuroLLM-22B", "Horizon Europe", "EuroHPC", "CoreWeave", "Jane Street", "$6B", "Frontier Model Forum", "MCP", "April 2026", "August 2026", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

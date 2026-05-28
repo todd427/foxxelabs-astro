@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "enterprise deployment", "US policy"]
 source: "White House AI Oversight (May 5, 2026)"
 sourceUrl: "https://www.whitehouse.gov"
+entities: ["White House", "EU AI Act", "EU AI Office", "August 2026", "May 5 2026", "Ireland", "Silicon Valley"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

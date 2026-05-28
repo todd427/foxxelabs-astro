@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "structured-outputs", "developer-tools"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "structured outputs API", "JSON", "late 2025", "March 2026", "11.4× speedup", "3.55 hours", "18.7 minutes", "Anthropic", "Model Context Protocol", "97M+ installs", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

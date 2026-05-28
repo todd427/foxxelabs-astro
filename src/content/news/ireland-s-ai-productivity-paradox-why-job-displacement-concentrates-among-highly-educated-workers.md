@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour impact", "Ireland jobs", "workforce reskilling", "AI adoption"]
 source: "Economic and Social Research Institute (ESRI) / Department of Finance"
 sourceUrl: "https://www.esri.ie"
+entities: ["Ireland", "ESRI", "Department of Finance", "7%", "Glandore", "European Investment Bank", "12,000", "4%", "AI Economy Ireland 2026", "92%", "10%", "European Training Foundation", "IDA Ireland", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

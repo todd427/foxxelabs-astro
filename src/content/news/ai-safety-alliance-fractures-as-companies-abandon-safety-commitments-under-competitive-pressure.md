@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI Safety", "Competition", "Regulation", "Industry"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Anthropic", "Google DeepMind", "Meta", "Pentagon", "EU AI Act", "August 2026", "New York RAISE Act", "Yoshua Bengio", "International AI Safety Report", "arXiv"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

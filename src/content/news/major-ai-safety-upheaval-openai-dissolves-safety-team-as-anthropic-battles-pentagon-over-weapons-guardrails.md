@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI Safety", "Military AI", "Alignment", "Regulation"]
 source: "Multiple sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Anthropic", "Pentagon", "Pete Hegseth", "Automated Alignment Agent (A3)", "$1 billion", "5.38%", "86.79%"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

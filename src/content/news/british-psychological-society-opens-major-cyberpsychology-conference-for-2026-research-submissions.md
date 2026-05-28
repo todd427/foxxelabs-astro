@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI ethics", "digital behaviour", "research funding"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["British Psychological Society", "Cyberpsychology Section", "6th Annual Conference", "July 6-7 2026", "York St John University", "Paul Cairns", "Amy Orben", "April 10 2026", "£6,000 grant scheme", "£500 grants", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

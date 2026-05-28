@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["agentic-ai", "infrastructure", "model-context-protocol"]
 source: "Foxxe Labs Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Model Context Protocol (MCP)", "97 million installs", "Agentic AI Foundation", "Linux Foundation", "Anthropic", "December 2025", "March 2026", "April 2026", "EU AI Act", "August 2026", "Ireland", "41%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

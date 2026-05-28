@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "AI-CBT", "digital-behaviour", "mental-health"]
 source: "BPS Cyberpsychology Section"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["British Psychological Society", "BPS Cyberpsychology Section", "Dr David Harley", "Nature Medicine", "March 12, 2026", "Cyberpsychology journal", "Volume 20", "2.905 impact factor", "Professor Linda Kaye", "Dun Laoghaire Institute of Art, Design and Technology"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

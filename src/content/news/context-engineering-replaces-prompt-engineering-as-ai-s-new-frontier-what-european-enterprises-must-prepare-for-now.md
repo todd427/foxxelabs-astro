@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["context-engineering", "prompt-engineering", "AI-agents", "enterprise-AI"]
 source: "Technology industry sources"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "Ireland", "Europe", "2026", "2027", "Oren Etzioni"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

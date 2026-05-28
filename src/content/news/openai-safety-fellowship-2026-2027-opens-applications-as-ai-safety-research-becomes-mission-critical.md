@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment Research", "Career Development"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "OpenAI Safety Fellowship 2026–2027", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "August 2026", "Silicon Republic"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

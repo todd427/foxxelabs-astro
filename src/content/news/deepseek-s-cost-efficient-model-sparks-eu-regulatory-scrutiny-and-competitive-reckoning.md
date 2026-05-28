@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["DeepSeek", "EU AI Act", "data-protection", "competitive-landscape"]
 source: "European Commission AI Regulatory Updates"
 sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence"
+entities: ["DeepSeek", "EU AI Act", "Ireland", "Belgium", "France", "Germany", "Italy", "Netherlands", "GDPR", "August 2026", "OpenAI", "Google", "Anthropic"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

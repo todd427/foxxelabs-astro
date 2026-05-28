@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["model-releases", "enterprise-ai", "physical-ai", "cost-optimization"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://foxxelabs.com/ai-news-aggregation"
+entities: ["OpenAI", "GPT-5.2", "Mistral 3", "NVIDIA Cosmos", "GPT-oss-120b", "GPT-oss-20b", "Mistral 675B MoE", "Ministral 3", "Codestral 2508", "NVIDIA Cosmos Reason 2", "LTX-2", "K-EXAONE"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

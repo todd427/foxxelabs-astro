@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Safety", "EU AI Act", "Alignment", "Regulation"]
 source: "Multiple AI Research Labs"
 sourceUrl: "https://anthropic.com/news"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "August 2026", "o3", "o4-mini", "Code of Practice on AI-generated content", "European AI Office", "International AI Safety Report 2026", "Pentagon"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

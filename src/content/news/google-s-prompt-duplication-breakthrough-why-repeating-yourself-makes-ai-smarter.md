@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "LLM-optimization", "Google-Research"]
 source: "Google Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Google Research", "Gemini Flash-Lite", "GPT-4o-mini", "OpenAI", "Anthropic", "DeepSeek", "NameIndex", "OpenBookQA"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

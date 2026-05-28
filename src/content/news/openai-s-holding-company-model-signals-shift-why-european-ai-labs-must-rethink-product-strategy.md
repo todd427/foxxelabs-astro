@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["holding-company-strategy", "ai-consolidation", "european-competition", "product-diversification"]
 source: "AI Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["OpenAI", "Hiro", "Cohere", "Aleph Alpha", "$6.8B", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI adoption", "skills gap", "prompt engineering", "Europe"]
 source: "Stanford AI Index 2026"
 sourceUrl: "https://aiindex.stanford.edu/"
+entities: ["Stanford AI Index 2026", "53% global adoption", "70% companies deployment", "40% teams prompt engineering", "EU AI Act", "August 2026", "Anthropic", "Claude", "OpenAI", "Managed Agents", "Claude Opus 4.7", "Agents SDK"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,7 +6,14 @@ category: "Policy"
 tags: ["food safety", "EU policy", "traceability", "supply chain"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_24_6234"
+entities: ["European Commission", "TraceMap", "EU", "27 member states", "Ireland", "ARA oil", "China", "2024 AI innovation package", "19 AI factories", "16 member states"]
+significance: "high"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-03-31
+updates:
+  - { date: 2026-03-31, note: "European Commission deploys breakthrough AI traceability system to rapidly detect food fraud and contamination outbreaks across the EU." }
+  - { date: 2026-03-28, note: "European Commission deploys TraceMap AI system to detect food fraud and contamination across EU supply chains in major food safety advance.", sourceUrl: "https://ec.europa.eu" }
 ---
 
 ## Key Developments

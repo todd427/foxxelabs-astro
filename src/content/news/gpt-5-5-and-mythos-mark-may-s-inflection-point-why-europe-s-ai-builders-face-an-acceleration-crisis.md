@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["model-releases", "European-AI-strategy", "infrastructure-gap"]
 source: "OpenAI News and Anthropic Announcements"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.5", "GPT-5.5 Pro", "Anthropic", "Mythos", "EU AI Act", "Article 6", "Annex I", "Ireland AI Office", "August 2026", "December 2027", "Google", "$10 billion", "$350 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

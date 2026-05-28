@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-impact", "digital-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["ChatGPT", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "EU AI Act", "August 2026", "British Psychological Society", "Professor Paul Cairns", "Professor Amy Orben", "University of York", "December 2027", "TikTok", "Instagram"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

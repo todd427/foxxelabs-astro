@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour-market", "employment", "ECB", "Ireland"]
 source: "European Central Bank"
 sourceUrl: "https://ecb.europa.eu"
+entities: ["European Central Bank", "Ireland", "Irish Department of Finance", "Communications Workers' Union", "5,000 European firms", "11%", "20%", "12%", "56%", "120 million workers", "November 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

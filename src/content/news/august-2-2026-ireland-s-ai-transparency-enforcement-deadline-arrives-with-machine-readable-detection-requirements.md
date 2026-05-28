@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Transparency Requirements", "Compliance Deadline"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["European Commission", "EU transparency guidelines", "August 2, 2026", "Ireland's AI Office", "Annex III", "May 8-11, 2026", "EU AI Act", "machine-readable content marks", "deepfakes"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

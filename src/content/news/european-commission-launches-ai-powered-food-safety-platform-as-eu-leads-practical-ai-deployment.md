@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["food-safety", "european-commission", "funding", "practical-ai"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["European Commission", "TraceMap", "RASFF", "TRACES", "Advanced Machine Intelligence Labs", "Yann LeCun", "€1.03B", "€3.5B", "Nvidia", "Bezos Expeditions", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

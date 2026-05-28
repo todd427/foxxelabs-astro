@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Biometric regulation", "EU governance", "Ireland implementation"]
 source: "Human rights and digital rights coalition letter to European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "AI Omnibus", "40 digital rights organisations", "European Parliament", "European Commission", "Ireland's AI Office", "1 August 2026", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "Market Surveillance Authorities"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

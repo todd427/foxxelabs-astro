@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt engineering", "AI capabilities", "model behavior", "European AI development"]
 source: "Foxxe Labs Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Claude Opus 4.7", "EU AI Act", "Article 50", "EuroLLM-22B", "2026", "Foxxe Labs", "Ireland", "Europe"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

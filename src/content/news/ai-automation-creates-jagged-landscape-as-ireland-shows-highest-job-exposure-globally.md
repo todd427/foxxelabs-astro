@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labor-market", "automation", "ireland", "employment"]
 source: "Archyde"
 sourceUrl: "https://archyde.com"
+entities: ["Ireland", "EU", "US", "November 2024", "11%", "4%", "ICT", "financial services", "February", "60%", "27%", "33%", "€500k", "Goldman Sachs", "2026", "Gartner", "2027-2030"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

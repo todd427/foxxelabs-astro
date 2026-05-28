@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["cyberpsychology", "EU AI Act", "online safety", "mental health"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/"
+entities: ["European Commission", "€63.2M", "EU AI Act", "August 2026", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "April 21 2026", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

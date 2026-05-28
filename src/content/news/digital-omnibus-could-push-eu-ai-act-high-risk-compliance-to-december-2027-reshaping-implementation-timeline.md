@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "Compliance Timeline", "Standards Development"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "European Commission", "NIST", "August 2026", "December 2027", "August 2028", "Code of Practice on marking and labelling of AI-generated content", "Q2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

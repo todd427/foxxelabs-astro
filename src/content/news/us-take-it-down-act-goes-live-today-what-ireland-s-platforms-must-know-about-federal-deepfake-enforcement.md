@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["deepfakes", "regulation", "platform-compliance", "us-policy"]
 source: "US Federal Legislature"
 sourceUrl: "https://www.congress.gov"
+entities: ["Take it Down Act", "May 19 2026", "EU AI Omnibus Amendment", "December 2 2026", "Grok scandal", "3 million", "Meta", "X", "Google", "Discord", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

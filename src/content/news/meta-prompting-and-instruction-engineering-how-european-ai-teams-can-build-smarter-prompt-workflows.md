@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-methodology", "enterprise-ai"]
 source: "ArXiv Research Findings"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Meta-prompting", "PROMPT-SE 2026", "EASE 2026", "EU AI Act", "Article 50", "Ireland AI transparency enforcement framework", "August 2026", "GDPR"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

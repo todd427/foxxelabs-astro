@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["food safety", "AI deployment", "EU policy", "supply chain"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["European Commission", "TraceMap", "EU member states", "ARA oil", "infant milk formula"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland enforcement", "regulatory gaps"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "August 2026", "August 2025", "Ireland AI Office", "27 EU member states", "8 member states", "15-authority enforcement model", "Germany", "France", "European Commission", "April 28 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

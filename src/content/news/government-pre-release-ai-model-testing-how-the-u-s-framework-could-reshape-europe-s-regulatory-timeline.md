@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "frontier models", "government oversight", "EU AI Act"]
 source: "Center for AI Standards and Innovation"
 sourceUrl: "https://www.center-for-ai-standards.org"
+entities: ["Center for AI Standards and Innovation", "Google DeepMind", "Microsoft", "xAI", "Anthropic", "Claude Mythos", "OpenBSD", "FFmpeg", "EU AI Act", "August 2026", "December 2027", "August 2028"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

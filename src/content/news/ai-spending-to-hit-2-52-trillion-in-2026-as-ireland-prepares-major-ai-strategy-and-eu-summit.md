@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Investment", "Irish Strategy", "EU Summit", "Enterprise AI"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://various-industry-sources.com"
+entities: ["$2.52 trillion", "2026", "Ireland", "EU", "Meta", "Microsoft", "Alphabet", "$600 billion", "$1.37 trillion", "Irish Government AI Adoption Strategy", "OBAIR", "International AI Summit Dublin", "October 14 2026", "EU AI Act", "Gartner", "Scale Ireland", "€1.5 billion", "OpenAI for Europe", "MIT"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

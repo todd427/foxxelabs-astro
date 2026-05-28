@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["architecture", "context-windows", "cost-efficiency", "subquadratic-attention"]
 source: "Subquadratic (May 5, 2026)"
 sourceUrl: "https://subquadratic.com"
+entities: ["Subquadratic", "SubQ 1M-Preview", "12M token context", "O(n²) attention", "May 5, 2026", "GPT-5.5 Instant", "Gemini 3.5 Flash", "Gemini 3.1", "EU AI Act", "GDPR", "52x faster attention scaling", "$0.20/$0.60 per 1M tokens"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

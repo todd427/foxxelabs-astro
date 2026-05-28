@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital behavior", "youth development", "social media"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "6th BPS Cyberpsychology Conference", "University of York", "July 6-7", "Prof. Paul Cairns", "Prof. Amy Orben", "Cambridge", "CYPSY29", "29th Annual CyberPsychology, CyberTherapy, and Social Networking Conference", "Porto", "June 30 to July 2", "Mary Aiken", "ChatGPT"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

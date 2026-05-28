@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-careers", "context-engineering", "2026-trends"]
 source: "Industry analysis"
 sourceUrl: "https://foxxe.io"
+entities: ["GPT-4o", "Claude 3.5", "Gemini", "Shopify", "Tobi Lütke", "OpenAI", "Andrej Karpathy", "OpenAI o3", "Claude 4 Sonnet", "Claude 4 Opus", "EU AI Act", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

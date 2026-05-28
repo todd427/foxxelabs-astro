@@ -5,6 +5,9 @@ publishDate: 2026-03-14
 category: "Ireland & EU"
 tags: ["labour-market", "youth-employment", "AI-adoption", "ireland"]
 source: "Multiple Research Sources"
+entities: ["Ireland", "EU", "Anthropic", "Department of Finance", "EU AI Act", "11%", "4%", "20%", "12%", "14%", "August 2026", "Peterson Institute", "ages 15-29", "ages 30-59"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

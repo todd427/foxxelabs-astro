@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "adversarial attacks", "model evaluation"]
 source: "arxiv.org/list/cs.AI"
 sourceUrl: "https://arxiv.org"
+entities: ["intent laundering", "Claude Sonnet 3.7", "Gemini 3 Pro", "EU AI Act", "August 2026", "Anthropic", "Google", "Ireland", "90-98% success rates"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

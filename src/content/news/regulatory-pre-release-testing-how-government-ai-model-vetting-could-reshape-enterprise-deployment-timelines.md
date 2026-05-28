@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "model testing", "enterprise compliance"]
 source: "Industry analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["US government", "Microsoft", "xAI", "EU AI Act", "Ireland", "EU", "Silicon Valley", "financial systems", "healthcare", "energy grids"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

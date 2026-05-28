@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Agents", "Infrastructure Optimization", "Computational Efficiency"]
 source: "Google DeepMind Research"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "AlphaEvolve", "Gemini", "OpenAI", "Anthropic", "EU AI Act", "0.7%", "23%", "1 year"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

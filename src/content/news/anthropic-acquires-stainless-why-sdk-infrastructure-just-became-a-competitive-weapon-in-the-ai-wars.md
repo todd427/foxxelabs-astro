@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "competitive-advantage", "API-ecosystem"]
 source: "Anthropic"
 sourceUrl: "https://www.anthropic.com/news"
+entities: ["Anthropic", "Stainless", "$200M", "May 18, 2026", "Alex Rattray", "OpenAI", "Google", "Claude", "Stripe"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

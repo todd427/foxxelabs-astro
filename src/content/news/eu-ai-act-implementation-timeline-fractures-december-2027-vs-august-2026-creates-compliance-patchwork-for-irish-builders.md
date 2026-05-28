@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "implementation deadline", "compliance", "ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "August 2, 2026", "December 2, 2027", "August 2, 2028", "Ireland", "Data Protection Commission", "ARTICLE 19", "April 28, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

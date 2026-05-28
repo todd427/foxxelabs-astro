@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["RAISE Act", "US regulation", "EU AI Act", "compliance"]
 source: "Trump Administration National Policy Framework for Artificial Intelligence"
 sourceUrl: "https://www.whitehouse.gov/"
+entities: ["RAISE Act", "March 19 2026", "Trump Administration", "EU AI Act", "August 2 2026", "November 2 2025", "Ireland", "National Policy Framework for Artificial Intelligence", "Central Bank of Ireland", "AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

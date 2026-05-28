@@ -5,6 +5,9 @@ publishDate: 2026-03-23
 category: "Industry"
 tags: ["enterprise-ai", "eu-presidency", "ai-agents", "european-policy"]
 source: "Multiple industry sources"
+entities: ["Ireland EU Presidency", "International AI Summit Dublin", "October 14 2026", "NVIDIA Agent Toolkit", "OpenShell", "AI-Q", "Mistral Forge", "European Commission", "EU AI Act", "August 2026", "$57 billion", "OpenAI $25 billion", "Anthropic $19 billion", "Accenture", "Visa Agentic Ready", "Commerzbank", "DZ Bank"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

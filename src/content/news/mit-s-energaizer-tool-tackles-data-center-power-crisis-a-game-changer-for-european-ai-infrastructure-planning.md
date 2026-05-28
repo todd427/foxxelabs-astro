@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Infrastructure", "Energy Efficiency", "Data Centers", "Sustainability"]
 source: "MIT Technology Review"
 sourceUrl: "https://www.technologyreview.mit.edu"
+entities: ["MIT", "MIT-IBM Watson AI Lab", "EnergAIzer", "EU Green Deal", "8% accuracy", "12% electricity demand surge by 2028", "Ireland", "GPUs", "NPUs", "TPUs", "Intel Gaudi"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

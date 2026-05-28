@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Office Ireland", "EU AI Act", "Irish presidency", "regulation"]
 source: "Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.gov.ie"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "1 August 2026", "Central Bank of Ireland", "Coimisiún na Meán", "International AI Summit", "14 October 2026", "Dublin", "European Commission", "Enterprise Ireland", "Observatory for Business AI Readiness (OBAIR)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

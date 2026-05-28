@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "llm-behavior", "ai-adaptation"]
 source: "Dev.to Technical Guide"
 sourceUrl: "https://dev.to"
+entities: ["GPT-4o", "adaptive prompting", "prompt engineering"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

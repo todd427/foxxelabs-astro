@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital ethics", "youth behaviour", "EU research"]
 source: "Cyberpsychology, Behavior, and Social Networking"
 sourceUrl: "https://www.liebertpub.com/journal/cyber"
+entities: ["Spain", "European Youth Digital Ethics Framework", "Cyberpsychology, Behavior, and Social Networking", "May 2026", "529 Spanish youth aged 13-23", "EU AI Act", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

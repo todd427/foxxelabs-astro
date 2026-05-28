@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM Architecture", "Cost Economics", "Long Context", "AI Infrastructure"]
 source: "Subquadratic AI / Recent LLM Developments"
 sourceUrl: "https://subquadratic.ai"
+entities: ["SubQ", "Subquadratic AI", "SubQ 1M-Preview", "May 5 2026", "12 million token context window", "52x faster attention", "1/5th frontier model costs", "OpenAI", "Anthropic", "GPT-5.5", "Claude 3.5", "Gemini 2"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

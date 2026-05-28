@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "social-media-behaviour", "dietary-psychology"]
 source: "University of Bristol"
 sourceUrl: "https://www.bristol.ac.uk"
+entities: ["University of Bristol", "University at Buffalo School of Management", "840 participants", "Psychological Society of Ireland", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace Volume 20 (2026)", "Ireland", "EU"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

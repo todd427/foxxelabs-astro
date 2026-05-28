@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["claude-mythos", "openai-spud", "cybersecurity", "ai-capabilities"]
 source: "The Information"
 sourceUrl: "https://www.theinformation.com"
+entities: ["Anthropic", "Claude Mythos", "OpenAI", "Spud", "Sam Altman", "Sora", "Capybara edition", "CrowdStrike", "Palo Alto Networks", "EU AI Act", "GDPR", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

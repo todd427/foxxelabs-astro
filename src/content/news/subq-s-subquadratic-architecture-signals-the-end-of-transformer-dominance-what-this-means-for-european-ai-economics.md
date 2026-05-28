@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["architecture", "cost-efficiency", "frontier-models", "infrastructure"]
 source: "Subquadratic AI"
 sourceUrl: "https://subquadratic.ai"
+entities: ["SubQ", "Subquadratic", "SubQ 1M-Preview", "May 5 2026", "12M context window", "GPT-5.5", "Gemini 3.1", "52x faster attention", "1/5 cost", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

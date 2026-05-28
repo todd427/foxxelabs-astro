@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerability Discovery", "OpenSSL", "Firefox"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://openai.com/codex-security"
+entities: ["OpenAI", "Anthropic", "Codex Security", "Claude AI", "OpenSSH", "PHP", "Chromium", "Mozilla", "Firefox", "OpenSSL", "CVSS 9.8", "CVE zero-day", "1998-2000"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

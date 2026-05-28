@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "enterprise AI", "regulation", "investment"]
 source: "EU Council"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "EU Council", "European Parliament", "Council of Europe Framework Convention on Artificial Intelligence", "NVIDIA", "March 13 2026", "March 11 2026", "86%", "€284.37 billion", "$132.19 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

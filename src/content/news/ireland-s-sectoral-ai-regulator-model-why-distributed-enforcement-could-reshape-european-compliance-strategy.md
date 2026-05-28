@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act implementation", "Ireland regulation", "enforcement model", "EU governance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "13 sectoral regulators", "1 August 2026", "2 August 2026", "7% worldwide turnover", "Market Surveillance Authority"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

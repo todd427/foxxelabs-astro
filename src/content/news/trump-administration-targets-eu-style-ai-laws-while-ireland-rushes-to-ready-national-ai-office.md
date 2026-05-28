@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "federal preemption", "Ireland"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Trump Administration", "National AI Legislative Framework", "March 20 2026", "Colorado's AI Act", "EU AI Act", "Ireland National AI Office", "August 1 2026", "U.S. Secretary of Commerce", "90 days", "October 2026", "Future of Life Institute", "Pro Human AI Declaration", "Article 57"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

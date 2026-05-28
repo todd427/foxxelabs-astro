@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "model governance", "cybersecurity", "responsible deployment"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "April 7 2026", "EU AI Act", "August 2026", "OpenAI", "DeepMind"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

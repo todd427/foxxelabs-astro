@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI therapy", "mental health", "CBT", "NHS"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["Nature Medicine", "NHS", "AI-based CBT", "Dr David Harley", "BPS Cyberpsychology Section", "March 14 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

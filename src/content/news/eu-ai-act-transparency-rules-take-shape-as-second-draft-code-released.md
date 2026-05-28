@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "transparency", "watermarking", "compliance"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "Code of Practice on Marking and Labelling of AI-generated content", "August 2, 2026", "Ireland", "EU presidency", "March 30, 2026", "June 2026", "Digital Omnibus", "March 9"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

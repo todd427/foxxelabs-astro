@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "AI Regulation", "Implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Oifig Intleachta Shaorga na hÉireann", "August 2, 2026", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "Article 6", "February 2, 2026", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

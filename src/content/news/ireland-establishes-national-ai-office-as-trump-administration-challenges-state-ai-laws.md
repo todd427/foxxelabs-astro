@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "governance", "compliance"]
 source: "AI Regulation Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "National AI Office", "EU AI Act", "Trump administration", "California Transparency in Frontier AI Act", "Texas Responsible AI Governance Act", "August 2026", "January 2026", "EU Council", "Gartner", "$492 million", "$1 billion by 2030"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

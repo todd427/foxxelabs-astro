@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["pharmaceutical-ai", "enterprise-integration", "drug-discovery"]
 source: "Industry Analysis"
 sourceUrl: "https://example.com/novo-nordisk-openai"
+entities: ["Novo Nordisk", "OpenAI", "Eli Lilly", "EU AI Act", "end of 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

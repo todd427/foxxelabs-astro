@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour impact", "Irish economy", "workforce displacement", "inequality"]
 source: "ESRI Study / Irish Government Analysis"
 sourceUrl: "https://www.esri.ie"
+entities: ["ESRI", "Ireland", "7%", "20%", "92,000", "Meta", "Microsoft", "Taoiseach", "Gini coefficient", "2023", "2025", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

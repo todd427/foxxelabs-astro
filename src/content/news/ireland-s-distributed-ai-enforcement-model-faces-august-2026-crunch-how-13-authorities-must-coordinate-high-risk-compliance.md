@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Office Ireland", "distributed regulation", "enforcement coordination", "EU AI Act implementation"]
 source: "Enterprise Committee Pre-Legislative Scrutiny"
 sourceUrl: "https://www.oireachtas.ie/"
+entities: ["Ireland", "EU AI Act", "AI Office of Ireland", "August 1, 2026", "Central Bank of Ireland", "Data Protection Commission", "Coimisiún na Meán", "Regulation of AI Bill 2026", "Enterprise Committee", "IBEC", "European Artificial Intelligence Board", "May 7"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

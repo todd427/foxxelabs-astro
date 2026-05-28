@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["labour market", "AI displacement", "skills gap", "career development"]
 source: "World Economic Forum Future of Jobs Report 2025 / IMF Analysis"
 sourceUrl: "https://www.weforum.org/reports/future-of-jobs-2025"
+entities: ["World Economic Forum", "Future of Jobs Report 2025", "IMF", "Kristalina Georgieva", "PwC Global AI Jobs Barometer 2025", "EU AI Act", "December 2027", "92M jobs", "170M jobs", "56% wage premium", "600,000 data centre roles", "1.3M AI/Data positions"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

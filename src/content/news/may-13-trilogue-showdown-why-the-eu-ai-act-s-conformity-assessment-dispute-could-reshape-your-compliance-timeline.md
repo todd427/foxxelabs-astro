@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "Conformity Assessment", "High-Risk AI"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Annex I", "Annex III", "Section A", "Section B", "European AI Board", "August 2 2026", "May 13 trilogue", "Cyprus Presidency", "Irish Presidency", "July 1", "June 30", "Articles 50-55", "GPAI", "Digital Omnibus", "April 28"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

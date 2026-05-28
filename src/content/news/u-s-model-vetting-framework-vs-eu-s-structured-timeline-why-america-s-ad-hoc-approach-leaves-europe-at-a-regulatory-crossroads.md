@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "transatlantic governance", "compliance deadlines"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["White House", "Anthropic", "Mythos", "EU AI Act", "August 2, 2026", "May 7, 2026", "December 2, 2026", "August 2027", "Connecticut SB5", "Texas", "Utah", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

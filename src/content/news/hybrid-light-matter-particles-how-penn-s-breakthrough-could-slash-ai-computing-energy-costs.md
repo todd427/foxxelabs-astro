@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI efficiency", "quantum computing", "energy sustainability", "computing infrastructure"]
 source: "University of Pennsylvania Research"
 sourceUrl: "https://www.penn.edu"
+entities: ["University of Pennsylvania", "polariton", "EU Green Deal", "Ireland", "ADAPT Research Centre", "Insight Centre for Data Analytics", "PyTorch", "TensorFlow", "20-30% energy costs", "20% electricity by 2030", "3-5 years", "12-18 months"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

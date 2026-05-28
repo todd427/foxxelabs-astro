@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI Summit", "EU Innovation", "Irish Tech", "European AI Policy"]
 source: "EU Council AI Policy Update"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["Ireland", "EU Council", "European AI Innovation Month", "October 14 to November 17, 2026", "Digital omnibus on AI", "Niamh Smyth", "NVIDIA", "$1 trillion", "86%", "Ireland's EU Presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

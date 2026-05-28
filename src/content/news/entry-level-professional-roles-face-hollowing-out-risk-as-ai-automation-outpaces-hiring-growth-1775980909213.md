@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["labour-markets", "ai-displacement", "white-collar-work", "employment"]
 source: "Goldman Sachs / Epoch AI & Ipsos"
 sourceUrl: "https://www.goldmansachs.com"
+entities: ["Goldman Sachs", "Epoch AI", "Ipsos", "Global Partnership on Artificial Intelligence", "EU AI Act", "16,000 jobs per month", "0.16 percentage point unemployment increase", "20% task replacement", "15% task creation", "56% wage premium", "March 2024"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

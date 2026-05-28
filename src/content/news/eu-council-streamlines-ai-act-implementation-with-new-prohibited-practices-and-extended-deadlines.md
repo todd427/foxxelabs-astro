@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "deepfakes"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "2 December 2027", "2 August 2028", "2 August 2026", "EU common icon", "European Commission", "Q2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "investment", "anthropic", "ireland"]
 source: "Anthropic News"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "$50 billion", "800 permanent jobs", "2,400 construction jobs", "2026", "Sonnet 4.6", "Opus 4.6", "Snowflake", "$200 million", "12,600 customers", "Trinity Business School", "Ireland", "91%", "€250 billion", "2035", "EU AI Act", "August 2026", "GenAI4EU", "€700 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

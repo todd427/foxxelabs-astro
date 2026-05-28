@@ -6,6 +6,9 @@ category: "Research"
 tags: ["GPT-5.4", "AlphaEvolve", "AI capabilities", "mathematical breakthrough"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "Google DeepMind", "AlphaEvolve", "83%", "44 occupations", "March 5, 2026", "Ramsey numbers", "R(3,18)", "1 million token context window", "Anthropic", "200 Dublin jobs", "EU AI Act", "35.4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

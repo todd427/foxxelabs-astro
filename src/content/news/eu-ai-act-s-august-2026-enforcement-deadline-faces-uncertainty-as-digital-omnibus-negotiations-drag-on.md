@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "High-Risk AI", "Regulatory Risk"]
 source: "euractiv.com"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "August 2, 2026", "Digital Omnibus", "European Parliament", "Council", "Commission", "European Data Protection Board", "European Data Protection Supervisor", "Ireland", "Irish Department of Enterprise, Tourism and Employment", "National AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance Timeline", "High-Risk AI", "Ireland"]
 source: "EU AI Act Political Agreement - May 7, 2026"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "AI Omnibus", "December 2, 2027", "August 2, 2028", "May 7, 2026", "Ireland", "Data Protection Commission", "August 2, 2026", "December 2, 2026", "May 8, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

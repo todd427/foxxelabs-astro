@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "high-risk AI", "deepfakes"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus AI Act", "IMCO", "LIBE", "December 2, 2027", "August 2, 2028", "Annex III", "Annex I", "Article 5", "Michael McNamara", "March 18, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

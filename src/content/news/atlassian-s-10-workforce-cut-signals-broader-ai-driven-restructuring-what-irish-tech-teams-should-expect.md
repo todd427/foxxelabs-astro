@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["workforce-disruption", "ai-adoption", "tech-careers"]
 source: "Industry announcements"
 sourceUrl: "https://www.atlassian.com"
+entities: ["Atlassian", "April 24", "1,600 employees", "10% workforce cut", "CTO", "AI-focused CTOs", "Ireland", "EU", "EU employment law"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

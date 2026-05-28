@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "SME compliance", "Ireland", "AI regulation"]
 source: "EU AI Act Omnibus Amendment"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 2026", "December 2, 2027", "August 2, 2028", "750 employees", "€150 million", "Ireland National AI Office", "August 2, 2026", "50-employee threshold", "GDPR", "December 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

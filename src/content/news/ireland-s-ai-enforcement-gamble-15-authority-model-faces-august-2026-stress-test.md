@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland regulation", "enforcement", "governance"]
 source: "EU Commission & Irish Digital Policy"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "Ireland", "August 2, 2026", "Data Protection Commission", "Central Bank", "Health Information and Quality Authority", "Broadcasting Authority of Ireland", "€63.2 million", "February 2, 2025", "August 2, 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

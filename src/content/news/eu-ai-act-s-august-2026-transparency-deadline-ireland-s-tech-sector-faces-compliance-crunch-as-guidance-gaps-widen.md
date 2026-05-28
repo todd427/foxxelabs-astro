@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Transparency Rules", "Ireland Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Article 50", "August 2026", "Ireland", "December 2027", "First Draft Code of Practice", "17 December 2025", "EU common icon"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

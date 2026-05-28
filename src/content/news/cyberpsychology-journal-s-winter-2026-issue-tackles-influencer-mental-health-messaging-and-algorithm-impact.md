@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "social-media", "algorithm-impact"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Winter 2026 issue", "Dr. Emmelyn Croes", "Tilburg University", "Tilburg School of Humanities and Digital Sciences", "EU AI Act", "Ireland", "EU"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

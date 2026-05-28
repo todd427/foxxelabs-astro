@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["frontier-models", "infrastructure", "mcp", "gpt-5"]
 source: "Multiple AI Research Sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "Google", "Gemini 3.1 Ultra", "Grok 4.20", "Model Context Protocol", "97M installs", "GDPVal benchmark", "83.0%", "1-million-token context window", "OSWorld-V benchmark", "75%", "Anthropic", "Linux Foundation", "Google DeepMind", "AlphaEvolve", "HubSpot", "€40 million", "Ireland", "EU Inc", "€48 billion", "20%", "11.6%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

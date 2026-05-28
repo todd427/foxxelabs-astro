@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "productivity", "anthropic", "ai-tools"]
 source: "Industry Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "Expert Context Framework", "$1.52B", "2026", "$3.43B", "2029", "32.10%", "135.8%", "11.4x", "400ms", "2 seconds"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

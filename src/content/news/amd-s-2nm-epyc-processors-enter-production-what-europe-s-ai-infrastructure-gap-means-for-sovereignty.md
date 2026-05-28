@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI infrastructure", "semiconductor manufacturing", "European sovereignty"]
 source: "Industry analysis based on May 2026 developments"
 sourceUrl: "https://foxxelabs.com"
+entities: ["AMD", "6th Generation EPYC", "TSMC", "2nm process", "EU AI Act", "December 2027", "Cohere", "Aleph Alpha", "Ireland", "Intel German fabs", "17.8%", "$5.5B", "£40M"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

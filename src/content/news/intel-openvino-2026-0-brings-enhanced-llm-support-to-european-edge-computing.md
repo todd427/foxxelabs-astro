@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["edge computing", "inference optimization", "enterprise AI", "hardware acceleration"]
 source: "Intel"
 sourceUrl: "https://intel.com"
+entities: ["Intel", "OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM-V-4.5-8B", "MiniCPM-o-2.6", "Core Ultra", "Qwen2.5-1B-Instruct", "Qwen-2.5-coder-0.5B", "int4 compression", "GDPR"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

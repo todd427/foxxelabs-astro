@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["food-safety", "supply-chain", "EU-AI", "enterprise-applications"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/"
+entities: ["TraceMap", "European Commission", "EU", "27 member states", "cereulide-contaminated arachidonic acid", "China"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

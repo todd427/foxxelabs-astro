@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["Anthropic", "healthcare", "EU presidency", "enterprise AI"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://example.com"
+entities: ["Anthropic", "Ireland", "Claude", "Jennifer Carroll MacNeill", "AI for Care", "EU Presidency 2026", "International AI Summit", "October 14 2026", "Dublin", "European Commission", "EU AI Act", "200 jobs", "2027", "11-fold EMEA revenue growth", "40% reduction in clinician paperwork"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

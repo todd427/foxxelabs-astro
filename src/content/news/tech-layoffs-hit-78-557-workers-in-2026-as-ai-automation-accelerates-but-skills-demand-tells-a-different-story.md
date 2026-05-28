@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI labour market", "tech layoffs", "workforce transformation"]
 source: "Labour Market Analysis 2026"
 sourceUrl: "https://layoffs.fyi"
+entities: ["78,557", "37,638", "47.9%", "Anthropic", "Claude", "Cognizant", "Babak Hodjat", "Ireland", "5.3 million", "11%", "20%", "Version 1", "250", "EU AI Act", "January-April 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

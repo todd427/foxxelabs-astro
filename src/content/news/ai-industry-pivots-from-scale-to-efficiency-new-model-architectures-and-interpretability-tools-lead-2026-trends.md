@@ -6,6 +6,9 @@ category: "Research"
 tags: ["model efficiency", "interpretability", "hybrid architecture", "ai trends"]
 source: "Multiple AI Research Labs"
 sourceUrl: "https://tii.ae/falcon-h1r"
+entities: ["Technology Innovation Institute", "Falcon-H1R 7B", "Transformer-Mamba", "AIME-24", "Anthropic", "OpenAI", "Google DeepMind", "IBM", "Kaoutar El Maghraoui"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

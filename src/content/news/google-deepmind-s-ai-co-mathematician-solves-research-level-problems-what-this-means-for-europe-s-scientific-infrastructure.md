@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Research", "Mathematics", "Scientific Computing", "Europe"]
 source: "Google DeepMind"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "AI Co-Mathematician", "FrontierMath Tier 4", "23 out of 48 problems", "UK", "Germany", "France", "Dublin", "Trinity College", "UCD", "GDPR", "EU AI Act", "Annex III", "August 2, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "sustainability", "ai-optimization"]
 source: "Recent AI Research Breakthroughs"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["EU AI Act", "neuro-symbolic AI", "100× energy reduction", "95% success rate", "Digital Omnibus", "Ireland", "European enterprises"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

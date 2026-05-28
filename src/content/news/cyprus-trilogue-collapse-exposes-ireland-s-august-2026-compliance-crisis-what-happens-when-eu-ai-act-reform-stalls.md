@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland Compliance", "Regulatory Risk", "High-Risk Systems"]
 source: "EU Council (Cyprus Presidency)"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Cyprus", "Ireland", "August 2026", "Annex III", "EU Council", "European Parliament", "European Commission", "15 competent authorities", "August 2, 2026", "May trilogue", "Hungary", "Irish AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

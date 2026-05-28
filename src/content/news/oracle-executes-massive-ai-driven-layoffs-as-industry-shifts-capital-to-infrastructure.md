@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["workforce", "oracle", "ai-infrastructure", "layoffs"]
 source: "Industry Reports"
 sourceUrl: "https://example.com"
+entities: ["Oracle", "20,000-30,000 employees", "18% workforce", "March 31, 2026", "$156B", "Meta", "Figure AI", "Brett Adcock", "Hark", "$100M", "Mistral", "Small 4", "119-billion parameter", "$45-50B", "$8-10B", "Apple CarPlay AI", "iOS 26.4", "Amazon"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

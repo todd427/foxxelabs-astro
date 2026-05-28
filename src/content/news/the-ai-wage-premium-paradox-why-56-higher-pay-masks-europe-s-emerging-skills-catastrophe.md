@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI skills gap", "labour market", "EU workforce", "wage premiums"]
 source: "PwC Global AI Jobs Barometer 2025 & World Economic Forum Future of Jobs Report 2025"
 sourceUrl: "https://www.pwc.com/gx/en/services/careers/insights/global-ai-jobs-barometer.html"
+entities: ["PwC Global AI Jobs Barometer 2025", "World Economic Forum Future of Jobs Report 2025", "EU AI Act", "Ireland", "Europe", "56% wage premium", "40% skills obsolescence", "92 million jobs displaced by 2030", "170 million new roles created"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "regulatory sandboxes", "Ireland", "compliance timeline"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "May 7 2026", "August 2 2027", "Irish Data Protection Commission", "EU AI Act", "December 2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

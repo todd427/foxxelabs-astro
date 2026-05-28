@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI governance", "EU AI Act", "Ireland", "international summit"]
 source: "AI Industry News (May 2026)"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Ireland", "EU AI Act", "October 14, 2026", "International AI Summit", "General Scheme of the Regulation of Artificial Intelligence Bill", "CASPIr", "EU AI Act December 2026 deepfake bans", "Cohere-Aleph Alpha merger", "OpenAI GPT-5.5 Instant", "Meta Llama 4", "Google Googlebook", "Acer", "ASUS", "Dell"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

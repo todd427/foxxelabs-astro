@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance", "enforcement", "implementation"]
 source: "European Parliament Research Report"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2026", "Ireland", "European Parliament", "March 2026", "8 of 27 member states", "Digital Omnibus package", "December 2027", "August 2028", "GPAI models", "European AI Office", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

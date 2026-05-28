@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "Regulatory enforcement", "Distributed governance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "August 2 2026", "AI Office of Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill", "Data Protection Commissioner", "Central Bank", "Health and Safety Authority", "Annex III", "EU Council presidency", "International AI Summit Dublin October 14", "GDPR", "European Data Protection Board"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

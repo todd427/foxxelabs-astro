@@ -6,7 +6,13 @@ category: "Industry"
 tags: ["pharmaceutical-ai", "enterprise-deployment", "openai-partnerships"]
 source: "Machine Learning Applications Report"
 sourceUrl: "https://foxxelabs.com/ml-developments"
+entities: ["Novo Nordisk", "OpenAI", "Eli Lilly", "EU AI Act", "Irish AI Office", "end of 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-05-09
+updates:
+  - { date: 2026-05-09, note: "Danish pharma giant Novo Nordisk partners with OpenAI to integrate AI across drug discovery, clinical trials, and supply chains by end of 2026.", sourceUrl: "https://example.com/novo-nordisk-openai" }
 ---
 
 ## Pharma's AI Inflection: When Enterprise Integration Becomes the Story

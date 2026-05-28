@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI in Education", "Teachers' Union", "Irish Education Policy", "AI Governance"]
 source: "Department of Education / Teachers' Union of Ireland"
 sourceUrl: "https://www.irishtimes.com"
+entities: ["Teachers' Union of Ireland", "Hildegarde Naughton", "EU AI Act", "August 2026", "ESRI", "Department of Finance"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

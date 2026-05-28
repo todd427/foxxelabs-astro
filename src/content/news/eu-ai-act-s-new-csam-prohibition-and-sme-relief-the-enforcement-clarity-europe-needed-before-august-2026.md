@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "CSAM", "SME Compliance", "AI Governance"]
 source: "European Council and Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Council", "European Parliament", "May 7, 2026", "August 2, 2026", "December 2, 2026", "CSAM", "AI Office", "Ireland", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

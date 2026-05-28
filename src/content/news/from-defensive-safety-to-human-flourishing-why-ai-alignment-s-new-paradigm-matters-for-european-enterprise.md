@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "alignment research", "human flourishing", "enterprise AI"]
 source: "Google DeepMind / OpenAI / Anthropic Research Collaboration"
 sourceUrl: "https://deepmind.google/research"
+entities: ["Google DeepMind", "OpenAI", "Anthropic", "EU AI Act", "Article 50", "GDPR", "positive alignment framework", "flourishing-focused evaluations"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

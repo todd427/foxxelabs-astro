@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["DeepSeek", "AI Economics", "Infrastructure", "Competitive Strategy"]
 source: "DeepSeek Official Announcement / AI Research Community"
 sourceUrl: "https://deepseek.com"
+entities: ["DeepSeek", "V4", "$5.2M", "April 24, 2026", "OpenAI", "Google", "Anthropic", "Hybrid Attention Architecture", "1 million-token context window", "EU AI Act", "August 2, 2026", "TurboQuant", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

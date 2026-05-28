@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Implementation", "Regulatory Sandboxes", "Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "European Commission", "EU AI Act", "AI Office", "Digital Omnibus Package", "December 2, 2027", "August 2028", "March 27, 2026", "March 20", "Annex III", "Code of Practice on AI-generated content"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

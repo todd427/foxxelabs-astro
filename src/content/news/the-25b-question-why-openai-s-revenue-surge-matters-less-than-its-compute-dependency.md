@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["frontier-models", "compute-infrastructure", "market-consolidation"]
 source: "OpenAI News & Industry Analysis"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.4", "GPT-5.4 Pro", "$25B", "Google Gemini 3.1 Flash-Lite", "Anthropic Claude Mythos", "CoreWeave $6B", "$19B", "EU AI Act August 2026", "CyberGym 83.1%", "1M tokens", "$0.25 per million tokens", "late-2026 IPO"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

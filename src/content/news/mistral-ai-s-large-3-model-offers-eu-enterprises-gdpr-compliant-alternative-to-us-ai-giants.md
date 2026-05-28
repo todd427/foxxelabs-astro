@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["EU AI regulation", "GDPR compliance", "European AI", "LLMs"]
 source: "Mistral AI"
 sourceUrl: "https://mistral.ai"
+entities: ["Mistral AI", "Large 3", "La Plateforme", "EU AI Act", "GDPR", "March 2026", "Claude 3.5 Sonnet", "Gemini 3.1", "Advanced Machine Intelligence Labs", "$1.03B", "European Commission", "Digital Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

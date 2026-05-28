@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "job displacement", "workforce skills", "productivity"]
 source: "Stanford AI Index Report & Boston Consulting Group"
 sourceUrl: "https://aiindex.stanford.edu/"
+entities: ["Stanford University", "Boston Consulting Group", "Stanford AI Index Report", "April 13 2026", "Ireland AI Office", "EU", "0.1%", "20%", "14%", "26%", "50-55%", "10-15%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

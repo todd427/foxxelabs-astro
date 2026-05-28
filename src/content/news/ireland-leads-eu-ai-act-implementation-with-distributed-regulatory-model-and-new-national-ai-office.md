@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "enforcement", "Ireland"]
 source: "Multiple sources"
 sourceUrl: "https://artificialintelligenceact.eu/"
+entities: ["Ireland", "EU AI Act", "EU Regulation 2024/1689", "Peter Burke", "AI Office of Ireland", "Regulation of Artificial Intelligence Bill 2026", "August 2026", "15 National Competent Authorities", "€250 billion", "91%", "Stanford Global AI Vibrancy Tool", "European Commission Digital Omnibus package", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

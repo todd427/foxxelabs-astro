@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "Ireland employment", "skills gap", "graduate hiring"]
 source: "IrishJobs Hiring Trends Report / The Irish Times"
 sourceUrl: "https://www.irishtimes.com"
+entities: ["Ireland", "IrishJobs", "Meta", "EU AI Act", "November 2025", "April 2026", "August 2026", "European Training Foundation", "56% wage premium", "79% algorithmic management", "50% entry-level reduction"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

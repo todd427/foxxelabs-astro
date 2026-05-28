@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU AI Act", "AI governance", "regulatory compliance", "Ireland"]
 source: "EU AI Act Implementation"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["Ireland", "EU AI Act", "AI Office", "August 2026", "OpenAI", "Anthropic", "o3", "GDPR", "European Commission", "Connor Leahy", "Frontier Model Forum"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

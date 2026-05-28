@@ -6,6 +6,9 @@ category: "Research"
 tags: ["bias-mitigation", "AI-safety", "EU-compliance"]
 source: "MIT News"
 sourceUrl: "https://news.mit.edu"
+entities: ["MIT CSAIL", "WRING", "EU AI Act", "August 2026", "Article 10", "May 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

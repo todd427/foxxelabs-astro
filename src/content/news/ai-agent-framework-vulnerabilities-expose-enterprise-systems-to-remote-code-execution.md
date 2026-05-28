@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerability Management", "Enterprise Risk"]
 source: "KrebsOnSecurity"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["Microsoft", "Semantic Kernel", "CVE-2026-25592", "Semantic Kernel .NET SDK 1.71.0", "EU AI Act", "Articles 15-16", "LangChain", "AutoGen"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

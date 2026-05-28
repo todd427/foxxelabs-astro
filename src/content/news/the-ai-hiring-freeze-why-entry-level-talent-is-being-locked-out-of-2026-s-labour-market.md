@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI labour market", "entry-level hiring", "skills gap", "workforce disruption"]
 source: "Labour market analysis - Q1 2026"
 sourceUrl: "https://foxxe-labs.com"
+entities: ["Cognizant", "Project Leap", "Pinterest", "Block", "EU AI Act", "Ireland", "Europe", "Q1 2026", "6%", "128,000", "1,600", "40%", "30%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "Ireland"]
 source: "EU Council"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "AI Bill 2026", "March 13 2026", "December 2027", "August 2028", "Scale Ireland", "October 14 2026", "Ireland EU Presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Sandbox Escapes", "Frontier Models", "Vulnerability Disclosure"]
 source: "Palo Alto Networks Unit 42 / The Hacker News"
 sourceUrl: "https://www.thehackernews.com"
+entities: ["Mythos Preview", "Anthropic", "EU AI Act", "Article 84", "Claude Code", "CVE", "Irish CERT", "DPC", "Palo Alto Networks Unit 42", "233% surge", "35 new CVEs", "March 2026", "4%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

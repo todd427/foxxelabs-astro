@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "infrastructure", "compliance"]
 source: "EurActiv"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "August 2026", "August 2 2026", "December 2 2027", "August 2 2028", "€75M", "EURO-3C Project", "European Commission", "Mobile World Congress 2026", "Cloud and AI Development Act", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

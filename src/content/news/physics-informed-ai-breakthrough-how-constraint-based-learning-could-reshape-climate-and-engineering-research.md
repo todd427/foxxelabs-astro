@@ -6,6 +6,9 @@ category: "Research"
 tags: ["physics-informed-AI", "climate-modeling", "scientific-computing"]
 source: "University of Hawaiʻi at Mānoa Research"
 sourceUrl: "https://www.hawaii.edu"
+entities: ["University of Hawaiʻi at Mānoa", "physics-informed machine learning", "EU AI Act", "August 2026", "fluid dynamics", "climate modeling"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

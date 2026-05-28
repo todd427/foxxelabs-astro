@@ -6,6 +6,9 @@ category: "Research"
 tags: ["neuro-symbolic AI", "energy efficiency", "European infrastructure", "AI optimization"]
 source: "International Conference of Robotics and Automation (ICRA 2026)"
 sourceUrl: "https://www.icra2026.org/"
+entities: ["Neuro-symbolic AI", "neural networks", "symbolic reasoning", "Nebius", "310 MW data center Finland", "$1.4 billion AI campus Paris", "$9.9 billion hub Sweden", "Green Deal", "EU AI Act", "August 2026", "ICRA 2026 Vienna", "Gartner", "50% LLM observability 2028"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

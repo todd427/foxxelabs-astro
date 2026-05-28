@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment Research", "Autonomous Agents", "Weak-to-Strong Supervision"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "Automated Alignment Researcher (AAR)", "weak-to-strong supervision", "2026 International AI Safety Report", "Yoshua Bengio", "EU AI Act", "Ireland", "May 2026", "July 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

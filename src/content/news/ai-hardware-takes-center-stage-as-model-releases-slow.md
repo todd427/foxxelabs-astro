@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["hardware", "infrastructure", "performance", "local-ai"]
 source: "Intel"
 sourceUrl: "https://intel.com"
+entities: ["Intel", "OpenVINO 2026.0", "Apple", "M5 Pro", "M5 Max", "GPT-OSS-20B", "MiniCPM-V-4_5-8B", "MiniCPM-o-2.6", "Alibaba Qwen 3.5", "DeepSeek V4", "OpenAI GPT-5.2", "400K token context"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

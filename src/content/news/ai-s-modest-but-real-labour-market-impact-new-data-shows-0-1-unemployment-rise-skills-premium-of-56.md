@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI employment", "labour market", "skills gap"]
 source: "Wall Street Research & Federal Reserve Analysis"
 sourceUrl: "https://www.federalreserve.gov"
+entities: ["Federal Reserve", "Wall Street", "Stanford Computer Science", "EU AI Act", "0.1% unemployment rise", "56% skills premium", "0.16 percentage point job destruction", "0.06 percentage point job augmentation"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

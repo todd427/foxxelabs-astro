@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI displacement", "labour market", "corporate strategy"]
 source: "Labour Market Analysis - May 2026"
 sourceUrl: "https://foxxe.io"
+entities: ["Cognizant", "Project Leap", "Pinterest", "Block", "EU AI Act", "August 2026", "Ireland", "Harvard Business School", "4,000 roles", "40%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

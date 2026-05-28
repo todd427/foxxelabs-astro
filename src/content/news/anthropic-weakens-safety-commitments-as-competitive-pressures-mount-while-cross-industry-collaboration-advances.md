@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Safety", "Anthropic", "OpenAI", "Alignment"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude", "OpenAI", "o3", "o4-mini", "Trump administration", "Defense Department"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

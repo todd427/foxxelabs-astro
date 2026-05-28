@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance Timeline", "Implementation", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2 2026", "Article 5", "Annex III", "December 2027", "GPAI", "Ireland", "France ANSSI", "Spain AESIA", "Cyprus Council Presidency", "April 28 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

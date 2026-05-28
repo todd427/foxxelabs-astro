@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labor-market", "job-displacement", "anthropic", "economic-impact"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "Maxim Massenkoff", "Peter McCrory", "Goldman Sachs", "Briggs", "IMF", "World Economic Forum", "EU AI Act", "11M US jobs", "March 5 2026", "92M jobs displaced by 2030", "170M jobs created by 2030"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

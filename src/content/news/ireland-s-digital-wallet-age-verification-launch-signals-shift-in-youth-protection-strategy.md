@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["age-verification", "youth-protection", "digital-identity", "social-media-safety"]
 source: "Irish Government Digital Services"
 sourceUrl: "https://www.gov.ie"
+entities: ["Ireland", "Irish government", "digital wallet", "age verification", "April 3 2026", "Dr Constance de Saint Laurent", "Maynooth University", "EU Digital Services Act", "GDPR", "2019-2020"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

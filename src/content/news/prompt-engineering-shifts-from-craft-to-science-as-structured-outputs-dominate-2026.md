@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "structured outputs", "AI productivity", "enterprise AI"]
 source: "Industry Research"
 sourceUrl: "https://example.com"
+entities: ["OpenAI", "GPT-5.4", "Anthropic", "Claude Mythos 5", "DeepSeek V4", "$505.43M", "$6.7B", "2034", "33.27% CAGR", "March 2026", "Q3 2026", "Pydantic", "LinkedIn"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "European AI", "data centers", "investment"]
 source: "Multiple industry sources"
 sourceUrl: "https://www.siliconrepublic.com"
+entities: ["Finland", "France", "Sweden", "€10B", "Nebius", "310 MW", "€1.4 billion", "Paris", "Nvidia", "€9.9 billion", "PyTorch Conference Europe", "April 7-8", "AMI Labs", "€1 billion", "August 2026", "EU AI Act", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

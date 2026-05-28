@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["ai-displacement", "labour-market", "workforce-strategy"]
 source: "Federal Reserve Bank of New York & Harvard Business School Research"
 sourceUrl: "https://www.newyorkfed.org/"
+entities: ["Cognizant", "Pinterest", "Block", "EU AI Act", "August 2026", "December 2026", "Ireland", "€7M", "Harvard Business School"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

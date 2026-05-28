@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-wellbeing", "academia", "research"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "IADT", "MSc Cyberpsychology", "Certificate in Cyberpsychology", "British Psychological Society", "York St John University", "Dr. Emmelyn Croes", "Tilburg University", "Professor Linda Kaye", "Edge Hill University", "Landmark Technologies", "2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

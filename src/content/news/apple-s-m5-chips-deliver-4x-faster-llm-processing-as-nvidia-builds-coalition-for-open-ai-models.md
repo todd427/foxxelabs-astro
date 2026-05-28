@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["hardware", "llm-performance", "open-source", "local-ai"]
 source: "Multiple industry sources"
 sourceUrl: "https://nvidia.com/news"
+entities: ["Apple M5 Pro", "Apple M5 Max", "NVIDIA", "Nemotron Coalition", "Mistral AI", "Black Forest Labs", "Cursor", "LangChain", "Perplexity", "Reflection AI", "Sarvam", "Thinking Machines Lab", "NVIDIA Nemotron 4", "Google Gemini 3.1 Pro", "Anthropic Claude Sonnet 4.6", "OpenAI GPT-5", "Pleias", "4x faster LLM processing", "8x faster AI image generation"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

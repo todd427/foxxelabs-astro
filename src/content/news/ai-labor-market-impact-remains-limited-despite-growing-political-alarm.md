@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["labor-market", "employment", "policy", "research"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com"
+entities: ["Sam Altman", "Senator Mark Warner", "Anthropic", "March 2026", "European Policy Centre", "Harvard Business Review", "Goldman Sachs Research", "Gartner", "EU AI Social Compact", "9% to 30-35%", "92,000 nonfarm payroll losses", "February"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

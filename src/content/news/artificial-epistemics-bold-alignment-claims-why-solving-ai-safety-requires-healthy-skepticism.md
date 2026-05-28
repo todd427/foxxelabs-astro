@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI safety", "alignment", "epistemic quality", "startup claims"]
 source: "Artificial Epistemics Announcement"
 sourceUrl: "https://www.artificialeppistemics.com"
+entities: ["Artificial Epistemics", "May 20, 2026", "OpenAI", "Anthropic", "DeepMind", "EU AI Act", "May 7, 2026", "August 2026", "National AI Office"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

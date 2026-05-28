@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["model-efficiency", "inference-economics", "competitive-landscape"]
 source: "Multiple industry sources"
 sourceUrl: "https://foxxelabs.com"
+entities: ["DeepSeek", "V4-Flash", "Mixture-of-Experts", "13B active parameters", "284B parameters", "May 4 2026", "EU AI Act", "August 2026", "Digital Services Act", "Anthropic", "OpenAI", "Mistral"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "GPAI", "European AI Office", "enforcement"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European AI Office", "March 2026", "GPAI transparency obligations", "European Commission", "European Parliament", "February deadline", "Second Draft Code of Practice on AI transparency marking and labelling", "March 3rd", "August 2026", "Digital Omnibus proposal", "November 2025", "August 2nd", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

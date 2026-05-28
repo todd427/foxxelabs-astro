@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "video-ai", "model-architecture"]
 source: "Magic Hour Research"
 sourceUrl: "https://magichour.ai/research"
+entities: ["Happy Horse 1.0", "Magic Hour Research", "Director model", "Hyper-Adherence engine", "April 2026", "Best Text-to-Video AI benchmark", "prompt adherence", "60%"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["funding", "food-safety", "world-models", "regulation"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["AMI Labs", "Yann LeCun", "€950M", "$3.5 billion", "Paris", "European Commission", "TraceMap", "RASFF", "TRACES", "EU member states", "Ireland", "world models", "FoxxeLabs", "Radharc", "Aislinge", "Legion", "Donegal"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

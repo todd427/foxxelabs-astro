@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "compliance", "regulation"]
 source: "AI Act Implementation Reports"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Oifig Intleachta Shaorga na hÉireann", "Department of Enterprise, Tourism and Employment", "August 2026", "Vision Compliance", "European Commission", "Digital Omnibus", "EU AI Office", "3% of global turnover", "Amnesty International", "December 2027", "78%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

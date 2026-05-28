@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "geopolitics", "cloud-computing", "enterprise-ai"]
 source: "Microsoft Announcements"
 sourceUrl: "https://news.microsoft.com"
+entities: ["Microsoft", "$10 billion", "Japan", "2026-2029", "AWS", "Google", "EU AI Act", "Digital Omnibus", "European Digital Sovereignty", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

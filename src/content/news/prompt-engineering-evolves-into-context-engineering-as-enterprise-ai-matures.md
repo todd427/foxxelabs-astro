@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "context engineering", "enterprise AI", "Dublin"]
 source: "Anthropic"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "Claude 4.0", "OpenAI", "GPT-5.2", "Promptfoo", "SWE-Bench Pro", "Dublin", "200 new jobs", "2027", "USD 505.43 million", "USD 6.7 billion", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

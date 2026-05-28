@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance Timeline", "High-Risk AI", "Regulatory Standards"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "November 2025 Digital Omnibus", "August 2, 2026", "CEN-CENELEC", "Ireland", "Q2 2026", "Code of Practice", "Guidelines on Transparent AI Systems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

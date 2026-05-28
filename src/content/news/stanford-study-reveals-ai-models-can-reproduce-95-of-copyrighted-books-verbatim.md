@@ -6,6 +6,9 @@ category: "Research"
 tags: ["copyright", "ai-models", "legal-implications", "data-training"]
 source: "Stanford Research Study"
 sourceUrl: "https://stanford.edu"
+entities: ["Stanford", "Claude 3.7 Sonnet", "GPT-4.1", "Gemini 2.5 Pro", "Grok 3", "Harry Potter and the Sorcerer's Stone", "95.8%", "January 6, 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

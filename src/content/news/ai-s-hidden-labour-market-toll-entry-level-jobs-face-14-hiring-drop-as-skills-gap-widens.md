@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour market", "AI adoption", "employment", "skills gap"]
 source: "Bureau of Labor Statistics Analysis"
 sourceUrl: "https://www.bls.gov/"
+entities: ["ChatGPT", "Bureau of Labor Statistics", "EU AI Act", "August 2026", "14%", "0.2%", "0.8%", "10 million US jobs", "18 occupations"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

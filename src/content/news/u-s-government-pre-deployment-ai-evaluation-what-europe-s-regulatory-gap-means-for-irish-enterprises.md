@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "frontier models", "regulatory divergence", "EU compliance"]
 source: "Center for AI Standards and Innovation"
 sourceUrl: "https://caisi.org/"
+entities: ["CAISI", "Google DeepMind", "Microsoft", "xAI", "EU AI Act", "August 2026", "Claude", "GPT-4", "Ireland Data Protection Commissioner"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

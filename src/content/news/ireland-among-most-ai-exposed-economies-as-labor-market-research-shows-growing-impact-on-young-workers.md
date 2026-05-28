@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labor market", "employment", "Ireland", "AI impact"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "Department of Finance", "Anthropic", "Goldman Sachs", "ChatGPT", "Indeed", "IMF", "Mercer", "PwC", "11%", "16%", "56%", "November 2024"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

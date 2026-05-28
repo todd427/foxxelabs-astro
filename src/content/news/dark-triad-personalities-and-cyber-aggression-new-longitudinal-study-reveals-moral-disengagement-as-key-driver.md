@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behavior", "personality-research"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["European Cyberpsychology journal", "Dark Triad", "Machiavellianism", "narcissism", "psychopathy", "moral disengagement", "Masaryk University", "Volume 20 Issue 1 of 2026", "BPS Cyberpsychology Section", "York St John University", "July 6-7", "CYPSY26", "University Paris Cité"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

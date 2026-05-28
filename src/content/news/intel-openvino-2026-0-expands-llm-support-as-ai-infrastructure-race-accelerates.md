@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "hardware", "LLM", "performance"]
 source: "Intel OpenVINO"
 sourceUrl: "https://intel.com"
+entities: ["Intel", "OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM-V-4_5-8B", "MiniCPM-o-2.6", "Qwen2.5-1B-Instruct", "Qwen-2.5-coder-0.5B", "Apple M5 Pro", "Apple M5 Max", "Micron", "256GB SOCAMM2", "Mercury 2", "Claude 4.5 Haiku", "EU AI Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

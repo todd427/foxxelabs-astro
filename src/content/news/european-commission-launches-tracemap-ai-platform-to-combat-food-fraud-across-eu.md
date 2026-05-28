@@ -6,7 +6,13 @@ category: "Policy"
 tags: ["food safety", "EU policy", "AI applications", "public health"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["European Commission", "TraceMap", "EU AI Act", "EU member states", "baby formula recalls", "China", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-04-21
+updates:
+  - { date: 2026-04-21, note: "The European Commission's AI-powered food tracing system catches what humans miss—and Irish food authorities now have access.", sourceUrl: "https://food.ec.europa.eu" }
 ---
 
 ## Key Developments

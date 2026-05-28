@@ -6,7 +6,13 @@ category: "Ireland & EU"
 tags: ["cyberpsychology", "mental-health", "ireland-policy", "ai-harms"]
 source: "Irish Government Health Strategy"
 sourceUrl: "https://www.irishtimes.com/technology"
+entities: ["Ireland", "€7M", "cyberpsychology research", "EU AI Act", "Erasmus+ Cyberpsychology Programme", "May 2026", "Cyberpsychology, Behavior, and Social Networking", "August 2026", "15-authority AI enforcement model", "National Economic and Social Council", "Dr Nicola Fox Hamilton", "IADT"]
+significance: "high"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-05-05
+updates:
+  - { date: 2026-05-05, note: "Ireland invests €7M in cyberpsychology research to address AI-driven mental health harms, marking a strategic shift in how policymakers approach digital wellbeing.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## Ireland's €7M Digital Mental Health Pivot: Why Cyberpsychology Research Now Underpins National Health Strategy

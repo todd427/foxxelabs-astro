@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM models", "agentic AI", "cost efficiency", "frontier models"]
 source: "Google Gemini Blog"
 sourceUrl: "https://blog.google/technology/gemini/gemini-35-flash/"
+entities: ["Google", "Gemini 3.5 Flash", "Gemini 3.1 Pro", "May 19, 2026", "$1.50/M tokens", "$9.00/M tokens", "GDPR", "EU AI Act", "HRAIS", "December 2, 2027", "Article 6", "Gemini 3.5 Pro"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

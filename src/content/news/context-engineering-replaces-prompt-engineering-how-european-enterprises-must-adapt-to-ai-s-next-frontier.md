@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "enterprise-ai", "EU-enterprises"]
 source: "Recent industry developments"
 sourceUrl: "https://foxxe.io"
+entities: ["Meta", "Google DeepMind", "Claude Opus 4.7", "Gemini", "GDPR", "EU AI Act", "Ireland"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

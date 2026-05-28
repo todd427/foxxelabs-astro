@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "Industry Collaboration", "AI Monitoring", "Chain-of-Thought"]
 source: "Multiple AI Research Publications"
 sourceUrl: "https://anthropic.com/news"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "METR", "Claude 3.7 Sonnet", "DeepSeek R1", "Cisco", "RSA Conference 2026", "Ireland General Scheme of the Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "March 26 2026", "February 4 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

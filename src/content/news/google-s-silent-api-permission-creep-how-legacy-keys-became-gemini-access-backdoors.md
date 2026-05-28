@@ -6,6 +6,9 @@ category: "Security"
 tags: ["API security", "cloud infrastructure", "permission management", "Google Cloud"]
 source: "Tech Security Coverage"
 sourceUrl: "https://cloud.google.com/docs/authentication/api-keys"
+entities: ["Google Cloud", "Google Maps", "Gemini API", "EU AI Act", "Irish Data Protection Commission", "OAuth 2.0", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

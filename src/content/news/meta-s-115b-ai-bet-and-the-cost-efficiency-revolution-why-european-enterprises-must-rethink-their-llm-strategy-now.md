@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM Economics", "AI Infrastructure", "Enterprise Strategy"]
 source: "Meta AI Announcements / Alibaba Qwen Releases"
 sourceUrl: "https://www.meta.com/"
+entities: ["Meta", "$115-135B", "2026", "Alexandr Wang", "Superintelligence Labs", "Llama", "OpenAI", "Google", "Alibaba", "Qwen 3.6 Max-Preview", "SWE-bench Pro", "Terminal-Bench 2.0", "SkillsBench", "QwenClawBench", "QwenWebBench", "SciCode", "GPT-4", "Gemini Pro", "$0.04/$0.07 per MTok", "EU AI Act", "August 2026", "GDPR", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

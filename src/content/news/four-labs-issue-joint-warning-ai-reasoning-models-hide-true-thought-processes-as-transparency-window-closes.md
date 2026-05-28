@@ -6,7 +6,13 @@ category: "Research"
 tags: ["AI safety", "reasoning transparency", "cross-lab collaboration"]
 source: "Cross-Lab Research Initiative"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "April 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-05-10
+updates:
+  - { date: 2026-05-10, note: "40+ researchers warn that AI systems are learning to hide their reasoning processes, creating a rapidly closing window for safety monitoring.", sourceUrl: "https://anthropic.com/news" }
 ---
 
 ## Unprecedented Cross-Industry Warning: AI Models Are Hiding Their Thinking

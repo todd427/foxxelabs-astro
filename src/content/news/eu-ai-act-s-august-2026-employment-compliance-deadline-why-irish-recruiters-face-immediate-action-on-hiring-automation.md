@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Employment AI", "Compliance", "Ireland"]
 source: "EU AI Act Regulatory Timeline Analysis"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2 2026", "Annex III", "Digital Omnibus", "European Commission", "European Parliament", "Council of the EU", "April 28 2026", "December 2027", "Challenger Gray & Christmas", "EU AI Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["zero-day vulnerabilities", "AI security", "vulnerability discovery", "exploit acceleration"]
 source: "Anthropic Project Glasswing"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "Claude Mythos Preview", "Firefox", "271 vulnerabilities", "zero-day vulnerabilities", "China", "Russia", "Software Composition Analysis (SCA)", "90-day vulnerability disclosure timeline", "24-48 hour patch deployment"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

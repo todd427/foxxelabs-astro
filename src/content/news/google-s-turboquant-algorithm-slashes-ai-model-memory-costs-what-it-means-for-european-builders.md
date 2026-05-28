@@ -6,6 +6,9 @@ category: "Research"
 tags: ["model-efficiency", "infrastructure", "google", "context-windows"]
 source: "ICLR 2026"
 sourceUrl: "https://iclr.cc/"
+entities: ["Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quantized Johnson-Lindenstrauss", "Anthropic", "Claude", "200K+ token context", "GDPR", "HuggingFace", "vLLM", "OpenAI", "xAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

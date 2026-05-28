@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Hardware", "Energy Efficiency", "EU Infrastructure"]
 source: "Penn Research"
 sourceUrl: "https://www.penn.edu"
+entities: ["University of Pennsylvania", "hybrid light-matter particle", "photonic computing", "AMD 2nm EPYC", "Cohere-Aleph Alpha merger", "EU Green Deal", "PyTorch", "TensorFlow"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

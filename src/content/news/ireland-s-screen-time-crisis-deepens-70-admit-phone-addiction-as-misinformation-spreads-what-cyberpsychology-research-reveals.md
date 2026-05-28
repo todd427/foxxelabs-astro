@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-wellness", "Ireland", "misinformation"]
 source: "Deloitte Digital Consumer Trends Survey"
 sourceUrl: "https://www.deloitte.com"
+entities: ["Deloitte Digital Consumer Trends Survey", "Ireland", "70% phone addiction", "59% misinformation exposure", "53% (2024)", "46% (2023)", "€7 million", "MSc Cyberpsychology programme 2026", "EU AI regulation"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

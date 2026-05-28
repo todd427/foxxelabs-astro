@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Infrastructure", "Google Cloud", "Compute Hardware", "Data Centers"]
 source: "Google Cloud Next 2026"
 sourceUrl: "https://cloud.google.com/next"
+entities: ["Google", "TPU8", "Claude 4.7", "Amin Vahdat", "CoreWeave", "Jane Street", "€5.6B", "Data Center World", "EU AI Act", "August 2026", "ESA AI Compendium", "SiPearl", "Graphcore"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

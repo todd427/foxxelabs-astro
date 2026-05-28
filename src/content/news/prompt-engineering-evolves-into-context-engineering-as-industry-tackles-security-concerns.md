@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "ai-security", "llm-development"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "OpenAI", "Codex", "March 2026", "95% AI interactions by 2025", "6% improvements", "30 percentage point gains", "prompt injection attacks", "context engineering"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

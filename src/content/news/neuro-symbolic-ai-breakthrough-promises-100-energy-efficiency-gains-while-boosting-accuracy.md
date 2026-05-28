@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "sustainable-ai"]
 source: "International Conference of Robotics and Automation"
 sourceUrl: "https://www.icra2026.org"
+entities: ["International Conference of Robotics and Automation", "Vienna", "May 2026", "Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quantized Johnson-Lindenstrauss", "EU AI Act", "August 2026", "OpenAI", "Anthropic", "Claude Mythos 5", "$267.2B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

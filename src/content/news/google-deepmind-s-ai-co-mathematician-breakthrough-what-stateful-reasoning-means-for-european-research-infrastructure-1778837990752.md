@@ -6,6 +6,9 @@ category: "Research"
 tags: ["DeepMind", "AI Research", "Mathematics", "European Innovation"]
 source: "Technology Review"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["Google DeepMind", "stateful reasoning AI", "EU AI Act", "August 2026", "Ireland", "Europe"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

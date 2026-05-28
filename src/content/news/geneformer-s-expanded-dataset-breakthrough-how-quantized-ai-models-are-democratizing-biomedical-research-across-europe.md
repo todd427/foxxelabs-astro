@@ -6,6 +6,9 @@ category: "Research"
 tags: ["machine learning", "biomedical research", "computational efficiency"]
 source: "Recent scientific developments"
 sourceUrl: "https://www.technologyreview.mit.edu"
+entities: ["Geneformer", "100M+ transcriptomes", "model quantization", "Trinity", "UCD", "NUIG", "EU AI strategy", "single-cell biology"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

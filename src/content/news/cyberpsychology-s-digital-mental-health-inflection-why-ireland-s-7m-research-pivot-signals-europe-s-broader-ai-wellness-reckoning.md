@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "Ireland-AI-strategy"]
 source: "BPS Cyberpsychology Section & Irish Research Institutions"
 sourceUrl: "https://www.bps.org.uk/cyberpsychology"
+entities: ["Ireland", "€7M", "EU AI Act", "August 2026", "December 2027", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "BPS Cyberpsychology Section", "July 2026", "York St John University", "Dún Laoghaire IADT", "Dr. Lisa Orchard", "University of Wolverhampton"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

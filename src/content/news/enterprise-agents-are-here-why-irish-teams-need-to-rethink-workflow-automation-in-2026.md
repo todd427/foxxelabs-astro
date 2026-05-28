@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["agentic-ai", "enterprise-automation", "workflow-systems"]
 source: "OpenAI / Microsoft announcements"
 sourceUrl: "https://openai.com/"
+entities: ["OpenAI", "Microsoft", "ChatGPT workspace agents", "Codex", "Foundry Agent Service", "EU AI Act", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

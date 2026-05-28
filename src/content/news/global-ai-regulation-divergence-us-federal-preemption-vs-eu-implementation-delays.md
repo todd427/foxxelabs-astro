@@ -5,6 +5,9 @@ publishDate: 2026-03-20
 category: "Policy"
 tags: ["AI regulation", "EU AI Act", "federal preemption", "copyright"]
 source: "Multiple regulatory developments"
+entities: ["Senator Marsha Blackburn", "TRUMP AMERICA AI Act", "EU AI Act", "UK AI training regulations", "text and data mining exception", "EU Council", "16 months", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour market", "automation", "employment", "AI agents"]
 source: "Stanford SIEPR Economic Summit"
 sourceUrl: "https://siepr.stanford.edu"
+entities: ["Stanford SIEPR Economic Summit", "Anthropic", "Brynjolfsson et al.", "MIT Sloan", "Block", "Jack Dorsey", "Peterson Institute for International Economics", "Citadel Securities", "20% entry-level software hiring drop", "15% call center hiring drop", "6-16% employment fall AI-exposed", "40% staff reduction", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

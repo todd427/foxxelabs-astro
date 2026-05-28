@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Irish regulation", "enforcement model", "sectoral authorities"]
 source: "Department of Enterprise, Trade and Employment (Ireland)"
 sourceUrl: "https://www.gov.ie/en/policy-document/ai-regulation/"
+entities: ["Ireland", "EU AI Act", "Regulation (EU) 2024/1689", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "15 sectoral authorities", "August 2026", "Central Bank", "HIQA", "Workplace Relations Commission", "Article 50"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

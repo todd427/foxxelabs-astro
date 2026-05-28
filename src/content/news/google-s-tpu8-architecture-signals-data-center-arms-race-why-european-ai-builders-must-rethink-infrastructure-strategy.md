@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Infrastructure", "Compute Economics", "European Strategy"]
 source: "DeepMind Research"
 sourceUrl: "https://deepmind.google/research/"
+entities: ["Google", "TPU8", "Google DeepMind", "Claude Mythos", "Gemini 3.2", "DeepSeek V4", "$5.2M", "Amazon", "$25B", "Anthropic", "NVIDIA", "H100", "H200", "Trainium", "Inferentia", "EuroHPC", "EU AI Act", "August 2026", "Graphcore IPU", "SambaNova RDU", "vLLM"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

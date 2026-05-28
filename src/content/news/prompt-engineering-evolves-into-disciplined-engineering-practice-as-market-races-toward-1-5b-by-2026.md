@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "AI-development", "enterprise-AI"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["$1.52B", "2026", "32.10% CAGR", "agentic AI", "prompt engineering", "LLMs"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI infrastructure", "EU AI Act", "compute capacity", "Irish tech strategy"]
 source: "Multiple sources"
 sourceUrl: "https://www.theverge.com/ai-artificial-intelligence"
+entities: ["Anthropic", "$30B revenue", "80x growth", "Q1 2026", "Dario Amodei", "xAI", "Elon Musk", "220,000 NVIDIA GPUs", "300 megawatts", "Claude Code", "EU AI Act", "August 2, 2026", "AI Office of Ireland", "Annex III", "€500 billion", "October 14, 2026", "RDS Dublin", "International AI Summit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "evaluation methods", "alignment", "testing"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://www.internationalaisafetyreport.org"
+entities: ["2026 International AI Safety Report", "EU AI Act", "Anthropic", "RLHF", "DPO", "Singapore Cyber Security Agency", "Advisory AD-2026-004", "Ireland", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

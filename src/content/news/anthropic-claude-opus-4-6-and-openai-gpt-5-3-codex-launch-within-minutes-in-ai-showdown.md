@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["claude", "gpt-5", "coding", "agents"]
 source: "Multiple AI Lab Announcements"
 sourceUrl: "https://anthropic.com/news/claude-opus-4-6"
+entities: ["Anthropic", "Claude Opus 4.6", "OpenAI", "GPT-5.3 Codex", "February 5 2026", "8-needle 1M variant benchmark", "76%", "agent teams", "Terminal-Bench", "77.3%", "Spark", "1,000 tokens per second", "Menlo Ventures", "GLM-5", "744B parameters"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

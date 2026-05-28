@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Research", "Transparency", "Evaluation"]
 source: "ArXiv Research Papers"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "UK AI Security Institute", "METR", "GPT-4o", "Opus 4.6", "AdvBench", "HarmBench", "Intent Laundering", "Learning to Stay Safe"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

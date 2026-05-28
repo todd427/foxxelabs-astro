@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-ethics", "youth-online-behaviour"]
 source: "Cyberpsychology, Behavior, and Social Networking"
 sourceUrl: "https://www.liebertpub.com/journal/cyber"
+entities: ["Cyberpsychology, Behavior, and Social Networking", "February 28, 2026", "British Psychological Society Cyberpsychology Section Annual Conference 2026", "York St John University", "EU AI Act", "NUI Galway"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

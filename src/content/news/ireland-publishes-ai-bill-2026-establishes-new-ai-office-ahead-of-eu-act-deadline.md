@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulation", "AI Office"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "AI Office of Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "Department of Enterprise, Tourism and Employment", "August 1, 2026", "7% of worldwide turnover", "91% AI adoption in Ireland 2025", "$250 billion", "Code of Practice for General-Purpose AI Models", "August 2026", "EU Presidency July-December 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

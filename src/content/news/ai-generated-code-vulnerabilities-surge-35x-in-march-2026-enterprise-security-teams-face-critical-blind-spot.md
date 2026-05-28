@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI-generated code", "vulnerability management", "enterprise security"]
 source: "Security Industry Reports"
 sourceUrl: "https://thehackernews.com"
+entities: ["GitHub Copilot", "Claude", "ChatGPT", "EU AI Act", "March 2026", "35 vulnerabilities", "56 confirmed cases", "14 critical", "25 high-severity", "August 2026", "Irish CERT"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["frontier-models", "google-gemini", "enterprise-ai", "model-economics"]
 source: "LLM Model Release Search"
 sourceUrl: "https://foxxelabs.com/"
+entities: ["Google", "Gemini", "GPT-5.5", "Anthropic", "Claude Mythos Preview", "MiniMax M2.7 Highspeed", "Alibaba Qwen3 Coder Next", "DeepSeek V4-Flash", "GPQA Diamond", "EU AI Act", "August 2026", "$11.63B", "$823.93B", "35.57% CAGR", "Dublin", "ResearchAndMarkets"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

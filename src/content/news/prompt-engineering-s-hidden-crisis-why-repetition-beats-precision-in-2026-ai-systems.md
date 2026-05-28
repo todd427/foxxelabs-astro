@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "LLM-optimization", "AI-methodology"]
 source: "Technology Review / Google Research"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["Google", "prompt engineering", "Claude", "Llama", "Gemini", "transformer architectures", "2026", "token repetition", "prompt caching"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

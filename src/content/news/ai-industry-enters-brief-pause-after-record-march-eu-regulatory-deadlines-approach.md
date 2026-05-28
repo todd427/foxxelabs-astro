@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Models", "EU AI Act", "Regulation", "OpenVINO"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Anthropic", "Google", "xAI", "Alibaba", "Intel", "EU AI Act", "August 2026", "GPT-5.4 Thinking", "Claude Sonnet 4.6", "Gemini 3.1 Pro", "Grok 4.20 Beta 2", "OpenVINO 2026.0", "GDPR", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

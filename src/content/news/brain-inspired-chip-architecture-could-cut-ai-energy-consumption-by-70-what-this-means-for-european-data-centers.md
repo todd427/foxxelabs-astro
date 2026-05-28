@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Hardware", "Energy Efficiency", "Infrastructure", "Neural Computing"]
 source: "Nature/University of Cambridge"
 sourceUrl: "https://www.nature.com/articles/ai-memristor-research"
+entities: ["University of Cambridge", "hafnium oxide memristor", "EU AI Act", "August 2026", "70%", "PyTorch", "TensorFlow"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

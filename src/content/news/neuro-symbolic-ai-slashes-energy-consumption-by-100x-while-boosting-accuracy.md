@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "sustainability", "robotics"]
 source: "International Conference of Robotics and Automation (Vienna)"
 sourceUrl: "https://www.icra2026.org"
+entities: ["Neuro-Symbolic AI", "International Conference of Robotics and Automation", "Vienna", "EU AI Act", "EU climate neutrality 2050", "PyTorch", "TensorFlow", "100x energy reduction"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["DeepSeek", "AI Infrastructure", "Open Models", "European Competition"]
 source: "DeepSeek Official Announcement"
 sourceUrl: "https://deepseek.com/v4-release"
+entities: ["DeepSeek V4", "DeepSeek V4 Flash", "DeepSeek V4 Pro", "DeepSeek V4 Pro Max", "GPT-5.2", "GPT-5.4", "Gemini 3.0-Pro", "Gemini 3.1-Pro", "Huawei chips", "EU AI Act", "Article 28", "€63.2M", "August 2026", "October 2026", "1.6 trillion parameters", "49 billion active", "$0.145 per million tokens"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

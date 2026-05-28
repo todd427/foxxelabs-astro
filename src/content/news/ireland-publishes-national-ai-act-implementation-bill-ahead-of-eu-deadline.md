@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU AI Act", "Irish regulation", "regulatory sandbox", "implementation"]
 source: "Irish Government"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "August 2, 2026", "Article 57", "August 1, 2024", "February 4"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

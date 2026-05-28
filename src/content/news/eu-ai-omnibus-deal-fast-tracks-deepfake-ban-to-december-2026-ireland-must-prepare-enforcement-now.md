@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Deepfakes", "Enforcement", "Ireland"]
 source: "EU Council of Ministers"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Digital Omnibus", "EU AI Act", "December 2, 2026", "May 7, 2026", "AI Office of Ireland", "non-consensual intimate imagery (NCII)", "child sexual abuse material (CSAM)", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

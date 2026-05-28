@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["geopolitics", "AI regulation", "China", "sovereignty"]
 source: "Recent AI Industry Developments"
 sourceUrl: "https://foxxelabs.com"
+entities: ["China", "Meta", "Manus", "$2B", "National Development and Reform Commission", "Cohere", "Aleph Alpha", "OpenAI", "Google", "Anthropic", "Ireland", "EU", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

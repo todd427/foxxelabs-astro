@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["nvidia", "open-source", "autonomous-vehicles", "edge-computing"]
 source: "NVIDIA Developer Blog"
 sourceUrl: "https://developer.nvidia.com/blog/nvidia-announces-new-open-models-frameworks-and-ai-infrastructure-for-physical-ai"
+entities: ["NVIDIA", "Alpamayo 1", "Nemotron 3 Nano", "1M context window", "10-billion parameter", "Mamba-Transformer", "DeepSeek R1", "mixture-of-experts"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Safety", "European Enterprise", "AI Governance", "Security"]
 source: "White Circle Funding Announcement"
 sourceUrl: "https://whitecircle.ai"
+entities: ["White Circle", "Denis Shilov", "$11M", "CircleGuardBench", "KillBench", "EU AI Omnibus", "December 2027", "August 2028", "OpenAI", "Anthropic", "Google", "xAI", "Lovable"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

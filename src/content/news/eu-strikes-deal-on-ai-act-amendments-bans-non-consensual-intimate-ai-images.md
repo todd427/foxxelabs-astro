@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "deepfakes", "governance"]
 source: "Council of the European Union"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "Council of the European Union", "11 March 2026", "GPT-5.4", "83%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

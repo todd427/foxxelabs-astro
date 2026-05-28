@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "AI-infrastructure", "symbolic-reasoning", "sustainability"]
 source: "International Conference of Robotics and Automation"
 sourceUrl: "https://www.icra2026.org/"
+entities: ["ICRA 2026", "Vienna", "CoreWeave", "€6 billion", "EU AI Act", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Sandboxes", "Compliance"]
 source: "EU AI Regulation Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "August 2, 2026", "December 2027", "August 1, 2024"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

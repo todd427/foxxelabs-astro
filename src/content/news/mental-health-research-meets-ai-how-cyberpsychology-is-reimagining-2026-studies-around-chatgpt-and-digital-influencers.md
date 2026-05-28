@@ -6,7 +6,13 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-effects", "youth-online-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "ChatGPT", "EU AI Act", "Ireland AI Office", "August 2026", "December 2027", "bps.org.uk"]
+significance: "medium"
+irishEuAngle: true
 draft: false
+updatedDate: 2026-04-16
+updates:
+  - { date: 2026-04-16, note: "Leading cyberpsychology researchers shift focus to AI-driven mental health impacts, marking a fundamental reorientation of the field's research priorities.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## A Watershed Moment for Digital Mental Health Research

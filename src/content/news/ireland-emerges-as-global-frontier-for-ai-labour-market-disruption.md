@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour-market", "employment", "AI-adoption", "ireland"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "Department of Finance", "EU", "US", "Stanford University", "Anthropic", "Goldman Sachs Research", "IMF", "European Central Bank", "11%", "20%", "November 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

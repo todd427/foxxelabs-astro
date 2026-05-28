@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU regulation", "AI investment", "content policy", "venture capital"]
 source: "Logos Press"
 sourceUrl: "https://example.com"
+entities: ["European Commission", "European Parliament", "EU Council", "OpenAI", "$25 billion", "Anthropic", "$19 billion", "Google", "Gemini 3.1 Flash-Lite", "62%", "11,000", "Nebius", "310 MW", "$1.4 billion", "$9.9 billion", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

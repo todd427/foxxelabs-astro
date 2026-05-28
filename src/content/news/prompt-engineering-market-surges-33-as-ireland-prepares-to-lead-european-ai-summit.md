@@ -5,6 +5,9 @@ publishDate: 2026-03-24
 category: "Industry"
 tags: ["prompt engineering", "AI market", "European AI", "workforce development"]
 source: "Multiple industry reports"
+entities: ["OpenAI", "Anthropic", "Claude 4.0", "Ireland", "EU", "€10M", "€5M", "Irish Centre for High-End Computing", "CeADAR", "International AI Summit", "October 14 2026", "Dublin", "$505.43M", "$6.7B", "33.27%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

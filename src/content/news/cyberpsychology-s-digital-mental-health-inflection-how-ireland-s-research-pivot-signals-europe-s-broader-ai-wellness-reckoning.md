@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "online-behaviour"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Ireland", "EU AI Act", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20 2026", "Dr Nicola Fox Hamilton", "Dún Laoghaire Institute of Art, Design and Technology", "Cyberpsychology, Behavior, and Social Networking", "December 2027", "August 2028", "British Psychological Society", "Cyberpsychology Section Annual Conference 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "governance", "compliance"]
 source: "Multiple regulatory sources"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "EU AI Act", "Central Bank of Ireland", "Data Protection Commission", "Workplace Relations Commission", "United States", "Executive Order 14179", "Colorado AI Act", "$42 billion", "August 1, 2026", "June 30, 2026", "August 2, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

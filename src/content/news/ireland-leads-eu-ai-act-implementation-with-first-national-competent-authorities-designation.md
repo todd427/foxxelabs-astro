@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "enforcement", "compliance"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU AI Act", "Peter Burke", "National AI Office", "Regulation of Artificial Intelligence Bill 2026", "August 2026", "November 2026", "Stanford University", "15 National Competent Authorities", "European Parliament", "November 2024", "International AI Summit Dublin 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

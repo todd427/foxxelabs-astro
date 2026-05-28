@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-agents", "context-design", "ai-development"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["prompt engineering", "context architecture", "Claude 4.x", "GPT-5", "135.8% demand growth 2025", "$1.52 billion 2026", "$2.01 billion 2027", "prompt injection", "context windows 2M+ tokens"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

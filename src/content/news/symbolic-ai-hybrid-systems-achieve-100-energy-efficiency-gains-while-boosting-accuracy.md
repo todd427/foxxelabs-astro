@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "algorithmic-innovation", "sustainable-ai", "hybrid-systems"]
 source: "International Conference of Robotics and Automation (ICRA) 2026"
 sourceUrl: "https://www.icra2026.org/"
+entities: ["ICRA", "Vienna", "May 2026", "EU AI Act", "symbolic reasoning", "neural networks", "100× energy efficiency", "4-17× performance improvement"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

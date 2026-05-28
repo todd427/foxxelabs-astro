@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Regulatory Sandboxes", "Compliance", "Ireland"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "August 2026", "European AI Office", "7% of global annual turnover", "2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

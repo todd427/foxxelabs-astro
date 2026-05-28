@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "frontier models", "regulatory divergence", "national security"]
 source: "Multiple sources"
 sourceUrl: "https://www.reuters.com/technology/"
+entities: ["Trump administration", "Biden's Executive Order 14110", "Anthropic", "Claude Mythos", "EU AI Act", "August 2026", "Ireland", "National Center for Supercomputing Applications"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

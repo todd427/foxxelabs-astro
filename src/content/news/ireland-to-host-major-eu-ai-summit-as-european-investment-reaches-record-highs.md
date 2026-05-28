@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["EU Presidency", "AI Summit", "European AI", "Investment"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["Ireland", "EU Presidency", "International AI Summit", "October 14 2026", "Dublin", "Advanced Machine Intelligence Labs", "Yann LeCun", "€1.03 billion", "€3.5 billion", "Nvidia", "Bezos Expeditions", "TraceMap", "European Commission", "OpenAI for Europe", "EU AI Act", "August 2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

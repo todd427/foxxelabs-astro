@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "virtual reality", "mindfulness", "AI"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "British Psychological Society", "6th Cyberpsychology Conference", "University of York", "July 6-7 2026", "Prof. Paul Cairns", "Prof. Amy Orben", "ChatGPT", "EU AI Act", "January 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

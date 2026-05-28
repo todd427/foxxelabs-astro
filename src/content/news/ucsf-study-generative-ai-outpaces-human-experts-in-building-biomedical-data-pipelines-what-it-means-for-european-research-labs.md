@@ -6,6 +6,9 @@ category: "Research"
 tags: ["generative-ai", "biomedical-research", "ai-applications"]
 source: "Cell Reports Medicine / UCSF"
 sourceUrl: "https://www.cell.com/cell-reports-medicine"
+entities: ["UCSF", "Cell Reports Medicine", "EU AI Act", "GDPR", "August 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

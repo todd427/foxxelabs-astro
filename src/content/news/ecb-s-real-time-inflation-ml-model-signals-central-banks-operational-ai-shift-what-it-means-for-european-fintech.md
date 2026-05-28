@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["machine-learning", "fintech", "central-banking", "EU-policy"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["European Central Bank", "ECB", "eurozone", "European Banking Authority", "EU", "machine learning", "real-time inflation monitoring", "monetary policy"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

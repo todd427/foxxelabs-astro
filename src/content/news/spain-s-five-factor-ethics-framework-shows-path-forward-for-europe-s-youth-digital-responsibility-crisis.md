@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital ethics", "youth behaviour", "EU policy"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Spain", "529 Spanish youth", "May 2026", "EU AI Act", "Digital Services Act", "BPS Cyberpsychology Section", "August 2026", "Ireland", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Online Respect", "Online Responsibility", "Tolerance for Diversity", "Prosocial Cyberbystander", "Online Self-Development"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

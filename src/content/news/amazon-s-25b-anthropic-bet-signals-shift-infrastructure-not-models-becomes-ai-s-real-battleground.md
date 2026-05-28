@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Infrastructure", "Amazon", "Anthropic", "Market Strategy"]
 source: "Silicon Republic"
 sourceUrl: "https://siliconrepublic.com"
+entities: ["Amazon", "Anthropic", "$25B", "April 21", "Claude", "AWS", "OpenAI", "GPT-6", "Google", "Gemini 2.5", "Gemma 4", "GLM-5.1", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

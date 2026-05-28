@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "deepfakes", "content moderation", "Ireland"]
 source: "European Council & European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "December 2026", "May 2026", "August 2026", "Article 50", "AI Office", "Ireland", "Meta", "TikTok", "Discord", "Q3 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

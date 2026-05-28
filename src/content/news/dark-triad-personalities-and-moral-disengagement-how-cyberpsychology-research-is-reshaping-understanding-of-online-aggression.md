@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behaviour", "digital-safety"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "spring 2026", "dark triad", "moral disengagement", "6th BPS Cyberpsychology Conference", "6-7 July 2026", "University of York", "EU AI Act", "AI Office of Ireland", "August 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

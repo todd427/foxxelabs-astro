@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["model-efficiency", "meta", "cost-reduction", "european-ai"]
 source: "AI Industry Developments"
 sourceUrl: "https://www.example.com/ai-news"
+entities: ["Meta", "Muse Spark", "Llama 4", "Anthropic", "Mythos", "Ireland", "EU"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

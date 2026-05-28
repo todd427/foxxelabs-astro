@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM market dynamics", "Claude Opus 4.7", "AI business models"]
 source: "Anthropic News"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "OpenAI", "Claude Opus 4.7", "$30B annualized run rate", "$25B", "April 7 2026", "SWE-bench Verified", "GPQA Diamond", "1M token context window", "Claude Opus 4.6", "Alibaba Qwen3", "Google Gemma 4"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI infrastructure", "cloud computing", "GPU demand", "venture capital"]
 source: "Based on recent AI infrastructure announcements"
 sourceUrl: "https://foxxelabs.com"
+entities: ["CoreWeave", "Jane Street", "$6 billion", "$1 billion", "$109 per share", "ASML", "€36-40 billion", "EU AI Act", "August 2026", "Google Gemma 4"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

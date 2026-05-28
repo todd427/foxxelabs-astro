@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["cyberpsychology", "mental-health", "digital-wellbeing", "ireland-policy"]
 source: "Cyberpsychology Journal & Irish Health Research"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Ireland", "€7M", "cyberpsychology research", "Dr. Nicola Fox Hamilton", "Institute of Art, Design + Technology", "Erasmus+ Cyberpsychology Programme", "EU AI Act", "Cyberpsychology Journal", "May 2026", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

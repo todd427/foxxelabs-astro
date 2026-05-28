@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Vulnerabilities", "Chrome", "Microsoft"]
 source: "Multiple Security Reports"
 sourceUrl: "https://unit42.paloaltonetworks.com/chrome-gemini-vulnerability/"
+entities: ["Google Chrome", "Gemini", "Microsoft Copilot", "CVE-2026-0628", "CVE-2026-26144", "CVE-2026-26118", "CVE-2026-21536", "Palo Alto Networks Unit 42", "XBOW", "CrowdStrike", "EU AI Act", "Ireland National Digital and AI Strategy 2030"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

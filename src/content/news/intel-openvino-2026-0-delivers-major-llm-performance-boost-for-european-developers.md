@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM deployment", "hardware optimization", "local AI", "Intel OpenVINO"]
 source: "Intel OpenVINO"
 sourceUrl: "https://github.com/openvinotoolkit/openvino"
+entities: ["Intel OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM-V-4_5-8B", "MiniCPM-o-2.6", "Apple M5 Pro", "Apple M5 Max", "Qwen2.5-1B-Instruct", "EU AI regulations", "GDPR", "OpenAI 8000 workforce", "$840 billion valuation"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

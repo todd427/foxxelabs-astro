@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["pharma-ai", "enterprise-integration", "drug-discovery"]
 source: "Technology Review"
 sourceUrl: "https://www.technologyreview.mit.edu"
+entities: ["Novo Nordisk", "OpenAI", "FDA", "EMA", "GDPR", "obesity treatments", "diabetes treatments", "end of 2026", "Roche", "Merck", "GSK", "Anthropic"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["autonomous-ai", "openai", "enterprise-adoption", "coding-agents"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://github.com/openclaw/openclaw"
+entities: ["OpenAI", "OpenClaw", "Peter Steinberger", "Sam Altman", "EU AI Act", "US AI Accountability Act", "January 2026", "March 2026", "247,000 stars", "47,700 forks", "135,000 exposed instances", "15,000 vulnerable instances", "Accenture", "NVIDIA Agent Toolkit", "$57 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

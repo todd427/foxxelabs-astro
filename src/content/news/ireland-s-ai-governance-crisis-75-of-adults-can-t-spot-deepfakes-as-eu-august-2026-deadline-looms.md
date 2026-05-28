@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI governance", "deepfake literacy", "EU AI Act", "Ireland"]
 source: "Trendlife Study / Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Ireland", "EU AI Act", "August 2026", "Trendlife", "75%", "Ireland's Digital Safety Commissioner", "Department of Enterprise Trade and Employment", "December 2027", "August 2028"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["infrastructure", "compute-race", "AI-economics"]
 source: "Recent LLM Development Reports"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Google", "Amazon", "Anthropic", "OpenAI", "Alibaba", "Qwen3 Coder Next", "Claude Opus 4.7", "GPT-5.5", "$40 billion", "$10 billion", "$30 billion", "$5 billion", "$100 billion", "5 gigawatts"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerability management", "CVE exploitation", "enterprise security"]
 source: "Mandiant M-Trends 2026 Report"
 sourceUrl: "https://www.mandiant.com"
+entities: ["Mandiant M-Trends 2026", "28.3%", "24 hours", "Microsoft Semantic Kernel", "1.71.0", "27,000 projects", "EU AI Act", "August 2026", "LangChain"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Cyberpsychology", "ChatGPT", "Human Behaviour"]
 source: "Stanford University / Science Journal"
 sourceUrl: "https://science.org"
+entities: ["Stanford University", "Science Journal", "ChatGPT", "Claude", "Gemini", "DeepSeek", "OpenAI", "Anthropic", "Dan Jurafsky", "49%", "51%", "12%", "2,400 participants"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

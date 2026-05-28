@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI vulnerabilities", "prompt injection", "Irish cybersecurity", "enterprise security"]
 source: "Zenity Labs & Industry Reports"
 sourceUrl: "https://zenity.io/research/pleasfix-vulnerabilities"
+entities: ["Claude", "Claudy Day", "PleaseFix", "Zenity Labs", "Perplexity Comet", "claude.com", "Google Ads", "IBM X-Force", "Censuswide", "Oireachtas", "Ireland's National Cyber Risk Assessment", "2026", "2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

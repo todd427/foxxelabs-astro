@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "enforcement", "compliance"]
 source: "Irish Government"
 sourceUrl: "https://www.gov.ie"
+entities: ["Ireland", "AI Office of Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "7% global turnover penalty", "August 1, 2026", "Department of Enterprise, Tourism and Employment", "GDPR", "California", "New York"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

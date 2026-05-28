@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "autonomous research", "alignment"]
 source: "Anthropic"
 sourceUrl: "https://www.anthropic.com"
+entities: ["Anthropic", "EU AI Act", "August 2026", "Geoffrey Hinton"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

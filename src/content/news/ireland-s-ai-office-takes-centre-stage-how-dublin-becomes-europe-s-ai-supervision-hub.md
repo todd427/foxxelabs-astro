@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["Ireland", "AI Regulation", "EU AI Act", "Governance"]
 source: "Irish Department of Enterprise, Tourism and Employment"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland", "AI Office of Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "1 August 2026", "Central Bank", "Data Protection Commission", "Irish Council for Civil Liberties"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

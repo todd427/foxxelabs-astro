@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "High-Risk AI", "Implementation"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "European Commission", "August 2, 2026", "May 7, 2026", "Ireland", "Data Protection Commission", "high-risk AI systems", "biometrics", "critical infrastructure", "education", "employment", "migration control", "non-consensual sexual content", "nudification tools", "child sexual abuse material", "SME exemptions (500 employees)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

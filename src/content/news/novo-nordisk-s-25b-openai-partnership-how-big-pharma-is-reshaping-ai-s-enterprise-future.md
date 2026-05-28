@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "pharma-innovation", "openai", "business-transformation"]
 source: "OpenAI Industry Announcements"
 sourceUrl: "https://openai.com"
+entities: ["Novo Nordisk", "OpenAI", "$25B", "end of 2026", "Ireland AI Office", "August 2026", "EU AI Act", "Anthropic", "$19B", "Denmark"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

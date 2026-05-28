@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Deepfakes", "Ireland Enforcement", "EU Regulation"]
 source: "European Commission & European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Digital Omnibus package", "EU AI Act", "Ireland", "Data Protection Commission", "Regulation of Artificial Intelligence Bill 2026", "Oireachtas Enterprise Committee", "2 December 2026", "2 December 2027", "€30 million", "6% of global revenue", "7 May 2026", "8 May 2026", "6 May 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

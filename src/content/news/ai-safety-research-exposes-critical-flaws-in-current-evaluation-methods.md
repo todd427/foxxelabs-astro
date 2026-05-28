@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Evaluation", "Jailbreaking", "Research"]
 source: "ArXiv"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Intent Laundering: AI Safety Datasets Are Not They Seem", "February 2026", "Yoshia Bengio", "International AI Safety Report", "Anthropic", "Responsible Scaling Policy 3.0", "OpenAI", "New York RAISE Act", "EU AI Act", "August 2026", "90-98% jailbreak success rates"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

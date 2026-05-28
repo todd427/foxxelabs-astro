@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland AI Office", "enforcement fragmentation", "sectoral exemptions"]
 source: "EU AI Act Omnibus Deal Analysis"
 sourceUrl: "https://ec.europa.eu/commission/ai-office"
+entities: ["Ireland", "EU AI Act", "EU AI Omnibus", "Regulation of Artificial Intelligence Bill 2026", "Data Protection Commissioner", "August 2 2026", "August 1 2026", "December 2027", "August 2028", "AI Office of Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

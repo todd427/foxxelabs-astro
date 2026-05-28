@@ -6,6 +6,9 @@ category: "Research"
 tags: ["efficiency", "infrastructure", "Google", "context-windows"]
 source: "Google Research / ICLR 2026"
 sourceUrl: "https://research.google/"
+entities: ["Google", "TurboQuant", "ICLR 2026", "PolarQuant", "Quantized Johnson-Lindenstrauss", "EU AI Act", "December 2027", "KV cache", "OVHcloud", "Scaleway", "vLLM", "TensorRT", "Llama 2", "Mistral"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

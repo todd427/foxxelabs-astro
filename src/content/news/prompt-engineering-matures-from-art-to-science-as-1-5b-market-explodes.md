@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-development", "software-engineering", "market-growth"]
 source: "Multiple AI Research Sources"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "GPT-5.4", "Anthropic", "Claude Opus 4.6", "Google", "Gemini 3.1", "DeepSeek", "V4", "$1.52B", "$3.43B", "32.10% CAGR", "March 2026", "1-million-token", "1-trillion parameters"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["healthcare-ai", "machine-learning", "resource-optimization", "clinical-operations"]
 source: "Nature"
 sourceUrl: "https://www.nature.com"
+entities: ["Nature", "NHS", "Ireland healthcare", "EU AI Act", "August 2026", "Enterprise Ireland", "€500 million", "£500 million", "GDPR", "50%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

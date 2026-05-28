@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Model Evaluation", "Industry Collaboration", "EU AI Act"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Anthropic", "OpenAI", "o3", "o4-mini", "GPT-4o", "GPT-4.1", "Claude Sonnet 4.5", "Claude Opus 4.1", "Apollo Research", "EU AI Act", "CEN", "CENELEC", "August 2025"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

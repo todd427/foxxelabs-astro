@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labour market", "AI adoption", "youth employment", "skills gap"]
 source: "Labour Market Analysis - March 2026"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["ChatGPT", "EU AI Act", "Ireland", "August 2026", "22-27 year-olds", "generative AI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

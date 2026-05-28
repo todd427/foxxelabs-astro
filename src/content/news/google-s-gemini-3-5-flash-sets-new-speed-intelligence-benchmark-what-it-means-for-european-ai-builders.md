@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["frontier-models", "cost-efficiency", "enterprise-ai"]
 source: "Google AI Blog"
 sourceUrl: "https://blog.google/technology/ai/"
+entities: ["Google", "Gemini 3.5 Flash", "$1.50 per 1M tokens", "1M context window", "76.2% accuracy on Terminal-Bench 2.1", "EU AI Act", "Digital Operational Resilience Act (DORA)", "May 2026", "OpenAI", "Anthropic", "xAI"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

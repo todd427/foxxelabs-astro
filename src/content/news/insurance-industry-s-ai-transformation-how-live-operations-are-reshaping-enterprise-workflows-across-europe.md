@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Operations", "Enterprise Transformation", "Insurance Tech"]
 source: "AI Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "Ireland Central Bank", "August 2026", "Q4 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

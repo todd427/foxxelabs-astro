@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Annex I", "regulated products", "compliance deadline"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Annex I", "Medical Device Regulation (MDR)", "In Vitro Diagnostic Regulation (IVDR)", "Machinery Regulation", "28 April 2026", "2 August 2026", "May 2026", "Cypriot Presidency", "30 June 2026", "Ireland", "Irish Medical Devices Office"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

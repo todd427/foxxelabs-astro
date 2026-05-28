@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerabilities", "AI security", "cyberattacks", "infrastructure"]
 source: "Multiple Security Reports"
 sourceUrl: "https://example.com"
+entities: ["Chainlit", "CVE-2026-22218", "CVE-2026-22219", "Anthropic", "Claude", "Docker", "Ask Gordon", "Trend Micro", "ÆSIR", "NVIDIA", "MLflow", "December 24"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

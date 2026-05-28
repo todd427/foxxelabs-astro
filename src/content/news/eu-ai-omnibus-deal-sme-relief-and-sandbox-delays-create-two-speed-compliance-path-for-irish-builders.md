@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "SME compliance", "regulatory sandboxes", "Irish innovation"]
 source: "EU Legislative Bodies - AI Act Omnibus Agreement"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "AI Omnibus", "May 7 2026", "August 2 2027", "December 2 2026", "Arba Kokalari", "EU AI Office", "HRAIS", "SME", "SMC"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

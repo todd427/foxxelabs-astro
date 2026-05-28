@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "High-Risk AI", "Implementation Timeline"]
 source: "European Commission & artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Omnibus", "EU AI Act", "Ireland", "Annex III", "Annex I", "December 2, 2027", "August 2, 2028", "December 2026", "May 7, 2026", "EU Machinery Regulation", "Data Protection Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

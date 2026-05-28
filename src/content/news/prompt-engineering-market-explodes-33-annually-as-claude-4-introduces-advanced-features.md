@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "Claude 4", "market growth", "enterprise AI"]
 source: "ArXiv Research Papers"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Anthropic", "Claude 4", "$505.43M 2025", "$6.7B 2034", "33.27% CAGR", "March 2026", "Claude 4.0", "XML tags 23%", "40% hallucination reduction", "Fortune 500", "PROMPT-SE 2026", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

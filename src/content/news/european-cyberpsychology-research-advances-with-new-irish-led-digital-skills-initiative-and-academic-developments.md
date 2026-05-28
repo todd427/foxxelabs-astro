@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-skills", "research", "gender-gap"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["British Psychological Society", "University of York", "Prof. Paul Cairns", "Prof. Amy Orben", "Ireland", "ESRI", "BlockW Research", "Minister Marian Harkin TD", "Prof. Mary Aiken", "Capitol Technology University", "Interpol Global Cybercrime Expert Group", "Cyberpsychology: Journal of Psychosocial Research", "Dun Laoghaire Institute of Art, Design and Technology", "Psychological Society of Ireland", "SIGMAC", "July 6-7 2026", "2024-2026", "ChatGPT", "EU"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

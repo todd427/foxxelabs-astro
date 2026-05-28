@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Gemini 3.1", "multimodal AI", "enterprise architecture"]
 source: "Foxxe Labs Research"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Google Gemini 3.1 Ultra", "60fps video processing", "DeepSeek V4-Pro", "Claude Opus 4.6", "GPT-5.5", "GDPR", "EU accessibility mandates", "€37.5M agri-tech investments", "Dublin fintech", "Cork legal-tech"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

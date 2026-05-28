@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "context-engineering", "ai-productivity", "structured-output"]
 source: "Industry Research Reports"
 sourceUrl: "https://example.com/prompt-engineering-2026"
+entities: ["Anthropic", "Claude", "GPT-5", "March 2026", "Q3 2026", "$1.52 billion", "$3.43 billion", "11.4x speedup", "38.5%", "12.3%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

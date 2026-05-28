@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "context-engineering", "claude-opus", "ai-development"]
 source: "Anthropic Research & Industry Analysis"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Claude Opus 4.7", "Anthropic", "Stainless", "EU AI Act", "Article 50", "EU AI Omnibus Deal", "OpenAI", "DeepMind", "December 2026", "August 2026", "May 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

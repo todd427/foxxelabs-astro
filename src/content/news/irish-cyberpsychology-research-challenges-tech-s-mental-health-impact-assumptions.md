@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental health", "artificial intelligence", "social media"]
 source: "Cyberpsychology.eu Journal"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Irish cyberpsychology research", "Cyberpsychology.eu Volume 20 2026", "6th BPS Cyberpsychology Conference", "University of York July 2026", "Dr Nicola Fox Hamilton", "Dublin Institute of Art, Design and Technology", "Prof Mary Aiken", "Interpol Global Cybercrime Expert Group", "Europol European Cyber Crime Centre", "EU AI Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

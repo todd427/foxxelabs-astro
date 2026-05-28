@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["agentic-ai", "google-cloud", "enterprise-ai", "infrastructure"]
 source: "Google Cloud Official Announcement"
 sourceUrl: "https://cloud.google.com/agents"
+entities: ["Google", "Agent2Agent protocol", "Google Cloud", "Project Mariner", "OpenAI", "Anthropic", "Claude", "EU AI Act", "December 2025", "August 2026", "Google Workspace", "LangChain", "200+ models"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

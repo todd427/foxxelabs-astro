@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "AI Safety", "Regulation", "Ireland"]
 source: "European Commission"
 sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "U.S. Defense Department", "EU AI Act", "Ireland", "August 2, 2026", "National AI Office", "15 enforcement authorities", "Ireland 2026 EU Council Presidency", "International AI and Digital Summit", "European Commission", "March 27", "New York RAISE Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

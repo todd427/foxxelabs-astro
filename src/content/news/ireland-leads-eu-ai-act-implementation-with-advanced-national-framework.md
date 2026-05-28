@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "AI Office", "Regulatory Sandbox"]
 source: "Irish Government"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "August 2026", "Department of Enterprise, Tourism and Employment", "15 national competent authorities", "European Commission", "November 2025 Digital Omnibus", "€1 billion", "$527 billion"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

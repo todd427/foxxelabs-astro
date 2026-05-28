@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Alignment", "EU Regulation", "Pluralistic Design"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://www.turing-ai-report.com"
+entities: ["International AI Safety Report", "February 3, 2026", "EU AI Act", "August 2026", "Yoshua Bengio", "100 AI experts", "30 countries", "open-weight models"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

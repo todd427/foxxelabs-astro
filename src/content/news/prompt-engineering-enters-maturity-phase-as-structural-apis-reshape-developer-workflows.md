@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "LLM-APIs", "developer-tools", "structured-outputs"]
 source: "Search results from prompt engineering advances analysis"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "structured outputs API", "JSON schemas", "Claude", "Gemini", "+135.8% job growth", "2024-2025"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

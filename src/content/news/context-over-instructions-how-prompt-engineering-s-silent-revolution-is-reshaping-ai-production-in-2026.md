@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "AI-production", "context-engineering"]
 source: "Industry analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["EU AI Act", "February 2026", "Ireland", "Europe", "ChatGPT", "MCP", "30% accuracy improvement"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

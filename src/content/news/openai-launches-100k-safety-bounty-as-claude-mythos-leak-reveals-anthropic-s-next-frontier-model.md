@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["safety", "competition", "frontier-models", "responsible-ai"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Anthropic", "Claude Mythos", "Claude 4.6 Opus", "Capybara edition", "$100K Safety Bug Bounty Program", "March 29", "Mistral AI", "Voxtral TTS", "NVIDIA"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

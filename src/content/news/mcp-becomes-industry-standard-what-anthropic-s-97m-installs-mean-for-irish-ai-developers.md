@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["MCP", "AI infrastructure", "agent development", "developer tools"]
 source: "Industry Research"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "Model Context Protocol (MCP)", "97M installs", "Linux Foundation", "OpenAI", "Google", "Claude", "EU AI Act", "Mizuho Financial Group", "Agent Factory", "Ireland's AI Office", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

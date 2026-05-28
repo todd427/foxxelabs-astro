@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour market", "employment", "youth workers", "European Central Bank"]
 source: "Irish Times"
 sourceUrl: "https://irishtimes.com/technology"
+entities: ["Ireland", "Department of Finance", "European Central Bank", "Anthropic", "Maxim Massenkoff", "Peter McCrory", "ChatGPT", "November 2025", "20%", "11%", "4%", "12 EU firms"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

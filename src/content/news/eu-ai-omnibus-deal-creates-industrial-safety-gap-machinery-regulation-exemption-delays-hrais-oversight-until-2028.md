@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "Industrial Safety", "HRAIS"]
 source: "EU Council of Ministers"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "7 May 2026", "2 August 2028", "2 December 2027", "Machinery Regulation", "EU Notified Bodies", "European Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

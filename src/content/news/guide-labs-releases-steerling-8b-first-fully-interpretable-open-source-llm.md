@@ -6,6 +6,9 @@ category: "Research"
 tags: ["interpretability", "open-source", "transparency", "steerling"]
 source: "Guide Labs"
 sourceUrl: "https://example.com/steerling-8b-release"
+entities: ["Guide Labs", "Steerling-8B", "Intel OpenVINO 2026.0", "ModelFront", "OpenAI GPT-5.2", "Meta Llama 4 Scout", "Mistral", "8B parameters", "10 million tokens"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

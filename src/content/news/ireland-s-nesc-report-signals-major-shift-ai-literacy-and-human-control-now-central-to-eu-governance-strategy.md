@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "Ireland", "EU AI Act", "AI literacy"]
 source: "National Economic and Social Council (NESC)"
 sourceUrl: "https://www.nesc.ie"
+entities: ["NESC", "Ireland", "EU AI Act", "August 2, 2026", "AI Office of Ireland", "Annex III", "Article 5", "European Parliament", "Annex I", "April 29, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

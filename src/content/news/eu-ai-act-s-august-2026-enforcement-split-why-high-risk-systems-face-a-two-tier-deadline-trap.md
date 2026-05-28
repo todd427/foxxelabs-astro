@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance deadline", "high-risk AI", "workforce monitoring"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "August 2 2026", "Willemijn Aerdts", "Dutch State Secretary for Digital Economy and Sovereignty", "April 20 2026", "Digital Omnibus", "high-risk AI systems", "recruitment", "workforce monitoring", "regulatory sandbox"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

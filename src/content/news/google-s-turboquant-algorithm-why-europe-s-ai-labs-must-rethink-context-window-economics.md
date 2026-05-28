@@ -6,6 +6,9 @@ category: "Research"
 tags: ["efficiency", "infrastructure", "context-windows", "quantization"]
 source: "Google Research / ICLR 2026"
 sourceUrl: "https://research.google/"
+entities: ["Google", "TurboQuant", "KV cache compression", "PolarQuant", "Quantized Johnson-Lindenstrauss", "ICLR 2026", "Gemini 3.1 Pro", "Claude Opus", "GDPR", "EU AI Act", "Cohere-Aleph Alpha", "EuroLLM", "Gemini 3.5 Flash"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

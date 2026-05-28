@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "Ireland", "EU AI Act", "Compliance"]
 source: "Irish Government - General Scheme of the Regulation of Artificial Intelligence Bill 2026"
 sourceUrl: "https://www.enterprise.ie/"
+entities: ["Ireland", "AI Office of Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "Department of Enterprise, Tourism and Employment", "EU Digital Omnibus", "August 2026", "European Commission AI Office", "Amnesty International"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

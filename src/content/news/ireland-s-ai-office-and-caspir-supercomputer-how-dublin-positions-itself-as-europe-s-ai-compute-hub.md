@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI infrastructure", "Ireland", "EU AI Act", "HPC"]
 source: "Irish Government Digital Strategy 2026"
 sourceUrl: "https://www.gov.ie/en/policy/digital-ireland-strategy-2026/"
+entities: ["Ireland AI Office", "CASPIr", "€25M", "EuroHPC", "ICHEC", "EU AI Act", "Digital Ireland Strategy 2026", "August 2026", "Anthropic", "$30B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

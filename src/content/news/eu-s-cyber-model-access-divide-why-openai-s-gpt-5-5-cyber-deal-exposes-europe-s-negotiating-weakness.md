@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Strategy", "Cybersecurity", "Model Access", "AI Sovereignty"]
 source: "OpenAI Announcements"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "GPT-5.5-Cyber", "Anthropic", "Mythos", "EU AI Act", "DeepMind", "FrontierMath", "MiniMax", "Alibaba", "Qwen3 Coder Next", "White Circle", "€11M", "Ireland", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

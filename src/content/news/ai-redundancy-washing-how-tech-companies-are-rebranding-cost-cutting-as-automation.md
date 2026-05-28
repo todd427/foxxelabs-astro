@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI adoption", "labour market", "corporate accountability"]
 source: "Deutsche Bank Analysis / Morgan Stanley Labour Market Report"
 sourceUrl: "https://www.morganstanley.com"
+entities: ["Deutsche Bank", "Morgan Stanley", "EU AI Act", "August 2026", "Q1 2026", "52,050", "15,341", "56%", "1.3 million", "600,000+", "Ireland", "PwC 2025 Global AI Jobs Barometer"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

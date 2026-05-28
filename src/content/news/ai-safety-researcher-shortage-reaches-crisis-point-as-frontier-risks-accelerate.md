@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Research Capacity", "EU Regulation"]
 source: "AI Safety Assessment 2026"
 sourceUrl: "https://www.example.com/ai-safety-crisis-2026"
+entities: ["1,100 AI safety researchers", "METR", "EU AI Act", "August 2, 2026", "ENISA", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI governance", "EU AI Act", "Ireland", "regulatory compliance"]
 source: "Irish Government & Legal Policy Analysis"
 sourceUrl: "https://www.enterprise.gov.ie"
+entities: ["Ireland's AI Office", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "August 2, 2026", "Annex III", "Department of Enterprise, Tourism and Employment", "Niamh Smyth", "Ireland's EU Council Presidency 2026", "International AI Summit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

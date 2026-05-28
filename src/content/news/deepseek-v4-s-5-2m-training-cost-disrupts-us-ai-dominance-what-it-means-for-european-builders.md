@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI economics", "open-source models", "competitive landscape"]
 source: "AI industry reports"
 sourceUrl: "https://www.technologyreview.mit.edu"
+entities: ["DeepSeek V4", "$5.2M", "April 2026", "Claude Opus 4.6", "Gemini 3.1 Pro", "EU AI Act", "GDPR", "Meta MTIA", "Cerebras", "OpenAI", "Anthropic", "Google"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

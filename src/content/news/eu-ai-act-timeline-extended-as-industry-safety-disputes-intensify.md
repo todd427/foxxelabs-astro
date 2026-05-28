@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "safety", "compliance"]
 source: "European Commission"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "European Commission", "16-month extension", "high-risk AI systems", "Anthropic", "Pentagon", "OpenAI", "Google DeepMind", "Dario Amodei", "5% safety research gap"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

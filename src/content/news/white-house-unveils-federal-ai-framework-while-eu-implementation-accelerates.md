@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI regulation", "EU AI Act", "federal framework", "compliance"]
 source: "White House AI Framework"
 sourceUrl: "https://whitehouse.gov"
+entities: ["White House", "National Policy Framework for Artificial Intelligence", "March 20, 2026", "EU AI Act", "August 2, 2026", "Ireland", "15 specialised enforcement authorities", "National AI Office", "California", "Colorado"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

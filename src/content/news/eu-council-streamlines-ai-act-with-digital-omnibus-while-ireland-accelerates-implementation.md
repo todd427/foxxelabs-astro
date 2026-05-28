@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "Ireland AI Office", "Implementation"]
 source: "EU Council"
 sourceUrl: "https://data.consilium.europa.eu/doc/document/ST-6986-2026-INIT/en/pdf"
+entities: ["EU Council", "Digital Omnibus", "AI Act", "Ireland", "Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "March 13 2026", "December 2 2027", "August 2028", "February 2026", "August 2026", "March 5 2026", "June 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

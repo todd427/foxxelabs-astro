@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Ethics", "Vatican", "Anthropic", "Human Rights"]
 source: "Vatican Press Office / Anthropic"
 sourceUrl: "https://www.vatican.va"
+entities: ["Pope Leo XIV", "Anthropic", "Christopher Olah", "Magnifica Humanitas", "May 25 2026", "Rerum Novarum", "EU AI Act", "HRAIS", "Irish AI Office", "August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

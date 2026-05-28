@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland Enforcement", "AI Safety", "Content Moderation"]
 source: "Council of the European Union / European Parliament"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 7 2026", "Ireland", "Data Protection Commission", "AI Office", "27 member states", "nudification", "Q1 2026", "€250 million", "August 2027", "December 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

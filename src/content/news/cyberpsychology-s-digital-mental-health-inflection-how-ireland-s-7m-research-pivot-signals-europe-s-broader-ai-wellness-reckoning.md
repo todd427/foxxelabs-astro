@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-mental-health", "Ireland", "EU-policy"]
 source: "Psychological Society of Ireland / Irish Research Funding Announcements"
 sourceUrl: "https://www.psychologicalSocietyofIreland.ie"
+entities: ["Ireland", "€7M", "EU AI Act", "August 2026", "Psychological Society of Ireland", "SIGMAC", "Atlantic Technological University", "MSc in Cyberpsychology"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

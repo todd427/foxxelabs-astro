@@ -6,6 +6,9 @@ category: "Research"
 tags: ["medical-ai", "fairness", "bias-detection", "healthcare"]
 source: "Nature"
 sourceUrl: "https://www.nature.com"
+entities: ["Nature", "May 19 2026", "XGBoost", "Random Forest", "LightGBM", "59,381 insurance applicants", "0.831 accuracy", "0.624 Matthews Correlation Coefficient", "EU AI Act", "Irish Financial Regulator", "December 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "sandboxes"]
 source: "European Commission"
 sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+entities: ["EU AI Act", "EU Member States", "August 2, 2026", "European Commission", "Digital Omnibus proposal", "November 2025", "Q2 2026", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

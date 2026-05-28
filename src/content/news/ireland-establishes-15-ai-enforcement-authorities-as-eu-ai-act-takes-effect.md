@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "innovation"]
 source: "European AI Policy Updates"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["Ireland", "EU AI Act", "National AI Office", "August 2026", "15 enforcement authorities", "International AI Summit", "14 October 2026", "Dublin", "EU Presidency", "91% AI adoption 2025", "€250 billion", "Microsoft Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

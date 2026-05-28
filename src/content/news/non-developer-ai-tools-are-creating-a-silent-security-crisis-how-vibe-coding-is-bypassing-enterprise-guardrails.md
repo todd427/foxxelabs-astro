@@ -6,6 +6,9 @@ category: "Security"
 tags: ["shadow-ai", "security-debt", "application-security", "ai-democratization"]
 source: "RedAccess Research"
 sourceUrl: "https://www.example.com/shadow-ai-security"
+entities: ["RedAccess", "vibe coding", "EU AI Act", "Y2K"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

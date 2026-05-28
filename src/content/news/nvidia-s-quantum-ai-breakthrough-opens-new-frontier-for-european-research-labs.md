@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["quantum-computing", "NVIDIA", "research-infrastructure", "open-source"]
 source: "NVIDIA"
 sourceUrl: "https://nvidia.com"
+entities: ["NVIDIA", "Ising", "Harvard University", "Fermi National Accelerator Laboratory", "Lawrence Berkeley National Laboratory", "IQM Quantum Computers", "EU Quantum Flagship"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

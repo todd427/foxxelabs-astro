@@ -5,6 +5,9 @@ publishDate: 2026-03-26
 category: "Policy"
 tags: ["EU AI Act", "regulation", "compliance", "innovation"]
 source: "Government of Ireland"
+entities: ["Ireland", "EU AI Act", "Regulation (EU) 2024/1689", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "National AI Office", "August 2026", "15 enforcement authorities", "Annex III", "Omnibus VII", "August 2, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["agentic-ai", "critical-infrastructure", "ai-governance", "five-eyes"]
 source: "Cybersecurity and Intelligence Agencies (US, Australia, Canada, New Zealand, UK)"
 sourceUrl: "https://www.cisa.gov"
+entities: ["Five Eyes alliance", "agentic AI systems", "critical infrastructure", "EU AI Act", "Ireland's AI Office", "August 2026", "energy grids", "transportation networks", "defence systems"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

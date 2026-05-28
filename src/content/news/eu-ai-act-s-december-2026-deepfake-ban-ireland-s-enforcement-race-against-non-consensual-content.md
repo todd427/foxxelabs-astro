@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Deepfakes", "Ireland Enforcement", "AI Regulation"]
 source: "European Commission Digital Omnibus on AI"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus", "December 2026", "Ireland", "AI Office of Ireland", "Digital Services Coordinator", "An Garda Síochána", "ODCE", "General Scheme of the Regulation of Artificial Intelligence Bill", "CSAM", "non-consensual intimate imagery"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

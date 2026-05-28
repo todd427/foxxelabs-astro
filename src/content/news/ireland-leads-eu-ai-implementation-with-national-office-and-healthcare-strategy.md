@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "Healthcare AI", "Regulatory Framework", "Ireland"]
 source: "Irish Government Publications"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "EU AI Act", "Jennifer Carroll MacNeill", "AI for Care", "EU Council", "Central Bank of Ireland", "Dublin AI Summit October 2026", "Regulation of Artificial Intelligence Bill 2026", "31%", "16 months", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

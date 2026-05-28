@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Infrastructure Vulnerability", "Data Exposure"]
 source: "Security Research Investigation"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["EU AI Act", "August 2026", "2 million hosts", "1 million exposed instances", "90+ instances", "2,130 CVEs", "34.6%", "January 27 2026", "OpenSSL", "Firefox 150", "Claude Mythos Preview", "MCP"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

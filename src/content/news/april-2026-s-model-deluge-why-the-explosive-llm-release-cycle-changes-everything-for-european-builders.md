@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM-releases", "multimodal-AI", "open-source-models", "market-consolidation"]
 source: "LLM Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["OpenAI", "GPT-5 Turbo", "Google", "Gemma 4", "DeepSeek V4", "Qwen 3", "Llama 4", "Claude Opus 4.6", "EU AI Act", "August 2026", "April 2026", "$75 per million tokens", "$5.2M"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

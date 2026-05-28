@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt engineering", "AI security", "enterprise AI", "context engineering"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/news"
+entities: ["OpenAI", "Promptfoo", "OpenAI Frontier", "Anthropic", "Claude 4.0", "March 9 2026", "Fortune 500", "$505.43M 2025", "$6.7B 2034", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

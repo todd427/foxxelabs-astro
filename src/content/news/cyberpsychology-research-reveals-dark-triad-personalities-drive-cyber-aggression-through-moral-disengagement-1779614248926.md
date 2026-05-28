@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behaviour", "moral-disengagement"]
 source: "Cyberpsychology Journal"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Dark Triad", "narcissism", "psychopathy", "Machiavellianism", "moral disengagement", "EU AI Act", "Cyberpsychology Journal", "2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

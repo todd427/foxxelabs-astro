@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["multimodal AI", "model releases", "enterprise AI"]
 source: "Anthropic, Google, Alibaba, Microsoft"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Google Gemma 4", "Anthropic Claude Mythos", "Alibaba Qwen 3.6-Plus", "Microsoft MAI", "Zhipu GLM-5V-Turbo", "Apache 2.0", "Project Glasswing", "April 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

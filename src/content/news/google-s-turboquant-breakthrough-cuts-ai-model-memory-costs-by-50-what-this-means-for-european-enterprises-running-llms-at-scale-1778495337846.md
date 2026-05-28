@@ -6,6 +6,9 @@ category: "Research"
 tags: ["efficiency", "model-optimization", "enterprise-AI"]
 source: "Google DeepMind Research / ICLR 2026"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quantized Johnson-Lindenstrauss", "Anthropic", "$200 billion Google Cloud contract", "EU AI Act", "August 2026", "PyTorch", "JAX", "TensorFlow"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

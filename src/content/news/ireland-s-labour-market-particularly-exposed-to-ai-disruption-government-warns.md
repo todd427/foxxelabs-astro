@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["labour-market", "workforce", "disruption", "ireland"]
 source: "Department of Finance Ireland"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland Department of Finance", "Ireland Department of Enterprise", "European Central Bank", "Yale Budget Lab", "International AI Summit October 2026", "Ireland EU Presidency 2026", "14% youth unemployment", "20% employment decline 2023-2025", "275,000 AI job postings January 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

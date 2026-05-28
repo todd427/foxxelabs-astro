@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI Act", "compliance", "governance", "regulation"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Council", "EU AI Act", "Ireland", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "March 13, 2026", "August 1, 2026", "August 2, 2026", "Regulation of Artificial Intelligence Bill 2026", "Code of Practice on AI-generated content marking and labelling", "June 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

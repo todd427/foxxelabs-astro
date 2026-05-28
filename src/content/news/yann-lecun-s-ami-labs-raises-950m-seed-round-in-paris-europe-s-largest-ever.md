@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["funding", "world-models", "european-ai", "robotics"]
 source: "European Commission & Tech News"
 sourceUrl: "https://example.com/ami-labs-funding"
+entities: ["Yann LeCun", "Advanced Machine Intelligence (AMI Labs)", "€950M", "€3.2B", "Nvidia", "Bezos Expeditions", "Temasek", "Paris", "EU AI Act", "Turing Award"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

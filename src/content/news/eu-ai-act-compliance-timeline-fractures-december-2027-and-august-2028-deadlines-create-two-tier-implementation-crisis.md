@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "compliance timeline", "high-risk systems", "implementation deadline"]
 source: "EU Council Presidency"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "May 7, 2026", "December 2, 2027", "August 2, 2028", "August 2, 2026", "June 30, 2026", "Ireland", "EU Council"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

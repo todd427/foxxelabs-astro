@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Hardware", "Infrastructure", "Nvidia", "Compute Sovereignty"]
 source: "Meta Research & Industry Analysis"
 sourceUrl: "https://meta.com/research"
+entities: ["Meta", "MTIA", "MTIA 400", "MTIA 450", "MTIA 500", "Nvidia", "H100", "EU AI Act", "August 2026", "Thinking Machines Lab", "Google Cloud", "CoreWeave", "Google TurboQuant"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

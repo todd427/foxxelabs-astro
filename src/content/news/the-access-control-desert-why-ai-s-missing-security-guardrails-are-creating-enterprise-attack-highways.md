@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Access Control", "Infrastructure Risk", "Enterprise"]
 source: "Security Research"
 sourceUrl: "https://krebsonsecurity.com"
+entities: ["Ollama", "EU AI Act", "August 2026", "Anthropic", "IRISSCERT", "2 million hosts"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

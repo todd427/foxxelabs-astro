@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["Apple M5", "EU AI Summit", "on-device AI", "Ireland"]
 source: "Multiple Industry Sources"
 sourceUrl: "https://example.com"
+entities: ["Apple", "M5 Pro", "M5 Max", "Ireland", "EU AI Summit 2026", "14 October 2026", "Dublin", "European Commission", "Hunter Alpha", "Xiaomi", "MiMo-V2-Pro", "OpenRouter", "DeepSeek", "OpenAI", "ChatGPT", "€250 billion", "91%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

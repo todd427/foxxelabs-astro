@@ -6,6 +6,9 @@ category: "Security"
 tags: ["adversarial-distillation", "model-security", "frontier-models"]
 source: "Frontier Model Forum"
 sourceUrl: "https://www.frontiermodelforum.org"
+entities: ["OpenAI", "Anthropic", "Google", "Microsoft", "Frontier Model Forum", "Deepseek", "Moonshot", "Minimax", "$30 billion", "58%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

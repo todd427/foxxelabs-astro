@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "digital-wellness", "youth-online-safety", "European-research-strategy"]
 source: "Cyberpsychology Journal"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["EU AI Act", "Digital Services Act", "Cyberpsychology Journal", "2026 research agenda", "Dark Triad", "Ireland", "EU", "Data Protection Commission", "Broadcasting Authority"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI agents", "autonomous systems", "enterprise deployment", "AI infrastructure"]
 source: "Recent AI Research Breakthroughs"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Meta", "Hatch", "DoorDash", "Etsy", "Reddit", "Google", "Mariner", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

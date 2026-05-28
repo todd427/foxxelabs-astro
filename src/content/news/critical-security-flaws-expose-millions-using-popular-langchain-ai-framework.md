@@ -6,6 +6,9 @@ category: "Security"
 tags: ["LangChain", "vulnerabilities", "AI frameworks", "enterprise security"]
 source: "Multiple Security Advisories"
 sourceUrl: "https://example.com/security-advisory"
+entities: ["LangChain", "LangGraph", "CVE-2026-34070", "CVE-2025-68664", "CVE-2025-67644", "847 million deployments", "52 million downloads", "LangChain core 1.2.22", "LangGraph checkpoint SQLite 3.0.1", "March 2026"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

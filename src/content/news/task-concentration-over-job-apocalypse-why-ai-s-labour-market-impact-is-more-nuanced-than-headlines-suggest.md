@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI labour market", "task-based displacement", "employment trends", "AI adoption"]
 source: "MIT Research / Labour Market Analysis"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["MIT", "EU AI Act", "August 2026", "ILO", "ChatGPT", "Ireland", "AIReady.ie", "14%", "13%", "20%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

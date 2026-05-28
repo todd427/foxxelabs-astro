@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI safety", "EU governance", "alignment research"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://www.ai-safety-report.org"
+entities: ["Yoshua Bengio", "International AI Safety Report 2026", "EU AI Act", "February 3 2026", "August 2026", "December 2027", "August 2028", "Ireland", "Europe", "Turing Award"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

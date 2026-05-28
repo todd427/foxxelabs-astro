@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["sovereign-ai", "european-consolidation", "cohere", "aleph-alpha"]
 source: "AI Industry Coverage"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Cohere", "Aleph Alpha", "OpenAI", "China", "€6.8B", "Hiro", "Meta", "Manus", "GDPR", "EU AI Act", "December 2026", "December 2027"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["machine-learning", "physics-informed-ai", "renewable-energy"]
 source: "University of Hawaiʻi at Mānoa Research"
 sourceUrl: "https://www.hawaii.edu"
+entities: ["University of Hawaiʻi at Mānoa", "physics-informed machine learning", "European Green Deal", "EU AI Act"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

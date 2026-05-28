@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulation", "enforcement"]
 source: "EU AI Act Implementation Updates"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "Peter Burke", "15 National Competent Authorities", "August 2026", "March 2026", "European Commission", "DG CNECT", "EU AI Office", "December 2027", "Q2 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

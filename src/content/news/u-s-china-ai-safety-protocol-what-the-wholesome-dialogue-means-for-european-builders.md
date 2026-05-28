@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI safety", "geopolitics", "international standards", "EU strategy"]
 source: "U.S. Treasury Department / May 2026"
 sourceUrl: "https://treasury.gov"
+entities: ["U.S.", "China", "Scott Bessent", "Treasury Secretary", "EU AI Act", "AI omnibus deal", "May 2026", "Ireland's AI Office", "August 2026", "December 2027 HRAIS compliance deadline", "EuroLLM-22B", "machinery regulation exemption"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

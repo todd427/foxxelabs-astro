@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["OpenVINO", "local deployment", "AI sovereignty", "NPU"]
 source: "Phoronix"
 sourceUrl: "https://phoronix.com"
+entities: ["Intel", "OpenVINO 2026.0", "GPT-OSS-20B", "MiniCPM-V-4_5-8B", "MiniCPM-o-2.6", "Qwen2.5-1B-Instruct", "Qwen-2.5-coder-0.5B", "Apple M5"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

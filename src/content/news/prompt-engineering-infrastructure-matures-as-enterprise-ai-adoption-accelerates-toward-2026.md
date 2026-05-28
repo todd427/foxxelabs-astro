@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "enterprise-ai", "infrastructure", "benchmarks"]
 source: "MLPerf"
 sourceUrl: "https://mlcommons.org/"
+entities: ["CoreWeave", "MLPerf v6.0", "DeepSeek-R1", "GPT-OSS-120B", "NVIDIA GB200 NVL72", "NVIDIA GB300 NVL72", "OpenAI", "USD 505.43 million 2025", "USD 6.7 billion 2034", "33.27% CAGR", "75% enterprises 2026", "135.8% surge", "Pydantic", "Mixture-of-Experts"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

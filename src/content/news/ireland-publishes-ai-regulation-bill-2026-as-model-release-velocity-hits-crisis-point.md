@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "model releases", "Ireland"]
 source: "Irish Government Publications"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "EU AI Act", "AI Office of Ireland", "August 2026", "Anthropic", "Claude", "April 4", "Mercor", "Meta", "OpenAI", "Claude Mythos 5", "10 trillion parameters", "€35 million", "7% of global turnover", "GDPR", "72-hour release cycle", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

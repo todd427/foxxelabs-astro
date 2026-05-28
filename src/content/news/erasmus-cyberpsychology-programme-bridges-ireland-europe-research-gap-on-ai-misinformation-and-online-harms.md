@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "EU collaboration", "online safety", "AI misinformation"]
 source: "Institute of Design and Technology (IADT)"
 sourceUrl: "https://www.iadt.ie"
+entities: ["IADT", "Erasmus+", "Tallinn University", "Hochschule der Medien", "EU AI Act", "€63.2M", "August 2026", "BPS Cyberpsychology Conference", "University of York", "University of Cambridge"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

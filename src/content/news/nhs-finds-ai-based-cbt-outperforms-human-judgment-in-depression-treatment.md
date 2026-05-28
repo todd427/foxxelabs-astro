@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI therapy", "mental health", "CBT", "clinical psychology"]
 source: "British Psychological Society"
 sourceUrl: "https://bps.org.uk/cyberpsychology"
+entities: ["NHS", "British Psychological Society", "AI-based CBT", "Professor John McAlaney", "DSTL", "US Army", "Professor Linda Kaye", "Edge Hill University", "2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

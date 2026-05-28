@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Ireland", "regulation", "implementation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "National AI Office", "15 National Competent Authorities", "Peter Burke", "Regulation of Artificial Intelligence Bill 2026", "August 2026", "February 2025", "December 2027", "August 2028", "Article 57", "Mario Draghi"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

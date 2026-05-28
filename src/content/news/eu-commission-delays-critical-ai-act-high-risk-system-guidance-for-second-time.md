@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "high-risk AI", "compliance", "regulation"]
 source: "Euractiv"
 sourceUrl: "https://euractiv.com"
+entities: ["EU Commission", "EU Artificial Intelligence Act", "2 February 2026", "2 August 2026", "Ireland", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "1 August 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

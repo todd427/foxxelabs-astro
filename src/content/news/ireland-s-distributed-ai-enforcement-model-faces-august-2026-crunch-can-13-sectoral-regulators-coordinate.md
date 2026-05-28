@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Ireland", "AI Act", "Enforcement", "Regulation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["Ireland", "EU AI Act", "13 sectoral regulators", "Data Protection Commissioner", "Central Bank of Ireland", "statutory AI Office", "August 1, 2026", "February 4, 2026", "General Scheme", "EU AI Omnibus", "May 7, 2026", "December 2, 2027", "August 2, 2028", "7% worldwide turnover", "Health Information and Quality Authority", "Department of Enterprise, Tourism and Employment"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

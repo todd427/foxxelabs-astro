@@ -6,6 +6,9 @@ category: "Research"
 tags: ["labor market", "employment", "EU policy", "productivity"]
 source: "Anthropic Research"
 sourceUrl: "https://anthropic.com"
+entities: ["Anthropic", "March 2026", "Stanford economists", "European Central Bank", "EU AI Act", "Peterson Institute", "Carnegie Endowment", "EU Skills Union", "20% entry-level hiring decline", "15% call center hiring decline", "4% productivity increase"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

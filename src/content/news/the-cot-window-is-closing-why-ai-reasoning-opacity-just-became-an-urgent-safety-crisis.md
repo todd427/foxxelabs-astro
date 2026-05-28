@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI safety", "chain-of-thought", "alignment", "interpretability"]
 source: "OpenAI, Google DeepMind, Anthropic, Meta Joint Research"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "chain-of-thought reasoning", "reward hacking", "Center for AI Standards and Innovation", "Microsoft", "xAI", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

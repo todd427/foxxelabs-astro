@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "content safety", "digital rights"]
 source: "EU Council"
 sourceUrl: "https://euractiv.com/section/artificial-intelligence"
+entities: ["EU AI Act", "European Council", "European Commission", "€75 million", "EURO-3C Project", "August 2026", "Second Draft Code of Practice on marking and labelling of AI-generated content", "March 3, 2026", "non-consensual sexual content prohibition", "child sexual abuse material"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

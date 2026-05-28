@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Compliance", "High-Risk Systems", "Ireland"]
 source: "Council of the European Union & European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus on AI", "December 2, 2027", "May 7, 2026", "AI Office of Ireland", "August 2026", "Department of Enterprise, Trade and Employment", "Department of Justice", "Revenue Commissioners", "May 19, 2026", "June 23, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

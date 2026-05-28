@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["AI Safety", "Security", "Model Evaluation", "Anthropic"]
 source: "METR Research Report"
 sourceUrl: "https://metr.org"
+entities: ["Anthropic", "Claude Mythos", "METR", "Opus 4.6", "OpenAI", "Google DeepMind", "Meta", "European Commission", "EU AI Act", "Ireland AI Office", "Regulation of Artificial Intelligence Bill 2026", "March 27"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

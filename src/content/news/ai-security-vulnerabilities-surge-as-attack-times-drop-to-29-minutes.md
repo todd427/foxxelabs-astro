@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Security", "Cyber Threats", "Supply Chain", "Enterprise AI"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://example.com"
+entities: ["CrowdStrike", "CVE-2024-0628", "Google", "Gemini", "CVE-2024-26118", "Microsoft", "Azure", "Model Context Protocol", "Antiy CERT", "OpenClaw", "SecurityScorecard", "IBM X-Force", "AppOmni", "Codex Security", "EU AI Act", "29 minutes", "1,184 malicious packages", "135,000 instances", "44% increase", "83%", "29%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

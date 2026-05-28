@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["robotics", "open-source", "physical-ai", "manufacturing"]
 source: "NVIDIA"
 sourceUrl: "https://www.nvidia.com/en-us/news/"
+entities: ["NVIDIA", "Newton 1.0", "Isaac GR00T", "EU AI Act", "Factories of the Future", "National Robotics Week", "CE marking", "ISO 13849"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

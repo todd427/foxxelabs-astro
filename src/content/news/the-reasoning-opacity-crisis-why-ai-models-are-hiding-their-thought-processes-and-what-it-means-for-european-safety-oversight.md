@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Model Transparency", "Mechanistic Interpretability"]
 source: "Collaborative AI Safety Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "Anthropic microscope tool", "August 2026", "weak-to-strong supervision"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

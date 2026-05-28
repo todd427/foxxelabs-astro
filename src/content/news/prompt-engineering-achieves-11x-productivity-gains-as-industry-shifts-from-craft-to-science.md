@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "productivity", "ai-optimization", "cost-reduction"]
 source: "Industry Research"
 sourceUrl: "https://anthropic.com/news"
+entities: ["RCCF methodology", "OpenAI", "Anthropic", "Claude 4.0", "GPT-5", "prompt caching", "€1.4 billion", "32% annual growth", "Linux Foundation", "€11.6 million", "200+ production workflows", "47 developers", "3.55 hours to 18.7 minutes", "70-90% cost reduction"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

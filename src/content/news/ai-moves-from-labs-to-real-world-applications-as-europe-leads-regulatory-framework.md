@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["physical-ai", "medical-ai", "enterprise-adoption", "eu-regulation"]
 source: "Multiple Sources"
 sourceUrl: "https://multiple-sources"
+entities: ["BMW", "Merlin", "NOAA", "Vikram Taneja", "AT&T Ventures", "European Commission", "EURO-3C", "€75M", "Council of Europe Framework Convention on AI and Human Rights", "Ireland", "20%", "CSO"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

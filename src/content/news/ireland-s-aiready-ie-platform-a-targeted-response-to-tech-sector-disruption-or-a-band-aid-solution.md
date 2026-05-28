@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AIReadyIE", "workforce-displacement", "Ireland-AI-policy", "tech-sector"]
 source: "Government of Ireland / Taoiseach Statement"
 sourceUrl: "https://www.ireland.ie"
+entities: ["AIReady.ie", "Meta", "Ireland", "Micheál Martin", "Dublin", "EU AI Act", "Ireland's AI Office", "August 2026", "1,800"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

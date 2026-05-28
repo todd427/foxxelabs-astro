@@ -5,6 +5,9 @@ publishDate: 2026-03-20
 category: "Industry"
 tags: ["funding", "reinforcement-learning", "ai-agents", "workplace-ai"]
 source: "Industry Reports"
+entities: ["Deeptune", "$43M", "Andreessen Horowitz", "776", "Abstract Ventures", "Inspired Capital", "Noam Brown", "Slack", "Salesforce", "OpenAI", "Anthropic", "EU AI Act", "January 2026", "US AI Accountability Act", "March 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

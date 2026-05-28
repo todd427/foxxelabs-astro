@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Digital Omnibus", "High-Risk AI", "Regulation"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "Digital Omnibus proposal", "August 2, 2026", "August 2028", "Michael McNamara", "Irish MEP", "Annex III", "Ireland National AI Office", "Centre for Democracy and Technology Europe", "April 2026", "May 2026", "trilogue negotiations"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "social-media", "youth-behaviour", "ai-impact"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "ChatGPT", "EU AI Act", "Volume 20, 2026", "BPS Cyberpsychology Conference", "University of York", "Prof. Paul Cairns", "Prof. Amy Orben", "6-7 July 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

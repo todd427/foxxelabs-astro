@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "data-infrastructure", "Ireland-tech"]
 source: "Central Statistics Office Ireland / Foxxe Labs Analysis"
 sourceUrl: "https://www.cso.ie"
+entities: ["Ireland", "Central Statistics Office", "15.2%", "51.2%", "12%", "EU AI Act", "August 2026", "Anthropic", "Google", "xAI", "DeepSeek", "EU Presidency 2026", "International AI Summit Dublin October", "$30B+"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

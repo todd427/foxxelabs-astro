@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behavior", "digital-wellness", "youth-safety"]
 source: "Cyberpsychology Journal & British Psychological Society"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["EU AI Act", "Cyberpsychology Journal", "British Psychological Society", "Cyberpsychology Section", "York St John University", "July 6-7 2026"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

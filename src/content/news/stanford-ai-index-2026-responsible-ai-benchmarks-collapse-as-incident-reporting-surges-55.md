@@ -6,6 +6,9 @@ category: "Research"
 tags: ["AI Safety", "Benchmarking", "Responsible AI", "Stanford AI Index"]
 source: "Stanford AI Index 2026 Report"
 sourceUrl: "https://aiindex.stanford.edu"
+entities: ["Stanford AI Index 2026", "Claude Opus 4.5", "Anthropic", "EU AI Act", "August 2026", "AI Office", "362 incidents", "233 incidents", "55% surge", "28%", "18%", "50%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

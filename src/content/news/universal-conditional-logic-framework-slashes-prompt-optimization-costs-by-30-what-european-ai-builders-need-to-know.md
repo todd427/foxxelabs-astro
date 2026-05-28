@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "cost-optimization", "AI-research"]
 source: "arxiv.org"
 sourceUrl: "https://arxiv.org/list/cs.AI"
+entities: ["Universal Conditional Logic", "29.8% token reduction", "11 models", "EU AI Act", "August 2026", "Claude 4 Sonnet", "OpenAI o3", "Ireland", "Gartner", "Tobi Lütke", "Andrej Karpathy"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

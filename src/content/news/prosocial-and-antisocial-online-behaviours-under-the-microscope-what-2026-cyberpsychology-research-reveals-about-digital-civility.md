@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "online-behaviour", "digital-civility", "mental-health"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20", "EU AI Act", "August 2026 compliance framework", "British Psychological Society Cyberpsychology Section", "2026 Annual Conference", "Ireland", "ChatGPT"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

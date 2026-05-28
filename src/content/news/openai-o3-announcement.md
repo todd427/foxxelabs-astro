@@ -6,6 +6,9 @@ category: "Research"
 tags: ["OpenAI", "Reasoning Models", "Benchmarks"]
 source: "OpenAI"
 sourceUrl: "https://openai.com/blog/o3"
+entities: ["OpenAI", "O3", "O1", "ARC-AGI", "AIME 2024", "Codeforces", "Gemini 2.0", "Claude 3.5", "GPT-4"]
+significance: "high"
+irishEuAngle: false
 ---
 
 OpenAI has announced O3, the successor to their O1 reasoning model, showing substantial gains on challenging benchmarks through increased test-time computation.

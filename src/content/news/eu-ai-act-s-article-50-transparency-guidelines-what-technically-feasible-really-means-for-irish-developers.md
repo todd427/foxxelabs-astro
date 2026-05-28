@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Article 50", "AI Transparency", "Compliance"]
 source: "European Commission"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU Artificial Intelligence Act", "Article 50", "European Commission", "May 8 2026", "December 2 2026", "Ireland", "Data Protection Commissioner", "Meta", "Google"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "Ireland", "income inequality", "ESRI research"]
 source: "Economic and Social Research Institute (ESRI)"
 sourceUrl: "https://www.esri.ie"
+entities: ["ESRI", "Ireland", "7%", "18%", "13.7%", "11.4%", "14.6%", "300,000", "IDA", "6,000", "2024", "15%", "ECB", "Goldman Sachs", "16,000", "25,000", "9,000", "August 2026", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

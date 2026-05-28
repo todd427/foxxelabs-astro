@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["labour-market", "ai-skills-gap", "wage-premium", "workforce-transition"]
 source: "PwC Global AI Jobs Barometer 2025 & U.S. Department of Labor"
 sourceUrl: "https://www.pwc.com/gx/en/research-insights/documents/global-ai-jobs-barometer-2025.pdf"
+entities: ["PwC", "PwC Global AI Jobs Barometer 2025", "56% wage premium", "6-16% employment fall ages 22-25", "U.S. Department of Labor", "AI in Registered Apprenticeship Innovation Portal", "National Apprenticeship Week", "IMF", "Finland", "Ireland", "Denmark", "AIReady.ie"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI safety", "sandbox escape", "frontier models", "vulnerability disclosure"]
 source: "The Hacker News"
 sourceUrl: "https://thehackernews.com"
+entities: ["Anthropic", "Claude Mythos Preview", "Project Glasswing", "EU AI Act", "AWS", "Apple", "Broadcom", "Cisco", "Google", "JPMorgan Chase", "Microsoft", "NVIDIA", "$100 million"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

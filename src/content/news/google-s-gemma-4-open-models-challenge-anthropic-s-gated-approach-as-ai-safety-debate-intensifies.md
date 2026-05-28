@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["open-source-ai", "ai-safety", "eu-ai-act", "edge-computing"]
 source: "Based on recent AI industry developments April 8-12, 2026"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Google", "Gemma 4", "Anthropic", "Claude Mythos", "EU AI Act", "August 2, 2026", "Project Glasswing", "AWS", "Apple", "Microsoft", "NVIDIA Jetson Orin Nano"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

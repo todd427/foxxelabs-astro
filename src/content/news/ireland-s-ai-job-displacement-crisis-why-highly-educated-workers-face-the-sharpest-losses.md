@@ -6,6 +6,9 @@ category: "Ireland & EU"
 tags: ["AI labour market", "Ireland economy", "job displacement", "ESRI research"]
 source: "Economic and Social Research Institute (ESRI)"
 sourceUrl: "https://www.esri.ie"
+entities: ["Ireland", "ESRI", "7%", "European Training Foundation", "April 2026", "Anthropic", "200 jobs", "2027", "Version 1", "250 positions"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

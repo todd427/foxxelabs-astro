@@ -6,6 +6,9 @@ category: "Research"
 tags: ["energy-efficiency", "neuro-symbolic-ai", "compute-optimization"]
 source: "Tufts University / Matthias Scheutz Laboratory"
 sourceUrl: "https://arxiv.org"
+entities: ["Tufts University", "Matthias Scheutz", "neuro-symbolic AI", "International Conference of Robotics and Automation Vienna May 2026", "EU digital infrastructure strategy", "EU AI Act", "August 2026 high-risk system deadlines", "Ireland data centers"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

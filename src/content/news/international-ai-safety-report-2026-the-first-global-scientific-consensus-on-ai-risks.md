@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI safety", "international governance", "risk assessment"]
 source: "International AI Safety Institute"
 sourceUrl: "https://www.aisafetyinstitute.org.uk"
+entities: ["International AI Safety Report 2026", "29 nations", "100+ experts", "UN", "OECD", "EU", "AI Safety Summit Bletchley", "EU AI Act", "August 2026", "Ireland 15-authority enforcement model", "EU AI Omnibus"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

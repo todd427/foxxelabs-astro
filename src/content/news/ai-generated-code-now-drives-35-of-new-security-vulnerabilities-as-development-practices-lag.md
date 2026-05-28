@@ -6,6 +6,9 @@ category: "Security"
 tags: ["ai-generated-code", "vulnerability-management", "developer-practices"]
 source: "Cybersecurity Research Community"
 sourceUrl: "https://thehackernews.com"
+entities: ["Claude Code", "GitHub Copilot", "EU AI Act", "August 2026", "35 CVEs", "March 2026", "500% surge", "2,130 AI-related CVEs 2025", "34.6% YoY increase"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

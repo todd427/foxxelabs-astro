@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI Economics", "Coding Models", "Global Competition", "Inference Cost"]
 source: "AI Industry Search Results"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Z.ai", "GLM-5.1", "MiniMax", "M2.7", "Moonshot", "Kimi K2.6", "DeepSeek", "V4", "OpenAI", "Anthropic", "EU AI Act", "Gaia-X", "12 days"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

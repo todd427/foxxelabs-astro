@@ -6,6 +6,9 @@ category: "Security"
 tags: ["vulnerabilities", "ai-agents", "infrastructure", "cybersecurity"]
 source: "Multiple Security Research Reports"
 sourceUrl: "https://chainlit.io/security-advisory"
+entities: ["Chainlit", "CVE-2026-22218", "CVE-2026-22219", "Google Gemini", "Anthropic", "Claude Code", "Palo Alto Networks", "Gartner", "5 million downloads", "30 global targets", "80-90%", "40%", "January 8th", "March 9th"]
+significance: "high"
+irishEuAngle: false
 draft: false
 ---
 

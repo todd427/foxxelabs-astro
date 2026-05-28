@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["labour market", "AI adoption", "Ireland", "employment"]
 source: "Irish Department of Finance Economic Insights"
 sourceUrl: "https://gov.ie/finance"
+entities: ["Ireland", "Irish Department of Finance", "Anthropic", "CEPR", "Goldman Sachs", "LinkedIn", "11%", "4%", "20%", "12%", "6-7%", "7.2%"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

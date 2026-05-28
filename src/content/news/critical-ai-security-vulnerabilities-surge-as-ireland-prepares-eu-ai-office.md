@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI vulnerabilities", "EU AI Act", "cybersecurity", "supply chain attacks"]
 source: "Multiple security research sources"
 sourceUrl: "https://example.com/ai-security-report"
+entities: ["Unit 42", "CVE-2026-0628", "Chrome Gemini Live", "OpenClaw", "CrewAI", "Axios", "LiteLLM", "Stanford HAI", "Ireland National AI Office", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "March 19-31 supply chain campaign", "56.4% increase", "August 2026", "2026 EU presidency"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

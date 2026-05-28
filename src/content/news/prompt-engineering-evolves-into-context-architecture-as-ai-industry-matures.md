@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["prompt-engineering", "ai-development", "context-architecture", "industry-trends"]
 source: "Industry Analysis"
 sourceUrl: "https://example.com"
+entities: ["Amazon Health AI", "Microsoft Copilot Health", "Tesla Terafab", "NVIDIA GTC 2026", "OpenAI", "Google DeepMind", "Anthropic", "U.S. Defense Department", "$1.52 billion 2026", "$2.01 billion 2027", "32.10% CAGR"]
+significance: "medium"
+irishEuAngle: false
 draft: false
 ---
 

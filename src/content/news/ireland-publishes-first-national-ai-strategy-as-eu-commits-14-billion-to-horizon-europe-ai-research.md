@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["national strategy", "EU funding", "digital sovereignty", "research investment"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/programmes/horizon-europe/"
+entities: ["Ireland", "EU", "Horizon Europe", "€14 billion", "€90 million", "2026 EU Presidency", "€75 million EURO-3C Project", "Mobile World Congress 2026", "Resource for AI Science in Europe", "AI Research Centre of Scale", "International AI and Digital Summit"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

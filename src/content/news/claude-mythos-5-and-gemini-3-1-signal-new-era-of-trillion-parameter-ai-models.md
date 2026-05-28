@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["large-language-models", "anthropic", "google", "ai-capabilities"]
 source: "Multiple AI Research Sources"
 sourceUrl: "https://anthropic.com/news"
+entities: ["Claude Mythos 5", "Gemini 3.1", "Anthropic", "Google DeepMind", "10-trillion parameter", "94.3% GPQA Diamond", "Gemini 3.1 Flash-Lite", "TurboQuant", "ICLR 2026", "$267.2B Q1 2026", "OpenAI $122B", "Anthropic $30B Series G", "xAI $250B SpaceX", "April 4"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

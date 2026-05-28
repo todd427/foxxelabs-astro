@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["EU AI Act", "funding", "regulation", "Yann LeCun"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu"
+entities: ["Yann LeCun", "Advanced Machine Intelligence Labs", "€1.03B", "€3.5B valuation", "EU AI Act", "August 2026", "Cyprus Deputy Minister for European Affairs", "Spain €100M", "IPCEI-AI", "Germany", "EURO-3C", "€75M", "European Central Bank"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

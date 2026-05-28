@@ -6,6 +6,9 @@ category: "Security"
 tags: ["AI Safety", "EU AI Act", "Testing & Evaluation", "Compliance"]
 source: "International AI Safety Report 2026"
 sourceUrl: "https://internationalaisafetyreport.com"
+entities: ["EU AI Act", "August 2026", "International AI Safety Report 2026", "Anthropic", "RLHF", "DPO", "Ireland"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

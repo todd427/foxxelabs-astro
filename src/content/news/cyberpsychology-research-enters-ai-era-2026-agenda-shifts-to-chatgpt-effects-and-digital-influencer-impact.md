@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "mental-health", "AI-behavior", "social-media"]
 source: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace"
 sourceUrl: "https://cyberpsychology.eu"
+entities: ["ChatGPT", "Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Volume 20, 2026", "EU AI Act", "Dr Lisa Orchard", "University of Wolverhampton", "British Psychological Society", "BPS July 2026 Annual Conference"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

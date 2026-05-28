@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "regulation", "enforcement", "Ireland"]
 source: "Irish Government"
 sourceUrl: "https://gov.ie"
+entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "1 August 2026", "15 enforcement authorities", "EU Presidency July-December 2026", "International AI and Digital Summit", "91% AI adoption 2025", "49% AI adoption 2024"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

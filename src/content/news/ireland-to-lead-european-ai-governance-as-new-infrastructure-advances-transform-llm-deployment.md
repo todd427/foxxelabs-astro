@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Irish AI Policy", "LLM Infrastructure", "AI Governance"]
 source: "Irish Government AI Strategy"
 sourceUrl: "https://enterprise.gov.ie"
+entities: ["Ireland", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "European Commission", "EU Council Presidency", "International AI Summit", "14 October 2026", "Dublin", "Intel OpenVINO 2026.0", "NVIDIA Nemotron 3 Super", "Micron Technology 256GB SOCAMM2 LPDDR5", "Observatory for Business AI Readiness (OBAIR)"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

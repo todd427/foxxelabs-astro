@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["AI for Science", "EU Investment", "Scientific Research"]
 source: "European Commission - Horizon Europe"
 sourceUrl: "https://ec.europa.eu/research/horizoneurope/"
+entities: ["RAISE", "EU", "€7.7B", "€6.4B", "€1.6B", "€700M", "Horizon Europe", "OpenAI", "Anthropic", "DeepMind", "Claude Mythos Preview", "GPT-5.5", "Gemma 4", "EU AI Act"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

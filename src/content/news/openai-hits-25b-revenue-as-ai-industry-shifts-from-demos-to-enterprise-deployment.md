@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["enterprise-ai", "revenue-growth", "model-releases", "business-deployment"]
 source: "Multiple AI Industry Sources"
 sourceUrl: "https://search-results-aggregated"
+entities: ["OpenAI", "$25B revenue", "GPT-5.4", "March 5th", "ChatGPT", "Anthropic", "$19B revenue", "Google", "Gemini 3.1 Flash-Lite", "Meta", "Dreamer", "Hugo Barra", "U.S. Treasury Department", "Accenture", "Mistral AI", "GDPR"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 
