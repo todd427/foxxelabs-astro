@@ -6,22 +6,26 @@
  * committed markdown in src/content/news/. No external service, no index,
  * no network. Recomputed over a bounded window each run.
  *
- * SIMILARITY (lexical, pure JS):
- *   txt      = cosine(TF over full text: title + description + body)
+ * SIMILARITY (lexical TF-IDF, pure JS):
+ *   txt      = cosine(TF-IDF over full text: title + description + body)
  *   ent      = Jaccard(entity sets)
  *   combined = W_ENTITY * ent + W_TEXT * txt
  *
- * Full-text, not title-only: in this corpus the TITLES are the most reworded
- * part ("authorities" / "regulators" / "sectoral"), so the signal lives in the
- * body. An aggressive stopword list (English + AI-domain ubiquitous terms)
- * stands in for IDF, killing tokens that would inflate every pair.
+ * Why TF-IDF, not raw TF: this corpus is topically saturated (Ireland / EU AI
+ * Act / cyberpsychology). Raw TF cosine scored *distinct* stories on the same
+ * topic at 0.40+ purely on shared topic vocabulary, conflating "same event"
+ * with "same topic". IDF (computed over the window each run) downweights the
+ * ubiquitous topic words and lets the distinctive tokens — the numbers, product
+ * and org names that ARE the event identity — separate them.
  *
- * Two regimes, because the historical corpus has NO entities in frontmatter
- * (they only ever went to Supabase). Both sides have entities -> entity-aware
- * rule; either side lacks them -> higher-bar text-only threshold.
+ * Two regimes: the historical corpus has NO entities in frontmatter (they only
+ * ever went to Supabase). Both sides have entities -> entity-aware rule; either
+ * side lacks them -> higher-bar text-only threshold.
  *
- * Deliberately NOT an embedding model. To go semantic later, replace ONE
- * function — `cosine()` — with an embedding cosine over the same text.
+ * Not an embedding model: embeddings of two different "Ireland AI Office"
+ * stories are also near-identical, so they would not separate same-event from
+ * same-topic any better. Event identity is lexical-distinctive, not semantic.
+ * To go semantic anyway, replace cosine()/vectorize() behind the same shape.
  *
  * CLI:
  *   node scripts/dedupe.js report [daysBack]   # calibration + clustering
@@ -37,26 +41,23 @@ const __dirname = path.dirname(__filename);
 
 export const NEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'news');
 
-// ── Tunable thresholds — calibrate via `node scripts/dedupe.js report` ──────
+// ── Tunable thresholds — RECALIBRATE from `node scripts/dedupe.js report` ────
+// NOTE: TF-IDF changes the score scale vs the earlier raw-TF version. Re-read
+// the report's nearest-neighbour ladder and top-pairs before trusting these.
 export const W_ENTITY        = 0.50;
 export const W_TEXT          = 0.50;
 export const DUP_COMBINED    = 0.50;  // entity regime: combined => duplicate
 export const GATE_ENTITY     = 0.34;  // entity regime: AND-gate entity floor
 export const GATE_TEXT       = 0.30;  // entity regime: AND-gate text floor
-export const GATE_TEXT_ONLY  = 0.40;  // text-only regime: txt => duplicate
+export const GATE_TEXT_ONLY  = 0.45;  // text-only regime: txt => duplicate (PROVISIONAL)
 export const DEFAULT_WINDOW_DAYS = 120;
 
-// English function words + AI-domain terms so ubiquitous they carry no signal.
 const STOPWORDS = new Set((
   'a an the and or but of to in on for with at by from as is are was were be ' +
   'been being it its this that these those new how why what when who will would ' +
   'could should can may might into over under more most less than then them they ' +
   'their there here about after before up down out off your you we our us i ' +
-  'has have had not no yes if so such all any one two get also amid via per ' +
-  'ai artificial intelligence model models data technology tech news report ' +
-  'reports said says year years week weeks month company companies system systems ' +
-  'using use used make makes first latest according now today industry development ' +
-  'developments launch release announced announces unveils foxxe labs'
+  'has have had not no yes if so such all any one two get also amid via per'
 ).split(/\s+/));
 
 const normText = (s) => String(s).toLowerCase().normalize('NFKD').replace(/[^\w\s]/g, ' ');
@@ -65,15 +66,10 @@ function tokens(text) {
   return normText(text).split(/\s+/).filter(t => t && t.length > 1 && !STOPWORDS.has(t));
 }
 
-function tf(arr) {
-  const m = new Map();
-  for (const t of arr) m.set(t, (m.get(t) || 0) + 1);
-  return m;
-}
+const storyText = (s) => `${s.title || ''} ${s.description || ''} ${s.content || ''}`;
+const mag = (m) => Math.sqrt([...m.values()].reduce((a, w) => a + w * w, 0));
 
-const mag = (m) => Math.sqrt([...m.values()].reduce((s, w) => s + w * w, 0));
-
-/** Cosine over two term-frequency maps. SWAP POINT for embeddings. */
+/** Cosine over two weight maps. SWAP POINT for embeddings. */
 export function cosine(va, vb) {
   if (!va || !vb || !va.size || !vb.size) return 0;
   const [small, big] = va.size <= vb.size ? [va, vb] : [vb, va];
@@ -96,19 +92,46 @@ export function entityJaccard(aEnts = [], bEnts = []) {
   return inter / (A.size + B.size - inter);
 }
 
-/** Attach the full-text TF vector to a story object. Idempotent. */
+/** Normalise fields only (no vector yet). */
 export function makeStory(s) {
-  if (s._textTf) return s;
-  const text = `${s.title || ''} ${s.description || ''} ${s.content || ''}`;
-  return { ...s, entities: Array.isArray(s.entities) ? s.entities : [], _textTf: tf(tokens(text)) };
+  return { ...s, entities: Array.isArray(s.entities) ? s.entities : [] };
+}
+
+/** Build a TF-IDF index over a set of stories, attaching `_vec` to each.
+ *  Mutates in place; returns { idf, maxIdf } for vectorising new candidates. */
+export function buildIndex(stories) {
+  const N = stories.length || 1;
+  const df = new Map();
+  for (const s of stories) {
+    s._toks = tokens(storyText(s));
+    for (const t of new Set(s._toks)) df.set(t, (df.get(t) || 0) + 1);
+  }
+  const idf = new Map();
+  for (const [t, d] of df) idf.set(t, Math.log((N + 1) / (d + 1)) + 1);
+  const maxIdf = Math.log((N + 1) / 1) + 1; // unseen/rarest token weight
+  for (const s of stories) { s._vec = tfidf(s._toks, idf, maxIdf); delete s._toks; }
+  return { idf, maxIdf };
+}
+
+function tfidf(toks, idf, maxIdf) {
+  const tf = new Map();
+  for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
+  const v = new Map();
+  for (const [t, c] of tf) v.set(t, c * (idf.get(t) ?? maxIdf));
+  return v;
+}
+
+/** Vectorise a single story against an existing corpus's IDF. */
+export function vectorize(story, corpus) {
+  const s = makeStory(story);
+  s._vec = tfidf(tokens(storyText(s)), corpus.idf, corpus.maxIdf);
+  return s;
 }
 
 export function score(a, b) {
-  const A = a._textTf ? a : makeStory(a);
-  const B = b._textTf ? b : makeStory(b);
-  const txt = cosine(A._textTf, B._textTf);
-  const ent = entityJaccard(A.entities, B.entities);
-  const entitiesPresent = (A.entities?.length > 0) && (B.entities?.length > 0);
+  const txt = cosine(a._vec, b._vec);
+  const ent = entityJaccard(a.entities, b.entities);
+  const entitiesPresent = (a.entities?.length > 0) && (b.entities?.length > 0);
   const combined = W_ENTITY * ent + W_TEXT * txt;
   return { ent, txt, combined, entitiesPresent };
 }
@@ -120,19 +143,18 @@ export function isDuplicate(s) {
 }
 
 export function findDuplicate(candidate, corpus) {
-  const c = makeStory(candidate);
+  const c = candidate._vec ? candidate : vectorize(candidate, corpus);
   let best = null;
   for (const existing of corpus) {
     const s = score(c, existing);
-    if (isDuplicate(s) && (!best || s.combined > best.score.combined ||
-        (best.score.combined === best.score.txt * W_TEXT && s.txt > best.score.txt))) {
+    if (isDuplicate(s) && (!best || s.txt > best.score.txt)) {
       best = { match: existing, score: s };
     }
   }
   return best;
 }
 
-// ── Corpus loading (reads body, precomputes TF vectors) ──────────────────────
+// ── Corpus loading (reads body, builds the TF-IDF index) ─────────────────────
 export function loadCorpusWindow(daysBack = DEFAULT_WINDOW_DAYS, newsDir = NEWS_DIR) {
   if (!fs.existsSync(newsDir)) return [];
   const cutoff = new Date();
@@ -157,6 +179,9 @@ export function loadCorpusWindow(daysBack = DEFAULT_WINDOW_DAYS, newsDir = NEWS_
       }));
     } catch { /* unreadable — skip */ }
   }
+  const { idf, maxIdf } = buildIndex(out);
+  out.idf = idf;
+  out.maxIdf = maxIdf;
   return out;
 }
 
@@ -185,7 +210,7 @@ function report(daysBack) {
   const corpus = loadCorpusWindow(daysBack);
   const n = corpus.length;
   const withEnts = corpus.filter(c => c.entities.length > 0).length;
-  console.log(`Loaded ${n} articles within ${daysBack}d.`);
+  console.log(`Loaded ${n} articles within ${daysBack}d (TF-IDF).`);
   console.log(`Entities in frontmatter: ${withEnts}/${n} ` +
     `(${n ? Math.round(100 * withEnts / n) : 0}%) — the rest score text-only.\n`);
   if (n < 2) return;
@@ -194,7 +219,7 @@ function report(daysBack) {
   const pairs = [];
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
-      const txt = cosine(corpus[i]._textTf, corpus[j]._textTf);
+      const txt = cosine(corpus[i]._vec, corpus[j]._vec);
       if (txt > bestTxt[i]) bestTxt[i] = txt;
       if (txt > bestTxt[j]) bestTxt[j] = txt;
       if (txt >= 0.30) pairs.push([txt, i, j]);
@@ -202,17 +227,19 @@ function report(daysBack) {
   }
 
   console.log('Articles whose nearest neighbour exceeds a text threshold:');
-  for (const th of [0.30, 0.35, 0.40, 0.45, 0.50, 0.60, 0.70]) {
+  for (const th of [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.70, 0.80]) {
     console.log(`   txt >= ${th.toFixed(2)} : ${bestTxt.filter(v => v >= th).length}`);
   }
 
   pairs.sort((a, b) => b[0] - a[0]);
-  console.log(`\nTop ${Math.min(25, pairs.length)} pairs by text similarity:`);
-  for (const [txt, i, j] of pairs.slice(0, 25)) {
+  console.log(`\nTop ${Math.min(30, pairs.length)} pairs by text similarity:`);
+  for (const [txt, i, j] of pairs.slice(0, 30)) {
     console.log(`   ${txt.toFixed(2)}  ${corpus[i].title}`);
     console.log(`         <-> ${corpus[j].title}`);
   }
 
+  // Seed-anchored clusters at active thresholds (approximate — a central seed
+  // pulls in topical cousins, so treat sizes as an upper bound, not gospel).
   const seen = new Set();
   const clusters = [];
   for (let i = 0; i < n; i++) {
@@ -227,18 +254,19 @@ function report(daysBack) {
   }
   clusters.sort((a, b) => b.length - a.length);
   let dupTotal = 0;
-  console.log(`\n-- Clusters at active thresholds --`);
-  for (const c of clusters.slice(0, 30)) {
+  console.log(`\n-- Seed-anchored clusters at active thresholds (approx) --`);
+  for (const c of clusters.slice(0, 20)) {
     dupTotal += c.length - 1;
-    console.log(`# ${c.length} articles (${c.length - 1} redundant):`);
-    for (const m of c) {
-      const tag = m.s.combined === 1 ? 'KEEP' : `dup t=${m.s.txt.toFixed(2)} e=${m.s.ent.toFixed(2)}`;
+    console.log(`# ${c.length} articles (${c.length - 1} folded):`);
+    for (const m of c.slice(0, 8)) {
+      const tag = m.s.combined === 1 ? 'KEEP' : `t=${m.s.txt.toFixed(2)}`;
       console.log(`    [${tag}] ${corpus[m.idx].title}`);
     }
+    if (c.length > 8) console.log(`    ... +${c.length - 8} more`);
   }
-  for (const c of clusters.slice(30)) dupTotal += c.length - 1;
-  console.log(`\n${clusters.length} clusters; ${dupTotal} redundant of ${n} ` +
-    `(${n ? Math.round(100 * dupTotal / n) : 0}% redundancy).`);
+  for (const c of clusters.slice(20)) dupTotal += c.length - 1;
+  console.log(`\n${clusters.length} clusters; ${dupTotal} folded of ${n} ` +
+    `(${n ? Math.round(100 * dupTotal / n) : 0}%).`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

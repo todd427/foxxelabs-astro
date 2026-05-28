@@ -4,7 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { loadCorpusWindow, findDuplicate, appendUpdate, makeStory, NEWS_DIR } from './dedupe.js';
+import { loadCorpusWindow, findDuplicate, appendUpdate, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -446,8 +446,9 @@ async function main() {
         await saveToSupabase(postData, topic, slug);
         created.push(slug);
 
-        // Make this run's new story immediately matchable by later topics.
-        corpus.push(makeStory({
+        // Make this run's new story immediately matchable by later topics
+        // (vectorised against the corpus IDF so cosine is comparable).
+        corpus.push(vectorize({
           file:        path.join(NEWS_DIR, `${slug}.md`),
           slug,
           title:       postData.title,
@@ -455,7 +456,7 @@ async function main() {
           content:     postData.content,
           entities:    candidate.entities,
           publishDate: todayStr,
-        }));
+        }, corpus));
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
       }
