@@ -14,7 +14,16 @@ the committed markdown in `src/content/news/`. No external service, no index.
   + body), plus an entity-Jaccard term. Two regimes: entity-aware when both
   sides have `entities` in frontmatter, higher-bar text-only fallback otherwise.
   Exports `loadCorpusWindow`, `findDuplicate`, `appendUpdate`, `makeStory`,
-  `vectorize`, plus a `report` CLI for calibration.
+  `vectorize`, `connectedComponents`, `isStrongDuplicate`, plus `report` /
+  `review` / `apply` CLI subcommands (calibration, collapse review, collapse apply).
+- `scripts/backfill-entities.js` — item 1. Idempotent (skips files with
+  `entities:`), surgical frontmatter insert, Haiku extraction of
+  `entities`/`significance`/`irishEuAngle`. `--limit N` / `--dry-run` flags.
+- `scripts/frontier.js` — item 3. `init` scaffolds `data/frontier.json`;
+  `reconcile [daysBack]` reconciles the deduped window per axis (Haiku),
+  rewriting only changed axes. `--dry-run` previews without the API.
+- `scripts/anthropic-client.js` — shared Haiku client (rate-limit/retry/JSON
+  extraction) for the two bulk jobs; the generator keeps its own inline copy.
 - `scripts/generate-content.js` — gates each generated post before write: a hit
   folds into the matched story's `updates:` timeline (no new file); a miss writes
   a new file with `entities`/`significance`/`irishEuAngle`/`updates` persisted to
@@ -31,48 +40,52 @@ high because the costly live-gate error is a false *merge*, not a miss.
 
 ## <span style="color:#2c6e9c">Open items, in order</span>
 
-### <span style="color:#2c6e9c">1. Backfill `entities` into the 864 historical files</span>
+### <span style="color:#1a7f6b">1. Backfill `entities` into the historical files — ✓ done 2026-05-28</span>
 
-Engages the entity regime for new-vs-historical matching and tightens precision —
-two different "Ireland AI Office" stories can be split on distinct entities even
-when prose overlaps. For each file: read body, extract `entities` (orgs, people,
-products, standards, the defining numbers/dates), plus `significance` and
-`irishEuAngle` to match the generator's schema. Write them into frontmatter.
+Ran `backfill-entities.js` over the whole corpus: **876/876 tagged, 0 failures,
+36m50s** (well inside the ~1–2 h estimate). Extractions are crisp — CVEs, named
+numbers (`$0.11 per million tokens`, `34.6% YoY`), orgs, standards. Surgical
+inserts (keys before `draft:`, bodies byte-untouched); `astro check` passes 0
+errors. Engaging the entity regime sharply tightened precision — see item 2.
 
-- Use Haiku for extraction. ~864 calls. Floor latency suggests ~15–30 min;
-  assume **3–4× that in practice** (~1–2 h) with rate limiting. It's a
-  long-running bulk job — track elapsed against wall-clock, recalibrate.
-- Make it **idempotent** (skip files that already have `entities`) so it's
-  re-runnable after interruption.
-- Edit frontmatter **surgically** — insert the keys, don't round-trip the whole
-  block through gray-matter (avoids reformatting the entire corpus into noisy
-  diffs). `appendUpdate` in `dedupe.js` shows the pattern.
-- Do it on the branch; it touches all 864 files.
+Notes for re-runs: idempotent (skips files with `entities:`), so safe to re-run
+after interruption; uses Haiku; edits frontmatter surgically (no gray-matter
+round-trip). `npm run backfill-entities` (or `node scripts/backfill-entities.js`).
 
-### <span style="color:#2c6e9c">2. Reviewed `--apply` backfill (collapse existing dupes)</span>
+### <span style="color:#2c6e9c">2. Reviewed `apply` (collapse existing dupes) — built; apply not yet run</span>
 
-Destructive, so human-in-the-loop. The seed-anchored clustering in `report` still
-over-merges (a 36-article cyberpsychology blob mixed the journal-agenda story,
-the Dark Triad study, and the Ireland €7M funding story — three distinct things).
-For `--apply`:
+`dedupe.js review` / `apply` implemented. Clustering is now **connected
+components** (transitive, union-find) at a stricter edge (`STRONG_TXT=0.65`,
+entity regime `STRONG_COMBINED=0.62` AND `ent>=GATE_ENTITY`), not seed-anchored —
+so a central seed no longer pulls in cousins.
 
-- Cluster with **connected components at a higher threshold** (or mutual-kNN),
-  not seed-anchored, to avoid a central seed pulling in cousins.
-- Emit a **review file** (proposed canonical + folded members per cluster) for
-  approval. Rewrite nothing until approved.
-- On approval: fold each member's lede into the canonical's `updates:` timeline,
-  then archive/remove the member files.
+With entities now backfilled, `review` flipped from the text-only regime
+(17 clusters / 43 foldable) to the **entity regime: 7 clusters / 8 foldable** —
+high-confidence. The over-merge this doc warned about is gone (Dark Triad,
+journal-agenda, and Ireland €7M are now correctly *separate*), and it catches the
+legacy `Date.now()`-suffixed slug twins. Canonical = earliest-published.
 
-### <span style="color:#2c6e9c">3. SOTA tracker</span>
+`review` writes `dedupe-review.json` (gitignored; edit/delete to reject clusters
+or members). `apply <file>` refuses without `--yes`; with it, folds each member
+lede into the canonical `updates:` timeline and moves the member file to
+`archive/news/`. **Not yet run** — destructive, needs human sign-off on the
+review file.
 
-Separate feature. Same repo-as-store principle: a committed `frontier.json` (or a
-`frontier` content collection) holding current state per axis; a weekly delta
-agent reconciles the week's *deduped* stories against it and rewrites only what
-changed; git history is the longitudinal record.
+### <span style="color:#2c6e9c">3. SOTA tracker — scaffolded; reconcile not yet run</span>
+
+`frontier.js` implemented on the repo-as-store principle. `data/frontier.json`
+(committed) holds current state per axis, seeded from `config.json` topics
+(12 axes). `reconcile [daysBack]` (default 7) reads the window's deduped stories,
+asks Haiku per axis whether the frontier moved, and rewrites **only changed
+axes** (stable key order → clean diffs); git history is the longitudinal record.
+`reconcile --dry-run` previews (no API) — currently 60 deduped stories in a 7-day
+window. The live `reconcile` (API-backed) has not been run yet.
 
 ## <span style="color:#b5651d">Gotchas</span>
 
-- Historical files have **no `entities`** yet — that's why item 1 is first.
+- ~~Historical files have **no `entities`** yet~~ — resolved 2026-05-28 (item 1):
+  all 876 files now carry `entities`, so new-vs-historical matching runs in the
+  entity regime.
 - `git diff` won't see newly generated untracked files — `git add` first.
 - GitHub Action bot pushes need `contents: write`.
 - Irreducible lexical floor: on a corpus this topically concentrated, some true

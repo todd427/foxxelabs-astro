@@ -207,6 +207,140 @@ export function appendUpdate(filePath, { date, note, sourceUrl }) {
   fs.writeFileSync(filePath, raw.replace(fm[0], `---\n${block}\n---`));
 }
 
+// ── Item 2: reviewed dupe collapse (connected components, not seed-anchored) ──
+// The `report` clustering is seed-anchored: a central seed pulls in topical
+// cousins, so a single component can mix three distinct stories. For an actual
+// (destructive) collapse we want a STRICTER edge and TRANSITIVE grouping, so
+// every member is genuinely a near-dupe of every other via a chain of strong
+// links — not merely close to one central article.
+export const STRONG_TXT      = 0.65;  // text-only edge: stricter than the live gate
+export const STRONG_COMBINED = 0.62;  // entity regime edge
+export const STRONG_ENTITY   = GATE_ENTITY;
+
+/** A strong (collapse-grade) duplicate edge between two scored stories. */
+export function isStrongDuplicate(s, { edgeTxt = STRONG_TXT, edgeCombined = STRONG_COMBINED } = {}) {
+  return s.entitiesPresent
+    ? (s.ent >= STRONG_ENTITY && s.combined >= edgeCombined)
+    : (s.txt >= edgeTxt);
+}
+
+/** Union-find connected components over the corpus using `edgeFn(scoreObj)`. */
+export function connectedComponents(corpus, edgeFn) {
+  const n = corpus.length;
+  const parent = Array.from({ length: n }, (_, i) => i);
+  const find = (x) => { while (parent[x] !== x) { parent[x] = parent[parent[x]]; x = parent[x]; } return x; };
+  const union = (a, b) => { const ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; };
+
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (edgeFn(score(corpus[i], corpus[j]))) union(i, j);
+    }
+  }
+  const groups = new Map();
+  for (let i = 0; i < n; i++) {
+    const r = find(i);
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(i);
+  }
+  return [...groups.values()].filter((g) => g.length > 1);
+}
+
+const pubTime = (s) => { const t = s.publishDate ? new Date(s.publishDate).getTime() : NaN; return Number.isNaN(t) ? Infinity : t; };
+
+/** Build a non-destructive review file of proposed collapses. Writes nothing
+ *  to the corpus. Canonical = earliest-published article in the component; the
+ *  rest are proposed for folding into its timeline. */
+function review(daysBack, edgeTxt) {
+  const corpus = loadCorpusWindow(daysBack);
+  const opts = edgeTxt ? { edgeTxt } : {};
+  const comps = connectedComponents(corpus, (s) => isStrongDuplicate(s, opts));
+
+  const clusters = comps.map((idxs) => {
+    const sorted = [...idxs].sort((a, b) => pubTime(corpus[a]) - pubTime(corpus[b]));
+    const canonical = corpus[sorted[0]];
+    const members = sorted.slice(1).map((i) => {
+      const s = score(canonical, corpus[i]);
+      return {
+        slug: corpus[i].slug,
+        file: corpus[i].file,
+        title: corpus[i].title,
+        publishDate: corpus[i].publishDate,
+        score: { txt: +s.txt.toFixed(3), ent: +s.ent.toFixed(3), combined: +s.combined.toFixed(3) },
+      };
+    });
+    return {
+      canonical: { slug: canonical.slug, file: canonical.file, title: canonical.title, publishDate: canonical.publishDate },
+      members,
+    };
+  }).sort((a, b) => b.members.length - a.members.length);
+
+  const foldable = clusters.reduce((n, c) => n + c.members.length, 0);
+  const outPath = path.join(__dirname, '..', 'dedupe-review.json');
+  fs.writeFileSync(outPath, JSON.stringify({
+    generatedAt: new Date().toISOString(),
+    windowDays: daysBack,
+    edge: edgeTxt ? { edgeTxt } : { edgeTxt: STRONG_TXT, edgeCombined: STRONG_COMBINED, entity: STRONG_ENTITY },
+    corpusSize: corpus.length,
+    note: 'Review/edit before apply. Delete a cluster or a member to reject it. ' +
+      'apply folds each member lede into the canonical updates timeline, then archives the member file.',
+    clusters,
+  }, null, 2));
+
+  console.log(`Reviewed ${corpus.length} articles (window ${daysBack}d).`);
+  console.log(`${clusters.length} collapse clusters; ${foldable} articles proposed for folding.\n`);
+  for (const c of clusters.slice(0, 25)) {
+    console.log(`# canonical: ${c.canonical.slug}  (${c.members.length} to fold)`);
+    console.log(`    ${c.canonical.title}`);
+    for (const m of c.members.slice(0, 8)) {
+      console.log(`    └ [c=${m.score.combined} t=${m.score.txt} e=${m.score.ent}] ${m.title}`);
+    }
+    if (c.members.length > 8) console.log(`    └ … +${c.members.length - 8} more`);
+  }
+  if (clusters.length > 25) console.log(`… +${clusters.length - 25} more clusters`);
+  console.log(`\nReview file written: ${outPath}`);
+  console.log(`Approve, then: node scripts/dedupe.js apply dedupe-review.json --yes`);
+}
+
+/** Destructive: fold each reviewed member into its canonical timeline, then
+ *  move the member file out of the collection into archive/news/. Requires
+ *  --yes. Re-reads each member's frontmatter so the folded lede is authoritative. */
+function applyReview(reviewPath, { yes }) {
+  if (!reviewPath) { console.error('usage: node scripts/dedupe.js apply <review.json> --yes'); process.exit(1); }
+  const full = path.isAbsolute(reviewPath) ? reviewPath : path.join(process.cwd(), reviewPath);
+  const { clusters } = JSON.parse(fs.readFileSync(full, 'utf-8'));
+  const foldable = clusters.reduce((n, c) => n + c.members.length, 0);
+
+  if (!yes) {
+    console.log(`Would fold ${foldable} articles into ${clusters.length} canonicals and archive them.`);
+    console.log('Destructive. Re-run with --yes to execute.');
+    return;
+  }
+
+  const archiveDir = path.join(__dirname, '..', 'archive', 'news');
+  fs.mkdirSync(archiveDir, { recursive: true });
+  let folded = 0, archived = 0, missing = 0;
+
+  for (const c of clusters) {
+    if (!fs.existsSync(c.canonical.file)) { console.warn(`⚠️  canonical missing, skipping cluster: ${c.canonical.slug}`); continue; }
+    for (const m of c.members) {
+      if (!fs.existsSync(m.file)) { missing++; console.warn(`⚠️  member already gone: ${m.slug}`); continue; }
+      const { data } = matter(fs.readFileSync(m.file, 'utf-8'));
+      const date = (m.publishDate ? new Date(m.publishDate) : new Date()).toISOString().split('T')[0];
+      appendUpdate(c.canonical.file, {
+        date,
+        note: data.description || data.title || m.title || m.slug,
+        sourceUrl: data.sourceUrl,
+      });
+      folded++;
+      fs.renameSync(m.file, path.join(archiveDir, path.basename(m.file)));
+      archived++;
+      console.log(`↳ folded ${m.slug} → ${c.canonical.slug}; archived.`);
+    }
+  }
+  console.log(`\n✨ Collapsed: ${folded} folded, ${archived} archived to archive/news/, ${missing} already gone.`);
+  console.log('   Member files left the collection; git add -A to stage the moves.');
+}
+
 // ── CLI: calibration + clustering report (no API, no writes) ─────────────────
 function report(daysBack) {
   const corpus = loadCorpusWindow(daysBack);
@@ -272,7 +406,22 @@ function report(daysBack) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const cmd = process.argv[2];
-  if (cmd === 'report') report(parseInt(process.argv[3] || DEFAULT_WINDOW_DAYS, 10));
-  else { console.error('usage: node scripts/dedupe.js report [daysBack]'); process.exit(1); }
+  const argv = process.argv.slice(2);
+  const cmd = argv[0];
+  // Collapse over the whole corpus by default; the live gate uses a short window.
+  const WHOLE_CORPUS_DAYS = 36500;
+  if (cmd === 'report') {
+    report(parseInt(argv[1] || DEFAULT_WINDOW_DAYS, 10));
+  } else if (cmd === 'review') {
+    const daysBack = parseInt(argv[1] || WHOLE_CORPUS_DAYS, 10);
+    const edgeTxt = argv[2] ? parseFloat(argv[2]) : undefined;
+    review(daysBack, edgeTxt);
+  } else if (cmd === 'apply') {
+    applyReview(argv[1], { yes: argv.includes('--yes') });
+  } else {
+    console.error('usage:\n  node scripts/dedupe.js report [daysBack]\n' +
+      '  node scripts/dedupe.js review [daysBack] [edgeTxt]\n' +
+      '  node scripts/dedupe.js apply <review.json> [--yes]');
+    process.exit(1);
+  }
 }

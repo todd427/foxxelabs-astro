@@ -9,7 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate-news": "node scripts/generate-content.js news",
-    "generate-resource": "node scripts/generate-content.js resource"
+    "generate-resource": "node scripts/generate-content.js resource",
+    "backfill-entities": "node scripts/backfill-entities.js",
+    "dedupe-report": "node scripts/dedupe.js report",
+    "collapse-review": "node scripts/dedupe.js review",
+    "collapse-apply": "node scripts/dedupe.js apply",
+    "frontier": "node scripts/frontier.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",
