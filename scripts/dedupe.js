@@ -41,15 +41,17 @@ const __dirname = path.dirname(__filename);
 
 export const NEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'news');
 
-// ── Tunable thresholds — RECALIBRATE from `node scripts/dedupe.js report` ────
-// NOTE: TF-IDF changes the score scale vs the earlier raw-TF version. Re-read
-// the report's nearest-neighbour ladder and top-pairs before trusting these.
+// ── Thresholds — calibrated against the 864-article corpus (TF-IDF) ──────────
+// GATE_TEXT_ONLY = 0.55: above this, near-all pairs are genuine rewrites; the
+// 0.45-0.54 band mixes true dupes with topical cousins, so we bias high. The
+// live gate's costly error is a false MERGE (burying a new story as an update),
+// not a false miss (one near-dupe publishes), so erring high is the safe side.
 export const W_ENTITY        = 0.50;
 export const W_TEXT          = 0.50;
-export const DUP_COMBINED    = 0.50;  // entity regime: combined => duplicate
+export const DUP_COMBINED    = 0.55;  // entity regime: combined => duplicate
 export const GATE_ENTITY     = 0.34;  // entity regime: AND-gate entity floor
-export const GATE_TEXT       = 0.30;  // entity regime: AND-gate text floor
-export const GATE_TEXT_ONLY  = 0.45;  // text-only regime: txt => duplicate (PROVISIONAL)
+export const GATE_TEXT       = 0.35;  // entity regime: AND-gate text floor
+export const GATE_TEXT_ONLY  = 0.55;  // text-only regime: txt => duplicate
 export const DEFAULT_WINDOW_DAYS = 120;
 
 const STOPWORDS = new Set((
