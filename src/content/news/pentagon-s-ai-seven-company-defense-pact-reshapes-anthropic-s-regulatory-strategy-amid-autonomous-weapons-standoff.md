@@ -10,6 +10,9 @@ entities: ["Pentagon", "DoD", "OpenAI", "Google", "Microsoft", "Nvidia", "AWS", 
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-05-04
+updates:
+  - { date: 2026-05-04, note: "Anthropic's exclusion from Pentagon contracts over autonomous weapons concerns marks a pivotal moment for AI safety principles in defense procurement.", sourceUrl: "https://defense.gov" }
 ---
 
 ## Pentagon's AI Seven-Company Defense Pact Reshapes Anthropic's Regulatory Strategy Amid Autonomous Weapons Standoff

@@ -10,6 +10,9 @@ entities: ["Ireland", "€7M", "cyberpsychology research", "EU AI Act", "Erasmus
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-05-05
+updates:
+  - { date: 2026-05-05, note: "Ireland invests €7M in cyberpsychology research to address AI-driven mental health harms, marking a strategic shift in how policymakers approach digital wellbeing.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## Ireland's €7M Digital Mental Health Pivot: Why Cyberpsychology Research Now Underpins National Health Strategy

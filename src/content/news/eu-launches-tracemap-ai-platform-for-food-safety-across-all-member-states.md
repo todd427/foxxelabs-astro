@@ -10,6 +10,10 @@ entities: ["European Commission", "TraceMap", "EU", "27 member states", "Ireland
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-03-31
+updates:
+  - { date: 2026-03-31, note: "European Commission deploys breakthrough AI traceability system to rapidly detect food fraud and contamination outbreaks across the EU." }
+  - { date: 2026-03-28, note: "European Commission deploys TraceMap AI system to detect food fraud and contamination across EU supply chains in major food safety advance.", sourceUrl: "https://ec.europa.eu" }
 ---
 
 ## Key Developments

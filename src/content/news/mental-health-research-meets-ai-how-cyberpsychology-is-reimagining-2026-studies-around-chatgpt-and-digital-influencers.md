@@ -10,6 +10,9 @@ entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "V
 significance: "medium"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-04-16
+updates:
+  - { date: 2026-04-16, note: "Leading cyberpsychology researchers shift focus to AI-driven mental health impacts, marking a fundamental reorientation of the field's research priorities.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## A Watershed Moment for Digital Mental Health Research
