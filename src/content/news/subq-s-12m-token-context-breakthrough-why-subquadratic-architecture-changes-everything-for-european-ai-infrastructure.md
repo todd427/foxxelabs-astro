@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["LLM Architecture", "Cost Efficiency", "European AI", "Frontier Models"]
 source: "LLM Model Releases Analysis"
 sourceUrl: "https://subquadratic.ai"
+entities: ["Subquadratic", "SubQ 1M-Preview", "12M token context", "May 5, 2026", "GPT-5.5", "Gemini 3.5 Flash", "Apache 2.0", "Cohere", "Aleph Alpha", "OpenAI", "Google"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

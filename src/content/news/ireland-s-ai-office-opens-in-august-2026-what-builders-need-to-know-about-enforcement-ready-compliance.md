@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["Ireland & EU", "AI regulation", "compliance", "AI Office"]
 source: "Oireachtas Enterprise Committee / EU Legislative Bodies"
 sourceUrl: "https://www.oireachtas.ie/en/"
+entities: ["Ireland's AI Office", "August 2026", "EU AI Office", "May 2026 EU AI Act omnibus deal", "Article 50", "December 2026", "Oireachtas Enterprise Committee", "Data Protection Commission", "non-consensual deepfakes"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

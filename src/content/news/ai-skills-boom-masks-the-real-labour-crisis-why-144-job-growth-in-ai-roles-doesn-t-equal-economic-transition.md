@@ -6,6 +6,9 @@ category: "Industry"
 tags: ["AI skills gap", "labour market", "workforce transformation", "EU regulation"]
 source: "Morgan Stanley Research & Yale Budget Lab"
 sourceUrl: "https://www.yale.edu"
+entities: ["US", "144%", "2.5%", "297%", "7%", "April 2026", "EU AI Act", "Ireland", "ChatGPT", "33 months", "March 2026", "Yale Budget Lab", "Morgan Stanley Research"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

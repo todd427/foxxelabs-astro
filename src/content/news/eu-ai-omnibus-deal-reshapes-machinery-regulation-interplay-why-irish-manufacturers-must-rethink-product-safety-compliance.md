@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "Machinery Regulation", "Product Safety", "Irish Compliance"]
 source: "artificialintelligenceact.eu"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "EU AI Omnibus", "Machinery Regulation", "Ireland", "Digital Omnibus on AI", "May 7, 2026", "June 2024", "August 2, 2026", "July 2026", "Cyber Resilience Act", "EU Council", "EU Parliament", "EU Commission"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

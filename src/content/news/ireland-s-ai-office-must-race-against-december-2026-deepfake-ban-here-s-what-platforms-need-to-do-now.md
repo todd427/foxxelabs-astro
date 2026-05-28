@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Act", "deepfake enforcement", "Ireland compliance", "content moderation"]
 source: "EU Council & European Commission AI Omnibus Agreement"
 sourceUrl: "https://artificialintelligenceact.eu"
+entities: ["EU AI Act", "December 2, 2026", "EU deepfake ban", "non-consensual intimate imagery", "CSAM", "Ireland AI Office", "Irish DPC", "August 2, 2026", "Annex III", "Sensetime", "Sensity"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

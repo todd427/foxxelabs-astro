@@ -6,6 +6,9 @@ category: "Policy"
 tags: ["EU AI Strategy", "Scientific Research", "Infrastructure Investment"]
 source: "European Commission"
 sourceUrl: "https://ec.europa.eu/commission/presscorner"
+entities: ["European Commission", "RAISE", "€100M", "€28M", "€33M", "Anthropic", "Stainless", "Mistral", "Emmi AI", "ICHEC", "CASPIr", "€25M", "EuroHPC", "University of Galway", "March 2026", "Denmark", "OpenAI", "DeepMind"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

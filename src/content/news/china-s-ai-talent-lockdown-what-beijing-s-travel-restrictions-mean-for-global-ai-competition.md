@@ -6,6 +6,9 @@ category: "Breaking"
 tags: ["geopolitics", "ai-talent", "china", "tech-sovereignty"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["China", "DeepSeek", "Alibaba", "Anthropic", "OpenAI", "US", "EU", "EU AI Act", "Ireland", "$30B"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 

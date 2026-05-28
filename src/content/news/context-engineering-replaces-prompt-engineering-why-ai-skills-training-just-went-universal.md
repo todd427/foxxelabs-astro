@@ -6,6 +6,9 @@ category: "Research"
 tags: ["prompt-engineering", "ai-skills", "context-engineering"]
 source: "Industry Analysis"
 sourceUrl: "https://foxxelabs.com"
+entities: ["Anthropic", "Claude", "Model Context Protocol", "OpenAI", "EU AI Act", "Vector databases"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

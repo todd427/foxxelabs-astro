@@ -6,6 +6,9 @@ category: "Research"
 tags: ["biomedical-AI", "model-democratization", "European-research", "quantization"]
 source: "MIT Technology Review"
 sourceUrl: "https://technologyreview.mit.edu"
+entities: ["Geneformer", "EU AI Act", "GDPR", "Real AI Act", "European research institutions", "Irish biomedical researchers"]
+significance: "medium"
+irishEuAngle: true
 draft: false
 ---
 

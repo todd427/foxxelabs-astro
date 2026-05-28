@@ -6,6 +6,9 @@ category: "Research"
 tags: ["cyberpsychology", "internet-addiction", "behavioral-health", "EU-research"]
 source: "University of Duisburg-Essen / Horizon Europe"
 sourceUrl: "https://www.uni-due.de/"
+entities: ["Prof. Matthias Brand", "University of Duisburg-Essen", "I-PACE model", "BootStRaP", "Horizon Europe", "EU Digital Services Act", "14 European nations", "22 institutions", "May 5, 2026"]
+significance: "high"
+irishEuAngle: true
 draft: false
 ---
 
