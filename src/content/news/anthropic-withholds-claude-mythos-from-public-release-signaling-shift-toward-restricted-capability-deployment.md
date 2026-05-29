@@ -10,6 +10,9 @@ entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "April 7 2026", "E
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-05-29
+updates:
+  - { date: 2026-05-29, note: "Anthropic's public release of Mythos uncovers thousands of OS and browser vulnerabilities, forcing urgent rethink of AI safety deployment strategy.", sourceUrl: "https://anthropic.com/news" }
 ---
 
 ## Anthropic's Safety Decision: When Capability Meets Restraint
