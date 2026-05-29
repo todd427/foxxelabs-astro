@@ -39,6 +39,12 @@ The Series H extends Anthropic's runway through the IPO event regardless of whic
 
 The build window for solo and small-team developers using subsidised frontier AI just shrank from "twelve to eighteen months" to "until the IPO repriced or rejected." That's roughly five to seven months from now.
 
+## <span style="color:#1F4E79">The steelman</span>
+
+There's a counter-argument worth naming. On the same day the round closed, Anthropic shipped Claude Opus 4.8 — forty-one days after Opus 4.7, the fastest minor-version cadence the company has run. That's the underwriter's case for $965 billion: cash flow doesn't justify the price, but build velocity might. No other foundation-model lab is shipping at this rate, and the cadence has been accelerating, not slowing.
+
+It's the strongest non-financial argument in the bullish file. It doesn't refute the 69x revenue multiple. It says the multiple is buying the option on a company that's compounding capability faster than it's compounding revenue — and that eventually those curves converge. The skeptical reading: shipping cadence is a function of capital, not the other way around. The reason Anthropic can release every six weeks is that it just raised $65 billion. When the funding cycle ends, so does the cadence. We'll know which reading is right after the IPO.
+
 ## <span style="color:#1F4E79">The 1999 signature</span>
 
 In the late stages of the dot-com bubble, the most reliable signal wasn't valuation alone. It was who was buying. When the late-stage cohort piled in at prices the early-stage cohort wouldn't touch, you were in the part of the cycle where pricing had decoupled from analysis.
