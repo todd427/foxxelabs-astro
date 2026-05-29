@@ -12,6 +12,10 @@ const C_MUT    = "#9fb0c3";  // --muted
 const C_BORDER = "rgba(255,255,255,.10)";
 
 // ─── MMLU historical data ────────────────────────────────────────────────────
+// MMLU is saturated above ~95%; scores for recent models are estimates from
+// ArtificialAnalysis Intelligence Index and relative positioning. The
+// historical arc (2022–2024) is the meaningful story; recent entries are
+// included for completeness but are not the differentiator any more.
 const openaiReleases = [
   { date: "Nov '22", ts: 0,  model: "GPT-3.5",        mmlu: 70.0, note: "ChatGPT launch — 1M users in 5 days" },
   { date: "Mar '23", ts: 4,  model: "GPT-4",           mmlu: 86.4, note: "Major leap; launched in Bing and ChatGPT" },
@@ -20,11 +24,12 @@ const openaiReleases = [
   { date: "Sep '24", ts: 22, model: "o1-preview",      mmlu: 90.8, note: "Chain-of-thought reasoning model" },
   { date: "Dec '24", ts: 25, model: "o1",              mmlu: 92.3, note: "Full o1 + $200/mo Pro tier" },
   { date: "Jan '25", ts: 26, model: "o3-mini",         mmlu: 93.0, note: "Compact, fast reasoning" },
-  { date: "Apr '25", ts: 29, model: "o3 / o4-mini",   mmlu: 96.7, note: "Top AIME 2024/25 benchmark scores" },
+  { date: "Apr '25", ts: 29, model: "o3 / o4-mini",    mmlu: 96.7, note: "Top AIME 2024/25 benchmark scores" },
   { date: "May '25", ts: 30, model: "GPT-5",           mmlu: 96.0, note: "Unified reasoning + conversational AI" },
   { date: "Nov '25", ts: 36, model: "GPT-5.1",         mmlu: 96.4, note: "Adaptive reasoning; 8 personality presets" },
   { date: "Feb '26", ts: 39, model: "GPT-5.2",         mmlu: 96.8, note: "Improved polish; spreadsheet & finance tasks" },
   { date: "Mar '26", ts: 40, model: "GPT-5.4",         mmlu: 97.2, note: "Native computer use (75% OSWorld); 1M context; merges GPT-5.3-Codex line*" },
+  { date: "Apr '26", ts: 41, model: "GPT-5.5",         mmlu: 96.5, note: "Codename 'Spud'; 82.7% Terminal-Bench 2.0; 88.7% SWE-bench; first fully-retrained base since GPT-4.5*" },
 ];
 
 const claudeReleases = [
@@ -40,6 +45,8 @@ const claudeReleases = [
   { date: "Nov '25", ts: 36, model: "Claude 4.5 Opus",     mmlu: 95.8, note: "First model >80% SWE-bench (80.9%)" },
   { date: "Feb '26", ts: 39, model: "Claude Opus 4.6",     mmlu: 96.5, note: "1M context beta; 65.4% Terminal-Bench; adaptive thinking; agent teams*" },
   { date: "Mar '26", ts: 40, model: "Claude Sonnet 4.6",   mmlu: 96.2, note: "Cost-efficient tier; released 12 days after Opus 4.6*" },
+  { date: "Apr '26", ts: 41, model: "Claude Opus 4.7",     mmlu: 96.7, note: "87.6% SWE-bench Verified; xhigh effort tier; 3.3× vision resolution*" },
+  { date: "May '26", ts: 42, model: "Claude Opus 4.8",     mmlu: 96.9, note: "88.6% SWE-bench Verified; 1890 Elo GDPval-AA (lead); dynamic workflows; 41-day cadence*" },
 ];
 
 const allTs = [...new Set([
@@ -62,29 +69,33 @@ const mergedMmlu = allTs.map(ts => {
   };
 });
 
-// ─── Capabilities benchmark data (frontier models only, Mar 2026) ─────────────
-// Sources: official model cards, ArtificialAnalysis, TechCrunch, DigitalApplied
+// ─── Capabilities benchmark data (frontier models only, May 2026) ─────────────
+// Sources: Anthropic launch posts, OpenAI launch posts, ArtificialAnalysis,
+// TokenMix, llm-stats.com. SWE-bench Verified is saturating at the frontier
+// (~88–89% for both labs), so the contested benchmark has shifted to
+// SWE-bench Pro (the harder, less-contaminated variant). Terminal-Bench
+// updated to 2.1 — both frontier models now report against this version.
 // Human baselines shown where published.
 const capBenchmarks = [
   {
-    name: "SWE-bench\nVerified",
-    shortName: "SWE-bench",
-    description: "Real-world software engineering tasks resolved autonomously",
+    name: "SWE-bench\nPro",
+    shortName: "SWE-bench Pro",
+    description: "Harder, less-contaminated software engineering benchmark — predicts production coding performance",
     unit: "%",
     humanBaseline: null,
-    oai: { model: "GPT-5.4", value: 79.2 },
-    cla: { model: "Claude 4.5 Opus", value: 80.9 },
-    note: "Claude 4.5 Opus holds the published record (80.9%); GPT-5.4 estimated ~79% based on relative positioning*",
+    oai: { model: "GPT-5.5", value: 58.6 },
+    cla: { model: "Claude Opus 4.8", value: 69.2 },
+    note: "Opus 4.8 leads by 10.6 points. SWE-bench Verified is now saturating (~88–89% for both labs), so Pro is the meaningful differentiator.",
   },
   {
-    name: "Terminal-Bench\n2.0",
+    name: "Terminal-Bench\n2.1",
     shortName: "Terminal-Bench",
-    description: "Agentic coding in real terminal environments",
+    description: "Agentic coding in real terminal environments — planning, iteration, tool coordination",
     unit: "%",
     humanBaseline: null,
-    oai: { model: "GPT-5.2 + Codex", value: 64.7 },
-    cla: { model: "Claude Opus 4.6", value: 65.4 },
-    note: "Claude Opus 4.6 holds the record (65.4%); GPT-5.2 Codex CLI at 64.7%. GPT-5.4 score pending independent verification.",
+    oai: { model: "GPT-5.5", value: 78.2 },
+    cla: { model: "Claude Opus 4.8", value: 74.6 },
+    note: "GPT-5.5 leads by 3.6 points on Terminal-Bench 2.1. GPT-5.5 also holds the Terminal-Bench 2.0 record at 82.7%.",
   },
   {
     name: "OSWorld\nVerified",
@@ -92,9 +103,9 @@ const capBenchmarks = [
     description: "Autonomous desktop navigation via screenshots + keyboard/mouse",
     unit: "%",
     humanBaseline: 72.4,
-    oai: { model: "GPT-5.4", value: 75.0 },
-    cla: { model: "Claude Opus 4.6", value: 72.7 },
-    note: "Human baseline: 72.4%. GPT-5.4 becomes first model to surpass human performance.",
+    oai: { model: "GPT-5.5", value: 78.7 },
+    cla: { model: "Claude Opus 4.8", value: 83.4 },
+    note: "Human baseline: 72.4%. Both frontier models now exceed human performance; Opus 4.8 leads by 4.7 points.",
   },
   {
     name: "GDPval-AA\n(Elo)",
@@ -102,16 +113,16 @@ const capBenchmarks = [
     description: "Economically valuable tasks across finance, legal & 44 professions",
     unit: " Elo",
     humanBaseline: null,
-    oai: { model: "GPT-5.2", value: 1462 },
-    cla: { model: "Claude Opus 4.6", value: 1606 },
-    note: "Claude Opus 4.6 leads by ~144 Elo (~70% win rate). GPT-5.4 GDPval score pending; GPT-5.2 shown for comparison.",
+    oai: { model: "GPT-5.5", value: 1769 },
+    cla: { model: "Claude Opus 4.8", value: 1890 },
+    note: "Opus 4.8 leads by 121 Elo (~67% expected win rate). Largest competitive gap on the page.",
   },
 ];
 
 // ─── Stat row ────────────────────────────────────────────────────────────────
 const STATS = [
-  { label: "OpenAI MMLU gain", value: "+27.2pp", sub: "GPT-3.5 → GPT-5.4 (3.3 yrs)" },
-  { label: "Claude MMLU gain",  value: "+23.2pp", sub: "Claude 1 → Sonnet 4.6" },
+  { label: "OpenAI MMLU gain", value: "+26.5pp", sub: "GPT-3.5 → GPT-5.5 (3.4 yrs)" },
+  { label: "Claude MMLU gain",  value: "+23.9pp", sub: "Claude 1 → Opus 4.8" },
   { label: "Cost drop",         value: "~10× /yr", sub: "Per equivalent performance" },
   { label: "Frontier ceiling",  value: "~97%+",   sub: "MMLU near saturation" },
 ];
@@ -157,7 +168,7 @@ const MmluTooltip = ({ active, payload }) => {
 
 const MmluDot = ({ cx, cy, payload, dataKey, color }) => {
   if (payload[dataKey] == null) return null;
-  const isNew = payload.ts === 40;
+  const isNew = payload.ts >= 41;
   return <circle cx={cx} cy={cy} r={isNew ? 7 : 5} fill={color} stroke={isNew ? "#ffffff" : C_BG} strokeWidth={2} />;
 };
 
@@ -249,7 +260,7 @@ export default function AITimeline() {
           fontSize: 11, padding: "3px 8px", borderRadius: 100,
           background: "rgba(251,191,36,0.15)", border: "1px solid rgba(251,191,36,0.4)",
           color: "#fbbf24", fontWeight: 600,
-        }}>● = Latest releases (Mar 2026)</span>
+        }}>● = Latest releases (Apr–May 2026)</span>
       </div>
 
       {/* MMLU Line Chart */}
@@ -324,8 +335,8 @@ export default function AITimeline() {
 
       {/* ── SECTION 2: Capabilities benchmarks ── */}
       <SectionDivider
-        title="Part 2 — Capabilities Benchmarks (Mar 2026)"
-        subtitle="MMLU measures what models know. These benchmarks measure what they can actually do — write and deploy working code, navigate a computer autonomously, and complete real professional tasks. This is where the frontier labs are differentiating in 2026. Hover each bar for model details and source notes."
+        title="Part 2 — Capabilities Benchmarks (May 2026)"
+        subtitle="MMLU measures what models know. These benchmarks measure what they can actually do — write and deploy working code, navigate a computer autonomously, and complete real professional tasks. SWE-bench Verified is now saturating around 88–89% for both labs, so the contested benchmark has moved to SWE-bench Pro. Both frontier models now exceed the human baseline on OSWorld. Hover each bar for model details and source notes."
       />
 
       {/* Capabilities bar chart */}
@@ -339,7 +350,7 @@ export default function AITimeline() {
         }}>
           <span style={{ fontSize: 16 }}>⚠</span>
           <span>
-            <strong>OSWorld human baseline: 72.4%.</strong> GPT-5.4 (75.0%) is the first model to surpass human performance on autonomous desktop navigation.
+            <strong>OSWorld human baseline: 72.4%.</strong> Both frontier models now lead — GPT-5.5 at 78.7%, Opus 4.8 at 83.4% — putting autonomous desktop navigation past the "better than humans" threshold.
           </span>
         </div>
 
@@ -423,10 +434,12 @@ export default function AITimeline() {
         <p style={{ fontSize: 11, color: C_MUT, lineHeight: 1.7, margin: "0 0 10px" }}>
           <strong style={{ color: "#e9f0f7" }}>Benchmark notes:</strong> MMLU scores — official where available;
           recent entries (*) estimated from ArtificialAnalysis Intelligence Index and relative positioning.
-          MMLU is near-saturated at 97%+ and no longer the primary frontier differentiator.
-          Capabilities benchmark scores sourced from official model cards, TechCrunch, DigitalApplied, and ArtificialAnalysis (March 2026).
+          MMLU has been saturated at 97%+ since late 2025 and is no longer the primary frontier differentiator.
+          Capabilities benchmark scores sourced from Anthropic and OpenAI launch posts, ArtificialAnalysis, TokenMix,
+          and llm-stats.com (May 2026). SWE-bench Verified is saturating (~88–89% for both labs); SWE-bench Pro is now
+          the more representative coding benchmark. Terminal-Bench moved to version 2.1 in May 2026.
           GDPval-AA is measured in Elo points and is not directly comparable to percentage-based benchmarks.
-          Independent verification of GPT-5.4 Terminal-Bench and GDPval scores is still emerging.
+          Mythos-class preview models from Anthropic are excluded (not generally available).
         </p>
         <p style={{ fontSize: 12, color: C_MUT, margin: 0 }}>
           <strong style={{ color: "#e9f0f7" }}>For the latest information: </strong>
