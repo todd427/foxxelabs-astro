@@ -10,7 +10,9 @@ significance: "high"
 entities: ["Google DeepMind", "Microsoft", "xAI", "OpenAI", "Anthropic", "Center for AI Standards and Innovation (CAISI)"]
 irishEuAngle: true
 updates: []
+  - { date: 2026-05-31, note: "New CAISI agreements with major AI labs signal intensifying government oversight of frontier models, while EU-backed Cohere-Aleph Alpha merger challenges US-China AI dominance.", sourceUrl: "https://www.commerce.gov/" }
 draft: false
+updatedDate: 2026-05-31
 ---
 
 ## Major AI Companies Commit to Pre-Deployment Safety Evaluations Through CAISI Partnership
