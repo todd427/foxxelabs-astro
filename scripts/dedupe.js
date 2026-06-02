@@ -200,8 +200,11 @@ export function appendUpdate(filePath, { date, note, sourceUrl }) {
   block = /^updatedDate:/m.test(block)
     ? block.replace(/^updatedDate:.*$/m, `updatedDate: ${date}`)
     : block + `\nupdatedDate: ${date}`;
+  // Strip an inline empty array on the matched line — the generator writes
+  // `updates: []` for new posts; appending `\n  - {...}` underneath that is
+  // invalid YAML and breaks astro check at build time.
   block = /^updates:/m.test(block)
-    ? block.replace(/^updates:.*$/m, (m) => `${m}\n${item}`)
+    ? block.replace(/^updates:.*$/m, (m) => `${m.replace(/\s*\[\s*\]\s*$/, '')}\n${item}`)
     : block + `\nupdates:\n${item}`;
 
   fs.writeFileSync(filePath, raw.replace(fm[0], `---\n${block}\n---`));

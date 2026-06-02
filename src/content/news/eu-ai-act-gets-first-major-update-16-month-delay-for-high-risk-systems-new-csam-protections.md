@@ -9,7 +9,7 @@ sourceUrl: "https://euractiv.com/section/artificial-intelligence"
 significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "Digital Omnibus", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
   - { date: 2026-05-29, note: "EU negotiators agree on landmark amendments to AI Act, deferring compliance deadlines and introducing strict prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
 updatedDate: 2026-05-29
