@@ -10,7 +10,9 @@ significance: "high"
 entities: ["Ireland", "European Union", "Council of the European Union", "European Commission"]
 irishEuAngle: true
 updates: []
+  - { date: 2026-06-02, note: "Ireland prepares for dual AI governance milestone in June 2026, hosting European summit while establishing national AI Office by August deadline.", sourceUrl: "https://www.iapp.org/" }
 draft: false
+updatedDate: 2026-06-02
 ---
 
 ## Ireland Takes the Helm on European AI Policy

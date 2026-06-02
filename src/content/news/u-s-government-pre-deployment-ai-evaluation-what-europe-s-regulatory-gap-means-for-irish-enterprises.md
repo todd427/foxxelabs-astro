@@ -10,6 +10,9 @@ entities: ["CAISI", "Google DeepMind", "Microsoft", "xAI", "EU AI Act", "August 
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-02
+updates:
+  - { date: 2026-06-02, note: "Ireland establishes AI Office to enforce EU AI Act; major tech firms agree to pre-deployment safety evaluations as regulatory timeline accelerates.", sourceUrl: "https://www.gov.ie/en/policy/artificial-intelligence/" }
 ---
 
 ## U.S. Government Pre-Deployment AI Evaluation: What Europe's Regulatory Gap Means for Irish Enterprises

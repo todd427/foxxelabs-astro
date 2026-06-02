@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "15 national competent authorities", "AI Offi
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-02
+updates:
+  - { date: 2026-06-02, note: "Ireland launches statutory AI Office by August 2026, establishing distributed enforcement model for EU AI Act compliance across 15 national competent authorities.", sourceUrl: "https://iapp.org/" }
 ---
 
 ## Ireland Charts Its Own Course on AI Regulation
