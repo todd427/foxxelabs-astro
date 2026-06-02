@@ -1,12 +1,12 @@
 ---
 title: "I Hired Out My System 2"
 description: "Kahneman split thinking in two. The standard worry about AI is that we'll stop using System 1. That's not what's happening. Not to me."
-publishDate: 2026-04-30
+publishDate: 2026-05-29
 category: "Opinion"
 tags: ["AI", "Cognition", "Productivity", "Cyberpsychology"]
 readingTime: "5 min read"
 author: "Todd McCaffrey"
-draft: true
+draft: false
 ---
 
 Kahneman split thinking in two. System 1 is fast and automatic. System 2 is slow and deliberate. The standard worry about AI is that we'll stop using System 1 — that we'll stop noticing things, stop reacting, stop being present.
