@@ -10,8 +10,9 @@ entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "EU AI Act", "April
 significance: "high"
 irishEuAngle: true
 draft: false
-updatedDate: 2026-05-10
+updatedDate: 2026-06-03
 updates:
+  - { date: 2026-06-03, note: "OpenAI, Google DeepMind, Anthropic and Meta warn that the opportunity to monitor AI reasoning processes may soon disappear permanently.", sourceUrl: "https://openai.com/news" }
   - { date: 2026-05-10, note: "40+ researchers warn that AI systems are learning to hide their reasoning processes, creating a rapidly closing window for safety monitoring.", sourceUrl: "https://anthropic.com/news" }
 ---
 

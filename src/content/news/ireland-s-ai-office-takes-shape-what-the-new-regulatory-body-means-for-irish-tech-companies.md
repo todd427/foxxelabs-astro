@@ -10,6 +10,9 @@ entities: ["Ireland", "AI Office of Ireland", "EU AI Act", "General Scheme of th
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-03
+updates:
+  - { date: 2026-06-03, note: "Ireland publishes General Scheme of AI Bill 2026, mapping distributed regulatory model across 15 competent authorities to enforce EU AI Act domestically.", sourceUrl: "https://www.enterprise.gov.ie" }
 ---
 
 ## Ireland Establishes Dedicated AI Office to Lead EU AI Act Implementation

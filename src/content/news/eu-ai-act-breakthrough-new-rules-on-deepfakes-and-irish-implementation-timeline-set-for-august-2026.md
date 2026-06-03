@@ -9,8 +9,10 @@ sourceUrl: "https://artificialintelligenceact.eu"
 significance: "high"
 entities: ["European Union", "European Parliament", "Council of the EU", "Ireland", "AI Office of Ireland", "Digital Omnibus"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-03, note: "EU Parliament and Council agree to streamline AI Act implementation, while Ireland establishes new AI Office to meet full compliance deadline.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
+updatedDate: 2026-06-03
 ---
 
 ## EU and Ireland Reach Major AI Regulation Milestone
