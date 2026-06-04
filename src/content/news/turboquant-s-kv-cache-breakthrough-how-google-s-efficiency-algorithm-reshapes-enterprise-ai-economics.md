@@ -10,6 +10,9 @@ entities: ["Google", "TurboQuant", "ICLR 2026", "KV cache", "PolarQuant", "Quant
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-04
+updates:
+  - { date: 2026-06-04, note: "Google researchers unveil TurboQuant, a breakthrough algorithm reducing memory overhead in large AI models, enabling efficient deployment of massive context windows.", sourceUrl: "https://deepmind.google/research" }
 ---
 
 ## The Efficiency Turn: What TurboQuant Means for European AI Infrastructure

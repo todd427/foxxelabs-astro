@@ -9,8 +9,10 @@ sourceUrl: "https://cyberpsychology.eu"
 significance: "high"
 entities: ["Psychological Society of Ireland", "IADT Dublin", "Tallinn University", "Hochschule der Medien Stuttgart", "SIGMAC", "Cyberpsychology Journal"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-04, note: "Ireland and EU institutions establish dedicated cyberpsychology initiatives addressing AI, misinformation, and online behaviour in 2026.", sourceUrl: "https://cyberpsychology.eu" }
 draft: false
+updatedDate: 2026-06-04
 ---
 
 ## Ireland and EU Lead Cyberpsychology Research as Digital Wellbeing Becomes Strategic Priority
