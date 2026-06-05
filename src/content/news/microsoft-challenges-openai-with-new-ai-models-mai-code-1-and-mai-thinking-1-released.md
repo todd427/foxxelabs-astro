@@ -9,8 +9,10 @@ sourceUrl: "https://www.microsoft.com"
 significance: "high"
 entities: ["Microsoft", "OpenAI", "MAI-Code-1-Flash", "MAI-Thinking-1", "GPT-5.5", "McKinsey"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-05, note: "Microsoft launches MAI-Code-1-Flash and MAI-Thinking-1 at Build 2026, outperforming GPT-5.5 while dramatically reducing inference costs for enterprise deployments.", sourceUrl: "https://news.microsoft.com" }
 draft: false
+updatedDate: 2026-06-05
 ---
 
 ## Microsoft Escalates AI Model Competition with Cost-Efficient Releases

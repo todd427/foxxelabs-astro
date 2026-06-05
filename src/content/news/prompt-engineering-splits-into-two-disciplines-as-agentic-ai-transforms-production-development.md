@@ -9,8 +9,10 @@ sourceUrl: "https://foxxelabs.com"
 significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "Anthropic", "OpenAI", "Google DeepMind"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-05, note: "GPT-5, Claude 4, and Gemini 2.5 demonstrate significant improvements in contextual understanding, reshaping how developers approach prompt engineering in 2026.", sourceUrl: "https://arxiv.org/list/cs.AI" }
 draft: false
+updatedDate: 2026-06-05
 ---
 
 ## The Evolution of Prompt Engineering: From Art to Engineering Discipline
