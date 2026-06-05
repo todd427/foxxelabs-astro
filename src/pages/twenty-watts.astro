@@ -1,0 +1,281 @@
+---
+// src/pages/twenty-watts.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="20W — What It Costs to Train | Foxxe Labs"
+  description="The brain runs on 20 watts; a frontier AI training run draws tens of millions. What it actually costs to train a mind versus a machine — energy, data, capability — and why the obvious comparison misleads in both directions."
+  type="article"
+>
+
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs Research · Energy &amp; Intelligence</div>
+    <h1>20W</h1>
+    <p class="sub">What it actually costs to train a mind — and why the obvious comparison is misleading, in both directions.</p>
+    <p class="lede">The brain runs on about twenty watts; a frontier AI training run draws tens of millions. That contrast gets used to prove the brain miraculous or AI grotesquely wasteful — both are true, and both miss what the numbers actually say. Energy, data, capability, and the comparison done fairly — with the honest caveat that nobody has disclosed a flagship model's training energy since GPT-3.</p>
+    <div class="meta muted">
+      <span>5 June 2026</span>
+      <span class="sep">·</span>
+      <span>Todd McCaffrey, Foxxe Labs</span>
+      <span class="sep">·</span>
+      <span>~12 min read</span>
+    </div>
+  </header>
+
+  <article class="essay card">
+
+
+  <p>The human brain runs on about <strong>20W (twenty watts)</strong> — roughly a fifth of the energy your body burns just staying alive, and about the power it takes to charge a phone. On that budget it learns languages, reads faces, picks up social cues, masters crafts, and keeps learning for a lifetime — eighty years, ninety, sometimes a hundred (like Dick Van Dyke). The AI systems behind today's chatbots, by contrast, are trained in warehouses of computers that draw tens of millions of watts. The contrast is irresistible, and it usually gets used to argue one of two things: that the brain is miraculously efficient, or that AI is grotesquely wasteful. Both are true. Both also miss what the numbers actually say. So let's run them.</p>
+
+  <h2>The naive number</h2>
+  <p>Take the brain at 20W and leave it running. A year works out to about 175 kilowatt-hours — roughly what a household gets through in a few weeks. Twenty years of growing up, the time it takes to train a capable adult mind, comes to about <strong>3.5 megawatt-hours</strong> (a megawatt-hour is simply a million watt-hours — the unit the big numbers arrive in). If you object that you can't run a brain without keeping the rest of the body alive, the body at rest draws about 100W, which brings the twenty-year total to around <strong>17.5 megawatt-hours</strong>.</p>
+  <p>Now the machines. Training GPT-3 — the model that first powered ChatGPT, back in 2020 — used an estimated <strong>1,287 megawatt-hours</strong> of electricity. (That figure, and a comparison we'll come back to, comes from a 2021 study led by David Patterson.) By 2024, Meta's Llama 3.1 405B was trained by running about 16,000 of the fastest AI chips for nearly two months — roughly <strong>21,600 megawatt-hours</strong>. The "405B" counts the model's <em>parameters</em>: the adjustable numbers it tunes as it learns, loosely its version of the connections between brain cells, and the usual rough measure of a model's size. More of them means more raw capacity — GPT-3 had 175 billion; Llama 3.1 has 405 billion; and the newest systems, like GPT-5.5 (the model now running ChatGPT) and Meta's two-trillion-parameter Llama 4 Behemoth, are larger still.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<defs><pattern id="h" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" style="stroke:var(--tw-mach2)" stroke-width="1.2"/></pattern></defs>
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">What it costs to train</text>
+<text x="6" y="45" font-size="12.5" font-style="italic" style="fill:var(--tw-muted)">Hatched bars are estimates — makers no longer disclose training energy.</text>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="324.8" x2="704" y2="324.8"/><line x1="92" y1="257.6" x2="704" y2="257.6"/><line x1="92" y1="190.4" x2="704" y2="190.4"/><line x1="92" y1="123.2" x2="704" y2="123.2"/><line x1="92" y1="56" x2="704" y2="56"/></g><g font-size="11" style="fill:var(--tw-muted)" text-anchor="end"><text x="84" y="396">1</text><text x="84" y="328.8">10</text><text x="84" y="261.6">100</text><text x="84" y="194.4">1,000</text><text x="84" y="127.2">10,000</text><text x="84" y="60">100,000</text></g><rect x="111" y="355.4" width="64" height="36.6" style="fill:var(--tw-bio)"/><rect x="213" y="308.5" width="64" height="83.5" style="fill:var(--tw-bio2)"/><rect x="315" y="183.0" width="64" height="209.0" style="fill:var(--tw-mach)"/><rect x="417" y="100.7" width="64" height="291.3" style="fill:var(--tw-mach2)"/><rect x="519" y="96.5" width="64" height="295.5" style="fill:var(--tw-est)"/><rect x="621" y="82.7" width="64" height="309.3" style="fill:var(--tw-est)"/><rect x="519" y="96.5" width="64" height="295.5" fill="url(#h)"/><rect x="621" y="82.7" width="64" height="309.3" fill="url(#h)"/>
+<g font-size="11.5" style="fill:var(--tw-text)" text-anchor="middle"><text x="143" y="349.4">3.5</text><text x="245" y="302.5">18</text><text x="347" y="177.0">1,287</text><text x="449" y="94.7">21,600</text><text x="551" y="90.5">~25,000</text><text x="653" y="76.7">~40,000</text></g>
+<g font-size="11" style="fill:var(--tw-text2)" text-anchor="middle"><text x="143" y="410">Human brain</text><text x="143" y="424">→ age 20</text><text x="245" y="410">Whole body</text><text x="245" y="424">→ age 20</text><text x="347" y="410">GPT-3</text><text x="449" y="410">Llama 3.1</text><text x="449" y="424">405B</text><text x="551" y="410">Llama 4</text><text x="551" y="424">Behemoth</text><text x="653" y="410">GPT-5</text><text x="653" y="424">class</text></g>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Training energy (MWh, log)</text></svg>
+    <figcaption><strong>Figure 1.</strong> Training energy, on a scale where each step up the axis means ten times more. The brain's two-decade budget sits thousands of times below a single large AI training run. The two right-hand bars are estimates — see the next section.</figcaption>
+  </figure>
+
+  <h2>A word on the newest numbers</h2>
+  <p>Here is something worth saying plainly: <strong>we don't actually know what it costs to train the latest AI models.</strong> No major company has published the energy used to train a flagship model since GPT-3, in 2020. OpenAI has released nothing for GPT-4 or GPT-5; Meta gave figures for Llama 3.1 but not for Llama 4. The numbers for the newest systems are therefore <em>estimates</em>, pieced together by independent researchers from chip counts, training time, and the math of how these models scale. The best available guess puts a GPT-5-class run at very roughly forty thousand megawatt-hours — about twice Llama 3.1 — but the honest error bars are wide. That is why this article leans on GPT-3 and Llama 3.1 for its solid ground: they are the last two big models whose makers actually told us. The trend, as the models get bigger, is toward less transparency, not more.</p>
+
+  <h2>The same energy, in brain-years</h2>
+  <p>Megawatt-hours don't land in the gut, so let's convert the training runs into the one currency the brain deals in: time spent thinking at 20W. GPT-3's training used about as much energy as one human brain would burn in <strong>7,300 years</strong>. Llama 3.1's used about <strong>123,000 brain-years</strong>. A current top-tier run, on the best estimates, is north of <strong>200,000 brain-years</strong>. Turn it around: a single large training run spends the brain-energy of raising somewhere between six and eleven <strong>thousand</strong> children to adulthood — on one AI.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<defs><pattern id="h2" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" style="stroke:var(--tw-mach2)" stroke-width="1.2"/></pattern></defs>
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">The same energy, measured in brain-years</text>
+<text x="6" y="45" font-size="12.5" font-style="italic" style="fill:var(--tw-muted)">Right-hand bar is an estimate.</text>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="324.8" x2="704" y2="324.8"/><line x1="92" y1="257.6" x2="704" y2="257.6"/><line x1="92" y1="190.4" x2="704" y2="190.4"/><line x1="92" y1="123.2" x2="704" y2="123.2"/><line x1="92" y1="56" x2="704" y2="56"/></g><g font-size="11" style="fill:var(--tw-muted)" text-anchor="end"><text x="84" y="396">10</text><text x="84" y="328.8">100</text><text x="84" y="261.6">1,000</text><text x="84" y="194.4">10,000</text><text x="84" y="127.2">100,000</text><text x="84" y="60">1,000,000</text></g><rect x="128.5" y="371.8" width="80" height="20.2" style="fill:var(--tw-bio)"/><rect x="281.5" y="199.4" width="80" height="192.6" style="fill:var(--tw-mach)"/><rect x="434.5" y="117.1" width="80" height="274.9" style="fill:var(--tw-mach2)"/><rect x="587.5" y="99.1" width="80" height="292.9" style="fill:var(--tw-est)"/><rect x="587.5" y="99.1" width="80" height="292.9" fill="url(#h2)"/>
+<g font-size="11.5" style="fill:var(--tw-text)" text-anchor="middle"><text x="168.5" y="365.8">20 yr</text><text x="321.5" y="193.4">7,341 yr</text><text x="474.5" y="111.1">123,203 yr</text><text x="627.5" y="93.1">~228,154 yr</text></g>
+<g font-size="11" style="fill:var(--tw-text2)" text-anchor="middle"><text x="168.5" y="410">A human,</text><text x="168.5" y="424">→ age 20</text><text x="321.5" y="410">GPT-3</text><text x="474.5" y="410">Llama 3.1</text><text x="474.5" y="424">405B</text><text x="627.5" y="410">GPT-5</text><text x="627.5" y="424">class</text></g>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Years of one brain at 20W (log)</text></svg>
+    <figcaption><strong>Figure 2.</strong> The same training energy, expressed as years of one human brain running at 20W. A person reaches adulthood in twenty of those years; the training runs are measured in thousands. The right-hand bar is an estimate.</figcaption>
+  </figure>
+
+  <p class="pull">On the face of it, training an AI costs thousands of times more than raising a person. But that comparison is rigged — and fixing it cuts both ways.</p>
+
+  <h2>The brain was never trained from scratch</h2>
+  <p>A newborn is not a blank slate. It arrives with hundreds of millions of years of evolution already built in — the wiring for sight, for language, for reading other people, for guessing what happens next. Twenty years of childhood don't build that brain from nothing; they fine-tune one that arrives mostly finished. So the 3.5 megawatt-hours isn't the cost of training a mind from scratch. It's the cost of the last, cheap, finishing step on top of an inheritance that was paid for long ago.</p>
+  <p>Where is the brain's real training bill, then? In evolution itself — every creature that ever lived, competed, and failed to pass on its genes. That bill isn't 3.5 megawatt-hours. It's effectively beyond counting: billions of years of life on Earth, paid once and handed down for free in every newborn's DNA. Measured against that, a single AI training run is a rounding error.</p>
+
+  <h2>And the headline hides the AI's own evolution</h2>
+  <p>The training-run numbers are quoted just as selectively. The 1,287 megawatt-hours and the rest are the cost of the one run that worked. They leave out the failed attempts, the dead ends, the earlier versions, and the years of human research it took to find a recipe worth running at all. The true cost of <em>arriving</em> at a working AI — its own long process of trial and error — is far bigger than the run that gets reported, exactly as the true cost of arriving at the human brain is far bigger than one childhood. Both stories quote you the cheap finishing step and quietly leave out the expensive part.</p>
+
+  <h2>But does it contain every library?</h2>
+  <p>A natural thing to assume is that an AI this expensive must have read, and must hold, everything — every book in every library, all of recorded history. It's worth being precise about how much it really reads, because the truth is stranger and more useful than the assumption.</p>
+  <p>The right unit isn't years; it's words. A modern AI is trained on something like thirty to forty trillion <em>tokens</em> — a token being roughly three-quarters of a word — so call it twenty-five trillion words of text. To feel that: a dedicated human reader might get through half a billion words in a long life. The AI's training set is about <strong>fifty thousand</strong> of those lifetimes. Stranger still, it now exceeds the total text of <em>every book ever written</em>. Google once counted about 130 million distinct books in existence; at a typical length that is on the order of ten trillion words — and the training set is two to three times larger than that. This is exactly why the industry frets about a "data wall": it is running out of fresh human writing to feed in.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">How much text does an AI read?</text>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="336" x2="704" y2="336"/><line x1="92" y1="280" x2="704" y2="280"/><line x1="92" y1="224" x2="704" y2="224"/><line x1="92" y1="168" x2="704" y2="168"/><line x1="92" y1="112" x2="704" y2="112"/><line x1="92" y1="56" x2="704" y2="56"/></g><g font-size="11" style="fill:var(--tw-muted)" text-anchor="end"><text x="84" y="396">10⁸</text><text x="84" y="340">10⁹</text><text x="84" y="284">10¹⁰</text><text x="84" y="228">10¹¹</text><text x="84" y="172">10¹²</text><text x="84" y="116">10¹³</text><text x="84" y="60">10¹⁴</text></g><rect x="149" y="352.9" width="90" height="39.1" style="fill:var(--tw-bio)"/><rect x="353" y="112.0" width="90" height="280.0" style="fill:var(--tw-books)"/><rect x="557" y="89.7" width="90" height="302.3" style="fill:var(--tw-mach2)"/>
+<g font-size="11.5" style="fill:var(--tw-text)" text-anchor="middle"><text x="194" y="332.9">~0.5 billion</text><text x="194" y="346.9">words</text><text x="398" y="92.0">~10 trillion</text><text x="398" y="106.0">words</text><text x="602" y="69.7">~25 trillion</text><text x="602" y="83.7">words</text></g>
+<g font-size="11" style="fill:var(--tw-text2)" text-anchor="middle"><text x="194" y="410">A lifelong reader</text><text x="194" y="424">(one human)</text><text x="398" y="410">Every book ever</text><text x="398" y="424">written (~130M)</text><text x="602" y="410">A modern AI's</text><text x="602" y="424">training data</text></g>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Words of text read (log)</text></svg>
+    <figcaption><strong>Figure 3.</strong> How much text goes into training, by word count (log scale). A modern AI's training data dwarfs a human lifetime of reading and now surpasses the combined text of every book ever published. Books figure: ~130 million titles (Google, 2010) at a typical length.</figcaption>
+  </figure>
+
+  <p>So does it "know everything in all the libraries"? No — for two reasons that matter. First, the diet is mostly the public internet, not libraries. Most books are copyrighted, out of print, never digitised, or not in English, and never make it into a training set at all; the vast majority of what humanity has written and knows is offline, paywalled, or in people's heads. Second, and more importantly: <strong>an AI does not store what it read.</strong> A library keeps the actual text — you can pull any book off the shelf and read it word for word. An AI compresses all those trillions of words down into a fixed bundle of numbers, often far smaller than the text that went in. It keeps the patterns and the facts that came up again and again; it cannot reproduce most of what it saw, and it confidently fills the gaps with plausible inventions — which is what people mean when they say it "hallucinates."</p>
+  <p>It is less like a library and more like a brilliant, well-read person who has forgotten the page numbers: it remembers the gist of an enormous amount, recalls the famous passages, and misremembers the rest. Which is the whole case for keeping the library — a real, searchable store of text — <em>outside</em> the model, and letting a smaller system look things up rather than trying to cram the world into its memory.</p>
+
+  <h2>So how smart is it — what grade is it in?</h2>
+  <p>By the tests we set it, today's best AI sits somewhere around graduate-to-expert level across an absurd range of subjects at once. On GPQA Diamond — PhD-level science questions written so that specialists get them right and outsiders don't — the current models (GPT-5.5, Claude Opus 4.8) score about <strong>94%</strong>, comfortably above the roughly 70% a human PhD manages in their own field. On this year's USA Mathematical Olympiad, taken after the model's training cut-off so it couldn't have seen the answers, the best model scored <strong>97%</strong> on proof-based problems only a handful of students in the country qualify to attempt. A Fields Medallist reported one model producing genuine PhD-level mathematics in a couple of hours. On real, open software bugs it fixes about <strong>70%</strong> end to end.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 452" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">What today's best AI scores on hard human exams</text>
+<text x="6" y="45" font-size="12.5" font-style="italic" style="fill:var(--tw-muted)">Best reported score, GPT-5.5 / Claude Opus 4.8, mid-2026.</text>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="324.8" x2="704" y2="324.8"/><line x1="92" y1="257.6" x2="704" y2="257.6"/><line x1="92" y1="190.4" x2="704" y2="190.4"/><line x1="92" y1="123.2" x2="704" y2="123.2"/><line x1="92" y1="56" x2="704" y2="56"/></g><g font-size="11" style="fill:var(--tw-muted)" text-anchor="end"><text x="84" y="396">0</text><text x="84" y="328.8">20</text><text x="84" y="261.6">40</text><text x="84" y="194.4">60</text><text x="84" y="127.2">80</text><text x="84" y="60">100</text></g><rect x="128.5" y="76.2" width="80" height="315.8" style="fill:var(--tw-cap)"/><rect x="281.5" y="66.1" width="80" height="325.9" style="fill:var(--tw-cap)"/><rect x="434.5" y="160.2" width="80" height="231.8" style="fill:var(--tw-cap)"/><rect x="587.5" y="224.0" width="80" height="168.0" style="fill:var(--tw-cap)"/>
+<line x1="128.5" y1="156.8" x2="208.5" y2="156.8" style="stroke:var(--tw-capmarker)" stroke-width="2.6"/>
+<text x="168.5" y="180" text-anchor="middle" style="fill:#fff" font-size="11" font-weight="700">human PhD</text>
+<text x="168.5" y="194" text-anchor="middle" style="fill:#fff" font-size="11" font-weight="700">expert ≈ 70%</text>
+<g font-size="13" font-weight="700" style="fill:var(--tw-title)" text-anchor="middle"><text x="168.5" y="69.2">94%</text><text x="321.5" y="59.1">97%</text><text x="474.5" y="153.2">69%</text><text x="627.5" y="217.0">50%</text></g>
+<g font-size="10.5" style="fill:var(--tw-text2)" text-anchor="middle"><text x="168.5" y="410">GPQA Diamond</text><text x="168.5" y="424">PhD science</text><text x="321.5" y="410">USA Math</text><text x="321.5" y="424">Olympiad 2026</text><text x="321.5" y="438">top students only</text><text x="474.5" y="410">SWE-bench Pro</text><text x="474.5" y="424">real software bugs</text><text x="474.5" y="438">a pro dev's task</text><text x="627.5" y="410">Humanity's Last Exam</text><text x="627.5" y="424">hardest expert Qs</text><text x="627.5" y="438">stumps specialists</text></g>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Score (%)</text></svg>
+    <figcaption><strong>Figure 4.</strong> Best reported scores for the current top models on four hard tests. On PhD-level science the AI is above a human expert; on olympiad maths it is near-perfect; on the deliberately brutal Humanity's Last Exam it still gets only about half.</figcaption>
+  </figure>
+
+  <p>And yet "grade level" is the wrong frame, for three reasons. First, the ability is <em>jagged</em>, not uniform: the same model that aces PhD chemistry will miscount the letters in a word, fumble a child's riddle, or lose the thread on a long task. It is superhuman in patches and sub-novice in others — not a smooth class rank. Second, the hardest exam is still half-failed: on Humanity's Last Exam, a set built specifically to stump specialists, even the best models get only about half. So "beyond PhD" is true on the tests we've already saturated and false on the genuinely hard frontier. Third, and most important: a test score is not understanding. The model is a lossy, compressed memory of an enormous amount of reading, not a person who grasps what they know — it can pass the exam and still not know which of its answers are wrong (though this is improving; the headline upgrade in Claude Opus 4.8 was that it flags its own uncertainty far more often).</p>
+  <p>If you forced a single description, it would be something like a brilliant, wildly over-read graduate student who tests at expert level in every subject simultaneously, occasionally says something no careful child would, and cannot always tell the two apart. Which is exactly what the rest of this article would predict: cram more text than every library into a lossy memory, add the cheap finishing step, and you get capability that is astonishingly broad and oddly shallow in spots — brilliant at the exam, not yet a mind.</p>
+
+  <h2>Spreading the cost: the brain's loss, the machine's win</h2>
+  <p>There is one measure on which the machine wins outright, and the brain-years chart hides it. A human brain's lifetime of energy serves exactly <strong>one person</strong>. A training run's energy is paid once and then shared across every question the AI will ever answer. Spread GPT-3's training across the two billion people its makers imagined using it, and each person's share falls below the energy cost of sending a single text message — a point the original study makes itself.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">One run, spread across billions of answers</text>
+<text x="6" y="45" font-size="12.5" font-style="italic" style="fill:var(--tw-muted)">Each answer costs energy too: ≈0.3 Wh simple, up to ~18 Wh for a heavy "reasoning" one.</text>
+<rect x="92" y="213.3" width="612" height="74.7" style="fill:var(--tw-bio)" fill-opacity="0.16"/>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="56" x2="92" y2="392"/><line x1="194" y1="56" x2="194" y2="392"/><line x1="296" y1="56" x2="296" y2="392"/><line x1="398" y1="56" x2="398" y2="392"/><line x1="500" y1="56" x2="500" y2="392"/><line x1="602" y1="56" x2="602" y2="392"/><line x1="704" y1="56" x2="704" y2="392"/><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="350" x2="704" y2="350"/><line x1="92" y1="308" x2="704" y2="308"/><line x1="92" y1="266" x2="704" y2="266"/><line x1="92" y1="224" x2="704" y2="224"/><line x1="92" y1="182" x2="704" y2="182"/><line x1="92" y1="140" x2="704" y2="140"/><line x1="92" y1="98" x2="704" y2="98"/><line x1="92" y1="56" x2="704" y2="56"/></g>
+<g font-size="10.5" style="fill:var(--tw-muted)"><text x="92" y="410" text-anchor="middle">10⁶</text><text x="194" y="410" text-anchor="middle">10⁷</text><text x="296" y="410" text-anchor="middle">10⁸</text><text x="398" y="410" text-anchor="middle">10⁹</text><text x="500" y="410" text-anchor="middle">10¹⁰</text><text x="602" y="410" text-anchor="middle">10¹¹</text><text x="704" y="410" text-anchor="middle">10¹²</text><text x="84" y="396" text-anchor="end">0.001</text><text x="84" y="354" text-anchor="end">0.01</text><text x="84" y="312" text-anchor="end">0.1</text><text x="84" y="270" text-anchor="end">1</text><text x="84" y="228" text-anchor="end">10</text><text x="84" y="186" text-anchor="end">100</text><text x="84" y="144" text-anchor="end">1,000</text><text x="84" y="102" text-anchor="end">10,000</text><text x="84" y="60" text-anchor="end">100,000</text></g>
+<line x1="92" y1="213.3" x2="704" y2="213.3" style="stroke:var(--tw-bio)" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="100" y="210" font-size="10" style="fill:var(--tw-bio)">18 Wh</text>
+<text x="100" y="300" font-size="10" style="fill:var(--tw-bio)">0.3 Wh</text>
+<text x="100" y="254" font-size="11.5" font-style="italic" style="fill:var(--tw-bio)">cost of answering one question</text>
+<line x1="92" y1="84" x2="704" y2="336" style="stroke:var(--tw-mach2)" stroke-width="2.6"/>
+<circle cx="406.1" cy="213.3" r="5" style="fill:var(--tw-mach2)"/>
+<line x1="406.1" y1="213.3" x2="470" y2="150" style="stroke:var(--tw-lead)" stroke-width="1"/>
+<g font-size="11" style="fill:var(--tw-text)"><text x="474" y="140">≈1.2 billion answers:</text><text x="474" y="154">training costs less</text><text x="474" y="168">than answering once</text></g>
+<text x="398" y="432" font-size="12" style="fill:var(--tw-muted)" text-anchor="middle">Total questions the AI goes on to answer (log)</text>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Energy charged to each answer (Wh, log)</text></svg>
+    <figcaption><strong>Figure 5.</strong> A large training run's energy, divided across the questions the AI goes on to answer. Today a single answer costs real energy too — from a fraction of a watt-hour for a simple reply to roughly 18 for a heavy "reasoning" one — yet past about a billion questions, the training cost charged to each answer falls below even that, and keeps dropping.</figcaption>
+  </figure>
+
+  <p>This is the real difference, and it's built into what each system is. The brain can't spread its cost: it learns and it works in the same 20W head, for one person, and it all ends together. The AI can — train once, answer a billion times. What the brain does that we can't is bank its inheritance across deep time and pass it along for nothing. What the AI does that the brain can't is share one expensive education across millions of people at once.</p>
+
+  <h2>Getting cheaper and more expensive at once</h2>
+  <p>One last twist, because it decides where this is all heading. The cost of training AI is falling and rising at the same time — depending on which question you ask.</p>
+  <p>Ask "what does it cost to train an AI as capable as GPT-3?" and the answer collapses year after year. Better methods and faster chips keep cutting the bill for a <em>fixed</em> level of ability — by independent estimates, the compute needed to hit a given capability falls on the order of three times every year. A model as good as GPT-3 — a marvel that cost over a million dollars of electricity in 2020 — now takes a tiny fraction of that, and the same kind of ability shows up on ordinary consumer hardware within about a year of reaching the frontier. By around 2025, training a GPT-3-class model costs roughly what it costs, in energy, to raise a single human brain to adulthood.</p>
+  <p>But ask "what does it cost to train the <em>biggest</em> AI anyone is building this year?" and the answer keeps climbing. Labs pour the savings straight back into scale: the compute behind frontier models has grown four to five times a year for over a decade, and the <em>power</em> a single top run draws has roughly doubled every year, now exceeding a hundred megawatts. If that holds, independent forecasters expect a frontier training run to need <strong>several gigawatts</strong> — the output of a few full-size power stations — by around 2030.</p>
+
+  <figure class="tw-fig">
+    <svg class="tw-svg" viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<text x="6" y="26" font-size="20" font-weight="700" style="fill:var(--tw-title)">Getting cheaper and more expensive at once</text>
+<text x="6" y="45" font-size="12.5" font-style="italic" style="fill:var(--tw-muted)">One line: how cheap a GPT-3-level model gets. The other: how big the year's largest model gets.</text>
+<rect x="398" y="56" width="306" height="336" style="fill:var(--tw-proj)"/>
+<text x="551" y="80" font-size="11" font-style="italic" style="fill:var(--tw-muted)" text-anchor="middle">projection</text>
+<g style="stroke:var(--tw-grid)" stroke-width="1"><line x1="92" y1="392" x2="704" y2="392"/><line x1="92" y1="354.7" x2="704" y2="354.7"/><line x1="92" y1="317.3" x2="704" y2="317.3"/><line x1="92" y1="280" x2="704" y2="280"/><line x1="92" y1="242.7" x2="704" y2="242.7"/><line x1="92" y1="205.3" x2="704" y2="205.3"/><line x1="92" y1="168" x2="704" y2="168"/><line x1="92" y1="130.7" x2="704" y2="130.7"/><line x1="92" y1="93.3" x2="704" y2="93.3"/><line x1="92" y1="56" x2="704" y2="56"/></g>
+<g font-size="10.5" style="fill:var(--tw-muted)"><text x="84" y="396" text-anchor="end">0.01</text><text x="84" y="358.7" text-anchor="end">0.1</text><text x="84" y="321.3" text-anchor="end">1</text><text x="84" y="284" text-anchor="end">10</text><text x="84" y="246.7" text-anchor="end">100</text><text x="84" y="209.3" text-anchor="end">1,000</text><text x="84" y="172" text-anchor="end">10,000</text><text x="84" y="134.7" text-anchor="end">100,000</text><text x="84" y="97.3" text-anchor="end">1,000,000</text><text x="84" y="60" text-anchor="end">10,000,000</text></g><g font-size="11" style="fill:var(--tw-text2)"><text x="92" y="410" text-anchor="middle">2020</text><text x="214.4" y="410" text-anchor="middle">2022</text><text x="336.8" y="410" text-anchor="middle">2024</text><text x="459.2" y="410" text-anchor="middle">2026</text><text x="581.6" y="410" text-anchor="middle">2028</text><text x="704" y="410" text-anchor="middle">2030</text></g>
+<line x1="92" y1="297" x2="704" y2="297" style="stroke:var(--tw-lead)" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="98" y="293" font-size="10" style="fill:var(--tw-muted)">energy to raise one human brain (3.5 MWh)</text>
+<line x1="92" y1="201.1" x2="398" y2="144.9" style="stroke:var(--tw-mach2)" stroke-width="3"/>
+<line x1="398" y1="144.9" x2="704" y2="88.7" style="stroke:var(--tw-mach2)" stroke-width="3" stroke-dasharray="8 5"/>
+<line x1="92" y1="201.1" x2="398" y2="290.1" style="stroke:var(--tw-bio)" stroke-width="3"/>
+<line x1="398" y1="290.1" x2="704" y2="379.2" style="stroke:var(--tw-bio)" stroke-width="3" stroke-dasharray="8 5"/>
+<circle cx="92" cy="201.1" r="5" style="fill:var(--tw-text)"/>
+<g font-size="10.5" style="fill:var(--tw-text)"><text x="120" y="232">Both lines start here:</text><text x="120" y="246">GPT-3 in 2020</text></g>
+<rect x="250" y="100" width="232" height="34" rx="6" style="fill:var(--tw-box);stroke:var(--tw-mach2)"/><text x="366" y="114" font-size="11.5" font-weight="700" style="fill:var(--tw-mach2)" text-anchor="middle">THE BIGGEST RUN EACH YEAR</text><text x="366" y="128" font-size="11.5" font-weight="700" style="fill:var(--tw-mach2)" text-anchor="middle">grows ~2× / year ↑</text>
+<rect x="250" y="330" width="232" height="34" rx="6" style="fill:var(--tw-box);stroke:var(--tw-bio)"/><text x="366" y="344" font-size="11.5" font-weight="700" style="fill:var(--tw-bio)" text-anchor="middle">TO MATCH GPT-3's ABILITY</text><text x="366" y="358" font-size="11.5" font-weight="700" style="fill:var(--tw-bio)" text-anchor="middle">falls ~3× / year ↓</text>
+<line x1="690" y1="88.7" x2="690" y2="379.2" style="stroke:var(--tw-text2)" stroke-width="1.3"/>
+<g font-size="10.5" font-weight="700" style="fill:var(--tw-text)" text-anchor="middle"><text x="610" y="226">~60 million×</text><text x="610" y="240">apart by 2030</text></g>
+<text x="398" y="432" font-size="12" style="fill:var(--tw-muted)" text-anchor="middle">Year</text>
+<text x="18" y="224" font-size="12" style="fill:var(--tw-muted)" transform="rotate(-90 18 224)" text-anchor="middle">Training energy (MWh, log)</text></svg>
+    <figcaption><strong>Figure 6.</strong> Both lines start from GPT-3 in 2020. The green line is the energy to train a model as capable as GPT-3 — it keeps falling as methods improve. The red line is the energy of the largest run that year — it keeps rising as labs spend the savings on scale. Dashed portions are projections; by 2030 the two are tens of millions of times apart.</figcaption>
+  </figure>
+
+  <p>These are the same two forces from the brain comparison, now playing out in real time. The falling line is the brain's own lesson — get the same ability for far less — already arriving. The rising line is the opposite bet: that brute scale keeps buying new ability worth the bill. Whether that bet pays off, or runs into a wall of power, money, and data first, is the open question hanging over the whole field.</p>
+
+  <h2>The fair comparison</h2>
+  <p>So the honest takeaway isn't "brains are thousands of times more efficient." It's that both the brain and the AI sit on top of a vast, mostly-uncounted history — with a cheap finishing step on top of it — and that they pass that history along in opposite ways. Evolution pays once and ships the result in every newborn; a training run pays once and ships the result to every user.</p>
+
+  <h2>A colleague, not an oracle</h2>
+  <p>If it isn't a mind, and isn't a library, what is it actually good for? The most useful way to picture what these systems have become is neither a brain in a box nor an all-knowing oracle, but a <strong>co-worker</strong> — a fast, tireless, astonishingly well-read colleague who will draft, summarise, translate, write code, and reason through a problem in seconds, and who will also, every so often, say something confidently wrong. You wouldn't hand a colleague like that the keys and walk away. You'd give them work, check what comes back, lean on them hardest where they're strong, and trust them least where they're not.</p>
+  <p>That quietly changes which skill is worth having. For most of history the prize went to <em>knowing things</em>. When a capable-but-fallible expert is available to everyone for the price of electricity, the prize shifts to <em>directing and checking</em>: asking the right question, recognising the plausible answer that's actually wrong, knowing which task to hand over and which to keep. Work becomes less solo performance and more supervision — you and an uneven, brilliant assistant, each doing the part you're better at. The people who get the most from these tools won't be the ones who trust them most, or least, but the ones who judge best when to do which.</p>
+  <p>And the trend lines say this colleague is about to be everywhere. The cost of a given ability is falling several-fold a year, so the expert-on-tap that cost a fortune in 2023 runs on a laptop tomorrow; and because one training run is shared across millions of people, everyone gets the same capable assistant at once. The question was never going to be whether we work alongside these systems — that is already happening — but how well we learn to. The brain's twenty watts buys one expert per skull, served to one person for one lifetime. This buys a passable one for nearly everyone, all at the same time. What we make of that — how we divide the work, and how carefully we check it — is now the interesting part.</p>
+
+    <hr />
+
+    <div class="tw-sources">
+      <strong>Sources.</strong> Brain ~20W; whole body at rest ~100W (standard physiology). GPT-3 at 1,287 MWh,
+    and the two-billion-user comparison: Patterson et al., “Carbon Emissions and Large Neural Network Training” (2021).
+    Llama 3.1 405B: ~16,000 H100 chips for ~54 days ≈ 21.6 GWh (Meta model card). No flagship training energy has been
+    disclosed since GPT-3; GPT-5-class and Llama 4 figures are independent estimates (GPT-5 training compute ~5×10²⁵
+    operations, Epoch AI). Per-answer energy ~0.3–18 Wh (Google; OpenAI; University of Rhode Island AI Lab, 2025).
+    Training data ~30–40 trillion tokens (Llama 4, 2025); ~130 million books ever published (Google, 2010).
+    Capability scores (mid-2026, best reported): GPQA Diamond ~94%, USA Math Olympiad ~97%, SWE-bench Pro ~69%,
+    Humanity's Last Exam ~50% (GPT-5.5 / Claude Opus 4.8 vendor and independent reports). Trends: frontier training
+    compute +4–5×/yr; compute efficiency for a fixed capability ~3×/yr; frontier training power doubling ~yearly,
+    projected >5 GW per run by 2030 (Epoch AI). Brain-year, childhood, word-count, and projection figures are the
+    author's arithmetic from these inputs.
+    </div>
+
+    <p class="byline"><em>Todd McCaffrey is a New York Times bestselling author and an MSc candidate in Cyberpsychology at ATU Letterkenny. Written in collaboration with Claude (Anthropic). The brain-year, childhood, word-count, and cost-trajectory figures are the author's arithmetic from the cited sources.</em></p>
+  </article>
+
+  <footer class="page-footer card">
+    <p>
+      Related research: &nbsp;
+      <a href="/does-ai-make-us-smarter/">Does AI Make Us Smarter?</a>
+      &nbsp;·&nbsp;
+      <a href="/ai-timeline/">AI Model Performance Timeline</a>
+      &nbsp;·&nbsp;
+      <a href="/after-the-bubble/index.html">After the Bubble: What Comes Next?</a>
+      &nbsp;·&nbsp;
+      <a href="/ai-bubble/index.html">Managing the AI Bubble</a>
+    </p>
+  </footer>
+
+</BaseLayout>
+
+<style>
+  .page-header { margin-bottom: 18px; }
+  .eyebrow {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .18em;
+    color: var(--accent); font-weight: 700; margin-bottom: 10px;
+  }
+  .page-header h1 { font-size: clamp(2.6rem, 7vw, 4rem); line-height: 1; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { color: var(--text); font-size: 1.12rem; font-style: italic; margin: 0 0 16px; }
+  .lede { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 72ch; margin: 0 0 14px; }
+  .meta { font-size: .85rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .sep { opacity: .4; }
+
+  .essay { max-width: 72ch; margin: 0 auto 18px; }
+  .essay p { color: var(--text); font-size: 1.04rem; line-height: 1.72; margin: 0 0 1.1em; }
+  .essay h2 {
+    font-size: 1.45rem; color: var(--text); margin: 2.1em 0 .7em;
+    padding-bottom: .3em; border-bottom: 1px solid var(--border);
+  }
+  .essay strong { color: var(--text); font-weight: 700; }
+  .essay em { color: var(--muted); }
+  .essay hr { border: 0; border-top: 1px solid var(--border); margin: 2.2em 0 1.6em; }
+
+  .essay .pull {
+    border-left: 3px solid var(--accent); padding: 4px 0 4px 20px; margin: 1.6em 0;
+    font-size: 1.2rem; line-height: 1.45; color: var(--text); font-style: normal;
+  }
+
+  .tw-fig {
+    margin: 2em 0; border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 14px 8px; background: color-mix(in srgb, var(--card) 55%, transparent);
+  }
+  .tw-fig svg { width: 100%; height: auto; display: block; }
+  .tw-fig figcaption {
+    margin-top: 10px; font-size: .86rem; color: var(--muted); line-height: 1.5;
+  }
+
+  .tw-sources { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+  .tw-sources strong { color: var(--text); }
+
+  .byline { color: var(--muted); font-size: .9rem; line-height: 1.6; margin-top: 1.4em; }
+
+  .page-footer { font-size: .95rem; }
+  .page-footer p { margin: 0; color: var(--muted); }
+</style>
+
+<style is:global>
+  /* Chart text rendering — sans across all themes for legibility */
+  .tw-svg { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+  /* Chart colour tokens, per theme. Inline SVG styles reference these via var(). */
+  :root, [data-theme="dark"] {
+    --tw-title:#f3f7fb; --tw-text:#e9f0f7; --tw-text2:#c9d4e0; --tw-muted:#9fb0c3;
+    --tw-grid:rgba(255,255,255,.12); --tw-bio:#2BB587; --tw-bio2:#7CB8A4;
+    --tw-mach:#E08A3C; --tw-mach2:#E2683A; --tw-est:#E0A878; --tw-books:#B59B6E;
+    --tw-cap:#5AA0F2; --tw-capmarker:#0b2a52; --tw-proj:rgba(255,255,255,.05);
+    --tw-box:#121923; --tw-lead:#9fb0c3;
+  }
+  [data-theme="light"] {
+    --tw-title:#0d141c; --tw-text:#111820; --tw-text2:#2a3642; --tw-muted:#5a6a7a;
+    --tw-grid:rgba(0,0,0,.10); --tw-bio:#0F6E56; --tw-bio2:#4f8a76;
+    --tw-mach:#C9742E; --tw-mach2:#A8401C; --tw-est:#C99B86; --tw-books:#9C8A6B;
+    --tw-cap:#185FA5; --tw-capmarker:#0d2c52; --tw-proj:rgba(0,0,0,.045);
+    --tw-box:#ffffff; --tw-lead:#888;
+  }
+  [data-theme="editorial"] {
+    --tw-title:#1a1814; --tw-text:#1a1814; --tw-text2:#3a352e; --tw-muted:#6b6560;
+    --tw-grid:rgba(26,24,20,.14); --tw-bio:#1a6b54; --tw-bio2:#5e9482;
+    --tw-mach:#b3631f; --tw-mach2:#9c3a17; --tw-est:#c9a884; --tw-books:#a8946b;
+    --tw-cap:#345e8a; --tw-capmarker:#16314f; --tw-proj:#e7ddca;
+    --tw-box:#efe9dd; --tw-lead:#8a8276;
+  }
+</style>
