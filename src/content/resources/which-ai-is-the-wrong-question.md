@@ -10,7 +10,7 @@ furtherReading:
   - title: "Which AI? Wrong question. — the three-question picker"
     url: "https://aithint.us/choose.html"
     source: "aithint"
-draft: true
+draft: false
 ---
 
 People keep asking me which AI is the best one. I keep declining to answer, and they keep deciding I'm being coy.
