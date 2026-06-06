@@ -110,7 +110,7 @@ const SECTIONS = [
 ].map(s => ({ ...s, items: PROJECTS.filter(p => p.group === s.key) }))
  .filter(s => s.items.length);
 
-const isExternal = (u) => u.startsWith('http');
+const isExternal = (u: string) => u.startsWith('http');
 ---
 
 <BaseLayout
