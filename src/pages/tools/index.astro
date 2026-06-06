@@ -1,137 +1,252 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Add a project = add a line. group: tools | quizzes | experimental
+const PROJECTS = [
+  // ── Tools ───────────────────────────────────────────────
+  {
+    group: 'tools',
+    name: 'Gaeltacht', gloss: 'fuaimniú na Gaeilge · Irish pronunciation',
+    hook: `Hear any Irish word spoken aloud. 70+ phrases across seven categories, four voices of paper.`,
+    tags: ['In-browser', 'Web Speech', 'No backend'],
+    dom: 'gaeltacht.sionnach.ie', url: 'https://gaeltacht.sionnach.ie',
+  },
+  {
+    group: 'tools',
+    name: 'Foghlaim', gloss: 'cártaí · Irish flashcards',
+    hook: `Irish vocabulary by spaced repetition — flip cards, quiz mode, and a daily streak, voiced through the same engine as Gaeltacht.`,
+    tags: ['In-browser', 'Spaced repetition', 'No backend'],
+    dom: 'foghlaim.sionnach.ie', url: 'https://foghlaim.sionnach.ie',
+  },
+  {
+    group: 'tools',
+    name: 'The Forge', gloss: 'where things are made',
+    hook: `Don't spec a PC — say what you want it to do. Five archetypes, one shareable build card.`,
+    tags: ['In-browser', 'No account'],
+    dom: 'builder.foxxelabs.ie', url: 'https://builder.foxxelabs.ie',
+  },
+  {
+    group: 'tools',
+    name: 'SLAM Bridge', gloss: 'the bidding table',
+    hook: `From opening bid to grand slam. A bridge bidding trainer with AI opponents and 30 hand-built deals.`,
+    tags: ['AI opponents', 'Web'],
+    dom: 'slambridge.ie', url: 'https://slambridge.ie',
+  },
+  {
+    group: 'tools',
+    name: 'CyberSafer', gloss: 'stay safe online',
+    hook: `Plain-language cyber safety — learn to spot the scam before it lands.`,
+    tags: ['Web', 'Free'],
+    dom: 'cybersafer.uk', url: 'https://cybersafer.uk',
+  },
+  {
+    group: 'tools',
+    name: 'aithint', gloss: 'aithint · recognition',
+    hook: `Learn to partner with AI instead of fearing it — a plain-language course in reading the machine.`,
+    tags: ['Course', 'AI literacy'],
+    dom: 'aithint.us', url: 'https://aithint.us',
+  },
+
+  // ── Quizzes & snapshots ─────────────────────────────────
+  {
+    group: 'quizzes',
+    name: 'Thinking Style Snapshot', gloss: 'focused ↔ broad',
+    hook: `Ten yes/no statements that place you on the focused-to-broad/systems spectrum, with multipotentialite follow-ons.`,
+    tags: ['Quiz', '~2 min', 'No data stored'],
+    dom: 'foxxelabs.ie/tools/thinking-style-snapshot', url: '/tools/thinking-style-snapshot/',
+  },
+  {
+    group: 'quizzes',
+    name: 'Python Knowledge Quiz', gloss: 'data types to dark corners',
+    hook: `Fifteen multiple-choice questions from comprehensions and OOP to the interpreter's internals — beginner to expert.`,
+    tags: ['Quiz', '15 questions', 'No data stored'],
+    dom: 'foxxelabs.ie/tools/python-quiz', url: '/tools/python-quiz/',
+  },
+  {
+    group: 'quizzes',
+    name: 'Python Week 3 Quiz', gloss: 'the Week 3 syllabus',
+    hook: `Booleans, if/elif/else, nested conditions, loops and functions — ten questions on the Week 3 material.`,
+    tags: ['Quiz', 'Course', '10 questions'],
+    dom: 'foxxelabs.ie/tools/python-week3-quiz', url: '/tools/python-week3-quiz/',
+  },
+  {
+    group: 'quizzes',
+    name: 'E-commerce Psychology Quiz', gloss: 'the psychology of the buy',
+    hook: `Kahneman, Cialdini, Schwartz and Belk — a fast cheat sheet, then a quiz on what makes us click "buy".`,
+    tags: ['Quiz', 'Cheat sheet'],
+    dom: 'foxxelabs.ie/esc-quiz', url: '/esc-quiz/',
+  },
+  {
+    group: 'quizzes',
+    name: 'Cyberpsychology Quiz', gloss: 'cyber-aggression to research methods',
+    hook: `Cyber-aggression, moral disengagement, online disinhibition, AI psychology and methods — difficulty levels and mastery tracking.`,
+    tags: ['Quiz', 'Mastery tracking'],
+    dom: 'ucahub.ie/quiz', url: 'https://ucahub.ie/quiz/',
+  },
+
+  // ── Experimental ────────────────────────────────────────
+  {
+    group: 'experimental', exp: true,
+    name: 'Sionnach', gloss: 'an sionnach · the fox',
+    hook: `Build a mind, then talk to it. A private AI personality engine running on your own GPU.`,
+    tags: ['On-device', 'WebGPU', 'No account'],
+    req: 'a browser with WebGPU — Chrome, Edge, Firefox 141+, or Safari 26+ — and a GPU with a few GB free. First run downloads a 1–5 GB model, then runs offline.',
+    dom: 'sionnach.ie', url: 'https://sionnach.ie',
+  },
+  {
+    group: 'experimental', exp: true,
+    name: 'Agora', gloss: 'the gathering place',
+    hook: `Convene a panel of 21 historical minds and let them argue it out — multi-persona debate, in the browser.`,
+    tags: ['On-device', 'WebGPU', 'No account'],
+    req: 'a browser with WebGPU — Chrome, Edge, Firefox 141+, or Safari 26+ — and a GPU with a few GB free. First run downloads a 1–5 GB model, then runs offline.',
+    dom: 'agora.irish', url: 'https://agora.irish',
+  },
+];
+
+const SECTIONS = [
+  { key: 'tools',        label: 'Tools' },
+  { key: 'quizzes',      label: 'Quizzes & snapshots' },
+  { key: 'experimental', label: 'Experimental' },
+].map(s => ({ ...s, items: PROJECTS.filter(p => p.group === s.key) }))
+ .filter(s => s.items.length);
+
+const isExternal = (u) => u.startsWith('http');
 ---
 
-<BaseLayout title="Tools · Foxxe Labs" description="Tools and demos from Foxxe Labs.">
-  <div class="card" style="max-width: 980px; margin: 0 auto;">
-    <h1>Tools</h1>
-    <p class="muted">A small cabinet of working demos. More will show up as they stop being feral.</p>
-    <p class="muted">Need context? See <a href="/about/">About</a> or <a href="/contact/">Contact</a>.</p>
+<BaseLayout
+  title="The Workshop · Foxxe Labs"
+  description="Tools, quizzes, and experiments from Foxxe Labs — most run entirely in your browser."
+>
+  <div class="lab">
+    <header class="lab-head">
+      <h1>The Workshop</h1>
+      <p class="muted lab-intro">Small, sharp things from Foxxe Labs. Most run entirely in your browser — no accounts, no servers watching. Feel free to explore.</p>
+    </header>
 
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/tools/parking-survey/">ATU Parking — Would This App Help?</a>
-        <div class="muted">Market research survey for a real-time parking availability app at ATU Letterkenny. Includes interactive app wireframes. Responses go to Google Forms.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">~2 minutes</span>
-        <span class="pill">Anonymous</span>
-        <span class="pill">ATU Letterkenny</span>
-      </div>
-    </div>
+    {SECTIONS.map(section => (
+      <section class="lab-section">
+        <div class="sec-head">
+          <h2>{section.label}</h2>
+          <span class="sec-count">{String(section.items.length).padStart(2, '0')}</span>
+          <span class="sec-line"></span>
+        </div>
 
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/ops-dashboard/">Rialú — Wireframe</a>
-        <div class="muted">Interactive wireframe for <a href="https://rialu.ie">rialu.ie</a> — a personal project command centre tracking deployments, local machine agents, work sessions, budget, and API spend across the FoxxeLabs stack. All five tabs live, four themes, expand-in-place project detail.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">Wireframe v0.3</span>
-        <span class="pill">4 themes</span>
-        <span class="pill">FoxxeLabs internal</span>
-      </div>
-    </div>
-
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/tools/thinking-style-snapshot/">Thinking Style Snapshot</a>
-        <div class="muted">10 YES/NO statements that estimate whether you lean focused, hybrid, or broad/systems. Includes multipotentialite follow-on links.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">~2 minutes</span>
-        <span class="pill">No data stored</span>
-        <span class="pill">Printable</span>
-      </div>
-    </div>
-
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/tools/python-quiz/">Python Knowledge Quiz</a>
-        <div class="muted">15 multiple-choice questions across data types, operators, comprehensions, OOP, functional patterns, and advanced internals. Beginner to expert.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">~5 minutes</span>
-        <span class="pill">No data stored</span>
-        <span class="pill">15 questions</span>
-      </div>
-    </div>
-
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/tools/python-week3-quiz/">Python Week 3 Quiz</a>
-        <div class="muted">10 questions covering the Week 3 syllabus: booleans, if/elif/else, nested conditions, loops, and functions including lambda and *args.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">~4 minutes</span>
-        <span class="pill">No data stored</span>
-        <span class="pill">10 questions</span>
-      </div>
-    </div>
-
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/tools/lunar-lander/">Lunar Lander — Learn Python by Landing on the Moon</a>
-        <div class="muted">Outcome-based module: build a working Lunar Lander simulator in 8 steps. Variables, dictionaries, functions, loops, conditionals, tests, Matplotlib, and an autopilot challenge.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">~90 minutes</span>
-        <span class="pill">8 steps</span>
-        <span class="pill">Google Colab</span>
-      </div>
-    </div>
-
-    <div class="tool">
-      <div style="min-width: 42ch; flex: 1 1 42ch;">
-        <a class="title" href="/anseo-ui-v2/">Anseo UI Development — v2</a>
-        <div class="muted">Slide deck documenting what shipped in Anseo since the original wireframes: communities (full stack), feed pills, post detail with replies, moderation queue, and what's next.</div>
-      </div>
-      <div class="pillrow">
-        <span class="pill">7 slides</span>
-        <span class="pill">beta.anseo.irish</span>
-        <span class="pill">March 2026</span>
-      </div>
-    </div>
-
+        <div class="grid">
+          {section.items.map(p => (
+            <a
+              class="card tool-card"
+              href={p.url}
+              target={isExternal(p.url) ? '_blank' : null}
+              rel={isExternal(p.url) ? 'noopener' : null}
+            >
+              {p.exp && <span class="badge">Experimental</span>}
+              <h3 class="t-name">{p.name}</h3>
+              {p.gloss && <div class="t-gloss">{p.gloss}</div>}
+              <p class="t-hook">{p.hook}</p>
+              <div class="pills">
+                {p.tags.map(tag => <span class="pill">{tag}</span>)}
+              </div>
+              {p.req && <p class="t-req"><b>Requires</b> {p.req}</p>}
+              <span class="t-go">
+                <span class="t-dom">{p.dom}</span>
+                <span class="t-open">Open <span class="arr">→</span></span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
 </BaseLayout>
 
 <style>
-  .tool {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 14px;
-    flex-wrap: wrap;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 14px;
-    background: rgba(255,255,255,.02);
-    margin-top: 12px;
+  .lab { max-width: 980px; margin: 0 auto; }
+  .lab-head { margin-bottom: 8px; }
+  .lab-intro { max-width: 54ch; font-size: 1.02rem; }
+
+  /* section headers */
+  .lab-section { margin-top: 38px; }
+  .lab-section:first-of-type { margin-top: 22px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px; }
+  .sec-head h2 { margin: 0; font-size: 1.15rem; white-space: nowrap; }
+  .sec-count { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; color: var(--muted); }
+  .sec-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 16px;
   }
 
-  .tool a.title {
-    font-weight: 900;
+  /* card (uses the global .card base, adds layout + interaction) */
+  .tool-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     text-decoration: none;
     color: var(--text);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
   }
+  .tool-card::after {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--accent);
+    transform: scaleY(0); transform-origin: top;
+    transition: transform .3s cubic-bezier(.2,.7,.2,1);
+  }
+  .tool-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  }
+  .tool-card:hover::after { transform: scaleY(1); }
 
-  .tool a.title:hover {
+  .badge {
+    position: absolute; top: 16px; right: 16px;
+    font-family: var(--font-mono); font-size: .54rem; letter-spacing: .12em; text-transform: uppercase;
     color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 50%, var(--border));
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-radius: 999px; padding: 3px 8px;
   }
 
+  .t-name { margin: 0; font-size: 1.3rem; letter-spacing: -.01em; }
+  .t-gloss { color: var(--accent); font-style: italic; font-size: .9rem; margin: 3px 0 10px; }
+  .t-hook { margin: 0; flex: 1; color: var(--text); font-size: .96rem; line-height: 1.5; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; }
   .pill {
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 6px 10px;
-    color: var(--muted);
-    font-size: .9rem;
-    background: rgba(255,255,255,.03);
+    font-family: var(--font-mono); font-size: .6rem; letter-spacing: .04em;
+    color: var(--muted); border: 1px solid var(--border);
+    border-radius: 999px; padding: 3px 8px;
   }
 
-  .pillrow {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  .t-req {
+    font-size: .8rem; color: var(--muted); line-height: 1.45;
+    margin: 12px 0 0; padding-left: 10px;
+    border-left: 2px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  }
+  .t-req b {
+    display: block; font-family: var(--font-mono); font-weight: 600;
+    font-size: .56rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 3px;
+  }
+
+  .t-go {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+    margin-top: 16px; padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .t-dom { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); }
+  .t-open { font-family: var(--font-mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); white-space: nowrap; }
+  .t-open .arr { display: inline-block; transition: transform .25s ease; }
+  .tool-card:hover .arr { transform: translateX(4px); }
+  .tool-card:hover .t-dom { color: var(--text); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tool-card, .arr { transition: none; }
   }
 </style>
