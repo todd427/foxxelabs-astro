@@ -9,8 +9,10 @@ sourceUrl: "https://artificialintelligenceact.eu"
 significance: "high"
 entities: ["European Commission", "European AI Office", "Scientific Panel", "Advisory Forum", "AI Office of Ireland", "Department of Enterprise, Tourism and Employment", "Trinity College Dublin"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-06, note: "The European Commission activated AI Act enforcement infrastructure on June 1, with Ireland's regulatory framework launching August 1—marking the substantive compliance moment for all EU organisations", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
+updatedDate: 2026-06-06
 ---
 
 ## EU AI Act Enforcement Infrastructure Now Live

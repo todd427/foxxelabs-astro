@@ -9,8 +9,10 @@ sourceUrl: "https://cyberpsychology.eu"
 significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "ChatGPT", "European psychology community"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-06, note: "Cyberpsychology journal reaches Q2 Scopus status, signalling growing academic recognition of digital behaviour research across Europe.", sourceUrl: "https://cyberpsychology.eu" }
 draft: false
+updatedDate: 2026-06-06
 ---
 
 ## Key Developments
