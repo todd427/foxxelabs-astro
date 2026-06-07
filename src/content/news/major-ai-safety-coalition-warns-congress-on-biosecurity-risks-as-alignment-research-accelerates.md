@@ -9,8 +9,11 @@ sourceUrl: "https://arxiv.org/list/cs.AI"
 significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Google DeepMind", "Microsoft", "U.S. Congress"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-07, note: "OpenAI, Anthropic, Google DeepMind, and Microsoft urge Congress on synthetic DNA screening while EU advances transparency labeling standards.", sourceUrl: "https://euractiv.com/section/artificial-intelligence" }
+  - { date: 2026-06-07, note: "OpenAI, Anthropic, Google DeepMind, and Microsoft AI leaders warn Congress that AI is lowering barriers to weaponizing biological material, urging mandatory synthetic DNA provider screening.", sourceUrl: "https://openai.com/news" }
 draft: false
+updatedDate: 2026-06-07
 ---
 
 ## Industry Leaders Unite on Biosecurity as AI Safety Reaches Critical Juncture

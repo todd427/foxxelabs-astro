@@ -9,8 +9,10 @@ sourceUrl: "https://artificialintelligenceact.eu"
 significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "AI Office", "Digital Omnibus"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-07, note: "EU negotiators agree on Digital Omnibus amendments to AI Act, delaying high-risk system deadlines and introducing explicit nudifier restrictions.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
+updatedDate: 2026-06-07
 ---
 
 ## EU AI Act Receives First Major Amendment Since Launch
