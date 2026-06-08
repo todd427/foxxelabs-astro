@@ -10,6 +10,9 @@ entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "C
 significance: "medium"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-08
+updates:
+  - { date: 2026-06-08, note: "Cyberpsychology journal's 2026 launch reveals sharp rise in submissions and urgent research into adolescents' digital habits, influencers, and ChatGPT impacts.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## Cyberpsychology Research Pivots to Influencer Impact and AI Chatbot Behavioural Effects
