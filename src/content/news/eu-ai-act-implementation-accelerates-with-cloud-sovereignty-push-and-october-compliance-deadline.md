@@ -10,9 +10,10 @@ significance: "high"
 entities: ["European Commission", "Cloud and AI Development Act", "Scientific Panel and Advisory Forum", "CCIA Europe"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-09, note: "The EU Commission closes consultation on synthetic content labeling as transparency deadlines loom and enforcement infrastructure becomes operational.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-06-06, note: "The EU's Scientific Panel on AI is now operational, with transparency rules kicking in August 2026 and major compliance deadlines looming through January 2027.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
-updatedDate: 2026-06-06
+updatedDate: 2026-06-09
 ---
 
 ## EU Moves Closer to Full AI Act Implementation with Sovereignty-First Cloud Framework

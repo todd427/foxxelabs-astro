@@ -9,8 +9,10 @@ sourceUrl: "https://www.gartner.com/"
 significance: "high"
 entities: ["Gartner", "OpenAI", "Anthropic"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-09, note: "Gartner forecasts 70% of enterprises will deploy AI-driven prompt automation by 2026, signalling a major shift away from manual prompt engineering.", sourceUrl: "https://www.gartner.com" }
 draft: false
+updatedDate: 2026-06-09
 ---
 
 ## The Bifurcation of Prompt Engineering

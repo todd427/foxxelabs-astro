@@ -10,6 +10,9 @@ entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "V
 significance: "medium"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-09
+updates:
+  - { date: 2026-06-09, note: "New research explores links between digital addiction and mental health as cyberpsychology field examines AI, social media influencers, and adolescent online behaviour.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## The Research Pivot: From ChatGPT Anxiety to Actionable Digital Health
