@@ -121,6 +121,28 @@ const reading = [
     ))}
   </div>
 
+  <!-- Research divider -->
+  <div class="port-divider">
+    <span class="port-divider-label">From the Lab</span>
+    <span class="port-divider-line"></span>
+  </div>
+
+  <!-- Research demonstrator (links out) -->
+  <a class="port-card port-card-link" href="https://taca.ucahub.ie" target="_blank" rel="noopener">
+    <span class="port-tag">Cyberpsychology Research</span>
+    <h2 class="port-name">Taca</h2>
+    <p class="port-pron">TAH-kuh · Irish for "support / prop"</p>
+    <p class="port-url">taca.ucahub.ie ↗</p>
+    <blockquote class="port-pitch">"Can a brief, responsive AI conversation take the edge off the moment before someone lashes out online?"</blockquote>
+    <p class="port-body">A before/after demonstrator from FoxxeLabs' MSc cyberpsychology research, built on the dissertation's AI-catharsis signal. It measures whether a short AI venting interaction shifts hostile-response likelihood. Anonymous, no account, chat messages not stored — the study lives under the research hub at ucahub.ie, not as a commercial product.</p>
+    <div class="port-pills">
+      <span class="port-pill live">Live · Fly.io</span>
+      <span class="port-pill">Research Demonstrator</span>
+      <span class="port-pill">Privacy-first</span>
+      <span class="port-pill">ucahub.ie</span>
+    </div>
+  </a>
+
   <!-- Footer section -->
   <div class="port-footer-section">
     <div class="card port-more">
@@ -277,6 +299,16 @@ const reading = [
   }
 
   .port-card:hover::before { opacity: 1; }
+
+  /* Linked research card — reuses .port-card, strips link styling */
+  .port-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 28px;
+  }
+
+  .port-card-link:hover .port-name { color: var(--accent); }
 
   .port-num {
     font-family: var(--font-mono, ui-monospace, monospace);
