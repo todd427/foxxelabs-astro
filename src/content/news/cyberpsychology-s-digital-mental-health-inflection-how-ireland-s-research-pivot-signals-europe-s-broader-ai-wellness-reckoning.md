@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "Cyberpsychology: Journal of Psychosocial Res
 significance: "medium"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-10
+updates:
+  - { date: 2026-06-10, note: "New research from Irish cyberpsychology experts reveals critical links between online and offline engagement as journals manage unprecedented submission volumes.", sourceUrl: "https://cyberpsychology.eu" }
 ---
 
 ## Cyberpsychology's Digital Mental Health Inflection: How Ireland's Research Pivot Signals Europe's Broader AI-Wellness Reckoning

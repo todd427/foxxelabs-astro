@@ -9,8 +9,10 @@ sourceUrl: "https://foxxelabs.com"
 significance: "low"
 entities: ["OpenAI", "Anthropic", "DeepMind", "The Verge", "MIT Technology Review"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-10, note: "As prompt engineering matures, developers are shifting from ad-hoc techniques to structured methodologies, with significant implications for AI adoption across Europe.", sourceUrl: "https://technologyreview.mit.edu" }
 draft: false
+updatedDate: 2026-06-10
 ---
 
 ## The Quiet Spell in Prompt Engineering News

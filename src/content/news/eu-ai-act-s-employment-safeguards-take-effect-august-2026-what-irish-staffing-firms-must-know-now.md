@@ -10,6 +10,9 @@ entities: ["EU AI Act", "August 2026", "Ireland", "Department of Enterprise, Tra
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-10
+updates:
+  - { date: 2026-06-10, note: "The EU AI Act's high-risk provisions begin full enforcement in August, with compliance deadlines looming for Irish and European AI developers.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 ---
 
 ## EU AI Act's Employment Safeguards Take Effect August 2026: What Irish Staffing Firms Must Know Now

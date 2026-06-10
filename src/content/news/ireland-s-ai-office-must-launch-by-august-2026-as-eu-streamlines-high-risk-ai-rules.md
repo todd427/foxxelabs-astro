@@ -9,8 +9,10 @@ sourceUrl: "https://artificialintelligenceact.eu"
 significance: "high"
 entities: ["European Commission", "Irish AI Office", "Department of Enterprise Tourism and Employment", "EU Council", "European Parliament", "Digital Omnibus VII"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-10, note: "EU reaches political agreement on AI Act amendments with extended deadlines for high-risk systems and new prohibitions on non-consensual intimate imagery.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
+updatedDate: 2026-06-10
 ---
 
 ## Ireland and Europe Face Critical AI Governance Milestones
