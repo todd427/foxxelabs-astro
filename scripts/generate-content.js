@@ -169,19 +169,25 @@ async function searchForContent(topic, daysBack) {
     ? `Prioritise results from these sources where available: ${topicSources.join(', ')}. `
     : '';
 
-  return await callWithRetry(() => client.messages.create({
+  const searchPrompt = `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`;
+
+  const response = await callWithRetry(() => client.messages.create({
     model: MODEL,
     max_tokens: 4000,
     tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-    messages: [{
-      role: 'user',
-      content: `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`
-    }]
+    messages: [{ role: 'user', content: searchPrompt }]
   }));
+
+  // Return the prompt alongside the response so the writer stage can replay
+  // the full conversation (including web_search_tool_result blocks) instead
+  // of a lossy text-only summary.
+  return { response, searchPrompt };
 }
 
-async function generateNewsPost(searchResults, topic) {
+async function generateNewsPost(search, topic) {
   console.log(`✍️  Generating news post...`);
+
+  const { response: searchResponse, searchPrompt } = search;
 
   const topicSources = getSourcesForTopic(topic);
   const sourcesNote = topicSources.length
@@ -193,7 +199,7 @@ async function generateNewsPost(searchResults, topic) {
   // which is precisely what produced near-duplicates. Deduplication is now
   // handled deterministically post-generation by the dedupe gate (dedupe.js).
 
-  const prompt = `Based on the search results, write a news post for Foxxe Labs following this format:
+  const prompt = `Based on the search results above, write a news post for Foxxe Labs following this format:
 
 REQUIREMENTS:
 - Title: Clear, specific headline
@@ -212,6 +218,12 @@ REQUIREMENTS:
 - Approach: ${config.style.approach}
 - ${sourcesNote}
 
+FACTUAL ACCURACY (hard rules — these override everything else):
+- Bind every figure to its exact scope as stated in the sources. If a number describes an overall programme, fund, or multi-part initiative, do NOT attribute it to a single component of that initiative — and never attach a single component's figure to the whole. When scope could be misread, state it explicitly (e.g. "across all seven centres").
+- "source" must be the originating publisher or announcing institution of the PRIMARY story — the body that made the announcement — not an organisation merely mentioned in coverage or in a different story from the same search.
+- If the search results contain more than one distinct story, lead with the most significant one and keep any others clearly separated as secondary context. Never merge facts, figures, names, or attributions from different stories into a single claim.
+- Do not state any specific figure, name, date, or quote that does not appear in the search results.
+
 OUTPUT FORMAT (JSON):
 {
   "title": "Post title",
@@ -226,25 +238,29 @@ OUTPUT FORMAT (JSON):
   "content": "Full markdown content with ## headings"
 }
 
-Search results context: ${topic}
-
 Generate the post as JSON only, no additional text.`;
 
+  // Replay the search turn in full — including web_search_tool_result blocks —
+  // so the writer reasons over the actual source snippets rather than a lossy
+  // text-only summary. The web_search tool definition must be present for the
+  // API to accept the replayed tool-result blocks.
   const response = await callWithRetry(() => client.messages.create({
     model: MODEL,
     max_tokens: 4000,
+    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
     messages: [
-      {
-        role: 'user',
-        content: searchResults.content.map(block =>
-          block.type === 'text' ? block.text : ''
-        ).join('\n')
-      },
+      { role: 'user', content: searchPrompt },
+      { role: 'assistant', content: searchResponse.content },
       { role: 'user', content: prompt }
     ]
   }));
 
-  const text = response.content[0].text;
+  // With tools enabled, content[0] is not guaranteed to be a text block.
+  const text = response.content
+    .filter(block => block.type === 'text')
+    .map(block => block.text)
+    .join('\n');
+
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error('Failed to extract JSON from response');
 
