@@ -160,16 +160,18 @@ function getSourcesForTopic(topic) {
 async function searchForContent(topic, daysBack) {
   console.log(`🔍 Searching for: ${topic}...`);
 
-  const searchQuery = specificTopic
-    ? `${specificTopic} AI ${daysBack} days`
-    : `${topic} recent ${daysBack} days`;
+  // The recency window belongs in the instruction, not the query string —
+  // "1 days" appended to every query polluted search terms.
+  const searchQuery = specificTopic ? `${specificTopic} AI` : topic;
+
+  const windowPhrase = daysBack === 1 ? '24 hours' : `${daysBack} days`;
 
   const topicSources = getSourcesForTopic(topic);
   const sourcesHint = topicSources.length
     ? `Prioritise results from these sources where available: ${topicSources.join(', ')}. `
     : '';
 
-  const searchPrompt = `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${daysBack} days. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`;
+  const searchPrompt = `Search for recent developments on: ${searchQuery}. Find credible, significant news from the past ${windowPhrase}. Focus on substantive developments, not hype. ${sourcesHint}Include any relevant Irish or European angle if present.`;
 
   const response = await callWithRetry(() => client.messages.create({
     model: MODEL,
