@@ -10,6 +10,9 @@ entities: ["EU AI Act", "Article 50", "August 2, 2026", "European Commission", "
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-11
+updates:
+  - { date: 2026-06-11, note: "The European Commission's new Code of Practice on AI-generated content marking signals imminent transparency compliance deadlines for generative AI providers across the EU.", sourceUrl: "https://artificialintelligenceact.eu" }
 ---
 
 ## Transparency Rules Go Live: What Builders Need to Know Now

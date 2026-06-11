@@ -10,6 +10,9 @@ entities: ["European Commission", "TraceMap", "EU", "27 EU member states", "Irel
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-11
+updates:
+  - { date: 2026-06-11, note: "European Commission debuts TraceMap, an AI traceability system to detect food fraud and contamination across all EU nations.", sourceUrl: "https://ec.europa.eu/" }
 ---
 
 ## Key Developments

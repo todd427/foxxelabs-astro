@@ -10,9 +10,10 @@ significance: "high"
 entities: ["Ireland", "European Commission", "AI Office of Ireland", "EU AI Act", "European Technological Sovereignty Package"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-11, note: "Ireland will host a flagship International AI Summit on October 14, 2026, as the country establishes its AI Office to coordinate EU AI Act enforcement.", sourceUrl: "https://www.gov.ie" }
   - { date: 2026-06-05, note: "Ireland hosts EU AI Summit during presidency while establishing its AI Office by August 2026 to enforce landmark AI Act regulations.", sourceUrl: "https://euractiv.com/section/artificial-intelligence" }
 draft: false
-updatedDate: 2026-06-05
+updatedDate: 2026-06-11
 ---
 
 ## Ireland Steps Up as Europe's AI Governance Hub
