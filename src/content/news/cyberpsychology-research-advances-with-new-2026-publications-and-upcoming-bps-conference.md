@@ -10,6 +10,9 @@ entities: ["Cyberpsychology.eu", "Volume 20", "British Psychological Society", "
 significance: "medium"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-12
+updates:
+  - { date: 2026-06-12, note: "The British Psychological Society launches its sixth annual Cyberpsychology Conference for July with expanded funding for emerging tech behaviour research across Europe.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
 ---
 
 ## Key Developments

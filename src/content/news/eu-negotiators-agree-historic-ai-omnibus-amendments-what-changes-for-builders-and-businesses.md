@@ -10,6 +10,7 @@ significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "AI Office"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-12, note: "European negotiators agree landmark simplification to AI Act, deferring high-risk system rules by 16 months and introducing new bans on non-consensual intimate imagery.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-06-10, note: "EU negotiators agree on Digital Omnibus amendments to AI Act, pushing high-risk system compliance to December 2027 and banning AI-generated non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-06-08, note: "EU negotiators agreed on Digital Omnibus amendments extending AI Act compliance deadlines and introducing strict new rules on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-06-08, note: "European regulators agree landmark amendments to AI Act, deferring high-risk obligations by 16 months and introducing new prohibitions on non-consensual intimate content.", sourceUrl: "https://digital-strategy.ec.europa.eu/en" }
@@ -18,7 +19,7 @@ updates:
   - { date: 2026-06-03, note: "EU negotiators agree on Digital Omnibus amendments to AI Act, delaying HRAIS obligations, banning non-consensual intimate content generation, and softening AI literacy requirements.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-05-30, note: "EU negotiators agree on Digital Omnibus amendments to the AI Act, delaying high-risk compliance deadlines by up to 16 months while strengthening protections against non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
-updatedDate: 2026-06-10
+updatedDate: 2026-06-12
 ---
 
 ## EU Reaches Provisional Agreement on First AI Act Amendments

@@ -9,8 +9,10 @@ sourceUrl: "https://openai.com/news"
 significance: "high"
 entities: ["OpenAI", "Anthropic", "Google DeepMind", "Microsoft AI", "US Congress", "GPT-Rosalind"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-12, note: "Four major AI labs warn Congress that AI advances lower barriers to weaponizing synthetic biology, demanding regulatory action on biosecurity threats.", sourceUrl: "https://yellow.com/news/openai-anthropic-google-microsoft-synthetic-dna-congress-letter" }
 draft: false
+updatedDate: 2026-06-12
 ---
 
 ## AI Giants Unite on Biosecurity: OpenAI, Anthropic, Google DeepMind Call for Synthetic DNA Screening
