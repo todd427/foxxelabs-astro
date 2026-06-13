@@ -10,6 +10,9 @@ entities: ["AMI Labs", "Yann LeCun", "€950M", "$1.03B seed round", "$3.5B valu
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-13
+updates:
+  - { date: 2026-06-13, note: "Yann LeCun's Paris-based AI startup raises Europe's largest seed funding round to build world models for robotics and healthcare applications.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 ---
 
 ## Record-Breaking European AI Investment

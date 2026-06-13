@@ -9,8 +9,10 @@ sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
 significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Project Glasswing"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-13, note: "Anthropic launches Claude Fable 5 on June 9, its most capable publicly available model, with dual-track security architecture separating general use from restricted cybersecurity capabilities.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
 draft: false
+updatedDate: 2026-06-13
 ---
 
 ## Anthropic Launches Claude Fable 5: Frontier AI Capabilities Now Public

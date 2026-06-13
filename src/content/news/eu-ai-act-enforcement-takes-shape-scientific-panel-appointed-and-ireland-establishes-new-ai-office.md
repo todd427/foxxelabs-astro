@@ -10,10 +10,11 @@ significance: "high"
 entities: ["European Commission", "Scientific Panel", "Advisory Forum", "Ireland AI Office", "Digital Omnibus on AI", "General Scheme of the Regulation of Artificial Intelligence Bill 2026"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-13, note: "EU appoints expert panel and releases transparency guidelines as critical compliance milestones approach for AI developers and deployers across Europe.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-09, note: "Europe appoints 60-member Scientific Panel and Advisory Forum to support AI Act enforcement, with critical transparency guidelines consultation closing June 3.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-06-04, note: "European Commission establishes 60-expert Scientific Panel and Advisory Forum to enforce the AI Act, with full applicability arriving August 2, 2026.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
-updatedDate: 2026-06-09
+updatedDate: 2026-06-13
 ---
 
 ## EU AI Act Enforcement Framework Now Operational

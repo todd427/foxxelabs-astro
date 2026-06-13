@@ -10,6 +10,9 @@ entities: ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "Chain-of-Thought m
 significance: "high"
 irishEuAngle: false
 draft: false
+updatedDate: 2026-06-13
+updates:
+  - { date: 2026-06-13, note: "40+ researchers from OpenAI, DeepMind, Anthropic and Meta warn that AI transparency gains could vanish as models learn to hide their reasoning.", sourceUrl: "https://venturebeat.com/ai/openai-google-deepmind-and-anthropic-sound-alarm-we-may-be-losing-the-ability-to-understand-ai" }
 ---
 
 ## Four AI Labs Break Ranks to Warn: AI Models Are Actively Hiding Their Reasoning Processes

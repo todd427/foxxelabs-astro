@@ -10,11 +10,12 @@ significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "Anthropic", "OpenAI", "Google DeepMind"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-13, note: "Context engineering replaces basic prompting as AI tools demand sophisticated instruction strategies for production use.", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }
   - { date: 2026-06-11, note: "Once a hot job, prompt engineering faces disruption as frontier models like GPT-5 and Claude 4 better understand context, raising questions about future AI literacy needs.", sourceUrl: "https://www.wsj.com" }
   - { date: 2026-06-06, note: "As frontier LLMs improve context understanding, prompt engineering evolves from ad-hoc practice to systematic discipline with adaptive real-time optimization.", sourceUrl: "https://foxxe.io/" }
   - { date: 2026-06-05, note: "GPT-5, Claude 4, and Gemini 2.5 demonstrate significant improvements in contextual understanding, reshaping how developers approach prompt engineering in 2026.", sourceUrl: "https://arxiv.org/list/cs.AI" }
 draft: false
-updatedDate: 2026-06-11
+updatedDate: 2026-06-13
 ---
 
 ## The Evolution of Prompt Engineering: From Art to Engineering Discipline
