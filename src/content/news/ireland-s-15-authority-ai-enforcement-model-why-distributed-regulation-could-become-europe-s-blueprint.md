@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "15 competent authorities", "Peter Burke", "A
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-14
+updates:
+  - { date: 2026-06-14, note: "Ireland becomes one of the first EU member states to designate all national competent authorities for EU AI Act enforcement, with a distributed model coordinated by a new AI Office.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2025/september/20250916.html" }
 ---
 
 ## Ireland's Bold Bet on Distributed AI Regulation

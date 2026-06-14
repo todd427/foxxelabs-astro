@@ -9,8 +9,10 @@ sourceUrl: "https://artificialintelligenceact.eu"
 significance: "high"
 entities: ["European Commission", "AI Office", "AI Board", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-14, note: "The EU's AI enforcement infrastructure is now operational with new transparency guidelines, a code of practice for AI-generated content, and streamlined compliance deadlines reshaping how companies mu", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
+updatedDate: 2026-06-14
 ---
 
 ## EU Sets Out Practical Path for AI Content Transparency

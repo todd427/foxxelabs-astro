@@ -9,8 +9,10 @@ sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framewo
 significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
+updatedDate: 2026-06-14
 ---
 
 ## Key Developments
