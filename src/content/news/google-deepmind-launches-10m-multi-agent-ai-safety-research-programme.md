@@ -9,8 +9,10 @@ sourceUrl: "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-rese
 significance: "high"
 entities: ["Google DeepMind", "Schmidt Sciences", "Cooperative AI Foundation", "Advanced Research and Invention Agency", "Google.org"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-15, note: "Google DeepMind announces $10M funding call for multi-agent safety research as millions of AI agents prepare to interact across digital environments.", sourceUrl: "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/" }
 draft: false
+updatedDate: 2026-06-15
 ---
 
 ## Multi-Agent AI Safety Becomes Critical Focus as Agent Economy Takes Shape

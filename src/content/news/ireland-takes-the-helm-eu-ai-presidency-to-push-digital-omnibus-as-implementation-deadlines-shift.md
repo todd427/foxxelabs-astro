@@ -9,8 +9,10 @@ sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety
 significance: "high"
 entities: ["Irish Government", "Helen McEntee", "European Commission", "European Parliament", "Council of the European Union", "AI Office of Ireland"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-15, note: "Ireland's government targets Digital Omnibus completion during its EU presidency, with National AI Office launch imminent by August 2026.", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
 draft: false
+updatedDate: 2026-06-15
 ---
 
 ## Ireland's EU Presidency Sets Sights on AI Omnibus — What Builders Need to Know

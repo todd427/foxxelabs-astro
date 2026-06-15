@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "August 2, 2026", "Regulation of Artificial I
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-15
+updates:
+  - { date: 2026-06-15, note: "Ireland launches comprehensive AI regulatory framework with dedicated enforcement authorities and a central AI Office by August 2026 to implement the EU AI Act.", sourceUrl: "https://enterprise.gov.ie/en/legislation/general-scheme-of-the-regulation-of-artificial-intelligence-bill-2026.html" }
 ---
 
 ## Ireland's Distributed AI Enforcement: Why One Regulator Wasn't Enough
