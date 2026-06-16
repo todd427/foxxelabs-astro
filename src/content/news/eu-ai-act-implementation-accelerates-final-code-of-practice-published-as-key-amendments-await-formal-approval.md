@@ -9,8 +9,10 @@ sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisa
 significance: "high"
 entities: ["European Commission", "RAISE High-Level Academic Advisory Board", "European AI Office", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-16, note: "Europe moves to enforce AI transparency with new marking standards and regulatory sandboxes, reshaping how builders deploy AI systems across the continent.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
+updatedDate: 2026-06-16
 ---
 
 ## EU Publishes Final Code of Practice as AI Act Implementation Framework Takes Shape

@@ -10,6 +10,7 @@ significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "Anthropic", "OpenAI", "Google DeepMind"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-16, note: "As LLMs like GPT-5 and Claude 4 improve, prompt engineering splits into two distinct practices: casual prompting and serious production engineering.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-16, note: "As frontier LLMs improve context understanding, prompt engineering splits into two disciplines: casual prompting and production engineering.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-15, note: "Industry pivots to context engineering as frontier AI models demonstrate unprecedented improvements in understanding nuance and complex instructions.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026" }
   - { date: 2026-06-13, note: "Context engineering replaces basic prompting as AI tools demand sophisticated instruction strategies for production use.", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }

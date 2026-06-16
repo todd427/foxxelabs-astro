@@ -10,10 +10,11 @@ significance: "high"
 entities: ["European Union", "European Parliament", "Council of the European Union", "European Commission", "AI Office"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-16, note: "European regulators add prohibitions on AI-generated non-consensual sexual content as AI Act transparency rules set for August 2026 enforcement.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-06-10, note: "The EU agrees on Digital Omnibus amendments banning non-consensual intimate content generation, while Ireland proposes mandatory AI register for public services.", sourceUrl: "https://www.artificialintelligenceact.eu" }
   - { date: 2026-05-31, note: "EU negotiators agree landmark Digital Omnibus amendments delaying high-risk AI compliance to 2027-2028 while tightening rules on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
-updatedDate: 2026-06-10
+updatedDate: 2026-06-16
 ---
 
 ## EU AI Act Gets Major Overhaul: What Irish and European AI Teams Need to Know

@@ -1,4 +1,14 @@
 {
-  "updatedAt": null,
-  "pick": null
+  "updatedAt": "2026-06-16T19:35:37.674Z",
+  "pick": {
+    "id": "microsoft/FastContext-1.0-4B-SFT",
+    "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
+    "author": "microsoft",
+    "name": "FastContext-1.0-4B-SFT",
+    "likes": 153,
+    "downloads": 192,
+    "ageDays": 2,
+    "blurb": "A 4B model fine-tuned on Qwen3 that handles long contexts efficiently, tagged for agentic repo exploration tasks. Two days old with concrete arxiv backing (2606.14066) and MIT license—worth testing if you're building agents that need to traverse codebases.",
+    "surfacedAt": "2026-06-16"
+  }
 }
