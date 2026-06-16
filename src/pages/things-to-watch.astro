@@ -5,18 +5,26 @@ import LLMSpotlight from '../components/LLMSpotlight.astro';
 import spotlight from '../../data/spotlight.json';
 
 const hasPick = !!spotlight?.pick;
+const also = spotlight?.also ?? [];
 const updated = spotlight?.updatedAt ? spotlight.updatedAt.split('T')[0] : null;
+
+const fmt = (n: number) =>
+  n >= 1_000_000 ? `${(n / 1e6).toFixed(1)}M`
+  : n >= 1_000   ? `${(n / 1e3).toFixed(1)}K`
+  : `${n}`;
+const age = (d: number | null) =>
+  d == null ? '' : d < 1 ? 'new today' : `${d}d`;
 ---
 
 <BaseLayout
   title="Things to Watch | Foxxe Labs"
-  description="One open-weight model worth a second look, refreshed daily — picked from what's actually moving on Hugging Face, not from a leaderboard. Signal, not noise."
+  description="One open-weight model worth a real look, plus the rest of what's moving on Hugging Face right now — picked from the feed, not a leaderboard. Signal, not noise."
 >
   <header class="page-header card">
     <div class="eyebrow">Foxxe Labs &middot; Signal, not noise</div>
     <h1>Things to Watch</h1>
-    <p class="sub">One open-weight model worth a second look &mdash; refreshed daily, picked from what's actually moving on Hugging Face.</p>
-    <p class="lede">The model release cycle is a firehose, and the old compass &mdash; Hugging Face's Open LLM Leaderboard &mdash; retired in 2025. This is the opposite of a leaderboard: a single, opinionated pick of something new and worth looking at, with the hype-and-remix noise filtered out. It's deliberately not a ranking. For the hard numbers &mdash; benchmarks, pricing, context windows &mdash; the link goes out to llm-stats.</p>
+    <p class="sub">One open-weight model worth a real look &mdash; plus the rest of what's moving on Hugging Face right now.</p>
+    <p class="lede">The model release cycle is a firehose, and the old compass &mdash; Hugging Face's Open LLM Leaderboard &mdash; retired in 2025. This is the opposite of a leaderboard: one opinionated pick, with a handful of other live candidates below it and the hype-and-remix noise filtered out. It's deliberately not a ranking. For the hard numbers &mdash; benchmarks, pricing, context windows &mdash; the link goes out to llm-stats.</p>
   </header>
 
   <section class="watch">
@@ -27,8 +35,26 @@ const updated = spotlight?.updatedAt ? spotlight.updatedAt.split('T')[0] : null;
         <p class="muted">The next pick is being selected &mdash; the daily run surfaces one shortly. Check back soon.</p>
       </div>
     )}
-    {updated && <p class="updated muted">Last reconciled {updated}.</p>}
   </section>
+
+  {also.length > 0 && (
+    <section class="also card">
+      <h2 class="also-h">Also moving on Hugging Face</h2>
+      <ul class="also-list">
+        {also.map((m) => (
+          <li class="also-row">
+            <a class="also-model" href={m.url} target="_blank" rel="noopener">
+              <span class="also-author">{m.author}/</span>{m.name}
+            </a>
+            <span class="also-meta">&#9829; {fmt(m.likes)}{m.ageDays != null ? ` · ${age(m.ageDays)}` : ''}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="also-note muted">Straight from the trending/new feed, noise filtered. Not curated, not a ranking.</p>
+    </section>
+  )}
+
+  {updated && <p class="updated muted">Last reconciled {updated}.</p>}
 
   <footer class="page-footer card">
     <p>
@@ -53,7 +79,22 @@ const updated = spotlight?.updatedAt ? spotlight.updatedAt.split('T')[0] : null;
   .watch { margin: 0 0 18px; }
   .empty { padding: 22px; }
   .empty p { margin: 0; }
-  .updated { font-size: .82rem; margin: 12px 2px 0; }
+
+  .also { margin: 0 0 18px; }
+  .also-h { font-size: .82rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); font-weight: 700; margin: 0 0 12px; }
+  .also-list { list-style: none; margin: 0; padding: 0; }
+  .also-row {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    padding: 9px 0; border-bottom: 1px solid var(--border);
+  }
+  .also-row:last-child { border-bottom: 0; }
+  .also-model { text-decoration: none; font-size: 1rem; }
+  .also-model:hover { text-decoration: underline; }
+  .also-author { color: var(--muted); }
+  .also-meta { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+  .also-note { font-size: .8rem; margin: 12px 0 0; }
+
+  .updated { font-size: .82rem; margin: 0 2px 18px; }
 
   .page-footer { font-size: .95rem; }
   .page-footer p { margin: 0; color: var(--muted); }

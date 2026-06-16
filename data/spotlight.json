@@ -5,10 +5,57 @@
     "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
     "author": "microsoft",
     "name": "FastContext-1.0-4B-SFT",
-    "likes": 153,
+    "likes": 154,
     "downloads": 192,
     "ageDays": 2,
     "blurb": "A 4B model fine-tuned on Qwen3 that handles long contexts efficiently, tagged for agentic repo exploration tasks. Two days old with concrete arxiv backing (2606.14066) and MIT license—worth testing if you're building agents that need to traverse codebases.",
     "surfacedAt": "2026-06-16"
-  }
+  },
+  "also": [
+    {
+      "id": "CohereLabs/North-Mini-Code-1.0",
+      "url": "https://hf.co/CohereLabs/North-Mini-Code-1.0",
+      "author": "CohereLabs",
+      "name": "North-Mini-Code-1.0",
+      "likes": 409,
+      "downloads": 12100,
+      "ageDays": 11
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "url": "https://hf.co/zai-org/GLM-5.2",
+      "author": "zai-org",
+      "name": "GLM-5.2",
+      "likes": 169,
+      "downloads": 0,
+      "ageDays": 0
+    },
+    {
+      "id": "nex-agi/Nex-N2-Pro",
+      "url": "https://hf.co/nex-agi/Nex-N2-Pro",
+      "author": "nex-agi",
+      "name": "Nex-N2-Pro",
+      "likes": 305,
+      "downloads": 5000,
+      "ageDays": 13
+    },
+    {
+      "id": "nex-agi/Nex-N2-mini",
+      "url": "https://hf.co/nex-agi/Nex-N2-mini",
+      "author": "nex-agi",
+      "name": "Nex-N2-mini",
+      "likes": 226,
+      "downloads": 9200,
+      "ageDays": 12
+    },
+    {
+      "id": "WeiboAI/VibeThinker-3B",
+      "url": "https://hf.co/WeiboAI/VibeThinker-3B",
+      "author": "WeiboAI",
+      "name": "VibeThinker-3B",
+      "likes": 116,
+      "downloads": 0,
+      "ageDays": 4
+    }
+  ]
 }

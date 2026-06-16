@@ -3,11 +3,14 @@
  * spotlight.js — "check this out (Todd)" LLM pick, built on the same
  * repo-as-store / reconcile principle as frontier.js.
  *
- *   data/spotlight.json (committed) holds the current pick. `reconcile` pulls
- *   the HF-direct candidate feed (scripts/hf-models.js), shows the model the
- *   current pick + candidates, and asks whether to swap — rewriting the file
- *   ONLY when the pick changes. Git history is the record of what you surfaced
- *   and when, exactly like frontier.json.
+ *   data/spotlight.json (committed) holds the current hero pick plus a short
+ *   "also moving" list (the rest of the top-6 candidate feed, raw — no blurb).
+ *   `reconcile` pulls the HF-direct feed (scripts/hf-models.js), asks the model
+ *   whether to swap the HERO, and always refreshes the also-list + live stats.
+ *   The hero's surfacedAt only changes when the hero actually changes, so git
+ *   history still records what was surfaced and when.
+ *
+ * Top 6 (Miller's Law): 1 hero + 5 also = six items, the page's full set.
  *
  * Usage:
  *   node scripts/spotlight.js reconcile [--dry-run]
@@ -22,17 +25,28 @@ import { MODEL, makeClient, callWithRetry, extractJson } from './anthropic-clien
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SPOTLIGHT_PATH = path.join(__dirname, '..', 'data', 'spotlight.json');
 
+const POOL = 6;        // total surfaced: 1 hero + (POOL-1) also
+const today = () => new Date().toISOString().split('T')[0];
+
 function loadSpotlight() {
-  if (!fs.existsSync(SPOTLIGHT_PATH)) return { updatedAt: null, pick: null };
+  if (!fs.existsSync(SPOTLIGHT_PATH)) return { updatedAt: null, pick: null, also: [] };
   return JSON.parse(fs.readFileSync(SPOTLIGHT_PATH, 'utf-8'));
 }
 
-function writeSpotlight(pick) {
-  const out = { updatedAt: new Date().toISOString(), pick };
+function writeSpotlight(pick, also) {
+  const out = { updatedAt: new Date().toISOString(), pick, also };
   fs.mkdirSync(path.dirname(SPOTLIGHT_PATH), { recursive: true });
   fs.writeFileSync(SPOTLIGHT_PATH, JSON.stringify(out, null, 2) + '\n');
 }
 
+// Display record persisted for the page (no _score, no tags).
+const display = (c) => ({
+  id: c.id, url: c.url, author: c.author, name: c.name,
+  likes: c.likes, downloads: c.downloads,
+  ageDays: c.ageDays == null ? null : Math.round(c.ageDays),
+});
+
+// Compact view for the model's hero decision.
 const compact = (c) => ({
   id: c.id, likes: c.likes, downloads: c.downloads,
   ageDays: c.ageDays == null ? null : Math.round(c.ageDays),
@@ -66,33 +80,47 @@ Return ONLY minified JSON:
 }
 
 async function reconcile(dryRun) {
-  const candidates = await getCandidates();
+  const candidates = await getCandidates({ top: POOL });
   if (!candidates.length) { console.log('No HF candidates returned; nothing to do.'); return; }
 
   const { pick: current } = loadSpotlight();
-  console.log(`\ud83d\udd26 Spotlight reconcile: ${candidates.length} candidates. Current: ${current?.id ?? '(none)'}`);
+  console.log(`\ud83d\udd26 Spotlight reconcile: ${candidates.length} candidates (top ${POOL}). Current: ${current?.id ?? '(none)'}`);
 
   if (dryRun) {
-    console.log('\ud83d\udd0e --dry-run: no API calls. Top candidates:');
+    console.log('\ud83d\udd0e --dry-run: no API calls. Candidates:');
     candidates.forEach((c, i) => console.log(`   ${i + 1}. ${c.id}  \u2665${c.likes}`));
     return;
   }
 
   const d = await decide(makeClient(), current, candidates);
-  if (!d || d.changed !== true) { console.log('\u00b7 Current pick still holds; spotlight.json untouched.'); return; }
 
-  const chosen = candidates.find((c) => c.id === d.id);
-  if (!chosen) { console.log(`\u26a0\ufe0f  Model picked ${d.id}, not in candidate set; ignoring.`); return; }
+  // Hero: swap on the model's call, else keep current (refreshing live stats).
+  let hero = null;
+  if (d && d.changed === true) {
+    const chosen = candidates.find((c) => c.id === d.id);
+    if (chosen) {
+      hero = { ...display(chosen), blurb: String(d.blurb || '').trim(), surfacedAt: today() };
+      console.log(`\u2728 Spotlight \u2192 ${chosen.id}: ${d.reason || 'swapped'}`);
+    } else {
+      console.log(`\u26a0\ufe0f  Model picked ${d.id}, not in candidate set; ignoring swap.`);
+    }
+  }
+  if (!hero) {
+    if (current) {
+      const live = candidates.find((c) => c.id === current.id);
+      hero = live
+        ? { ...display(live), blurb: current.blurb, surfacedAt: current.surfacedAt }
+        : current;  // dropped off the feed; keep stored values
+      console.log(`\u00b7 Hero holds: ${current.id}`);
+    } else {
+      console.log('No hero and no current pick; leaving null.');
+    }
+  }
 
-  writeSpotlight({
-    id: chosen.id, url: chosen.url, author: chosen.author, name: chosen.name,
-    likes: chosen.likes, downloads: chosen.downloads,
-    ageDays: chosen.ageDays == null ? null : Math.round(chosen.ageDays),
-    blurb: String(d.blurb || '').trim(),
-    surfacedAt: new Date().toISOString().split('T')[0],
-  });
-  console.log(`\u2728 Spotlight \u2192 ${chosen.id}: ${d.reason || 'swapped'}`);
-  console.log('   Commit data/spotlight.json - the diff is what you surfaced.');
+  const also = candidates.filter((c) => !hero || c.id !== hero.id).slice(0, POOL - 1).map(display);
+  writeSpotlight(hero, also);
+  console.log(`Wrote spotlight: hero=${hero?.id ?? 'none'}, also=${also.length}.`);
+  console.log('   Commit data/spotlight.json if the workflow detects a change.');
 }
 
 const cmd = process.argv[2];
