@@ -3,7 +3,7 @@
 // Reads committed state - no live fetch. data/spotlight.json is produced by the
 // daily cron (scripts/spotlight.js) and committed, same as the news collection.
 // Render is therefore a pure function of repo state; HF being up at build time
-// is irrelevant.
+// is irrelevant. Renders nothing when pick is null (page handles empty state).
 import spotlight from '../../data/spotlight.json';
 
 const pick = spotlight?.pick ?? null;
@@ -14,50 +14,45 @@ const fmt = (n) =>
 ---
 
 {pick && (
-  <aside class="llm-spotlight">
-    <header>
-      <span class="eyebrow">Check this out</span>
-      <span class="byline">&mdash; Todd</span>
+  <aside class="llm-spotlight card">
+    <header class="ls-head">
+      <span class="ls-eyebrow">Check this out</span>
+      <span class="ls-byline">&mdash; Todd</span>
     </header>
 
-    <a class="model" href={pick.url} target="_blank" rel="noopener">
-      <span class="author">{pick.author}/</span><span class="name">{pick.name}</span>
+    <a class="ls-model" href={pick.url} target="_blank" rel="noopener">
+      <span class="ls-author">{pick.author}/</span><span class="ls-name">{pick.name}</span>
     </a>
 
-    <p class="blurb">{pick.blurb}</p>
+    <p class="ls-blurb">{pick.blurb}</p>
 
-    <footer>
-      <span class="stat">&#9829; {fmt(pick.likes)}</span>
-      <span class="stat">&darr; {fmt(pick.downloads)}</span>
+    <footer class="ls-foot">
+      <span class="ls-stat">&#9829; {fmt(pick.likes)}</span>
+      <span class="ls-stat">&darr; {fmt(pick.downloads)}</span>
       {pick.ageDays != null && pick.ageDays < 14 && (
-        <span class="stat fresh">{pick.ageDays < 1 ? 'new today' : `${pick.ageDays}d old`}</span>
+        <span class="ls-stat ls-fresh">{pick.ageDays < 1 ? 'new today' : `${pick.ageDays}d old`}</span>
       )}
-      <a class="numbers" href="https://llm-stats.com" target="_blank" rel="noopener">
-        benchmarks &rarr; llm-stats
-      </a>
+      <a class="ls-numbers" href="https://llm-stats.com" target="_blank" rel="noopener">benchmarks &rarr; llm-stats</a>
     </footer>
   </aside>
 )}
 
 <style>
-  .llm-spotlight {
-    border: 1px solid var(--border, #2a2f37);
-    border-radius: var(--radius, 10px);
-    padding: 1rem 1.25rem;
-    background: var(--surface, #161a20);
-    max-width: 34rem;
-    font-family: var(--font-body, ui-sans-serif, system-ui);
+  /* Uses the site's global tokens so it adapts across dark/light/editorial. */
+  .llm-spotlight { max-width: 36rem; }
+  .ls-head { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .5rem; }
+  .ls-eyebrow {
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700;
   }
-  header { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .5rem; }
-  .eyebrow { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent, #d4a017); font-weight: 600; }
-  .byline { font-size: .75rem; color: var(--muted, #8b95a1); }
-  .model { display: block; font-size: 1.15rem; text-decoration: none; margin-bottom: .4rem; }
-  .model:hover .name { text-decoration: underline; }
-  .author { color: var(--muted, #8b95a1); }
-  .name { color: var(--text, #e8edf2); font-weight: 600; }
-  .blurb { margin: 0 0 .75rem; line-height: 1.5; color: var(--text, #cdd4dc); font-size: .92rem; }
-  footer { display: flex; align-items: center; gap: .9rem; font-size: .78rem; color: var(--muted, #8b95a1); }
-  .stat.fresh { color: var(--accent, #d4a017); }
-  .numbers { margin-left: auto; color: var(--muted, #8b95a1); text-decoration: none; }
-  .numbers:hover { color: var(--text, #e8edf2); text-decoration: underline; }
+  .ls-byline { font-size: .78rem; color: var(--muted); }
+  .ls-model { display: block; font-size: 1.2rem; text-decoration: none; margin-bottom: .45rem; }
+  .ls-model:hover .ls-name { text-decoration: underline; }
+  .ls-author { color: var(--muted); }
+  .ls-name { color: var(--text); font-weight: 700; }
+  .ls-blurb { margin: 0 0 .9rem; line-height: 1.6; color: var(--text); font-size: .98rem; }
+  .ls-foot { display: flex; align-items: center; gap: 1rem; font-size: .82rem; color: var(--muted); }
+  .ls-fresh { color: var(--accent); font-weight: 600; }
+  .ls-numbers { margin-left: auto; color: var(--muted); text-decoration: none; }
+  .ls-numbers:hover { color: var(--text); text-decoration: underline; }
 </style>

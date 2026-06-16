@@ -1,0 +1,60 @@
+---
+// src/pages/things-to-watch.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LLMSpotlight from '../components/LLMSpotlight.astro';
+import spotlight from '../../data/spotlight.json';
+
+const hasPick = !!spotlight?.pick;
+const updated = spotlight?.updatedAt ? spotlight.updatedAt.split('T')[0] : null;
+---
+
+<BaseLayout
+  title="Things to Watch | Foxxe Labs"
+  description="One open-weight model worth a second look, refreshed daily — picked from what's actually moving on Hugging Face, not from a leaderboard. Signal, not noise."
+>
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs &middot; Signal, not noise</div>
+    <h1>Things to Watch</h1>
+    <p class="sub">One open-weight model worth a second look &mdash; refreshed daily, picked from what's actually moving on Hugging Face.</p>
+    <p class="lede">The model release cycle is a firehose, and the old compass &mdash; Hugging Face's Open LLM Leaderboard &mdash; retired in 2025. This is the opposite of a leaderboard: a single, opinionated pick of something new and worth looking at, with the hype-and-remix noise filtered out. It's deliberately not a ranking. For the hard numbers &mdash; benchmarks, pricing, context windows &mdash; the link goes out to llm-stats.</p>
+  </header>
+
+  <section class="watch">
+    {hasPick ? (
+      <LLMSpotlight />
+    ) : (
+      <div class="card empty">
+        <p class="muted">The next pick is being selected &mdash; the daily run surfaces one shortly. Check back soon.</p>
+      </div>
+    )}
+    {updated && <p class="updated muted">Last reconciled {updated}.</p>}
+  </section>
+
+  <footer class="page-footer card">
+    <p>
+      Related: &nbsp;<a href="/news/">News</a>
+      &nbsp;&middot;&nbsp; <a href="/ai-timeline/">AI Model Performance Timeline</a>
+      &nbsp;&middot;&nbsp; elsewhere: <a href="https://llm-stats.com" target="_blank" rel="noopener">llm-stats</a>,
+      <a href="https://lmarena.ai" target="_blank" rel="noopener">LMArena</a>
+    </p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .page-header { margin-bottom: 18px; }
+  .eyebrow {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .18em;
+    color: var(--accent); font-weight: 700; margin-bottom: 10px;
+  }
+  .page-header h1 { font-size: clamp(2.2rem, 5.5vw, 3.2rem); line-height: 1; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { color: var(--text); font-size: 1.1rem; font-style: italic; margin: 0 0 16px; }
+  .lede { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 72ch; margin: 0; }
+
+  .watch { margin: 0 0 18px; }
+  .empty { padding: 22px; }
+  .empty p { margin: 0; }
+  .updated { font-size: .82rem; margin: 12px 2px 0; }
+
+  .page-footer { font-size: .95rem; }
+  .page-footer p { margin: 0; color: var(--muted); }
+</style>
