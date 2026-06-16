@@ -62,21 +62,27 @@ jobs:
             node scripts/generate-content.js "$CONTENT_TYPE" --interval "$INTERVAL"
           fi
 
+      - name: Reconcile LLM spotlight
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: node scripts/spotlight.js reconcile
+
       - name: Check for new content
         id: check_changes
         run: |
-          git add src/content/
-          git diff --cached --quiet src/content/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          git add src/content/ data/
+          git diff --cached --quiet src/content/ data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit new content
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config user.name "foxxelabs-bot"
           git config user.email "bot@foxxelabs.ie"
-          git add src/content/
+          git add src/content/ data/
           git commit -m "chore: auto-generate content [$(date +'%Y-%m-%d')]"
           git push
 
       - name: No new content
         if: steps.check_changes.outputs.changed == 'false'
-        run: echo "ℹ️ No new content was generated — nothing to commit."
+        run: echo "No new content was generated - nothing to commit."
