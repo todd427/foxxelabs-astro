@@ -9,8 +9,10 @@ sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framewo
 significance: "high"
 entities: ["European Commission", "AI Office", "European Parliament", "European Council"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-16, note: "European Commission releases voluntary Code of Practice on AI-generated content marking, setting stage for full AI Act compliance across member states including Ireland.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
+updatedDate: 2026-06-16
 ---
 
 ## Key Developments

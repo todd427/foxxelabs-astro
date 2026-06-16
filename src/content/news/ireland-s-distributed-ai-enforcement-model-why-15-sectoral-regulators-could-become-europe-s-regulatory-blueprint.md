@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "August 2026", "AI Office of Ireland", "15 se
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-16
+updates:
+  - { date: 2026-06-16, note: "Ireland publishes legislative blueprint for AI enforcement with 15 sectoral regulators and penalties up to 7% of global turnover.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/publications/general-scheme-of-the-regulation-of-artificial-intelligence-bill-2026/" }
 ---
 
 ## Ireland's Distributed AI Enforcement Model: Why 15 Sectoral Regulators Could Become Europe's Regulatory Blueprint

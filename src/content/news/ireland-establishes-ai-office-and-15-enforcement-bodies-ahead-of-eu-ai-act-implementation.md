@@ -10,6 +10,9 @@ entities: ["Ireland", "EU AI Act", "General Scheme of the Regulation of Artifici
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-06-16
+updates:
+  - { date: 2026-06-16, note: "Ireland releases national legislation implementing the EU AI Act with a distributed enforcement model and new AI Office of Ireland as central coordinating authority.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
 ---
 
 ## Key Developments
