@@ -1,0 +1,53 @@
+name: LLM Spotlight
+
+# Standalone spotlight reconcile — pulls the HF-direct candidate feed and
+# re-picks the "Things to Watch" model, committing ONLY data/spotlight.json.
+# Fast (one HF fetch + one Haiku call), no news generation. This is the cheap
+# way to refresh or test the spotlight without running the daily content job.
+#
+# The daily generate-content.yml ALSO runs the reconcile (free tail on a run
+# that's happening anyway); this workflow exists for manual dispatch and a
+# calmer weekly cadence. Either writer is idempotent — reconcile only rewrites
+# data/spotlight.json when the pick actually changes.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC — weekly
+  workflow_dispatch:
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Reconcile LLM spotlight
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: node scripts/spotlight.js reconcile
+
+      - name: Commit spotlight
+        run: |
+          git add data/spotlight.json
+          if git diff --cached --quiet; then
+            echo "No spotlight change - nothing to commit."
+          else
+            git config user.name "foxxelabs-bot"
+            git config user.email "bot@foxxelabs.ie"
+            git commit -m "spotlight: refresh pick [$(date +'%Y-%m-%d')]"
+            git push
+          fi
