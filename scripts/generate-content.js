@@ -4,8 +4,11 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { loadCorpusWindow, findDuplicate, appendUpdate, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
-import { normalizeUrl, resolveSourceUrl, normalizeClaim, appendClaims } from './claims.js';
+import { loadCorpusWindow, findDuplicate, appendUpdates, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
+import {
+  resolveSourceUrl, normalizeClaim, appendClaims, loadClaims,
+  foldIncomingClaims, raiseConfidence, claimId,
+} from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -525,17 +528,36 @@ async function main() {
 
         const hit = findDuplicate(candidate, corpus);
         if (hit) {
-          // Persist the claims under the matched story (step 3 folds the novel
-          // ones into its timeline; here we keep the claim store complete).
-          appendClaims(claims.map((c) => ({ ...c, story_id: hit.match.slug })));
-          appendUpdate(hit.match.file, {
-            date:      todayStr,
-            note:      postData.description,
-            sourceUrl: postData.sourceUrl,
-          });
+          // Step 3: a hit folds NOVEL claims into the story's timeline; claims the
+          // story already states are CORROBORATION — they raise confidence (via an
+          // append-only superseding claim) rather than cluttering the timeline.
+          const storyClaims = loadClaims().filter((c) => c.story_id === hit.match.slug);
+          const { novel, corroborating } = foldIncomingClaims(claims, storyClaims);
+
+          const toPersist = novel.map((c) => ({ ...c, story_id: hit.match.slug }));
+          for (const { incoming, matched } of corroborating) {
+            const raised = raiseConfidence(matched.confidence);
+            if (raised === matched.confidence) continue; // already corroborated/official — no clutter
+            toPersist.push({
+              ...incoming,
+              story_id:   hit.match.slug,
+              confidence: raised,
+              supersedes: matched.id,
+              id:         claimId(incoming.statement, incoming.source_url),
+            });
+          }
+          appendClaims(toPersist);
+
+          if (novel.length) {
+            appendUpdates(
+              hit.match.file,
+              novel.map((c) => ({ note: c.statement, sourceUrl: c.source_url })),
+              todayStr,
+            );
+          }
           console.log(`↳ Duplicate of "${hit.match.slug}" ` +
             `(c=${hit.score.combined.toFixed(2)} e=${hit.score.ent.toFixed(2)} t=${hit.score.txt.toFixed(2)}) ` +
-            `— folded into its timeline, no new article.`);
+            `— ${novel.length} novel claim(s) folded, ${corroborating.length} corroborating.`);
           folded.push(hit.match.slug);
           continue;
         }

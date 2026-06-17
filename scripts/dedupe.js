@@ -210,6 +210,31 @@ export function appendUpdate(filePath, { date, note, sourceUrl }) {
   fs.writeFileSync(filePath, raw.replace(fm[0], `---\n${block}\n---`));
 }
 
+// Fold several novel claims into a story's timeline in one surgical write.
+// Each item is { note, sourceUrl? }; all share the given date. Mirrors
+// appendUpdate's frontmatter handling (set updatedDate, strip inline `[]`).
+export function appendUpdates(filePath, items, date) {
+  if (!items || !items.length) return;
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm) throw new Error(`No frontmatter block in ${filePath}`);
+
+  const rendered = items.map(({ note, sourceUrl }) => {
+    const cleanNote = String(note).replace(/\s+/g, ' ').replace(/"/g, "'").trim().slice(0, 200);
+    return `  - { date: ${date}, note: "${cleanNote}"` + (sourceUrl ? `, sourceUrl: "${sourceUrl}" }` : ` }`);
+  }).join('\n');
+
+  let block = fm[1];
+  block = /^updatedDate:/m.test(block)
+    ? block.replace(/^updatedDate:.*$/m, `updatedDate: ${date}`)
+    : block + `\nupdatedDate: ${date}`;
+  block = /^updates:/m.test(block)
+    ? block.replace(/^updates:.*$/m, (m) => `${m.replace(/\s*\[\s*\]\s*$/, '')}\n${rendered}`)
+    : block + `\nupdates:\n${rendered}`;
+
+  fs.writeFileSync(filePath, raw.replace(fm[0], `---\n${block}\n---`));
+}
+
 // ── Item 2: reviewed dupe collapse (connected components, not seed-anchored) ──
 // The `report` clustering is seed-anchored: a central seed pulls in topical
 // cousins, so a single component can mix three distinct stories. For an actual

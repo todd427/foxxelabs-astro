@@ -141,3 +141,49 @@ export function loadClaimIndex(claimsPath = CLAIMS_PATH) {
   for (const c of loadClaims(claimsPath)) byId.set(c.id, c);
   return byId;
 }
+
+// ── Step 3: claim folding (novelty + corroboration) ──────────────────────────
+// On a dedupe hit, an incoming claim is either NOVEL (a new fact for the story →
+// fold into its timeline) or CORROBORATING (the story already states it, from a
+// different source → raise confidence, don't clutter the timeline). Matching is
+// on the statement text, not the id — corroboration comes from a different
+// source_url, so the ids differ even when the assertion is the same.
+const normStatement = (s) =>
+  String(s).toLowerCase().normalize('NFKD').replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
+
+const stmtTokens = (s) => new Set(normStatement(s).split(' ').filter((w) => w.length > 2));
+
+function stmtJaccard(a, b) {
+  const A = stmtTokens(a), B = stmtTokens(b);
+  if (!A.size || !B.size) return 0;
+  let inter = 0;
+  for (const t of A) if (B.has(t)) inter++;
+  return inter / (A.size + B.size - inter);
+}
+
+// Bias high: a false "same claim" merge buries a genuinely new fact (the costly
+// error), so only near-identical statements corroborate. Tune in calibration.
+export const STATEMENT_MATCH = 0.7;
+
+export function statementsMatch(a, b) {
+  return normStatement(a) === normStatement(b) || stmtJaccard(a, b) >= STATEMENT_MATCH;
+}
+
+/** Confidence only ever rises by corroboration up to "corroborated"; "official"
+ *  is reserved for the announcing body and is not reachable by corroboration. */
+export function raiseConfidence(level) {
+  return level === 'single-source' ? 'corroborated' : level;
+}
+
+/** Split incoming claims against a story's existing claims into novel vs
+ *  corroborating (each corroborating entry carries the matched existing claim). */
+export function foldIncomingClaims(incoming, existing) {
+  const novel = [];
+  const corroborating = [];
+  for (const c of incoming) {
+    const matched = existing.find((e) => statementsMatch(e.statement, c.statement));
+    if (matched) corroborating.push({ incoming: c, matched });
+    else novel.push(c);
+  }
+  return { novel, corroborating };
+}
