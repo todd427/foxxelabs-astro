@@ -35,6 +35,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
+import { aliasCanonical } from './entities.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -81,8 +82,11 @@ export function cosine(va, vb) {
   return d ? dot / d : 0;
 }
 
+// Canonicalise through the alias dictionary so "MCP", "Model Context Protocol",
+// and "Model Context Protocol (MCP)" collapse to one entity before Jaccard.
+// Unknown entities fall back to their own normalised key (prior behaviour).
 function normEntity(e) {
-  return normText(e).trim().replace(/\s+/g, ' ');
+  return aliasCanonical(e);
 }
 
 export function entityJaccard(aEnts = [], bEnts = []) {
