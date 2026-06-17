@@ -15,7 +15,7 @@ updates:
   - { date: 2026-06-10, note: "European regulators agree on Digital Omnibus amendments, pushing high-risk AI system obligations back to 2027-2028 while introducing new restrictions on intimate imagery and CSAM.", sourceUrl: "https://digital-strategy.ec.europa.eu/en" }
   - { date: 2026-06-08, note: "European negotiators agree on Digital Omnibus amendments, deferring high-risk AI compliance by 16 months while introducing new prohibitions on non-consensual intimate imagery.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-05-29, note: "EU negotiators agree on landmark amendments to AI Act, deferring compliance deadlines and introducing strict prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
-draft: false
+draft: true
 updatedDate: 2026-06-17
 ---
 

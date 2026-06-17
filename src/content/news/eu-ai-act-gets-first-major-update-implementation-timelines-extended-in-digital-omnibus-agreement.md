@@ -12,7 +12,7 @@ irishEuAngle: true
 updates:
   - { date: 2026-06-15, note: "European regulators agree on first amendments to AI Act since adoption, postponing key deadlines to December 2027 and easing implementation burden on member states.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-06-01, note: "EU negotiators agree to Digital Omnibus amendments delaying high-risk AI compliance to December 2027, with new prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
-draft: false
+draft: true
 updatedDate: 2026-06-15
 ---
 
