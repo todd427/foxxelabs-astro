@@ -277,11 +277,26 @@ export function connectedComponents(corpus, edgeFn) {
   return [...groups.values()].filter((g) => g.length > 1);
 }
 
-const pubTime = (s) => { const t = s.publishDate ? new Date(s.publishDate).getTime() : NaN; return Number.isNaN(t) ? Infinity : t; };
+const pubTime = (s) => { const t = s.publishDate ? new Date(s.publishDate).getTime() : NaN; return Number.isNaN(t) ? -Infinity : t; };
+const normTitle = (t) => String(t || '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+/** Surgically set `draft: true` in a file's frontmatter, leaving the body and
+ *  every other key byte-identical (same approach as appendUpdate). */
+export function demoteToDraft(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!fm) throw new Error(`No frontmatter block in ${filePath}`);
+  const block = /^draft:/m.test(fm[1])
+    ? fm[1].replace(/^draft:.*$/m, 'draft: true')
+    : `${fm[1]}\ndraft: true`;
+  fs.writeFileSync(filePath, raw.replace(fm[0], `---\n${block}\n---`));
+}
 
 /** Build a non-destructive review file of proposed collapses. Writes nothing
- *  to the corpus. Canonical = earliest-published article in the component; the
- *  rest are proposed for folding into its timeline. */
+ *  to the corpus. Canonical = LATEST-published article in the component (the
+ *  current state of a moving story); the rest are proposed for demotion. A member
+ *  whose title AND publishDate both equal the canonical's is a true re-emission,
+ *  flagged for hard delete; everything else is demoted to draft, never deleted. */
 function review(daysBack, edgeTxt) {
   const corpus = loadCorpusWindow(daysBack);
   const opts = edgeTxt ? { edgeTxt } : {};
@@ -289,14 +304,17 @@ function review(daysBack, edgeTxt) {
 
   const clusters = comps.map((idxs) => {
     const sorted = [...idxs].sort((a, b) => pubTime(corpus[a]) - pubTime(corpus[b]));
-    const canonical = corpus[sorted[0]];
-    const members = sorted.slice(1).map((i) => {
+    const canonical = corpus[sorted[sorted.length - 1]];   // keep the LATEST
+    const members = sorted.slice(0, -1).map((i) => {
       const s = score(canonical, corpus[i]);
+      const reEmission = corpus[i].publishDate === canonical.publishDate
+        && normTitle(corpus[i].title) === normTitle(canonical.title);
       return {
         slug: corpus[i].slug,
         file: corpus[i].file,
         title: corpus[i].title,
         publishDate: corpus[i].publishDate,
+        action: reEmission ? 'delete' : 'demote',
         score: { txt: +s.txt.toFixed(3), ent: +s.ent.toFixed(3), combined: +s.combined.toFixed(3) },
       };
     });
@@ -306,25 +324,28 @@ function review(daysBack, edgeTxt) {
     };
   }).sort((a, b) => b.members.length - a.members.length);
 
-  const foldable = clusters.reduce((n, c) => n + c.members.length, 0);
+  const total = clusters.reduce((n, c) => n + c.members.length, 0);
+  const deletes = clusters.reduce((n, c) => n + c.members.filter((m) => m.action === 'delete').length, 0);
   const outPath = path.join(__dirname, '..', 'dedupe-review.json');
   fs.writeFileSync(outPath, JSON.stringify({
     generatedAt: new Date().toISOString(),
     windowDays: daysBack,
     edge: edgeTxt ? { edgeTxt } : { edgeTxt: STRONG_TXT, edgeCombined: STRONG_COMBINED, entity: STRONG_ENTITY },
     corpusSize: corpus.length,
-    note: 'Review/edit before apply. Delete a cluster or a member to reject it. ' +
-      'apply folds each member lede into the canonical updates timeline, then archives the member file.',
+    note: 'Review/edit before apply. Delete a cluster or a member object to reject it; ' +
+      'flip a member "action" between "demote" (set draft:true) and "delete" (remove file). ' +
+      'Canonical (latest) is always kept and published. apply requires --yes.',
     clusters,
   }, null, 2));
 
   console.log(`Reviewed ${corpus.length} articles (window ${daysBack}d).`);
-  console.log(`${clusters.length} collapse clusters; ${foldable} articles proposed for folding.\n`);
+  console.log(`${clusters.length} collapse clusters; ${total} members ` +
+    `(${total - deletes} demote → draft, ${deletes} delete = true re-emissions).\n`);
   for (const c of clusters.slice(0, 25)) {
-    console.log(`# canonical: ${c.canonical.slug}  (${c.members.length} to fold)`);
+    console.log(`# keep (latest): ${c.canonical.slug}  [${c.canonical.publishDate}]  (${c.members.length} member(s))`);
     console.log(`    ${c.canonical.title}`);
     for (const m of c.members.slice(0, 8)) {
-      console.log(`    └ [c=${m.score.combined} t=${m.score.txt} e=${m.score.ent}] ${m.title}`);
+      console.log(`    └ ${m.action.toUpperCase()} [c=${m.score.combined} t=${m.score.txt} e=${m.score.ent}] ${m.title}`);
     }
     if (c.members.length > 8) console.log(`    └ … +${c.members.length - 8} more`);
   }
@@ -333,44 +354,45 @@ function review(daysBack, edgeTxt) {
   console.log(`Approve, then: node scripts/dedupe.js apply dedupe-review.json --yes`);
 }
 
-/** Destructive: fold each reviewed member into its canonical timeline, then
- *  move the member file out of the collection into archive/news/. Requires
- *  --yes. Re-reads each member's frontmatter so the folded lede is authoritative. */
+/** Destructive: collapse each reviewed cluster. The canonical (latest) is kept
+ *  and published untouched. Each member is demoted to draft:true (kept in-repo,
+ *  hidden from the site) UNLESS flagged action:"delete" — a true re-emission
+ *  (same title AND publishDate as the canonical) — which is hard-deleted.
+ *  Requires --yes. False merge is worse than false miss: nothing is ever merged
+ *  blind, and a demote is reversible (flip draft back) where a delete is not. */
 function applyReview(reviewPath, { yes }) {
   if (!reviewPath) { console.error('usage: node scripts/dedupe.js apply <review.json> --yes'); process.exit(1); }
   const full = path.isAbsolute(reviewPath) ? reviewPath : path.join(process.cwd(), reviewPath);
   const { clusters } = JSON.parse(fs.readFileSync(full, 'utf-8'));
-  const foldable = clusters.reduce((n, c) => n + c.members.length, 0);
+  const members = clusters.flatMap((c) => c.members);
+  const toDelete = members.filter((m) => m.action === 'delete').length;
+  const toDemote = members.length - toDelete;
 
   if (!yes) {
-    console.log(`Would fold ${foldable} articles into ${clusters.length} canonicals and archive them.`);
+    console.log(`Would keep ${clusters.length} canonicals (latest), demote ${toDemote} to draft:true, ` +
+      `and hard-delete ${toDelete} true re-emission(s).`);
     console.log('Destructive. Re-run with --yes to execute.');
     return;
   }
 
-  const archiveDir = path.join(__dirname, '..', 'archive', 'news');
-  fs.mkdirSync(archiveDir, { recursive: true });
-  let folded = 0, archived = 0, missing = 0;
-
+  let demoted = 0, deleted = 0, missing = 0;
   for (const c of clusters) {
     if (!fs.existsSync(c.canonical.file)) { console.warn(`⚠️  canonical missing, skipping cluster: ${c.canonical.slug}`); continue; }
     for (const m of c.members) {
       if (!fs.existsSync(m.file)) { missing++; console.warn(`⚠️  member already gone: ${m.slug}`); continue; }
-      const { data } = matter(fs.readFileSync(m.file, 'utf-8'));
-      const date = (m.publishDate ? new Date(m.publishDate) : new Date()).toISOString().split('T')[0];
-      appendUpdate(c.canonical.file, {
-        date,
-        note: data.description || data.title || m.title || m.slug,
-        sourceUrl: data.sourceUrl,
-      });
-      folded++;
-      fs.renameSync(m.file, path.join(archiveDir, path.basename(m.file)));
-      archived++;
-      console.log(`↳ folded ${m.slug} → ${c.canonical.slug}; archived.`);
+      if (m.action === 'delete') {
+        fs.unlinkSync(m.file);
+        deleted++;
+        console.log(`✗ deleted re-emission ${m.slug} (dup of ${c.canonical.slug})`);
+      } else {
+        demoteToDraft(m.file);
+        demoted++;
+        console.log(`↓ demoted ${m.slug} → draft:true (superseded by ${c.canonical.slug})`);
+      }
     }
   }
-  console.log(`\n✨ Collapsed: ${folded} folded, ${archived} archived to archive/news/, ${missing} already gone.`);
-  console.log('   Member files left the collection; git add -A to stage the moves.');
+  console.log(`\n✨ Collapsed: ${demoted} demoted to draft, ${deleted} deleted, ${missing} already gone.`);
+  console.log('   git add -A to stage the changes.');
 }
 
 // ── CLI: calibration + clustering report (no API, no writes) ─────────────────
