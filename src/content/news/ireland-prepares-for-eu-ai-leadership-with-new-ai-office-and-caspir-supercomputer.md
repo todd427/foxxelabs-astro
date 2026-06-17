@@ -9,8 +9,10 @@ sourceUrl: "https://www.enterprise.gov.ie"
 significance: "high"
 entities: ["Ireland", "European Union", "EuroHPC JU", "University of Galway", "ICHEC", "Digital Europe Programme", "AI Office of Ireland"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-17, note: "Ireland launches procurement for CASPIr supercomputer to address critical AI research infrastructure gap ahead of EU presidency.", sourceUrl: "https://www.thefitzwilliam.com/p/irelands-ai-research-gap" }
 draft: false
+updatedDate: 2026-06-17
 ---
 
 ## Ireland Steps Up as an AI Governance Leader During EU Presidency

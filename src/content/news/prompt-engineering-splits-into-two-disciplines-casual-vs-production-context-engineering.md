@@ -9,8 +9,10 @@ sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-20
 significance: "high"
 entities: ["Claude", "Gemini", "GPT-4o", "LangChain", "Hugging Face", "OpenAI", "Anthropic", "Google"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-17, note: "Anthropic and industry leaders shift focus from static prompts to dynamic context design, fundamentally changing how developers interact with AI systems.", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
 draft: false
+updatedDate: 2026-06-17
 ---
 
 ## The Prompt Engineering Paradigm Shift of 2026

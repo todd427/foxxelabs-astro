@@ -9,8 +9,10 @@ sourceUrl: "https://cyberpsychology.eu"
 significance: "high"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "IADT", "BPS Cyberpsychology Conference", "Psychological Society of Ireland", "University of York", "University of Cambridge"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-17, note: "Leading open-access journal publishes cutting-edge research on adolescent digital habits, online behaviour, and AI ethics as European tech regulation intensifies.", sourceUrl: "https://cyberpsychology.eu/" }
 draft: false
+updatedDate: 2026-06-17
 ---
 
 ## Key Developments

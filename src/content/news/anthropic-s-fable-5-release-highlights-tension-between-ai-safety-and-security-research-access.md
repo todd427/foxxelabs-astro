@@ -9,8 +9,10 @@ sourceUrl: "https://buttondown.com/agent-k/archive/llm-daily-june-12-2026/"
 significance: "high"
 entities: ["Anthropic", "Fable 5", "Mythos 5", "Claude Mythos"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-17, note: "Anthropic's June release of Fable 5 marks a significant capability jump in frontier LLMs, with safety-first design as competitors intensify development pace.", sourceUrl: "https://llm-stats.com/ai-news" }
 draft: false
+updatedDate: 2026-06-17
 ---
 
 ## Anthropic's Safety-First Approach Creates Friction with Security Community

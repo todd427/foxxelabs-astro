@@ -10,11 +10,13 @@ significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "Digital Omnibus", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-17, note: "As Ireland assumes EU Council Presidency on July 1, the Digital Omnibus on AI—a critical amendment package to the EU AI Act—awaits formal adoption with new prohibitions on deepfakes and extended compl", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-06-17, note: "EU lawmakers reach provisional agreement on Digital Omnibus amendments, deferring critical AI Act compliance deadlines and clarifying product safety interactions.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
   - { date: 2026-06-10, note: "European regulators agree on Digital Omnibus amendments, pushing high-risk AI system obligations back to 2027-2028 while introducing new restrictions on intimate imagery and CSAM.", sourceUrl: "https://digital-strategy.ec.europa.eu/en" }
   - { date: 2026-06-08, note: "European negotiators agree on Digital Omnibus amendments, deferring high-risk AI compliance by 16 months while introducing new prohibitions on non-consensual intimate imagery.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-05-29, note: "EU negotiators agree on landmark amendments to AI Act, deferring compliance deadlines and introducing strict prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: false
-updatedDate: 2026-06-10
+updatedDate: 2026-06-17
 ---
 
 ## EU Reshapes AI Regulation with First Major Update to Landmark Framework

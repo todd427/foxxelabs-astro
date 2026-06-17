@@ -9,8 +9,10 @@ sourceUrl: "https://www.prnewswire.com/news-releases/ai-reshapes-global-labour-m
 significance: "high"
 entities: ["PwC", "European Training Foundation", "Anthropic"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-17, note: "PwC's 2026 Global AI Jobs Barometer reveals AI is creating a divergent labour market where human skills command premium wages while entry-level roles split sharply.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
 draft: false
+updatedDate: 2026-06-17
 ---
 
 ## AI Labour Market Transformation: New Data Shows Winners and Losers
