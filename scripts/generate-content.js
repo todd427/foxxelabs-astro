@@ -28,15 +28,6 @@ const client = new Anthropic({ apiKey });
 // Switch to claude-sonnet-4-20250514 here if quality needs a boost.
 const MODEL = 'claude-haiku-4-5-20251001';
 
-// Supabase configuration (optional — pipeline still works without it)
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
-const supabaseEnabled = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
-
-if (!supabaseEnabled) {
-  console.warn('⚠️  Supabase env vars not set — intelligence records will not be saved.');
-}
-
 // Rate limiting configuration
 const MAX_RETRIES = 3;
 const TOKEN_HEADROOM = 5000;
@@ -75,52 +66,6 @@ async function callWithRetry(apiCall, retries = MAX_RETRIES) {
         throw error;
       }
     }
-  }
-}
-
-/**
- * Save an intelligence record to Supabase.
- * Non-fatal — logs a warning if it fails so the pipeline keeps running.
- */
-async function saveToSupabase(postData, topic, slug) {
-  if (!supabaseEnabled) return;
-
-  const record = {
-    topic,
-    category:       postData.category     ?? null,
-    interval:       intervalArg,
-    title:          postData.title         ?? null,
-    summary:        postData.description   ?? null,
-    significance:   postData.significance  ?? 'medium',
-    irish_eu_angle: postData.irish_eu_angle ?? false,
-    entities:       postData.entities      ?? [],
-    sources:        postData.sourceUrl
-      ? [{ url: postData.sourceUrl, title: postData.source ?? postData.sourceUrl }]
-      : [],
-    slug,
-    tags:           postData.tags          ?? [],
-  };
-
-  try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/intelligence_records`, {
-      method:  'POST',
-      headers: {
-        'Content-Type':  'application/json',
-        'apikey':        SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Prefer':        'return=minimal',
-      },
-      body: JSON.stringify(record),
-    });
-
-    if (!res.ok) {
-      const body = await res.text();
-      console.warn(`⚠️  Supabase write failed (${res.status}): ${body}`);
-    } else {
-      console.log(`🗄️  Saved to Supabase: ${slug}`);
-    }
-  } catch (err) {
-    console.warn(`⚠️  Supabase error: ${err.message}`);
   }
 }
 
@@ -186,6 +131,46 @@ async function searchForContent(topic, daysBack) {
   return { response, searchPrompt };
 }
 
+// ── sourceUrl validation ─────────────────────────────────────────────────────
+// The writer frequently emits a publisher homepage (e.g. https://cyberpsychology.eu)
+// instead of the deep article URL that the search actually returned. Bind sourceUrl
+// to a real returned result URL; if it doesn't match one, drop it rather than ship
+// an unverifiable citation.
+function collectSearchResultUrls(searchResponse) {
+  const urls = new Set();
+  for (const block of searchResponse.content || []) {
+    if (block.type !== 'web_search_tool_result') continue;
+    const results = Array.isArray(block.content) ? block.content : [];
+    for (const r of results) {
+      if (r && r.type === 'web_search_result' && r.url) urls.add(r.url);
+    }
+  }
+  return urls;
+}
+
+// Loose match: ignore scheme, leading www., and trailing slash so a returned
+// "https://www.site.com/x/" and an emitted "http://site.com/x" are the same URL.
+// Query/fragment are kept — they can distinguish two articles on one path.
+function normalizeUrl(u) {
+  try {
+    const url = new URL(String(u));
+    const host = url.host.replace(/^www\./, '');
+    const path = url.pathname.replace(/\/+$/, '');
+    return `${host}${path}${url.search}`.toLowerCase();
+  } catch {
+    return String(u).trim().toLowerCase();
+  }
+}
+
+function validateSourceUrl(sourceUrl, returnedUrls) {
+  if (!sourceUrl) return null;
+  const target = normalizeUrl(sourceUrl);
+  for (const u of returnedUrls) {
+    if (normalizeUrl(u) === target) return u; // canonicalise to the returned form
+  }
+  return null;
+}
+
 async function generateNewsPost(search, topic) {
   console.log(`✍️  Generating news post...`);
 
@@ -211,11 +196,14 @@ REQUIREMENTS:
 - Significance: Rate as "high", "medium", or "low" based on industry impact
 - Entities: List key organisations, people, products, or standards mentioned (e.g. ["OpenAI", "GPT-5", "NIST"])
 - Irish/EU angle: true if the story has direct relevance to Ireland or the EU, false otherwise
-- Content: 300-500 words covering:
-  * Key Developments (what happened)
-  * Industry Context (why it matters)
-  * Practical Implications (what it means for builders/users)
-  * Open Questions (what's still unclear)
+- Content: Write only what the search results actually support. Structure and
+  length must follow the grounded substance — there is no fixed section list and
+  no target word count. Use ## headings only where you have real material for them.
+  * If the results yield a headline and a few hard facts, write a tight brief of a
+    few paragraphs. If they yield a rich, multi-part story, write at length.
+  * Do NOT pad. Do NOT manufacture "industry context", "implications", or an
+    "Open Questions" section to fill space. Omitting a section is correct when the
+    sources don't support it; inventing uncertainty or speculation is not.
 - Tone: ${config.style.tone}
 - Approach: ${config.style.approach}
 - ${sourcesNote}
@@ -268,6 +256,15 @@ Generate the post as JSON only, no additional text.`;
 
   const post = JSON.parse(jsonMatch[0]);
 
+  // Bind sourceUrl to a URL the search actually returned. A homepage or invented
+  // link won't match a returned result, so it's dropped rather than published.
+  const returnedUrls = collectSearchResultUrls(searchResponse);
+  const validUrl = validateSourceUrl(post.sourceUrl, returnedUrls);
+  if (post.sourceUrl && !validUrl) {
+    console.warn(`   ⚠️  sourceUrl "${post.sourceUrl}" not among returned results — dropping it.`);
+  }
+  post.sourceUrl = validUrl;
+
   if (post.sourceUrl) {
     const sourceLabel = post.source || post.sourceUrl;
     post.content += `\n\n---\n**Source:** [${sourceLabel}](${post.sourceUrl})`;
@@ -294,17 +291,14 @@ REQUIREMENTS:
 - Reading time: Estimate (e.g., "12 min read")
 - Further reading: 3-5 quality sources with URLs — ${sourcesNote}
 
-CONTENT STRUCTURE:
-## Why This Matters
-## The Map: [Framework/Taxonomy]
-## Practical Uses
-## Tradeoffs & Failure Modes
-## What Changed Recently
-## What to Watch Next
-## Foxxe Take
+CONTENT: Write a substantive guide grounded in the search results. Let the depth of
+your sources set the length and the sections — do not pad to a target word count and
+do not invent claims to fill a section. These headings are a menu, not a checklist;
+use the ones the material supports and drop the rest:
+  Why This Matters · The Map (framework/taxonomy) · Practical Uses ·
+  Tradeoffs & Failure Modes · What Changed Recently · What to Watch Next · Foxxe Take
 
 TONE: ${config.style.tone}
-LENGTH: 1500-2000 words
 
 Output as JSON:
 {
@@ -408,7 +402,6 @@ async function main() {
     try {
       const postData = await generateResourcePost(topic);
       const slug = createMarkdownFile(postData, 'resource');
-      await saveToSupabase(postData, topic, slug);
 
       console.log('\n✨ Done!');
       console.log(`📄 Review the draft at: src/content/resources/${slug}.md`);
@@ -461,7 +454,6 @@ async function main() {
         }
 
         const slug = createMarkdownFile(postData, 'news');
-        await saveToSupabase(postData, topic, slug);
         created.push(slug);
 
         // Make this run's new story immediately matchable by later topics
