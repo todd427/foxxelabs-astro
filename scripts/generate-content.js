@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { loadCorpusWindow, findDuplicate, appendUpdate, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
+import { normalizeUrl, resolveSourceUrl, normalizeClaim, appendClaims } from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -131,11 +132,10 @@ async function searchForContent(topic, daysBack) {
   return { response, searchPrompt };
 }
 
-// ── sourceUrl validation ─────────────────────────────────────────────────────
+// ── URL grounding ────────────────────────────────────────────────────────────
 // The writer frequently emits a publisher homepage (e.g. https://cyberpsychology.eu)
-// instead of the deep article URL that the search actually returned. Bind sourceUrl
-// to a real returned result URL; if it doesn't match one, drop it rather than ship
-// an unverifiable citation.
+// instead of the deep article URL the search actually returned. We bind every
+// sourceUrl to a real returned/fetched URL; an unmatched link is dropped, not shipped.
 function collectSearchResultUrls(searchResponse) {
   const urls = new Set();
   for (const block of searchResponse.content || []) {
@@ -148,120 +148,192 @@ function collectSearchResultUrls(searchResponse) {
   return urls;
 }
 
-// Loose match: ignore scheme, leading www., and trailing slash so a returned
-// "https://www.site.com/x/" and an emitted "http://site.com/x" are the same URL.
-// Query/fragment are kept — they can distinguish two articles on one path.
-function normalizeUrl(u) {
-  try {
-    const url = new URL(String(u));
-    const host = url.host.replace(/^www\./, '');
-    const path = url.pathname.replace(/\/+$/, '');
-    return `${host}${path}${url.search}`.toLowerCase();
-  } catch {
-    return String(u).trim().toLowerCase();
+// ── Step 2: fetch-then-extract claims ────────────────────────────────────────
+// The binding constraint upstream was grounding DEPTH: the writer only ever saw
+// search snippets, never article bodies, so the mandated sections forced padding.
+// Here we web_fetch the real article(s) behind the chosen result URLs and extract
+// grounded claims-with-URLs from the FULL text. The writer then renders from the
+// claims — structure follows claim count, not a fixed template.
+//
+// web_fetch can only fetch URLs already in the conversation, so we run this as a
+// continuation of the search turn: the search-result URLs are in context and thus
+// fetchable. web_fetch_20250910 needs no beta header (plain server tool, like
+// web_search); if a future API change requires one, add it on the create() call.
+const EXTRACT_MODEL = MODEL;       // bump to a Sonnet id here if calibration shows Haiku under-extracts
+const MAX_FETCH_URLS = 2;          // fetch the top 1-2 results, not everything
+const SERVER_TOOL_CONTINUATIONS = 4;
+
+function collectFetchOutcomes(content) {
+  const out = [];
+  for (const block of content || []) {
+    if (block.type !== 'web_fetch_tool_result') continue;
+    const c = block.content || {};
+    if (c.type === 'web_fetch_result') out.push({ url: c.url, ok: true });
+    else if (c.type === 'web_fetch_tool_error') out.push({ url: null, ok: false, error: c.error_code });
   }
+  return out;
 }
 
-function validateSourceUrl(sourceUrl, returnedUrls) {
-  if (!sourceUrl) return null;
-  const target = normalizeUrl(sourceUrl);
-  for (const u of returnedUrls) {
-    if (normalizeUrl(u) === target) return u; // canonicalise to the returned form
-  }
-  return null;
-}
-
-async function generateNewsPost(search, topic) {
-  console.log(`✍️  Generating news post...`);
-
+async function fetchAndExtractClaims(search, topic) {
+  console.log(`📄 Fetching sources and extracting claims...`);
   const { response: searchResponse, searchPrompt } = search;
+  const returnedUrls = collectSearchResultUrls(searchResponse);
+
+  const extractPrompt = `From the search results above, pick the 1-2 MOST significant and relevant article URLs and use the web_fetch tool to retrieve their full text. Then extract the grounded factual claims from what you fetched.
+
+A claim is ONE self-contained assertion that a reader could fact-check against the source — a specific announcement, a data point, a stated prediction, a regulatory fact, or a piece of named analysis. Split compound sentences into separate claims. Do NOT include framing, transitions, or your own commentary.
+
+Rules:
+- Every claim MUST carry the exact source_url you fetched it from.
+- Bind every figure to its stated scope; never merge facts from two different stories.
+- Prefer fetched article bodies. If a fetch fails (paywall/block), you may extract from the search snippets instead, but only facts that are explicitly stated there.
+- confidence: "official" if the source IS the announcing body; "corroborated" if multiple sources in the results state it; otherwise "single-source".
+
+OUTPUT JSON only, no prose:
+{
+  "claims": [
+    {
+      "statement": "one self-contained factual assertion",
+      "claim_type": "announcement|data-point|prediction|regulatory-fact|analysis",
+      "entities": ["Org", "Product", "Standard", "€7M"],
+      "source_url": "https://exact-fetched-url",
+      "source_name": "Publisher name",
+      "event_date": "YYYY-MM-DD or null",
+      "confidence": "single-source|corroborated|official"
+    }
+  ]
+}`;
+
+  const tools = [
+    { type: 'web_search_20250305', name: 'web_search' },
+    { type: 'web_fetch_20250910', name: 'web_fetch', max_uses: MAX_FETCH_URLS, citations: { enabled: false } },
+  ];
+
+  let messages = [
+    { role: 'user', content: searchPrompt },
+    { role: 'assistant', content: searchResponse.content },
+    { role: 'user', content: extractPrompt },
+  ];
+
+  let response = await callWithRetry(() => client.messages.create({
+    model: EXTRACT_MODEL, max_tokens: 4000, tools, messages,
+  }));
+
+  // Server-side tools run their loop inside one call, but if web_fetch hits the
+  // iteration cap the response pauses — re-send the accumulated turn to resume.
+  const fetchOutcomes = [];
+  let guard = 0;
+  while (response.stop_reason === 'pause_turn' && guard++ < SERVER_TOOL_CONTINUATIONS) {
+    fetchOutcomes.push(...collectFetchOutcomes(response.content));
+    messages = [...messages, { role: 'assistant', content: response.content }];
+    response = await callWithRetry(() => client.messages.create({
+      model: EXTRACT_MODEL, max_tokens: 4000, tools, messages,
+    }));
+  }
+  fetchOutcomes.push(...collectFetchOutcomes(response.content));
+
+  const fetchedOkUrls = fetchOutcomes.filter((o) => o.ok && o.url).map((o) => o.url);
+  const grounding = fetchedOkUrls.length > 0 ? 'fetched' : 'snippet';
+
+  const text = response.content
+    .filter((b) => b.type === 'text').map((b) => b.text).join('\n');
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  let raw = [];
+  if (jsonMatch) {
+    try { raw = JSON.parse(jsonMatch[0]).claims || []; }
+    catch { console.warn('   ⚠️  claim JSON did not parse; treating as zero claims.'); }
+  }
+
+  // A claim's source must resolve to a URL we actually fetched or the search
+  // returned; with exactly one fetched URL we can attribute an unlabelled claim.
+  const validUrls = new Set([...returnedUrls, ...fetchedOkUrls]);
+  const fallbackUrl = fetchedOkUrls.length === 1 ? fetchedOkUrls[0] : null;
+  const observedDate = new Date().toISOString().split('T')[0];
+  const claims = raw
+    .map((c) => normalizeClaim(c, { grounding, validUrls, observedDate, fallbackUrl }))
+    .filter(Boolean);
+
+  const okCount = fetchOutcomes.filter((o) => o.ok).length;
+  const errCodes = fetchOutcomes.filter((o) => !o.ok).map((o) => o.error);
+  console.log(`   fetched ${okCount}/${fetchOutcomes.length} URL(s)` +
+    (errCodes.length ? ` (errors: ${errCodes.join(', ')})` : '') +
+    ` → ${claims.length} claim(s) [${grounding}].`);
+
+  return { claims, grounding };
+}
+
+async function generateNewsPost(claims, topic) {
+  console.log(`✍️  Rendering post from ${claims.length} claim(s)...`);
 
   const topicSources = getSourcesForTopic(topic);
   const sourcesNote = topicSources.length
-    ? `Preferred sources for citation: ${topicSources.join(', ')}. Cite these where the search results include them.`
+    ? `Preferred sources where the claims include them: ${topicSources.join(', ')}.`
     : '';
 
-  // NOTE: the old title-list "avoid duplication" instruction has been removed.
-  // It asked the model for "a meaningfully different angle" on the same story,
-  // which is precisely what produced near-duplicates. Deduplication is now
-  // handled deterministically post-generation by the dedupe gate (dedupe.js).
+  // Render strictly from the extracted claims — the claims ARE the grounding, so
+  // there is no search replay and no way to introduce an ungrounded fact. The
+  // dedupe gate downstream (dedupe.js) handles near-duplicate stories.
+  const claimsBlock = JSON.stringify(
+    claims.map(({ statement, claim_type, entities, source_url, source_name, event_date, confidence }) =>
+      ({ statement, claim_type, entities, source_url, source_name, event_date, confidence })),
+    null, 2);
 
-  const prompt = `Based on the search results above, write a news post for Foxxe Labs following this format:
+  const prompt = `Write a Foxxe Labs news post STRICTLY from the verified claims below. Every figure, name, date, and quote in your post must trace to one of these claims. Do NOT add any fact, figure, or attribution that is not in the claims.
+
+VERIFIED CLAIMS:
+${claimsBlock}
 
 REQUIREMENTS:
-- Title: Clear, specific headline
-- Description: One compelling sentence (120-160 chars)
-- Category: Choose from: ${config.newsCategories.join(', ')}
+- Title: clear, specific headline drawn from the most significant claim
+- Description: one compelling sentence (120-160 chars)
+- Category: choose from: ${config.newsCategories.join(', ')}
 - Tags: 2-4 relevant tags
-- Significance: Rate as "high", "medium", or "low" based on industry impact
-- Entities: List key organisations, people, products, or standards mentioned (e.g. ["OpenAI", "GPT-5", "NIST"])
-- Irish/EU angle: true if the story has direct relevance to Ireland or the EU, false otherwise
-- Content: Write only what the search results actually support. Structure and
-  length must follow the grounded substance — there is no fixed section list and
-  no target word count. Use ## headings only where you have real material for them.
-  * If the results yield a headline and a few hard facts, write a tight brief of a
-    few paragraphs. If they yield a rich, multi-part story, write at length.
-  * Do NOT pad. Do NOT manufacture "industry context", "implications", or an
-    "Open Questions" section to fill space. Omitting a section is correct when the
-    sources don't support it; inventing uncertainty or speculation is not.
+- Significance: "high" | "medium" | "low" by industry impact
+- Entities: the canonical orgs/people/products/standards across the claims
+- Irish/EU angle: true if the claims show direct Ireland/EU relevance, else false
+- sourceUrl: the source_url of the single most significant claim
+- Content: structure and length FOLLOW the claims. Many claims → as many ## sections
+  as the material warrants; few claims → a tight brief of a paragraph or two. Do NOT
+  pad, do NOT manufacture an "Open Questions" or "Implications" section, and do NOT
+  speculate beyond the claims. Lead with the most significant claim; keep distinct
+  stories clearly separated and never merge their figures or attributions.
 - Tone: ${config.style.tone}
 - Approach: ${config.style.approach}
 - ${sourcesNote}
 
-FACTUAL ACCURACY (hard rules — these override everything else):
-- Bind every figure to its exact scope as stated in the sources. If a number describes an overall programme, fund, or multi-part initiative, do NOT attribute it to a single component of that initiative — and never attach a single component's figure to the whole. When scope could be misread, state it explicitly (e.g. "across all seven centres").
-- "source" must be the originating publisher or announcing institution of the PRIMARY story — the body that made the announcement — not an organisation merely mentioned in coverage or in a different story from the same search.
-- If the search results contain more than one distinct story, lead with the most significant one and keep any others clearly separated as secondary context. Never merge facts, figures, names, or attributions from different stories into a single claim.
-- Do not state any specific figure, name, date, or quote that does not appear in the search results.
-
-OUTPUT FORMAT (JSON):
+OUTPUT FORMAT (JSON only, no other text):
 {
-  "title": "Post title",
-  "description": "One-sentence description",
-  "category": "Category",
+  "title": "...",
+  "description": "...",
+  "category": "...",
   "tags": ["tag1", "tag2"],
   "source": "Primary source name",
   "sourceUrl": "https://...",
   "significance": "high|medium|low",
   "entities": ["Entity1", "Entity2"],
   "irish_eu_angle": true,
-  "content": "Full markdown content with ## headings"
-}
+  "content": "Full markdown content"
+}`;
 
-Generate the post as JSON only, no additional text.`;
-
-  // Replay the search turn in full — including web_search_tool_result blocks —
-  // so the writer reasons over the actual source snippets rather than a lossy
-  // text-only summary. The web_search tool definition must be present for the
-  // API to accept the replayed tool-result blocks.
   const response = await callWithRetry(() => client.messages.create({
     model: MODEL,
     max_tokens: 4000,
-    tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-    messages: [
-      { role: 'user', content: searchPrompt },
-      { role: 'assistant', content: searchResponse.content },
-      { role: 'user', content: prompt }
-    ]
+    messages: [{ role: 'user', content: prompt }],
   }));
 
-  // With tools enabled, content[0] is not guaranteed to be a text block.
   const text = response.content
-    .filter(block => block.type === 'text')
-    .map(block => block.text)
-    .join('\n');
-
+    .filter((block) => block.type === 'text').map((block) => block.text).join('\n');
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error('Failed to extract JSON from response');
 
   const post = JSON.parse(jsonMatch[0]);
 
-  // Bind sourceUrl to a URL the search actually returned. A homepage or invented
-  // link won't match a returned result, so it's dropped rather than published.
-  const returnedUrls = collectSearchResultUrls(searchResponse);
-  const validUrl = validateSourceUrl(post.sourceUrl, returnedUrls);
-  if (post.sourceUrl && !validUrl) {
-    console.warn(`   ⚠️  sourceUrl "${post.sourceUrl}" not among returned results — dropping it.`);
+  // Bind sourceUrl to a claim's source_url — those are already real fetched URLs.
+  const claimUrls = new Set(claims.map((c) => c.source_url));
+  const validUrl = resolveSourceUrl(post.sourceUrl, claimUrls)
+    ?? (claims[0] ? claims[0].source_url : null);
+  if (post.sourceUrl && !resolveSourceUrl(post.sourceUrl, claimUrls)) {
+    console.warn(`   ⚠️  sourceUrl "${post.sourceUrl}" not among claim sources — using lead claim's source.`);
   }
   post.sourceUrl = validUrl;
 
@@ -430,7 +502,19 @@ async function main() {
     for (const topic of topics) {
       try {
         const searchResults = await searchForContent(topic, daysBack);
-        const postData = await generateNewsPost(searchResults, topic);
+
+        // Capture deep: fetch the real article(s) and extract grounded claims.
+        const { claims } = await fetchAndExtractClaims(searchResults, topic);
+        if (!claims.length) {
+          // Novelty-by-construction: no grounded claims → no article. This is the
+          // structural cure for "no major releases" filler — we render only when
+          // there is real captured substance, never to fill the cycle.
+          console.log(`↳ No grounded claims for "${topic}" — nothing to publish (no padding).`);
+          continue;
+        }
+
+        // Render from capture.
+        const postData = await generateNewsPost(claims, topic);
 
         const candidate = makeStory({
           title:       postData.title,
@@ -441,6 +525,9 @@ async function main() {
 
         const hit = findDuplicate(candidate, corpus);
         if (hit) {
+          // Persist the claims under the matched story (step 3 folds the novel
+          // ones into its timeline; here we keep the claim store complete).
+          appendClaims(claims.map((c) => ({ ...c, story_id: hit.match.slug })));
           appendUpdate(hit.match.file, {
             date:      todayStr,
             note:      postData.description,
@@ -454,6 +541,7 @@ async function main() {
         }
 
         const slug = createMarkdownFile(postData, 'news');
+        appendClaims(claims.map((c) => ({ ...c, story_id: slug })));
         created.push(slug);
 
         // Make this run's new story immediately matchable by later topics
