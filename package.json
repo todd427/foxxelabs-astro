@@ -14,6 +14,8 @@
     "dedupe-report": "node scripts/dedupe.js report",
     "collapse-review": "node scripts/dedupe.js review",
     "collapse-apply": "node scripts/dedupe.js apply",
+    "build-entities": "node scripts/entities.js build",
+    "build-refdb": "node scripts/build-refdb.js build",
     "frontier": "node scripts/frontier.js"
   },
   "dependencies": {
