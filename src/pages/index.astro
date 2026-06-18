@@ -21,6 +21,64 @@ const latestNews = news
 
 <BaseLayout title="Foxxe Labs">
 
+  <!-- ── LLM Observatory · live globe hero ── -->
+  <section class="obs-hero">
+    <div class="obs-hero-stage" id="obsHeroStage">
+      <iframe id="obsHeroFrame" src="/llm-observatory/" title="The Expanding Universe of Large Language Models — live globe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
+    </div>
+    <div class="obs-hero-overlay">
+      <div class="obs-hero-copy">
+        <div class="obs-hero-eyebrow">FoxxeLabs Research · Interactive</div>
+        <h2 class="obs-hero-title">The Expanding Universe of LLMs</h2>
+        <p class="obs-hero-sub">Watch every landmark model bloom across the globe — 2017 to today, on a live, playable map of the field.</p>
+        <span class="obs-hero-btn">Open the live globe →</span>
+      </div>
+    </div>
+    <a class="obs-hero-hit" href="/llm-observatory/" aria-label="Open the LLM Observatory"></a>
+  </section>
+
+  <script is:inline>
+  (function () {
+    var frame = document.getElementById('obsHeroFrame');
+    var stage = document.getElementById('obsHeroStage');
+    if (!frame || !stage) return;
+    function fit() {
+      var w = stage.clientWidth, h = stage.clientHeight;
+      var s = Math.max(w / 1920, h / 1080);
+      frame.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+    }
+    window.addEventListener('resize', fit);
+    fit();
+    var tries = 0;
+    function start() {
+      try {
+        var d = frame.contentDocument;
+        var btns = [].slice.call(d.querySelectorAll('button'));
+        var play = btns.filter(function (x) { return x.textContent.trim() === '▶'; })[0];
+        if (play) {
+          play.click();
+          var sp = btns.filter(function (x) { return x.textContent.trim() === '1×'; })[0];
+          if (sp) sp.click();
+          return;
+        }
+      } catch (e) {}
+      if (tries++ < 60) setTimeout(start, 300);
+    }
+    frame.addEventListener('load', function () {
+      fit();
+      setTimeout(start, 500);
+      // loop the timeline so the hero keeps blooming
+      setInterval(function () {
+        try {
+          var d = frame.contentDocument;
+          var rb = [].slice.call(d.querySelectorAll('button')).filter(function (x) { return x.textContent.trim() === '↻'; })[0];
+          if (rb) rb.click();
+        } catch (e) {}
+      }, 2000);
+    });
+  })();
+  </script>
+
   <!-- Featured Research Banner -->
   <section class="featured-research">
     <div class="featured-label">Featured Research</div>
@@ -233,6 +291,62 @@ const latestNews = news
 </BaseLayout>
 
 <style>
+  /* ── LLM Observatory · live globe hero ── */
+  .obs-hero {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #05070e;
+    height: clamp(300px, 40vw, 520px);
+    margin-bottom: 18px;
+    box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 70px rgba(91,140,255,.05);
+  }
+  .obs-hero-stage { position: absolute; inset: 0; overflow: hidden; }
+  #obsHeroFrame {
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 1920px; height: 1080px;
+    border: 0;
+    transform-origin: center;
+    pointer-events: none;
+  }
+  .obs-hero-overlay {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    display: flex; align-items: center;
+    background:
+      linear-gradient(to right, rgba(3,5,12,.92) 0%, rgba(3,5,12,.5) 44%, rgba(3,5,12,0) 74%),
+      linear-gradient(to top, rgba(3,5,12,.7), transparent 55%);
+  }
+  .obs-hero-copy { padding: 0 clamp(24px, 5vw, 56px); max-width: 560px; }
+  .obs-hero-eyebrow {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+    color: #7aa2ff; font-weight: 700; margin-bottom: 12px;
+  }
+  .obs-hero-title {
+    font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+    line-height: 1.05; margin: 0 0 12px;
+    color: #eef2fb; letter-spacing: -.01em;
+  }
+  .obs-hero-sub {
+    font-size: 1rem; line-height: 1.55;
+    color: #aab6d4; margin: 0 0 20px; max-width: 42ch;
+  }
+  .obs-hero-btn {
+    display: inline-block;
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+    color: #bfe6f5;
+    border: 1px solid rgba(120,205,240,.5);
+    background: rgba(120,205,240,.12);
+    border-radius: 10px; padding: 11px 18px;
+    transition: background .25s ease, border-color .25s ease;
+  }
+  .obs-hero-hit { position: absolute; inset: 0; z-index: 3; }
+  .obs-hero:hover .obs-hero-btn { background: rgba(120,205,240,.2); border-color: rgba(120,205,240,.85); }
+
   /* ── Featured Research Banner ── */
   .featured-research {
     background: color-mix(in srgb, var(--card) 80%, transparent);
