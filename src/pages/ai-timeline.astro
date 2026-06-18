@@ -35,9 +35,25 @@ import AITimeline from '../components/AITimeline.jsx';
     <AITimeline client:load />
   </section>
 
+  <a class="globe-cta card" href="/llm-observatory/">
+    <div class="globe-copy">
+      <div class="eyebrow">Interactive · full screen</div>
+      <h2>The Expanding Universe of Large Language Models</h2>
+      <p>
+        A dark-observatory globe that grows the whole model landscape from the 2017
+        Transformer to today — a curated ~100 models plotted on the city of their lab,
+        sized by parameters, raised by capability, and coloured by maker, with a
+        playable timeline, usage-flow arcs, and sound.
+      </p>
+    </div>
+    <span class="globe-go">Open the globe <span class="arr">→</span></span>
+  </a>
+
   <footer class="page-footer card">
     <p>
       Related research: &nbsp;
+      <a href="/llm-observatory/">The Expanding Universe of LLMs</a>
+      &nbsp;·&nbsp;
       <a href="/ai-bubble/index.html">Managing the AI Bubble</a>
       &nbsp;·&nbsp;
       <a href="/after-the-bubble/index.html">After the Bubble: What Comes Next?</a>
@@ -87,6 +103,36 @@ import AITimeline from '../components/AITimeline.jsx';
     border: 1px solid var(--border);
   }
 
+  /* Featured link to the standalone interactive globe (public/llm-observatory) */
+  .globe-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .globe-cta:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  }
+  .globe-copy { flex: 1; min-width: 280px; }
+  .globe-copy h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -.01em; }
+  .globe-copy p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.6; max-width: 70ch; }
+  .globe-go {
+    font-family: var(--font-mono);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .globe-go .arr { display: inline-block; transition: transform .25s ease; }
+  .globe-cta:hover .arr { transform: translateX(4px); }
+
   .page-footer {
     font-size: .95rem;
   }
@@ -94,5 +140,9 @@ import AITimeline from '../components/AITimeline.jsx';
   .page-footer p {
     margin: 0;
     color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .globe-cta, .arr { transition: none; }
   }
 </style>
