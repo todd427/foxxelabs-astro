@@ -24,7 +24,7 @@ const latestNews = news
   <!-- ── LLM Observatory · live globe hero ── -->
   <section class="obs-hero">
     <div class="obs-hero-stage" id="obsHeroStage">
-      <iframe id="obsHeroFrame" src="/llm-observatory/" title="The Expanding Universe of Large Language Models — live globe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
+      <iframe id="obsHeroFrame" src="/llm-observatory/view.html" title="The Expanding Universe of Large Language Models — live globe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
     </div>
     <div class="obs-hero-overlay">
       <div class="obs-hero-copy">
@@ -34,7 +34,7 @@ const latestNews = news
         <span class="obs-hero-btn">Open the live globe →</span>
       </div>
     </div>
-    <a class="obs-hero-hit" href="/llm-observatory/" aria-label="Open the LLM Observatory"></a>
+    <a class="obs-hero-hit" href="/llm-observatory/view.html" aria-label="Open the LLM Observatory"></a>
   </section>
 
   <script is:inline>
@@ -49,33 +49,7 @@ const latestNews = news
     }
     window.addEventListener('resize', fit);
     fit();
-    var tries = 0;
-    function start() {
-      try {
-        var d = frame.contentDocument;
-        var btns = [].slice.call(d.querySelectorAll('button'));
-        var play = btns.filter(function (x) { return x.textContent.trim() === '▶'; })[0];
-        if (play) {
-          play.click();
-          var sp = btns.filter(function (x) { return x.textContent.trim() === '1×'; })[0];
-          if (sp) sp.click();
-          return;
-        }
-      } catch (e) {}
-      if (tries++ < 60) setTimeout(start, 300);
-    }
-    frame.addEventListener('load', function () {
-      fit();
-      setTimeout(start, 500);
-      // loop the timeline so the hero keeps blooming
-      setInterval(function () {
-        try {
-          var d = frame.contentDocument;
-          var rb = [].slice.call(d.querySelectorAll('button')).filter(function (x) { return x.textContent.trim() === '↻'; })[0];
-          if (rb) rb.click();
-        } catch (e) {}
-      }, 2000);
-    });
+    frame.addEventListener('load', fit);
   })();
   </script>
 
