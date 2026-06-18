@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Expanding Universe of LLMs · Foxxe Labs</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #03050c; overflow: hidden; }
+  #stage { position: fixed; inset: 0; }
+  /* The globe is a fixed 1920x1080 design; scale it to fit any viewport, centered. */
+  #frame { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; border: 0; transform-origin: center; }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <iframe id="frame" src="./index.html" title="The Expanding Universe of Large Language Models" allow="autoplay"></iframe>
+  </div>
+  <script>
+  (function () {
+    var f = document.getElementById('frame');
+    var embedded = window.self !== window.top;   // true when used as the homepage hero
+    function fit() {
+      var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      f.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+    }
+    window.addEventListener('resize', fit);
+    fit();
+    var tries = 0;
+    function start() {
+      try {
+        var d = f.contentDocument;
+        var btns = [].slice.call(d.querySelectorAll('button'));
+        var play = btns.filter(function (x) { return x.textContent.trim() === '\u25B6'; })[0];
+        if (play) {
+          play.click();
+          if (embedded) {
+            var sp = btns.filter(function (x) { return x.textContent.trim() === '1\u00D7'; })[0];
+            if (sp) sp.click(); // 2x in the hero so it blooms quickly
+          }
+          return;
+        }
+      } catch (e) {}
+      if (tries++ < 60) setTimeout(start, 300);
+    }
+    f.addEventListener('load', function () {
+      fit();
+      setTimeout(start, 500);
+      if (embedded) {
+        // loop the timeline so the hero keeps blooming
+        setInterval(function () {
+          try {
+            var d = f.contentDocument;
+            var rb = [].slice.call(d.querySelectorAll('button')).filter(function (x) { return x.textContent.trim() === '\u21BB'; })[0];
+            if (rb) rb.click();
+          } catch (e) {}
+        }, 2000);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
