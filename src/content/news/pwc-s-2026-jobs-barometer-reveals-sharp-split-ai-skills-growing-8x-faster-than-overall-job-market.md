@@ -10,9 +10,32 @@ significance: "high"
 entities: ["PwC", "European Training Foundation", "Anthropic"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-18, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion jobs advertisements across six continents", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Jobs requiring specific AI skills are growing 69% faster than the total jobs market at 9% growth", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "The average wage premium for AI skills reached 62%, up from 57% in the previous year", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "AI-exposed entry-level roles are seven times more likely to require traditionally senior-level skills like leadership and creativity", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "'Seniorised' entry-level roles grew 35% since 2019, while other entry-level roles declined 10%", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Companies most able to use AI achieved labour productivity gains of 163% ('super-star' effect), nearly five times higher than the most AI-exposed companies overall", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Companies most AI-exposed saw headcount growth of 52% versus 36% for least AI-exposed companies in 2025 on 2018 baseline", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Technology, media and telecommunications sector saw 11% share of AI job growth, while professional services saw 6% and health saw less than 1%", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "'Professionalised' roles are seeing twice the growth in available jobs and 42% faster salary growth than 'democratised' roles", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Productivity growth was 34% for companies in most AI-exposed sectors relative to 2018, versus 24% for least AI-exposed companies", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-18, note: "Anthropic's observed exposure measure combines theoretical LLM capability and real-world usage data, weighting automated and work-related uses more heavily", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Computer programmers are most exposed to AI with 75% task coverage in Anthropic's analysis, followed by customer service representatives", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Data entry keyers are 67% covered by AI capability in Anthropic's analysis", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "30% of workers have zero AI coverage, including cooks, motorcycle mechanics, lifeguards, bartenders, dishwashers and dressing room attendants", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "For every 10 percentage point increase in Anthropic's observed exposure measure, BLS employment growth projections drop by 0.6 percentage points", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Workers most exposed to AI are 16 percentage points more likely to be female, 11 percentage points more likely to be white, and almost twice as likely to be Asian compared to unexposed workers", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Workers most exposed to AI earn 47% more on average than unexposed workers", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Graduate degree holders comprise 17.4% of the most AI-exposed group versus 4.5% of unexposed workers", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Anthropic found no systematic increase in unemployment for highly exposed workers since late 2022", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Job finding rates for workers aged 22-25 entering highly exposed occupations fell by about 14% post-ChatGPT compared to 2022", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "97% of tasks observed in Anthropic Economic Index reports fall into categories rated as theoretically feasible by Eloundou et al.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Claude usage accounts for 68% of observed tasks rated as fully feasible for LLM alone (β=1), while 3% account for tasks not feasible (β=0)", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-06-18, note: "Claude currently covers 33% of all tasks in the Computer & Math occupational category", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
   - { date: 2026-06-17, note: "PwC's 2026 Global AI Jobs Barometer reveals AI is creating a divergent labour market where human skills command premium wages while entry-level roles split sharply.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
 draft: false
-updatedDate: 2026-06-17
+updatedDate: 2026-06-18
 ---
 
 ## AI Labour Market Transformation: New Data Shows Winners and Losers

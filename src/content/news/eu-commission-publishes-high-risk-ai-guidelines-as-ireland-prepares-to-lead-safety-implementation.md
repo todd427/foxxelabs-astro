@@ -9,8 +9,20 @@ sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high
 significance: "high"
 entities: ["European Commission", "EU AI Act", "Ireland", "AI Office of Ireland", "High-Risk AI Systems (HRAIS)"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-18, note: "The European Commission published draft, non-binding guidelines on the classification of high-risk AI systems on 19 May 2026.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
+  - { date: 2026-06-18, note: "Draft guidelines on high-risk AI systems are open for public consultation until 23 June 2026.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
+  - { date: 2026-06-18, note: "Complex systems made up of several AI components, including agentic AI systems, must be assessed holistically and cannot rely on the Article 6(3) filter individually unless genuinely separable.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
+  - { date: 2026-06-18, note: "Emotion recognition systems that infer emotions or intentions from biometric signals such as voice, facial expressions, or posture are classified as high-risk under Annex III.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
+  - { date: 2026-06-18, note: "For fraud detection exception under point 5(b) of Annex III, an AI system's main intended use must be fraud detection; systems primarily used for creditworthiness evaluation are high-risk.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
+  - { date: 2026-06-18, note: "Research Ireland and the Irish Government are investing €17m across nine infrastructure projects in STEM fields including semiconductors, medical devices, quantum and AI computing.", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
+  - { date: 2026-06-18, note: "The largest individual infrastructure award is €4.67m for an advanced semiconductor processing and characterisation facility for multifunctional thin-film materials at Tyndall National Institute, led ", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
+  - { date: 2026-06-18, note: "An atomic layer etch diagnostic platform at Dublin City University, overseen by Prof Deborah O'Connell, will be funded to the tune of €2.89m for developing and studying materials at the atomic scale.", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
+  - { date: 2026-06-18, note: "A medical device innovation network will receive €1.97m to establish a national research facility developed in partnership between the University of Galway and RCSI.", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
+  - { date: 2026-06-18, note: "Of the nine lead researchers affiliated with the new Irish facilities, six are women and three are men.", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
+  - { date: 2026-06-18, note: "The nine infrastructure awards are allocated across three facilities in advanced materials, two in semiconductors and chips, and one each in high-speed communications, medical devices, geoengineering,", sourceUrl: "https://www.siliconrepublic.com/innovation/ireland-to-invest-e17m-in-leading-facilities-for-ai-medtech-and-more-quantum-materials-semiconductors" }
 draft: false
+updatedDate: 2026-06-18
 ---
 
 ## EU Charts Course on High-Risk AI Implementation—Ireland Steps Up

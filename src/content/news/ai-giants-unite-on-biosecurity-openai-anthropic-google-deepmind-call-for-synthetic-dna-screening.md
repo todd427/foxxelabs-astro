@@ -10,9 +10,17 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Google DeepMind", "Microsoft AI", "US Congress", "GPT-Rosalind"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-18, note: "A coalition of AI leaders, biotechnology executives, scientists, public health experts and national security officials sent a letter to U.S. lawmakers calling for legislation to require companies that", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "Signatories to the synthetic DNA screening letter include the CEOs of Google DeepMind, Anthropic, Microsoft AI and OpenAI, as well as executives at academic institutions, Nobel laureates, DNA synthesi", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "The letter states that advances in AI could make it easier for bad actors to design and re-create dangerous pathogens, and that AI systems improving rapidly means knowledge barriers which have histori", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "The signatories are requesting federal legislation that requires providers of synthesized DNA and manufacturers of synthesis machines to keep detailed records, verify customer legitimacy before shippi", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "On June 10, 2026, Anthropic announced the launch of Claude Fable 5 and Mythos 5, which the company said exceed any model made generally available and demonstrate exceptional capabilities in scientific", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "Anthropic's Claude Fable 5 and Mythos 5 models demonstrated strong biological reasoning by completing a complex gene therapy research task involving adeno-associated viruses (AAVs), a capability Anthr", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "On June 10, 2026, Anthropic announced it was disabling access to Fable 5 and Mythos 5 for all customers to ensure compliance with a U.S. government export control directive that required suspension of", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
+  - { date: 2026-06-18, note: "The International Gene Synthesis Consortium was formed in 2009 to develop and implement voluntary safeguards against misuse of synthetic nucleic acids.", sourceUrl: "https://www.mobihealthnews.com/news/openai-google-deepmind-anthropic-request-synthetic-dna-screening-legislation" }
   - { date: 2026-06-12, note: "Four major AI labs warn Congress that AI advances lower barriers to weaponizing synthetic biology, demanding regulatory action on biosecurity threats.", sourceUrl: "https://yellow.com/news/openai-anthropic-google-microsoft-synthetic-dna-congress-letter" }
 draft: false
-updatedDate: 2026-06-12
+updatedDate: 2026-06-18
 ---
 
 ## AI Giants Unite on Biosecurity: OpenAI, Anthropic, Google DeepMind Call for Synthetic DNA Screening
