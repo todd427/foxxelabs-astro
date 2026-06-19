@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-18T11:13:20.148Z",
+  "updatedAt": "2026-06-19T11:22:00.554Z",
   "pick": {
     "id": "microsoft/FastContext-1.0-4B-SFT",
     "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
     "author": "microsoft",
     "name": "FastContext-1.0-4B-SFT",
-    "likes": 191,
-    "downloads": 957,
-    "ageDays": 4,
+    "likes": 212,
+    "downloads": 1437,
+    "ageDays": 5,
     "blurb": "A 4B model fine-tuned on Qwen3 that handles long contexts efficiently, tagged for agentic repo exploration tasks. Two days old with concrete arxiv backing (2606.14066) and MIT license—worth testing if you're building agents that need to traverse codebases.",
     "surfacedAt": "2026-06-16"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 1177,
-      "downloads": 4307,
-      "ageDays": 2
+      "likes": 1429,
+      "downloads": 11871,
+      "ageDays": 3
     },
     {
       "id": "WeiboAI/VibeThinker-3B",
       "url": "https://hf.co/WeiboAI/VibeThinker-3B",
       "author": "WeiboAI",
       "name": "VibeThinker-3B",
-      "likes": 353,
-      "downloads": 6589,
-      "ageDays": 6
-    },
-    {
-      "id": "CohereLabs/North-Mini-Code-1.0",
-      "url": "https://hf.co/CohereLabs/North-Mini-Code-1.0",
-      "author": "CohereLabs",
-      "name": "North-Mini-Code-1.0",
-      "likes": 431,
-      "downloads": 15285,
-      "ageDays": 13
+      "likes": 424,
+      "downloads": 12148,
+      "ageDays": 7
     },
     {
       "id": "lordx64/Qwable-v1",
       "url": "https://hf.co/lordx64/Qwable-v1",
       "author": "lordx64",
       "name": "Qwable-v1",
-      "likes": 109,
-      "downloads": 836,
-      "ageDays": 4
+      "likes": 124,
+      "downloads": 1865,
+      "ageDays": 5
+    },
+    {
+      "id": "CohereLabs/North-Mini-Code-1.0",
+      "url": "https://hf.co/CohereLabs/North-Mini-Code-1.0",
+      "author": "CohereLabs",
+      "name": "North-Mini-Code-1.0",
+      "likes": 453,
+      "downloads": 17693,
+      "ageDays": 14
     },
     {
       "id": "nex-agi/Nex-N2-Pro",
       "url": "https://hf.co/nex-agi/Nex-N2-Pro",
       "author": "nex-agi",
       "name": "Nex-N2-Pro",
-      "likes": 321,
-      "downloads": 6640,
-      "ageDays": 15
+      "likes": 331,
+      "downloads": 7507,
+      "ageDays": 16
     }
   ]
 }

@@ -10,6 +10,15 @@ significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "Digital Omnibus", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-19, note: "The European Parliament approved, by a large majority, legislative amendments to the EU AI Act following a plenary vote on 16 June 2026.", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
+  - { date: 2026-06-19, note: "A political agreement on the Digital Omnibus on AI was reached on 7 May 2026 between negotiators from the Council of the European Union, the European Parliament, and the European Commission.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "The obligations concerning the detection and labelling of AI-generated content (Article 50 of the EU AI Act) will become applicable on 2 December 2026.", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
+  - { date: 2026-06-19, note: "AI systems capable of generating child sexual abuse material are prohibited from being placed on the EU market under amendments to the EU AI Act.", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
+  - { date: 2026-06-19, note: "AI systems capable of creating images, videos, or audio recordings depicting an individual as nude, partially nude, or engaged in sexually explicit conduct without consent are prohibited from being pl", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
+  - { date: 2026-06-19, note: "Eight AI practices are banned under the EU AI Act, including harmful AI-based manipulation and deception, harmful AI-based exploitation of vulnerabilities, social scoring, individual criminal offence ", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "Prohibitions on certain AI systems and AI literacy requirements (Chapter 1 and Chapter 2 of the AI Act) entered into application from 2 February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "AI functionalities that merely provide user assistance or optimise product performance without creating health or safety risks will no longer be automatically classified as high-risk under amendments ", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
+  - { date: 2026-06-19, note: "Personal data may be processed for identifying and mitigating bias in both high-risk and non-high-risk AI systems, subject to appropriate technical and organisational safeguards, under amendments to t", sourceUrl: "https://www.kecoslegal.com/en/post/a-new-phase-for-the-eu-ai-act-european-parliament-approves-legislative-amendments" }
   - { date: 2026-06-18, note: "The AI Act entered into force on 1 August 2024 and will be fully applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-18, note: "Prohibited AI practices and AI literacy obligations entered into application from 2 February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-18, note: "Governance rules and obligations for GPAI models became applicable on 2 August 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -39,7 +48,7 @@ updates:
   - { date: 2026-06-08, note: "European negotiators agree on Digital Omnibus amendments, deferring high-risk AI compliance by 16 months while introducing new prohibitions on non-consensual intimate imagery.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-05-29, note: "EU negotiators agree on landmark amendments to AI Act, deferring compliance deadlines and introducing strict prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: true
-updatedDate: 2026-06-18
+updatedDate: 2026-06-19
 ---
 
 ## EU Reshapes AI Regulation with First Major Update to Landmark Framework

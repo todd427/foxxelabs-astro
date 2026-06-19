@@ -9,8 +9,19 @@ sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framewo
 significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-19, note: "The transparency rules of the AI Act will come into effect in August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "Rules for systems used in certain high-risk areas including biometrics, critical infrastructure, education, employment, migration, asylum and border control will apply from 2 December 2027.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "A prohibition of AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material has been agreed as an amendment to the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "The AI Office's powers have been reinforced and oversight of AI systems built on general-purpose AI models has been centralized to reduce governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "Simplified requirements for small and medium-sized enterprises have been extended to small mid-cap companies, including simplified technical documentation requirements.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-19, note: "The European Commission has published draft non-binding guidelines on high-risk AI system classification under the Digital Omnibus amendments, with a consultation window closing June 23.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-19, note: "The primary Annex III high-risk AI compliance deadline has been deferred by 16 months to December 2, 2027.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-19, note: "The European Commission has published finalized Article 50 transparency guidelines and two standardized AI content labeling icons.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
+updatedDate: 2026-06-19
 ---
 
 ## The EU AI Act's Phased Entry into Force
