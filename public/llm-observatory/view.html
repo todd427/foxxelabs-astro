@@ -5,13 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Expanding Universe of LLMs · Foxxe Labs</title>
 <style>
-  html, body { margin: 0; height: 100%; background: #03050c; overflow: hidden; }
+  html, body { margin: 0; height: 100%; background: #070c18; overflow: hidden; }
   #stage { position: fixed; inset: 0; }
   /* The globe is a fixed 1920x1080 design; scale it to fit any viewport, centered. */
   #frame { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; border: 0; transform-origin: center; }
+  /* Back-to-home link — only shown on the standalone page, hidden in the hero. */
+  #home {
+    position: fixed; top: 18px; left: 20px; z-index: 10; display: none;
+    font: 500 13px/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .04em;
+    color: #cdd6ea; text-decoration: none; padding: 9px 14px; border-radius: 999px;
+    background: rgba(12,20,38,.62); border: 1px solid rgba(255,255,255,.16);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  #home:hover { background: rgba(30,44,74,.72); border-color: rgba(120,205,240,.5); color: #bfe6f5; }
 </style>
 </head>
 <body>
+  <a id="home" href="/" aria-label="Back to Foxxe Labs home">← Foxxe Labs</a>
   <div id="stage">
     <iframe id="frame" src="./index.html" title="The Expanding Universe of Large Language Models" allow="autoplay"></iframe>
   </div>
@@ -19,6 +30,10 @@
   (function () {
     var f = document.getElementById('frame');
     var embedded = window.self !== window.top;   // true when used as the homepage hero
+    if (!embedded) {                             // standalone page → offer a way back home
+      var home = document.getElementById('home');
+      if (home) home.style.display = 'inline-block';
+    }
     function fit() {
       var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
       f.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
