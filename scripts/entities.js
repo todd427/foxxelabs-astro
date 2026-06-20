@@ -35,6 +35,19 @@ const __dirname = path.dirname(__filename);
 const NEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'news');
 export const DICT_PATH = path.join(__dirname, '..', 'data', 'entity-aliases.json');
 
+// Hand-curated alias links the automatic builder cannot derive — the two surface
+// forms share neither a normalised key nor a parenthetical gloss, so only a human
+// knows they are one entity. Merged into every `build --write` so they survive a
+// rebuild, and shipped in data/entity-aliases.json so the live gate sees them
+// without rebuilding. KEEP CONSERVATIVE: a false merge here (two distinct entities
+// collapsed) is the costly error, so list only unambiguous same-entity variants.
+export const MANUAL_ALIASES = {
+  // OpenAI's code-generation model: tagged "Codex", "OpenAI Codex", or "OpenAI's
+  // Codex" across stories — one product, one canonical. (The OpenAI *company*
+  // is deliberately NOT folded in: a company is not its product.)
+  'OpenAI Codex': ['Codex', "OpenAI's Codex"],
+};
+
 /** Normalisation key — the unit aliases collapse to. Same shape as dedupe's
  *  normText so the two agree on what "the same entity" means. */
 export function entityKey(e) {
@@ -159,6 +172,14 @@ export function buildDictionary(newsDir = NEWS_DIR) {
 
     const aliases = [...new Set(forms.map((f) => f.text))].filter((t) => t !== canonical).sort();
     if (aliases.length) dict[canonical] = aliases;
+  }
+
+  // Fold in the hand-curated links the derivation can't see, unioning aliases
+  // into any existing canonical entry.
+  for (const [canonical, aliases] of Object.entries(MANUAL_ALIASES)) {
+    const merged = new Set([...(dict[canonical] || []), ...aliases]);
+    merged.delete(canonical);
+    dict[canonical] = [...merged].sort();
   }
 
   // Stable key order for clean diffs.

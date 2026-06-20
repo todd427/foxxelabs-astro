@@ -9,7 +9,26 @@
  * SIMILARITY (lexical TF-IDF, pure JS):
  *   txt      = cosine(TF-IDF over full text: title + description + body)
  *   ent      = Jaccard(entity sets)
+ *   overlap  = inter / min(|A|,|B|)  — robust to asymmetric set sizes
  *   combined = W_ENTITY * ent + W_TEXT * txt
+ *   event    = same-event signature (shared headline org + salient number)
+ *
+ * Why an event signature, on top of Jaccard: Jaccard divides by the UNION, so the
+ * better the extraction tags an event the larger the union and the LOWER the score
+ * — the entity arm weakens exactly as extraction improves. A richly-tagged 06-18
+ * Patch-Tuesday piece (11 entities) and a sparsely-tagged 06-13 one (6) framed on
+ * federal policy share only ~1 canonical entity, so union-Jaccard ≈ 0.06 and the
+ * AND-gate cannot fire even though they are plainly the same event. The event
+ * signature sidesteps this by reading only the HEADLINE — the core org + the
+ * record-scale number that NAME the event — which the divergent bodies otherwise
+ * dilute. It is a signal fix, not a threshold drop: false MERGE stays worse than
+ * false miss, so it demands a shared org AND a shared record-scale number (plus a
+ * weak cosine floor) before it fires.
+ *
+ * The overlap coefficient (inter / min set size) is also computed and surfaced in
+ * the `score()` result as a calibration signal — it exposes the asymmetric pairs
+ * Jaccard hides — but it is NOT a gate trigger: on this saturated corpus a high
+ * overlap of two small entity sets over-merges distinct same-topic stories.
  *
  * Why TF-IDF, not raw TF: this corpus is topically saturated (Ireland / EU AI
  * Act / cyberpsychology). Raw TF cosine scored *distinct* stories on the same
@@ -35,7 +54,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
-import { aliasCanonical } from './entities.js';
+import { aliasCanonical, entityKey } from './entities.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,8 +69,19 @@ export const NEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'news');
 export const W_ENTITY        = 0.50;
 export const W_TEXT          = 0.50;
 export const DUP_COMBINED    = 0.55;  // entity regime: combined => duplicate
-export const GATE_ENTITY     = 0.34;  // entity regime: AND-gate entity floor
+export const GATE_ENTITY     = 0.34;  // entity regime: AND-gate entity floor (Jaccard)
 export const GATE_TEXT       = 0.35;  // entity regime: AND-gate text floor
+// Event-signature arm: a shared core (headline) entity AND a shared record-scale
+// headline number fold even when union-Jaccard and full-text cosine both miss.
+// SALIENT_NUM_MIN screens out the figures that collide coincidentally on a
+// saturated corpus (percentages, journal-volume numbers, small counts): only
+// record-scale figures (>= 100) are distinctive enough to co-identify an event.
+// EVENT_TXT_FLOOR is a weak cosine guard — the brief's "regardless of body
+// cosine" assumed a richer composite signature; with a plain org+number key a
+// low floor is the cheap defence against an org+number coincidence (e.g.
+// "Anthropic acquires X" vs "Anthropic commits $200M") that would false-merge.
+export const SALIENT_NUM_MIN = 100;
+export const EVENT_TXT_FLOOR = 0.30;
 export const GATE_TEXT_ONLY  = 0.55;  // text-only regime: txt => duplicate
 export const DEFAULT_WINDOW_DAYS = 120;
 
@@ -98,6 +128,79 @@ export function entityJaccard(aEnts = [], bEnts = []) {
   return inter / (A.size + B.size - inter);
 }
 
+// Overlap coefficient: intersection over the SMALLER set, not the union. Jaccard
+// punishes asymmetry (a richly-tagged story drags every pairing down via the
+// union); overlap asks "what fraction of the sparser story's entities does the
+// richer one already cover?" Surfaced in the score() result for calibration only
+// (see header) — it exposes the asymmetric same-event pairs Jaccard hides, but is
+// not a gate trigger.
+export function entityOverlap(aEnts = [], bEnts = []) {
+  const A = new Set(aEnts.map(normEntity).filter(Boolean));
+  const B = new Set(bEnts.map(normEntity).filter(Boolean));
+  if (A.size === 0 || B.size === 0) return 0;
+  let inter = 0;
+  for (const e of A) if (B.has(e)) inter++;
+  return inter / Math.min(A.size, B.size);
+}
+
+// ── Event signature (date-windowed same-event identity) ──────────────────────
+// The headline (title + description) carries the event's identity in two kinds
+// of token the body dilutes: the CORE entities (the org/product the story is
+// about) and the SALIENT numbers (the record count, the CVE tally — the
+// IDF-distinctive figures that name the event). Two windowed stories that share
+// a core entity AND a salient headline number are the same event even when their
+// bodies frame it differently (policy vs patch-detail) — the exact case full-text
+// cosine + union-Jaccard miss. Requiring BOTH a shared org AND a shared number
+// keeps distinct same-org stories ("Microsoft buys X", "Microsoft patches 200")
+// from collapsing. The window is enforced by the caller's corpus, not here.
+const YEAR_RE = /^(?:1[89]|20)\d{2}$/;
+
+/** Record-scale integers in headline text: >= min and not a calendar year.
+ *  The default `min` (SALIENT_NUM_MIN) excludes the small numbers and
+ *  percentages that recur across unrelated stories and would false-merge. */
+export function salientNumbers(text, min = SALIENT_NUM_MIN) {
+  const out = new Set();
+  for (const m of String(text).matchAll(/\d[\d,]*/g)) {
+    const digits = m[0].replace(/,/g, '');
+    if (YEAR_RE.test(digits)) continue;
+    const n = parseInt(digits, 10);
+    if (Number.isFinite(n) && n >= min) out.add(String(n));
+  }
+  return out;
+}
+
+const headline = (s) => `${s.title || ''} ${s.description || ''}`;
+
+/** Canonicalised entities that actually surface in the story's headline (title
+ *  or description) — the entities the story is *about*, not every body tag.
+ *  Matches whole normalised phrases (space-bounded) so short keys like "iis"
+ *  can't match inside unrelated words. */
+export function coreEntities(story) {
+  const hay = ` ${entityKey(headline(story))} `;
+  const out = new Set();
+  for (const e of (story.entities || [])) {
+    const k = entityKey(e);
+    if (k && hay.includes(` ${k} `)) out.add(normEntity(e));
+  }
+  return out;
+}
+
+/** True when a and b are the same event: a shared core (headline) entity AND a
+ *  shared salient headline number. Symmetric. */
+export function sameEvent(a, b) {
+  const aCore = coreEntities(a);
+  if (!aCore.size) return false;
+  const bCore = coreEntities(b);
+  let sharedOrg = false;
+  for (const e of aCore) if (bCore.has(e)) { sharedOrg = true; break; }
+  if (!sharedOrg) return false;
+  const aNum = salientNumbers(headline(a));
+  if (!aNum.size) return false;
+  const bNum = salientNumbers(headline(b));
+  for (const n of aNum) if (bNum.has(n)) return true;
+  return false;
+}
+
 /** Normalise fields only (no vector yet). */
 export function makeStory(s) {
   return { ...s, entities: Array.isArray(s.entities) ? s.entities : [] };
@@ -137,12 +240,16 @@ export function vectorize(story, corpus) {
 export function score(a, b) {
   const txt = cosine(a._vec, b._vec);
   const ent = entityJaccard(a.entities, b.entities);
+  const overlap = entityOverlap(a.entities, b.entities);
   const entitiesPresent = (a.entities?.length > 0) && (b.entities?.length > 0);
   const combined = W_ENTITY * ent + W_TEXT * txt;
-  return { ent, txt, combined, entitiesPresent };
+  // Event arm carries the weak cosine guard so the signature stays a pure check.
+  const event = txt >= EVENT_TXT_FLOOR && sameEvent(a, b);
+  return { ent, overlap, txt, combined, entitiesPresent, event };
 }
 
 export function isDuplicate(s) {
+  if (s.event) return true;   // shared headline org + record-scale number, in-window
   return s.entitiesPresent
     ? ((s.ent >= GATE_ENTITY && s.txt >= GATE_TEXT) || s.combined >= DUP_COMBINED)
     : (s.txt >= GATE_TEXT_ONLY);
