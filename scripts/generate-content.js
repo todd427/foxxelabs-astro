@@ -497,6 +497,16 @@ async function main() {
       console.log(`🗂️  Dedupe window: ${corpus.length} existing stories in scope\n`);
     }
 
+    // Claim-identity index for the dedupe gate: slug -> that story's claims. Built
+    // once, kept in sync as this run creates/folds, so the gate can match on shared
+    // event-claims (the brief's primary signal) before falling back to lexical.
+    const claimsByStory = new Map();
+    for (const cl of loadClaims()) {
+      if (!cl.story_id) continue;
+      if (!claimsByStory.has(cl.story_id)) claimsByStory.set(cl.story_id, []);
+      claimsByStory.get(cl.story_id).push(cl);
+    }
+
     const todayStr = new Date().toISOString().split('T')[0];
     const topics = specificTopic ? [specificTopic] : config.topics;
     const created = [];
@@ -526,12 +536,12 @@ async function main() {
           entities:    Array.isArray(postData.entities) ? postData.entities : [],
         });
 
-        const hit = findDuplicate(candidate, corpus);
+        const hit = findDuplicate(candidate, corpus, { claims, claimsByStory });
         if (hit) {
           // Step 3: a hit folds NOVEL claims into the story's timeline; claims the
           // story already states are CORROBORATION — they raise confidence (via an
           // append-only superseding claim) rather than cluttering the timeline.
-          const storyClaims = loadClaims().filter((c) => c.story_id === hit.match.slug);
+          const storyClaims = claimsByStory.get(hit.match.slug) || [];
           const { novel, corroborating } = foldIncomingClaims(claims, storyClaims);
 
           const toPersist = novel.map((c) => ({ ...c, story_id: hit.match.slug }));
@@ -547,6 +557,8 @@ async function main() {
             });
           }
           appendClaims(toPersist);
+          // Keep the in-run claim index current so a later topic can match these.
+          if (toPersist.length) claimsByStory.set(hit.match.slug, [...storyClaims, ...toPersist]);
 
           if (novel.length) {
             appendUpdates(
@@ -555,7 +567,7 @@ async function main() {
               todayStr,
             );
           }
-          console.log(`↳ Duplicate of "${hit.match.slug}" ` +
+          console.log(`↳ Duplicate of "${hit.match.slug}" [${hit.reason}] ` +
             `(c=${hit.score.combined.toFixed(2)} e=${hit.score.ent.toFixed(2)} t=${hit.score.txt.toFixed(2)}) ` +
             `— ${novel.length} novel claim(s) folded, ${corroborating.length} corroborating.`);
           folded.push(hit.match.slug);
@@ -563,7 +575,9 @@ async function main() {
         }
 
         const slug = createMarkdownFile(postData, 'news');
-        appendClaims(claims.map((c) => ({ ...c, story_id: slug })));
+        const newClaims = claims.map((c) => ({ ...c, story_id: slug }));
+        appendClaims(newClaims);
+        claimsByStory.set(slug, newClaims);   // matchable by later topics this run
         created.push(slug);
 
         // Make this run's new story immediately matchable by later topics

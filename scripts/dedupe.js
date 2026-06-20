@@ -55,6 +55,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { aliasCanonical, entityKey } from './entities.js';
+import { statementsMatch } from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -255,13 +256,59 @@ export function isDuplicate(s) {
     : (s.txt >= GATE_TEXT_ONLY);
 }
 
-export function findDuplicate(candidate, corpus) {
+// ── Claim-identity layer (the brief's primary fix) ───────────────────────────
+// The strongest "same story" signal is not lexical — it's whether the candidate's
+// PRIMARY EVENT CLAIM already exists in a windowed story. Two Patch-Tuesday pieces
+// share "Microsoft June 2026 Patch Tuesday: record ~200 fixes" even when their
+// bodies diverge. This consults the captured claims, so it sees event identity the
+// full-text cosine + union-Jaccard miss. It is high-precision/low-recall (the
+// statement matcher is deliberately strict — false merge worse than false miss),
+// so the lexical+event score() stays the backstop, not the sole gate.
+//
+// Granularity (which claims count as "primary") is the open calibration question
+// from the parent brief; until step-2 extraction is tuned, the heuristic is the
+// "what happened" atoms — announcements and regulatory facts — falling back to all
+// claims when a story carries none of those.
+export function primaryEventClaims(claims = []) {
+  const primary = claims.filter((c) => c.claim_type === 'announcement' || c.claim_type === 'regulatory-fact');
+  return primary.length ? primary : claims;
+}
+
+/** True when two claim sets share a primary event claim (same assertion, possibly
+ *  from different sources). Reuses statementsMatch from the claim substrate. */
+export function sharePrimaryEventClaim(aClaims = [], bClaims = []) {
+  const a = primaryEventClaims(aClaims);
+  const b = primaryEventClaims(bClaims);
+  for (const x of a) for (const y of b) if (statementsMatch(x.statement, y.statement)) return true;
+  return false;
+}
+
+/** Find the best existing story this candidate duplicates, or null.
+ *  When `opts.claims` (the candidate's claims) and `opts.claimsByStory`
+ *  (Map slug -> claims[]) are supplied, a shared primary event claim is checked
+ *  FIRST and wins regardless of lexical score; otherwise (and as backstop) the
+ *  lexical + event-signature gate decides. The result carries a `reason`. */
+export function findDuplicate(candidate, corpus, opts = {}) {
+  const { claims = null, claimsByStory = null } = opts;
   const c = candidate._vec ? candidate : vectorize(candidate, corpus);
+
+  if (claims && claims.length && claimsByStory) {
+    let best = null;
+    for (const existing of corpus) {
+      const storyClaims = claimsByStory.get(existing.slug);
+      if (!storyClaims || !storyClaims.length) continue;
+      if (!sharePrimaryEventClaim(claims, storyClaims)) continue;
+      const s = score(c, existing);
+      if (!best || s.txt > best.score.txt) best = { match: existing, score: s, reason: 'claim' };
+    }
+    if (best) return best;
+  }
+
   let best = null;
   for (const existing of corpus) {
     const s = score(c, existing);
     if (isDuplicate(s) && (!best || s.txt > best.score.txt)) {
-      best = { match: existing, score: s };
+      best = { match: existing, score: s, reason: s.event ? 'event' : 'lexical' };
     }
   }
   return best;
@@ -289,6 +336,7 @@ export function loadCorpusWindow(daysBack = DEFAULT_WINDOW_DAYS, newsDir = NEWS_
         content,
         entities: Array.isArray(data.entities) ? data.entities : [],
         publishDate: data.publishDate || null,
+        draft: data.draft === true,
       }));
     } catch { /* unreadable — skip */ }
   }
@@ -412,7 +460,9 @@ function review(daysBack, edgeTxt) {
   const clusters = comps.map((idxs) => {
     const sorted = [...idxs].sort((a, b) => pubTime(corpus[a]) - pubTime(corpus[b]));
     const canonical = corpus[sorted[sorted.length - 1]];   // keep the LATEST
-    const members = sorted.slice(0, -1).map((i) => {
+    // Skip members already demoted in a prior run — they're collapsed already, so
+    // re-proposing them is noise (the review is idempotent on a stable corpus).
+    const members = sorted.slice(0, -1).filter((i) => !corpus[i].draft).map((i) => {
       const s = score(canonical, corpus[i]);
       const reEmission = corpus[i].publishDate === canonical.publishDate
         && normTitle(corpus[i].title) === normTitle(canonical.title);
@@ -429,7 +479,8 @@ function review(daysBack, edgeTxt) {
       canonical: { slug: canonical.slug, file: canonical.file, title: canonical.title, publishDate: canonical.publishDate },
       members,
     };
-  }).sort((a, b) => b.members.length - a.members.length);
+  }).filter((c) => c.members.length)              // drop clusters fully collapsed already
+    .sort((a, b) => b.members.length - a.members.length);
 
   const total = clusters.reduce((n, c) => n + c.members.length, 0);
   const deletes = clusters.reduce((n, c) => n + c.members.filter((m) => m.action === 'delete').length, 0);

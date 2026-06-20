@@ -96,9 +96,20 @@ export function loadAliasLookup(dictPath = DICT_PATH) {
   return _lookup;
 }
 
-/** Canonical key for an entity: its alias target if known, else its own key. */
+// Recurring-event families where a date qualifier varies every cycle but the
+// entity is one and the same. Enumerating "<Month> <Year> X" forms in the dict
+// is futile (a new one appears each period), so collapse by suffix. Same-period
+// stories still separate on their salient numbers and body text, so folding the
+// qualifier is safe for the gate. Keyed by a normalised-key test → canonical key.
+const RECURRING_FAMILIES = [
+  [/\bpatch tuesday\b/, 'patch tuesday'],   // "June 2026 Patch Tuesday", "June Patch Tuesday" → Patch Tuesday
+];
+
+/** Canonical key for an entity: a recurring-family collapse, else its alias
+ *  target if known, else its own key. */
 export function aliasCanonical(e, dictPath = DICT_PATH) {
   const k = entityKey(e);
+  for (const [re, canon] of RECURRING_FAMILIES) if (re.test(k)) return canon;
   return loadAliasLookup(dictPath).get(k) ?? k;
 }
 
