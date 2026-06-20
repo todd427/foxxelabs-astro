@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script>(function(){ if(/[?&]bare=1(\b|$)/.test(location.search)) document.documentElement.classList.add('bare'); })();</script>
 </head>
 <body>
 <template id="__bundler_thumbnail" data-bg-color="#05070e">
@@ -31,17 +32,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  html,body{margin:0;padding:0;background:#070c18;}
+  html,body{margin:0;padding:0;height:100%;background:#070c18;}
   *{box-sizing:border-box;}
+
+  /* Bare mode (?bare=1) — used by the homepage hero: drop the in-globe header,
+     side panels and detail card so the globe sits cleanly behind the hero copy.
+     The animated timeline stays for life. */
+  html.bare .gr-head, html.bare .gr-side, html.bare .gr-detail { display:none !important; }
+
+  /* Mobile/portrait: the fixed 1920x1080 design can't letterbox sensibly on a
+     phone. Full-bleed the globe, hide the dense side panels, keep the title and a
+     slimmed timeline. The canvas re-sizes itself to the element (see layout()). */
+  @media (max-width: 700px) {
+    .gr { position:absolute !important; inset:0 !important; width:auto !important; height:auto !important; }
+    .gr-canvas { width:100% !important; height:100% !important; }
+    .gr-head { top:16px !important; left:16px !important; right:16px !important; max-width:none !important; }
+    .gr-head h1 { font-size:26px !important; white-space:normal !important; line-height:1.08 !important; }
+    .gr-head p { font-size:12.5px !important; }
+    .gr-side, .gr-detail { display:none !important; }
+    .gr-time { left:0 !important; right:0 !important; bottom:0 !important; width:auto !important;
+      padding:14px 14px 18px !important; gap:14px !important; }
+    .gr-time-date { min-width:0 !important; }
+    .gr-time-date .gr-time-readout { font-size:22px !important; }
+    .gr-time-tools { display:none !important; }
+  }
 </style>
 </helmet>
-<div data-screen-label="LLM Globe Observatory" style="position:relative;width:1920px;height:1080px;background:radial-gradient(130% 110% at 34% 42%, #18233e 0%, #0d1830 46%, #070c18 100%);font-family:'Space Grotesk',system-ui,sans-serif;color:#cdd6ea;overflow:hidden;">
+<div class="gr" data-screen-label="LLM Globe Observatory" style="position:relative;width:1920px;height:1080px;background:radial-gradient(130% 110% at 34% 42%, #18233e 0%, #0d1830 46%, #070c18 100%);font-family:'Space Grotesk',system-ui,sans-serif;color:#cdd6ea;overflow:hidden;">
 
-  <canvas ref="{{ canvasRef }}" style="position:absolute;inset:0;width:1920px;height:1080px;cursor:grab;"></canvas>
+  <canvas class="gr-canvas" ref="{{ canvasRef }}" style="position:absolute;inset:0;width:1920px;height:1080px;cursor:grab;"></canvas>
   <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(118% 95% at 34% 46%, transparent 54%, rgba(3,6,16,.42) 100%);"></div>
 
   <!-- header -->
-  <div style="position:absolute;top:50px;left:62px;z-index:3;max-width:680px;">
+  <div class="gr-head" style="position:absolute;top:50px;left:62px;z-index:3;max-width:680px;">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.34em;color:#5a6a8c;margin-bottom:16px;">◦ OBSERVATORY — A CARTOGRAPHY OF MODELS</div>
     <h1 style="margin:0;font-size:50px;font-weight:600;letter-spacing:-.015em;line-height:1.04;color:#eef2fb;white-space:nowrap;">The Expanding Universe<br>of Large Language Models</h1>
     <p style="margin:18px 0 0;font-size:15px;line-height:1.55;color:#8693b2;">Every landmark model since the 2017 Transformer — plotted on the city of its lab, sized by parameters, raised by capability, and colored by its maker.</p>
@@ -49,7 +72,7 @@
   </div>
 
   <!-- right panel -->
-  <div style="position:absolute;top:156px;right:58px;width:430px;z-index:3;display:flex;flex-direction:column;gap:18px;">
+  <div class="gr-side" style="position:absolute;top:156px;right:58px;width:430px;z-index:3;display:flex;flex-direction:column;gap:18px;">
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
       <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;">
@@ -112,7 +135,7 @@
 
   <!-- model detail -->
   <sc-if value="{{ hasSelected }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;left:60px;bottom:170px;width:346px;z-index:6;background:rgba(9,13,23,.84);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:20px 22px 22px;box-shadow:0 14px 44px rgba(0,0,0,.55);">
+    <div class="gr-detail" style="position:absolute;left:60px;bottom:170px;width:346px;z-index:6;background:rgba(9,13,23,.84);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:20px 22px 22px;box-shadow:0 14px 44px rgba(0,0,0,.55);">
       <button onClick="{{ clearSelected }}" style="position:absolute;top:14px;right:14px;width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#aab6d4;font-size:13px;cursor:pointer;line-height:1;">×</button>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
         <span style="width:11px;height:11px;border-radius:50%;flex:none;background:{{ sel.color }};box-shadow:0 0 11px {{ sel.color }};"></span>
@@ -150,14 +173,14 @@
   </sc-if>
 
   <!-- bottom timeline -->
-  <div style="position:absolute;left:0;bottom:0;width:1920px;padding:32px 60px 36px;z-index:4;display:flex;align-items:center;gap:34px;background:linear-gradient(to top, rgba(3,5,12,.96) 28%, rgba(3,5,12,0));">
+  <div class="gr-time" style="position:absolute;left:0;bottom:0;width:1920px;padding:32px 60px 36px;z-index:4;display:flex;align-items:center;gap:34px;background:linear-gradient(to top, rgba(3,5,12,.96) 28%, rgba(3,5,12,0));">
     <div style="display:flex;gap:12px;flex:none;">
       <button onClick="{{ togglePlay }}" style="width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#eef2fb;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">{{ playIcon }}</button>
       <button onClick="{{ stopReset }}" title="Reset to start" style="width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#aab6d4;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">■</button>
     </div>
-    <div style="flex:none;min-width:216px;">
+    <div class="gr-time-date" style="flex:none;min-width:216px;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:#5f6d90;margin-bottom:5px;">TIMELINE</div>
-      <div ref="{{ dateRef }}" style="font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:500;color:#eef2fb;letter-spacing:.02em;line-height:1;">MAY 2017</div>
+      <div ref="{{ dateRef }}" class="gr-time-readout" style="font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:500;color:#eef2fb;letter-spacing:.02em;line-height:1;">MAY 2017</div>
     </div>
     <div style="flex:1;position:relative;height:48px;display:flex;align-items:center;">
       <div ref="{{ trackRef }}" style="position:relative;width:100%;height:6px;border-radius:3px;background:rgba(255,255,255,.1);cursor:pointer;">
@@ -170,7 +193,7 @@
         </sc-for>
       </div>
     </div>
-    <div style="display:flex;gap:10px;flex:none;align-items:center;">
+    <div class="gr-time-tools" style="display:flex;gap:10px;flex:none;align-items:center;">
       <button onClick="{{ toggleSpin }}" ref="{{ spinBtnRef }}" title="Toggle globe rotation" style="height:40px;padding:0 15px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#8a96b3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;cursor:pointer;">ROTATE</button>
       <button onClick="{{ toggleUsage }}" ref="{{ usageBtnRef }}" title="Toggle usage flows" style="height:40px;padding:0 15px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#8a96b3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;cursor:pointer;">USAGE</button>
       <button onClick="{{ toggleSound }}" ref="{{ soundBtnRef }}" title="Toggle sound" style="height:40px;padding:0 15px;border-radius:9px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#8a96b3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;cursor:pointer;">SOUND</button>
@@ -444,20 +467,37 @@ class Component extends DCLogic {
     this.frame = this.frame.bind(this);
   }
 
+  // Size the canvas to its actual rendered box and derive the globe geometry from
+  // it, so the same component works at the fixed 1920x1080 desktop design AND
+  // full-bleed on a phone. At 1920x1080 this reproduces the original cx/cy/R/stars.
+  layout(){
+    const cv = this.canvasRef.current; if(!cv) return;
+    const rect = cv.getBoundingClientRect();
+    const W = Math.max(1, Math.round(rect.width  || 1920));
+    const H = Math.max(1, Math.round(rect.height || 1080));
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = W*dpr; cv.height = H*dpr;
+    const ctx = cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0);
+    this._ctx = ctx; this.W = W; this.H = H;
+    if(W <= 700){                       // phone: globe centred, fills the frame
+      this.cx = W*0.5; this.cy = H*0.46; this.R = Math.min(W*0.46, H*0.40);
+    } else {                            // desktop: original framing (cx648 cy540 R360 @1920x1080)
+      this.cx = W*0.3375; this.cy = H*0.5; this.R = Math.min(W*0.1875, H*0.3333);
+    }
+    const n = Math.max(90, Math.round(W*H/9876));   // ~210 stars at 1920x1080
+    this.stars = [];
+    for(let i=0;i<n;i++){
+      this.stars.push({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.3+0.25,
+        a:Math.random()*0.45+0.12, tw:Math.random()*0.004+0.001, ph:Math.random()*6.28 });
+    }
+  }
+
   componentDidMount(){
     const cv = this.canvasRef.current;
     if(!cv) return;
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
-    cv.width = 1920*dpr; cv.height = 1080*dpr;
-    const ctx = cv.getContext('2d');
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    this._ctx = ctx;
-
-    this.stars = [];
-    for(let i=0;i<210;i++){
-      this.stars.push({ x:Math.random()*1920, y:Math.random()*1080, r:Math.random()*1.3+0.25,
-        a:Math.random()*0.45+0.12, tw:Math.random()*0.004+0.001, ph:Math.random()*6.28 });
-    }
+    this.layout();
+    this._onResize = ()=>this.layout();
+    window.addEventListener('resize', this._onResize);
 
     // scrub
     const track = this.trackRef.current;
@@ -476,7 +516,7 @@ class Component extends DCLogic {
     cv.addEventListener('pointerdown', e=>{ this.dragging=true; this.lx=e.clientX; this.ly=e.clientY; cv.style.cursor='grabbing'; if(this.selected){ this.clearSelected(); } });
     window.addEventListener('pointermove', e=>{
       if(!this.dragging) return;
-      const sc = cv.getBoundingClientRect().width/1920 || 1;
+      const sc = cv.getBoundingClientRect().width/this.W || 1;
       this.spin += (e.clientX-this.lx)/sc*0.32;
       this.tilt = Math.max(-0.25, Math.min(1.05, this.tilt + (e.clientY-this.ly)/sc*0.004));
       this.lx=e.clientX; this.ly=e.clientY;
@@ -504,7 +544,7 @@ class Component extends DCLogic {
     this._raf = requestAnimationFrame(this.frame);
   }
 
-  componentWillUnmount(){ cancelAnimationFrame(this._raf); if(this._actx){ try{this._actx.close();}catch(e){} } }
+  componentWillUnmount(){ cancelAnimationFrame(this._raf); if(this._onResize) window.removeEventListener('resize', this._onResize); if(this._actx){ try{this._actx.close();}catch(e){} } }
 
   hexA(h,a){
     h = h.replace('#','');
@@ -617,7 +657,7 @@ class Component extends DCLogic {
     const ctx = this._ctx; if(!ctx) return;
     const ts = this._ts || 0;
     const cx=this.cx, cy=this.cy, R=this.R;
-    ctx.clearRect(0,0,1920,1080);
+    ctx.clearRect(0,0,this.W,this.H);
 
     // stars
     for(const s of this.stars){
