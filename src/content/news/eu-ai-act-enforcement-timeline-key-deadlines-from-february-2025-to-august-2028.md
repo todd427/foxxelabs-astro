@@ -10,6 +10,11 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-20, note: "The AI Act entered into force on 1 August 2024 and will be fully applicable on 2 August 2026, with exceptions for prohibited AI practices and AI literacy obligations which entered application on 2 Feb", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-20, note: "The AI Act prohibits eight practices: harmful AI-based manipulation and deception, harmful AI-based exploitation of vulnerabilities, social scoring, individual criminal offence risk assessment or pred", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-20, note: "A prohibition of AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as AI 'nudification' apps, has been agreed as part of amendments to", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-20, note: "Simplified requirements for small and medium-sized enterprises are extended to small mid-cap companies, including simplified technical documentation requirements, as part of the agreed amendments to t", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-20, note: "The Code of Practice on marking and labelling of AI-generated content is under preparation and will be published in the second quarter of 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-19, note: "The transparency rules of the AI Act will come into effect in August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-19, note: "Rules for systems used in certain high-risk areas including biometrics, critical infrastructure, education, employment, migration, asylum and border control will apply from 2 December 2027.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-19, note: "A prohibition of AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material has been agreed as an amendment to the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -21,7 +26,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-06-19
+updatedDate: 2026-06-20
 ---
 
 ## The EU AI Act's Phased Entry into Force

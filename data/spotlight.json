@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-06-19T11:22:00.554Z",
+  "updatedAt": "2026-06-20T10:05:34.063Z",
   "pick": {
-    "id": "microsoft/FastContext-1.0-4B-SFT",
-    "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
-    "author": "microsoft",
-    "name": "FastContext-1.0-4B-SFT",
-    "likes": 212,
-    "downloads": 1437,
-    "ageDays": 5,
-    "blurb": "A 4B model fine-tuned on Qwen3 that handles long contexts efficiently, tagged for agentic repo exploration tasks. Two days old with concrete arxiv backing (2606.14066) and MIT license—worth testing if you're building agents that need to traverse codebases.",
-    "surfacedAt": "2026-06-16"
+    "id": "zai-org/GLM-5.2",
+    "url": "https://hf.co/zai-org/GLM-5.2",
+    "author": "zai-org",
+    "name": "GLM-5.2",
+    "likes": 1577,
+    "downloads": 19683,
+    "ageDays": 4,
+    "blurb": "A Mixture-of-Experts model with dual arxiv papers (2602.15763, 2603.12201) and strong eval results backing, shipping with endpoints compatibility. If you're building agents or services that need to scale across EN/ZH workloads, the 1.5k likes and 19k downloads suggest real traction worth validating against your inference constraints.",
+    "surfacedAt": "2026-06-20"
   },
   "also": [
-    {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://hf.co/zai-org/GLM-5.2",
-      "author": "zai-org",
-      "name": "GLM-5.2",
-      "likes": 1429,
-      "downloads": 11871,
-      "ageDays": 3
-    },
     {
       "id": "WeiboAI/VibeThinker-3B",
       "url": "https://hf.co/WeiboAI/VibeThinker-3B",
       "author": "WeiboAI",
       "name": "VibeThinker-3B",
-      "likes": 424,
-      "downloads": 12148,
-      "ageDays": 7
+      "likes": 477,
+      "downloads": 16270,
+      "ageDays": 8
+    },
+    {
+      "id": "microsoft/FastContext-1.0-4B-SFT",
+      "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
+      "author": "microsoft",
+      "name": "FastContext-1.0-4B-SFT",
+      "likes": 235,
+      "downloads": 1998,
+      "ageDays": 6
     },
     {
       "id": "lordx64/Qwable-v1",
       "url": "https://hf.co/lordx64/Qwable-v1",
       "author": "lordx64",
       "name": "Qwable-v1",
-      "likes": 124,
-      "downloads": 1865,
+      "likes": 133,
+      "downloads": 2769,
       "ageDays": 5
     },
     {
@@ -44,18 +44,18 @@
       "url": "https://hf.co/CohereLabs/North-Mini-Code-1.0",
       "author": "CohereLabs",
       "name": "North-Mini-Code-1.0",
-      "likes": 453,
-      "downloads": 17693,
-      "ageDays": 14
+      "likes": 461,
+      "downloads": 18783,
+      "ageDays": 15
     },
     {
       "id": "nex-agi/Nex-N2-Pro",
       "url": "https://hf.co/nex-agi/Nex-N2-Pro",
       "author": "nex-agi",
       "name": "Nex-N2-Pro",
-      "likes": 331,
-      "downloads": 7507,
-      "ageDays": 16
+      "likes": 337,
+      "downloads": 7724,
+      "ageDays": 17
     }
   ]
 }
