@@ -321,6 +321,19 @@ const latestNews = news
   .obs-hero-hit { position: absolute; inset: 0; z-index: 3; }
   .obs-hero:hover .obs-hero-btn { background: rgba(120,205,240,.2); border-color: rgba(120,205,240,.85); }
 
+  /* Mobile: the globe cover-scales under a left gradient and disappears. Give it a
+     taller stage, drop the copy to the bottom, and dim from the bottom up so the
+     globe stays visible in the upper half. */
+  @media (max-width: 640px) {
+    .obs-hero { height: clamp(380px, 86vw, 460px); }
+    .obs-hero-overlay {
+      align-items: flex-end;
+      background: linear-gradient(to top, rgba(4,7,16,.9) 0%, rgba(4,7,16,.55) 30%, rgba(4,7,16,0) 62%);
+    }
+    .obs-hero-copy { padding-bottom: 26px; max-width: none; }
+    .obs-hero-sub { max-width: 38ch; }
+  }
+
   /* ── Featured Research Banner ── */
   .featured-research {
     background: color-mix(in srgb, var(--card) 80%, transparent);
