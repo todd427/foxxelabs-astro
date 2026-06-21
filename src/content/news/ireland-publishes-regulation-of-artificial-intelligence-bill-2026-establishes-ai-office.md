@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-21, note: "The EU AI Act entered into force on 1 August 2024 and will be fully applicable 2 August 2026, with prohibited AI practices and AI literacy obligations entering application from 2 February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-21, note: "Simplified requirements for small and medium-sized enterprises under the AI Act are extended to small mid-cap companies with up to 750 employees and €150 million in annual revenue.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-21, note: "Support instruments for AI Act compliance including the Code of Practice on marking and labelling of AI-generated content and Guidelines on transparent AI systems are under preparation and will be pub", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "The Regulation of Artificial Intelligence Bill 2026 was published by the Irish Government on 17 June 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-06-20, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-06-20, note: "The AI Act prohibits eight practices: harmful AI-based manipulation and deception; harmful AI-based exploitation of vulnerabilities; social scoring; individual criminal offence risk assessment or pred", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -22,7 +25,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-06-20
+updatedDate: 2026-06-21
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

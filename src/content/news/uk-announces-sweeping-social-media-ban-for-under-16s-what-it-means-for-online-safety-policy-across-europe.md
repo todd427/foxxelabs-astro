@@ -9,8 +9,15 @@ sourceUrl: "https://www.nbcnews.com/world/united-kingdom/keir-starmer-social-med
 significance: "high"
 entities: ["UK Government", "Keir Starmer", "Australia", "Canada", "France", "TikTok", "Instagram", "Facebook", "X", "Snapchat", "YouTube"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-21, note: "The UK government announced a social media ban for under 16s, including platforms such as Snapchat, TikTok, YouTube, Instagram, Facebook and X", sourceUrl: "https://www.bps.org.uk/psychologist/future-children-digital-world-and-particularly-their-chance-flourish-it-remains-doubt" }
+  - { date: 2026-06-21, note: "The UK government announced a ban on sexualised AI chatbots for under 18s", sourceUrl: "https://www.bps.org.uk/psychologist/future-children-digital-world-and-particularly-their-chance-flourish-it-remains-doubt" }
+  - { date: 2026-06-21, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Volume 20, Issue 1 in 2026", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-21, note: "Volume 20, Issue 1 of Cyberpsychology: Journal of Psychosocial Research on Cyberspace includes articles on adolescents' and young people's mobile and social network habits, prosocial and antisocial on", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-21, note: "The 6th edition of the BPS Cyberpsychology Section Annual Conference is scheduled for July 6-7, 2026 at York St John University", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-21, note: "The BPS Cyberpsychology Conference keynote speakers are Prof. Paul Cairns from the University of York and Prof. Amy Orben from the University of Cambridge", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
 draft: false
+updatedDate: 2026-06-21
 ---
 
 ## UK's Historic Social Media Ban Signals Major Shift in Child Protection Policy
