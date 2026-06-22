@@ -10,6 +10,22 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-22, note: "The AI Act entered into force on 1 August 2024, with full applicability set for 2 August 2026, with certain exceptions for prohibited practices and GPAI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "Obligations for high-risk AI systems placed on the market or put into service before 2 August 2026 will be postponed from 2 August 2026 to 2 December 2027 (deferred by 16 months) for use-based applica", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "Transparency obligations for synthetic content detection (Article 50) are deferred from 2 August 2026 to 2 December 2026 for systems placed on market before 2 August 2026; systems placed after 2 Augus", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The AI Act establishes simplified requirements for small and medium-sized enterprises (SMEs) that are being extended to small mid-cap companies (SMCs) as part of the Digital Omnibus on AI.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The AI Office's powers are being reinforced and oversight of AI systems built on general-purpose AI models is being centralised to reduce governance fragmentation as part of the Digital Omnibus on AI.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The Commission made €63.2 million available to support AI innovation in health and online safety on 21 April 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The Code of Practice on marking and labeling AI-generated content is under preparation and scheduled for publication in the second quarter of 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material are prohibited", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "A political agreement on amendments to simplify the AI Act was reached on 7 May 2026", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The AI Act entered into force on 1 August 2024", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The Code of Practice on marking and labelling of AI-generated content is a voluntary tool to guide providers and deployers of generative AI systems on transparency obligations including marking AI gen", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-22, note: "The US government issued an emergency export control directive on June 12, 2026, ordering Anthropic to immediately suspend all access to Fable 5 and Mythos 5 for any foreign national", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-22, note: "The EU has published its final Code of Practice on AI-generated content transparency with an August 2 enforcement date, and OpenAI has stated its commitment to sign", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-22, note: "The European AI Office will publish the first public list of Code of Practice signatories in July 2026", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-22, note: "The EU Cyber Resilience Act's conformity assessment body notification framework entered into application on June 11, 2026, starting a 90-day window before September 11, when mandatory vulnerability an", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
+  - { date: 2026-06-22, note: "NIST has provided a mathematical basis using Gödel's incompleteness logic showing that a fixed set of AI guardrails cannot theoretically prevent all adversarial bypasses", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-21, note: "The AI Act is the first-ever comprehensive legal framework on AI worldwide.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-21, note: "Eight AI practices are prohibited under the AI Act, including harmful manipulation, exploitation of vulnerabilities, social scoring, criminal risk prediction, untargeted scraping for facial recognitio", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-21, note: "Prohibitions on AI practices became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -34,7 +50,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-06-21
+updatedDate: 2026-06-22
 ---
 
 ## Major Amendments Agreed

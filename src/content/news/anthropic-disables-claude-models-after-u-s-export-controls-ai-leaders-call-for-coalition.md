@@ -9,8 +9,17 @@ sourceUrl: "https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-
 significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Dario Amodei", "Google DeepMind", "Demis Hassabis", "OpenAI", "Sam Altman", "U.S. government", "G7"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-22, note: "Neura Robotics closed a Series C funding round of up to $1.4 billion, which the company claims is the largest investment into a full-stack robotics company to date.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Google DeepMind introduced DiffusionGemma, an experimental open 26B Mixture of Experts text diffusion model achieving up to 4x faster inference than autoregressive models with 1000+ tokens/sec on a si", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Anthropic released Claude Fable 5, its Mythos-class frontier model and the smartest publicly available LLM, showing major benchmark leaps at roughly 2x the cost of Opus models.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Google DeepMind announced Gemini 3.5 Live Translate, a new audio model that delivers near real-time speech-to-speech translation across 70+ languages while preserving the speaker's intonation, pacing,", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Waymo purchased a large Arizona proving ground in Wittmann from Apple for $220 million, originally built for Apple's canceled Project Titan self-driving car program.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Anthropic CEO Dario Amodei and Google DeepMind CEO Demis Hassabis called for a U.S.-led AI coalition at a closed-door meeting at the G7 summit on June 17, 2026, with around a dozen tech execs includin", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "OpenAI filed a confidential S-1 with the SEC on June 8, 2026, following a private valuation of $852 billion in March, with projected losses of $14 billion for the year and no expected profitability un", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-22, note: "Japanese AI startup Sakana AI is launching Fugu, a system that coordinates multiple AI models on the fly to compete with leaders like Anthropic's Fable 5, with the approach also aiming to cut dependen", sourceUrl: "https://dentro.de/ai/news/" }
 draft: false
+updatedDate: 2026-06-22
 ---
 
 ## Anthropic Restricts Model Access Under Export Controls

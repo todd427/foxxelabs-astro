@@ -9,8 +9,30 @@ sourceUrl: "https://lushbinary.com/blog/advanced-prompt-engineering-techniques-d
 significance: "high"
 entities: ["Prompt Engineering", "AI Tools", "GPT-5.5", "LLMLingua", "Claude", "Hugging Face"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-22, note: "In June 2025, Andrej Karpathy posted on X that the term 'prompt engineering' trivialises what practitioners actually do.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Andrej Karpathy framed AI work as: the LLM is a CPU, the context window is RAM, and your job is to be the operating system.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Liu et al. (2024) demonstrated a U-shaped performance curve across every model tested, with over 30% accuracy drop for information buried in the middle of context.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Claude 4.x models follow instructions literally and no longer exhibit 'above and beyond' behaviour from earlier versions.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "GPT-5 is a router-based system with multiple models behind a single endpoint.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Explicitly adding 'think step by step' to reasoning tasks in GPT-5 can actually hurt performance.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Gemini's context window is 2M tokens and placement decisions are even more consequential than in other models.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Google's prompt engineering whitepaper recommends always including few-shot examples for Gemini, with zero-shot explicitly not preferred.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Even randomly labelled examples outperform zero-shot prompting according to Min et al. (2022).", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Promptfoo is an open-source tool used by 51,000+ developers for bringing CI/CD discipline to prompts.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "68% of firms now provide prompt engineering as standard training across all roles according to a May 2025 Fast Company report.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Anthropic's prompt caching can cut costs by up to 90% and latency by 85%.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "OpenAI offers automatic caching with 50-90% discounts depending on the model.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-22, note: "Recent breakthroughs in LLMs like GPT-5, Claude 4, and Gemini 2.5 have shown remarkable improvements in understanding context and nuance.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "As of 2026, the field of prompt engineering continues to evolve rapidly, reflecting the dynamic nature of AI and its applications.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Adaptive prompting is an emerging trend where AI models are developed to adjust their responses based on the user's input style and preferences.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Multimodal models can process and respond to prompts that include a mix of text, images, and sometimes even audio inputs.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Real-time prompt optimization technology enables AI models to provide instant feedback on prompt effectiveness, assessing clarity, potential bias, and alignment.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Prompt engineering is seeing integration with domain-specific AI models trained on industry-specific data.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Time Magazine reported that companies recognise the value of specialized prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-22, note: "Job sites like Indeed and LinkedIn list thousands of prompt engineer jobs in the US alone, with salaries ranging from $50,000 to over $150,000 per year.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
+updatedDate: 2026-06-22
 ---
 
 ## Market Growth Accelerates
