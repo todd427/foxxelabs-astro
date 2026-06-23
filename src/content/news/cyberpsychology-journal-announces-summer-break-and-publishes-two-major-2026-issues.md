@@ -10,6 +10,16 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace experienced a sharp increase in submissions in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is implementing a summer break for new submissions from June 16 to August 31, with the submission portal closed during this period.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Volume 20, Issue 2 in April 2026 with eight open-access articles.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-23, note: "The journal's 2025 Impact Factor is 2.6.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-23, note: "The journal's 2025 SJR score is 0.852.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-23, note: "The British Psychological Society's Cyberpsychology Section 6th Annual Conference is scheduled for July 6-7, 2026 at York St John University.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-23, note: "Abstract submissions for the BPS Cyberpsychology Section 2026 conference were due April 10, 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-23, note: "The BPS is launching a £6,000 grant scheme for small research projects.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-23, note: "The BPS Cyberpsychology Section offers £500 grants specifically for early career researchers and PhD students.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-23, note: "Recent research published in Cyberpsychology: Journal of Psychosocial Research on Cyberspace highlights concerning trends in adolescent social media habits and the transition from virtual gambling to ", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-06-22, note: "BPS Cyberpsychology Section's 2026 Annual Conference is scheduled for July 6–7 at York St John University", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-06-22, note: "BPS Cyberpsychology Section Conference maintains thematically open approach, welcoming abstracts from online behaviours and social media, gaming and virtual environments, artificial intelligence and e", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-06-22, note: "Prof. Paul Cairns from University of York and Prof. Amy Orben from University of Cambridge are keynote speakers at BPS Cyberpsychology Section Annual Conference 2026", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
@@ -20,7 +30,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-22
+updatedDate: 2026-06-23
 ---
 
 ## Summer Submission Break Announced

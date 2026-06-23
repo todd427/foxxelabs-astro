@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-06-22T12:51:47.888Z",
+  "updatedAt": "2026-06-23T10:35:56.388Z",
   "pick": {
-    "id": "zai-org/GLM-5.2",
-    "url": "https://hf.co/zai-org/GLM-5.2",
-    "author": "zai-org",
-    "name": "GLM-5.2",
-    "likes": 1939,
-    "downloads": 33589,
-    "ageDays": 6,
-    "blurb": "A Mixture-of-Experts model with dual arxiv papers (2602.15763, 2603.12201) and strong eval results backing, shipping with endpoints compatibility. If you're building agents or services that need to scale across EN/ZH workloads, the 1.5k likes and 19k downloads suggest real traction worth validating against your inference constraints.",
-    "surfacedAt": "2026-06-20"
+    "id": "WeiboAI/VibeThinker-3B",
+    "url": "https://hf.co/WeiboAI/VibeThinker-3B",
+    "author": "WeiboAI",
+    "name": "VibeThinker-3B",
+    "likes": 631,
+    "downloads": 41170,
+    "ageDays": 11,
+    "blurb": "A 3B reasoning model built on Qwen2 that handles math, code, and GPQA—meaningfully smaller than GLM-5.2 but with specialized eval backing. Worth validating if you need sub-4B inference cost but can't sacrifice reasoning depth on your workload.",
+    "surfacedAt": "2026-06-23"
   },
   "also": [
     {
-      "id": "WeiboAI/VibeThinker-3B",
-      "url": "https://hf.co/WeiboAI/VibeThinker-3B",
-      "author": "WeiboAI",
-      "name": "VibeThinker-3B",
-      "likes": 590,
-      "downloads": 32385,
-      "ageDays": 10
+      "id": "zai-org/GLM-5.2",
+      "url": "https://hf.co/zai-org/GLM-5.2",
+      "author": "zai-org",
+      "name": "GLM-5.2",
+      "likes": 2096,
+      "downloads": 40127,
+      "ageDays": 7
     },
     {
       "id": "microsoft/FastContext-1.0-4B-SFT",
       "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
       "author": "microsoft",
       "name": "FastContext-1.0-4B-SFT",
-      "likes": 280,
-      "downloads": 3498,
-      "ageDays": 8
-    },
-    {
-      "id": "lordx64/Qwable-v1",
-      "url": "https://hf.co/lordx64/Qwable-v1",
-      "author": "lordx64",
-      "name": "Qwable-v1",
-      "likes": 155,
-      "downloads": 3733,
-      "ageDays": 8
+      "likes": 300,
+      "downloads": 4391,
+      "ageDays": 9
     },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "author": "empero-ai",
       "name": "Qwythos-9B-Claude-Mythos-5-1M",
-      "likes": 83,
-      "downloads": 842,
-      "ageDays": 3
+      "likes": 149,
+      "downloads": 1856,
+      "ageDays": 4
+    },
+    {
+      "id": "lordx64/Qwable-v1",
+      "url": "https://hf.co/lordx64/Qwable-v1",
+      "author": "lordx64",
+      "name": "Qwable-v1",
+      "likes": 167,
+      "downloads": 4547,
+      "ageDays": 8
     },
     {
       "id": "poolside/Laguna-M.1",
       "url": "https://hf.co/poolside/Laguna-M.1",
       "author": "poolside",
       "name": "Laguna-M.1",
-      "likes": 88,
-      "downloads": 2707,
-      "ageDays": 7
+      "likes": 92,
+      "downloads": 2787,
+      "ageDays": 8
     }
   ]
 }

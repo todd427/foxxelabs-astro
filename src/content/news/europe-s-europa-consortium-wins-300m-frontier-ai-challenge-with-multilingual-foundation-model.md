@@ -9,8 +9,15 @@ sourceUrl: "https://www.devflokers.com/blog/ai-tech-news-model-releases-june-202
 significance: "high"
 entities: ["European Commission", "EUROPA Consortium", "Domyn", "NVIDIA Blackwell", "EuroHPC", "Cloud and AI Development Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-23, note: "The EUROPA project will develop an open-source artificial intelligence model covering all 24 official EU languages.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-selects-europa-consortium-winner-frontier-ai-grand-challenge-project-build-european-open" }
+  - { date: 2026-06-23, note: "The Frontier AI Grand Challenge, launched in February 2026, invited Europe's leading AI innovators to propose a model with more than 400 billion parameters.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-selects-europa-consortium-winner-frontier-ai-grand-challenge-project-build-european-open" }
+  - { date: 2026-06-23, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 was published on 17 June 2026, giving effect domestically to the EU Artificial Intelligence Act (Regulation (EU) 2024/1689).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-23, note: "The Bill establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body to act as Ireland's central coordinating authority for implementation of the AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-23, note: "The EU Artificial Intelligence Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-23, note: "The Bill provides Market Surveillance Authorities with a structured enforcement toolkit progressing from cooperative compliance notices to coercive measures and ultimately formal sanctions including f", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
+updatedDate: 2026-06-23
 ---
 
 ## Europe's AI Sovereignty Push: EUROPA Consortium Wins Frontier AI Grand Challenge
