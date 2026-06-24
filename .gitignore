@@ -38,3 +38,6 @@ pnpm-debug.log*
 # Editor
 *.sublime-project
 *.sublime-workspace
+
+# reverify-corpus.js run report (regenerated each run)
+data/reverify-report.json

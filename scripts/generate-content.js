@@ -284,8 +284,8 @@ function hostOf(u) {
   try { return new URL(u).host.replace(/^www\./, ''); } catch { return ''; }
 }
 
-async function verifyClaims(claims, topic) {
-  if (!claims.length) return [];
+export async function verifyClaims(claims, topic) {
+  if (!claims.length) return { kept: [], results: [] };
   console.log(`🔎 Verifying ${claims.length} claim(s) against independent sources...`);
 
   const review = claims.map((c, i) => ({
@@ -308,12 +308,17 @@ For EACH claim, use the web_search tool to look for INDEPENDENT corroboration �
 - "uncorroborated": you could not find independent confirmation and the original source is not authoritative for this claim.
 - "contradicted": a credible independent source conflicts with the claim — a wrong figure, a product/version that does not exist, a wrong date.
 
+For any "contradicted" verdict, also rate its severity:
+- "substantive": the contradiction guts the claim — a core fact is false, a named product/event/entity does not exist, or a headline statistic is materially wrong (off by more than a rounding error).
+- "minor": the claim is essentially right but a detail is off — a date wrong by a day or two, a name/version imprecision, a figure off by a small margin, or two sources mildly disagreeing.
+For any non-contradicted verdict, severity is null.
+
 Be strict. Hallucinated specifics — a model version no primary source confirms, a capability or statistic no one else reports — must be "uncorroborated" or "contradicted". When genuinely uncertain, choose "uncorroborated", never "primary".
 
 OUTPUT JSON only, no prose:
 {
   "verdicts": [
-    { "index": 0, "verdict": "primary|corroborated|uncorroborated|contradicted", "corroborating_url": "https://... or null", "note": "one short reason" }
+    { "index": 0, "verdict": "primary|corroborated|uncorroborated|contradicted", "severity": "substantive|minor|null", "corroborating_url": "https://... or null", "note": "one short reason" }
   ]
 }`;
 
@@ -344,17 +349,31 @@ OUTPUT JSON only, no prose:
   // single-source (i.e. official/corroborated), drop the rest.
   if (!Array.isArray(verdicts)) {
     console.warn('   ⚠️  verification output unparseable — falling back to confidence ≥ corroborated only.');
+    const results = claims.map((c) => ({
+      claim: c,
+      verdict: c.confidence !== 'single-source' ? 'corroborated' : 'unverified',
+      note: 'verifier output unparseable — confidence fallback',
+      corroborating_url: null,
+    }));
     const kept = claims.filter((c) => c.confidence !== 'single-source');
     console.log(`   kept ${kept.length}/${claims.length} (fallback).`);
-    return kept;
+    return { kept, results };
   }
 
   const byIndex = new Map(verdicts.map((v) => [v.index, v]));
   const kept = [];
+  const results = [];
   let contradicted = 0;
   claims.forEach((c, i) => {
     const v = byIndex.get(i);
-    switch (v?.verdict) {
+    const verdict = v?.verdict ?? 'uncorroborated';
+    results.push({
+      claim: c, verdict,
+      severity: verdict === 'contradicted' ? (v?.severity ?? 'substantive') : null,
+      note: v?.note ?? null,
+      corroborating_url: v?.corroborating_url ?? null,
+    });
+    switch (verdict) {
       case 'primary':
         kept.push(c);
         break;
@@ -375,7 +394,7 @@ OUTPUT JSON only, no prose:
   const dropped = claims.length - kept.length;
   console.log(`   kept ${kept.length}/${claims.length}, dropped ${dropped}` +
     (contradicted ? ` (${contradicted} contradicted)` : '') + '.');
-  return kept;
+  return { kept, results };
 }
 
 async function generateNewsPost(claims, topic) {
@@ -642,7 +661,7 @@ async function main() {
         // Trust gate: drop claims that are neither primary-sourced nor
         // independently corroborated. This is the gate the fabricated
         // 10M-token / "Claude 3.7" article would never have passed.
-        const claims = await verifyClaims(rawClaims, topic);
+        const { kept: claims } = await verifyClaims(rawClaims, topic);
         if (!claims.length) {
           console.log(`↳ No claims survived verification for "${topic}" — nothing to publish.`);
           continue;
@@ -730,7 +749,11 @@ async function main() {
   }
 }
 
-main().catch(error => {
-  console.error('❌ Fatal error:', error);
-  process.exit(1);
-});
+// Only run the generator when invoked directly — importing this module (e.g.
+// reverify-corpus.js reusing verifyClaims) must not kick off a generation run.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(error => {
+    console.error('❌ Fatal error:', error);
+    process.exit(1);
+  });
+}
