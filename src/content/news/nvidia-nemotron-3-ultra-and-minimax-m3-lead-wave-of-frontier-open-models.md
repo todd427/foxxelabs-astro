@@ -23,7 +23,7 @@ MiniMax launched M3, the first open-weight model to combine frontier-level codin
 
 ## Claude Opus 4.8 Advances Agent Capabilities
 
-Anthropric released Claude Opus 4.8 with dynamic workflows in Claude Code, where the model writes orchestration scripts and spins up parallel subagents for complex tasks. The model tops ARC-AGI-3 (tripling GPT-5.5's score), is 4x less likely to miss code flaws, and ships fast mode at 3x lower cost than prior models.
+Anthropic released Claude Opus 4.8 with dynamic workflows in Claude Code, where the model writes orchestration scripts and spins up parallel subagents for complex tasks. The model tops ARC-AGI-3 (tripling GPT-5.5's score), is 4x less likely to miss code flaws, and ships fast mode at 3x lower cost than prior models.
 
 ## Google DeepMind's DiffusionGemma: Text Diffusion at Speed
 
@@ -39,13 +39,13 @@ Google launched Gemini 3.5 Live Translate for real-time speech-to-speech transla
 
 ## Anthropic Releases Claude Fable 5
 
-Anthropric released Claude Fable 5, showing major benchmark leaps at roughly 2x the cost of Opus models.
+Anthropic released Claude Fable 5, priced at roughly 2x the cost of Opus models (about $10 per million input tokens and $50 per million output tokens).
 
 ## IPO Wave: OpenAI and Anthropic Move Toward Public Markets
 
 OpenAI filed a confidential S-1 with the SEC on June 8, 2026, following a private valuation of $852 billion in March. The filing comes amid projected losses of $14 billion for the year with no expected profitability until 2029-2030.
 
-Anthropric confidentially submitted a draft registration statement for an IPO following a $65 billion Series H round that valued the company at $965 billion.
+Anthropic confidentially submitted a draft registration statement for an IPO following a $65 billion Series H round that valued the company at $965 billion.
 
 ## Neura Robotics Closes Record $1.4B Series C
 

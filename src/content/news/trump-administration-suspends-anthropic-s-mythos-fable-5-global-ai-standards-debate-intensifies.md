@@ -1,5 +1,5 @@
 ---
-title: "Trump Administration Suspends Anthropic's Mythos Fable 5; Global AI Standards Debate Intensifies"
+title: "Trump Administration Suspends Anthropic's Fable 5 and Mythos 5; Global AI Standards Debate Intensifies"
 description: "Security concerns prompt U.S. suspension of Anthropic software amid international calls for unified AI governance frameworks."
 publishDate: 2026-06-19
 category: "Breaking"
@@ -7,7 +7,7 @@ tags: ["AI governance", "Trump administration", "Anthropic", "EU AI Act"]
 source: "Yahoo Tech"
 sourceUrl: "https://tech.yahoo.com/ai/article/anthropic-openai-and-google-deepmind-ceos-call-for-us-led-coalition-to-create-standards-around-ai-203137756.html"
 significance: "high"
-entities: ["Trump administration", "Anthropic", "Mythos Fable 5", "OpenAI", "Sam Altman", "Dario Amodei", "Emmanuel Macron", "G7", "EU AI Act"]
+entities: ["Trump administration", "Anthropic", "Fable 5", "Mythos 5", "OpenAI", "Sam Altman", "Dario Amodei", "Emmanuel Macron", "G7", "EU AI Act"]
 irishEuAngle: true
 updates: []
 draft: false
@@ -15,7 +15,7 @@ draft: false
 
 ## Anthropic Software Suspension Over Security Concerns
 
-The Trump administration has ordered Anthropic to suspend all access to the latest version of its Mythos Fable 5 software, citing security concerns.
+The Trump administration has ordered Anthropic to suspend access to its Fable 5 and Mythos 5 models, citing security concerns.
 
 ## International AI Leaders Call for Unified Standards
 
@@ -23,7 +23,7 @@ In response to escalating tensions around AI governance, senior tech executives 
 
 OpenAI CEO Sam Altman called for an international forum for discussion that would establish international standards for testing, give impartial expert analysis of risks and serve as a venue for cooperation among nations.
 
-AnthropiC CEO Dario Amodei told G7 leaders he understood concerns that AI tools could be used by bad actors but said democratic nations should avoid becoming divided over how AI tools are rolled out.
+Anthropic CEO Dario Amodei told G7 leaders he understood concerns that AI tools could be used by bad actors but said democratic nations should avoid becoming divided over how AI tools are rolled out.
 
 ## European Concerns Over U.S. AI Access Controls
 

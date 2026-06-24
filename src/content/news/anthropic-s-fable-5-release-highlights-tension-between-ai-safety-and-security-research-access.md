@@ -19,7 +19,7 @@ updatedDate: 2026-06-17
 
 ### Key Developments
 
-AnthropiC released Fable 5 on June 9, 2026—the public-facing version of its Mythos 5 model with enhanced safety guardrails intact. However, the move has sparked immediate pushback from the cybersecurity research community, who argue that the restrictive guardrails are preventing legitimate security research use cases, including vulnerability assessment and penetration testing.
+Anthropic released Fable 5 on June 9, 2026—the public-facing version of its Mythos 5 model with enhanced safety guardrails intact. However, the move has sparked immediate pushback from the cybersecurity research community, who argue that the restrictive guardrails are preventing legitimate security research use cases, including vulnerability assessment and penetration testing.
 
 This tension reveals a persistent challenge in frontier AI development: how labs can maintain robust safety controls while preserving the model's utility for professional security practitioners who need access to cutting-edge capabilities for defensive purposes.
 

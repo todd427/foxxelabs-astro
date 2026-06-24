@@ -30,7 +30,7 @@ The paradox is stark. Ireland welcomed the August 2026 deadline as a marker of r
 
 ## The Compute Sovereignty Question
 
-AnthropiC's xAI deal raises another concern: AI capability concentration. One of the world's fastest-growing AI companies became partly dependent on a competitor's infrastructure because European alternatives don't exist at sufficient scale. This isn't just a business story—it's a sovereignty issue.
+Anthropic's xAI deal raises another concern: AI capability concentration. One of the world's fastest-growing AI companies became partly dependent on a competitor's infrastructure because European alternatives don't exist at sufficient scale. This isn't just a business story—it's a sovereignty issue.
 
 Europe's €500 billion commitment to AI chips and infrastructure sounds ambitious until you learn that a single company needed 220,000 GPUs within a month to handle unexpected demand. Where will those chips come from when multiple European AI companies face similar scaling pressures?
 
@@ -46,7 +46,7 @@ When the AI Office of Ireland becomes operational in August, it should immediate
 
 Will Europe's regulatory framework inadvertently create a two-tier system where large enterprises (with compute leverage) comply easily while SMEs (without it) struggle? Can Ireland's distributed enforcement model cope with infrastructure constraints that undermine the entire AI Act's foundational assumptions?
 
-AnthropiC's growth story is European success theater until European enterprises can actually scale without depending on Musk's infrastructure or Anthropic's compute partnerships.
+Anthropic's growth story is European success theater until European enterprises can actually scale without depending on Musk's infrastructure or Anthropic's compute partnerships.
 
 ---
 **Source:** [Multiple sources](https://www.theverge.com/ai-artificial-intelligence)

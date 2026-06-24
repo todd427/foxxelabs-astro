@@ -23,9 +23,9 @@ The Bill creates a new statutory body, the Oifig Intleachta Shaorga na hÉireann
 
 The AI Office of Ireland will be a Market Surveillance Authority in its own right and will act as the Single Point of Contact (SPOC) and central coordinating authority for AI regulation in the State.
 
-## Distributed Model Across 13 Market Surveillance Authorities
+## Distributed Model Across 15 Competent Authorities
 
-Under the regulatory framework, 13 Market Surveillance Authorities will supervise different classes of AI systems. The distributed regulatory model was endorsed by Government Decisions of 4 March 2025 and 22 July 2025.
+Under the regulatory framework, 15 competent authorities will supervise different classes of AI systems. The distributed regulatory model was endorsed by Government Decisions of 4 March 2025 and 22 July 2025.
 
 Key sector supervisors include:
 

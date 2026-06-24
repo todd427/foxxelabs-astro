@@ -20,7 +20,7 @@ For European builders and policymakers, this isn't just another US tech story. I
 
 ## Why This Matters Now
 
-Anthropric's stance reflects a growing philosophical divide: should AI systems be deployable for any legal use, or should their makers maintain control over specific applications? The US government chose companies willing to accept the former. Anthropic chose principle over Pentagon contracts.
+Anthropic's stance reflects a growing philosophical divide: should AI systems be deployable for any legal use, or should their makers maintain control over specific applications? The US government chose companies willing to accept the former. Anthropic chose principle over Pentagon contracts.
 
 Meanwhile, the EU AI Act—currently navigating its August 2026 deadline and December 2027 high-risk implementation window—contains no comparable guardrails on autonomous weapons or surveillance-scale deployments. The framework addresses accuracy, transparency, and bias, but it's silent on who gets to decide what military or surveillance applications are "lawful."
 
@@ -54,7 +54,7 @@ Key unknowns:
 2. **Engage with EU policymakers**: The Cyprus Trilogue collapse and ongoing AI Omnibus negotiations are still shaping these rules. Input matters.
 3. **Plan for divergence**: US and EU AI governance are separating. Build for both, but be clear about which markets you're targeting and why.
 
-Anthropric's Pentagon standoff isn't about one company's ethics. It's the first visible crack in a global AI governance system that Europe hasn't yet defined for itself.
+Anthropic's Pentagon standoff isn't about one company's ethics. It's the first visible crack in a global AI governance system that Europe hasn't yet defined for itself.
 
 ---
 **Source:** [Industry reporting on Pentagon contracts and Anthropic policy](https://foxxelabs.com)

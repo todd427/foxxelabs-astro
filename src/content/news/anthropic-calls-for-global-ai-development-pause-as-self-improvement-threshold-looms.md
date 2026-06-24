@@ -15,7 +15,7 @@ draft: false
 
 ## Anthropic Sounds Alarm on Rapid AI Development Trajectory
 
-Anthropric has issued a significant warning about the accelerating pace of AI development, arguing that the world needs a globally coordinated pause on frontier model development before AI systems reach the point where they can improve themselves without human oversight.
+Anthropic has issued a significant warning about the accelerating pace of AI development, arguing that the world needs a globally coordinated pause on frontier model development before AI systems reach the point where they can improve themselves without human oversight.
 
 The announcement comes as evidence mounts that AI capabilities are advancing faster than many anticipated. Most strikingly, Anthropic reports that as of May 2026, more than 80% of code merged into its own codebase was written by Claude, not human engineers—with the company merging 8x more code per day in Q2 2026 compared to 2024. This rapid acceleration in AI-assisted development underscores the company's concern about near-term capabilities trajectories.
 

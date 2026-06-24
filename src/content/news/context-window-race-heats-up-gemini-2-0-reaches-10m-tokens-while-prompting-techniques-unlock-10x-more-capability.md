@@ -13,7 +13,7 @@ irishEuAngle: false
 updates:
   - date: 2026-06-24
     note: "Rewritten from an earlier auto-generated draft that contained unverified figures (a fabricated 10M-token Gemini claim and a non-existent 'Claude 3.7'). Figures below are sourced to primary model documentation."
-draft: false
+draft: true
 ---
 
 ## Where context windows actually stand

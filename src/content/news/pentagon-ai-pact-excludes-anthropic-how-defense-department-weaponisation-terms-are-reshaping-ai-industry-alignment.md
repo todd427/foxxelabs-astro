@@ -20,7 +20,7 @@ The exclusion marks the most visible fracture yet in the AI industry over weapon
 
 ## What's Actually at Stake
 
-AnthropiC's refusal isn't rhetorical posturing—it's a calculated business and ethical stance that directly contradicts Pentagon procurement language. The DoD's standard "all lawful purposes" clause is designed to give military operators maximum flexibility. Anthropic's insistence on written restrictions around autonomous weapons and surveillance effectively boxes the company out of one of the fastest-growing procurement categories in defense tech.
+Anthropic's refusal isn't rhetorical posturing—it's a calculated business and ethical stance that directly contradicts Pentagon procurement language. The DoD's standard "all lawful purposes" clause is designed to give military operators maximum flexibility. Anthropic's insistence on written restrictions around autonomous weapons and surveillance effectively boxes the company out of one of the fastest-growing procurement categories in defense tech.
 
 For context: the U.S. defense budget for AI and autonomous systems is projected to exceed $32 billion annually by 2027. This isn't a niche market. It's the future of Pentagon software strategy.
 

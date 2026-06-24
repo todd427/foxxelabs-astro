@@ -1,6 +1,6 @@
 ---
-title: "Anthropic's Fable 5 Shut Down by US Government Four Days After Public Release"
-description: "Anthropic released Fable 5 on June 9, 2026, but the model was shut down by the US government on June 13, 2026."
+title: "Anthropic's Fable 5 Suspended by US Government Three Days After Public Release"
+description: "Anthropic released Fable 5 on June 9, 2026, but the model's access was suspended by the US government on June 12, 2026."
 publishDate: 2026-06-23
 category: "Breaking"
 tags: ["Fable 5", "US government", "AI regulation"]
@@ -13,11 +13,11 @@ updates: []
 draft: false
 ---
 
-## Fable 5 Released, Then Rapidly Shut Down
+## Fable 5 Released, Then Rapidly Suspended
 
-Anthropric released Fable 5 to the public on June 9, 2026. The model shares the same underlying architecture as Mythos 5 but incorporates new safeguards.
+Anthropic released Fable 5 to the public on June 9, 2026. The model shares the same underlying architecture as Mythos 5 but incorporates new safeguards.
 
-Just four days later, on June 13, 2026, the model was shut down by the US government.
+Just three days later, on June 12, 2026, the model's access was suspended by the US government.
 
 ## What Was Fable 5?
 

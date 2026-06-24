@@ -14,7 +14,7 @@ draft: false
 
 ## Claude Agent Vulnerability Exposes Enterprise Integration Risks
 
-Anthropric's Claude AI assistant faces a critical security vulnerability that illustrates a fundamental risk in modern agentic AI deployments: when a single manipulated input compromises an agent session, every tool it can reach becomes accessible to attackers.
+Anthropic's Claude AI assistant faces a critical security vulnerability that illustrates a fundamental risk in modern agentic AI deployments: when a single manipulated input compromises an agent session, every tool it can reach becomes accessible to attackers.
 
 The Oasis Threat Research Team has disclosed a vulnerability chain affecting Claude that demonstrates how tightly integrated AI agents amplify security surface areas. When Claude is connected to enterprise tools, corporate APIs, or MCP servers, its effective permissions become the union of everything it can reach. A single compromised session can read files, send messages, and interact with every connected service before users realize what's happening.
 

@@ -15,11 +15,11 @@ draft: false
 
 ## Claude Mythos Finds 23,019 Vulnerabilities in First Month
 
-Anthropric's Project Glasswing delivered dramatic results in its opening month. According to the first-month report from May 22, 2026, Claude Mythos identified 23,019 vulnerabilities across 1,000+ open-source projects, with 90.6% confirmed as real on independent sampling.
+Anthropic's Project Glasswing delivered dramatic results in its opening month. According to the first-month report from May 22, 2026, Claude Mythos identified 23,019 vulnerabilities across 1,000+ open-source projects, with 90.6% confirmed as real on independent sampling.
 
 ## Project Glasswing: A Defensive Cybersecurity Initiative
 
-Anthropric launched Project Glasswing on April 7, 2026, distributing Claude Mythos Preview to roughly 50 partner organizations—including AWS, Apple, Google, Microsoft, NVIDIA, CrowdStrike, and JPMorgan Chase—exclusively for defensive cybersecurity work.
+Anthropic launched Project Glasswing on April 7, 2026, distributing Claude Mythos Preview to roughly 50 partner organizations—including AWS, Apple, Google, Microsoft, NVIDIA, CrowdStrike, and JPMorgan Chase—exclusively for defensive cybersecurity work.
 
 ## Prompt Engineering Breakthroughs Drive AI Model Performance
 

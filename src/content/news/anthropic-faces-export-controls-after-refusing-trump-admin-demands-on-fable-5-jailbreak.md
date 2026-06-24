@@ -33,7 +33,7 @@ This signal moved prediction markets sharply. Kalshi now prices a 57% chance Fab
 
 ## Refunds and Free-Trial Deadline
 
-Anthropric issued refunds for subscribers who signed up between June 9–14 when Fable 5 was live, with a June 20, 2026 deadline for refund processing. The Fable 5 free-trial window for paid subscribers (Pro, Max, Team, and Enterprise) officially closes on June 22, 2026, after which subscription users need paid usage credits.
+Anthropic issued refunds for subscribers who signed up between June 9–14 when Fable 5 was live, with a June 20, 2026 deadline for refund processing. The Fable 5 free-trial window for paid subscribers (Pro, Max, Team, and Enterprise) officially closes on June 22, 2026, after which subscription users need paid usage credits.
 
 ## South Korea Business Momentum Amid Constraints
 

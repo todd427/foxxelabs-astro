@@ -33,7 +33,7 @@ updatedDate: 2026-06-24
 
 ## Anthropic Restricts Model Access Under Export Controls
 
-Anthropric disabled access to both Claude Fable 5 and Claude Mythos 5 after the U.S. government imposed export controls citing national security concerns. This action followed the company's June announcements: Claude Mythos 5 had moved into general availability from an April 2026 partner preview, while Claude Fable 5 remained in closed partner preview with no announced general availability date.
+Anthropic disabled access to both Claude Fable 5 and Claude Mythos 5 after the U.S. government imposed export controls citing national security concerns. This action followed the company's June announcements: Claude Mythos 5 had moved into general availability from an April 2026 partner preview, while Claude Fable 5 remained in closed partner preview with no announced general availability date.
 
 ## AI Leaders Convene at G7 Summit
 

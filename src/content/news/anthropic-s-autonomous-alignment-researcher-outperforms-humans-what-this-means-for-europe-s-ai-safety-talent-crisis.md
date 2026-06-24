@@ -16,7 +16,7 @@ draft: false
 
 ### Key Developments
 
-Anthropric has announced a significant breakthrough in automating alignment research itself. The company's Claude-powered Automated Alignment Researcher (AAR) is now proposing ideas, running experiments, and iterating on open research problems around weak-to-strong supervision—and critically, these autonomous agents are outperforming human researchers on the same tasks.
+Anthropic has announced a significant breakthrough in automating alignment research itself. The company's Claude-powered Automated Alignment Researcher (AAR) is now proposing ideas, running experiments, and iterating on open research problems around weak-to-strong supervision—and critically, these autonomous agents are outperforming human researchers on the same tasks.
 
 This marks a watershed moment in AI safety: for the first time, the bottleneck of alignment research—traditionally a labour-intensive human endeavour requiring domain expertise—is being addressed not through hiring more researchers, but through turning compute into alignment progress.
 

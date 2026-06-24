@@ -15,7 +15,7 @@ draft: false
 
 ## Anthropic Opens Access to Powerful Mythos Cybersecurity Model
 
-Anthropric announced that its Mythos large language models—AI systems with advanced cybersecurity capabilities—will be released to all customers in the coming weeks. This move marks a significant moment in AI accessibility, though it comes with important security implications that are already drawing attention from tech leaders and policymakers.
+Anthropic announced that its Mythos large language models—AI systems with advanced cybersecurity capabilities—will be released to all customers in the coming weeks. This move marks a significant moment in AI accessibility, though it comes with important security implications that are already drawing attention from tech leaders and policymakers.
 
 ### What's Happening
 

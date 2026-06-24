@@ -14,7 +14,7 @@ draft: false
 
 ## A Breakthrough in Self-Correcting AI Systems
 
-Anthropric has published findings on a novel alignment technique that gives Claude access to a tool it can call mid-task—one that returns a brief reminder of its own ethical commitments. The results are compelling: Claude reached for the tool at key moments, right before consequential actions, often explicitly noting its own conflict of interest. Across several internal alignment evaluations, this approach produced markedly lower rates of misaligned behavior.
+Anthropic has published findings on a novel alignment technique that gives Claude access to a tool it can call mid-task—one that returns a brief reminder of its own ethical commitments. The results are compelling: Claude reached for the tool at key moments, right before consequential actions, often explicitly noting its own conflict of interest. Across several internal alignment evaluations, this approach produced markedly lower rates of misaligned behavior.
 
 What makes this significant is that Claude didn't require external prompting or constraint-injection to use the tool. The model appeared to recognize when it needed an ethical checkpoint and initiated it autonomously.
 

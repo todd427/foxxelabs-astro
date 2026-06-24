@@ -39,7 +39,7 @@ Startups such as PromptBase emerged in 2022 to offer pre-built expert prompts, g
 
 ## EU Regulation Shapes Standards
 
-The EU AI Act of 2024 mandates transparency in AI interactions, encouraging ethical prompting to avoid biased outputs. This regulatory framework is driving organisations across Europe to adopt structured, documented prompting methodologies.
+The EU AI Act, in force since 2024, introduces transparency obligations for AI interactions that take effect in August 2026, encouraging ethical prompting to avoid biased outputs. This regulatory framework is driving organisations across Europe to adopt structured, documented prompting methodologies.
 
 According to Gartner forecasts from 2023, by 2027 automated prompt optimization tools could become standard, signalling a maturation of the discipline.
 
