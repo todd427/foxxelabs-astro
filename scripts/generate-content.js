@@ -162,7 +162,9 @@ function collectSearchResultUrls(searchResponse) {
 // continuation of the search turn: the search-result URLs are in context and thus
 // fetchable. web_fetch_20250910 needs no beta header (plain server tool, like
 // web_search); if a future API change requires one, add it on the create() call.
-const EXTRACT_MODEL = MODEL;       // bump to a Sonnet id here if calibration shows Haiku under-extracts
+// Extraction is the accuracy-critical step — claim fidelity sets the ceiling for
+// everything downstream — so it runs on Sonnet while search/write stay on Haiku.
+const EXTRACT_MODEL = 'claude-sonnet-4-6';
 const MAX_FETCH_URLS = 2;          // fetch the top 1-2 results, not everything
 const SERVER_TOOL_CONTINUATIONS = 4;
 
@@ -263,6 +265,117 @@ OUTPUT JSON only, no prose:
     ` → ${claims.length} claim(s) [${grounding}].`);
 
   return { claims, grounding };
+}
+
+// ── Step 2.5: independent verification ───────────────────────────────────────
+// Grounding proves a claim came from a real URL — it does NOT prove the URL is
+// telling the truth. The "Gemini 2.0 = 10M tokens / Claude 3.7" fabrication
+// entered exactly here: a junk newsletter STATED those falsehoods and the
+// extractor faithfully captured them, so they passed the URL-grounding gate
+// identically to a fact from anthropic.com. This pass re-searches each claim for
+// INDEPENDENT corroboration on a different domain and drops anything that is
+// neither primary-sourced nor independently confirmed. It is deliberately
+// conservative: when in doubt, drop — a missing article beats a false one.
+const VERIFY_MODEL = MODEL;        // search-and-judge task; Haiku is sufficient
+const VERIFY_MAX_SEARCHES = 8;     // bound the web_search fan-out per article
+const VERIFY_CONTINUATIONS = 4;
+
+function hostOf(u) {
+  try { return new URL(u).host.replace(/^www\./, ''); } catch { return ''; }
+}
+
+async function verifyClaims(claims, topic) {
+  if (!claims.length) return [];
+  console.log(`🔎 Verifying ${claims.length} claim(s) against independent sources...`);
+
+  const review = claims.map((c, i) => ({
+    index: i,
+    statement: c.statement,
+    source_name: c.source_name,
+    source_domain: hostOf(c.source_url),
+    claim_type: c.claim_type,
+  }));
+
+  const verifyPrompt = `You are a fact-checking editor deciding which claims are safe to publish. Below are claims extracted from a single source article, each with an index, the statement, and the domain it came from.
+
+CLAIMS:
+${JSON.stringify(review, null, 2)}
+
+For EACH claim, use the web_search tool to look for INDEPENDENT corroboration — a credible source on a DIFFERENT domain than the original that states the same fact — then classify it:
+
+- "primary": the ORIGINAL source is itself the authoritative body for this fact — a company announcing its own product on its own site, a regulator stating its own regulation, researchers describing their own paper, or an established first-hand news outlet reporting it directly. A marketing blog, newsletter, SEO/aggregator site, or "AI tools" listicle is NEVER primary.
+- "corroborated": at least one credible, INDEPENDENT source (different organisation AND domain) states the same fact.
+- "uncorroborated": you could not find independent confirmation and the original source is not authoritative for this claim.
+- "contradicted": a credible independent source conflicts with the claim — a wrong figure, a product/version that does not exist, a wrong date.
+
+Be strict. Hallucinated specifics — a model version no primary source confirms, a capability or statistic no one else reports — must be "uncorroborated" or "contradicted". When genuinely uncertain, choose "uncorroborated", never "primary".
+
+OUTPUT JSON only, no prose:
+{
+  "verdicts": [
+    { "index": 0, "verdict": "primary|corroborated|uncorroborated|contradicted", "corroborating_url": "https://... or null", "note": "one short reason" }
+  ]
+}`;
+
+  const tools = [{ type: 'web_search_20250305', name: 'web_search', max_uses: VERIFY_MAX_SEARCHES }];
+  let messages = [{ role: 'user', content: verifyPrompt }];
+
+  let response = await callWithRetry(() => client.messages.create({
+    model: VERIFY_MODEL, max_tokens: 4000, tools, messages,
+  }));
+  let guard = 0;
+  while (response.stop_reason === 'pause_turn' && guard++ < VERIFY_CONTINUATIONS) {
+    messages = [...messages, { role: 'assistant', content: response.content }];
+    response = await callWithRetry(() => client.messages.create({
+      model: VERIFY_MODEL, max_tokens: 4000, tools, messages,
+    }));
+  }
+
+  const text = response.content
+    .filter((b) => b.type === 'text').map((b) => b.text).join('\n');
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  let verdicts = null;
+  if (jsonMatch) {
+    try { verdicts = JSON.parse(jsonMatch[0]).verdicts; } catch { /* handled below */ }
+  }
+
+  // Graceful degrade: if the verifier output is unusable, neither nuke the whole
+  // run nor wave junk through — keep only claims extraction already rated above
+  // single-source (i.e. official/corroborated), drop the rest.
+  if (!Array.isArray(verdicts)) {
+    console.warn('   ⚠️  verification output unparseable — falling back to confidence ≥ corroborated only.');
+    const kept = claims.filter((c) => c.confidence !== 'single-source');
+    console.log(`   kept ${kept.length}/${claims.length} (fallback).`);
+    return kept;
+  }
+
+  const byIndex = new Map(verdicts.map((v) => [v.index, v]));
+  const kept = [];
+  let contradicted = 0;
+  claims.forEach((c, i) => {
+    const v = byIndex.get(i);
+    switch (v?.verdict) {
+      case 'primary':
+        kept.push(c);
+        break;
+      case 'corroborated':
+        // An independent source confirmed it — reflect that in the stored confidence.
+        kept.push({ ...c, confidence: raiseConfidence(c.confidence) });
+        break;
+      case 'contradicted':
+        contradicted++;
+        console.warn(`   ⚠️  CONTRADICTED & dropped: "${c.statement.slice(0, 90)}"` +
+          (v?.note ? ` — ${v.note}` : ''));
+        break;
+      default: // uncorroborated or missing verdict → drop (conservative)
+        break;
+    }
+  });
+
+  const dropped = claims.length - kept.length;
+  console.log(`   kept ${kept.length}/${claims.length}, dropped ${dropped}` +
+    (contradicted ? ` (${contradicted} contradicted)` : '') + '.');
+  return kept;
 }
 
 async function generateNewsPost(claims, topic) {
@@ -517,8 +630,8 @@ async function main() {
         const searchResults = await searchForContent(topic, daysBack);
 
         // Capture deep: fetch the real article(s) and extract grounded claims.
-        const { claims } = await fetchAndExtractClaims(searchResults, topic);
-        if (!claims.length) {
+        const { claims: rawClaims } = await fetchAndExtractClaims(searchResults, topic);
+        if (!rawClaims.length) {
           // Novelty-by-construction: no grounded claims → no article. This is the
           // structural cure for "no major releases" filler — we render only when
           // there is real captured substance, never to fill the cycle.
@@ -526,7 +639,16 @@ async function main() {
           continue;
         }
 
-        // Render from capture.
+        // Trust gate: drop claims that are neither primary-sourced nor
+        // independently corroborated. This is the gate the fabricated
+        // 10M-token / "Claude 3.7" article would never have passed.
+        const claims = await verifyClaims(rawClaims, topic);
+        if (!claims.length) {
+          console.log(`↳ No claims survived verification for "${topic}" — nothing to publish.`);
+          continue;
+        }
+
+        // Render from verified capture.
         const postData = await generateNewsPost(claims, topic);
 
         const candidate = makeStory({
