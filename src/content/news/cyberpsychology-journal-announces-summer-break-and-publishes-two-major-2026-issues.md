@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-24, note: "IADT welcomed visiting students and lecturers from Tallinn University (Estonia) and Hochschule der Medien (Stuttgart, Germany) in February 2026 for an EU Erasmus+ Blended Intensive Programme in Cyberp", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-06-24, note: "The IADT Erasmus+ Cyberpsychology Blended Intensive Programme ran from February 23-27, 2026.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-06-24, note: "The IADT Cyberpsychology BIP programme covered topics including foundations of cyberpsychology, artificial intelligence, misinformation and deepfakes, online communication, gaming, and the social psyc", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-06-24, note: "IADT students will travel to Tallinn University (Estonia) at Easter 2026 to complete an EU Erasmus+ Blended Intensive Programme in Legal Psychology.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-06-24, note: "The IADT Erasmus+ Cyberpsychology BIP was organised by Sonya Hogan, Hannah Barton, Dr Sinéad Meade, Dr Liam Challenor, Dr Andrew Errity, and Dr John Greaney.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace experienced a sharp increase in submissions in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is implementing a summer break for new submissions from June 16 to August 31, with the submission portal closed during this period.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-23, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Volume 20, Issue 2 in April 2026 with eight open-access articles.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -30,7 +35,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-23
+updatedDate: 2026-06-24
 ---
 
 ## Summer Submission Break Announced

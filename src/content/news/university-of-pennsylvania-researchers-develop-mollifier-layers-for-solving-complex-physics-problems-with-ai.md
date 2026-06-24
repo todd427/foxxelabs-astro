@@ -9,8 +9,21 @@ sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates"
 significance: "high"
 entities: ["University of Pennsylvania", "Mollifier Layers", "NeurIPS 2026", "Transactions on Machine Learning Research"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-24, note: "Researchers at the University of Pennsylvania's School of Engineering introduced a technique called 'Mollifier Layers' that integrates classical mathematical smoothing functions into neural networks t", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "The Mollifier Layers method addresses a longstanding challenge in scientific AI where high-order derivative computations in noisy real-world data tend to fail.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "Mollifier Layers applications span genomics, materials science, climate modeling, and chromatin biology.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "Mollifier Layers findings are set to appear in Transactions on Machine Learning Research and will be presented at NeurIPS 2026.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "The Ames Laboratory developed an AI workflow using a physics-trained model called DuctGPT to discover rare-earth-free permanent magnets.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "DuctGPT understands underlying physics and can invent new materials while considering production costs and component sourcing, unlike traditional AI trained on existing data.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "The DuctGPT breakthrough builds on previous work creating bismuth-manganese composites and aims to accelerate materials discovery for defense, renewable energy, transportation, and electronics applica", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "The DuctGPT approach reduces U.S. dependence on rare earth elements imported from China by solving both supply chain security and cost issues.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "New York City's Department of Education issued preliminary guidance requiring all AI tools to pass a bias and equity review before deployment across its 1.1 million-student system.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "NYC's comprehensive AI compliance playbook was scheduled for release in June 2026, establishing enforceable standards for edtech vendors.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "Qualcomm is in early talks to acquire Tenstorrent for between eight and ten billion dollars.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-24, note: "Tenstorrent designs AI chips using the open RISC-V standard and features chip veteran Jim Keller's engineering expertise.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
+updatedDate: 2026-06-24
 ---
 
 ## New ML Technique Solves Long-Standing Challenge in Scientific AI

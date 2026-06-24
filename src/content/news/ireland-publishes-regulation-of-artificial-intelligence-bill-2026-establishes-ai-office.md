@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-24, note: "The Regulation of Artificial Intelligence Bill 2026 was published on 17 June 2026, giving effect in Ireland to the EU Artificial Intelligence Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-24, note: "John Jumper, who won the 2024 Nobel Prize in chemistry for work on artificial intelligence, is leaving Google DeepMind to join Anthropic.", sourceUrl: "https://www.bloomberg.com/news/articles/2026-06-19/nobel-winner-john-jumper-to-leave-google-deepmind-for-anthropic" }
+  - { date: 2026-06-24, note: "Noam Shazeer, a vice president of engineering at Google and co-lead of its Gemini AI models, left Google to join OpenAI.", sourceUrl: "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/" }
+  - { date: 2026-06-24, note: "Engineers at DeepMind have been leaving for Anthropic at a ratio of nearly 11 to 1, according to industry analyses.", sourceUrl: "https://thenextweb.com/news/john-jumper-nobel-deepmind-leaves-anthropic-alphafold" }
   - { date: 2026-06-23, note: "The Bill is a technical implementing measure and does not add to the obligations placed on regulated entities by the EU Regulation.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-06-23, note: "The EU AI Act entered into force on 1 August 2024.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-06-23, note: "The European Commission published its draft guidelines on the classification of high-risk AI systems (HRAIs) under the EU AI Act on 19 May 2026.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/" }
@@ -35,7 +39,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-06-23
+updatedDate: 2026-06-24
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
