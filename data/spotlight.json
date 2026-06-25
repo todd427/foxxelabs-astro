@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-06-24T10:22:07.590Z",
+  "updatedAt": "2026-06-25T10:19:36.596Z",
   "pick": {
     "id": "zai-org/GLM-5.2",
     "url": "https://hf.co/zai-org/GLM-5.2",
     "author": "zai-org",
     "name": "GLM-5.2",
-    "likes": 2263,
-    "downloads": 40127,
-    "ageDays": 8,
+    "likes": 2400,
+    "downloads": 67107,
+    "ageDays": 9,
     "blurb": "GLM-5.2 is a large MoE model shipping with published eval results across reasoning, code, and math tasks—released 8 days ago with 2.3k likes and strong adoption momentum. It's the direct comparison point engineers need to validate whether smaller specialized models like VibeThinker actually trade off meaningfully or just inherit upstream capabilities.",
     "surfacedAt": "2026-06-24"
   },
   "also": [
     {
-      "id": "WeiboAI/VibeThinker-3B",
-      "url": "https://hf.co/WeiboAI/VibeThinker-3B",
-      "author": "WeiboAI",
-      "name": "VibeThinker-3B",
-      "likes": 676,
-      "downloads": 41170,
-      "ageDays": 12
-    },
-    {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "author": "empero-ai",
       "name": "Qwythos-9B-Claude-Mythos-5-1M",
-      "likes": 243,
-      "downloads": 1856,
-      "ageDays": 5
+      "likes": 342,
+      "downloads": 10160,
+      "ageDays": 6
+    },
+    {
+      "id": "WeiboAI/VibeThinker-3B",
+      "url": "https://hf.co/WeiboAI/VibeThinker-3B",
+      "author": "WeiboAI",
+      "name": "VibeThinker-3B",
+      "likes": 703,
+      "downloads": 51717,
+      "ageDays": 13
+    },
+    {
+      "id": "Qwen/Qwen-AgentWorld-35B-A3B",
+      "url": "https://hf.co/Qwen/Qwen-AgentWorld-35B-A3B",
+      "author": "Qwen",
+      "name": "Qwen-AgentWorld-35B-A3B",
+      "likes": 188,
+      "downloads": 3389,
+      "ageDays": 3
     },
     {
       "id": "microsoft/FastContext-1.0-4B-SFT",
       "url": "https://hf.co/microsoft/FastContext-1.0-4B-SFT",
       "author": "microsoft",
       "name": "FastContext-1.0-4B-SFT",
-      "likes": 325,
-      "downloads": 4391,
-      "ageDays": 10
+      "likes": 339,
+      "downloads": 5276,
+      "ageDays": 11
     },
     {
       "id": "poolside/Laguna-M.1",
       "url": "https://hf.co/poolside/Laguna-M.1",
       "author": "poolside",
       "name": "Laguna-M.1",
-      "likes": 94,
-      "downloads": 2787,
-      "ageDays": 9
-    },
-    {
-      "id": "lordx64/Qwable-v1",
-      "url": "https://hf.co/lordx64/Qwable-v1",
-      "author": "lordx64",
-      "name": "Qwable-v1",
-      "likes": 175,
-      "downloads": 4547,
-      "ageDays": 9
+      "likes": 96,
+      "downloads": 2956,
+      "ageDays": 10
     }
   ]
 }

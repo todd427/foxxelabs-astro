@@ -10,6 +10,9 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-25, note: "The first issue of 2026 (Issue 1, Volume 20) was published on January 28, 2026, covering topics including adolescents' and young people's mobile and social network habits, prosocial and antisocial onl", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-25, note: "Cyberpsychology has an Impact Factor of 2.6 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-25, note: "Cyberpsychology has an SJR (Scimago Journal Rank) of 0.852 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-24, note: "IADT welcomed visiting students and lecturers from Tallinn University (Estonia) and Hochschule der Medien (Stuttgart, Germany) in February 2026 for an EU Erasmus+ Blended Intensive Programme in Cyberp", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-06-24, note: "The IADT Erasmus+ Cyberpsychology Blended Intensive Programme ran from February 23-27, 2026.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-06-24, note: "The IADT Cyberpsychology BIP programme covered topics including foundations of cyberpsychology, artificial intelligence, misinformation and deepfakes, online communication, gaming, and the social psyc", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
@@ -35,7 +38,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-25
 ---
 
 ## Summer Submission Break Announced

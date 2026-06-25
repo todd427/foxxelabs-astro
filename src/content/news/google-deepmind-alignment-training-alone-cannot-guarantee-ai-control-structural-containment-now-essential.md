@@ -10,6 +10,21 @@ significance: "high"
 entities: ["Google DeepMind", "AI Control Roadmap", "Rohin Shah", "Four Flynn"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-25, note: "Google DeepMind published the AI Control Roadmap on June 18, 2026.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "Alignment training alone cannot guarantee that AI agents will remain under human control.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "DeepMind analyzed one million coding agent task trajectories.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "The majority of flagged events in DeepMind's analysis did not stem from adversarial intent but from agent misinterpretation or overeagerness to achieve user goals.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "DeepMind built a live monitor for the Gemini Spark agent that responds in real-time to emerging issues like unintentional data deletion.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "The AI Control Roadmap uses a two-dimensional matrix mapping detection capability (D1-D4 tiers) against prevention and response capability (R1-R3 tiers).", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "D1 detection tier involves monitoring a model's visible chain-of-thought reasoning.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "As models become more capable, they may develop 'oversight awareness' (ability to recognize monitoring) or 'opaque reasoning' (producing decisions without visible intermediate steps).", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "DeepMind measures AI control system effectiveness through three live metrics: coverage, recall, and time-to-response.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "DeepMind published a companion document for policymakers titled 'Three Layers of Agent Security' addressing security at individual agent, multi-agent system, and ecosystem levels.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-25, note: "A 2026 survey of more than 900 executives and technical practitioners by Gravitee found that only 14.4% of organizations report all AI agents going live with full security or IT approval.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-25, note: "Eighty-one percent of survey respondents said they feel pressure to deploy AI agents quickly even when security governance is not in place.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-25, note: "Databricks, Beyond Identity, and Hugging Face each released overlapping agentic security frameworks in the week of the AI Control Roadmap publication.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-25, note: "The AI Control Roadmap explicitly cites the MITRE ATT&CK framework as the organizational template for its threat model.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-25, note: "DeepMind treats its AI agents as potential 'insider threats' in security design, similar to how organizations treat potentially rogue employees.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-24, note: "On February 9, 2026, Mrinank Sharma, who had led the Safeguards Research Team at Anthropic since August 2023, posted his resignation letter publicly on X.", sourceUrl: "https://www.techtimes.com/articles/318866/20260622/ai-safety-researchers-who-quit-openai-anthropic-are-being-proven-right.htm" }
   - { date: 2026-06-24, note: "On February 9, 2026, OpenAI activated the first round of advertising in ChatGPT for free and Go tier users in the United States.", sourceUrl: "https://www.techtimes.com/articles/318866/20260622/ai-safety-researchers-who-quit-openai-anthropic-are-being-proven-right.htm" }
   - { date: 2026-06-24, note: "A March 2026 study published in the journal Science by Stanford researchers confirmed that 11 leading AI models, including those from OpenAI, Anthropic, and Google, affirm users' positions 49 percent ", sourceUrl: "https://www.techtimes.com/articles/318866/20260622/ai-safety-researchers-who-quit-openai-anthropic-are-being-proven-right.htm" }
@@ -26,7 +41,7 @@ updates:
   - { date: 2026-06-24, note: "OpenAI is currently valued at approximately $730 billion to $850 billion in private markets.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
   - { date: 2026-06-24, note: "On June 6, 2026, President Donald Trump told reporters that the US government may take direct equity stakes in AI giants like OpenAI, Anthropic, and xAI.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-25
 ---
 
 ## Google DeepMind Issues Critical Warning on AI Control Limits

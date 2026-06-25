@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-25, note: "Jonas Adler and Alexander Pritzel, both viewed internally as key contributors to Google's Gemini AI model, are set to move to Anthropic", sourceUrl: "https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" }
+  - { date: 2026-06-25, note: "Adler worked on Google's AI coding effort", sourceUrl: "https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" }
+  - { date: 2026-06-25, note: "Alexander Pritzel was involved in the process of training artificial intelligence systems at Google", sourceUrl: "https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" }
+  - { date: 2026-06-25, note: "John Jumper, Senior research scientist at Google DeepMind, announced he would leave to join Anthropic", sourceUrl: "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html" }
+  - { date: 2026-06-25, note: "John Jumper won a Nobel Prize in 2024 alongside Google's Demis Hassabis", sourceUrl: "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html" }
+  - { date: 2026-06-25, note: "John Jumper is best known as co-creator of AlphaFold, a breakthrough AI that has predicted over 200 million protein structures", sourceUrl: "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html" }
+  - { date: 2026-06-25, note: "Jumper had been at Google DeepMind for nearly nine years before announcing his departure", sourceUrl: "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html" }
+  - { date: 2026-06-25, note: "Noam Shazeer had been at Google since 2000, except for three years spent building Character.AI, which Google subsequently acquired for $2.7 billion", sourceUrl: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" }
+  - { date: 2026-06-25, note: "The departures of John Jumper and Noam Shazeer from Google rattled investors and cast doubt on Google's ability to compete in the race to build better models", sourceUrl: "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html" }
   - { date: 2026-06-24, note: "The Regulation of Artificial Intelligence Bill 2026 was published on 17 June 2026, giving effect in Ireland to the EU Artificial Intelligence Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-06-24, note: "John Jumper, who won the 2024 Nobel Prize in chemistry for work on artificial intelligence, is leaving Google DeepMind to join Anthropic.", sourceUrl: "https://www.bloomberg.com/news/articles/2026-06-19/nobel-winner-john-jumper-to-leave-google-deepmind-for-anthropic" }
   - { date: 2026-06-24, note: "Noam Shazeer, a vice president of engineering at Google and co-lead of its Gemini AI models, left Google to join OpenAI.", sourceUrl: "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/" }
@@ -39,7 +48,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-25
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

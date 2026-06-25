@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Dario Amodei", "Google DeepMind", "Demis Hassabis", "OpenAI", "Sam Altman", "U.S. government", "G7"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-25, note: "Noam Shazeer, co-author of the 2017 foundational paper 'Attention Is All You Need' that introduced the Transformer architecture, announced on June 18, 2026 that he is leaving Google DeepMind to join O", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
+  - { date: 2026-06-25, note: "Google had paid approximately $2.7 billion in 2024 to bring Noam Shazeer back from Character.AI, and he lasted less than 22 months before announcing his departure.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
+  - { date: 2026-06-25, note: "John Jumper, Google DeepMind director and 2024 Nobel Prize in Chemistry winner for AlphaFold work, announced he is leaving Google to join Anthropic.", sourceUrl: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" }
+  - { date: 2026-06-25, note: "Around a dozen tech executives, including OpenAI's Sam Altman, attended a G7 summit meeting with heads of state including President Donald Trump to discuss opportunities and challenges around AI.", sourceUrl: "https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html" }
+  - { date: 2026-06-25, note: "Fable 5 and Mythos 5 remained offline as of June 22, 2026, ten days after the U.S. Department of Commerce issued an emergency export control directive.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
+  - { date: 2026-06-25, note: "Prediction markets price 57% odds of Fable 5 and Mythos 5 restoration before July 1, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
+  - { date: 2026-06-25, note: "Microsoft announced a family of seven new models developed in-house at Microsoft AI as of June 8, 2026.", sourceUrl: "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" }
+  - { date: 2026-06-25, note: "Microsoft and Mayo Clinic announced a collaboration to co-create a frontier AI model for healthcare designed to excel at clinical reasoning and healthcare use cases.", sourceUrl: "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" }
   - { date: 2026-06-24, note: "Google DeepMind vice president John Jumper won the 2024 Nobel Prize in chemistry for his work on artificial intelligence", sourceUrl: "https://www.taipeitimes.com/News/biz/archives/2026/06/22/2003859496" }
   - { date: 2026-06-24, note: "John Jumper is leaving Google DeepMind to join Anthropic", sourceUrl: "https://www.taipeitimes.com/News/biz/archives/2026/06/22/2003859496" }
   - { date: 2026-06-24, note: "Anthropic disabled access to its newest models, Fable 5 and Mythos 5, after the U.S. government imposed export controls on the models", sourceUrl: "https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html" }
@@ -28,7 +36,7 @@ updates:
   - { date: 2026-06-22, note: "OpenAI filed a confidential S-1 with the SEC on June 8, 2026, following a private valuation of $852 billion in March, with projected losses of $14 billion for the year and no expected profitability un", sourceUrl: "https://dentro.de/ai/news/" }
   - { date: 2026-06-22, note: "Japanese AI startup Sakana AI is launching Fugu, a system that coordinates multiple AI models on the fly to compete with leaders like Anthropic's Fable 5, with the approach also aiming to cut dependen", sourceUrl: "https://dentro.de/ai/news/" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-25
 ---
 
 ## Anthropic Restricts Model Access Under Export Controls
