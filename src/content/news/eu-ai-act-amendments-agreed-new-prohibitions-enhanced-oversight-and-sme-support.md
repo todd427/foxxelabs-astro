@@ -10,6 +10,8 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-26, note: "The prohibitions on eight harmful AI practices became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-26, note: "Simplified technical documentation requirements granted to small and medium-sized enterprises have been extended to small mid-cap companies.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-25, note: "On May 7, 2026, EU legislative bodies (the Council, European Parliament, and European Commission) reached a political agreement on proposed amendments to the AI Act called the 'AI Act Omnibus'.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-06-25, note: "The agreement extends compliance deadlines for stand-alone high-risk AI systems to December 2, 2027, a deferral of 16 months from the original August 2, 2026 deadline.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-06-25, note: "For AI systems that are regulated products or safety components (such as medical devices, lifts, radio equipment), the compliance deadline is extended to August 2, 2028, a deferral of 1 year from the ", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
@@ -63,7 +65,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-06-25
+updatedDate: 2026-06-26
 ---
 
 ## Major Amendments Agreed

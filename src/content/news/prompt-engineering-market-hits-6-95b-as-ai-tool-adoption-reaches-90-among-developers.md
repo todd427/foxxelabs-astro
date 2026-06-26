@@ -10,6 +10,11 @@ significance: "high"
 entities: ["Prompt Engineering", "AI Tools", "GPT-5.5", "LLMLingua", "Claude", "Hugging Face"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-26, note: "Prompt Engineering Tools category on Product Hunt considered 417 products based on 896 reviews as of April 30, 2026.", sourceUrl: "https://www.producthunt.com/categories/prompt-engineering-tools" }
+  - { date: 2026-06-26, note: "Prompt engineers' salaries range from $50,000 to over $150,000 per year according to job sites like Indeed and LinkedIn.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-06-26, note: "Recent launches in prompt engineering tools skew toward workflow control, reusable libraries, and cross-model testing with tools like PromptPaste, PromptEditor, and Agenta.", sourceUrl: "https://www.producthunt.com/categories/prompt-engineering-tools" }
+  - { date: 2026-06-26, note: "GPT Store and Flow GPT emphasize finding reusable task-specific prompts or agents, while Typing Mind focuses on serious prompt iteration with provider flexibility, prompt libraries, RAG, and cost trac", sourceUrl: "https://www.producthunt.com/categories/prompt-engineering-tools" }
+  - { date: 2026-06-26, note: "The DataCamp article was updated on January 12, 2024, and covers as of late 2024 the field of prompt engineering continues to evolve rapidly.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-22, note: "In June 2025, Andrej Karpathy posted on X that the term 'prompt engineering' trivialises what practitioners actually do.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-22, note: "Andrej Karpathy framed AI work as: the LLM is a CPU, the context window is RAM, and your job is to be the operating system.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-22, note: "Liu et al. (2024) demonstrated a U-shaped performance curve across every model tested, with over 30% accuracy drop for information buried in the middle of context.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
@@ -32,7 +37,7 @@ updates:
   - { date: 2026-06-22, note: "Time Magazine reported that companies recognise the value of specialized prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-22, note: "Job sites like Indeed and LinkedIn list thousands of prompt engineer jobs in the US alone, with salaries ranging from $50,000 to over $150,000 per year.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
-updatedDate: 2026-06-22
+updatedDate: 2026-06-26
 ---
 
 ## Market Growth Accelerates

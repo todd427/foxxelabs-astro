@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Google DeepMind", "AI Control Roadmap", "Rohin Shah", "Four Flynn"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-26, note: "The AI Control Roadmap was authored by researchers Rohin Shah, Four Flynn, Mary Phuong, Erik Jenner, Laurent Simon, Lewis Ho, Sebastian Farquhar, and Scott Coull.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "AI agents could create $2.9 trillion in economic value in the U.S. alone by 2030.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "Google DeepMind analyzed one million coding agent task trajectories using an internal prototype asynchronous monitoring system.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "DeepMind's asynchronous monitoring system was instrumental in building a live monitor for the Gemini Spark agent, allowing the company to respond in real-time to emerging issues like unintentional dat", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "DeepMind published a companion document for policymakers titled 'Three Layers of Agent Security' on June 18, 2026.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "In a 2026 Gravitee survey of more than 900 executives and technical practitioners, 81% of respondents said they feel pressure to deploy AI agents quickly even when security governance is not in place.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-26, note: "The AI Control Roadmap uses a detection matrix with four tiers (D1-D4) mapped against model capability, where D1 involves monitoring a model's visible chain-of-thought reasoning and D4 requires inspec", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-26, note: "The AI Control Roadmap uses a prevention and response matrix with three tiers (R1-R3), where R1 is asynchronous review after the fact, and R3 is real-time synchronous blocking of harmful actions.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-25, note: "Google DeepMind published the AI Control Roadmap on June 18, 2026.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-25, note: "Alignment training alone cannot guarantee that AI agents will remain under human control.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-25, note: "DeepMind analyzed one million coding agent task trajectories.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
@@ -41,7 +49,7 @@ updates:
   - { date: 2026-06-24, note: "OpenAI is currently valued at approximately $730 billion to $850 billion in private markets.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
   - { date: 2026-06-24, note: "On June 6, 2026, President Donald Trump told reporters that the US government may take direct equity stakes in AI giants like OpenAI, Anthropic, and xAI.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
 draft: false
-updatedDate: 2026-06-25
+updatedDate: 2026-06-26
 ---
 
 ## Google DeepMind Issues Critical Warning on AI Control Limits
