@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Google DeepMind", "AI Control Roadmap", "Rohin Shah", "Four Flynn"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-27, note: "The AI Control Roadmap's detection tier D1 monitors a model's visible chain-of-thought reasoning.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-27, note: "The AI Control Roadmap's detection tier D4 requires inspecting the model's internal workings, not just observable behavior.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-27, note: "The AI Control Roadmap's response tier R1 involves asynchronous review of transcripts after the fact, acceptable for low-risk reversible actions.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-27, note: "The AI Control Roadmap's response tier R3 is synchronous and real-time, required for high-risk actions such as major cyber attacks.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-27, note: "DeepMind's monitoring system has been instrumental in building a live monitor for the Gemini Spark agent.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-27, note: "A 2026 survey by Gravitee found that 81% of respondents said they feel pressure to deploy AI agents quickly even when security governance is not in place.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
   - { date: 2026-06-26, note: "The AI Control Roadmap was authored by researchers Rohin Shah, Four Flynn, Mary Phuong, Erik Jenner, Laurent Simon, Lewis Ho, Sebastian Farquhar, and Scott Coull.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-26, note: "AI agents could create $2.9 trillion in economic value in the U.S. alone by 2030.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-26, note: "Google DeepMind analyzed one million coding agent task trajectories using an internal prototype asynchronous monitoring system.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
@@ -49,7 +55,7 @@ updates:
   - { date: 2026-06-24, note: "OpenAI is currently valued at approximately $730 billion to $850 billion in private markets.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
   - { date: 2026-06-24, note: "On June 6, 2026, President Donald Trump told reporters that the US government may take direct equity stakes in AI giants like OpenAI, Anthropic, and xAI.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026" }
 draft: false
-updatedDate: 2026-06-26
+updatedDate: 2026-06-27
 ---
 
 ## Google DeepMind Issues Critical Warning on AI Control Limits

@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-27, note: "Issue 3 of Volume 20 of Cyberpsychology was published on 26 June 2026, containing twelve high-quality articles covering online incivility, victimisation, digital piracy, and social media presentation.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "Cyberpsychology introduced a summer submission break from 16 June to 31 August 2026, closing the new submission portal during this period to manage editorial workload sustainability.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "The journal experienced a sharp increase in submissions in 2025, prompting the editorial team to implement the summer break to manage sustainability without financial expansion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "Emmelyn Croes, Ph.D. from Tilburg School of Humanities and Digital Sciences at Tilburg University joined Cyberpsychology as Associate Editor on 7 October 2025.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "Emmelyn Croes' research explores how people connect and maintain relationships across online and offline communication media, including videoconferencing and conversational agents, and how social infl", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "The journal's impact factor increased to 3.708 as of 30 June 2022.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "As of 1 July 2021, the journal had an impact factor of 2.905 and ranked Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-27, note: "As of 1 July 2021, the journal's SCImago Journal Rank was 0.85, ranking Q1 in Communication category and Q2 in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-25, note: "The first issue of 2026 (Issue 1, Volume 20) was published on January 28, 2026, covering topics including adolescents' and young people's mobile and social network habits, prosocial and antisocial onl", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-25, note: "Cyberpsychology has an Impact Factor of 2.6 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-25, note: "Cyberpsychology has an SJR (Scimago Journal Rank) of 0.852 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -38,7 +46,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-25
+updatedDate: 2026-06-27
 ---
 
 ## Summer Submission Break Announced
