@@ -10,6 +10,19 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-28, note: "The EU AI Act entered into force on 1 August 2024 and applies across all EU Member States", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-28, note: "The primary driver for delays is slower-than-expected development of harmonised technical standards and guidance critical to operationalising the AI Act", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-28, note: "The European Council is expected to formally adopt the amendments, with formal publication in the Official Journal expected to be complete by 2 August 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-28, note: "The EU Artificial Intelligence Act entered into force on August 1, 2024, and applies horizontally across all sectors of the economy in all EU Member States, both public and private, in a risk-based an", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-28, note: "Boston Dynamics partnered with Google Cloud and DeepMind to integrate Gemini Robotics-ER 1.6 into its Spot robot dog and Orbit AI visual inspection platform.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "SpaceX acquired Anysphere, the parent company of the AI coding platform Cursor, for $60 billion.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "The US government forced Anthropic to pull its two newest models, Fable 5 and Mythos 5, citing national security concerns after Amazon researchers allegedly found a way to bypass Fable 5's guardrails.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "Z.ai released GLM-5.2 under an MIT license, a 753B parameter Mixture-of-Experts model with a 1 million token context window that became the leading open weights model on the Artificial Analysis Intell", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "Google DeepMind introduced DiffusionGemma, an experimental open 26B Mixture of Experts text diffusion model that generates entire 256-token blocks simultaneously, achieving up to 4x faster inference t", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "Google released Gemini 3.5 Live Translate, a new audio model that delivers near real-time speech-to-speech translation across 70+ languages while preserving the speaker's intonation, pacing, and pitch", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "Waymo purchased a large Arizona proving ground in Wittmann from Apple for $220 million, which includes a 115-acre city course, a 35-acre dynamics area, and a four-mile oval track.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "Anthropic released Claude Fable 5, its Mythos-class frontier model and the smartest publicly available LLM, showing major benchmark leaps at roughly 2x the cost of Opus models.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-28, note: "An AWS report found that nearly two-thirds of UK organizations have adopted AI, yet only 24% have reached the advanced stage where AI is integrated into core business processes and decision-making.", sourceUrl: "https://dentro.de/ai/news/" }
   - { date: 2026-06-27, note: "The simplified compliance framework for SMEs under the amended EU AI Act will be extended to SMCs with up to 750 employees and €150 million in annual revenue or an annual balance sheet total not excee", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-27, note: "The process for the European Council to formally adopt the amendments and their publication in the Official Journal is expected to be complete by 2 August 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-27, note: "AI systems within the scope of the Machinery Regulation (EU 2023/1230) will primarily be governed by sectoral rules as opposed to the AI Act under the amendments", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
@@ -114,7 +127,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-06-27
+updatedDate: 2026-06-28
 ---
 
 ## The Bill's Purpose and Structure

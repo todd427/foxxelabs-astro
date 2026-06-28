@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Prompt Engineering", "AI Tools", "GPT-5.5", "LLMLingua", "Claude", "Hugging Face"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-28, note: "LLM reasoning performance starts degrading around 3,000 tokens, with a practical sweet spot for most tasks being 150–300 words.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Liu et al. (2024) showed a U-shaped performance curve where accuracy is highest at the beginning or end of context, with over 30% accuracy drop for information buried in the middle.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Claude 4.x models follow instructions literally; if you don't ask for something, you won't get it—the 'above and beyond' behaviour from earlier versions is gone.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "XML tags (<instructions>, <context>, <example>) are the best structuring method for Claude, not Markdown or numbered lists, and make a measurable difference.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Aggressive language actively hurts newer Claude models; 'CRITICAL!', 'YOU MUST', 'NEVER EVER' overtrigger and produce worse results than calm, direct instructions.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "GPT-5 is a router-based system with multiple models behind a single endpoint; explicitly adding 'think step by step' to reasoning tasks can actually hurt performance.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Gemini's 2M token context window is impressive, but Google's prompt engineering whitepaper recommends always including few-shot examples (zero-shot is explicitly not preferred), and placing specific q", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Chain-of-thought still works brilliantly for standard models on hard tasks—research shows a 19-point boost on MMLU-Pro with CoT.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Promptfoo is open-source with 51K+ developers; it brings CI/CD discipline to prompts with automated testing and red teaming.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Fast Company reported in May 2025 that prompt engineering as a standalone role 'has all but disappeared,' with 68% of firms now providing it as standard training across all roles.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-28, note: "Advancements in real-time prompt optimization technology have enabled AI models to provide instant feedback on the effectiveness of prompts, assessing clarity, potential bias, and alignment with desir", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-26, note: "Prompt Engineering Tools category on Product Hunt considered 417 products based on 896 reviews as of April 30, 2026.", sourceUrl: "https://www.producthunt.com/categories/prompt-engineering-tools" }
   - { date: 2026-06-26, note: "Prompt engineers' salaries range from $50,000 to over $150,000 per year according to job sites like Indeed and LinkedIn.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-26, note: "Recent launches in prompt engineering tools skew toward workflow control, reusable libraries, and cross-model testing with tools like PromptPaste, PromptEditor, and Agenta.", sourceUrl: "https://www.producthunt.com/categories/prompt-engineering-tools" }
@@ -37,7 +48,7 @@ updates:
   - { date: 2026-06-22, note: "Time Magazine reported that companies recognise the value of specialized prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-22, note: "Job sites like Indeed and LinkedIn list thousands of prompt engineer jobs in the US alone, with salaries ranging from $50,000 to over $150,000 per year.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
-updatedDate: 2026-06-26
+updatedDate: 2026-06-28
 ---
 
 ## Market Growth Accelerates

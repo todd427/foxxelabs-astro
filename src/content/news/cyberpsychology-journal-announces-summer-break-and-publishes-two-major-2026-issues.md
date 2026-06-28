@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-28, note: "The Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026, to maintain quality standards and ensure sustainable workload for editorial team.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-28, note: "SEPO (Scaling the European Polarisation Observatory) is running from January 2026 to June 2027 and investigates how social media and AI shape political attitudes, social polarisation, and public debat", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
+  - { date: 2026-06-28, note: "SEPO brings together researchers from six CIVICA universities: Sciences Po, Bocconi University, the Hertie School, London School of Economics and Political Science (LSE), Școala Națională de Studii Po", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
+  - { date: 2026-06-28, note: "SEPO studies online communities and polarisation examining how social media shapes political debates, community formation, and group dynamics.", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
+  - { date: 2026-06-28, note: "SEPO studies AI and digital ecosystems examining how algorithms recommend content, influence public opinion, and structure digital interactions.", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
   - { date: 2026-06-27, note: "Issue 3 of Volume 20 of Cyberpsychology was published on 26 June 2026, containing twelve high-quality articles covering online incivility, victimisation, digital piracy, and social media presentation.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-27, note: "Cyberpsychology introduced a summer submission break from 16 June to 31 August 2026, closing the new submission portal during this period to manage editorial workload sustainability.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-27, note: "The journal experienced a sharp increase in submissions in 2025, prompting the editorial team to implement the summer break to manage sustainability without financial expansion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -46,7 +51,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-27
+updatedDate: 2026-06-28
 ---
 
 ## Summer Submission Break Announced

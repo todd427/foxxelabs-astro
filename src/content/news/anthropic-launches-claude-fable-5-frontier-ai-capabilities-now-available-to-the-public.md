@@ -10,12 +10,25 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Project Glasswing"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-28, note: "Claude Fable 5 achieved 92.6% on GPQA Diamond benchmark.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
+  - { date: 2026-06-28, note: "Claude Fable 5 was released on June 9, 2026 with 1 million token context window.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
+  - { date: 2026-06-28, note: "Claude Fable 5 is priced at $10.00 per million input tokens and $50.00 per million output tokens.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
+  - { date: 2026-06-28, note: "No major frontier models from OpenAI, Anthropic, Google, Meta, Mistral, xAI, or Microsoft were released in the last 24–48 hours as of June 22, 2026.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "GPT-5.6 (preview) is being released only to select close partners with White House pressure to slow-roll the release according to OpenAI briefings.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "Claude Mythos is described as a 'step change' in performance and the most capable model Anthropic has built to date, positioned as a frontier cyber model.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "Claude Mythos will only be released to a small coterie of partners via a program called Project Glasswing, not a standard public API release.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "GLM-5.2 by Zhipu/Z.ai features approximately 753 billion total parameters (MoE) with 1,000,000-token context window.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "GLM-5.2 was released as open-source under MIT license.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "Kimi K2.7 Code is a trillion-parameter mixture-of-experts model optimized for code generation and refactoring workloads.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "Kimi K2.7 Code was open-sourced with weights available for self-hosting and fine-tuning.", sourceUrl: "https://aiflashreport.com/topics/new-ai-model-releases.html" }
+  - { date: 2026-06-28, note: "Gemma 4 12B is a 12-parameter multimodal model released on June 3, 2026 under Apache 2.0 license.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
+  - { date: 2026-06-28, note: "New AI models arrive on average every 2 days, with 53 models added to the tracker in the last 90 days as of June 22, 2026.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
   - { date: 2026-06-16, note: "Anthropic launches Claude Fable 5, its first publicly available Mythos-tier model, with state-of-the-art benchmarks and built-in safeguards for high-risk domains.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
   - { date: 2026-06-15, note: "Anthropic's most capable public model taken offline within days of launch due to US government export directive, triggering urgent EU discussion on AI independence.", sourceUrl: "https://www.infoq.com/news/2026/06/claude-5-release/" }
   - { date: 2026-06-14, note: "Anthropic launches Claude Fable 5 with enhanced coding and long-context capabilities, while stricter safeguards reshape enterprise AI deployment standards.", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-06-13, note: "Anthropic launches Claude Fable 5 on June 9, its most capable publicly available model, with dual-track security architecture separating general use from restricted cybersecurity capabilities.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
 draft: false
-updatedDate: 2026-06-16
+updatedDate: 2026-06-28
 ---
 
 ## Anthropic Launches Claude Fable 5: Frontier AI Capabilities Now Public

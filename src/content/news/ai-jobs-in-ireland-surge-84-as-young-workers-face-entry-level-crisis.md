@@ -10,6 +10,18 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-28, note: "During the same period (2023-2025), employment for prime-age workers (ages 30 to 59) in Ireland grew by 12%.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "About 63% of jobs in Ireland are relatively exposed to AI.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "Early-career Americans aged 22 to 25 who are working in the most AI-exposed occupations have experienced a 16% relative decline in employment.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "Microsoft AI chief Mustafa Suleyman warned that all white-collar jobs that involve sitting down at a computer will be automated by AI within the next 18 months.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "Anthropic CEO Dario Amodei said AI could eliminate half of all entry-level, white-collar jobs within five years and lead to a 10-to-20% employment rate.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "Ireland has the highest share of STEM graduates per capita in the E.U.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
+  - { date: 2026-06-28, note: "Jobs requiring specific AI skills are growing almost eight times (69%) faster than the total jobs market (9%), with the average wage premium for AI skills at 62%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-28, note: "Super-star companies most exposed to AI achieved labour productivity gains of 163%, significantly outpacing other businesses.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-28, note: "The number of AI jobs is almost twice as high as 2024, with growth in AI jobs outpacing all jobs since 2015.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-28, note: "Technology, media and telecommunications saw 11% of jobs in AI job growth, and professional services saw 6%, with health at less than 1%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-28, note: "AI hiring in Ireland almost doubled between 2024 and 2025 indicating increased AI adoption in the workforce.", sourceUrl: "https://www.rte.ie/news/business/2026/0615/1578490-pwcs-2026-ai-jobs-barometer/" }
+  - { date: 2026-06-28, note: "In Ireland, roles which include AI-related skills tend to be associated with higher advertised salaries, particularly in more AI-exposed industries such as technology and financial services.", sourceUrl: "https://www.rte.ie/news/business/2026/0615/1578490-pwcs-2026-ai-jobs-barometer/" }
   - { date: 2026-06-25, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion job advertisements across 27 countries and territories.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-25, note: "Jobs requiring specific AI skills are growing 69% (nearly eight times faster than the total jobs market growth of 9%).", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-25, note: "The average wage premium for workers with AI skills reached 62%, up from 57% in the previous year.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
@@ -24,7 +36,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-06-25
+updatedDate: 2026-06-28
 ---
 
 ## AI Hiring Explodes in Ireland

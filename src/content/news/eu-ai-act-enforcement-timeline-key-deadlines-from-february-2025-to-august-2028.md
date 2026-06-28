@@ -10,6 +10,14 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-28, note: "On 7 May 2026, the Council of the European Union, the European Parliament, and the European Commission reached a provisional agreement on amendments to the EU AI Act, known as the Digital Omnibus on A", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
+  - { date: 2026-06-28, note: "High-risk AI systems obligations under Annex III are postponed from 2 August 2026 to 2 December 2027, a deferral of 16 months.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "Two new prohibited AI practices are introduced: generation or manipulation of non-consensual intimate material and child sexual abuse material (CSAM).", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "The prohibition on AI-generated or manipulated non-consensual intimate content and CSAM takes effect on 2 December 2026.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "AI literacy requirements are softened: providers and deployers must 'take measures to support the development of' AI literacy rather than 'ensure' AI literacy among staff and persons dealing with AI s", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "For AI systems generating or manipulating synthetic content placed before 2 August 2026, the obligation to mark outputs as artificially generated in machine-readable format is postponed from 2 August ", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "Final approval of the Digital Omnibus on AI amendments is anticipated in June 2026 with publication expected in July 2026.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
+  - { date: 2026-06-28, note: "The Commission published draft guidelines on high-risk AI system classification on 19 May 2026.", sourceUrl: "https://www.traverssmith.com/knowledge/knowledge-container/the-eu-ai-act-the-current-state-of-play/" }
   - { date: 2026-06-24, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026, with exceptions for prohibited AI practices, GPAI governance rules, and high-risk systems e", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-24, note: "A political agreement on the AI omnibus simplification package was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-24, note: "The Code of Practice on marking and labelling of AI-generated content will be a voluntary tool to guide providers and deployers of generative AI systems to comply with transparency obligations.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -63,7 +71,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-28
 ---
 
 ## The EU AI Act's Phased Entry into Force
