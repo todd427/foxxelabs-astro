@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-29, note: "The Regulation of Artificial Intelligence Bill 2026 is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-29, note: "The amendments to the EU AI Act include delaying the application of certain significant obligations in relation to high-risk AI systems and simplifying other regulatory rules.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1024" }
+  - { date: 2026-06-29, note: "The amendments introduce a prohibition on AI systems that generate or manipulate non-consensual sexually explicit or intimate content, or child sexual abuse material, categorizing such systems as proh", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1024" }
   - { date: 2026-06-28, note: "The EU AI Act entered into force on 1 August 2024 and applies across all EU Member States", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-06-28, note: "The primary driver for delays is slower-than-expected development of harmonised technical standards and guidance critical to operationalising the AI Act", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-28, note: "The European Council is expected to formally adopt the amendments, with formal publication in the Official Journal expected to be complete by 2 August 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
@@ -127,7 +130,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-06-29
 ---
 
 ## The Bill's Purpose and Structure

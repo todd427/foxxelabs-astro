@@ -9,8 +9,17 @@ sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
 significance: "high"
 entities: ["Google DeepMind", "Ireland", "European Parliament", "Council", "AI Control Roadmap", "Three Layers of Agent Security", "Gemini Spark", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-29, note: "Google DeepMind analyzed a million coding agent tasks to refine safety protocols and build monitoring systems for AI agents.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-29, note: "Google DeepMind's analysis of flagged agent events found that the majority stemmed from agent misinterpretation or overeagerness to achieve user goals rather than adversarial intent.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-29, note: "Google DeepMind published a technical framework for policymakers titled 'Three Layers of Agent Security' detailing how to improve security at the level of individual agents, multi-agent systems, and e", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-29, note: "The Five Eyes alliance (United States, United Kingdom, Canada, Australia, and New Zealand) warned that frontier AI models capable of launching major cyberattacks could overwhelm government and busines", sourceUrl: "https://www.cnn.com/2026/06/23/world/ai-five-eyes-warning-cyber-threat-intl-hnk" }
+  - { date: 2026-06-29, note: "Only 14.4% of organizations report all AI agents going live with full security or IT approval according to a 2026 survey of over 900 executives and technical practitioners by Gravitee.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-29, note: "81% of survey respondents felt pressure to deploy AI agents quickly even when security governance was not in place, per a 2026 Gravitee survey.", sourceUrl: "https://www.techtimes.com/articles/318758/20260620/google-deepmind-ai-control-roadmap-when-alignment-fails-defense-depth-takes-over.htm" }
+  - { date: 2026-06-29, note: "Google DeepMind built an internal prototype of an asynchronous monitoring system that reviews coding agent trajectories and escalates findings for human review.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-06-29, note: "The AI Control Roadmap treats untrusted AI agents as potential 'insider threats' based on the industry-standard MITRE ATT&CK framework.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
 draft: false
+updatedDate: 2026-06-29
 ---
 
 ## DeepMind's AI Control Roadmap and Safety Framework

@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-06-29T11:11:45.060Z",
+  "updatedAt": "2026-06-29T12:00:41.122Z",
   "pick": {
     "id": "Qwen/Qwen-AgentWorld-35B-A3B",
     "url": "https://hf.co/Qwen/Qwen-AgentWorld-35B-A3B",
     "author": "Qwen",
     "name": "Qwen-AgentWorld-35B-A3B",
-    "likes": 417,
+    "likes": 419,
     "downloads": 26223,
     "ageDays": 7,
     "blurb": "Qwen-AgentWorld-35B is a 35B MoE model trained for environment simulation and agent behavior, released 5 days ago with a published benchmark (AgentWorldBench). It's the practical test of whether world-model pretraining actually improves downstream agent performance or just adds training compute without behavioral gains.",
@@ -17,7 +17,7 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 2876,
+      "likes": 2880,
       "downloads": 133350,
       "ageDays": 13
     },
@@ -26,7 +26,7 @@
       "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "author": "empero-ai",
       "name": "Qwythos-9B-Claude-Mythos-5-1M",
-      "likes": 536,
+      "likes": 538,
       "downloads": 79540,
       "ageDays": 10
     },
@@ -35,7 +35,7 @@
       "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
       "author": "deepreinforce-ai",
       "name": "Ornith-1.0-9B",
-      "likes": 250,
+      "likes": 251,
       "downloads": 19170,
       "ageDays": 8
     },
@@ -44,7 +44,7 @@
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 198,
+      "likes": 201,
       "downloads": 5460,
       "ageDays": 2
     },
@@ -53,7 +53,7 @@
       "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-35B",
       "author": "deepreinforce-ai",
       "name": "Ornith-1.0-35B",
-      "likes": 220,
+      "likes": 222,
       "downloads": 38857,
       "ageDays": 8
     }

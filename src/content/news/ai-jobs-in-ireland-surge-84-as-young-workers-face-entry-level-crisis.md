@@ -10,6 +10,15 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-29, note: "Based on 2.4 million entry-level jobs analysed in the US, entry-level roles most exposed to AI are now seven times more likely to require traditionally senior-level 'human-intensive' skills like leade", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-29, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018 – nearly five times higher than the most AI-exposed companies overall.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-29, note: "AI wage premium for workers with AI skills varies by industry: as high as 118% in consumer markets, and 16% in government and public sector work.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-29, note: "Ireland's labour market is 'particularly exposed' to artificial intelligence given the high concentration of employment in knowledge-intensive sectors such as ICT, financial services and professional ", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-29, note: "As of November 2025, AI-terms were mentioned in over 11 per cent of all job postings in Ireland, up from 4 per cent in November 2023 – around three times the share of both the EU and US.", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-29, note: "The share of job postings mentioning AI in Ireland almost doubled between November 2024 and November 2025, having already doubled in the preceding year.", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-29, note: "Due to the make-up of the Irish economy, it may be 'among the first' advanced economies where early AI labour market impacts become measurable.", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-29, note: "Just over half of large enterprises (51%) use AI technologies in Ireland, compared with 12% of small sized enterprises as of 2024.", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-29, note: "US research cited by the Department of Finance found that early-career workers aged 22-25 in the most AI-exposed occupations have experienced a 16% relative decline in employment since the release of ", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
   - { date: 2026-06-28, note: "During the same period (2023-2025), employment for prime-age workers (ages 30 to 59) in Ireland grew by 12%.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
   - { date: 2026-06-28, note: "About 63% of jobs in Ireland are relatively exposed to AI.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
   - { date: 2026-06-28, note: "Early-career Americans aged 22 to 25 who are working in the most AI-exposed occupations have experienced a 16% relative decline in employment.", sourceUrl: "https://fortune.com/2026/02/19/entry-level-tech-finance-jobs-ireland-us-ai-gen-z/" }
@@ -36,7 +45,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-06-29
 ---
 
 ## AI Hiring Explodes in Ireland

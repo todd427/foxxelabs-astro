@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Dario Amodei", "Google DeepMind", "Demis Hassabis", "OpenAI", "Sam Altman", "U.S. government", "G7"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-29, note: "True expertise in advanced prompting lies in understanding the broader context in which AI models operate, ranging from user intent and conversation history to the structure of training data and the b", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }
+  - { date: 2026-06-29, note: "By leveraging techniques like retrieval-augmented generation (RAG), summarization and structured inputs such as JSON, you can guide models toward more accurate and relevant model responses.", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }
+  - { date: 2026-06-29, note: "Prompt engineering is the new coding in a world increasingly driven by machine learning, where the ability to communicate with AI-generated systems by using natural language is essential.", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }
+  - { date: 2026-06-29, note: "Context engineering enables you to shape not just what you ask, but how the model interprets and responds.", sourceUrl: "https://www.ibm.com/think/prompt-engineering" }
+  - { date: 2026-06-29, note: "Google DeepMind director John Jumper left Google for Anthropic.", sourceUrl: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" }
+  - { date: 2026-06-29, note: "John Jumper won the 2024 Nobel Prize in Chemistry alongside DeepMind CEO Demis Hassabis for his work on AlphaFold.", sourceUrl: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" }
   - { date: 2026-06-25, note: "Noam Shazeer, co-author of the 2017 foundational paper 'Attention Is All You Need' that introduced the Transformer architecture, announced on June 18, 2026 that he is leaving Google DeepMind to join O", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
   - { date: 2026-06-25, note: "Google had paid approximately $2.7 billion in 2024 to bring Noam Shazeer back from Character.AI, and he lasted less than 22 months before announcing his departure.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-june-22-2026" }
   - { date: 2026-06-25, note: "John Jumper, Google DeepMind director and 2024 Nobel Prize in Chemistry winner for AlphaFold work, announced he is leaving Google to join Anthropic.", sourceUrl: "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" }
@@ -36,7 +42,7 @@ updates:
   - { date: 2026-06-22, note: "OpenAI filed a confidential S-1 with the SEC on June 8, 2026, following a private valuation of $852 billion in March, with projected losses of $14 billion for the year and no expected profitability un", sourceUrl: "https://dentro.de/ai/news/" }
   - { date: 2026-06-22, note: "Japanese AI startup Sakana AI is launching Fugu, a system that coordinates multiple AI models on the fly to compete with leaders like Anthropic's Fable 5, with the approach also aiming to cut dependen", sourceUrl: "https://dentro.de/ai/news/" }
 draft: false
-updatedDate: 2026-06-25
+updatedDate: 2026-06-29
 ---
 
 ## Anthropic Restricts Model Access Under Export Controls

@@ -10,6 +10,8 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-29, note: "The journal is implementing a summer break for new submissions from June 16 to August 31, 2026, with the submission portal closed during this period and new manuscripts welcome starting September 1", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-06-29, note: "Emmelyn Croes, Assistant Professor at Tilburg School of Humanities and Digital Sciences, Tilburg University, joined Cyberpsychology as Associate Editor with research focused on online and offline rela", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-28, note: "The Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026, to maintain quality standards and ensure sustainable workload for editorial team.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-28, note: "SEPO (Scaling the European Polarisation Observatory) is running from January 2026 to June 2027 and investigates how social media and AI shape political attitudes, social polarisation, and public debat", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
   - { date: 2026-06-28, note: "SEPO brings together researchers from six CIVICA universities: Sciences Po, Bocconi University, the Hertie School, London School of Economics and Political Science (LSE), Școala Națională de Studii Po", sourceUrl: "https://www.civica.eu/news-events/news-blog/detail/civica-research-hub-sepo-understanding-social-media-ai-and-political-polarisation-in-europe" }
@@ -51,7 +53,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-06-29
 ---
 
 ## Summer Submission Break Announced
