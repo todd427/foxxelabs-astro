@@ -10,6 +10,17 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-30, note: "The European Parliament granted final approval to amendments to the EU AI Act on 16 June 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "Obligations for standalone high-risk AI systems listed in Annex III will take effect from 2 December 2027 instead of 2 August 2026, representing a 16-month delay", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "High-risk AI systems that are products or safety components of products regulated by EU product safety laws listed in Annex I will take effect from 2 August 2028 instead of 2 August 2027, representing", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "Watermarking obligations for certain AI systems placed on the market before 2 August 2026 will take effect from 2 December 2026 rather than 2 August 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "The primary driver for delays is slower than expected development of harmonised technical standards and guidance", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "European standardisation bodies have faced delays in delivering key standards, with many now expected towards the end of 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "Nudifier applications that create non-consensual sexually explicit or intimate content or child sexual abuse material will be categorised as prohibited AI systems from 2 December 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "The simplified compliance framework applicable to SMEs will be extended to small mid-cap companies with up to 750 employees and €150 million in annual revenue", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-06-30, note: "Rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-30, note: "The Commission publishes Code of Practice on marking and labelling of AI-generated content as of 10 June 2026", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-06-30, note: "The Commission selects EUROPA consortium as the winner of the Frontier AI Grand Challenge to build European open-source frontier AI model in all 24 EU languages on 19 June 2026", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-28, note: "On 7 May 2026, the Council of the European Union, the European Parliament, and the European Commission reached a provisional agreement on amendments to the EU AI Act, known as the Digital Omnibus on A", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-28, note: "High-risk AI systems obligations under Annex III are postponed from 2 August 2026 to 2 December 2027, a deferral of 16 months.", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
   - { date: 2026-06-28, note: "Two new prohibited AI practices are introduced: generation or manipulation of non-consensual intimate material and child sexual abuse material (CSAM).", sourceUrl: "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/" }
@@ -71,7 +82,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-06-30
 ---
 
 ## The EU AI Act's Phased Entry into Force

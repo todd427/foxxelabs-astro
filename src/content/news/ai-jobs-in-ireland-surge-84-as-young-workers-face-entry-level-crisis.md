@@ -10,6 +10,10 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-30, note: "Companies most able to use AI are seeing 52% headcount growth vs 36% for least AI-exposed companies in 2025, based on 2018 baseline", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-30, note: "Jobs requiring specific AI skills are growing 69% compared to 9% for the total jobs market", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-06-30, note: "AI-terms mentioned in over 11 per cent of all job postings in Ireland as of November 2025, up from 4 per cent in November 2023, according to Indeed job platform data", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
+  - { date: 2026-06-30, note: "AI-related job posting share in Ireland at over 11 per cent as of November 2025 is around three times the share of both the EU and US", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
   - { date: 2026-06-29, note: "Based on 2.4 million entry-level jobs analysed in the US, entry-level roles most exposed to AI are now seven times more likely to require traditionally senior-level 'human-intensive' skills like leade", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-29, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018 – nearly five times higher than the most AI-exposed companies overall.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-29, note: "AI wage premium for workers with AI skills varies by industry: as high as 118% in consumer markets, and 16% in government and public sector work.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
@@ -45,7 +49,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-06-29
+updatedDate: 2026-06-30
 ---
 
 ## AI Hiring Explodes in Ireland

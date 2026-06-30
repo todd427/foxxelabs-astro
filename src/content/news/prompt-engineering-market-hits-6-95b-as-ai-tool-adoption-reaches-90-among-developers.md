@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Prompt Engineering", "AI Tools", "GPT-5.5", "LLMLingua", "Claude", "Hugging Face"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-30, note: "The Liu et al. (2024) paper on lost-in-the-middle has over 2,500 citations.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Explicitly adding 'think step by step' to reasoning tasks with GPT-5 can hurt performance, according to OpenAI's own documentation.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Gemini has a 2M token context window.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Google's prompt engineering whitepaper recommends always including few-shot examples and placing specific questions at the end after data context for Gemini.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Gemini prefers shorter, more direct prompts than either Claude or GPT.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Even randomly labelled examples outperform zero-shot in few-shot prompting.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "Promptfoo is open-source with 51K+ developers using it for prompt testing.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-06-30, note: "In June 2025, Andrej Karpathy posted that the term 'prompt engineering' trivialises what practitioners actually do, framing the LLM as a CPU, context window as RAM, and the job as being the operating ", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-28, note: "LLM reasoning performance starts degrading around 3,000 tokens, with a practical sweet spot for most tasks being 150–300 words.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-28, note: "Liu et al. (2024) showed a U-shaped performance curve where accuracy is highest at the beginning or end of context, with over 30% accuracy drop for information buried in the middle.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-06-28, note: "Claude 4.x models follow instructions literally; if you don't ask for something, you won't get it—the 'above and beyond' behaviour from earlier versions is gone.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
@@ -48,7 +56,7 @@ updates:
   - { date: 2026-06-22, note: "Time Magazine reported that companies recognise the value of specialized prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-22, note: "Job sites like Indeed and LinkedIn list thousands of prompt engineer jobs in the US alone, with salaries ranging from $50,000 to over $150,000 per year.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-06-30
 ---
 
 ## Market Growth Accelerates

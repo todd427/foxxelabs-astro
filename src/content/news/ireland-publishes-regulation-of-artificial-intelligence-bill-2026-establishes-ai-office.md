@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-30, note: "The CCPC is introducing a new general administrative sanctions procedure through amendments to the Competition and Consumer Protection Act 2014, to which the AI Act is being added", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-06-30, note: "The EU Council gave final approval on 29 June 2026 to simplify and streamline certain rules regarding artificial intelligence", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-06-30, note: "Under the EU simplification agreement, high-risk AI systems in Annex III (standalone systems) will have a deadline of 2 December 2027, and high-risk AI systems in Annex I (embedded in products) will h", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-06-30, note: "The EU simplification agreement adds two new prohibited AI practices: generation of non-consensual sexual and intimate content and AI-generated child sexual abuse material (CSAM), set to be banned as ", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-06-30, note: "The EU agreement postpones the deadline for establishment of AI regulatory sandboxes by competent authorities at national level from 2 August 2026 to 2 August 2027", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-06-30, note: "The EU agreement reduces the grace period for providers to implement transparency solutions for artificially generated content from 6 months to 3 months, with the new deadline of 2 December 2026", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-06-29, note: "The simplified compliance framework for small- and medium-sized enterprises (SMEs) will be extended to small mid-cap companies (SMCs) with up to 750 employees and €150 million in annual revenue.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-29, note: "The European Council is expected to formally adopt the AI Act amendments by August 2, 2026, with formal publication in the Official Journal following.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-29, note: "The primary driver for delaying high-risk AI system obligations is slower than expected development of harmonised technical standards and guidance, with many expected towards the end of 2026.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
@@ -97,7 +103,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-06-29
+updatedDate: 2026-06-30
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

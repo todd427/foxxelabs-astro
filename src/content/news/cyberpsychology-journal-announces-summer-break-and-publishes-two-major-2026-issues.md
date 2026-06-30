@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-06-30, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on June 26, 2026, containing twelve articles covering online incivility and victimisation, digital piracy", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-30, note: "Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026, with the submission portal reopening September 1.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-06-30, note: "The British Psychological Society's Cyberpsychology Section 6th Annual Conference is scheduled for July 6-7, 2026 at York St John University, with keynote speakers Prof. Paul Cairns from the Universit", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-30, note: "The BPS Cyberpsychology Conference abstract submission deadline was April 10, 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-06-30, note: "The BPS Cyberpsychology Conference welcomes research across artificial intelligence ethics, gaming environments, social media behaviour, cybersecurity, and health applications.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-06-29, note: "The journal is implementing a summer break for new submissions from June 16 to August 31, 2026, with the submission portal closed during this period and new manuscripts welcome starting September 1", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-29, note: "Emmelyn Croes, Assistant Professor at Tilburg School of Humanities and Digital Sciences, Tilburg University, joined Cyberpsychology as Associate Editor with research focused on online and offline rela", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-28, note: "The Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026, to maintain quality standards and ensure sustainable workload for editorial team.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -53,7 +58,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-29
+updatedDate: 2026-06-30
 ---
 
 ## Summer Submission Break Announced

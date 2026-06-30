@@ -9,8 +9,19 @@ sourceUrl: "https://www.barchart.com/story/news/3002275/openai-and-anthropic-lim
 significance: "high"
 entities: ["OpenAI", "Anthropic", "Trump administration", "GPT-5.6 Sol", "Mythos 5", "Fable 5"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-06-30, note: "Noam Shazeer is a co-lead of the Gemini models.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "Noam Shazeer co-authored the paper 'Attention Is All You Need,' which introduced the Transformer architecture.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "Noam Shazeer is leaving Google less than two years after being installed as a co-lead on Gemini.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "John Jumper led the AlphaFold project at Google DeepMind.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "John Jumper is going to Anthropic.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "John Jumper will leave after nearly nine years at Google DeepMind, with plans to take time off before starting at Anthropic.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "Bloomberg reported that staff at DeepMind have raised concerns about the company lacking a clear product for businesses building AI coding tools.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "Shazeer's Transformer work is the basis for the models behind AI Overviews and AI Mode.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "Anthropic has an AI for Science event scheduled for June 30.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
+  - { date: 2026-06-30, note: "OpenAI has filed confidentially for an IPO.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
 draft: false
+updatedDate: 2026-06-30
 ---
 
 ## Trump Administration Establishes AI Vetting Framework

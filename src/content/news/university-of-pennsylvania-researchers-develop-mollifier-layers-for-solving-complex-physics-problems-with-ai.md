@@ -10,6 +10,23 @@ significance: "high"
 entities: ["University of Pennsylvania", "Mollifier Layers", "NeurIPS 2026", "Transactions on Machine Learning Research"]
 irishEuAngle: false
 updates:
+  - { date: 2026-06-30, note: "The Trump administration ordered Anthropic to disable access to its newest Claude Fable 5 and Mythos 5 models for all non-American users, citing national security concerns over a potential vulnerabili", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "The US Department of Commerce issued an export control directive requiring Anthropic to suspend all access to Fable 5 and Mythos 5 by any foreign national, whether inside or outside the United States,", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Anthropic claimed an immediate loss of $150 million in annual recurring revenue from Defense Department contracts due to the government restrictions.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "Anthropic Chief Financial Officer Krishna Rao asserted the company could lose up to $5 billion in sales due to government restrictions.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "The Pentagon announced agreements with eight rival technology companies—SpaceX, OpenAI, Google, Microsoft, Amazon Web Services, Nvidia, Reflection, and Oracle—to use their AI tools after the Anthropic", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "Anthropic reported a disrupted pipeline of $100 million based on a partner switching to a rival AI company for a U.S. Food and Drug Administration project.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "Anthropic reported disrupted negotiations with financial institutions worth roughly $180 million combined.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "More than 100 enterprise customers expressed deep fear, confusion, and doubt about working with Anthropic following the government restrictions.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "Amazon CEO Andy Jassy communicated to the White House a jailbreak vulnerability in Fable 5 that allowed users to circumvent safeguards.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "Anthropic filed a confidential IPO prospectus with the Securities and Exchange Commission on June 1, disclosing a revenue run rate of $47 billion and a $965 billion valuation.", sourceUrl: "https://marketwise.com/investing/trump-administration-anthropic-claude-ai-ban-investors/" }
+  - { date: 2026-06-30, note: "The OECD published an AI literacy framework titled 'Empowering Learners for the Age of AI' for primary and secondary education worldwide.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Researchers identified 'Agentjacking,' a novel attack class that exploits Sentry error tracking to trick AI coding agents into executing malicious code, with 85% exploitation success against tested ag", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Anthropic's Claude Opus 4.7 achieved twenty times faster robodog programming compared to last year's best human team using Opus 4.1.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "An AI-designed vaccine developed by researchers at the University of Cambridge has successfully completed initial human trials, marking the first time a vaccine's key component was designed entirely b", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Glass Futures deployed an AI-driven digital twin of its glass furnace at its St Helens facility in the UK, processing over 11,000 simultaneous calculations to predict glass output.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Sanofi entered a multi-year agreement with France-based agentic AI company Owkin to co-develop AI-driven biopharma agents, including a five-year license for Owkin's K Pro platform.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-06-30, note: "Google launched the Agentic Resource Discovery Specification (ARDS), an open standard for AI agents, backed by Microsoft, GitHub, Hugging Face, NVIDIA, Amazon, Cisco, Salesforce, and Snowflake.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "Researchers at the University of Pennsylvania's School of Engineering introduced a technique called 'Mollifier Layers' that integrates classical mathematical smoothing functions into neural networks t", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "The Mollifier Layers method addresses a longstanding challenge in scientific AI where high-order derivative computations in noisy real-world data tend to fail.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "Mollifier Layers applications span genomics, materials science, climate modeling, and chromatin biology.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
@@ -23,7 +40,7 @@ updates:
   - { date: 2026-06-24, note: "Qualcomm is in early talks to acquire Tenstorrent for between eight and ten billion dollars.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "Tenstorrent designs AI chips using the open RISC-V standard and features chip veteran Jim Keller's engineering expertise.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
-updatedDate: 2026-06-24
+updatedDate: 2026-06-30
 ---
 
 ## New ML Technique Solves Long-Standing Challenge in Scientific AI
