@@ -10,6 +10,13 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-01, note: "Employment in computer systems design and related services sector has declined 5% since ChatGPT's release in fall 2022", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "Employment has declined 1% since late 2022 in the 10% of sectors most exposed to AI", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "Total U.S. employment increased approximately 2.5% since ChatGPT's release in fall 2022", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "The recent decline in employment in AI-exposed sectors is particularly pronounced for those under age 25, according to Stanford University researchers Erik Brynjolfsson, Bharat Chandar and Ruya Chen", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "Nominal average weekly wages in computer systems design sector have risen 16.7% since fall 2022, compared to 7.5% nationwide", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "Among the top 10% of AI-exposed industries, wages grew 8.5% since fall 2022", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
+  - { date: 2026-07-01, note: "The trend line shows there is no relationship between an occupation's AI exposure and post-2022 wage growth across 205 occupations", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
   - { date: 2026-06-30, note: "Companies most able to use AI are seeing 52% headcount growth vs 36% for least AI-exposed companies in 2025, based on 2018 baseline", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-30, note: "Jobs requiring specific AI skills are growing 69% compared to 9% for the total jobs market", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-30, note: "AI-terms mentioned in over 11 per cent of all job postings in Ireland as of November 2025, up from 4 per cent in November 2023, according to Indeed job platform data", sourceUrl: "https://www.irishtimes.com/business/2026/02/18/ireland-and-younger-workers-most-exposed-to-ai-impact-on-jobs/" }
@@ -49,7 +56,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-06-30
+updatedDate: 2026-07-01
 ---
 
 ## AI Hiring Explodes in Ireland

@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-01, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on June 26, 2026, containing twelve peer-reviewed articles.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-01, note: "The June 2026 issue of Cyberpsychology covers a broad range of topics including online incivility and victimisation, digital piracy, and presentation on social media.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-01, note: "All articles in Cyberpsychology: Journal of Psychosocial Research on Cyberspace are published as open access.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-01, note: "Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-01, note: "IADT hosted an EU Erasmus+ Blended Intensive Programme (BIP) in Cyberpsychology from February 23-27, 2026.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-07-01, note: "The IADT Cyberpsychology BIP involved visiting students and lecturers from Tallinn University, Estonia and Hochschule der Medien, Stuttgart, Germany.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-07-01, note: "The IADT Cyberpsychology BIP included practical workshops in the IADT Immersive Media Lab and a group experience at Sandbox VR.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-07-01, note: "IADT BSc Applied Psychology students will travel to Estonia at Easter 2026 to complete an EU Erasmus+ BIP in Legal Psychology at Tallinn University.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-06-30, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on June 26, 2026, containing twelve articles covering online incivility and victimisation, digital piracy", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-30, note: "Cyberpsychology journal is implementing a summer break for new submissions from June 16 to August 31, 2026, with the submission portal reopening September 1.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-06-30, note: "The British Psychological Society's Cyberpsychology Section 6th Annual Conference is scheduled for July 6-7, 2026 at York St John University, with keynote speakers Prof. Paul Cairns from the Universit", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
@@ -58,7 +66,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-06-30
+updatedDate: 2026-07-01
 ---
 
 ## Summer Submission Break Announced
