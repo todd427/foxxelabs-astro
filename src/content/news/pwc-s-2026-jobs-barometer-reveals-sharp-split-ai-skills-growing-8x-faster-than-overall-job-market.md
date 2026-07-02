@@ -10,6 +10,22 @@ significance: "high"
 entities: ["PwC", "European Training Foundation", "Anthropic"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-02, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion job advertisements in 27 countries and territories.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "The average wage premium for workers with AI skills hit 62%, up from 57% last year.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "The wage premium varies by industry: as high as 118% in consumer markets, and 16% in government and public sector work.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "Headcount growth at the most AI-exposed companies is outpacing growth at the least AI-exposed companies – 52% relative to 36% in 2025, based on 2018 baseline levels.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "Professionalised roles are growing twice as fast as democratised roles, with 42% faster wage growth.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "The number of AI jobs is almost twice as high as 2024.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-02, note: "AI adoption increases labour productivity levels by 4% on average in the EU.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "Study analysed more than 12,000 European firms examining AI adoption effects on productivity and employment.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "No evidence that AI reduces employment in the short run.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "Medium and large firms experience substantially stronger productivity gains than smaller counterparts from AI adoption.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "An extra percentage point of investment in software and data infrastructure increases AI's productivity effect by 2.4 percentage points.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "An additional percentage point spent on training amplifies AI's productivity gains by 5.9 percentage points.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "Among large firms, 45% have deployed AI, compared with only 24% of small firms (10 to 49 employees).", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "In financially developed EU countries like Sweden and Netherlands, around 36% of firms use big data analytics and AI in 2024.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-02, note: "In less financially developed EU economies like Romania and Bulgaria, adoption rates were around 28% in 2024.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
   - { date: 2026-06-18, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion jobs advertisements across six continents", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-18, note: "Jobs requiring specific AI skills are growing 69% faster than the total jobs market at 9% growth", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-18, note: "The average wage premium for AI skills reached 62%, up from 57% in the previous year", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
@@ -35,7 +51,7 @@ updates:
   - { date: 2026-06-18, note: "Claude currently covers 33% of all tasks in the Computer & Math occupational category", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
   - { date: 2026-06-17, note: "PwC's 2026 Global AI Jobs Barometer reveals AI is creating a divergent labour market where human skills command premium wages while entry-level roles split sharply.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
 draft: false
-updatedDate: 2026-06-18
+updatedDate: 2026-07-02
 ---
 
 ## AI Labour Market Transformation: New Data Shows Winners and Losers

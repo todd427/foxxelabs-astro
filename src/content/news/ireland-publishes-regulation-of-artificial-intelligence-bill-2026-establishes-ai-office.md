@@ -10,6 +10,7 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-02, note: "The EU AI Act applies directly across all EU Member States and imposes obligations on providers, deployers and importers of AI systems and models.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-01, note: "On 7 May 2026, negotiators from the Council of the European Union, the European Parliament, and the European Commission reached a provisional agreement on amendments to the EU AI Act.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-01, note: "Under the Digital Omnibus agreement, high-risk AI systems under Annex III have obligations postponed from 2 August 2026 to 2 December 2027.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-01, note: "Under the Digital Omnibus agreement, the deadline for establishment of AI regulatory sandboxes is postponed from 2 August 2026 to 2 August 2027.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
@@ -106,7 +107,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-01
+updatedDate: 2026-07-02
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

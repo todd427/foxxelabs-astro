@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-02, note: "The UN Independent International Scientific Panel on Artificial Intelligence released a preliminary report on 1 July 2026.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "The UN panel's work will feed into the UN Global Dialogue on AI Governance beginning in Geneva on 6 July 2026.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "The UN panel consists of 40 experts from every region of the world serving in their personal capacity.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "AI has predicted the structures of more than 200 million proteins according to the UN report.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "The United States possesses around three-quarters of the computing power behind the world's leading AI supercomputers, while China accounts for around 15 percent, giving the two countries roughly 90 p", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "More than 40 AI governance frameworks and ethical guidelines exist in different parts of the world but remain fragmented, inconsistent and are rarely tested to see whether they actually work.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
+  - { date: 2026-07-02, note: "The Regulation of Artificial Intelligence Bill 2026 establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-07-02, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules according to the Irish government press release.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-07-01, note: "OpenAI is restricting the release of its new artificial intelligence model GPT-5.6 Sol at the request of President Donald Trump's administration.", sourceUrl: "https://wgno.com/news/business/ap-openai-limits-its-newest-chatgpt-product-to-trump-approved-customers-during-cybersecurity-review/amp/" }
   - { date: 2026-07-01, note: "OpenAI said GPT-5.6 Sol would be accessible only to customers approved by the Trump administration.", sourceUrl: "https://wgno.com/news/business/ap-openai-limits-its-newest-chatgpt-product-to-trump-approved-customers-during-cybersecurity-review/amp/" }
   - { date: 2026-07-01, note: "Anthropic took offline two new AI models, known as Fable 5 and Mythos 5, just days after unveiling them to comply with a Trump directive blocking their use by foreign nationals.", sourceUrl: "https://wgno.com/news/business/ap-openai-limits-its-newest-chatgpt-product-to-trump-approved-customers-during-cybersecurity-review/amp/" }
@@ -175,7 +183,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-01
+updatedDate: 2026-07-02
 ---
 
 ## The Bill's Purpose and Structure

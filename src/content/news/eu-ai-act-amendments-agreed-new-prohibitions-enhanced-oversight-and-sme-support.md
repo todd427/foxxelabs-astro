@@ -10,6 +10,9 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-02, note: "Certain simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies (SMEs and SMCs), including simplified technical documentation requirements.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-02, note: "The Commission publishes Code of Practice on marking and labelling of AI-generated content on 10 June 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-02, note: "Commission selects EUROPA consortium as the winner of the Frontier AI Grand Challenge, a project to build European open-source frontier AI model in all 24 EU languages, announced 19 June 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-01, note: "On 7 May 2026, negotiators from the Council of the European Union, the European Parliament, and the European Commission reached a provisional agreement on the terms of the Digital Omnibus on AI, marki", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-07-01, note: "For AI systems generating or manipulating synthetic content placed on the EU market or put into service before 2 August 2026, the provider's obligation to ensure the system's outputs are marked as art", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-07-01, note: "Member States are now required to establish at least one regulatory sandbox at the national level by 2 August 2027 instead of 2 August 2026 (deferred by 1 year).", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
@@ -73,7 +76,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-01
+updatedDate: 2026-07-02
 ---
 
 ## Major Amendments Agreed
