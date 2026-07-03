@@ -9,8 +9,20 @@ sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/"
 significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-03, note: "Ireland has launched the AI Factory Antenna (AIF IRL-Antenna) with €10m in joint European and Irish Government funding.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-03, note: "The AI Factory Antenna will be operated by the Irish Centre for High-End Computing (ICHEC) at University of Galway, in partnership with CeADAR, Ireland's Centre for AI.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-03, note: "The antenna aims to grow adoption of and innovation through AI in the country while securing a foothold within the wider European AI ecosystem as part of a network of AI Factories and high-performance", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-03, note: "The antenna operates under the European High Performance Computing Joint Undertaking (EuroHPC JU), providing AI-optimised high-performance computing.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-03, note: "The partnership involves seven regional innovation hubs to ensure that all companies can equally benefit, irrespective of their location.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-03, note: "The European Commission published its Tech Sovereignty Package, including the Communication on European Tech Sovereignty and EU Open Source Strategy, a Strategic Roadmap for Digitalisation and AI in E", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-03, note: "The Cloud and AI Development Act (CADA) proposes to triple the EU's data center capacity within the next 5-7 years.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-03, note: "Ireland's presidency programme announces a forthcoming AI Summit in Dublin on 14 October 2026, bringing together EU and global leaders, heads of government, CEOs, investors, innovators and academics.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-03, note: "A major area of focus for Ireland's presidency will be the Digital Omnibus proposal after member states failed to agree on a common position during negotiations under the Cypriot presidency.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
+updatedDate: 2026-07-03
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies

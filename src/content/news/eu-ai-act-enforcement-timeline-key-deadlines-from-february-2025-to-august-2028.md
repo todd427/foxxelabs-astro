@@ -10,6 +10,13 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-03, note: "High-risk AI systems based on Annex III (use-based) have been postponed from 2 August 2026 to 2 December 2027, a deferral of 16 months.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-03, note: "Annex I High-risk AI systems (product-regulated, including medical devices) have been postponed from 2 August 2027 to 2 August 2028, a deferral of 1 year.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-03, note: "Effective 2 December 2026, the agreement extends prohibitions to 'nudifier' applications—AI systems that generate or manipulate sexually explicit or intimate images, video, or audio without explicit c", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-03, note: "Violations of the nudifier prohibition may trigger fines of up to €35 million or 7% of annual worldwide turnover, whichever is higher.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-03, note: "The deadline for the establishment of AI regulatory sandboxes has been postponed to 2 August 2027 under the Omnibus, giving authorities and innovators additional time to develop safe, real-world exper", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-03, note: "On 29 June 2026, the Council of the EU gave its final green light to the AI Act simplification package, following the European Parliament's formal endorsement on 16 June 2026.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
+  - { date: 2026-07-03, note: "The legislative act will be published in the EU's official journal shortly and will enter into force on the third day after publication.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-06-30, note: "The European Parliament granted final approval to amendments to the EU AI Act on 16 June 2026", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-30, note: "Obligations for standalone high-risk AI systems listed in Annex III will take effect from 2 December 2027 instead of 2 August 2026, representing a 16-month delay", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-06-30, note: "High-risk AI systems that are products or safety components of products regulated by EU product safety laws listed in Annex I will take effect from 2 August 2028 instead of 2 August 2027, representing", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
@@ -82,7 +89,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-06-30
+updatedDate: 2026-07-03
 ---
 
 ## The EU AI Act's Phased Entry into Force

@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-03, note: "On 29 June 2026, the Council of the EU gave its final green light to the AI Act simplification package, following the European Parliament's formal endorsement on 16 June 2026.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
+  - { date: 2026-07-03, note: "The legislative act from the AI Act simplification package will be published in the EU's official journal shortly and will enter into force on the third day after publication.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
+  - { date: 2026-07-03, note: "The European Commission published the Digital Omnibus on AI on 19 November 2025, proposing to defer the high-risk compliance deadline from 2 August 2026 to 2 December 2027.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
+  - { date: 2026-07-03, note: "The AI Act classifies AI systems used in employment-related decisions as high-risk, including tools used for recruitment, candidate selection, performance evaluation, task allocation, monitoring of wo", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-07-02, note: "The UN Independent International Scientific Panel on Artificial Intelligence released a preliminary report on 1 July 2026.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
   - { date: 2026-07-02, note: "The UN panel's work will feed into the UN Global Dialogue on AI Governance beginning in Geneva on 6 July 2026.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
   - { date: 2026-07-02, note: "The UN panel consists of 40 experts from every region of the world serving in their personal capacity.", sourceUrl: "https://news.un.org/en/story/2026/07/1167848" }
@@ -183,7 +187,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-02
+updatedDate: 2026-07-03
 ---
 
 ## The Bill's Purpose and Structure

@@ -9,8 +9,18 @@ sourceUrl: "https://www.thejournal.ie/ireland-social-media-ban-under-16-6960522-
 significance: "high"
 entities: ["Ireland", "Australia", "United Kingdom", "France", "Spain", "Portugal", "Germany", "Norway", "New Zealand", "Malaysia", "India", "Simon Harris", "Facebook", "Instagram", "YouTube", "TikTok", "Snapchat", "Reddit", "Kick", "Twitch", "Threads", "X"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-03, note: "A study by UCD's Insight Research Ireland Centre for Data Analytics conducted five focus groups with 87 transition year students in Irish schools.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
+  - { date: 2026-07-03, note: "The study, led by Megan Nyhan, will be presented at the Association for Computer Machinery (ACM) Interaction Design and Children conference in Brighton later in June 2026.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
+  - { date: 2026-07-03, note: "Participants in the UCD study called for age-appropriate content and access to algorithm-editing tools that give more control over what they see.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
+  - { date: 2026-07-03, note: "Students in the UCD study expressed frustration with 'unwanted sexual attention' from older users and screen time limiters that were 'performative' and not effective.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
+  - { date: 2026-07-03, note: "The EU Digital Services Act (DSA) calls for large platforms to conduct risk assessments 'in consultation' with groups affected by systemic risks, including teens.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
+  - { date: 2026-07-03, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on June 26, 2026, with twelve high-quality articles.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-03, note: "Issue 3 of Volume 20 covers online incivility and victimisation, digital piracy, presentation on social media, and related topics.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-03, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace experienced a sharp increase in submissions during 2025.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-03, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace has an Impact Factor of 2.6 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
 draft: false
+updatedDate: 2026-07-03
 ---
 
 ## Ireland Moves Toward Social Media Restrictions for Young Users

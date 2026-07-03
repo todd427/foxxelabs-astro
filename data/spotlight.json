@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-02T10:00:02.214Z",
+  "updatedAt": "2026-07-03T09:56:32.623Z",
   "pick": {
     "id": "Qwen/Qwen-AgentWorld-35B-A3B",
     "url": "https://hf.co/Qwen/Qwen-AgentWorld-35B-A3B",
     "author": "Qwen",
     "name": "Qwen-AgentWorld-35B-A3B",
-    "likes": 501,
-    "downloads": 39448,
-    "ageDays": 10,
+    "likes": 518,
+    "downloads": 45455,
+    "ageDays": 11,
     "blurb": "Qwen-AgentWorld-35B is a 35B MoE model trained for environment simulation and agent behavior, released 5 days ago with a published benchmark (AgentWorldBench). It's the practical test of whether world-model pretraining actually improves downstream agent performance or just adds training compute without behavioral gains.",
     "surfacedAt": "2026-06-27"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3200,
-      "downloads": 176154,
-      "ageDays": 16
-    },
-    {
-      "id": "deepreinforce-ai/Ornith-1.0-9B",
-      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
-      "author": "deepreinforce-ai",
-      "name": "Ornith-1.0-9B",
-      "likes": 336,
-      "downloads": 58385,
-      "ageDays": 11
+      "likes": 3293,
+      "downloads": 191462,
+      "ageDays": 17
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 285,
-      "downloads": 8184,
-      "ageDays": 5
+      "likes": 315,
+      "downloads": 9388,
+      "ageDays": 6
+    },
+    {
+      "id": "deepreinforce-ai/Ornith-1.0-9B",
+      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
+      "author": "deepreinforce-ai",
+      "name": "Ornith-1.0-9B",
+      "likes": 355,
+      "downloads": 64051,
+      "ageDays": 12
     },
     {
       "id": "deepreinforce-ai/Ornith-1.0-35B",
       "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-35B",
       "author": "deepreinforce-ai",
       "name": "Ornith-1.0-35B",
-      "likes": 296,
-      "downloads": 185633,
-      "ageDays": 11
+      "likes": 314,
+      "downloads": 211406,
+      "ageDays": 12
     },
     {
       "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "author": "empero-ai",
       "name": "Qwythos-9B-Claude-Mythos-5-1M",
-      "likes": 626,
-      "downloads": 124909,
-      "ageDays": 13
+      "likes": 650,
+      "downloads": 131323,
+      "ageDays": 14
     }
   ]
 }
