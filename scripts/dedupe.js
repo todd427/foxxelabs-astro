@@ -48,6 +48,15 @@
  * prose (see claims.js sameEventClaim / statementsMatch). The lexical + event
  * arms below remain the backstop for stories without captured claims.
  *
+ * IMPORTANT — claim identity is for the LIVE gate only (findDuplicate: pairwise,
+ * candidate folds into one best match, no transitivity). It is deliberately NOT
+ * used as an edge in the offline connected-components collapse (review): a
+ * multi-event roundup article shares one claim with story A and another with B,
+ * so a claim edge chains unrelated stories into one component through the hub.
+ * The offline collapse edge stays lexical-only; a safe offline same-event mode
+ * needs non-transitive pairwise anchoring + a lexical/entity co-floor + a
+ * moving-story guard + canonical = folding hub, which is a separate mode.
+ *
  * Not an embedding model: embeddings of two different "Ireland AI Office"
  * stories are also near-identical, so they would not separate same-event from
  * same-topic any better. Event identity is lexical-distinctive, not semantic.
@@ -62,7 +71,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { aliasCanonical, entityKey } from './entities.js';
-import { statementsMatch, sameEventClaim, loadClaims } from './claims.js';
+import { statementsMatch, sameEventClaim } from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -437,9 +446,7 @@ export function isStrongDuplicate(s, { edgeTxt = STRONG_TXT, edgeCombined = STRO
     : (s.txt >= edgeTxt);
 }
 
-/** Union-find connected components over the corpus using `edgeFn(scoreObj, a, b)`.
- *  The stories a, b are passed alongside the lexical score so an edge can also
- *  consult claim-level identity (see review's event-aware edge). */
+/** Union-find connected components over the corpus using `edgeFn(scoreObj)`. */
 export function connectedComponents(corpus, edgeFn) {
   const n = corpus.length;
   const parent = Array.from({ length: n }, (_, i) => i);
@@ -448,7 +455,7 @@ export function connectedComponents(corpus, edgeFn) {
 
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
-      if (edgeFn(score(corpus[i], corpus[j]), corpus[i], corpus[j])) union(i, j);
+      if (edgeFn(score(corpus[i], corpus[j]))) union(i, j);
     }
   }
   const groups = new Map();
@@ -479,27 +486,25 @@ export function demoteToDraft(filePath) {
  *  to the corpus. Canonical = LATEST-published article in the component (the
  *  current state of a moving story); the rest are proposed for demotion. A member
  *  whose title AND publishDate both equal the canonical's is a true re-emission,
- *  flagged for hard delete; everything else is demoted to draft, never deleted. */
+ *  flagged for hard delete; everything else is demoted to draft, never deleted.
+ *
+ *  KNOWN LIMITATION (do not auto-apply blind on a forked-hub corpus): canonical
+ *  is chosen by publishDate, which is WRONG when an EARLIER article has become
+ *  the folding hub (larger timeline / later updatedDate). It also cannot MERGE
+ *  two rival hubs' timelines — it only demotes. A correct same-event collapse
+ *  wants canonical = folding hub and a timeline union, not a bare demote. */
 function review(daysBack, edgeTxt) {
   const corpus = loadCorpusWindow(daysBack);
-  // Attach each story's claims so the collapse edge can use event identity
-  // (shared specific entity + event_date) — the same signal the live gate uses —
-  // to retire same-event dupes whose bodies diverge (launch / funding / M&A) and
-  // that STRONG_TXT / entity edges miss on set asymmetry. Transitive by design
-  // (connected components), but non-destructive: proposals only, --yes to apply.
-  const claimsByStory = new Map();
-  for (const cl of loadClaims()) {
-    if (!cl.story_id) continue;
-    if (!claimsByStory.has(cl.story_id)) claimsByStory.set(cl.story_id, []);
-    claimsByStory.get(cl.story_id).push(cl);
-  }
-  for (const s of corpus) s.claims = claimsByStory.get(s.slug) || [];
-
+  // NOTE: the collapse edge is intentionally LEXICAL-ONLY. A claim-identity edge
+  // here over-merges: connected components is transitive, and a multi-event
+  // "roundup" article shares one claim with story A and another with story B,
+  // chaining unrelated stories into one component through the hub. Claim identity
+  // belongs in the LIVE gate (findDuplicate — pairwise, folds into one best match,
+  // no transitivity), not in whole-corpus clustering. A safe offline same-event
+  // collapse needs non-transitive pairwise anchoring + a lexical/entity co-floor
+  // + a moving-story guard + canonical = folding hub (see docs) — a separate mode.
   const opts = edgeTxt ? { edgeTxt } : {};
-  const comps = connectedComponents(
-    corpus,
-    (sc, a, b) => isStrongDuplicate(sc, opts) || sharePrimaryEventClaim(a.claims, b.claims),
-  );
+  const comps = connectedComponents(corpus, (s) => isStrongDuplicate(s, opts));
 
   const clusters = comps.map((idxs) => {
     const sorted = [...idxs].sort((a, b) => pubTime(corpus[a]) - pubTime(corpus[b]));
