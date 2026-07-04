@@ -10,7 +10,7 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "OpenAI", "The Deployment Company", "Blackstone", "Hellman & Friedman", "Goldman Sachs", "TPG", "BBVA", "John Deere"]
 irishEuAngle: false
 updates: []
-draft: false
+draft: true
 ---
 
 ## Claude Sonnet 5 Arrives with Native 1M-Token Context

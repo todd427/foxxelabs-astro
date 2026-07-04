@@ -10,7 +10,7 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Science", "Z.ai", "GLM-5.2", "Amazon", "Microsoft", "Google", "OpenRouter", "David Sacks"]
 irishEuAngle: false
 updates: []
-draft: false
+draft: true
 ---
 
 ## Anthropic Advances Product Line and Security Framework
