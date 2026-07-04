@@ -32,6 +32,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
+import { aliasCanonical } from './entities.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -167,6 +168,47 @@ export const STATEMENT_MATCH = 0.7;
 
 export function statementsMatch(a, b) {
   return normStatement(a) === normStatement(b) || stmtJaccard(a, b) >= STATEMENT_MATCH;
+}
+
+// ── Event identity (the substrate's own key) ─────────────────────────────────
+// The strongest same-event signal isn't prose overlap — it's the tuple the claim
+// already carries: (what, when). Two primary claims that share a stated event_date
+// AND a *specific* entity (a product/version/standard, not a bare org) name the
+// same event even when their statements are angled differently and their bodies
+// diverge. That is the launch / funding / acquisition / appointment case where
+// statement-Jaccard fragments on angle, entity-Jaccard collapses on set asymmetry,
+// and the salient-number arm has no record-scale figure to key on. It reads the
+// identity fields, not a projection of them.
+//
+// "Specific" has no type classifier in entities.js, so the proxy is deliberately
+// conservative (false merge worse than false miss): multi-token OR carries a digit
+// (a version or law number). This admits "Claude Sonnet 5", "GLM-5.2", "EU AI Act",
+// "Model Context Protocol" and rejects a pair whose ONLY shared tag is a bare org
+// ("Anthropic", "OpenAI", "Google") — where same-org-same-day would false-merge two
+// distinct announcements. Single-token acronym regulations (DORA) fall to the prose
+// arm; that is an accepted false-miss, not a false-merge.
+export function isSpecificEntity(e) {
+  const s = String(e).trim();
+  if (!s) return false;
+  if (/\s/.test(s)) return true;   // multi-token: "Claude Sonnet 5", "EU AI Act"
+  if (/\d/.test(s)) return true;   // version / law number: "GLM-5.2", "GPT-5"
+  return false;                    // bare single-token org → not specific alone
+}
+
+/** True when two claims are the same event by IDENTITY: equal stated event_date
+ *  AND a shared specific canonical entity. Both event_dates must be present — a
+ *  null date carries no identity, so those pairs fall back to statement matching.
+ *  Symmetric; canonicalises through the alias dictionary before comparing. */
+export function sameEventClaim(a, b) {
+  if (!a?.event_date || !b?.event_date || a.event_date !== b.event_date) return false;
+  const aKeys = new Set(
+    (a.entities || []).filter(isSpecificEntity).map((e) => aliasCanonical(e)).filter(Boolean),
+  );
+  if (!aKeys.size) return false;
+  for (const e of (b.entities || [])) {
+    if (isSpecificEntity(e) && aKeys.has(aliasCanonical(e))) return true;
+  }
+  return false;
 }
 
 /** Confidence only ever rises by corroboration up to "corroborated"; "official"

@@ -41,6 +41,13 @@
  * ever went to Supabase). Both sides have entities -> entity-aware rule; either
  * side lacks them -> higher-bar text-only threshold.
  *
+ * CLAIM IDENTITY (the strongest arm, when claims are supplied): findDuplicate
+ * consults the claim substrate FIRST. Two stories that share a primary event
+ * claim are the same story regardless of lexical score. Same-event is keyed on
+ * the claim's own identity fields — (specific entity, event_date) — before its
+ * prose (see claims.js sameEventClaim / statementsMatch). The lexical + event
+ * arms below remain the backstop for stories without captured claims.
+ *
  * Not an embedding model: embeddings of two different "Ireland AI Office"
  * stories are also near-identical, so they would not separate same-event from
  * same-topic any better. Event identity is lexical-distinctive, not semantic.
@@ -55,7 +62,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { aliasCanonical, entityKey } from './entities.js';
-import { statementsMatch } from './claims.js';
+import { statementsMatch, sameEventClaim, loadClaims } from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -154,6 +161,12 @@ export function entityOverlap(aEnts = [], bEnts = []) {
 // cosine + union-Jaccard miss. Requiring BOTH a shared org AND a shared number
 // keeps distinct same-org stories ("Microsoft buys X", "Microsoft patches 200")
 // from collapsing. The window is enforced by the caller's corpus, not here.
+//
+// NOTE: this arm only fires for events NAMED BY A RECORD-SCALE NUMBER (patch
+// counts, CVE tallies, breach sizes). Events named by "what + when" — model
+// launches, funding rounds, acquisitions, appointments — carry no headline
+// number >= 100, so this arm cannot see them; the claim-identity arm
+// (sameEventClaim, keyed on (specific entity, event_date)) covers that class.
 const YEAR_RE = /^(?:1[89]|20)\d{2}$/;
 
 /** Record-scale integers in headline text: >= min and not a calendar year.
@@ -262,8 +275,15 @@ export function isDuplicate(s) {
 // share "Microsoft June 2026 Patch Tuesday: record ~200 fixes" even when their
 // bodies diverge. This consults the captured claims, so it sees event identity the
 // full-text cosine + union-Jaccard miss. It is high-precision/low-recall (the
-// statement matcher is deliberately strict — false merge worse than false miss),
-// so the lexical+event score() stays the backstop, not the sole gate.
+// matchers are deliberately strict — false merge worse than false miss), so the
+// lexical+event score() stays the backstop, not the sole gate.
+//
+// Two match modes, tried in order (see claims.js):
+//   1. IDENTITY — sameEventClaim: shared (specific entity, event_date). Catches
+//      launches / funding / M&A, whose identity is "what + when" and which the
+//      lexical and salient-number arms structurally miss.
+//   2. PROSE — statementsMatch: near-identical statement text. Catches recurring
+//      or undated events that carry no clean date key.
 //
 // Granularity (which claims count as "primary") is the open calibration question
 // from the parent brief; until step-2 extraction is tuned, the heuristic is the
@@ -274,11 +294,17 @@ export function primaryEventClaims(claims = []) {
   return primary.length ? primary : claims;
 }
 
-/** True when two claim sets share a primary event claim (same assertion, possibly
- *  from different sources). Reuses statementsMatch from the claim substrate. */
+/** True when two claim sets share a primary event claim — by identity first
+ *  (shared specific entity + event_date), then by near-identical statement text.
+ *  Reuses sameEventClaim + statementsMatch from the claim substrate. */
 export function sharePrimaryEventClaim(aClaims = [], bClaims = []) {
   const a = primaryEventClaims(aClaims);
   const b = primaryEventClaims(bClaims);
+  // Identity first: a shared (specific entity, event_date) tuple is the same event
+  // even when statements are angled differently and bodies diverge — the exact
+  // launch / funding / M&A case the lexical and salient-number arms miss.
+  for (const x of a) for (const y of b) if (sameEventClaim(x, y)) return true;
+  // Prose fallback: near-identical statements (recurring or undated events).
   for (const x of a) for (const y of b) if (statementsMatch(x.statement, y.statement)) return true;
   return false;
 }
@@ -411,7 +437,9 @@ export function isStrongDuplicate(s, { edgeTxt = STRONG_TXT, edgeCombined = STRO
     : (s.txt >= edgeTxt);
 }
 
-/** Union-find connected components over the corpus using `edgeFn(scoreObj)`. */
+/** Union-find connected components over the corpus using `edgeFn(scoreObj, a, b)`.
+ *  The stories a, b are passed alongside the lexical score so an edge can also
+ *  consult claim-level identity (see review's event-aware edge). */
 export function connectedComponents(corpus, edgeFn) {
   const n = corpus.length;
   const parent = Array.from({ length: n }, (_, i) => i);
@@ -420,7 +448,7 @@ export function connectedComponents(corpus, edgeFn) {
 
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
-      if (edgeFn(score(corpus[i], corpus[j]))) union(i, j);
+      if (edgeFn(score(corpus[i], corpus[j]), corpus[i], corpus[j])) union(i, j);
     }
   }
   const groups = new Map();
@@ -454,8 +482,24 @@ export function demoteToDraft(filePath) {
  *  flagged for hard delete; everything else is demoted to draft, never deleted. */
 function review(daysBack, edgeTxt) {
   const corpus = loadCorpusWindow(daysBack);
+  // Attach each story's claims so the collapse edge can use event identity
+  // (shared specific entity + event_date) — the same signal the live gate uses —
+  // to retire same-event dupes whose bodies diverge (launch / funding / M&A) and
+  // that STRONG_TXT / entity edges miss on set asymmetry. Transitive by design
+  // (connected components), but non-destructive: proposals only, --yes to apply.
+  const claimsByStory = new Map();
+  for (const cl of loadClaims()) {
+    if (!cl.story_id) continue;
+    if (!claimsByStory.has(cl.story_id)) claimsByStory.set(cl.story_id, []);
+    claimsByStory.get(cl.story_id).push(cl);
+  }
+  for (const s of corpus) s.claims = claimsByStory.get(s.slug) || [];
+
   const opts = edgeTxt ? { edgeTxt } : {};
-  const comps = connectedComponents(corpus, (s) => isStrongDuplicate(s, opts));
+  const comps = connectedComponents(
+    corpus,
+    (sc, a, b) => isStrongDuplicate(sc, opts) || sharePrimaryEventClaim(a.claims, b.claims),
+  );
 
   const clusters = comps.map((idxs) => {
     const sorted = [...idxs].sort((a, b) => pubTime(corpus[a]) - pubTime(corpus[b]));
