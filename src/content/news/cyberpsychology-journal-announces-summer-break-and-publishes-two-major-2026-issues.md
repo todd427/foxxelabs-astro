@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-04, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on 26 June 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-04, note: "Issue 3 of Volume 20 includes twelve high-quality articles covering online incivility, victimisation, digital piracy, and social media presentation.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-04, note: "All articles in Issue 3 of Volume 20 are published as open access.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-04, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is a diamond open access journal published by Masaryk University.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-04, note: "The British Psychological Society is launching a £6,000 grant scheme for small research projects.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-07-02, note: "The Cyberpsychology BIP program at IADT ran from 23rd-27th February 2026 with topics covering foundations of cyberpsychology, artificial intelligence, misinformation and deepfakes, online communicatio", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-07-01, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on June 26, 2026, containing twelve peer-reviewed articles.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-01, note: "The June 2026 issue of Cyberpsychology covers a broad range of topics including online incivility and victimisation, digital piracy, and presentation on social media.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -67,7 +72,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-02
+updatedDate: 2026-07-04
 ---
 
 ## Summer Submission Break Announced

@@ -10,6 +10,10 @@ significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-04, note: "The Regulation of Artificial Intelligence Bill 2026 establishes the AI Office of Ireland as an independent statutory body to act as Ireland's central coordinating authority for the implementation of t", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-04, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-04, note: "The Bill provides Market Surveillance Authorities with a structured, proportionate enforcement toolkit progressing from cooperative compliance (notices) to coercive measures (prohibition, seizure) and", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-04, note: "A major area of focus for Ireland's presidency will be the Digital Omnibus proposal, a draft law seeking to amend various digital laws including the General Data Protection Regulation, after member st", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Ireland has launched the AI Factory Antenna (AIF IRL-Antenna) with €10m in joint European and Irish Government funding.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
   - { date: 2026-07-03, note: "The AI Factory Antenna will be operated by the Irish Centre for High-End Computing (ICHEC) at University of Galway, in partnership with CeADAR, Ireland's Centre for AI.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
   - { date: 2026-07-03, note: "The antenna aims to grow adoption of and innovation through AI in the country while securing a foothold within the wider European AI ecosystem as part of a network of AI Factories and high-performance", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
@@ -22,7 +26,7 @@ updates:
   - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
-updatedDate: 2026-07-03
+updatedDate: 2026-07-04
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies

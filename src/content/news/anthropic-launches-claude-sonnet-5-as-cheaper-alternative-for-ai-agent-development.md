@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-04, note: "Anthropic redeployed Fable 5 on July 1, 2026 with July 7 usage credits following US government lifting of export controls.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "Anthropic unveiled a joint jailbreak severity standard with Amazon, Microsoft, and Google on July 1, 2026.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "Anthropic launched Claude Sonnet 5 at $2/$10 per million tokens, described as the 'Most Agentic Sonnet Yet', approaching Opus 4.8 performance.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "OpenAI previewed GPT-5.6 Sol on June 28, 2026.", sourceUrl: "https://openai.com/news/" }
+  - { date: 2026-07-04, note: "OpenAI and Broadcom unveiled an LLM-optimized inference chip on June 24, 2026.", sourceUrl: "https://openai.com/news/" }
+  - { date: 2026-07-04, note: "Global startups raised a record $510 billion in H1 2026, with OpenAI and Anthropic alone accounting for $217 billion (43%) of total startup capital.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "Anthropic's Claude revenue increased 75% since January 2026 and captured 70% of Fortune 100 as a paid consumer market shifted.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "Abu Dhabi's MGX closed a $49B AI Fund, exceeding its $45B target, backed by Anthropic Series H and OpenAI.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "Anthropic unveiled Claude Tag, an agentic AI coworker for Slack that builds context, delegates multi-step tasks, and works asynchronously, in beta for Team and Enterprise on June 23, 2026.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
+  - { date: 2026-07-04, note: "California struck a first-of-its-kind deal with Anthropic to bring Claude to all state agencies, cities, and counties at 50% discount on June 29, 2026.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
   - { date: 2026-07-03, note: "Claude Sonnet 5 has a native 1M-token context window.", sourceUrl: "https://releasebot.io/updates/anthropic" }
   - { date: 2026-07-03, note: "Anthropic lifted export controls on Claude Fable 5 and Claude Mythos 5 as of June 30, 2026, after the U.S. government applied export restrictions on June 12, 2026.", sourceUrl: "https://releasebot.io/updates/anthropic" }
   - { date: 2026-07-03, note: "Fable 5 will be available starting July 1, 2026, to users globally on the Claude Platform, Claude.ai, Claude Code, and Claude Cowork.", sourceUrl: "https://releasebot.io/updates/anthropic" }
@@ -36,7 +46,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-03
+updatedDate: 2026-07-04
 ---
 
 ## Claude Sonnet 5 Now Available

@@ -9,8 +9,19 @@ sourceUrl: "https://www.crescendo.ai/news/ai-breakthroughs-and-latest-ai-news-20
 significance: "high"
 entities: ["Eli Lilly", "LillyPod", "NVIDIA DGX SuperPOD", "Blackwell Ultra GPUs"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-04, note: "Researchers at Tufts University developed a neuro-symbolic AI system that achieved a 95% success rate on the Tower of Hanoi puzzle, compared with just 34% for standard systems.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "The neuro-symbolic VLA model required only 1% of the energy used by a standard VLA system during training, and during operation used just 5% of the energy needed by conventional approaches.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "Training the neuro-symbolic model required only 34 minutes, while conventional models required more than a day and a half.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "When given a more complex version of the Tower of Hanoi puzzle that it had not encountered before, the neuro-symbolic hybrid system succeeded 78% of the time while traditional models failed every atte", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "According to the International Energy Agency, AI systems and data centers used about 415 terawatt hours of power in 2024, accounting for more than 10% of the U.S. total electricity production.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "AI demand is projected to double by 2030.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "The research on neuro-symbolic AI will be presented at the International Conference of Robotics and Automation in Vienna in May 2026.", sourceUrl: "https://www.sciencedaily.com/releases/2026/04/260405003952.htm" }
+  - { date: 2026-07-04, note: "The Cisco report found that 65% of organizations expect agentic AI to create entirely new job categories over the next three to five years, including dedicated Chief AI Officer roles.", sourceUrl: "https://www.crescendo.ai/news/ai-breakthroughs-and-latest-ai-news-2026" }
+  - { date: 2026-07-04, note: "Eli Lilly aims to use LillyPod to cut the typical 10-year drug development timeline in half by accelerating genomics, molecule design, and clinical trial optimization.", sourceUrl: "https://www.crescendo.ai/news/ai-breakthroughs-and-latest-ai-news-2026" }
+  - { date: 2026-07-04, note: "NASA's Perseverance rover completed the first Mars drives ever planned by artificial intelligence using Anthropic's Claude vision-language models, covering a total of 456 meters over two drives.", sourceUrl: "https://www.crescendo.ai/news/ai-breakthroughs-and-latest-ai-news-2026" }
 draft: false
+updatedDate: 2026-07-04
 ---
 
 ## Eli Lilly Inaugurates LillyPod

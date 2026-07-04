@@ -10,6 +10,10 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-04, note: "Certain simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies in agreed amendments to the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "In July 2025, the Commission published 3 key instruments to support the responsible development and deployment of GPAI models: Guidelines on the scope of the obligations for providers of GPAI models, ", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "The Commission published guidelines on prohibited AI practices under the AI Act to offer legal explanations and practical examples to help stakeholders understand and comply with the prohibitions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "The Commission published guidelines on the AI system definition of the AI Act to assist stakeholders in determining the scope of the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-02, note: "Certain simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies (SMEs and SMCs), including simplified technical documentation requirements.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-02, note: "The Commission publishes Code of Practice on marking and labelling of AI-generated content on 10 June 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-02, note: "Commission selects EUROPA consortium as the winner of the Frontier AI Grand Challenge, a project to build European open-source frontier AI model in all 24 EU languages, announced 19 June 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -76,7 +80,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-02
+updatedDate: 2026-07-04
 ---
 
 ## Major Amendments Agreed
