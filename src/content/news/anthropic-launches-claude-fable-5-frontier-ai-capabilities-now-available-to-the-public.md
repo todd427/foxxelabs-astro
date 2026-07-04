@@ -10,6 +10,7 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Project Glasswing"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-04, note: "Merged duplicate coverage: Anthropic Launches Claude Fable 5, First Public Mythos Model, with Strict Safety Guardrails and 30-Day Data Retention" }
   - { date: 2026-06-28, note: "Claude Fable 5 achieved 92.6% on GPQA Diamond benchmark.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
   - { date: 2026-06-28, note: "Claude Fable 5 was released on June 9, 2026 with 1 million token context window.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
   - { date: 2026-06-28, note: "Claude Fable 5 is priced at $10.00 per million input tokens and $50.00 per million output tokens.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
@@ -28,7 +29,7 @@ updates:
   - { date: 2026-06-14, note: "Anthropic launches Claude Fable 5 with enhanced coding and long-context capabilities, while stricter safeguards reshape enterprise AI deployment standards.", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-06-13, note: "Anthropic launches Claude Fable 5 on June 9, its most capable publicly available model, with dual-track security architecture separating general use from restricted cybersecurity capabilities.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
 draft: false
-updatedDate: 2026-06-28
+updatedDate: 2026-07-04
 ---
 
 ## Anthropic Launches Claude Fable 5: Frontier AI Capabilities Now Public
