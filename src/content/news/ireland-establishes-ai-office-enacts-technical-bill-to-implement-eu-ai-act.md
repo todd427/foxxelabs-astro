@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-05, note: "The provisional agreement defers high-risk AI compliance deadlines to 2 December 2027 for standalone systems and 2 August 2028 for AI embedded in regulated products.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-05, note: "The Digital Omnibus adds new prohibited AI practices regarding generation or manipulation of non-consensual sexual and intimate content or child sexual abuse material, taking effect on 2 December 2026", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-05, note: "Starting 1 July 2026, Ireland will take over the Presidency of the Council of the European Union after Cyprus.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-05, note: "During Ireland's EU Presidency, an AI Summit will take place in Dublin on 14 October 2026, bringing together EU and global leaders, heads of government, CEOs, investors, innovators and academics.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "On 29 June 2026, the Council of the EU gave its final green light to the AI Act simplification package, following the European Parliament's formal endorsement on 16 June 2026.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-07-03, note: "The legislative act from the AI Act simplification package will be published in the EU's official journal shortly and will enter into force on the third day after publication.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-07-03, note: "The European Commission published the Digital Omnibus on AI on 19 November 2025, proposing to defer the high-risk compliance deadline from 2 August 2026 to 2 December 2027.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
@@ -187,7 +191,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-03
+updatedDate: 2026-07-05
 ---
 
 ## The Bill's Purpose and Structure

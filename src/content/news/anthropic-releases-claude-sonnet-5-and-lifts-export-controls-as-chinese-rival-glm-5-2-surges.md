@@ -9,8 +9,23 @@ sourceUrl: "https://www.anthropic.com/news"
 significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Science", "Z.ai", "GLM-5.2", "Amazon", "Microsoft", "Google", "OpenRouter", "David Sacks"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-05, note: "Anthropic redeployed Fable 5 and Mythos 5 models globally after the U.S. government lifted previous export controls.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-05, note: "Claude Science is a customizable app that integrates tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-05, note: "OpenAI and Anthropic are both reportedly preparing for highly anticipated initial public offerings, with OpenAI filing confidentially and Anthropic expected to raise tens of billions.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "OpenAI has reportedly proposed granting a 5% stake to the U.S. government as part of a strategic power play.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "OpenAI announced a $25 billion data center project in Texas in collaboration with Oracle and Vantage.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Meta's next-generation 'Watermelon' model matches GPT-5.5 benchmarks.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Meta's Watermelon model uses 10x more compute than its predecessor.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Mark Zuckerberg noted that AI agent technology is progressing slower than anticipated.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "DeepSeek raised over $7 billion at a $50 billion valuation.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "DeepSeek introduced peak-hour surge pricing for its V4 models, signaling an end to the region's aggressive price war in favor of sustainable growth.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Music rights groups and firms including Jamendo and OSA filed lawsuits against Suno over copyright infringement.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Midjourney is seeking to force major film studios to reveal their own AI usage in a separate copyright battle.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "ElevenLabs is exploring a secondary share sale at a $22 billion valuation.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
+  - { date: 2026-07-05, note: "Google DeepMind released the 'Nano Banana 2 Lite' image model.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
 draft: true
+updatedDate: 2026-07-05
 ---
 
 ## Anthropic Advances Product Line and Security Framework

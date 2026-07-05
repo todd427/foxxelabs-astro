@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Ireland", "Australia", "United Kingdom", "France", "Spain", "Portugal", "Germany", "Norway", "New Zealand", "Malaysia", "India", "Simon Harris", "Facebook", "Instagram", "YouTube", "TikTok", "Snapchat", "Reddit", "Kick", "Twitch", "Threads", "X"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-05, note: "Cyberpsychology journal published Issue 3 of Volume 20 on June 26, 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-05, note: "Issue 3 of Cyberpsychology Volume 20 contains twelve articles covering topics including online incivility and victimisation, digital piracy, and presentation on social media.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-05, note: "All articles in Cyberpsychology Issue 3, Volume 20 are published as open access.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-05, note: "The Cyberpsychology journal experienced a sharp increase in submissions in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-05, note: "The European Commission adopted an action plan against cyberbullying in February 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
+  - { date: 2026-07-05, note: "President von der Leyen is seeking expert advice on possible age restrictions for social media in Europe in response to online risks.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
+  - { date: 2026-07-05, note: "The European Commission will launch an EU-wide inquiry on the impact of social media and excessive screentime on the wellbeing and mental health of young people.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
+  - { date: 2026-07-05, note: "The European strategy for a better internet for kids (BIK+) was adopted on May 11, 2022.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
+  - { date: 2026-07-05, note: "The Commission released an age verification blueprint in July 2025 and is piloting the solution with member states, platforms and users.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
+  - { date: 2026-07-05, note: "The Commission made €63.2 million available in April 2026 to support AI innovation in health and online safety.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/strategy-better-internet-kids" }
   - { date: 2026-07-03, note: "A study by UCD's Insight Research Ireland Centre for Data Analytics conducted five focus groups with 87 transition year students in Irish schools.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
   - { date: 2026-07-03, note: "The study, led by Megan Nyhan, will be presented at the Association for Computer Machinery (ACM) Interaction Design and Children conference in Brighton later in June 2026.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
   - { date: 2026-07-03, note: "Participants in the UCD study called for age-appropriate content and access to algorithm-editing tools that give more control over what they see.", sourceUrl: "https://irishtechnews.ie/disturbing-social-media-content-remains-in-mind/" }
@@ -20,7 +30,7 @@ updates:
   - { date: 2026-07-03, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace experienced a sharp increase in submissions during 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-03, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace has an Impact Factor of 2.6 for 2025.", sourceUrl: "https://cyberpsychology.eu/" }
 draft: false
-updatedDate: 2026-07-03
+updatedDate: 2026-07-05
 ---
 
 ## Ireland Moves Toward Social Media Restrictions for Young Users

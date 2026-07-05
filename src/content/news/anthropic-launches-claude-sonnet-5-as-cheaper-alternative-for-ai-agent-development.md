@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-05, note: "Anthropic launched Claude Sonnet 5, its most agentic model yet, alongside the U.S. government lifting national security restrictions on its Fable 5 and Mythos 5 models.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "The new Claude Sonnet 5 model can autonomously use tools like browsers and terminals while delivering near-Opus 4.8 performance at a significantly lower cost.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "Microsoft announced a $2.5 billion investment to embed 6,000 industry and engineering experts directly with enterprise customers through Microsoft Frontier Company.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "AWS announced a $1 billion investment in a new forward deployed engineering organization, embedding thousands of AI engineers directly within customer teams.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "Google DeepMind launched Nano Banana 2 Lite, its fastest and most cost-efficient image generation model at $0.034 per 1K images with 4-second latency.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "Gemini Omni Flash is a video generation and conversational editing model priced at $0.10 per second of output.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "OpenAI revealed plans for Jalapeño, a custom inference chip built in partnership with Broadcom.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "The US government forced Anthropic to pull its two newest models, Fable 5 and Mythos 5, citing national security concerns after Amazon researchers allegedly found a way to bypass Fable 5's guardrails.", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-07-05, note: "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.", sourceUrl: "https://pricepertoken.com/news" }
+  - { date: 2026-07-05, note: "The Trump administration told OpenAI to slow roll the release of its new model GPT-5.6 with a select group of partners instead of to the broader public.", sourceUrl: "https://pricepertoken.com/news" }
+  - { date: 2026-07-05, note: "Trump administration released Anthropic Mythos to be used by more than 100 US companies and government agencies.", sourceUrl: "https://pricepertoken.com/news" }
   - { date: 2026-07-04, note: "Anthropic redeployed Fable 5 on July 1, 2026 with July 7 usage credits following US government lifting of export controls.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
   - { date: 2026-07-04, note: "Anthropic unveiled a joint jailbreak severity standard with Amazon, Microsoft, and Google on July 1, 2026.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
   - { date: 2026-07-04, note: "Anthropic launched Claude Sonnet 5 at $2/$10 per million tokens, described as the 'Most Agentic Sonnet Yet', approaching Opus 4.8 performance.", sourceUrl: "https://aiweekly.co/ai-news-today/anthropic-news" }
@@ -46,7 +57,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-05
 ---
 
 ## Claude Sonnet 5 Now Available

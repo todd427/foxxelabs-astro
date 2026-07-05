@@ -10,6 +10,14 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-05, note: "The EU AI Act, formally Regulation (EU) 2024/1689, entered into force on 1 August 2024 and applies in phases.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "Prohibited AI practices and AI literacy duties started on 2 February 2025.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "General-purpose AI model rules and parts of governance and penalties started on 2 August 2025.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "Most obligations for high-risk AI systems start applying from August 2026, with some extra transitions stretching into 2027 and 2028.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "July 2026 is the last serious preparation window for many SMEs and startups before high-risk AI obligations apply.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "A startup can buy a model from one vendor, wrap it with its own interface, add prompts and workflows, and then sell it into HR or education and may carry duties it never budgeted for.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "High-risk AI can include systems used in areas such as employment, education, access to services, creditworthiness, certain law enforcement contexts, border management, and parts of critical infrastru", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
+  - { date: 2026-07-05, note: "Since February 2025, organizations have needed a sufficient level of AI literacy among staff dealing with AI systems.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
   - { date: 2026-07-04, note: "The Irish Government published the General Scheme of the Regulation of Artificial Intelligence Bill 2026, setting out how it will turn the EU AI Act from a directly applicable regulation into a functi", sourceUrl: "https://vinciworks.com/blog/is-ireland-setting-the-pace-for-ai-governance-in-2026/" }
   - { date: 2026-07-04, note: "The AI Office of Ireland must be operational by 1 August 2026, in line with the EU AI Act's implementation timeline.", sourceUrl: "https://vinciworks.com/blog/is-ireland-setting-the-pace-for-ai-governance-in-2026/" }
   - { date: 2026-07-04, note: "Ireland adopted a distributed regulatory model rather than creating a single, monolithic AI regulator, with existing sectoral regulators including the Central Bank of Ireland, the Workplace Relations ", sourceUrl: "https://vinciworks.com/blog/is-ireland-setting-the-pace-for-ai-governance-in-2026/" }
@@ -100,7 +108,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-05
 ---
 
 ## The EU AI Act's Phased Entry into Force

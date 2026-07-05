@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-04T09:20:57.466Z",
+  "updatedAt": "2026-07-05T09:42:16.281Z",
   "pick": {
     "id": "Qwen/Qwen-AgentWorld-35B-A3B",
     "url": "https://hf.co/Qwen/Qwen-AgentWorld-35B-A3B",
     "author": "Qwen",
     "name": "Qwen-AgentWorld-35B-A3B",
-    "likes": 529,
-    "downloads": 50188,
-    "ageDays": 12,
+    "likes": 538,
+    "downloads": 55113,
+    "ageDays": 13,
     "blurb": "Qwen-AgentWorld-35B is a 35B MoE model trained for environment simulation and agent behavior, released 5 days ago with a published benchmark (AgentWorldBench). It's the practical test of whether world-model pretraining actually improves downstream agent performance or just adds training compute without behavioral gains.",
     "surfacedAt": "2026-06-27"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3359,
-      "downloads": 208920,
-      "ageDays": 18
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 354,
-      "downloads": 10306,
-      "ageDays": 7
-    },
-    {
-      "id": "deepreinforce-ai/Ornith-1.0-9B",
-      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
-      "author": "deepreinforce-ai",
-      "name": "Ornith-1.0-9B",
-      "likes": 370,
-      "downloads": 69837,
-      "ageDays": 13
+      "likes": 3418,
+      "downloads": 220379,
+      "ageDays": 19
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://hf.co/InternScience/Agents-A1",
       "author": "InternScience",
       "name": "Agents-A1",
-      "likes": 216,
-      "downloads": 5456,
-      "ageDays": 12
+      "likes": 252,
+      "downloads": 7010,
+      "ageDays": 13
     },
     {
-      "id": "deepreinforce-ai/Ornith-1.0-35B",
-      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-35B",
+      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Pro-DSpark",
+      "likes": 374,
+      "downloads": 12580,
+      "ageDays": 8
+    },
+    {
+      "id": "AliesTaha/fable-traces",
+      "url": "https://hf.co/AliesTaha/fable-traces",
+      "author": "AliesTaha",
+      "name": "fable-traces",
+      "likes": 142,
+      "downloads": 277,
+      "ageDays": 1
+    },
+    {
+      "id": "deepreinforce-ai/Ornith-1.0-9B",
+      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
       "author": "deepreinforce-ai",
-      "name": "Ornith-1.0-35B",
-      "likes": 325,
-      "downloads": 218657,
-      "ageDays": 13
+      "name": "Ornith-1.0-9B",
+      "likes": 378,
+      "downloads": 76189,
+      "ageDays": 14
     }
   ]
 }
