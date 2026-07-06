@@ -10,6 +10,8 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-06, note: "Certain simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies (SMEs and SMCs) under amended AI Act rules, including simplified technical documen", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-06, note: "The interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, is clarified in amended rules, avoiding duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-05, note: "The EU AI Act, formally Regulation (EU) 2024/1689, entered into force on 1 August 2024 and applies in phases.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
   - { date: 2026-07-05, note: "Prohibited AI practices and AI literacy duties started on 2 February 2025.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
   - { date: 2026-07-05, note: "General-purpose AI model rules and parts of governance and penalties started on 2 August 2025.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
@@ -108,7 +110,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-05
+updatedDate: 2026-07-06
 ---
 
 ## The EU AI Act's Phased Entry into Force

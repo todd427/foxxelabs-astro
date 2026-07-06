@@ -9,8 +9,25 @@ sourceUrl: "https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/"
 significance: "high"
 entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "AWS", "Apple", "Google", "Microsoft", "NVIDIA", "CrowdStrike", "JPMorgan Chase"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-06, note: "Addy Osmani, a Google Chrome engineer, introduced the term 'Loop Engineering' in June 2026", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
+  - { date: 2026-07-06, note: "Anthropic reported that over 80% of its engineers are already using self-improving loops", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
+  - { date: 2026-07-06, note: "Anthropic's engineers stated that over 80% of Anthropic's engineers are already using self-improving loops, and this will reach 100% within 3 to 6 months", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
+  - { date: 2026-07-06, note: "Loop Engineering removes humans from directly commanding AI line by line, making the system itself the loop rather than humans", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
+  - { date: 2026-07-06, note: "At the April AI Engineer Conference, Anthropic's engineers compared two approaches for Claude developing a retro-style mini-game app: minimal prompts took 20 minutes and cost $9, while an iterative ag", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
+  - { date: 2026-07-06, note: "Jason Wei and colleagues at Google Research proved that eight well-written examples in a prompt were enough for a 540-billion parameter model to beat fine-tuned GPT-3 on the GSM8K math benchmark in th", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "The paper 'Tree of Thoughts: Deliberate Problem Solving with Large Language Models' (Princeton/Google DeepMind, May 2023) showed that in 'Game of 24', GPT-4 with standard Chain-of-Thought solved only ", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "The paper 'ReAct: Synergizing Reasoning and Acting in Language Models' (ICLR 2023) showed that on ALFWorld, ReAct beats imitation learning and reinforcement learning methods by 34% in absolute success", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "The paper 'Self-Refine: Iterative Refinement with Self-Feedback' (NeurIPS 2023) showed average 20% performance improvement across 7 different tasks with GPT-3.5, ChatGPT and GPT-4", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "Tom Brown and the OpenAI team published 'Language Models are Few-Shot Learners' in 2020, showing that given between 10 and 100 examples of the desired output type, GPT-3 matched or exceeded fine-tuned", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "Anthropic published 'Effective context engineering for AI agents' on their engineering blog in 2026", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "The paper 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' by Patrick Lewis and the Facebook AI team (NeurIPS 2020) is the foundation for RAG, where the model queries a document data", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "Stanford team published results showing 10-40% quality improvements with DSPy compared to manual prompting on RAG pipelines and classifiers", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "Anthropic's '2026 Agentic Coding Trends Report' states that 2026 is the year of the transition from single-agent workflows to multi-agent ones", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "A test of two prompts by an individual (referred to in the article) on 50 real clients in 2025 showed the second prompt (using CREATE + CoT) got a reply 64% of the time, while the first prompt got a r", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
+  - { date: 2026-07-06, note: "Full adoption of Loop Engineering is expected within 3–6 months, driven by efficiency gains and reduced dependence on manual intervention", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
 draft: false
+updatedDate: 2026-07-06
 ---
 
 ## Claude Mythos Finds 23,019 Vulnerabilities in First Month

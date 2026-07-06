@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Project Glasswing"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-06, note: "Claude Sonnet 5 launched on June 30, 2026 with substantial improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude Fable 5 access was restored globally on July 1, 2026 after export controls were lifted", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude Mythos 5 access was re-enabled for select US organizations on July 1, 2026", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude Enterprise added richer admin analytics, model-level entitlements, and spend alerts on July 2, 2026", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Analytics dashboard for Claude Enterprise admins now shows usage and cost by group and by user, with output like artifacts created, files edited, skills and connectors used displayed directly next to ", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude apps gateway for Amazon Bedrock and Google Cloud was introduced on June 29, 2026 as a self-hosted control plane for Claude Code with corporate SSO, centrally enforced policy, role-based access,", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude in Microsoft Foundry became generally available on June 29, 2026, bringing Azure-native access with existing identity, billing, governance, and optional US data zone support", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Claude Opus 4.8 and Claude Haiku 4.5 are available in the Messages API through Microsoft Foundry with core capabilities like prompt caching and extended thinking", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
+  - { date: 2026-07-06, note: "Fable 5 and Mythos 5 were subject to a US government export-control directive on June 12, 2026, requiring Anthropic to suspend access after Amazon researchers allegedly found a way to bypass Fable 5's", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-06, note: "Anthropic proposed an industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, Google, and other Glasswing partners on June 30, 2026", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-06, note: "Claude Fable 5 launched on June 9, 2026 as a Mythos-class model made safe for general use", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
   - { date: 2026-07-04, note: "Merged duplicate coverage: Anthropic Launches Claude Fable 5, First Public Mythos Model, with Strict Safety Guardrails and 30-Day Data Retention" }
   - { date: 2026-06-28, note: "Claude Fable 5 achieved 92.6% on GPQA Diamond benchmark.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
   - { date: 2026-06-28, note: "Claude Fable 5 was released on June 9, 2026 with 1 million token context window.", sourceUrl: "https://aiflashreport.com/model-releases.html" }
@@ -29,7 +40,7 @@ updates:
   - { date: 2026-06-14, note: "Anthropic launches Claude Fable 5 with enhanced coding and long-context capabilities, while stricter safeguards reshape enterprise AI deployment standards.", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-06-13, note: "Anthropic launches Claude Fable 5 on June 9, its most capable publicly available model, with dual-track security architecture separating general use from restricted cybersecurity capabilities.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-06
 ---
 
 ## Anthropic Launches Claude Fable 5: Frontier AI Capabilities Now Public

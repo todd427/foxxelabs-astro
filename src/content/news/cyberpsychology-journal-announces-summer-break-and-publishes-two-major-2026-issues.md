@@ -10,6 +10,16 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-06, note: "In 2024, the Federal Bureau of Investigation's Internet Crime Complaint Center reported 859,532 complaints and losses of $16.6 billion, a 33% jump from 2023.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "According to the 2024 Global Anti-Scam Alliance Report, international scammers collectively defrauded victims of more than USD 1 trillion over a twelve-month period.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "The 2025 Global Anti-Scam Alliance Report, which surveyed over 46,000 adults across 42 markets, revealed that 57% of respondents had encountered a scam within the past year, while 23% reported financi", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "A recent INTERPOL report (2025) has highlighted a sharp rise in cybercrime in Africa, stating that cybercrime now accounts for more than 30 per cent of all reported crime in Western and Eastern Africa", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "A nine-country youth survey with 8,000 participants aged 16 to 19 found that just under half (47.76%, N = 3,808) reported engaging in criminal behaviour online in the previous year.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "In the nine-country youth survey, prevalence rates for individual behaviours ranged from 1 in 8 engaging in money muling and laundering, to 1 in 11 engaging in cyber fraud.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "In early 2024, a finance employee at Arup's Hong Kong office authorized transfers totalling almost HK$200 million following a video call featuring AI-generated deepfakes of senior colleagues.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "The Paladin International State of Safety Tech 2025 report highlights that employment in Safety Tech now exceeds 40,000 roles globally.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "Since 2023, $2.7 billion has been raised across 195 deals in the Safety Tech sector.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-06, note: "The International Safety Tech sector has entered 2026 at a moment of transition, with the enforcement of major online safety laws coinciding with a rise in AI-enabled risks, from deepfakes to syntheti", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
   - { date: 2026-07-04, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on 26 June 2026.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-04, note: "Issue 3 of Volume 20 includes twelve high-quality articles covering online incivility, victimisation, digital piracy, and social media presentation.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-04, note: "All articles in Issue 3 of Volume 20 are published as open access.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -72,7 +82,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-06
 ---
 
 ## Summer Submission Break Announced

@@ -10,6 +10,13 @@ significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-06, note: "Everhaze raised €450k from three Irish family offices (Astogo Holdings, Kearns family office, and hotelier Mark Cosgrave) on the eve of launching its conversational agentic AI product Lú across Irelan", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
+  - { date: 2026-07-06, note: "The three Irish family offices backing Everhaze have a combined net worth of more than €350m.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
+  - { date: 2026-07-06, note: "The PRII Census 2025 showed that 83% of PR professionals are working beyond their contracted hours, putting in an average of almost 10 extra hours per week.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
+  - { date: 2026-07-06, note: "The Irish in-house public-sector share of the PR workforce grew to 42% in 2025, up from 25% in 2019.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
+  - { date: 2026-07-06, note: "Everhaze has identified 48 separate tasks that Lú can carry out, including text editing, media list management, media monitoring and report generation.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
+  - { date: 2026-07-06, note: "The AIF IRL-Antenna partnership involves seven regional innovation hubs in Ireland.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-06, note: "The antenna is described as Ireland's national programme connecting the Irish AI ecosystem to European AI Factories infrastructure under the European High Performance Computing Joint Undertaking (Euro", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
   - { date: 2026-07-04, note: "The Regulation of Artificial Intelligence Bill 2026 establishes the AI Office of Ireland as an independent statutory body to act as Ireland's central coordinating authority for the implementation of t", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-04, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-04, note: "The Bill provides Market Surveillance Authorities with a structured, proportionate enforcement toolkit progressing from cooperative compliance (notices) to coercive measures (prohibition, seizure) and", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
@@ -26,7 +33,7 @@ updates:
   - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-06
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies
