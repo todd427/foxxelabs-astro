@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-07-05T09:42:16.281Z",
+  "updatedAt": "2026-07-06T10:49:53.807Z",
   "pick": {
-    "id": "Qwen/Qwen-AgentWorld-35B-A3B",
-    "url": "https://hf.co/Qwen/Qwen-AgentWorld-35B-A3B",
-    "author": "Qwen",
-    "name": "Qwen-AgentWorld-35B-A3B",
-    "likes": 538,
-    "downloads": 55113,
-    "ageDays": 13,
-    "blurb": "Qwen-AgentWorld-35B is a 35B MoE model trained for environment simulation and agent behavior, released 5 days ago with a published benchmark (AgentWorldBench). It's the practical test of whether world-model pretraining actually improves downstream agent performance or just adds training compute without behavioral gains.",
-    "surfacedAt": "2026-06-27"
+    "id": "InternScience/Agents-A1",
+    "url": "https://hf.co/InternScience/Agents-A1",
+    "author": "InternScience",
+    "name": "Agents-A1",
+    "likes": 315,
+    "downloads": 8766,
+    "ageDays": 14,
+    "blurb": "Agents-A1 is a multimodal MoE model tagged explicitly for agentic workflows, combining vision and text-to-text in a single forward pass. Unlike the current pick's isolated world-model claim, this one ships with vision grounding—worth testing whether agents actually need image understanding to outperform text-only baselines on the same tasks.",
+    "surfacedAt": "2026-07-06"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3418,
-      "downloads": 220379,
-      "ageDays": 19
+      "likes": 3495,
+      "downloads": 231218,
+      "ageDays": 20
     },
     {
-      "id": "InternScience/Agents-A1",
-      "url": "https://hf.co/InternScience/Agents-A1",
-      "author": "InternScience",
-      "name": "Agents-A1",
-      "likes": 252,
-      "downloads": 7010,
-      "ageDays": 13
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 374,
-      "downloads": 12580,
-      "ageDays": 8
+      "id": "tencent/Hy3",
+      "url": "https://hf.co/tencent/Hy3",
+      "author": "tencent",
+      "name": "Hy3",
+      "likes": 196,
+      "downloads": 2,
+      "ageDays": 4
     },
     {
       "id": "AliesTaha/fable-traces",
       "url": "https://hf.co/AliesTaha/fable-traces",
       "author": "AliesTaha",
       "name": "fable-traces",
-      "likes": 142,
-      "downloads": 277,
-      "ageDays": 1
+      "likes": 169,
+      "downloads": 2903,
+      "ageDays": 3
     },
     {
-      "id": "deepreinforce-ai/Ornith-1.0-9B",
-      "url": "https://hf.co/deepreinforce-ai/Ornith-1.0-9B",
-      "author": "deepreinforce-ai",
-      "name": "Ornith-1.0-9B",
-      "likes": 378,
-      "downloads": 76189,
-      "ageDays": 14
+      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Pro-DSpark",
+      "likes": 398,
+      "downloads": 14276,
+      "ageDays": 9
+    },
+    {
+      "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
+      "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
+      "author": "empero-ai",
+      "name": "Qwythos-9B-Claude-Mythos-5-1M",
+      "likes": 693,
+      "downloads": 149421,
+      "ageDays": 17
     }
   ]
 }
