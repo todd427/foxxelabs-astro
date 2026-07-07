@@ -10,6 +10,17 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-07, note: "Generative AI systems placed on the market or put into service before 2 August 2026 must comply with watermarking requirements only as of 2 December 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-07, note: "AI systems designed to create intimate deepfakes or CSAM are prohibited effective 2 December 2026, with violations triggering fines of up to €35 million or 7% of annual worldwide turnover, whichever i", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-07, note: "On 7 May 2026, EU legislative bodies reached a political agreement on proposed amendments to the AI Act, known as the AI Act Omnibus.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-07, note: "The EU AI Act prohibits the use of GDPR special category personal data for bias detection purposes except where necessary to detect and mitigate bias in AI models.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-07, note: "Formal adoption and publication of the AI Act amendments in the Official Journal of the European Union were anticipated in July 2026, ahead of the 2 August 2026 deadline.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-07, note: "Fable 5 returns globally on July 1.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-07, note: "Anthropic is proposing an industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, Google, and other Glasswing partners.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-07, note: "Anthropic launched Claude Sonnet 5 delivering frontier performance across coding, agents, and professional work at scale.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-07, note: "Claude Science, a customizable AI workbench for scientists, integrates tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-07-07, note: "A political agreement on the AI omnibus was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-07, note: "The AI Act will be fully applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-05, note: "On 29 June, the Council of the EU gave its final green light to the AI Act simplification package, following the European Parliament's formal endorsement on 16 June 2026.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-07-05, note: "The legislative act will be published in the EU's official journal shortly and will enter into force on the third day after this publication.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
   - { date: 2026-07-05, note: "On 16 June, the European Parliament formally endorsed the provisional agreement reached in May regarding the AI Act simplification package.", sourceUrl: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act" }
@@ -91,7 +102,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-05
+updatedDate: 2026-07-07
 ---
 
 ## Major Amendments Agreed

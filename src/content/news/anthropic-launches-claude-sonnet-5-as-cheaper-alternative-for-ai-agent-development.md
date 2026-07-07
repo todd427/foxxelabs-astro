@@ -10,6 +10,23 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-07, note: "Fable 5 moves from subscription-included access to usage credits on July 8, 2026, at $10 per million input tokens and $50 per million output tokens.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Claude Opus 4.8 achieves 63% pass@1 on SWE-Together multi-turn coding tasks with the fewest human corrections required during sessions.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "GPT-5.6 Sol scores 31.5% on GeneBench-Pro, a 129-problem computational biology benchmark.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Claude Science Workbench connects Claude Opus 4.8 to more than 60 scientific databases including genomics, proteomics, cheminformatics, and clinical trial databases.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "ByteDance's Doubao will disable agent features on July 15, 2026, in compliance with China's Interim Measures for the Administration of AI Anthropomorphic Interactive Services.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Doubao has 345 million monthly active users.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Alibaba announced no migration pathway for Qwen users with established agent configurations.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Chinese AI providers serve approximately 45% of all OpenRouter traffic as of Q2 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Xiaomi's MiMO-V2-Pro processes 4.21 trillion weekly tokens for a 21.1% platform share on OpenRouter.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Alibaba consolidated its AI operations into the Alibaba Token Hub, merging five units including Tongyi Laboratory, Qwen, and Wukong under CEO Eddie Wu.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "China processes 140 trillion tokens every day nationally according to the National Data Administration.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "Gemini 3.5 Pro remains in limited Vertex AI enterprise preview without a confirmed GA date.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "The White House is expected to announce voluntary AI model standards framework between July 7-11, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "GPT-5.6 Sol, Terra, and Luna remain limited to approximately 20 government-vetted partner organizations as of July 6, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
+  - { date: 2026-07-07, note: "DSPy's systematic prompt optimization raised accuracy on the prompt evaluation criterion task from 46.2% to 64.0%.", sourceUrl: "https://arxiv.org/abs/2507.03620" }
+  - { date: 2026-07-07, note: "In a router agent use case, DSPy increased prompt refinement accuracy from 85.0% to 90.0%, but using the optimized prompt with a cheaper model did not improve performance.", sourceUrl: "https://arxiv.org/abs/2507.03620" }
+  - { date: 2026-07-07, note: "DSPy's prompt optimization impact varies significantly by task, highlighting the importance of evaluating specific use cases.", sourceUrl: "https://arxiv.org/abs/2507.03620" }
   - { date: 2026-07-05, note: "Anthropic launched Claude Sonnet 5, its most agentic model yet, alongside the U.S. government lifting national security restrictions on its Fable 5 and Mythos 5 models.", sourceUrl: "https://dentro.de/ai/news/" }
   - { date: 2026-07-05, note: "The new Claude Sonnet 5 model can autonomously use tools like browsers and terminals while delivering near-Opus 4.8 performance at a significantly lower cost.", sourceUrl: "https://dentro.de/ai/news/" }
   - { date: 2026-07-05, note: "Microsoft announced a $2.5 billion investment to embed 6,000 industry and engineering experts directly with enterprise customers through Microsoft Frontier Company.", sourceUrl: "https://dentro.de/ai/news/" }
@@ -57,7 +74,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-05
+updatedDate: 2026-07-07
 ---
 
 ## Claude Sonnet 5 Now Available

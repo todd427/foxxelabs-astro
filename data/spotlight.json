@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-06T11:30:38.518Z",
+  "updatedAt": "2026-07-07T10:27:24.558Z",
   "pick": {
     "id": "tencent/Hy3",
     "url": "https://hf.co/tencent/Hy3",
     "author": "tencent",
     "name": "Hy3",
-    "likes": 205,
-    "downloads": 2,
-    "ageDays": 4,
+    "likes": 396,
+    "downloads": 121,
+    "ageDays": 5,
     "blurb": "Tencent's Hy3 is a new MoE model shipping 4 days ago with minimal public downloads—early enough to stress-test before the curve flattens. Worth checking if the architecture choices differ materially from the GLM-5.2 saturation point, or if it's just another commoditized MoE variant.",
     "surfacedAt": "2026-07-06"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3499,
-      "downloads": 231218,
-      "ageDays": 20
+      "likes": 3553,
+      "downloads": 281584,
+      "ageDays": 21
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://hf.co/InternScience/Agents-A1",
       "author": "InternScience",
       "name": "Agents-A1",
-      "likes": 317,
-      "downloads": 8766,
-      "ageDays": 14
+      "likes": 354,
+      "downloads": 14723,
+      "ageDays": 15
     },
     {
       "id": "AliesTaha/fable-traces",
       "url": "https://hf.co/AliesTaha/fable-traces",
       "author": "AliesTaha",
       "name": "fable-traces",
-      "likes": 170,
-      "downloads": 2903,
-      "ageDays": 3
+      "likes": 180,
+      "downloads": 3886,
+      "ageDays": 4
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 399,
-      "downloads": 14276,
-      "ageDays": 9
+      "likes": 414,
+      "downloads": 15538,
+      "ageDays": 10
     },
     {
-      "id": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
-      "url": "https://hf.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
-      "author": "empero-ai",
-      "name": "Qwythos-9B-Claude-Mythos-5-1M",
-      "likes": 693,
-      "downloads": 149421,
-      "ageDays": 17
+      "id": "meituan-longcat/LongCat-2.0",
+      "url": "https://hf.co/meituan-longcat/LongCat-2.0",
+      "author": "meituan-longcat",
+      "name": "LongCat-2.0",
+      "likes": 124,
+      "downloads": 385,
+      "ageDays": 2
     }
   ]
 }
