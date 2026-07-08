@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-08, note: "Anthropic released Claude Sonnet 5, the most agentic Sonnet model, becoming the default for Free and Pro users, scoring 63.2% on agentic coding benchmarks and approaching Opus 4.8 performance at lower", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Anthropic unveiled Claude Science, an AI workbench integrating scientific databases, computation tools, and genomics resources for drug research, and simultaneously launched its own preclinical drug d", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Amazon confirmed designing custom AZ3 and AZ3 Pro AI chips for Echo and Fire TV devices, improving wake-word detection over 50%.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Google launched ARDS (Agentic Resource Discovery Specification), an open standard backed by Microsoft, GitHub, Hugging Face, NVIDIA, Amazon, Cisco, Salesforce, and Snowflake, enabling AI agents to aut", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Anthropic's Claude Opus 4.7 achieved 20 times faster robodog programming compared to last year's best human team using Opus 4.1.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Microsoft launched Microsoft Frontier Company, backed by $2.5 billion and 6,000 engineers, to embed directly with enterprise clients designing, deploying, and scaling AI systems.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "New York became the first state requiring clear disclosure labels on advertisements featuring AI-generated synthetic performers, with fines up to $1,000 for first violations and $5,000 for repeat offe", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Microsoft revealed that 58% of education leaders are implementing or expanding AI use in schools, while 77% of students and 53% of educators lack formal AI training.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-08, note: "Anthropic is in early discussions with Samsung to develop a custom AI chip, joining competitors seeking to reduce reliance on Nvidia.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-07, note: "Fable 5 moves from subscription-included access to usage credits on July 8, 2026, at $10 per million input tokens and $50 per million output tokens.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
   - { date: 2026-07-07, note: "Claude Opus 4.8 achieves 63% pass@1 on SWE-Together multi-turn coding tasks with the fewest human corrections required during sessions.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
   - { date: 2026-07-07, note: "GPT-5.6 Sol scores 31.5% on GeneBench-Pro, a 129-problem computational biology benchmark.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" }
@@ -74,7 +83,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-07
+updatedDate: 2026-07-08
 ---
 
 ## Claude Sonnet 5 Now Available

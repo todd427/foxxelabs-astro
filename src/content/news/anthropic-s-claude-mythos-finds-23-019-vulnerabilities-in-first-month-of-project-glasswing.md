@@ -10,6 +10,22 @@ significance: "high"
 entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "AWS", "Apple", "Google", "Microsoft", "NVIDIA", "CrowdStrike", "JPMorgan Chase"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-08, note: "Anthropic announced Claude Mythos Preview and Project Glasswing, a consortium of technology companies formed to find and patch security vulnerabilities in critical software.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "Anthropic committed up to 100 million USD in usage credits and 4 million USD in direct donations to open source security organizations.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "Mythos autonomously found thousands of zero-day vulnerabilities across every major operating system and web browser, including a 27-year-old bug in OpenBSD and a 16-year-old bug in FFmpeg.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "When AISLE tested Mythos's showcase vulnerabilities on small, cheap, open-weights models, eight out of eight models detected Mythos's flagship FreeBSD exploit, including one with only 3.6 billion acti", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "A 5.1B-active open model recovered the core chain of the 27-year-old OpenBSD bug in AISLE's testing.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "AISLE has been running a discovery and remediation system against live targets since mid-2025, discovering 15 CVEs in OpenSSL, 5 CVEs in curl, and over 180 externally validated CVEs across 30+ project", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "The Intruder team scanned just over 2 million hosts using certificate transparency logs and identified 1 million exposed services.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "The AI infrastructure scanned by Intruder was more vulnerable, exposed, and misconfigured than any other software they have ever investigated.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "A significant number of exposed AI infrastructure hosts had been deployed out of the box with no authentication in place.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "Of 5,200+ Ollama API servers queried that listed a connected model, 31% answered without requiring authentication.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "Of all frontier models identified across Ollama servers, 518 were wrapping well-known frontier models from Anthropic, Deepseek, Moonshot, Google, and OpenAI.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "Within a couple of days of lab work, Intruder researchers found arbitrary code execution in one popular AI project.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "Intruder identified over 90 exposed instances of agent management platforms (n8n and Flowise) across sectors such as government, marketing, and finance.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "Some AI infrastructure projects exhibit poor deployment practices including insecure defaults, misconfigured Docker setups, hardcoded credentials, and applications running as root.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-08, note: "On a basic security reasoning task, small open models outperformed most frontier models from every major lab in AISLE's testing.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
+  - { date: 2026-07-08, note: "AISLE describes AI cybersecurity capability as 'jagged' because it does not scale smoothly with model size, model generation, or price.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
   - { date: 2026-07-06, note: "Addy Osmani, a Google Chrome engineer, introduced the term 'Loop Engineering' in June 2026", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
   - { date: 2026-07-06, note: "Anthropic reported that over 80% of its engineers are already using self-improving loops", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
   - { date: 2026-07-06, note: "Anthropic's engineers stated that over 80% of Anthropic's engineers are already using self-improving loops, and this will reach 100% within 3 to 6 months", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
@@ -27,7 +43,7 @@ updates:
   - { date: 2026-07-06, note: "A test of two prompts by an individual (referred to in the article) on 50 real clients in 2025 showed the second prompt (using CREATE + CoT) got a reply 64% of the time, while the first prompt got a r", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
   - { date: 2026-07-06, note: "Full adoption of Loop Engineering is expected within 3–6 months, driven by efficiency gains and reduced dependence on manual intervention", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
 draft: false
-updatedDate: 2026-07-06
+updatedDate: 2026-07-08
 ---
 
 ## Claude Mythos Finds 23,019 Vulnerabilities in First Month

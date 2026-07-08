@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-07-07T10:27:24.558Z",
+  "updatedAt": "2026-07-08T09:28:44.203Z",
   "pick": {
-    "id": "tencent/Hy3",
-    "url": "https://hf.co/tencent/Hy3",
-    "author": "tencent",
-    "name": "Hy3",
-    "likes": 396,
-    "downloads": 121,
-    "ageDays": 5,
-    "blurb": "Tencent's Hy3 is a new MoE model shipping 4 days ago with minimal public downloads—early enough to stress-test before the curve flattens. Worth checking if the architecture choices differ materially from the GLM-5.2 saturation point, or if it's just another commoditized MoE variant.",
-    "surfacedAt": "2026-07-06"
+    "id": "InternScience/Agents-A1",
+    "url": "https://hf.co/InternScience/Agents-A1",
+    "author": "InternScience",
+    "name": "Agents-A1",
+    "likes": 383,
+    "downloads": 14723,
+    "ageDays": 16,
+    "blurb": "Agents-A1 is a multimodal MoE model (vision + text) shipping 16 days ago with agentic capabilities baked into the architecture. Worth comparing against text-only MoE saturation—the vision grounding + agent routing patterns may reveal how MoE scales to multi-modal task switching.",
+    "surfacedAt": "2026-07-08"
   },
   "also": [
+    {
+      "id": "tencent/Hy3",
+      "url": "https://hf.co/tencent/Hy3",
+      "author": "tencent",
+      "name": "Hy3",
+      "likes": 518,
+      "downloads": 121,
+      "ageDays": 6
+    },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3553,
+      "likes": 3622,
       "downloads": 281584,
-      "ageDays": 21
-    },
-    {
-      "id": "InternScience/Agents-A1",
-      "url": "https://hf.co/InternScience/Agents-A1",
-      "author": "InternScience",
-      "name": "Agents-A1",
-      "likes": 354,
-      "downloads": 14723,
-      "ageDays": 15
+      "ageDays": 22
     },
     {
       "id": "AliesTaha/fable-traces",
       "url": "https://hf.co/AliesTaha/fable-traces",
       "author": "AliesTaha",
       "name": "fable-traces",
-      "likes": 180,
+      "likes": 186,
       "downloads": 3886,
       "ageDays": 4
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 414,
-      "downloads": 15538,
-      "ageDays": 10
     },
     {
       "id": "meituan-longcat/LongCat-2.0",
       "url": "https://hf.co/meituan-longcat/LongCat-2.0",
       "author": "meituan-longcat",
       "name": "LongCat-2.0",
-      "likes": 124,
+      "likes": 145,
       "downloads": 385,
-      "ageDays": 2
+      "ageDays": 3
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Pro-DSpark",
+      "likes": 427,
+      "downloads": 15538,
+      "ageDays": 11
     }
   ]
 }

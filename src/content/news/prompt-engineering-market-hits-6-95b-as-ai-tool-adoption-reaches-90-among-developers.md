@@ -10,6 +10,18 @@ significance: "high"
 entities: ["Prompt Engineering", "AI Tools", "GPT-5.5", "LLMLingua", "Claude", "Hugging Face"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-08, note: "Structured prompting techniques can improve performance on a range of tasks by between 6% and more than 30%.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "GPT-4 achieved Relaxed F1 scores of 0.861 on MTSamples and 0.736 on VAERS datasets for clinical named entity recognition tasks using structured instruction prompts.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "GPT-3.5-turbo achieved +6% Precision at 95% Recall improvement over the best supervised learning baseline on job classification tasks using zero-shot prompting.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "Contextual prompting achieved approximately 90% precision and recall for materials property extraction from research papers.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "The PO2G gradient-based optimization framework achieved approximately 89% accuracy after three iterations, compared to ProTeGi baseline which needed six iterations for similar performance.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "PromptWizard agent-driven framework demonstrated consistent improvement over existing prompt strategies across 35 evaluation tasks.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "High-performance models work better with simpler prompts, while more cost-effective models benefit from complex reasoning prompts and contextual enhancements.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "Claude produced the most accurate output, Gemini was balanced across metrics, and ChatGPT-4o was best in tokens and time for structured data generation tasks.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "Prompt engineering achieved F1 score of 92.74% for phishing detection, while fine-tuned models scored 97.29% on the same test set.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "The FINDER framework combining retrieval and programmatic prompting showed improvements of 5.98% on FinQA and 4.05% on ConvFinQA benchmark datasets.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "Multi-objective optimization framework using Bayesian and genetic algorithms achieved 95% accuracy, 85% efficiency, and 79% interpretability on GLUE benchmark.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
+  - { date: 2026-07-08, note: "Prompt engineering can improve performance by 6% in some classification tasks while gains are sizeable as 30 percentage points in clinical NER applications.", sourceUrl: "https://arxiv.org/pdf/2602.00337" }
   - { date: 2026-07-04, note: "The prompt engineering market is projected to reach $1.13 billion in 2025.", sourceUrl: "https://sqmagazine.co.uk/prompt-engineering-statistics/" }
   - { date: 2026-07-04, note: "The prompt engineering market is forecast to hit $1.52 billion in 2026.", sourceUrl: "https://sqmagazine.co.uk/prompt-engineering-statistics/" }
   - { date: 2026-07-04, note: "Prompt engineering is expected to generate $2.01 billion by 2027.", sourceUrl: "https://sqmagazine.co.uk/prompt-engineering-statistics/" }
@@ -67,7 +79,7 @@ updates:
   - { date: 2026-06-22, note: "Time Magazine reported that companies recognise the value of specialized prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-06-22, note: "Job sites like Indeed and LinkedIn list thousands of prompt engineer jobs in the US alone, with salaries ranging from $50,000 to over $150,000 per year.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
-updatedDate: 2026-07-04
+updatedDate: 2026-07-08
 ---
 
 ## Market Growth Accelerates

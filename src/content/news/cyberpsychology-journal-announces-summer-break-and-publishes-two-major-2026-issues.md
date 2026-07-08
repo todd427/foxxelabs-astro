@@ -10,6 +10,12 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-08, note: "The journal closed its submission portal between June 16 and August 31 to maintain editorial quality and sustainability as a diamond open access journal.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-08, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026 to support safe and responsible use of AI while strengthening Europe's cybersecurity.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-08, note: "The Action Plan focuses on 3 complementary objectives: promoting the safe and responsible use of advanced AI, reinforcing the EU's cybersecurity and resilience, and scaling up Europe's AI capabilities", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-08, note: "The Commission will work with the European Union Agency for Cybersecurity (ENISA) to develop a European Blueprint for secure access to advanced AI systems for cybersecurity purposes.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-08, note: "The Commission will establish a secure testing platform to help organisations in critical sectors (energy, transport, health, finance, and public administration) safely test and deploy AI solutions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-08, note: "The Commission will launch an EU Grand Challenge on AI for cybersecurity to bring together companies, researchers and other stakeholders to develop innovative AI-powered cybersecurity solutions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
   - { date: 2026-07-06, note: "In 2024, the Federal Bureau of Investigation's Internet Crime Complaint Center reported 859,532 complaints and losses of $16.6 billion, a 33% jump from 2023.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
   - { date: 2026-07-06, note: "According to the 2024 Global Anti-Scam Alliance Report, international scammers collectively defrauded victims of more than USD 1 trillion over a twelve-month period.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
   - { date: 2026-07-06, note: "The 2025 Global Anti-Scam Alliance Report, which surveyed over 46,000 adults across 42 markets, revealed that 57% of respondents had encountered a scam within the past year, while 23% reported financi", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
@@ -82,7 +88,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-06
+updatedDate: 2026-07-08
 ---
 
 ## Summer Submission Break Announced
