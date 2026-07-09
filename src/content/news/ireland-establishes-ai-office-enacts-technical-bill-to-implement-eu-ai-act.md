@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-09, note: "Under the Digital Omnibus on AI, the compliance deadline for high-risk AI systems (Annex III, use-based) is postponed from 2 August 2026 to 2 December 2027.", sourceUrl: "https://www.stibbe.com/publications-and-insights/ai-act-reloaded-what-the-latest-ai-act-changes-mean-in-practice" }
+  - { date: 2026-07-09, note: "Under the Digital Omnibus on AI, the compliance deadline for AI systems embedded as safety components in products governed by sectoral EU safety legislation (Annex I) is postponed from 2 August 2027 t", sourceUrl: "https://www.stibbe.com/publications-and-insights/ai-act-reloaded-what-the-latest-ai-act-changes-mean-in-practice" }
+  - { date: 2026-07-09, note: "The Digital Omnibus on AI amendments effective December 2, 2026 extend prohibitions to 'nudifier' applications — AI systems that generate or manipulate sexually explicit or intimate images, video, or ", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-09, note: "Under the Digital Omnibus on AI amendments, providers and deployers must 'take measures to support the development of' AI literacy among their staff, rather than being required to 'ensure' AI literacy", sourceUrl: "https://www.stibbe.com/publications-and-insights/ai-act-reloaded-what-the-latest-ai-act-changes-mean-in-practice" }
   - { date: 2026-07-07, note: "Anthropic announced Fable 5 returns globally July 1, 2026", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-07-07, note: "Anthropic is proposing an industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, Google, and other Glasswing partners", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-07-05, note: "The provisional agreement defers high-risk AI compliance deadlines to 2 December 2027 for standalone systems and 2 August 2028 for AI embedded in regulated products.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
@@ -193,7 +197,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-07
+updatedDate: 2026-07-09
 ---
 
 ## The Bill's Purpose and Structure

@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Google DeepMind", "Ireland", "European Parliament", "Council", "AI Control Roadmap", "Three Layers of Agent Security", "Gemini Spark", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-09, note: "Google DeepMind published the AI Control Roadmap on June 18, 2026.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-07-09, note: "Google DeepMind's AI Control Roadmap treats internal agents as potential insider threats and uses a threat-modeling framework adapted from MITRE ATT&CK.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-07-09, note: "Google DeepMind analyzed a million coding agent tasks to build an asynchronous monitoring system and inform safety protocols.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
+  - { date: 2026-07-09, note: "Anthropic's Gradient Routed Auxiliary Modules (GRAM) method can isolate dangerous knowledge into switchable modules within language models.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "Anthropic tested GRAM on models ranging from 50M to 5B parameters.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "In Anthropic's GRAM experiments on real data, dual use data comprised approximately 0.25% of training for each risky domain (virology, cybersecurity, nuclear physics, specialist code) against 16B gene", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "Anthropic's GRAM approach requires only a single training run to produce five distinct capability-filtered model configurations, whereas data filtering alone requires five separate training runs.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "GRAM and LoRA require only one-fifth of the training compute of data filtering across Chinchilla-optimal runs from 50M to 5B parameters.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "GRAM showed better capability isolation than data filtering when only 50% of training data was labeled.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
+  - { date: 2026-07-09, note: "This Anthropic GRAM research is preliminary and has not been applied to production models at Anthropic.", sourceUrl: "https://alignment.anthropic.com/2026/modular-pretraining/" }
   - { date: 2026-06-29, note: "Google DeepMind analyzed a million coding agent tasks to refine safety protocols and build monitoring systems for AI agents.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-29, note: "Google DeepMind's analysis of flagged agent events found that the majority stemmed from agent misinterpretation or overeagerness to achieve user goals rather than adversarial intent.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-29, note: "Google DeepMind published a technical framework for policymakers titled 'Three Layers of Agent Security' detailing how to improve security at the level of individual agents, multi-agent systems, and e", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
@@ -19,7 +29,7 @@ updates:
   - { date: 2026-06-29, note: "Google DeepMind built an internal prototype of an asynchronous monitoring system that reviews coding agent trajectories and escalates findings for human review.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
   - { date: 2026-06-29, note: "The AI Control Roadmap treats untrusted AI agents as potential 'insider threats' based on the industry-standard MITRE ATT&CK framework.", sourceUrl: "https://deepmind.google/blog/securing-the-future-of-ai-agents/" }
 draft: false
-updatedDate: 2026-06-29
+updatedDate: 2026-07-09
 ---
 
 ## DeepMind's AI Control Roadmap and Safety Framework

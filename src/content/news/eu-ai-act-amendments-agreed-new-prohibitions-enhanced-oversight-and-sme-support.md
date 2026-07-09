@@ -10,6 +10,11 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-09, note: "AI systems that generate or manipulate non-consensual sexually explicit and intimate content or child sexual abuse material are prohibited, with the prohibition taking effect from 2 December 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-09, note: "The AI Office's powers are reinforced to centralise oversight of AI systems built on general-purpose AI models, reducing governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-09, note: "Ireland will adopt a distributed model of competent authorities for the AI Act, leveraging established sectoral regulatory authorities, with a designated central authority to provide coordination and ", sourceUrl: "https://enterprise.gov.ie/en/legislation/general-scheme-of-the-regulation-of-artificial-intelligence-bill-2026.html" }
+  - { date: 2026-07-09, note: "The General Scheme of the Regulation of Artificial Intelligence Bill 2026 gives further effect to Government Decisions of 4 March 2025 and 22 July 2025.", sourceUrl: "https://enterprise.gov.ie/en/legislation/general-scheme-of-the-regulation-of-artificial-intelligence-bill-2026.html" }
+  - { date: 2026-07-09, note: "Prohibited AI practices under the AI Act became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-07, note: "Generative AI systems placed on the market or put into service before 2 August 2026 must comply with watermarking requirements only as of 2 December 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "AI systems designed to create intimate deepfakes or CSAM are prohibited effective 2 December 2026, with violations triggering fines of up to €35 million or 7% of annual worldwide turnover, whichever i", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "On 7 May 2026, EU legislative bodies reached a political agreement on proposed amendments to the AI Act, known as the AI Act Omnibus.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
@@ -102,7 +107,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-07
+updatedDate: 2026-07-09
 ---
 
 ## Major Amendments Agreed

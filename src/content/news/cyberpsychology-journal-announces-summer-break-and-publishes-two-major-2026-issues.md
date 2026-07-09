@@ -10,6 +10,9 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-09, note: "A recent INTERPOL report (2025) highlighted that cybercrime now accounts for more than 30 per cent of all reported crime in Western and Eastern Africa, with online scams, ransomware, business email co", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-09, note: "The International Safety Tech sector has raised $2.7 billion across 195 deals since 2023, with employment in Safety Tech now exceeding 40,000 roles globally.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
+  - { date: 2026-07-09, note: "The journal experienced a sharp increase in submissions during 2025, and is introducing a summer break for new submissions from June 16 to August 31, with the submission portal reopening on September ", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-08, note: "The journal closed its submission portal between June 16 and August 31 to maintain editorial quality and sustainability as a diamond open access journal.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-08, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026 to support safe and responsible use of AI while strengthening Europe's cybersecurity.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
   - { date: 2026-07-08, note: "The Action Plan focuses on 3 complementary objectives: promoting the safe and responsible use of advanced AI, reinforcing the EU's cybersecurity and resilience, and scaling up Europe's AI capabilities", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
@@ -88,7 +91,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-08
+updatedDate: 2026-07-09
 ---
 
 ## Summer Submission Break Announced

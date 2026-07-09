@@ -10,6 +10,18 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-09, note: "Ireland has launched the AI Factory Antenna (AIF IRL-Antenna) supported by €10m in joint European and Irish Government funding.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-09, note: "The AI Factory Antenna will be operated by the Irish Centre for High-End Computing (ICHEC) at University of Galway, in partnership with CeADAR, Ireland's Centre for AI.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-09, note: "The antenna's partnership involves seven regional innovation hubs to ensure all companies can equally benefit, irrespective of their location.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-09, note: "Anthropic restored Fable 5 and Mythos 5 globally on July 1 after US export controls were lifted.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-09, note: "Anthropic launched Sonnet 5 with near-Opus 4.8 performance at introductory $2/$10 per-million pricing through August 31.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-09, note: "Anthropic's new tokenizer for Sonnet 5 may consume up to 35% more tokens than previous versions.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-09, note: "Anthropic acquired Coefficient Bio, a computational biology startup, for approximately €400 million in all-stock in June 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-09, note: "Anthropic hired John Jumper, who led the AlphaFold team at Google DeepMind and shared the 2024 Nobel Prize in Chemistry.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-09, note: "Around 110,000 jobs in Ireland could be vulnerable to automation by AI in the short to medium term, according to Engineers Ireland.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
+  - { date: 2026-07-09, note: "High-tech and clerical workers are most vulnerable to AI's potential impact on jobs over the short and medium term, according to Engineers Ireland.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
+  - { date: 2026-07-09, note: "The Future of Life Institute's latest AI Safety Index ranked Anthropic at C+, OpenAI at C, and Google DeepMind third, with no companies above C+.", sourceUrl: "https://www.wbur.org/hereandnow/2026/07/07/ai-companies-safety" }
+  - { date: 2026-07-09, note: "A bill to enforce the EU's AI Act in Ireland has been approved and will establish the AI Office of Ireland (Oifig IS na hÉireann) as an independent statutory body.", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
   - { date: 2026-07-08, note: "Anthropic released Claude Sonnet 5, the most agentic Sonnet model, becoming the default for Free and Pro users, scoring 63.2% on agentic coding benchmarks and approaching Opus 4.8 performance at lower", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-08, note: "Anthropic unveiled Claude Science, an AI workbench integrating scientific databases, computation tools, and genomics resources for drug research, and simultaneously launched its own preclinical drug d", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-08, note: "Amazon confirmed designing custom AZ3 and AZ3 Pro AI chips for Echo and Fire TV devices, improving wake-word detection over 50%.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
@@ -83,7 +95,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-08
+updatedDate: 2026-07-09
 ---
 
 ## Claude Sonnet 5 Now Available

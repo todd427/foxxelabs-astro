@@ -10,6 +10,16 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Trump administration", "GPT-5.6 Sol", "Mythos 5", "Fable 5"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-09, note: "OpenAI received government permission to publicly launch its GPT-5.6 models on July 9, which include three variants: Sol, Luna, and Terra.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "In early June, President Trump signed an AI cybersecurity order that mandated companies to present their powerful models for government review at least 30 days before public release.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "GPT-5.6 Sol is priced at $5 per million input tokens and $30 per million output tokens.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "GPT-5.6 Terra offers similar performance to GPT-5.5 at $2.50 per million input tokens and $15 for output.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "GPT-5.6 Luna is priced at $1 per million input tokens and $6 per million output.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "Terra is described as twice as cheap as GPT-5.5.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "The Department of Commerce's Center for AI Standards and Innovation conducted tests of GPT-5.6.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "OpenAI stated, 'We don't believe this kind of government access process should become the long-term default,' but complied to expedite the release process.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "Anthropic had to block access to its Mythos and Fable models to comply with government regulations restricting foreign access.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
+  - { date: 2026-07-09, note: "Anthropic received permission to redeploy its Mythos 5 model and intends to eventually release Fable 5 to the public.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
   - { date: 2026-06-30, note: "Noam Shazeer is a co-lead of the Gemini models.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
   - { date: 2026-06-30, note: "Noam Shazeer co-authored the paper 'Attention Is All You Need,' which introduced the Transformer architecture.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
   - { date: 2026-06-30, note: "Noam Shazeer is leaving Google less than two years after being installed as a co-lead on Gemini.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
@@ -21,7 +31,7 @@ updates:
   - { date: 2026-06-30, note: "Anthropic has an AI for Science event scheduled for June 30.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
   - { date: 2026-06-30, note: "OpenAI has filed confidentially for an IPO.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
 draft: false
-updatedDate: 2026-06-30
+updatedDate: 2026-07-09
 ---
 
 ## Trump Administration Establishes AI Vetting Framework
