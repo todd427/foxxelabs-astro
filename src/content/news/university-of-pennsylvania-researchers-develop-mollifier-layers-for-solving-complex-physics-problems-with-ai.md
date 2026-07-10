@@ -10,6 +10,18 @@ significance: "high"
 entities: ["University of Pennsylvania", "Mollifier Layers", "NeurIPS 2026", "Transactions on Machine Learning Research"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-10, note: "Scientists combined machine learning with quantum physics to discover two new superconductors and create a faster way to search for many more.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
+  - { date: 2026-07-10, note: "NVIDIA had 74 papers accepted at ICML 2026.", sourceUrl: "https://blogs.nvidia.com/blog/open-models-icml-2026/" }
+  - { date: 2026-07-10, note: "Approximately 2,000 accepted papers at ICML 2026 cite NVIDIA GPUs.", sourceUrl: "https://blogs.nvidia.com/blog/open-models-icml-2026/" }
+  - { date: 2026-07-10, note: "145 accepted papers at ICML 2026 cite NVIDIA Nemotron, a family of open models including open datasets.", sourceUrl: "https://blogs.nvidia.com/blog/open-models-icml-2026/" }
+  - { date: 2026-07-10, note: "Amazon confirmed designing custom AZ3 and AZ3 Pro AI chips for Echo and Fire TV devices, improving wake-word detection over fifty percent.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-10, note: "Amazon plans to expand in-house chip design to Kindle, Alexa products, and Ring devices starting 2027, targeting approximately forty million annual shipments.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-10, note: "The EU's Artificial Intelligence Act provisions will not generally apply before 2 August 2026.", sourceUrl: "https://www.bakermckenzie.com/en/insight/publications/resources/product-risk-radar-articles/eu-regulation-on-ai" }
+  - { date: 2026-07-10, note: "EU AI Act prohibited practices and AI literacy obligations have been in effect since February 2025.", sourceUrl: "https://arxiv.org/pdf/2604.06148" }
+  - { date: 2026-07-10, note: "EU AI Act GPAI model obligations became applicable on August 2, 2025.", sourceUrl: "https://arxiv.org/pdf/2604.06148" }
+  - { date: 2026-07-10, note: "The majority of remaining EU AI Act provisions take effect on August 2, 2026.", sourceUrl: "https://arxiv.org/pdf/2604.06148" }
+  - { date: 2026-07-10, note: "The Independent International Scientific Panel on Artificial Intelligence has officially released its Preliminary Report.", sourceUrl: "https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/en_Preliminary%20Report_.pdf" }
+  - { date: 2026-07-10, note: "The Independent International Scientific Panel on AI was established with UN Resolution A/RES/79/325 on 26 August 2025.", sourceUrl: "https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/en_Preliminary%20Report_.pdf" }
   - { date: 2026-07-03, note: "Researchers at the University of Pennsylvania's School of Engineering introduced 'Mollifier Layers,' a technique integrating classical mathematical smoothing functions into neural networks to solve in", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-03, note: "Mollifier Layers applications span genomics, materials science, climate modeling, and chromatin biology, with findings set to appear in Transactions on Machine Learning Research and presented at NeurI", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-03, note: "The Ames Laboratory developed DuctGPT, a physics-trained AI model that can discover rare-earth-free permanent magnets and invent new materials while considering production costs and component sourcing", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
@@ -58,7 +70,7 @@ updates:
   - { date: 2026-06-24, note: "Qualcomm is in early talks to acquire Tenstorrent for between eight and ten billion dollars.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "Tenstorrent designs AI chips using the open RISC-V standard and features chip veteran Jim Keller's engineering expertise.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
-updatedDate: 2026-07-03
+updatedDate: 2026-07-10
 ---
 
 ## New ML Technique Solves Long-Standing Challenge in Scientific AI

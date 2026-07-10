@@ -9,8 +9,20 @@ sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-
 significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "DataCamp", "IBM", "Coursera", "ZipRecruiter"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-10, note: "Recent breakthroughs in frontier models like GPT-5, Claude 4, and Gemini 2.5 have shown remarkable improvements in understanding context and nuance.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-07-10, note: "Adaptive prompting is an emerging trend where AI models are being developed to adjust their responses based on the user's input style and preferences.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-07-10, note: "Multimodal models can process and respond to prompts that include a mix of text, images, and sometimes even audio inputs.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-07-10, note: "Real-time prompt optimization technology has enabled AI models to provide instant feedback on the effectiveness of prompts, assessing clarity, potential for bias, and alignment with desired outcome.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-07-10, note: "The job market for prompt engineering has matured since the initial 2023–2024 hype; standalone 'prompt engineer' titles have cooled, but the skill is now embedded in broader AI roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-07-10, note: "Tree-of-thought prompting achieved a 74% success rate on the Game of 24 benchmark—a math puzzle using four numbers to reach 24.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
+  - { date: 2026-07-10, note: "Chain-of-thought prompting achieved 49% success rate on the Game of 24 benchmark compared to 74% for tree-of-thought.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
+  - { date: 2026-07-10, note: "Standard input-output prompting achieved 33% success rate on the Game of 24 benchmark.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
+  - { date: 2026-07-10, note: "Tree-of-thought prompting cost $0.74 per case on the Game of 24 benchmark, compared to $0.47 for chain-of-thought and $0.13 for standard input-output prompting.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
+  - { date: 2026-07-10, note: "The initial hype around 'prompt engineer' as a job title has cooled considerably since the ChatGPT launch in late 2022.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
+  - { date: 2026-07-10, note: "A study by researchers at KAIST found that larger language models perform worse on negated prompts (instructions telling them what not to do) compared to smaller models.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
 draft: false
+updatedDate: 2026-07-10
 ---
 
 ## Frontier Models Achieve Breakthrough in Context and Nuance

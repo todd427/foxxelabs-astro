@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-10, note: "Cyberpsychology journal implemented a summer break for new submissions from June 16 to August 31, 2026, announced on 5 May 2026, to ensure sustainable workload for the editorial team.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-10, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-10, note: "The Commission will strengthen Europe's capacity to evaluate AI models before they are placed on the EU market, in line with the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-10, note: "ENISA and the Commission's Joint Research Centre will create a secure platform to test AI for cybersecurity, including using simulated environments.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-10, note: "The EU will continue investing in sovereign AI capabilities, building on initiatives such as AI Factories and future Gigafactories.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
   - { date: 2026-07-09, note: "A recent INTERPOL report (2025) highlighted that cybercrime now accounts for more than 30 per cent of all reported crime in Western and Eastern Africa, with online scams, ransomware, business email co", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
   - { date: 2026-07-09, note: "The International Safety Tech sector has raised $2.7 billion across 195 deals since 2023, with employment in Safety Tech now exceeding 40,000 roles globally.", sourceUrl: "https://unicri.org/sites/default/files/2026-05/03_The%20cyberpsychology%20.pdf" }
   - { date: 2026-07-09, note: "The journal experienced a sharp increase in submissions during 2025, and is introducing a summer break for new submissions from June 16 to August 31, with the submission portal reopening on September ", sourceUrl: "https://cyberpsychology.eu/" }
@@ -91,7 +96,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-09
+updatedDate: 2026-07-10
 ---
 
 ## Summer Submission Break Announced

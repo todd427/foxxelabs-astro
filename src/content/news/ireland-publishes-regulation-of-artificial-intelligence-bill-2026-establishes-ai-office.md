@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-10, note: "The Council gave its final green light to the Digital Omnibus on AI on 29 June 2026.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-10, note: "For high-risk AI systems embedded in regulated products, the compliance deadline is 2 August 2028 (deferred from 2 August 2027).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-10, note: "The Digital Omnibus introduces a new prohibition on AI-generated non-consensual sexual and intimate content and child sexual abuse material (CSAM), with compliance required by 2 December 2026.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-10, note: "The Bill includes a general administrative sanctions regime available to all Market Surveillance Authorities designated under Ireland's distributed model for the AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-09, note: "The Regulation of Artificial Intelligence Bill 2026 will establish the AI Office of Ireland as an independent statutory body which will act as Ireland's central coordinating authority to implement the", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
   - { date: 2026-07-09, note: "The Irish bill provides market surveillance authorities in the country with an enforcement toolkit for the AI Act, enabling them to issue compliance notes and fines, or even prosecute entities.", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
   - { date: 2026-07-09, note: "Ireland readies to assume presidency over the Council of the European Union from 1 July to 31 December 2026.", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
@@ -226,7 +230,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-09
+updatedDate: 2026-07-10
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

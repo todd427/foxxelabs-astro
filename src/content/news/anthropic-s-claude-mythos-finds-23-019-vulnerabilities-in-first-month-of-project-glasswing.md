@@ -10,6 +10,20 @@ significance: "high"
 entities: ["Anthropic", "Claude Mythos", "Project Glasswing", "AWS", "Apple", "Google", "Microsoft", "NVIDIA", "CrowdStrike", "JPMorgan Chase"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-10, note: "Anthropic announced Project Glasswing on April 7, 2026, bringing together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, N", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Claude Mythos Preview has found thousands of high-severity vulnerabilities, including some in every major operating system and web browser.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Mythos Preview found a 27-year-old vulnerability in OpenBSD that allowed an attacker to remotely crash any machine running the operating system.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Mythos Preview discovered a 16-year-old vulnerability in FFmpeg in a line of code that automated testing tools had hit five million times without catching the problem.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Mythos Preview autonomously found and chained together several vulnerabilities in the Linux kernel to allow escalation from ordinary user access to complete machine control.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Mythos Preview scored 83.1% on CyberGym's Cybersecurity Vulnerability Reproduction benchmark, compared to Opus 4.6's 66.6%.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Anthropic is committing $100 million in usage credits for Mythos Preview across Project Glasswing efforts and $4 million in direct donations to open-source security organizations.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Anthropic will donate $2.5 million to Alpha-Omega and OpenSSF through the Linux Foundation, and $1.5 million to the Apache Software Foundation.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "Mythos Preview will be available to participants at $25/$125 per million input/output tokens via Claude API, Amazon Bedrock, Google Cloud's Vertex AI, and Microsoft Foundry.", sourceUrl: "https://www.anthropic.com/glasswing" }
+  - { date: 2026-07-10, note: "A significant number of scanned AI infrastructure hosts had been deployed without authentication in place, with authentication not enabled by default in many projects.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-10, note: "Of 5,200+ Ollama servers queried without authentication prompts, 31% answered with connected models accessible.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-10, note: "Exposed agent management platforms n8n and Flowise instances revealed instances without authentication exposed to the internet, with one Flowise instance exposing entire business logic of an LLM chatb", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-10, note: "Intruder identified over 90 exposed instances across government, marketing, and finance sectors with chatbots, workflows, prompts, and outward access openly accessible.", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
+  - { date: 2026-07-10, note: "Intruder found repeated insecure patterns including insecure defaults, misconfigured Docker setups, hardcoded credentials, applications running as root, no authentication on fresh installs, and embedd", sourceUrl: "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html" }
   - { date: 2026-07-08, note: "Anthropic announced Claude Mythos Preview and Project Glasswing, a consortium of technology companies formed to find and patch security vulnerabilities in critical software.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
   - { date: 2026-07-08, note: "Anthropic committed up to 100 million USD in usage credits and 4 million USD in direct donations to open source security organizations.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
   - { date: 2026-07-08, note: "Mythos autonomously found thousands of zero-day vulnerabilities across every major operating system and web browser, including a 27-year-old bug in OpenBSD and a 16-year-old bug in FFmpeg.", sourceUrl: "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" }
@@ -43,7 +57,7 @@ updates:
   - { date: 2026-07-06, note: "A test of two prompts by an individual (referred to in the article) on 50 real clients in 2025 showed the second prompt (using CREATE + CoT) got a reply 64% of the time, while the first prompt got a r", sourceUrl: "https://pasqualepillitteri.it/en/news/1090/prompt-engineering-2026-frameworks-complete-guide" }
   - { date: 2026-07-06, note: "Full adoption of Loop Engineering is expected within 3–6 months, driven by efficiency gains and reduced dependence on manual intervention", sourceUrl: "https://www.kucoin.com/news/flash/prompt-engineering-declines-as-loop-engineering-gains-momentum-in-silicon-valley" }
 draft: false
-updatedDate: 2026-07-08
+updatedDate: 2026-07-10
 ---
 
 ## Claude Mythos Finds 23,019 Vulnerabilities in First Month

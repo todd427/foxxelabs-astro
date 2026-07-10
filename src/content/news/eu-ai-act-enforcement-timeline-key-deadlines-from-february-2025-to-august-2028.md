@@ -10,6 +10,11 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-10, note: "Anthropic held the top spot in the Future of Life Institute AI Safety Index with a modest C+ grade.", sourceUrl: "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/" }
+  - { date: 2026-07-10, note: "OpenAI slipped from C+ to C in the Future of Life Institute AI Safety Index, narrowly ahead of Google DeepMind which ranked third.", sourceUrl: "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/" }
+  - { date: 2026-07-10, note: "All companies in the Future of Life Institute AI Safety Index scored D+ or lower for existential safety, with panelists considering their efforts inadequate for detecting or preventing risks.", sourceUrl: "https://seekingalpha.com/news/4611964-google-anthropic-openai-lead-ai-safety-index-spacexai-receives-f" }
+  - { date: 2026-07-10, note: "Google DeepMind launched a $10 million fund to study safety in multi-agent AI systems.", sourceUrl: "https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-july-8-2026" }
+  - { date: 2026-07-10, note: "China issued a warning regarding a potential security backdoor in Anthropic's Claude Code tool.", sourceUrl: "https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-july-8-2026" }
   - { date: 2026-07-06, note: "Certain simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies (SMEs and SMCs) under amended AI Act rules, including simplified technical documen", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-06, note: "The interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, is clarified in amended rules, avoiding duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-05, note: "The EU AI Act, formally Regulation (EU) 2024/1689, entered into force on 1 August 2024 and applies in phases.", sourceUrl: "https://blog.mean.ceo/eu-ai-act-news-july-2026/" }
@@ -110,7 +115,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-06
+updatedDate: 2026-07-10
 ---
 
 ## The EU AI Act's Phased Entry into Force

@@ -10,6 +10,13 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Trump administration", "GPT-5.6 Sol", "Mythos 5", "Fable 5"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-10, note: "OpenAI launched ChatGPT Work, a new AI agent powered by GPT-5.6, designed to automate workplace tasks.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "ChatGPT Work can pull context from users' connected apps and files to generate websites, reports, spreadsheets, presentations and other documents.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "OpenAI released three versions of GPT-5.6: Sol (most powerful), Luna (optimized for speed), and Terra (balances performance and efficiency).", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "GPT-5.6 is 54% more token efficient on agentic coding, according to OpenAI CEO Sam Altman.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "OpenAI staggered the rollout of GPT-5.6 after a request from the Trump administration.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "Sam Altman told CNBC that OpenAI made 'many changes' following a 'collaborative back and forth' with the Trump administration regarding GPT-5.6.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
+  - { date: 2026-07-10, note: "ChatGPT Work launches months after Anthropic's Claude Cowork, highlighting competition among AI companies to build autonomous workplace agents.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
   - { date: 2026-07-09, note: "OpenAI received government permission to publicly launch its GPT-5.6 models on July 9, which include three variants: Sol, Luna, and Terra.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
   - { date: 2026-07-09, note: "In early June, President Trump signed an AI cybersecurity order that mandated companies to present their powerful models for government review at least 30 days before public release.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
   - { date: 2026-07-09, note: "GPT-5.6 Sol is priced at $5 per million input tokens and $30 per million output tokens.", sourceUrl: "https://techbriefly.com/2026/07/08/openai-launch-gpt-5-6-models-july-9/" }
@@ -31,7 +38,7 @@ updates:
   - { date: 2026-06-30, note: "Anthropic has an AI for Science event scheduled for June 30.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
   - { date: 2026-06-30, note: "OpenAI has filed confidentially for an IPO.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
 draft: false
-updatedDate: 2026-07-09
+updatedDate: 2026-07-10
 ---
 
 ## Trump Administration Establishes AI Vetting Framework

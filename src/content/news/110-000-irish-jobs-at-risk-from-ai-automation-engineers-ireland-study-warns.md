@@ -9,8 +9,19 @@ sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tec
 significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-10, note: "Employment in ICT among the under 30s dropped by almost one third between 2023 and 2025.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "In the first quarter of 2026, overall jobs in the tech sector fell almost 11% year-on-year in Ireland.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "Bloomberg Economics estimates that 27% of workers in advanced economies are likely to be meaningfully affected by AI, while the figure for Ireland is 30%.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "Meta is culling about 20% of its Irish workforce, double the planned global average at the company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "Meta's Dublin headcount is half what it was five years ago, according to local estimates.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "Covalen is cutting around 700 roles as it reorients around AI.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "TikTok is considering cutting about 300 staff, impacting its AI data service and operations team among others.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "Ireland's budget watchdog analysis states: 'If labour income declines and capital income increases following AI adoption, Ireland's overall tax base will narrow significantly.'", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
+updatedDate: 2026-07-10
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk
