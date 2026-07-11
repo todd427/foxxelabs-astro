@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-07-10T10:22:54.482Z",
+  "updatedAt": "2026-07-11T08:50:42.645Z",
   "pick": {
-    "id": "tencent/Hy3",
-    "url": "https://hf.co/tencent/Hy3",
-    "author": "tencent",
-    "name": "Hy3",
-    "likes": 637,
-    "downloads": 6923,
-    "ageDays": 8,
-    "blurb": "Hy3 is a text-generation MoE from Tencent shipping 7 days ago with eval results published. If you're testing MoE routing patterns and token efficiency, comparing a fresh production model against month-old baselines catches real architectural drift.",
-    "surfacedAt": "2026-07-09"
+    "id": "nvidia/Nemotron-Labs-Audex-30B-A3B",
+    "url": "https://hf.co/nvidia/Nemotron-Labs-Audex-30B-A3B",
+    "author": "nvidia",
+    "name": "Nemotron-Labs-Audex-30B-A3B",
+    "likes": 99,
+    "downloads": 743,
+    "ageDays": 5,
+    "blurb": "Nemotron-Labs-Audex-30B shipped 5 days ago combining audio-language modeling with reasoning capabilities—rare enough that most production stacks haven't stress-tested audio+text routing at scale. If your pipeline touches speech or audio context, this is fresher than month-old text-only baselines and ships with RL training signals.",
+    "surfacedAt": "2026-07-11"
   },
   "also": [
+    {
+      "id": "tencent/Hy3",
+      "url": "https://hf.co/tencent/Hy3",
+      "author": "tencent",
+      "name": "Hy3",
+      "likes": 683,
+      "downloads": 8210,
+      "ageDays": 9
+    },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3751,
-      "downloads": 392655,
-      "ageDays": 24
+      "likes": 3799,
+      "downloads": 421270,
+      "ageDays": 25
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://hf.co/InternScience/Agents-A1",
       "author": "InternScience",
       "name": "Agents-A1",
-      "likes": 451,
-      "downloads": 25772,
-      "ageDays": 18
-    },
-    {
-      "id": "AliesTaha/fable-traces",
-      "url": "https://hf.co/AliesTaha/fable-traces",
-      "author": "AliesTaha",
-      "name": "fable-traces",
-      "likes": 197,
-      "downloads": 4875,
-      "ageDays": 7
+      "likes": 478,
+      "downloads": 28141,
+      "ageDays": 19
     },
     {
       "id": "meituan-longcat/LongCat-2.0",
       "url": "https://hf.co/meituan-longcat/LongCat-2.0",
       "author": "meituan-longcat",
       "name": "LongCat-2.0",
-      "likes": 167,
-      "downloads": 1308,
-      "ageDays": 5
+      "likes": 173,
+      "downloads": 1572,
+      "ageDays": 6
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-DSpark",
-      "likes": 461,
-      "downloads": 33088,
-      "ageDays": 13
+      "id": "AliesTaha/fable-traces",
+      "url": "https://hf.co/AliesTaha/fable-traces",
+      "author": "AliesTaha",
+      "name": "fable-traces",
+      "likes": 198,
+      "downloads": 5053,
+      "ageDays": 7
     }
   ]
 }

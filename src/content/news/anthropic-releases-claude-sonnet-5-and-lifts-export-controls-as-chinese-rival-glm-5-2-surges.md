@@ -10,6 +10,29 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Science", "Z.ai", "GLM-5.2", "Amazon", "Microsoft", "Google", "OpenRouter", "David Sacks"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-11, note: "Fable 5 returned to all users worldwide on July 1, 2026, at 3:31 pm ET, following the US Department of Commerce's decision on June 30 to lift the export controls it had imposed on June 12.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Fable 5 was suspended for 19 days, from June 12 to July 1, 2026, in the most disruptive government-ordered AI model restriction in history.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Amazon researchers found a jailbreak that caused Fable 5 to identify software vulnerabilities and, in one case, write code demonstrating how to exploit one.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The new safety classifier stops the specific jailbreak technique in more than 99% of attempts.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "For Pro, Max, Team, and select Enterprise subscribers, Fable 5 is included at up to 50% of weekly usage limits through July 7, 2026. After July 7, Fable 5 requires usage credits.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Anthropic is co-developing, with Amazon, Microsoft, and Google, a framework for scoring how dangerous a given jailbreak is.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The Financial Times reported on July 2, 2026 that the White House is in advanced talks with AI companies to finalize voluntary standards for frontier model releases, with an announcement possible as s", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The Trump executive order's 60-day implementation deadline for the NSA's classified benchmarking process and the voluntary pre-release framework falls on August 1, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Menlo Ventures announced $3 billion in new capital on June 23, 2026, the largest raise in its 50-year history.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Menlo's cumulative $1 billion investment in Anthropic across multiple rounds is now worth approximately $14 billion based on Anthropic's $965 billion post-money valuation.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The Bureau of Labor Statistics June 2026 payroll report, released on July 3, showed only 57,000 jobs added in June, sharply below the 185,000 consensus estimate.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Tech sector layoffs have totaled 142,000 year-to-date in 2026 as companies redirect headcount costs to AI infrastructure.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The RAISE US estimate of 88,000 US job cuts directly attributed to AI in 2026 is the highest on record.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Anthropic announced on July 1 that Claude Science will support up to 50 AI for Science projects through a grant program providing up to $30,000 in Claude API credits per project.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Claude Science grant applications close July 15, 2026, with award notifications going out by July 31 and projects running from September 1 to December 1, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Reuters reported on July 2, 2026 that Google is in government talks ahead of the planned release of advanced coding models, specifically in the context of the White House voluntary AI standards framew", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Gemini 3.5 Pro is expected to launch in July 2026 with advanced coding and agentic capabilities that may approach covered frontier model thresholds.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "GPT-5.6 Sol, Terra, and Luna remain limited to approximately 20 government-vetted partner organizations as of July 3, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The three-tier GPT-5.6 structure is priced at Sol at $5/$30, Terra at $2.50/$15, and Luna at $1/$6.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Analyst consensus places GPT-5.6 broad access in mid-to-late July 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Claude Sonnet 5 completed its first full week of deployment as the default Free and Pro model on July 1, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "The new Claude Sonnet 5 tokenizer produces 1.0 to 1.35 times more tokens from the same text compared to the previous version.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
+  - { date: 2026-07-11, note: "Anthropic's October 2026 IPO is planned for Anthropic, with the company's post-money valuation currently at $965 billion.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
   - { date: 2026-07-08, note: "Anthropic restored Fable 5 and Mythos 5 globally on July 1 after US export controls were lifted.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-08, note: "Fable 5 was offline for 19 days due to a jailbreak-related pause that began on June 12.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-08, note: "Anthropic launched Claude Sonnet 5 with introductory pricing of $2 per million input tokens and $10 per million output tokens through August 31.", sourceUrl: "https://thursdai.news/releases/2026-07" }
@@ -43,7 +66,7 @@ updates:
   - { date: 2026-07-05, note: "ElevenLabs is exploring a secondary share sale at a $22 billion valuation.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
   - { date: 2026-07-05, note: "Google DeepMind released the 'Nano Banana 2 Lite' image model.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
 draft: true
-updatedDate: 2026-07-08
+updatedDate: 2026-07-11
 ---
 
 ## Anthropic Advances Product Line and Security Framework

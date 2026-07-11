@@ -10,6 +10,7 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is closing the submission portal between 16 June and 31 August 2026 for a summer break.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-10, note: "Cyberpsychology journal implemented a summer break for new submissions from June 16 to August 31, 2026, announced on 5 May 2026, to ensure sustainable workload for the editorial team.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-10, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
   - { date: 2026-07-10, note: "The Commission will strengthen Europe's capacity to evaluate AI models before they are placed on the EU market, in line with the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
@@ -96,7 +97,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-11
 ---
 
 ## Summer Submission Break Announced

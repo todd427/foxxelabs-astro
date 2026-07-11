@@ -10,6 +10,12 @@ significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-11, note: "Ireland's publicly released programme for the EU presidency aims to strengthen the EU's capacities in cloud computing and artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-11, note: "The Digital Omnibus proposal is a draft law seeking to amend various digital laws including the General Data Protection Regulation.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-11, note: "The German court argued that contrary to the traditional liability exemption applicable to search engine operators when presenting third-party content, the AI overview created new and independent cont", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-11, note: "The German court rejected the argument that general awareness of the unreliability of AI-generated content protected Google from liability.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-11, note: "Under its obligation to identify systemic risks arising from its models, OpenAI lists four compulsory risk categories under the Code of Practice: cyber offence, chemical/biological/radiological/nuclea", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
+  - { date: 2026-07-11, note: "OpenAI does not identify any further systemic risks beyond the four compulsory risk categories, such as risks related to fundamental rights, in its Frontier Governance Framework.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-06, note: "Everhaze raised €450k from three Irish family offices (Astogo Holdings, Kearns family office, and hotelier Mark Cosgrave) on the eve of launching its conversational agentic AI product Lú across Irelan", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
   - { date: 2026-07-06, note: "The three Irish family offices backing Everhaze have a combined net worth of more than €350m.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
   - { date: 2026-07-06, note: "The PRII Census 2025 showed that 83% of PR professionals are working beyond their contracted hours, putting in an average of almost 10 extra hours per week.", sourceUrl: "https://www.siliconrepublic.com/start-ups/dublins-everhaze-secures-e450k-as-pr-ai-assistant-lu-launches-in-uk" }
@@ -33,7 +39,7 @@ updates:
   - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
-updatedDate: 2026-07-06
+updatedDate: 2026-07-11
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies

@@ -10,6 +10,12 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-11, note: "The prohibitions on unacceptable risk AI practices became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-11, note: "The AI Act rules on General-Purpose AI became effective in August 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-11, note: "Following the political agreement on the proposal to simplify the AI Act, for systems integrated into products such as lifts or toys, the rules will apply from 2 August 2028.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-11, note: "The AI Act is used by more than 150,000 users every month.", sourceUrl: "https://artificialintelligenceact.eu/" }
+  - { date: 2026-07-11, note: "According to Article 57 of the AI Act, each Member State must establish at least one AI regulatory sandbox at the national level by 2 August 2026.", sourceUrl: "https://artificialintelligenceact.eu/" }
+  - { date: 2026-07-11, note: "The AI Act entered into force on 1 August 2024 and will be fully applicable 2 years later on 2 August 2026, with some exceptions including prohibited AI practices and AI literacy obligations that ente", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-10, note: "High-risk AI systems covered by the AI Omnibus Agreement face compliance deadlines of 2 December 2027 for systems in Annex III (covering employment, education, and health insurance) and 2 August 2028 ", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-09, note: "AI systems that generate or manipulate non-consensual sexually explicit and intimate content or child sexual abuse material are prohibited, with the prohibition taking effect from 2 December 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-09, note: "The AI Office's powers are reinforced to centralise oversight of AI systems built on general-purpose AI models, reducing governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -108,7 +114,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-11
 ---
 
 ## Major Amendments Agreed

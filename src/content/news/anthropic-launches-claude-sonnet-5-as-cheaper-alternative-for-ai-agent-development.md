@@ -10,6 +10,32 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-11, note: "Innovative Eyewear announced Claude AI integration across its entire Lucyd smart eyewear lineup, available free to all customers via the Lucyd app", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "Israeli researchers reported AI systems detecting life-threatening brain hemorrhages in seconds, before physicians can visually identify them on scans", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "SK Hynix began trading on Nasdaq, raising approximately $26.5 billion in what is the largest American Depositary Receipt offering in financial history", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "A workshop hosted by Imperial College London mathematician Kevin Buzzard is experimenting with AI autoformalization tools to encode Fermat's Last Theorem into machine-verifiable proof format", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "The global AI in pharmaceutical market is projected to reach $28.63 billion by 2034, growing at a CAGR of 31.2% from 2026", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "AI-accelerated drug discovery promises to cut traditional 10-year timelines and reduce R&D costs by up to 50% in preclinical stages", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "A facility in Portsmouth, Virginia operated by AMP Robotics uses AI-powered cameras and machine learning to sort over 108,000 tons of municipal waste annually", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "Penn State University published 'Beyond the Podium: AI, Speech and Civic Voice,' a free open educational resource weaving AI literacy throughout a public speaking curriculum", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "New York City Schools Chancellor Kamar Samuels instructed all principals to pause educational software purchases until the city finalizes its long-delayed AI policy", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "Meta unveiled Muse Image, an in-house AI image generator that ranks number 2 on Arena's text-to-image leaderboard, trailing only OpenAI", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "China's Z.ai GLM-5.2 model demonstrates competitive capabilities comparable to leading frontier models from Anthropic and OpenAI", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
+  - { date: 2026-07-11, note: "OpenAI previewed GPT-5.6 Sol, a new flagship model for developers and enterprises, on July 9, 2026.", sourceUrl: "https://openai.com/news/" }
+  - { date: 2026-07-11, note: "GPT-5.6 Sol is built for frontier reasoning and long-horizon agentic work.", sourceUrl: "https://releasebot.io/updates/openai" }
+  - { date: 2026-07-11, note: "Terra is a balanced everyday model with GPT-5.5-competitive performance at 2x lower cost.", sourceUrl: "https://releasebot.io/updates/openai" }
+  - { date: 2026-07-11, note: "Luna is the fastest, most affordable member of the GPT-5.6 family.", sourceUrl: "https://releasebot.io/updates/openai" }
+  - { date: 2026-07-11, note: "OpenAI introduced GPT-Live-1 and GPT-Live-1 mini, new full-duplex voice models.", sourceUrl: "https://releasebot.io/updates/openai" }
+  - { date: 2026-07-11, note: "The return of Claude Fable 5 to global availability on July 1, 2026, was the result of two weeks of Washington negotiations, a new safety classifier, and an industry jailbreak framework built with Ama", sourceUrl: "https://www.thestreet.com/technology/anthropic-ipo-fable5-mythos-safety-classifier-block-jailbreak" }
+  - { date: 2026-07-11, note: "Anthropic announced an internal drug discovery program targeting neglected diseases alongside the Claude Science launch.", sourceUrl: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" }
+  - { date: 2026-07-11, note: "Claude Science is a workbench with 60+ preconfigured tools for researchers, available in beta for Pro, Max, Team, and Enterprise users.", sourceUrl: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" }
+  - { date: 2026-07-11, note: "The European Parliament approved amendments to the EU AI Act as part of a digital omnibus package on June 16, 2026.", sourceUrl: "https://www.lexology.com/library/detail.aspx?g=25bf031c-432c-45ac-a363-614e1c315e07" }
+  - { date: 2026-07-11, note: "The Council of the EU approved amendments to the EU AI Act on June 29, 2026.", sourceUrl: "https://www.lexology.com/library/detail.aspx?g=25bf031c-432c-45ac-a363-614e1c315e07" }
+  - { date: 2026-07-11, note: "Ireland's Regulation of Artificial Intelligence Bill completed the Seanad Second Stage on July 1, 2026, and is currently in the Seanad Committee Stage.", sourceUrl: "https://www.lexology.com/library/detail.aspx?g=25bf031c-432c-45ac-a363-614e1c315e07" }
+  - { date: 2026-07-11, note: "A new AI Office of Ireland will be established as a central and coordinating authority by August 2, 2026, for the implementation of the EU AI Act in Ireland.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-11, note: "Finalization of the Digital Omnibus on AI is one of the most time-sensitive tasks the Irish Presidency will inherit on July 1, 2026.", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "The ICML 2026 conference was held from July 6–11, 2026, at COEX Convention Center in Seoul, South Korea.", sourceUrl: "https://eu.36kr.com/en/p/3883532461961473" }
+  - { date: 2026-07-11, note: "DeepMind received the Test of Time Award at ICML 2026 for a classic masterpiece in reinforcement learning.", sourceUrl: "https://eu.36kr.com/en/p/3883532461961473" }
   - { date: 2026-07-10, note: "OpenAI launched GPT-5.6 publicly on July 9, 2026 as three tiers: Sol, Terra and Luna, with Sol priced at $5/$30 per 1M tokens (input/output)", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-10, note: "Anthropic restored Fable 5 and Mythos 5 globally on July 1, 2026 after US export controls were lifted, following a 19-day offline period from June 12 pause", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-10, note: "Claude Sonnet 5 became the default model for all Free and Pro Claude users starting July 1, 2026 at introductory pricing of $2/$10 per million tokens through August 31", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
@@ -116,7 +142,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-11
 ---
 
 ## Claude Sonnet 5 Now Available

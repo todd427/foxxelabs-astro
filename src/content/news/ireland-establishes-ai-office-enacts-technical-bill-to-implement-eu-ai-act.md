@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-11, note: "Helen McEntee published the Irish Government's 68-page policy program for the Irish Presidency of the Council of the European Union on 10 June 2026", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "A provisional agreement between the European Parliament and the Council on the Digital Omnibus on AI package was reached in May 2026, but it has not yet been formally adopted", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "Without formal approval of the Omnibus, the AI Act's original high-risk compliance deadline of 2 August 2026 remains in place", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "The Digital Omnibus on AI would push the high-risk AI compliance deadline back to December 2027 at the earliest, conditional on the availability of harmonized standards", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "The Irish Presidency program commits to making child online safety a defining priority, including pushing for a decision on digital age of majority and advancing work on age-verification mechanisms", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "Ireland will convene a youth forum to hear from children and young people about their experiences online, as well as a high-level conference on online safety, as part of its EU Presidency", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
+  - { date: 2026-07-11, note: "The Irish Presidency will advance implementation of the Digital Justice Package, including the DigitalJustice@2030 strategy and the European Judicial Training Strategy", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
   - { date: 2026-07-09, note: "Under the Digital Omnibus on AI, the compliance deadline for high-risk AI systems (Annex III, use-based) is postponed from 2 August 2026 to 2 December 2027.", sourceUrl: "https://www.stibbe.com/publications-and-insights/ai-act-reloaded-what-the-latest-ai-act-changes-mean-in-practice" }
   - { date: 2026-07-09, note: "Under the Digital Omnibus on AI, the compliance deadline for AI systems embedded as safety components in products governed by sectoral EU safety legislation (Annex I) is postponed from 2 August 2027 t", sourceUrl: "https://www.stibbe.com/publications-and-insights/ai-act-reloaded-what-the-latest-ai-act-changes-mean-in-practice" }
   - { date: 2026-07-09, note: "The Digital Omnibus on AI amendments effective December 2, 2026 extend prohibitions to 'nudifier' applications — AI systems that generate or manipulate sexually explicit or intimate images, video, or ", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
@@ -197,7 +204,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-09
+updatedDate: 2026-07-11
 ---
 
 ## The Bill's Purpose and Structure
