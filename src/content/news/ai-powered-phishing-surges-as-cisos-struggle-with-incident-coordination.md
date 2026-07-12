@@ -9,8 +9,23 @@ sourceUrl: "https://thehackernews.com/expert-insights/2026/07/ai-speed-attacks-a
 significance: "high"
 entities: ["AI", "phishing", "Sygnia", "CISO"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-12, note: "Anthropic's Claude Mythos discovered thousands of critical flaws across every major OS and browser in just a few months, creating working exploits without human guidance.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
+  - { date: 2026-07-12, note: "A vulnerability disclosed in Apple's Hide My Email service allowed users' real email addresses to be unmasked; in limited tests with volunteers, 100% of Hide My Email addresses were exploitable.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "Anthropic said it does not consider the Claude Cowork sandbox escape to be a security issue because exploitation requires pre-existing local code execution on the host.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "A phishing campaign impersonating law enforcement targeted small businesses across Europe, Asia, the Middle East, and the U.S. with fake INTERPOL investigation emails; the campaign did not use a fixed", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) confirmed that the now-patched Microsoft Defender vulnerability known as BlueHammer (CVE-2026-33825) was exploited in ransomware attack", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "The U.S. State Department is offering a reward of up to $10 million for information leading to the identification or location of threat actors associated with UNC5792, a cyber group linked to the Russ", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "UNC5792 has been linked to widespread phishing campaigns targeting Signal and WhatsApp accounts of U.S. government officials, military leadership, and allied personnel.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "Telegram-based Millenium RAT is offered as malware-as-a-service for $50 for the first month, $10 for subsequent months, or a one-time $90 lifetime purchase.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "A malicious Chromium-based extension impersonating Perplexity AI attracted 10,000 installs before being taken down by Google.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "Anthropic plans to remove hidden code it added to Claude Code to detect unauthorized distillation efforts by checking the base URL environment variable for overrides and checking system time zone and ", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "Opera introduced Paste Protect, a security feature designed to block ClickFix-style attacks that deceive users into executing malicious commands through social engineering.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html" }
+  - { date: 2026-07-12, note: "The Cloud Security Alliance (CSA) report 'The Vulnerability Storm: Building a Mythos-ready Security Program' was co-authored with SANS, OWASP and more than a dozen CISOs.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
+  - { date: 2026-07-12, note: "CISOs should prepare for a flood of patches addressing AI-discovered vulnerabilities that attackers could exploit within hours.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
+  - { date: 2026-07-12, note: "Given the sheer number of vulnerability discoveries from AI, organizations will not be able to patch their way out of the crisis and must instead focus on containing fallout.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
 draft: false
+updatedDate: 2026-07-12
 ---
 
 ## AI Now Embedded in the Majority of Phishing Attacks

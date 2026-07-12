@@ -10,6 +10,23 @@ significance: "high"
 entities: ["S&P Global", "PwC"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-12, note: "AI's global net employment impact for the past 12 months was -5 percentage points, shifting from a neutral to slightly positive impact reported in the prior year", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "AI's global net employment impact is forecast to be -2 percentage points for 2026", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "Only 22% of AI projects target a fully autonomous end state", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "Only 37% of AI initiatives over the past 12 months are live and delivering value", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "44% of respondent organizations with 10,000+ employees cite a clear, documented AI strategy aligned with core business goals with dedicated roles and career paths", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "Cybersecurity skills shortage impacts 64% of respondents moderately or severely on AI initiatives, followed by machine learning and AI development (59%)", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "Just 16% completely trust third-party AI models in 2026, down from 24% in 2023; 30% mostly trust them, down from 42% in 2023", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-07-12, note: "Companies most exposed to AI are seeing headcount growth of 52% versus 36% for least AI-exposed companies in 2025 based on 2018 baseline", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Super-star companies most exposed to AI achieved labour productivity gains of 163% relative to 2018", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Jobs requiring specific AI skills are growing 69% compared to total jobs market growth of 9%", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "The number of AI jobs is almost twice as high as 2024, with growth in AI jobs outpacing all jobs since 2015", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Technology, media and telecommunications sector saw 11% AI job growth, and professional services 6%, with health at less than 1%", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "AI-exposed entry-level roles are seven times more likely to require traditionally senior-level skills such as judgement and leadership compared to least exposed roles", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "AI-exposed entry-level roles grew 35% since 2019, while other entry-level roles declined by 10%", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Professionalised roles see twice the job growth and 42% faster salary growth compared to democratised roles", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Companies operating in most AI-exposed sectors recorded 34% productivity growth in 2025 relative to 2018, compared to 24% for least AI-exposed companies", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-12, note: "Companies most exposed to AI are seeing wage growth of 24% versus 17% for least AI-exposed companies", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-06-27, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion job advertisements in 27 countries and territories.", sourceUrl: "https://www.prnewswire.com/news-releases/ai-reshapes-global-labour-market-into-two-distinct-paths-rewarding-human-skills-pwc-2026-global-ai-jobs-barometer-302798987.html" }
   - { date: 2026-06-27, note: "Professionalised roles (such as radiologists or recruiters) are seeing twice the growth in available jobs and 42% faster salary growth than roles categorised as democratised (such as IT service manage", sourceUrl: "https://www.prnewswire.com/news-releases/ai-reshapes-global-labour-market-into-two-distinct-paths-rewarding-human-skills-pwc-2026-global-ai-jobs-barometer-302798987.html" }
   - { date: 2026-06-27, note: "Entry-level roles most exposed to AI are now seven times more likely to require traditionally senior-level human-intensive skills like leadership, creativity or face-to-face interactions.", sourceUrl: "https://www.prnewswire.com/news-releases/ai-reshapes-global-labour-market-into-two-distinct-paths-rewarding-human-skills-pwc-2026-global-ai-jobs-barometer-302798987.html" }
@@ -26,7 +43,7 @@ updates:
   - { date: 2026-06-27, note: "Cybersecurity is the most acute skills shortage, with 64% of respondents saying gaps had a moderate or severe impact on AI initiatives.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-06-27, note: "In 2026, just 16% of respondents say they completely trust third-party AI models, while 30% mostly trust them, down from 24% and 42% respectively in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
 draft: false
-updatedDate: 2026-06-27
+updatedDate: 2026-07-12
 ---
 
 ## The Productivity Paradox

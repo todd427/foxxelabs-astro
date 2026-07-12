@@ -10,6 +10,18 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-12, note: "The EU Artificial Intelligence Act entered into force on 2 August 2024 and is directly applicable across the EU.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "The regulation applies in a phased manner over 36 months from entry into force.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Rules on prohibited AI practices came into effect on 2 February 2025.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Member States must designate competent authorities for the purposes of the Act and legislate for penalties by 2 August 2025.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Rules on high-risk AI systems (use cases - Annex III) come into effect on 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Rules on high-risk AI systems (products/Annex I) come into effect on 2 August 2027.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "The maximum penalty for infringements on prohibited practices or non-compliance related to requirements on data is up to €35 million or 7% of the total worldwide annual turnover of the preceding finan", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "A new AI Office of Ireland will be established as a central and coordinating authority by August 2026 for the implementation of the AI Act in Ireland.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Ireland has adopted a distributed model of implementation of the EU AI Act, building on the capacity and expertise of established sectoral regulators.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Ireland has designated 15 competent authorities for the purposes of the AI Act.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "Member States must have an operational AI Regulatory Sandbox to support innovation by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
+  - { date: 2026-07-12, note: "The EU Single Information Platform was launched on 8 October 2025 as a central initiative to help stakeholders navigate the AI Act requirements.", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
   - { date: 2026-07-11, note: "The EU AI Act prohibits AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as AI 'nudification' apps.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-11, note: "The Digital Package on Simplification (AI omnibus) was adopted on 19 November 2025 and a political agreement was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-11, note: "The Independent International Scientific Panel on Artificial Intelligence is made up of 40 experts from every region of the world serving in their personal capacity.", sourceUrl: "https://news.un.org/en/story/2026/07/1167862" }
@@ -141,7 +153,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-11
+updatedDate: 2026-07-12
 ---
 
 ## The EU AI Act's Phased Entry into Force

@@ -10,6 +10,15 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Trump administration", "GPT-5.6 Sol", "Mythos 5", "Fable 5"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-12, note: "The European Commission has presented a plan to address the risks and harness the opportunities of advanced artificial intelligence in cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "The AI Act requires advanced AI models to be evaluated and their risks to be assessed before they are placed on the EU market.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "The Commission will help establish an EU evaluation capacity to strengthen third-party assessment of AI capabilities and risks globally.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "The Commission will work with the EU Agency for Cybersecurity to define a European blueprint for structured access to advanced AI capabilities for cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "The EU Agency for Cybersecurity and the Commission's Joint Research Centre will create a secure platform to test AI for cybersecurity, including using simulated environments.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "The Commission will launch the EU Grand Challenge on AI for cybersecurity, bringing together companies, researchers, and organisations to develop AI solutions for cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-12, note: "GPT-5.6 is now the preferred model in Microsoft 365 Copilot.", sourceUrl: "https://openai.com/news/" }
+  - { date: 2026-07-12, note: "OpenAI released GPT-5.6 on July 9, 2026.", sourceUrl: "https://openai.com/news/" }
+  - { date: 2026-07-12, note: "OpenAI released GPT-Live on July 8, 2026.", sourceUrl: "https://openai.com/news/" }
   - { date: 2026-07-10, note: "OpenAI launched ChatGPT Work, a new AI agent powered by GPT-5.6, designed to automate workplace tasks.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
   - { date: 2026-07-10, note: "ChatGPT Work can pull context from users' connected apps and files to generate websites, reports, spreadsheets, presentations and other documents.", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
   - { date: 2026-07-10, note: "OpenAI released three versions of GPT-5.6: Sol (most powerful), Luna (optimized for speed), and Terra (balances performance and efficiency).", sourceUrl: "https://www.forbes.com/sites/madhulika-pathak/2026/07/09/openai-debuts-chatgpt-work-workplace-ai-agent-with-gpt-56/" }
@@ -38,7 +47,7 @@ updates:
   - { date: 2026-06-30, note: "Anthropic has an AI for Science event scheduled for June 30.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
   - { date: 2026-06-30, note: "OpenAI has filed confidentially for an IPO.", sourceUrl: "https://www.searchenginejournal.com/google-loses-two-top-ai-researchers-to-openai-anthropic/580201/" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-12
 ---
 
 ## Trump Administration Establishes AI Vetting Framework

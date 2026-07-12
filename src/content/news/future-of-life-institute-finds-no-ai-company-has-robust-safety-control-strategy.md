@@ -9,8 +9,19 @@ sourceUrl: "https://futureoflife.org/press-release/google-deepmind-falls-behind-
 significance: "high"
 entities: ["Future of Life Institute", "AI Safety Index", "Anthropic", "Google DeepMind", "Meta", "OpenAI", "x.AI", "Deepseek", "Zhipu AI", "Stuart Russell", "Max Tegmark"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-12, note: "Future of Life Institute released the Summer 2025 edition of its AI Safety Index on July 17, 2025", sourceUrl: "https://futureoflife.org/press-release/google-deepmind-falls-behind-openai-in-latest-safety-review/" }
+  - { date: 2026-07-12, note: "The AI Safety Index expert review panel assessed each AI company (Anthropic, Google DeepMind, Meta, OpenAI, x.AI, Deepseek, and Zhipu AI) across six core dimensions: Risk Assessment, Current Harms, Sa", sourceUrl: "https://futureoflife.org/press-release/google-deepmind-falls-behind-openai-in-latest-safety-review/" }
+  - { date: 2026-07-12, note: "Rules for high-risk AI systems used in certain high-risk areas (including biometrics, critical infrastructure, education, employment, migration, asylum and border control) will apply from 2 December 2", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "Rules for high-risk AI systems integrated into products such as lifts or toys will apply from 2 August 2028 under the EU AI Act", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "The EU AI Act prohibits eight practices: harmful AI-based manipulation and deception, harmful AI-based exploitation of vulnerabilities, social scoring, individual criminal offence risk assessment or p", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "Prohibitions under the EU AI Act became effective in February 2025", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "The EU AI Act entered into force on 1 August 2024 and will be fully applicable 2 years later on 2 August 2026, with some exceptions for specific obligation categories", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "A political agreement on the 'AI omnibus' (proposal to simplify the AI Act) was reached on 7 May 2026", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "The EU AI Act simplifications agreed include prohibition of AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as AI 'nudification' app", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "The EU will extend certain simplified compliance requirements (including simplified technical documentation) granted to small and medium-sized enterprises to small mid-cap companies under the AI Act a", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
+updatedDate: 2026-07-12
 ---
 
 ## No Company Has Robust AI Safety Control Strategy

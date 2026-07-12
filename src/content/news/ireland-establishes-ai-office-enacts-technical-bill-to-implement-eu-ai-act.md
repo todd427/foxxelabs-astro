@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-12, note: "The AI omnibus amendments include reinforcement of the AI Office's powers and centralisation of oversight of AI systems built on general-purpose AI models to reduce governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "Simplified requirements granted to small and medium-sized enterprises are extended to small mid-cap companies under the AI omnibus amendments agreed on 7 May 2026, including simplified technical docum", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-12, note: "More innovators will gain access to regulatory sandboxes, including an EU-level sandbox, to test AI solutions in real-world conditions under the AI omnibus amendments.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-11, note: "Helen McEntee published the Irish Government's 68-page policy program for the Irish Presidency of the Council of the European Union on 10 June 2026", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
   - { date: 2026-07-11, note: "A provisional agreement between the European Parliament and the Council on the Digital Omnibus on AI package was reached in May 2026, but it has not yet been formally adopted", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
   - { date: 2026-07-11, note: "Without formal approval of the Omnibus, the AI Act's original high-risk compliance deadline of 2 August 2026 remains in place", sourceUrl: "https://www.techpolicy.press/ireland-targets-ai-omnibus-child-safety-in-eu-presidency-agenda/" }
@@ -204,7 +207,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-11
+updatedDate: 2026-07-12
 ---
 
 ## The Bill's Purpose and Structure
