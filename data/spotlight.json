@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T09:38:17.084Z",
+  "updatedAt": "2026-07-13T10:23:15.393Z",
   "pick": {
     "id": "nvidia/Nemotron-Labs-Audex-30B-A3B",
     "url": "https://hf.co/nvidia/Nemotron-Labs-Audex-30B-A3B",
@@ -17,7 +17,7 @@
       "url": "https://hf.co/tencent/Hy3",
       "author": "tencent",
       "name": "Hy3",
-      "likes": 738,
+      "likes": 741,
       "downloads": 9157,
       "ageDays": 11
     },
@@ -26,7 +26,7 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3871,
+      "likes": 3872,
       "downloads": 464914,
       "ageDays": 27
     },

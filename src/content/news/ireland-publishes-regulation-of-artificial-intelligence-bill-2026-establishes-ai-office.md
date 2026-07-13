@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-13, note: "SensorFM was pre-trained on more than one trillion minutes of sensor data from five million people.", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-13, note: "SensorFM transfers to 35 health prediction tasks covering cardiovascular, metabolic, sleep, mental-health, lifestyle, and demographic endpoints.", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-13, note: "SensorFM-B (the largest model variant) reduces reconstruction loss by 31% over the smallest variant and improves downstream performance by an average 9% AUC gain on classification tasks and 21% Pearso", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-13, note: "SensorFM was trained on data collected between September 2024 and September 2025 from five million de-identified consented participants.", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-13, note: "Physician evaluations showed SensorFM's predictions, when integrated into a Personal Health Agent, were rated equally to summaries built on actual ground-truth clinical measurements across every dimen", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-13, note: "Machine learning combined with quantum physics discovered two new superconductors: YRu3B2 and LuRu3B2, which gain superconductivity from electrons forming flat bands in a kagome lattice.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
+  - { date: 2026-07-13, note: "The machine-learning-based superconductor discovery method uses pre-screening followed by targeted calculations on promising candidates, and could process billions of materials instead of the limited ", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
   - { date: 2026-07-12, note: "Google Research presented SensorFM on July 9, 2026, a wearable-health foundation model pre-trained on more than one trillion minutes of de-identified sensor data from five million consented participan", sourceUrl: "https://letsdatascience.com/news" }
   - { date: 2026-07-12, note: "The SensorFM model learns from Fitbit and Pixel Watch signals and transfers across 35 health prediction tasks covering cardiovascular, metabolic, sleep, mental-health, lifestyle, and demographic endpo", sourceUrl: "https://letsdatascience.com/news" }
   - { date: 2026-07-12, note: "An international team combined machine learning with quantum physics to discover two new superconductors: YRu3B2 and LuRu3B2.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
@@ -235,7 +242,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-12
+updatedDate: 2026-07-13
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

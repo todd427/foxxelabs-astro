@@ -9,8 +9,18 @@ sourceUrl: "https://www.siliconrepublic.com/innovation/research-ireland-funding-
 significance: "high"
 entities: ["Irish Government", "Research Ireland", "Rinn Centres"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-13, note: "The Irish government announced a €460 million investment over the next eight years to establish seven new 'Rinn' Research Ireland Centres", sourceUrl: "https://www.researchireland.ie/news/rinn-network/" }
+  - { date: 2026-07-13, note: "Rinn Artificial Intelligence, the National Research Centre for AI and Data Science, has a dedicated budget of €121,752,497", sourceUrl: "https://www.researchireland.ie/news/rinn-network/" }
+  - { date: 2026-07-13, note: "The seven new Rinn centres will support 577 research positions, develop over 800 PhDs, and involve 17 research-performing organisations", sourceUrl: "https://www.researchireland.ie/news/rinn-network/" }
+  - { date: 2026-07-13, note: "The seven Rinn centres have additional funding of €500 million to be leveraged from industry and other sources, with support from over 200 industry partners comprising over 100 multinational corporati", sourceUrl: "https://www.researchireland.ie/news/rinn-network/" }
+  - { date: 2026-07-13, note: "The 7 Rinn will officially commence their activities on July 1st 2026", sourceUrl: "https://www.researchireland.ie/news/rinn-network/" }
+  - { date: 2026-07-13, note: "Rinn Artificial Intelligence will be co-led by Dublin City University, University of Galway, Trinity College Dublin, University College Cork and University College Dublin", sourceUrl: "https://www.dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-07-13, note: "Professor Noel O'Connor of the DCU School of Electronic Engineering has been appointed Director of Rinn Artificial Intelligence", sourceUrl: "https://www.dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-07-13, note: "Rinn Artificial Intelligence brings together 15 research organisations with 288 researchers and will train 258 PhD researchers", sourceUrl: "https://www.dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-07-13, note: "Recent analysis from the IMF and the Department of Finance highlights Ireland as one of the most AI-exposed economies globally, with 71% of employment in Dublin located in high-exposure roles", sourceUrl: "https://www.dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
 draft: false
+updatedDate: 2026-07-13
 ---
 
 ## Ireland's €460m Bet on AI Research Infrastructure

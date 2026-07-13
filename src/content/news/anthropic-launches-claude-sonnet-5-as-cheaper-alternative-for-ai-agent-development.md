@@ -10,6 +10,21 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-13, note: "Ireland has secured €10 million in joint European and Irish Government funding to establish the AIF IRL-Antenna national AI initiative.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
+  - { date: 2026-07-13, note: "OpenAI launched GPT-5.6 as a three-model family: Sol (frontier), Terra (~5.5-level intelligence at half the cost) and Luna (small and fast).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "OpenAI's GPT-5.6 Sol is coming to Cerebras at extreme speed running the same weights as the API model at 700+ tokens per second.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Meta launches Muse Spark 1.1 as a 1M-token-context agentic model claiming #1 on MCP Atlas, JobBench, Humanity's Last Exam and Finance Agent V2.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Cognition ships SWE-1.7 at 1000 tokens per second, lifting FrontierCode from 30.1% to 42.3%, tied with GPT-5.5 but behind Opus 4.8.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "SpaceXAI launches Grok 4.5, a 1.5T-parameter MoE trained with trillions of tokens of real Cursor agent-interaction data.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Grok 4.5 uses about a quarter of the output tokens that Opus 4.8 needs per solved SWE-Bench Pro task at $2/$6 per million tokens.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Meituan disclosed LongCat-2.0, a 1.6-trillion-parameter MoE trained entirely on Chinese ASICs without NVIDIA hardware.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "LongCat-2.0 scores 59.5 on SWE-bench Pro and runs at $0.038 per million tokens with free cache hits.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Chinese open-weight models now represent approximately 30% of global usage on OpenRouter, up from 1.2% eleven months prior.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Google DeepMind's NanoBanana 2 Lite generates images in under four seconds starting at $0.034 per 1,000 images.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Together AI raises $800 million Series C at an $8.3 billion valuation, led by Aramco Ventures with NVIDIA, Vista Equity and General Catalyst participating.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Together AI reports over $1 billion in annual bookings and says open-model usage on the platform tripled year over year.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Anthropic identified a small internal subspace in Claude containing about 25 active concepts under 10% of activation variance behaving like a global workspace.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-13, note: "Liquid AI open-sourced Antidoom, reducing doom-loop rates from 22.9% to 1% on Qwen3.5-4B and from 10.2% to 1.4% on an LFM2.5 checkpoint.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-12, note: "ChatGPT Work is powered by Codex's agent technology and GPT-5.6's advanced multi-step reasoning.", sourceUrl: "https://ai-engineering-trend.medium.com/following-anthropics-lead-openai-launches-chatgpt-work-a12b59e91694" }
   - { date: 2026-07-12, note: "Codex has existed as a developer-focused agent for years, with 5 million weekly active users.", sourceUrl: "https://ai-engineering-trend.medium.com/following-anthropics-lead-openai-launches-chatgpt-work-a12b59e91694" }
   - { date: 2026-07-12, note: "ChatGPT's desktop version now has a built-in browser, can work directly with local files, open Google Docs, and use its Computer Use feature to simulate mouse and keyboard actions.", sourceUrl: "https://ai-engineering-trend.medium.com/following-anthropics-lead-openai-launches-chatgpt-work-a12b59e91694" }
@@ -181,7 +196,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-12
+updatedDate: 2026-07-13
 ---
 
 ## Claude Sonnet 5 Now Available
