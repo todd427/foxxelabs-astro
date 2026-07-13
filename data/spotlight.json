@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-12T09:06:41.720Z",
+  "updatedAt": "2026-07-13T09:38:17.084Z",
   "pick": {
     "id": "nvidia/Nemotron-Labs-Audex-30B-A3B",
     "url": "https://hf.co/nvidia/Nemotron-Labs-Audex-30B-A3B",
     "author": "nvidia",
     "name": "Nemotron-Labs-Audex-30B-A3B",
-    "likes": 125,
-    "downloads": 901,
-    "ageDays": 6,
+    "likes": 136,
+    "downloads": 1058,
+    "ageDays": 7,
     "blurb": "Nemotron-Labs-Audex-30B shipped 5 days ago combining audio-language modeling with reasoning capabilities—rare enough that most production stacks haven't stress-tested audio+text routing at scale. If your pipeline touches speech or audio context, this is fresher than month-old text-only baselines and ships with RL training signals.",
     "surfacedAt": "2026-07-11"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/tencent/Hy3",
       "author": "tencent",
       "name": "Hy3",
-      "likes": 705,
-      "downloads": 8655,
-      "ageDays": 10
+      "likes": 738,
+      "downloads": 9157,
+      "ageDays": 11
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 3840,
-      "downloads": 441413,
-      "ageDays": 26
+      "likes": 3871,
+      "downloads": 464914,
+      "ageDays": 27
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://hf.co/InternScience/Agents-A1",
       "author": "InternScience",
       "name": "Agents-A1",
-      "likes": 498,
-      "downloads": 29038,
-      "ageDays": 20
+      "likes": 515,
+      "downloads": 29801,
+      "ageDays": 21
     },
     {
       "id": "meituan-longcat/LongCat-2.0",
       "url": "https://hf.co/meituan-longcat/LongCat-2.0",
       "author": "meituan-longcat",
       "name": "LongCat-2.0",
-      "likes": 178,
-      "downloads": 1767,
-      "ageDays": 7
+      "likes": 184,
+      "downloads": 1977,
+      "ageDays": 8
     },
     {
       "id": "SupraLabs/Supra-Router-51M",
       "url": "https://hf.co/SupraLabs/Supra-Router-51M",
       "author": "SupraLabs",
       "name": "Supra-Router-51M",
-      "likes": 103,
-      "downloads": 1434,
-      "ageDays": 7
+      "likes": 109,
+      "downloads": 1573,
+      "ageDays": 8
     }
   ]
 }
