@@ -10,6 +10,23 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-14, note: "The US Bureau of Labor Statistics reported 57,000 jobs added in June 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "The June 2026 jobs figure of 57,000 was sharply below the 185,000 consensus estimate.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Tech sector layoffs totaled 142,000 year-to-date in 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Some Tesla software engineers were consuming thousands of dollars in AI tokens weekly prior to the cap.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Menlo Ventures closed its largest fund in its 50-year history at $3 billion.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Menlo Ventures' stake in Anthropic is reportedly worth nearly $14 billion on current secondary market valuations.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Global VC funding hit a record $510 billion in H1 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "OpenAI and Anthropic alone accounted for $217 billion, 43% of all startup capital raised globally in H1 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Fable 5 inclusion within Pro, Max, Team, and select Enterprise subscription tiers at 50% of weekly usage limits expires on July 7, 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "From July 8, 2026 onward, Fable 5 access requires usage credits billed outside the standard subscription.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "The inaugural UN Global Dialogue on AI Governance runs July 6 to 7 in Geneva, followed by the ITU AI for Good Global Summit from July 7 to 10.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Over 11,000 participants from 169 countries will attend the Geneva AI Week summits.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Microsoft conducted layoffs affecting thousands of employees following the close of its fiscal year on June 30, 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "The White House is in advanced talks with OpenAI, Anthropic, and Google on a voluntary frontier model standards framework, with an announcement potentially as soon as the following week.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "Anthropic is in talks with Samsung Electronics to manufacture a custom AI chip.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "CVE-2026-42271 is a critical vulnerability in LiteLLM allowing unauthenticated remote code execution through MCP endpoints that exposes API keys for Anthropic and OpenAI.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
+  - { date: 2026-07-14, note: "CISA added CVE-2026-42271 to its Known Exploited Vulnerabilities catalog this week, requiring federal agencies to patch within three days.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
   - { date: 2026-07-13, note: "SensorFM was pre-trained on more than one trillion minutes of sensor data from five million people.", sourceUrl: "https://letsdatascience.com/news" }
   - { date: 2026-07-13, note: "SensorFM transfers to 35 health prediction tasks covering cardiovascular, metabolic, sleep, mental-health, lifestyle, and demographic endpoints.", sourceUrl: "https://letsdatascience.com/news" }
   - { date: 2026-07-13, note: "SensorFM-B (the largest model variant) reduces reconstruction loss by 31% over the smallest variant and improves downstream performance by an average 9% AUC gain on classification tasks and 21% Pearso", sourceUrl: "https://letsdatascience.com/news" }
@@ -242,7 +259,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

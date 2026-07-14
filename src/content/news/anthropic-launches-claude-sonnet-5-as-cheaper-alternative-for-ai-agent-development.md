@@ -10,6 +10,19 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-14, note: "OpenAI released new conversational models called GPT-Live-1 and GPT-Live-1 mini on July 8, 2026.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "GPT-Live-1 and GPT-Live-1 mini are full-duplex models meaning they can speak and listen at the same time.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "OpenAI is replacing its current Advanced Voice Mode in ChatGPT with GPT-Live-1 mini by default.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "Users of paid tiers will be able to access the larger GPT-Live-1 model.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "The new GPT-Live models solve issues like interrupting users while they're talking and not having enough intelligence to answer questions.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "OpenAI's new voice models send queries to its latest text models like GPT-5.5 for search, reasoning, or agentic capabilities while continuing the conversation.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "More than 150 million people talk to ChatGPT using features like Voice and Dictation.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "OpenAI new voice models have safeguards built in to give age-appropriate responses to teens and provide resources if the conversation turns to topics like self-harm.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "During the demo of live translation in Hindi, the assistant had a heavy American accent and spoke Hindi that was unnatural sounding with a slightly bookish tone.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
+  - { date: 2026-07-14, note: "Claude Sonnet 5 stands out for long-context writing, reasoning, coding help, and business workflows like support, research, and internal agents.", sourceUrl: "https://blog.mean.ceo/new-ai-model-releases-news-july-2026/" }
+  - { date: 2026-07-14, note: "Gemini 3.5 Flash matters for startups because speed and lower-cost testing can beat a slightly stronger model when needing fast experiments and quick team feedback.", sourceUrl: "https://blog.mean.ceo/new-ai-model-releases-news-july-2026/" }
+  - { date: 2026-07-14, note: "Muse Spark from Meta and Happy Horse 1.0 from Alibaba point to stronger multimodal capability, especially around image, video, and mixed media workflows.", sourceUrl: "https://blog.mean.ceo/new-ai-model-releases-news-july-2026/" }
+  - { date: 2026-07-14, note: "AI Release Tracker reports that the monthly cadence of major releases has roughly quadrupled since 2023.", sourceUrl: "https://blog.mean.ceo/new-ai-model-releases-news-july-2026/" }
   - { date: 2026-07-13, note: "Ireland has secured €10 million in joint European and Irish Government funding to establish the AIF IRL-Antenna national AI initiative.", sourceUrl: "https://www.siliconrepublic.com/machines/irelands-ai-factory-launches-european-gateway-antenna" }
   - { date: 2026-07-13, note: "OpenAI launched GPT-5.6 as a three-model family: Sol (frontier), Terra (~5.5-level intelligence at half the cost) and Luna (small and fast).", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-13, note: "OpenAI's GPT-5.6 Sol is coming to Cerebras at extreme speed running the same weights as the API model at 700+ tokens per second.", sourceUrl: "https://thursdai.news/releases/2026-07" }
@@ -196,7 +209,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 ---
 
 ## Claude Sonnet 5 Now Available

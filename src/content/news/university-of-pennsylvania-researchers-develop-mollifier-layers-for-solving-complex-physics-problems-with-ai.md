@@ -10,6 +10,11 @@ significance: "high"
 entities: ["University of Pennsylvania", "Mollifier Layers", "NeurIPS 2026", "Transactions on Machine Learning Research"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-14, note: "Google Research presented SensorFM on July 9, 2026, a wearable-health foundation model pre-trained on more than one trillion minutes of de-identified sensor data from five million consented participan", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-14, note: "SensorFM learns from Fitbit and Pixel Watch signals and transfers across 35 health prediction tasks covering cardiovascular, metabolic, sleep, mental-health, lifestyle, and demographic endpoints.", sourceUrl: "https://letsdatascience.com/news" }
+  - { date: 2026-07-14, note: "Scientists combined machine learning with quantum physics to discover two new superconductors YRu3B2 and LuRu3B2.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
+  - { date: 2026-07-14, note: "The SuperC consortium research demonstrated that machine-learning-based pre-screening followed by targeted calculations can greatly speed up superconductor discovery.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
+  - { date: 2026-07-14, note: "With machine learning, researchers may be able to push the number of materials they can process into the billions, bringing them closer to finding a room-temperature superconductor.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
   - { date: 2026-07-10, note: "Scientists combined machine learning with quantum physics to discover two new superconductors and create a faster way to search for many more.", sourceUrl: "https://www.sciencedaily.com/releases/2026/07/260701205006.htm" }
   - { date: 2026-07-10, note: "NVIDIA had 74 papers accepted at ICML 2026.", sourceUrl: "https://blogs.nvidia.com/blog/open-models-icml-2026/" }
   - { date: 2026-07-10, note: "Approximately 2,000 accepted papers at ICML 2026 cite NVIDIA GPUs.", sourceUrl: "https://blogs.nvidia.com/blog/open-models-icml-2026/" }
@@ -70,7 +75,7 @@ updates:
   - { date: 2026-06-24, note: "Qualcomm is in early talks to acquire Tenstorrent for between eight and ten billion dollars.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-06-24, note: "Tenstorrent designs AI chips using the open RISC-V standard and features chip veteran Jim Keller's engineering expertise.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-14
 ---
 
 ## New ML Technique Solves Long-Standing Challenge in Scientific AI

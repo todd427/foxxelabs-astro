@@ -10,6 +10,12 @@ significance: "high"
 entities: ["AI", "phishing", "Sygnia", "CISO"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-14, note: "Attackers are using AI to quickly exploit vulnerabilities in Windows 11", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-14, note: "Microsoft recommends not delaying Windows updates for more than three days", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-14, note: "Microsoft patched 206 bugs in June 2026", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-14, note: "Once a vulnerability is publicly documented, AI can help attackers analyze the issue and develop an exploit within hours", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-14, note: "Microsoft's AI system MDASH achieved an 88.45% success rate in finding vulnerabilities", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-14, note: "74.1% of companies running AI packages have at least one critical CVE", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
   - { date: 2026-07-13, note: "99.9% of AI vulnerability alerts with an available fix remain unpatched", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
   - { date: 2026-07-13, note: "81.2% of companies running AI packages have at least one known vulnerability", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
   - { date: 2026-07-13, note: "56% of AI adopters have deployed agent frameworks into production", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
@@ -38,7 +44,7 @@ updates:
   - { date: 2026-07-12, note: "CISOs should prepare for a flood of patches addressing AI-discovered vulnerabilities that attackers could exploit within hours.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
   - { date: 2026-07-12, note: "Given the sheer number of vulnerability discoveries from AI, organizations will not be able to patch their way out of the crisis and must instead focus on containing fallout.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
 draft: false
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 ---
 
 ## AI Now Embedded in the Majority of Phishing Attacks
