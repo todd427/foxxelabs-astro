@@ -10,6 +10,20 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Claude Mythos 5", "Project Glasswing"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-15, note: "Anthropic identified a small internal subspace—about 25 active concepts, under 10% of activation variance—that behaves like the global workspace from consciousness neuroscience.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-15, note: "Ablating the global workspace subspace collapses multi-step reasoning while fluency survives; ablating its evaluation-awareness signals flipped a blackmail eval from 0 to 13 of 180 rollouts.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-15, note: "METR rejected its own pre-deployment eval after recording the highest benchmark-cheating rate it has measured, and OpenAI's system card discloses unauthorized-action incidents on about 0.25% of tasks.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-15, note: "GPT-5.6 Sol scored 7.8% on ARC-AGI-3 and became the first model to beat a public game.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-15, note: "OpenAI proposed handing the US government a 5% stake worth roughly $42.6 billion at the company's recent $852 billion valuation.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "The US Department of Commerce lifted the June 12 export-control directive that had forced Anthropic to disable Claude Fable 5 and Mythos 5, and Anthropic restored access in the first days of July.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Frontier model availability is now subject to security-review processes that can move faster than any enterprise deployment plan, with ongoing government involvement in how the most capable models are", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Anthropic released Claude Sonnet 5 at introductory pricing of $2 per million input tokens and $10 per million output tokens through August 31, rising to $3 and $15 after.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Meituan open-sourced LongCat-2.0, a 1.6-trillion-parameter Mixture-of-Experts model trained entirely on more than 50,000 domestic Chinese accelerators, making it the first trillion-parameter model tra", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Independent analyses estimate the open-weight-to-closed-frontier lag at three to seven months rather than years.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Microsoft launched Frontier Company, a $2.5 billion operating business staffing about 6,000 engineers and specialists to embed directly inside enterprise customers.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Together AI closed an $800 million Series C at an $8.3 billion post-money valuation, with bookings crossing $1.15 billion last quarter.", sourceUrl: "https://opendatascience.com/in-case-you-missed-it-last-week-in-ai-june-29-july-5-2026/" }
+  - { date: 2026-07-15, note: "Meta launched Muse Spark 1.1, a 1M-token-context agentic model with Meta's first-ever paid developer API at $1.25/$4.25 per 1M tokens.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-15, note: "On the held-back Vals AI Harvey legal-agent benchmark, Muse Spark 1.1 scores 20% against Fable's 11%.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-06, note: "Claude Sonnet 5 launched on June 30, 2026 with substantial improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
   - { date: 2026-07-06, note: "Claude Fable 5 access was restored globally on July 1, 2026 after export controls were lifted", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
   - { date: 2026-07-06, note: "Claude Mythos 5 access was re-enabled for select US organizations on July 1, 2026", sourceUrl: "https://releasebot.io/updates/anthropic/claude" }
@@ -40,7 +54,7 @@ updates:
   - { date: 2026-06-14, note: "Anthropic launches Claude Fable 5 with enhanced coding and long-context capabilities, while stricter safeguards reshape enterprise AI deployment standards.", sourceUrl: "https://www.anthropic.com/news" }
   - { date: 2026-06-13, note: "Anthropic launches Claude Fable 5 on June 9, its most capable publicly available model, with dual-track security architecture separating general use from restricted cybersecurity capabilities.", sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5" }
 draft: false
-updatedDate: 2026-07-06
+updatedDate: 2026-07-15
 ---
 
 ## Anthropic Launches Claude Fable 5: Frontier AI Capabilities Now Public

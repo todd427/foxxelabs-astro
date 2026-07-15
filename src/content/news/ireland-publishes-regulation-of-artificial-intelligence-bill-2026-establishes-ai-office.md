@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-15, note: "The Council gave final green light on 29 June 2026 to a new regulation aiming to streamline and simplify certain rules regarding artificial intelligence (AI) as part of the 'Omnibus VII' legislative p", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-15, note: "Provisions on high-risk AI systems were due to enter into force on 2 August 2026, but co-legislators agreed on new delayed application dates: 2 December 2027 for stand-alone high-risk AI systems and 2", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-15, note: "AI systems that generate nude images of real people or edit clothes out in existing photos to reveal intimate parts are set to be banned as of December 2026.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-15, note: "The new regulation postpones the deadline for establishment of AI regulatory sandboxes by competent authorities at national level until 2 August 2027.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-15, note: "Ireland approved publication of the Regulation of Artificial Intelligence Bill 2026 on 17 June 2026, which will give effect to the EU Artificial Intelligence Act (Regulation (EU) 2024/1689) in Ireland", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-15, note: "Ireland designated 15 National Competent Authorities for the EU AI Act and established a national single point of contact within the Department of Enterprise, Tourism and Employment in September 2025.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-15, note: "Rinn Artificial Intelligence will train 258 PhD researchers as part of its mandate to advance fundamental and applied AI research.", sourceUrl: "https://www.irishtimes.com/special-reports/2026/07/03/making-ireland-a-land-fit-for-ai-investment-and-innovation/" }
+  - { date: 2026-07-15, note: "Just over a quarter of individuals in Ireland do not have basic, or above, digital skills.", sourceUrl: "https://www.irishtimes.com/special-reports/2026/07/03/making-ireland-a-land-fit-for-ai-investment-and-innovation/" }
+  - { date: 2026-07-15, note: "Simplified requirements granted to small and medium-sized enterprises (SMEs) under the AI Act have been extended to small mid-cap companies (SMCs).", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-14, note: "The US Bureau of Labor Statistics reported 57,000 jobs added in June 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
   - { date: 2026-07-14, note: "The June 2026 jobs figure of 57,000 was sharply below the 185,000 consensus estimate.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
   - { date: 2026-07-14, note: "Tech sector layoffs totaled 142,000 year-to-date in 2026.", sourceUrl: "https://unrot.co/blogs/today-top-10-ai-news-july-4-2026" }
@@ -259,7 +268,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-14
+updatedDate: 2026-07-15
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

@@ -10,6 +10,18 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-15, note: "Anthropic launched Claude Sonnet 5 on June 30, 2026 and made it the default model for every Free and Pro Claude user starting July 1.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Claude Sonnet 5 achieves 63.2% on SWE-bench Pro (agentic coding), compared to Opus 4.8 at 69.2%.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Claude Sonnet 5 achieves 81.2% on OSWorld-Verified (desktop automation), compared to Opus 4.8 at 83.4%.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Claude Sonnet 5 achieves 80.4% on Terminal-Bench 2.1, a 20.7-point improvement over Sonnet 4.6 at 59.7%.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "California Governor Gavin Newsom announced a landmark deal granting every California state agency and city/county a 50% discount on Claude AI through the Statewide Information Technology Shared Servic", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Squidbleed (CVE-2026-47729) is a 29-year-old memory leak vulnerability in the Squid proxy server discovered by Claude Mythos 5 as part of Anthropic's Project Glasswing cybersecurity research program.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "OpenAI plans to deploy GPT-5.6 Sol on Cerebras wafer-scale hardware in July 2026 for select customers, targeting up to 750 tokens per second.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Anthropic launched Claude Science, a dedicated AI application for scientific research workflows targeting drug discovery, protein structure analysis, and computational biology.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Claude Science builds on Anthropic's acquisition of Coefficient Bio for approximately $400 million in all-stock and the hire of John Jumper, who led AlphaFold and shared the 2024 Nobel Prize in Chemis", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "Google released Gemini 3.1 Flash Image at $0.50 input per million tokens and $3.00 output, and Gemini 3 Pro Image at $2.00 input and $12.00 output, both available on June 30, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "CISA added CVE-2026-42271 to its Known Exploited Vulnerabilities catalog on June 27, 2026, an unauthenticated remote code execution vulnerability in LiteLLM's AI Gateway.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
+  - { date: 2026-07-15, note: "xAI's Grok 4.3 is now available on Amazon Bedrock at $1.25 per million input tokens and $2.50 per million output tokens with a 131K context window.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
   - { date: 2026-07-14, note: "OpenAI released new conversational models called GPT-Live-1 and GPT-Live-1 mini on July 8, 2026.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
   - { date: 2026-07-14, note: "GPT-Live-1 and GPT-Live-1 mini are full-duplex models meaning they can speak and listen at the same time.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
   - { date: 2026-07-14, note: "OpenAI is replacing its current Advanced Voice Mode in ChatGPT with GPT-Live-1 mini by default.", sourceUrl: "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" }
@@ -209,7 +221,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-14
+updatedDate: 2026-07-15
 ---
 
 ## Claude Sonnet 5 Now Available
