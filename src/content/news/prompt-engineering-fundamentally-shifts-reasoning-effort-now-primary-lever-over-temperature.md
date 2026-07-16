@@ -9,8 +9,20 @@ sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-tech
 significance: "high"
 entities: ["reasoning_effort", "temperature", "prompt engineering", "chain-of-thought", "DSPy 3.0", "GPT-5.2", "GPT-4.1-mini", "Claude 4.x", "Gemini", "Anthropic", "OpenAI", "Digital Applied", "Thomas Wiegold", "Andrej Karpathy", "LangChain", "Fast Company", "Microsoft"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-16, note: "Claude 4.x models follow instructions literally; if you don't ask for something, you won't get it.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "Aggressive language like 'CRITICAL!', 'YOU MUST', 'NEVER EVER' actively hurts performance on newer Claude models compared to calm, direct instructions.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "Few-shot prompting remains one of the highest-ROI techniques available, with three to five diverse examples recommended.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "Fast Company reported in May 2025 that prompt engineering as a standalone role has all but disappeared, with 68% of firms providing it as standard training across all roles.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "Promptfoo, an open-source tool, has over 51,000 developers using it for automated testing and red teaming of prompts.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "Anthropic's prompt caching can cut costs by up to 90% and latency by 85%.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" }
+  - { date: 2026-07-16, note: "OpenAI offers automatic caching with 50–90% discounts depending on the model.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" }
+  - { date: 2026-07-16, note: "Claude Opus 4.6, Claude Opus 4.7, Claude Opus 4.8, and Claude Sonnet 4.6 use adaptive thinking where Claude dynamically decides when and how much to think.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" }
+  - { date: 2026-07-16, note: "Starting with Claude 4.6 models, prefilled responses on the last assistant turn are no longer supported and requests with prefilled assistant messages return a 400 error.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" }
+  - { date: 2026-07-16, note: "The discipline of prompt engineering has split cleanly in two: casual prompting (which anyone can do) and production context engineering (which is a genuine engineering skill).", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
+  - { date: 2026-07-16, note: "In June 2025, Andrej Karpathy described the LLM as a CPU, the context window as RAM, and the user's job as being the operating system.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
 draft: false
+updatedDate: 2026-07-16
 ---
 
 ## Prompt Engineering Best Practices Fundamentally Reshape in 2026

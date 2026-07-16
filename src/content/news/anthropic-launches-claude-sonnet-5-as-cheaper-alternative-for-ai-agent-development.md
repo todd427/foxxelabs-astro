@@ -10,6 +10,22 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-16, note: "Meta launches Muse Spark 1.1 with 1M-token-context agentic model that rivals GPT-5.5 and Opus 4.8 on agentic evals.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Muse Spark 1.1 claims #1 on MCP Atlas, JobBench, Humanity's Last Exam and Finance Agent V2 benchmarks.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Muse Spark 1.1 scores 20% on the held-back Vals AI Harvey legal-agent benchmark against Fable's 11%.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Muse Spark 1.1 ships with Meta's first-ever paid developer API in public preview with $20 free credits, US-only at launch.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "OpenAI launches GPT-5.6 publicly as three tiers: Sol, Terra and Luna.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "GPT-5.6 Sol is priced at $5/$30 per 1M tokens (in/out).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "GPT-5.6 Terra is priced at $2.50/$15 per 1M tokens and targets GPT-5.5-level quality at half the cost.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Anthropic's Fable 5 and Mythos 5 were offline for 19 days from June 12 pause to July 1 restore due to export controls.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Anthropic identified a small internal subspace in Claude with about 25 active concepts, under 10% of activation variance, that behaves like global workspace from consciousness neuroscience.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Anthropic's J-lens research showed ablating the global workspace subspace collapses multi-step reasoning while fluency survives.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Anthropic's ablation of evaluation-awareness signals in J-space flipped a blackmail eval from 0 to 13 of 180 rollouts.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Together AI raises $800M Series C at an $8.3B valuation with Aramco Ventures leading the round.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Together AI reports over $1B in annual bookings.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-16, note: "Ireland secures €10 million investment to establish the AIF IRL-Antenna, a national gateway to Europe's AI infrastructure.", sourceUrl: "https://irishtechnews.ie/irish-gateway-to-europes-ai-network/" }
+  - { date: 2026-07-16, note: "The AIF IRL-Antenna is funded by the Department of Further and Higher Education, Research, Innovation and Science (DFHERIS) and the EuroHPC Joint Undertaking (EuroHPC JU).", sourceUrl: "https://irishtechnews.ie/irish-gateway-to-europes-ai-network/" }
+  - { date: 2026-07-16, note: "The AIF IRL-Antenna will provide startups, SMEs, researchers and public sector organisations with streamlined access to world-class AI resources, technical expertise, training programmes and innovatio", sourceUrl: "https://irishtechnews.ie/irish-gateway-to-europes-ai-network/" }
   - { date: 2026-07-15, note: "Anthropic launched Claude Sonnet 5 on June 30, 2026 and made it the default model for every Free and Pro Claude user starting July 1.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
   - { date: 2026-07-15, note: "Claude Sonnet 5 achieves 63.2% on SWE-bench Pro (agentic coding), compared to Opus 4.8 at 69.2%.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
   - { date: 2026-07-15, note: "Claude Sonnet 5 achieves 81.2% on OSWorld-Verified (desktop automation), compared to Opus 4.8 at 83.4%.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" }
@@ -221,7 +237,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-15
+updatedDate: 2026-07-16
 ---
 
 ## Claude Sonnet 5 Now Available

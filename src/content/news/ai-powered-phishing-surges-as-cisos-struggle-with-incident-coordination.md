@@ -10,6 +10,19 @@ significance: "high"
 entities: ["AI", "phishing", "Sygnia", "CISO"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-16, note: "Check Point AI Security recorded a roughly fivefold increase in detections of large malicious prompt-injection payloads between March and May 2026.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "A single operator ran Claude Code and GPT-4.1 in parallel to breach nine Mexican government agencies between late 2025 and early 2026, producing more than 5,000 executed commands and exposing roughly ", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "US Government CISA required agencies to remediate the highest-risk vulnerabilities within three days.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "India's CERT-In advised organizations to patch critical systems within 12 hours.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "A critical flaw in Ollama left roughly 300,000 internet-facing model servers leaking prompts, keys, and environment variables.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "GreyNoise recorded around 91,000 attack sessions probing LLM deployments in a single quarter.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "One service sold more than 10,000 AI-generated fake IDs capable of passing bank KYC checks across 56 countries.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "A North Korean-linked group used AI-fabricated personas to get operatives hired inside Western companies as legitimate remote employees, generating close to 800 million dollars for the regime's weapon", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "High-risk GenAI prompts doubled from 2 percent to 4 percent over the past year.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
+  - { date: 2026-07-16, note: "Microsoft patched 64 bugs in February 2026, 81 in March, 169 in April, 120 in May, and 206 in June 2026.", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-16, note: "Jeremy Chapman, a director at Microsoft 365, recommended deploying Windows updates within less than three days as the deferral period for quality updates.", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-16, note: "Microsoft's AI system MDASH achieved an 88.45% success rate for identifying bugs in Windows code.", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
+  - { date: 2026-07-16, note: "Claude Mythos found 271 verified security vulnerabilities in Firefox and over 400 in Cloudflare.", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
   - { date: 2026-07-14, note: "Attackers are using AI to quickly exploit vulnerabilities in Windows 11", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
   - { date: 2026-07-14, note: "Microsoft recommends not delaying Windows updates for more than three days", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
   - { date: 2026-07-14, note: "Microsoft patched 206 bugs in June 2026", sourceUrl: "https://www.windowslatest.com/2026/07/14/microsoft-admits-ai-is-exploiting-windows-11-bugs-in-hours-warns-against-delaying-updates-past-3-days/" }
@@ -44,7 +57,7 @@ updates:
   - { date: 2026-07-12, note: "CISOs should prepare for a flood of patches addressing AI-discovered vulnerabilities that attackers could exploit within hours.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
   - { date: 2026-07-12, note: "Given the sheer number of vulnerability discoveries from AI, organizations will not be able to patch their way out of the crisis and must instead focus on containing fallout.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
 draft: false
-updatedDate: 2026-07-14
+updatedDate: 2026-07-16
 ---
 
 ## AI Now Embedded in the Majority of Phishing Attacks

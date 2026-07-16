@@ -10,6 +10,12 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-16, note: "Issue 3 of Volume 20 of Cyberpsychology was published on June 26, 2026", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-16, note: "Cyberpsychology journal is closing its submission portal from June 16 to August 31, 2026 for new submissions", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-16, note: "Cyberpsychology journal has an impact factor of 2.905", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-16, note: "Cyberpsychology journal ranks Q2 in Communication and multidisciplinary Psychology categories", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-16, note: "Issue 2 of Volume 20 covers topics including AI aversion, online sexual health knowledge, online dating, and videoconference fatigue", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-16, note: "Emmelyn Croes, Ph.D. from Tilburg University was welcomed as a new Associate Editor of Cyberpsychology on October 7, 2025", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-15, note: "Cyberpsychology journal will close the submission portal from 16 June to 31 August 2026 for a summer break", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-14, note: "Ireland published the 'Sharing the Vision Digital Mental Health Strategy 2026-2030' on 20 February 2026.", sourceUrl: "https://www.digitalhealth.net/2026/02/ireland-launches-digital-strategy-to-increase-mental-health-support/" }
   - { date: 2026-07-14, note: "Ireland secured €1 million funding as part of the 2026 Budget to implement the digital mental health strategy, bringing investment in digital services such as online cognitive-behavioural therapy and ", sourceUrl: "https://www.digitalhealth.net/2026/02/ireland-launches-digital-strategy-to-increase-mental-health-support/" }
@@ -109,7 +115,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-15
+updatedDate: 2026-07-16
 ---
 
 ## Summer Submission Break Announced

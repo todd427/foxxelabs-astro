@@ -10,6 +10,8 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-16, note: "Simplified requirements granted to small and medium-sized enterprises under the AI Act are being extended to small mid-cap companies (up to 750 employees and €150 million annual revenue).", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-16, note: "The General Scheme provides rules on penalties for infringement of the AI Act in Ireland.", sourceUrl: "https://enterprise.gov.ie/en/legislation/general-scheme-of-the-regulation-of-artificial-intelligence-bill-2026.html" }
   - { date: 2026-07-12, note: "Guidelines on transparent AI systems will clarify the scope of application, relevant legal definitions, the transparency obligations, the exceptions and related horizontal issues.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-11, note: "The prohibitions on unacceptable risk AI practices became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-11, note: "The AI Act rules on General-Purpose AI became effective in August 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -115,7 +117,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-12
+updatedDate: 2026-07-16
 ---
 
 ## Major Amendments Agreed

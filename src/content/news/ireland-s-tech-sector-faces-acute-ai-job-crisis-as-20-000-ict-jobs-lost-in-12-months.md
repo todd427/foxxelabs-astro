@@ -9,8 +9,23 @@ sourceUrl: "https://www.rte.ie/news/primetime/2026/0530/1575914-canaries-in-the-
 significance: "high"
 entities: ["Ireland", "ICT sector", "Meta", "Covalen", "Oracle", "IrishJobs", "Stanford Digital Economy Lab"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-16, note: "PwC analysed more than one billion job advertisements in 27 countries and territories for the 2026 Global AI Jobs Barometer.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "Companies operating in the most AI-exposed sectors recorded 34% productivity growth in 2025 relative to 2018, compared to 24% for companies least able to use AI.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018 – nearly five times higher than the most AI-exposed companies overall.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "Headcount growth at the most AI-exposed companies was 52% in 2025 relative to 2018 baseline levels, compared to 36% for the least AI-exposed companies.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "The average wage premium for workers with AI skills hit 62%, up from 57% the previous year.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "Jobs requiring specific AI skills grew roughly 69% in 2026, almost eight times faster than the overall jobs market growth of 9%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "Entry-level roles most exposed to AI in the US are seven times more likely to require traditionally senior-level skills like leadership and creativity, based on analysis of 2.4 million entry-level job", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "Job openings for 'seniorised' entry-level roles grew 35% since 2019, while other entry-level roles shrank by 10%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "'Professionalised' roles are seeing twice the growth in available jobs and 42% faster salary growth than those categorised as 'democratised' roles.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-07-16, note: "AI could affect more than 40 per cent of jobs in Ireland, either replacing them or complementing them, according to the IMF.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-07-16, note: "The IMF said Ireland was 'relatively more exposed' than other advanced economies to 'novel' economic risks that AI technology poses to employment and to financial markets.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-07-16, note: "Meta is cutting 20 per cent of its Irish workforce – 350 jobs – to make savings to fund its investment in AI.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-07-16, note: "Oracle plans to axe some 150 Irish jobs, about 15 per cent of its workforce in the Republic, as the group deals with a cash crunch related to spending on AI.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-07-16, note: "IMF mission chief to Ireland Yan Sun stated that Ireland's exposure to AI transformation is higher than most advanced countries.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
 draft: false
+updatedDate: 2026-07-16
 ---
 
 ## Ireland's ICT Employment Crisis

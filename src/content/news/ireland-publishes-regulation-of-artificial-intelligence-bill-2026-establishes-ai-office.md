@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-16, note: "The International AI Summit theme is 'Enabling AI to Power European Growth'.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
+  - { date: 2026-07-16, note: "European AI Innovation Month will conclude in Brussels, Belgium on 17 November 2026.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
+  - { date: 2026-07-16, note: "Executive Vice-President for Technological Sovereignty, Security and Democracy Henna Virkkunen will be a keynote speaker at the International AI Summit.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
+  - { date: 2026-07-16, note: "Ireland will hold the Presidency of the Council of the European Union from 1 July to 31 December 2026.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
+  - { date: 2026-07-16, note: "Sixteen of the world's top twenty global technology companies have their main EU establishment in Ireland.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
+  - { date: 2026-07-16, note: "Eight of the leading providers of foundational AI models have their main EU establishment in Ireland.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-international-ai-summit-will-officially-launch-european-ai-innovation-month/" }
   - { date: 2026-07-15, note: "The Council gave final green light on 29 June 2026 to a new regulation aiming to streamline and simplify certain rules regarding artificial intelligence (AI) as part of the 'Omnibus VII' legislative p", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-15, note: "Provisions on high-risk AI systems were due to enter into force on 2 August 2026, but co-legislators agreed on new delayed application dates: 2 December 2027 for stand-alone high-risk AI systems and 2", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-15, note: "AI systems that generate nude images of real people or edit clothes out in existing photos to reveal intimate parts are set to be banned as of December 2026.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
@@ -268,7 +274,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-15
+updatedDate: 2026-07-16
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
