@@ -10,6 +10,13 @@ entities: ["International AI Safety Report 2026", "29 nations", "100+ experts", 
 significance: "high"
 irishEuAngle: true
 draft: false
+updatedDate: 2026-07-18
+updates:
+  - { date: 2026-07-18, note: "The International AI Safety Report 2026 was mandated by the nations attending the AI Safety Summit in Bletchley, UK.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
+  - { date: 2026-07-18, note: "29 nations, the UN, the OECD, and the EU each nominated a representative to the International AI Safety Report 2026's Expert Advisory Panel.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
+  - { date: 2026-07-18, note: "Over 100 AI experts contributed to the International AI Safety Report 2026, representing diverse perspectives and disciplines.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
+  - { date: 2026-07-18, note: "The International AI Safety Report 2026 synthesises current scientific evidence on the capabilities, emerging risks, and safety of general-purpose AI systems.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
+  - { date: 2026-07-18, note: "The International AI Safety Report 2026 was submitted to arXiv on 24 February 2026 with report number DSIT 2026/001.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
 ---
 
 ## Global Scientific Consensus on AI Safety Emerges from Landmark 2026 Report

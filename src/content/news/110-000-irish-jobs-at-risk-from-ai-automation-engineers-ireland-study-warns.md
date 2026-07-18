@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-18, note: "Engineers Ireland notes that this roughly aligns with findings by a number of international firms, which calculate that 6 per cent to 7 per cent of jobs are at risk.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
+  - { date: 2026-07-18, note: "Three-quarters of 1,000 people surveyed said they feared AI would lead to job losses.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
+  - { date: 2026-07-18, note: "Covalen is cutting around 700 roles as part of job cuts at the outsourcing company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "Bloomberg Economics estimates that 27% of workers in advanced economies are likely to be meaningfully affected by AI.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "The figure for Ireland affected by AI is 30%, according to Bloomberg Economics.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "Ireland has the highest share of science, tech, engineering and math graduates per capita in the EU.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "If the country supports employees in gaining AI-adjacent skills, Ireland could benefit from the AI boom, according to Ireland's budget watchdog analysis.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "The Irish government is hosting a summit in October as part of its plan to showcase Ireland as a hub for AI development.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-18, note: "The Irish government has invited Sarah Friar, OpenAI's chief financial officer, and several other C-suite leaders to the October AI summit.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "Employment in ICT among the under 30s dropped by almost one third between 2023 and 2025.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "In the first quarter of 2026, overall jobs in the tech sector fell almost 11% year-on-year in Ireland.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "Bloomberg Economics estimates that 27% of workers in advanced economies are likely to be meaningfully affected by AI, while the figure for Ireland is 30%.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
@@ -21,7 +30,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-10
+updatedDate: 2026-07-18
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

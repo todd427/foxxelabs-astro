@@ -10,6 +10,18 @@ significance: "high"
 entities: ["AI", "phishing", "Sygnia", "CISO"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-18, note: "Microsoft released patches for 570 security flaws on Tuesday, July 15, 2026, as part of its monthly Patch Tuesday release.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "This was a record number of security vulnerabilities in a single monthly release for Microsoft.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "At least two of the 570 vulnerabilities are classified as zero-days, meaning they were exploited before Microsoft was made aware of them.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "One Windows Server bug allows hackers to escalate privileges from a limited user to a system administrator.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "A SharePoint bug has been actively exploited by hackers to compromise organizations, according to CISA warnings.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "Microsoft expects its future monthly security patch batches to be higher in number than before due to AI-powered vulnerability discovery.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "Windows boss Pavan Davuluri stated that AI helping defenders discover more issues will result in a higher volume of security updates in each release.", sourceUrl: "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" }
+  - { date: 2026-07-18, note: "99.9% of AI vulnerability alerts with an available fix remain unpatched according to Orca Security's 2026 State of AI Security Report.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-18, note: "81.2% of companies running AI packages have at least one known vulnerability according to Orca Security's report.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-18, note: "74.1% of companies running AI packages have at least one critical CVE according to Orca Security's report.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-18, note: "Colorado's amended AI law takes effect on January 1, 2027.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-18, note: "China has expanded its cybersecurity framework with AI-specific requirements and mandatory labeling of AI-generated content.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
   - { date: 2026-07-16, note: "Check Point AI Security recorded a roughly fivefold increase in detections of large malicious prompt-injection payloads between March and May 2026.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
   - { date: 2026-07-16, note: "A single operator ran Claude Code and GPT-4.1 in parallel to breach nine Mexican government agencies between late 2025 and early 2026, producing more than 5,000 executed commands and exposing roughly ", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
   - { date: 2026-07-16, note: "US Government CISA required agencies to remediate the highest-risk vulnerabilities within three days.", sourceUrl: "https://blog.checkpoint.com/ai-security/ai-security-threats-in-2026-insights-from-check-point-research" }
@@ -57,7 +69,7 @@ updates:
   - { date: 2026-07-12, note: "CISOs should prepare for a flood of patches addressing AI-discovered vulnerabilities that attackers could exploit within hours.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
   - { date: 2026-07-12, note: "Given the sheer number of vulnerability discoveries from AI, organizations will not be able to patch their way out of the crisis and must instead focus on containing fallout.", sourceUrl: "https://www.techtarget.com/searchsecurity/feature/The-AI-vulnerability-storm-is-here-Is-your-security-program-ready" }
 draft: false
-updatedDate: 2026-07-16
+updatedDate: 2026-07-18
 ---
 
 ## AI Now Embedded in the Majority of Phishing Attacks

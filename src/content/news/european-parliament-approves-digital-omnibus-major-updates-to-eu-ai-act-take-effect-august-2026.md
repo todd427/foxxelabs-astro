@@ -10,6 +10,9 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-18, note: "The primary driver of the proposed delays is the slower than expected development of harmonised technical standards and guidance, which are critical to operationalising the AI Act.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-07-18, note: "Nudifier applications (those that create non-consensual sexually explicit or intimate content, or child sexual abuse material) are to be categorised as prohibited AI systems from 2 December 2026.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-07-18, note: "The process to turn the amendments into law is expected to be complete by 2 August 2026, with the amendments to be formally adopted by the European Council and thereafter formally published in the Off", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-07-16, note: "The European Parliament on 16 June 2026 granted its final approval to certain material amendments to the EU Artificial Intelligence Act.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-07-16, note: "Standalone high-risk AI systems within Annex III categories will take effect from 2 December 2027 rather than 2 August 2026, a 16-month delay.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
   - { date: 2026-07-16, note: "High-risk AI systems that are products or safety components regulated by EU product safety laws listed in Annex I will take effect from 2 August 2028 rather than 2 August 2027, a 12-month delay.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
@@ -74,7 +77,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-07-16
+updatedDate: 2026-07-18
 ---
 
 ## Parliament Approves Digital Omnibus

@@ -10,6 +10,17 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-18, note: "The European Union's AI Act entered its enforcement phase on July 10, 2026.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "Chatbot disclosure requirements became enforceable on July 10, 2026, requiring businesses to clearly inform users they are interacting with an AI system.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "The EU's Digital Omnibus package received its final green light on July 9, 2026.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "High-risk AI systems obligations for use-based systems are postponed from August 2, 2026 to December 2, 2027 (16-month deferral).", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "Maximum fine for violations of prohibited AI practices is €35 million or 7% of global annual turnover.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "Maximum fine for violations of high-risk AI obligations is €15 million or 3% of global annual turnover.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-18, note: "Chinese President Xi Jinping spoke at the World Artificial Intelligence Conference in Shanghai on July 17, 2026, calling on countries to embrace the historic opportunity provided by open-source AI.", sourceUrl: "https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" }
+  - { date: 2026-07-18, note: "China announced the World Artificial Intelligence Cooperation Organisation (WAICO), a new coalition of 29 nations, with the inter-governmental organisation formally formed on July 16, 2026, at a high-", sourceUrl: "https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" }
+  - { date: 2026-07-18, note: "WAICO's 29 member founding countries include Indonesia, Brazil, Malaysia, South Africa, Senegal, Russia and Pakistan, among other Global South nations.", sourceUrl: "https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" }
+  - { date: 2026-07-18, note: "Chinese Premier Li Qiang first unveiled plans for WAICO in July 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" }
+  - { date: 2026-07-18, note: "The Great American Artificial Intelligence Act discussion draft (released June 4, 2026) met bipartisan opposition over federal preemption of state AI laws, leaving more than 100 state-level AI laws wi", sourceUrl: "https://www.originbrief.app/en/reports/ai-regulation-policy/2026-07-13/weekly" }
   - { date: 2026-07-17, note: "AI is the leading stated reason U.S. companies give for layoffs for the first time on record.", sourceUrl: "https://lonelyentrepreneur.com/ai-entry-level-jobs/" }
   - { date: 2026-07-17, note: "AI-attributed layoffs reached 87,714 in the first five months of 2026, exceeding the 54,836 attributed to AI across all of 2025.", sourceUrl: "https://lonelyentrepreneur.com/ai-entry-level-jobs/" }
   - { date: 2026-07-17, note: "Technology sector accounted for nearly a third of all layoffs in the first half of 2026, with sector cuts up 83% year over year.", sourceUrl: "https://lonelyentrepreneur.com/ai-entry-level-jobs/" }
@@ -248,7 +259,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-17
+updatedDate: 2026-07-18
 ---
 
 ## The EU AI Act's Phased Entry into Force

@@ -9,8 +9,17 @@ sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-
 significance: "high"
 entities: ["Thinking Machines Lab", "Inkling", "Nvidia", "Moonshot AI", "Kimi K2.5", "Bridgewater Associates"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-18, note: "Inkling is a mixture-of-experts system with 975 billion total parameters.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Inkling draws on about 41 billion parameters for any given task.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Inkling was trained on 45 trillion tokens of text, image, audio, and video.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Inkling reasons natively across text, image, audio, and video.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Thinking Machines now employs roughly 200 people.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Two co-founders of Thinking Machines left for OpenAI in January 2026.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "In late June 2026, Bridgewater Associates and Thinking Machines published joint research showing their fine-tuned open-source model scored 84.7% on financial reasoning tests, beating top proprietary A", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-18, note: "Thinking Machines says it brought AI to market and demonstrated revenue in roughly nine months, compared to OpenAI's roughly five years and Anthropic's roughly three years.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
 draft: false
+updatedDate: 2026-07-18
 ---
 
 ## Inkling Arrives as Open-Weight Competitor
