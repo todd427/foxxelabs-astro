@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-19, note: "Market Surveillance Authorities in Ireland will have a structured enforcement toolkit progressing from cooperative compliance notices to coercive measures (prohibition, seizure) and formal sanctions (", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-19, note: "The European Commission reached a political agreement on 7 May 2026 on the Digital Omnibus package to simplify the AI Act implementation, marking the first set of amendments to the EU AI Act since its", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-19, note: "The EU AI Act includes a new prohibition on AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as 'nudification' apps, taking effect on", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-19, note: "In July 2025, the European Commission published three key instruments to support responsible development and deployment of general-purpose AI models: Guidelines on the scope of GPAI obligations, the G", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-19, note: "The Commission published the Code of Practice on marking and labelling AI-generated content on 10 June 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-19, note: "The provisional agreement establishes a fixed timeline for delayed application of high-risk AI rules: 2 December 2027 for stand-alone high-risk AI systems and 2 August 2028 for high-risk AI systems em", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-19, note: "The co-legislators added a new provision prohibiting AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material (CSAM).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-19, note: "The provisional agreement exempts the machinery regulation from direct applicability of the AI Act.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-18, note: "The Bill provides Market Surveillance Authorities with enforcement progression from cooperative compliance notices through prohibition and seizure to formal sanctions including fines up to 7% of globa", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-18, note: "The EU AI Act entered into force on 1 August 2024 and applies horizontally across all sectors of the economy in a risk-based and proportionate manner", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-18, note: "Independent MEP Michael McNamara first proposed a ban on AI nudifier tools in the European Parliament in March 2026", sourceUrl: "https://www.limerickpost.ie/2026/07/17/ireland-south-mep-leads-eu-ban-on-ai-nudifier-tools/" }
@@ -287,7 +295,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-18
+updatedDate: 2026-07-19
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

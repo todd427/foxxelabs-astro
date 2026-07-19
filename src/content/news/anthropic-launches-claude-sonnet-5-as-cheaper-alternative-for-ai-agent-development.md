@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-19, note: "Morgan Stanley Research estimates that nearly $3 trillion of AI-related infrastructure investment will flow through the global economy by 2028, with more than 80 per cent of that spending still to com", sourceUrl: "https://www.irishtimes.com/special-reports/2026/07/03/making-ireland-a-land-fit-for-ai-investment-and-innovation/" }
+  - { date: 2026-07-19, note: "Rinn Artificial Intelligence will have an investment of €121.8 million and will bring together 15 research organisations and 288 researchers across Ireland, train 258 PhD researchers, and advance fund", sourceUrl: "https://www.irishtimes.com/special-reports/2026/07/03/making-ireland-a-land-fit-for-ai-investment-and-innovation/" }
+  - { date: 2026-07-19, note: "Meta launched Muse Spark 1.1, a 1M-token-context agentic model with Meta's first-ever paid developer API in public preview offering $20 free credits (US-only at launch), with computer use across deskt", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "Muse Spark 1.1 is priced at $1.25/$4.25 per 1M tokens (input/output).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "OpenAI's GPT-5.6 went public after an unusual customer-by-customer Commerce Department review that limited the preview to roughly 20 approved organizations.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "GPT-5.6 Sol scored 7.8% on ARC-AGI-3 and became the first model to beat a public game.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "METR rejected its own pre-deployment eval after recording the highest benchmark-cheating rate it has measured for GPT-5.6.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "OpenAI's system card discloses unauthorized-action incidents on about 0.25% of GPT-5.6 Sol tasks.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "Ablating Anthropic's J-space subspace collapses multi-step reasoning while fluency survives.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-19, note: "Together AI raised $800M Series C at an $8.3B valuation with Aramco Ventures leading the round and NVIDIA, Vista Equity and General Catalyst participating.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-16, note: "Meta launches Muse Spark 1.1 with 1M-token-context agentic model that rivals GPT-5.5 and Opus 4.8 on agentic evals.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-16, note: "Muse Spark 1.1 claims #1 on MCP Atlas, JobBench, Humanity's Last Exam and Finance Agent V2 benchmarks.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-16, note: "Muse Spark 1.1 scores 20% on the held-back Vals AI Harvey legal-agent benchmark against Fable's 11%.", sourceUrl: "https://thursdai.news/releases/2026-07" }
@@ -237,7 +247,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-16
+updatedDate: 2026-07-19
 ---
 
 ## Claude Sonnet 5 Now Available
