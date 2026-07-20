@@ -10,6 +10,19 @@ significance: "high"
 entities: ["Thinking Machines Lab", "Inkling", "Nvidia", "Moonshot AI", "Kimi K2.5", "Bridgewater Associates"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-20, note: "Moonshot AI unveiled Kimi K3 on July 16, 2026.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Kimi K3 boasts 2.7 trillion parameters, making it the largest open-weight large language model available at the time of release.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Moonshot claimed K3 performed competitively with Anthropic's Fable 5 and substantially outperformed Anthropic's Opus 4.8 and OpenAI's GPT 5.6 Sol and GPT 5.5.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "K3 costs $15 per million output tokens compared to $4.40 per million output tokens for z.ai's GLM-5.2 and $0.87 for DeepSeek V4.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Anthropic's Fable costs $50 per million output tokens, compared to K3 at $15 per million output tokens.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Moonshot AI raised $2 billion in funding in May 2026, valuing the company at over $20 billion.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Moonshot's annual recurring revenue exceeded $200 million according to a statement from the company's financial advisor.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Analysts were not expecting China to produce a model as powerful as Fable until early 2027.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
+  - { date: 2026-07-20, note: "Inkling is a mixture-of-experts system with 975 billion total parameters, though it only draws on about 41 billion for any given task.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-20, note: "OpenAI took roughly five years to bring its tech to market and show revenue.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-20, note: "Anthropic took roughly three years to bring tech to market and show revenue.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-20, note: "Thinking Machines says it brought tech to market and showed revenue in about nine months.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
+  - { date: 2026-07-20, note: "Thinking Machines now employs roughly 200 people, up from levels reported after a wave of departures earlier in 2026.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
   - { date: 2026-07-18, note: "Inkling is a mixture-of-experts system with 975 billion total parameters.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
   - { date: 2026-07-18, note: "Inkling draws on about 41 billion parameters for any given task.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
   - { date: 2026-07-18, note: "Inkling was trained on 45 trillion tokens of text, image, audio, and video.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
@@ -19,7 +32,7 @@ updates:
   - { date: 2026-07-18, note: "In late June 2026, Bridgewater Associates and Thinking Machines published joint research showing their fine-tuned open-source model scored 84.7% on financial reasoning tests, beating top proprietary A", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
   - { date: 2026-07-18, note: "Thinking Machines says it brought AI to market and demonstrated revenue in roughly nine months, compared to OpenAI's roughly five years and Anthropic's roughly three years.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
 draft: false
-updatedDate: 2026-07-18
+updatedDate: 2026-07-20
 ---
 
 ## Inkling Arrives as Open-Weight Competitor

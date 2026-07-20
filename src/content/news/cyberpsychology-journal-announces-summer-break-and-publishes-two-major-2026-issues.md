@@ -10,6 +10,10 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-20, note: "From 23rd-27th February, visiting students engaged in lectures and workshops covering topics from foundations of cyberpsychology to emerging issues including artificial intelligence, misinformation, d", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-07-20, note: "Students explored immersive technologies through workshops in the IADT Immersive Media Lab and a group experience at Sandbox VR.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-07-20, note: "The conference features keynote speakers Prof. Paul Cairns from the University of York and Prof. Amy Orben from the University of Cambridge.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-07-20, note: "Conference submissions are due April 10, 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-07-17, note: "The journal Cyberpsychology gained a new impact factor of 2.905 and ranks Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-17, note: "The British Psychological Society's Cyberpsychology Section opened abstract submissions for its 2026 Annual Conference, marking a significant gathering for European researchers studying digital behavi", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-07-17, note: "The 6th edition of the BPS Cyberpsychology Conference was scheduled for July 6-7, 2026 at York St John University, featuring keynote speakers Prof. Paul Cairns from the University of York and Prof. Am", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
@@ -120,7 +124,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-17
+updatedDate: 2026-07-20
 ---
 
 ## Summer Submission Break Announced

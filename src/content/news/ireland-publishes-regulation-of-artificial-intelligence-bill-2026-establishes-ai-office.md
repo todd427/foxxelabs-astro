@@ -10,6 +10,18 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-20, note: "Ireland will host the International AI Summit on 14 October 2026 in Dublin, officially launching European AI Innovation Month in partnership with the European Commission.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/march/202603051.html" }
+  - { date: 2026-07-20, note: "The International AI Summit will bring together over a thousand EU & global leaders, heads of government, CEOs, investors, innovators and academics under the theme 'Enabling AI to Power European Growt", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/march/202603051.html" }
+  - { date: 2026-07-20, note: "The Irish Government published the Regulation of Artificial Intelligence Bill 2026 on 17 June 2026, comprising 139 sections across 10 parts and 4 schedules.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "The Regulation of Artificial Intelligence Bill 2026 creates Oifig IS na hÉireann, the AI Office of Ireland, as a new independent statutory body.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "The Bill designates the Data Protection Commission, the Central Bank, and the Competition and Consumer Protection Commission as Market Surveillance Authorities under the EU AI Act.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "Penalties under Ireland's enforcement of the EU AI Act can reach up to 7% of a company's global annual turnover for the most serious breaches.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "The European Parliament voted to adopt the Digital Omnibus on AI on 16 June 2026, moving high-risk AI obligations from 2 August 2026 to 2 December 2027 for standalone systems.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "High-risk AI obligations embedded in regulated products under the EU AI Act move to 2 August 2028 under the Digital Omnibus amendments.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "Transparency duties under Article 50 of the EU AI Act, including labelling AI-generated content and disclosing AI interactions to users, still apply from 2 August 2026 as originally scheduled, unaffec", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "Prohibited practices under Article 5 of the EU AI Act, including social scoring, subliminal manipulation, and real-time biometric surveillance in public places, have applied since February 2025 and re", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "A ban on AI-generated non-consensual intimate imagery and child sexual abuse material (CSAM) joins the prohibited practices list from 2 December 2026.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-20, note: "General-purpose AI model obligations under the EU AI Act have applied since August 2025.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
   - { date: 2026-07-19, note: "Market Surveillance Authorities in Ireland will have a structured enforcement toolkit progressing from cooperative compliance notices to coercive measures (prohibition, seizure) and formal sanctions (", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-19, note: "The European Commission reached a political agreement on 7 May 2026 on the Digital Omnibus package to simplify the AI Act implementation, marking the first set of amendments to the EU AI Act since its", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-19, note: "The EU AI Act includes a new prohibition on AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as 'nudification' apps, taking effect on", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -295,7 +307,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-19
+updatedDate: 2026-07-20
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
