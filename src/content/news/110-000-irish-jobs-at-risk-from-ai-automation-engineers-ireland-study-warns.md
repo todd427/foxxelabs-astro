@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-21, note: "Employers are using AI and automation for 'repetitive and time-consuming' tasks, though they are not 'eliminating entire roles'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "Employers are raising the bar for entry-level hires and graduate roles are becoming more diverse.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "Today's graduates require stronger commercial awareness, better communication skills and the ability to interpret data, 'not just process it'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "In accounting, human resources and administrative roles, some tasks traditionally assigned to interns or graduates are now 'partially automated'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "There is a 'tightening of the market' rather than a 'collapse in graduate hiring' with fewer large-scale graduate intake programmes in favour of more 'targeted hiring'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "AI is creating new career opportunities for graduates, with roles such as 'prompt engineering' beginning to emerge.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "The greatest impact of AI is being seen within organisations that have invested most heavily in automation, which is most evident in 'parts of the Big Four and professional services, particularly audi", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
+  - { date: 2026-07-21, note: "Covalen is cutting around 700 roles due to AI investment by Meta.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-21, note: "Anthropic and OpenAI have postings on LinkedIn for core engineering jobs in Dublin after expanding their offices there.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-21, note: "Klaviyo Inc. is hiring and looking for more than 50,000 square feet of office space in Ireland.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-18, note: "Engineers Ireland notes that this roughly aligns with findings by a number of international firms, which calculate that 6 per cent to 7 per cent of jobs are at risk.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
   - { date: 2026-07-18, note: "Three-quarters of 1,000 people surveyed said they feared AI would lead to job losses.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
   - { date: 2026-07-18, note: "Covalen is cutting around 700 roles as part of job cuts at the outsourcing company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
@@ -30,7 +40,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-18
+updatedDate: 2026-07-21
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

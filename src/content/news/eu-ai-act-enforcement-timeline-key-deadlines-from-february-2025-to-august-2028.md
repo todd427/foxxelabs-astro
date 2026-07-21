@@ -10,6 +10,15 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-21, note: "NVIDIA announced it is working with European nations including France, Italy, Spain and the U.K. to build NVIDIA Blackwell AI infrastructure.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "NVIDIA deployments will deliver more than 3,000 exaflops of NVIDIA Blackwell compute resources for sovereign AI.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "NVIDIA is establishing and expanding AI technology centers in Germany, Sweden, Italy, Spain, the U.K. and Finland.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "Mistral AI is working with NVIDIA to build an end-to-end cloud platform powered by 18,000 NVIDIA Grace Blackwell systems in the first phase, with plans to expand across multiple sites in 2026.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "In the U.K., NVIDIA Cloud Partners Nebius and Nscale announced the first phase of their AI infrastructure development plans to deploy 14,000 NVIDIA Blackwell GPUs to power new data centers.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "In Germany, NVIDIA is building the world's first industrial AI cloud for European manufacturers powered by NVIDIA DGX B200 systems and NVIDIA RTX PRO Servers featuring 10,000 NVIDIA Blackwell GPUs.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "Fastweb introduced MIIA — an Italian language model to support generative AI applications — trained and running on its NVIDIA DGX AI supercomputer.", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "Telenor is expanding its sovereign AI infrastructure in Norway with a new, renewable-powered data center, in addition to hosting a partner's multilingual AI translation service available in over 100 l", sourceUrl: "https://nvidianews.nvidia.com/news/europe-ai-infrastructure" }
+  - { date: 2026-07-21, note: "The AI Act (Regulation (EU) 2024/1689) is the first-ever comprehensive legal framework on AI worldwide.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-20, note: "The AI Office of Ireland must be fully operational by August 1, 2026 — the date the majority of EU AI Act obligations come into force.", sourceUrl: "https://www.wangdoo.com/ireland-is-setting-up-its-own-ai-regulator-explained/" }
   - { date: 2026-07-20, note: "The AI Office of Ireland is a coordinating body, not a single all-powerful regulator; enforcement sits with 15 existing sectoral regulators.", sourceUrl: "https://www.wangdoo.com/ireland-is-setting-up-its-own-ai-regulator-explained/" }
   - { date: 2026-07-20, note: "The AI Office of Ireland does not directly exercise frontline enforcement powers; that role sits with the 15 sectoral Market Surveillance Authorities.", sourceUrl: "https://www.wangdoo.com/ireland-is-setting-up-its-own-ai-regulator-explained/" }
@@ -340,7 +349,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-20
+updatedDate: 2026-07-21
 ---
 
 ## The EU AI Act's Phased Entry into Force

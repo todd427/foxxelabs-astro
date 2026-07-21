@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-07-20T09:57:47.399Z",
+  "updatedAt": "2026-07-21T09:30:29.629Z",
   "pick": {
-    "id": "empero-ai/Qwythos-9B-v2",
-    "url": "https://hf.co/empero-ai/Qwythos-9B-v2",
-    "author": "empero-ai",
-    "name": "Qwythos-9B-v2",
-    "likes": 142,
-    "downloads": 9532,
-    "ageDays": 10,
-    "blurb": "Qwythos-9B-v2 shipped 6 days ago as a multimodal model combining image-text understanding with explicit reasoning chains and 32k context—most production stacks still route vision and reasoning separately through disconnected services. At 9B it's small enough to run on constrained hardware while handling the full pipeline that currently requires orchestrating multiple smaller models.",
-    "surfacedAt": "2026-07-16"
+    "id": "InternScience/Agents-A1-4B",
+    "url": "https://hf.co/InternScience/Agents-A1-4B",
+    "author": "InternScience",
+    "name": "Agents-A1-4B",
+    "likes": 46,
+    "downloads": 8148,
+    "ageDays": 8,
+    "blurb": "Agents-A1-4B landed 8 days ago as a 4B multimodal model tagged for agentic workflows, combining vision and text in a footprint small enough for edge deployment. It's explicitly framed around agent behavior rather than pure conversation, which shifts how you'd integrate it into tool-calling and planning pipelines versus dropping it in as a chat model.",
+    "surfacedAt": "2026-07-21"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 4185,
-      "downloads": 531947,
-      "ageDays": 34
+      "likes": 4243,
+      "downloads": 545109,
+      "ageDays": 35
     },
     {
       "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
       "url": "https://hf.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
       "author": "GnLOLot",
       "name": "MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
-      "likes": 155,
-      "downloads": 5494,
-      "ageDays": 17
+      "likes": 159,
+      "downloads": 6165,
+      "ageDays": 18
+    },
+    {
+      "id": "Motif-Technologies/Motif-3-Beta",
+      "url": "https://hf.co/Motif-Technologies/Motif-3-Beta",
+      "author": "Motif-Technologies",
+      "name": "Motif-3-Beta",
+      "likes": 79,
+      "downloads": 125,
+      "ageDays": 0
     },
     {
       "id": "tencent/Hy3",
       "url": "https://hf.co/tencent/Hy3",
       "author": "tencent",
       "name": "Hy3",
-      "likes": 840,
-      "downloads": 13698,
-      "ageDays": 18
+      "likes": 851,
+      "downloads": 14143,
+      "ageDays": 19
     },
     {
       "id": "InternScience/Agents-A1",
       "url": "https://hf.co/InternScience/Agents-A1",
       "author": "InternScience",
       "name": "Agents-A1",
-      "likes": 585,
-      "downloads": 35833,
-      "ageDays": 28
-    },
-    {
-      "id": "Soofi-Project/Soofi-S-Base",
-      "url": "https://hf.co/Soofi-Project/Soofi-S-Base",
-      "author": "Soofi-Project",
-      "name": "Soofi-S-Base",
-      "likes": 66,
-      "downloads": 95,
-      "ageDays": 19
+      "likes": 592,
+      "downloads": 36552,
+      "ageDays": 29
     }
   ]
 }

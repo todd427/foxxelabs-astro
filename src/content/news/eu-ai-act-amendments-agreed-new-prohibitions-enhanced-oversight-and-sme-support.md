@@ -10,6 +10,9 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-21, note: "A political agreement was reached on 7 May 2026 on the Digital Package on Simplification, dubbed the AI omnibus, proposed on 19 November 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-21, note: "The Commission published draft guidelines to clarify how the transparency obligations under Article 50 should be applied in practice on 8 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-21, note: "The rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028 as a result of the political agreement on the proposal to simplify the AI Act", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-17, note: "The AI Act entered into force on 1 August 2024 and will be fully applicable 2 years later on 2 August 2026, with exceptions for prohibited AI practices, AI literacy obligations (2 February 2025), GPAI", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-17, note: "The political agreement on the AI omnibus simplification proposal was reached on 7 May 2026, setting clear timelines: rules for high-risk systems in certain areas apply from 2 December 2027, and rules", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-17, note: "A new AI Office of Ireland will be established as a central and coordinating authority by August 2026 for the implementation of the AI Act in Ireland", sourceUrl: "https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/" }
@@ -134,7 +137,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-17
+updatedDate: 2026-07-21
 ---
 
 ## Major Amendments Agreed

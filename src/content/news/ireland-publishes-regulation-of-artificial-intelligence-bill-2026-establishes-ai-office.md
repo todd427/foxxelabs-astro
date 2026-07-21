@@ -10,6 +10,11 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-21, note: "The Bill contains 139 sections across 10 parts and 4 schedules", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-21, note: "Market Surveillance Authorities designated under the Bill can impose fines up to 7% of a company's global annual turnover for the most serious AI Act breaches", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-21, note: "Transparency duties under Article 50 of the EU AI Act, requiring disclosure to users about AI interactions and labelling of AI-generated content, still apply from 2 August 2026 as originally scheduled", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-21, note: "General-purpose AI model obligations under the EU AI Act have applied since August 2025 and remain unaffected by the Digital Omnibus delay", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-21, note: "The Bill empowers Market Surveillance Authorities with an escalating enforcement toolkit progressing from compliance notices through coercive measures including prohibition and seizure to financial pe", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-20, note: "Ireland will host the International AI Summit on 14 October 2026 in Dublin, officially launching European AI Innovation Month in partnership with the European Commission.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/march/202603051.html" }
   - { date: 2026-07-20, note: "The International AI Summit will bring together over a thousand EU & global leaders, heads of government, CEOs, investors, innovators and academics under the theme 'Enabling AI to Power European Growt", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/march/202603051.html" }
   - { date: 2026-07-20, note: "The Irish Government published the Regulation of Artificial Intelligence Bill 2026 on 17 June 2026, comprising 139 sections across 10 parts and 4 schedules.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
@@ -307,7 +312,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-20
+updatedDate: 2026-07-21
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
