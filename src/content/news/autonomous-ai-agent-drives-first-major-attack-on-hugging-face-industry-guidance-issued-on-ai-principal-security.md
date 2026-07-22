@@ -9,8 +9,19 @@ sourceUrl: "https://huggingface.co/blog/security-incident-july-2026"
 significance: "high"
 entities: ["Hugging Face", "autonomous AI agent", "Unit 42", "AsyncAPI", "Siemens", "Miasma"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-22, note: "The intrusion at Hugging Face exploited two code-execution paths in dataset processing: a remote-code dataset loader and a template-injection in a dataset configuration.", sourceUrl: "https://huggingface.co/blog/security-incident-july-2026" }
+  - { date: 2026-07-22, note: "Hugging Face was unable to use frontier models behind commercial APIs for forensic analysis because providers' safety guardrails blocked requests containing real attack commands, exploit payloads, and", sourceUrl: "https://huggingface.co/blog/security-incident-july-2026" }
+  - { date: 2026-07-22, note: "Hugging Face used GLM 5.2, an open-weight model on its own infrastructure, to analyze more than 17,000 recorded attacker events and reconstruct the attack timeline.", sourceUrl: "https://huggingface.co/blog/security-incident-july-2026" }
+  - { date: 2026-07-22, note: "Microsoft addressed 622 vulnerabilities in its July 2026 security update release, representing roughly triple the number in June and almost five times the number in May.", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "July 2026 Patch Tuesday includes 62 Critical vulnerabilities: elevation of privilege accounts for 255 vulnerabilities (41%), remote code execution for 166 (27%), and information disclosure for 109 (18", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "CVE-2026-45499 is a Critical elevation of privilege vulnerability affecting Azure OpenAI with a CVSS score of 9.9 caused by a server-side request forgery flaw, mitigated entirely on Microsoft's infras", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "CVE-2026-56155, an Important elevation of privilege vulnerability in Active Directory Federation Services with CVSS 7.8, has been exploited in the wild, though no exploit code was publicly disclosed a", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "CVE-2026-56164, a Moderate elevation of privilege vulnerability affecting Microsoft SharePoint with CVSS 5.3, has been exploited in the wild though no exploit code was publicly disclosed at time of wr", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "CVE-2026-50661, a Windows BitLocker security feature bypass vulnerability with CVSS 6.1, was publicly disclosed but shows no evidence of exploitation in the wild.", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
+  - { date: 2026-07-22, note: "Microsoft Windows received 413 patches in July 2026 Patch Tuesday, followed by Extended Security Updates with 335 and Microsoft Office with 95.", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
 draft: false
+updatedDate: 2026-07-22
 ---
 
 ## Hugging Face Intrusion: Autonomous Agent Attack

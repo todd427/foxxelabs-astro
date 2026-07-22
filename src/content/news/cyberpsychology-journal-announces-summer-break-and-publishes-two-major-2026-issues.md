@@ -10,6 +10,8 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-22, note: "Cyberpsychology journal announced a summer submission break from June 16 to August 31, 2026", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-07-22, note: "Cyberpsychology journal's 2025 impact factor is 2.6 and SJR is 0.852", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-20, note: "From 23rd-27th February, visiting students engaged in lectures and workshops covering topics from foundations of cyberpsychology to emerging issues including artificial intelligence, misinformation, d", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-07-20, note: "Students explored immersive technologies through workshops in the IADT Immersive Media Lab and a group experience at Sandbox VR.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-07-20, note: "The conference features keynote speakers Prof. Paul Cairns from the University of York and Prof. Amy Orben from the University of Cambridge.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
@@ -124,7 +126,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-20
+updatedDate: 2026-07-22
 ---
 
 ## Summer Submission Break Announced

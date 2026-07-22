@@ -10,8 +10,22 @@ entities: ["International AI Safety Report 2026", "29 nations", "100+ experts", 
 significance: "high"
 irishEuAngle: true
 draft: false
-updatedDate: 2026-07-18
+updatedDate: 2026-07-22
 updates:
+  - { date: 2026-07-22, note: "Anthropic achieved the highest overall grade of C+ in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "OpenAI and Google DeepMind each received a C grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Meta received a D+ grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "xAI, DeepSeek, and Mistral each received failing grades (F) in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "From 2024 to 2026, Anthropic, OpenAI, Google DeepMind, and Meta reversed prior bans on military applications and actively sought defense partnerships.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Anthropic was criticized by the AI Safety Index review panel for a reported link to the Minab school strike that caused mass civilian deaths.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Anthropic, OpenAI, Google DeepMind, and Meta have weakened or voided pledges to pause unilaterally if redlines are approached, some citing competitor-contingent conditions.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "The AI Safety Index review panel states that companies have backed away from commitments to release systems only with safety measures appropriate for capability levels and are planning releases even i", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "No AI company exceeded a C- grade in the Existential Safety domain in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Over 100 AI experts contributed to the International AI Safety Report 2026.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
+  - { date: 2026-07-22, note: "The AI Safety Index collected evidence up until June 3, 2026, and does not include possible new recent events.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "The review panel for the AI Safety Index scored companies using the US GPA system with A, B, C, D, F letter grades corresponding to 4.0, 3.0, 2.0, 1.0, and 0 numerical values.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Z.ai received a D- grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-22, note: "Alibaba Cloud received a D- grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
   - { date: 2026-07-18, note: "The International AI Safety Report 2026 was mandated by the nations attending the AI Safety Summit in Bletchley, UK.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
   - { date: 2026-07-18, note: "29 nations, the UN, the OECD, and the EU each nominated a representative to the International AI Safety Report 2026's Expert Advisory Panel.", sourceUrl: "https://arxiv.org/abs/2602.21012" }
   - { date: 2026-07-18, note: "Over 100 AI experts contributed to the International AI Safety Report 2026, representing diverse perspectives and disciplines.", sourceUrl: "https://arxiv.org/abs/2602.21012" }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T09:30:29.629Z",
+  "updatedAt": "2026-07-22T09:30:17.426Z",
   "pick": {
     "id": "InternScience/Agents-A1-4B",
     "url": "https://hf.co/InternScience/Agents-A1-4B",
@@ -13,49 +13,49 @@
   },
   "also": [
     {
+      "id": "poolside/Laguna-S-2.1",
+      "url": "https://hf.co/poolside/Laguna-S-2.1",
+      "author": "poolside",
+      "name": "Laguna-S-2.1",
+      "likes": 268,
+      "downloads": 3056,
+      "ageDays": 9
+    },
+    {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 4243,
+      "likes": 4300,
       "downloads": 545109,
-      "ageDays": 35
+      "ageDays": 36
     },
     {
-      "id": "GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
-      "url": "https://hf.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
-      "author": "GnLOLot",
-      "name": "MiniCPM5-1B-Claude-Opus-Fable5-Thinking",
-      "likes": 159,
-      "downloads": 6165,
-      "ageDays": 18
+      "id": "Nanbeige/Nanbeige4.2-3B",
+      "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
+      "author": "Nanbeige",
+      "name": "Nanbeige4.2-3B",
+      "likes": 143,
+      "downloads": 0,
+      "ageDays": 1
     },
     {
       "id": "Motif-Technologies/Motif-3-Beta",
       "url": "https://hf.co/Motif-Technologies/Motif-3-Beta",
       "author": "Motif-Technologies",
       "name": "Motif-3-Beta",
-      "likes": 79,
+      "likes": 141,
       "downloads": 125,
-      "ageDays": 0
+      "ageDays": 1
     },
     {
       "id": "tencent/Hy3",
       "url": "https://hf.co/tencent/Hy3",
       "author": "tencent",
       "name": "Hy3",
-      "likes": 851,
+      "likes": 856,
       "downloads": 14143,
-      "ageDays": 19
-    },
-    {
-      "id": "InternScience/Agents-A1",
-      "url": "https://hf.co/InternScience/Agents-A1",
-      "author": "InternScience",
-      "name": "Agents-A1",
-      "likes": 592,
-      "downloads": 36552,
-      "ageDays": 29
+      "ageDays": 20
     }
   ]
 }

@@ -10,6 +10,13 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-22, note: "The Digital Omnibus on AI was signed on 8 July 2026 and is awaiting publication in the Official Journal.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "Stand-alone Annex III high-risk systems now have until 2 December 2027 for compliance, extended from the original 2 August 2026 deadline.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "AI embedded in regulated products under Annex I has until 2 August 2028 for compliance, extended from the original 2 August 2026 deadline.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "A new prohibition on AI-generated non-consensual intimate imagery was added to Article 5 of the EU AI Act.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "The AI Office gained broader supervisory reach over vertically integrated AI providers under the Digital Omnibus amendments.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "Systems that interact directly with people must make clear that a person is dealing with a machine, unless that is obvious from context, applying from 2 August 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-07-22, note: "Deepfakes and manipulated audio, image or video content must be disclosed as artificially generated, applying from 2 August 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-07-21, note: "A political agreement was reached on 7 May 2026 on the Digital Package on Simplification, dubbed the AI omnibus, proposed on 19 November 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-21, note: "The Commission published draft guidelines to clarify how the transparency obligations under Article 50 should be applied in practice on 8 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-21, note: "The rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028 as a result of the political agreement on the proposal to simplify the AI Act", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -137,7 +144,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-21
+updatedDate: 2026-07-22
 ---
 
 ## Major Amendments Agreed

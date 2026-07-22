@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Opus 4.8", "Claude Sonnet 4.6", "OpenAI", "Google", "GPT-5.6 Sol", "Gemini 3.5 Flash", "Gemini 3.1 Pro"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-22, note: "Meta announced Muse Spark 1.1, a 1M-token-context agentic model that rivals GPT-5.5 and Opus 4.8 on agentic evals, with $1.25/$4.25 per 1M tokens pricing and Meta's first-ever paid developer API in pu", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-22, note: "OpenAI launched GPT-5.6 as three tiers: Sol (frontier at $5/$30 per 1M tokens), Terra (GPT-5.5-level at half the cost), and Luna (fast tier)", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-22, note: "Liquid AI open-sourced Antidoom, a method that suppressed reasoning model doom-loops from 22.9% to 1% on Qwen3.5-4B and from 10.2% to 1.4% on LFM2.5 checkpoint", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-22, note: "Mistral released Robostral Navigate, an 8B robotics model for natural-language robot navigation using a single RGB camera, claiming state of the art on R2R-CE benchmark", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-22, note: "Together AI raised $800M Series C at $8.3B valuation with reports of over $1B in annual bookings", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-22, note: "Anthropic launched Claude Sonnet 5 with near-Opus 4.8 performance at introductory $2/$10 per-million pricing through August 31, with new tokenizer potentially consuming up to 35% more tokens", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-21, note: "Anthropic released Claude Sonnet 5, which scores 63.2% on agentic coding benchmarks and approaches Opus 4.8 performance at lower cost, with introductory pricing of two dollars input and ten dollars ou", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-21, note: "Meta's Brain2Qwerty v2 decodes brain activity into text with 61% word accuracy, approaching surgical-implant precision without invasive procedures.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-21, note: "Google launched Gemini 2.5 Pro with Deep Think reasoning mode, achieving 82.4% on GPQA Diamond and 89.8% on MMLU-Pro—surpassing OpenAI's GPT-5.5 and Anthropic's Fable 5 on science benchmarks.", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
@@ -257,7 +263,7 @@ updates:
   - { date: 2026-07-03, note: "Under the EU AI Act amendment, high-risk AI systems will have application deadline of December 2, 2027 for stand-alone systems and August 2, 2028 for systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-03, note: "The EU AI Act amendment adds a prohibition on AI practices regarding generation of non-consensual sexual and intimate content or child sexual abuse material, with a December 2026 deadline for implemen", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/" }
 draft: false
-updatedDate: 2026-07-21
+updatedDate: 2026-07-22
 ---
 
 ## Claude Sonnet 5 Now Available
