@@ -10,6 +10,20 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-23, note: "PwC's 2026 Global AI Jobs Barometer analysed over a billion job ads from six continents.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "Productivity growth is 40% higher at companies most exposed to AI versus least exposed companies.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "Jobs professionalised by AI are growing twice as fast as jobs democratised by AI with 42% faster wage growth since 2021.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "Skills needed for the most AI-exposed jobs are changing more than twice as fast as for the least AI-exposed jobs, representing a 75% increase over the gap from the previous year.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "AI-exposed junior roles are seven times more likely than least AI-exposed junior roles to demand traditionally senior skills such as leadership and strategic thinking.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "Seniorised entry level roles are thriving, showing 35% growth since 2019.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
+  - { date: 2026-07-23, note: "Anthropic introduced a new measure of AI displacement risk called observed exposure that combines theoretical LLM capability and real-world usage data.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "Computer Programmers are the most exposed occupation with 75% coverage under Anthropic's observed exposure measure, followed by Customer Service Representatives and Data Entry Keyers with 67% coverage", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "For every 10 percentage point increase in AI coverage of tasks, the US Bureau of Labor Statistics projected growth for that occupation drops by 0.6 percentage points.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "Workers in the top quartile of AI exposure earn 47% more on average than those with zero exposure, and are 4.5 times more likely to hold a graduate degree.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "Anthropic found no systematic increase in unemployment for workers in the most exposed occupations since late 2022.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "There is tentative evidence that hiring of younger workers aged 22-25 has slowed in AI-exposed occupations, with a 14% drop in job finding rates in the post-ChatGPT era compared to 2022.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "97% of tasks observed in Claude usage fall into categories rated as theoretically feasible by Eloundou et al. (β=0.5 or β=1.0).", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-07-23, note: "30% of workers have zero AI coverage as their tasks appeared too infrequently in Anthropic's data to meet the minimum threshold, including Cooks, Motorcycle Mechanics, Lifeguards, Bartenders, Dishwash", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
   - { date: 2026-07-01, note: "Employment in computer systems design and related services sector has declined 5% since ChatGPT's release in fall 2022", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
   - { date: 2026-07-01, note: "Employment has declined 1% since late 2022 in the 10% of sectors most exposed to AI", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
   - { date: 2026-07-01, note: "Total U.S. employment increased approximately 2.5% since ChatGPT's release in fall 2022", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0224" }
@@ -56,7 +70,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-07-01
+updatedDate: 2026-07-23
 ---
 
 ## AI Hiring Explodes in Ireland

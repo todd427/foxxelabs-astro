@@ -10,6 +10,14 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-23, note: "The European Commission published guidelines to assist providers and deployers of AI systems in meeting the AI Act's transparency obligations on 20 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
+  - { date: 2026-07-23, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Action Plan on Cybersecurity and Artificial Intelligence focuses on 3 complementary objectives: promoting the safe and responsible use of advanced AI, reinforcing the EU's cybersecurity and resili", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Commission will strengthen Europe's capacity to evaluate AI models before they are placed on the EU market, in line with the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Commission will work with the European Union Agency for Cybersecurity (ENISA) to develop a European Blueprint for secure access to advanced AI systems for cybersecurity purposes.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Commission will establish a secure testing platform to help organisations in critical sectors—energy, transport, health, finance and public administration—safely test and deploy AI solutions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Commission will launch an EU Grand Challenge on AI for cybersecurity, bringing together companies, researchers and other stakeholders to develop innovative AI-powered cybersecurity solutions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
+  - { date: 2026-07-23, note: "The Action Plan complements the EU's existing legal framework for AI and cybersecurity, including the AI Act, the Cyber Resilience Act, the NIS2 Directive, the Digital Operational Resilience Act (DORA", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
   - { date: 2026-07-22, note: "The European Commission published guidelines on AI Act transparency obligations on 20 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-07-22, note: "Transparency obligations under the AI Act start to apply on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-07-22, note: "Under the AI Act, AI providers must design AI systems to inform users when they are directly interacting with an AI.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
@@ -31,7 +39,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-07-22
+updatedDate: 2026-07-23
 ---
 
 ## Key Developments

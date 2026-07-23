@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-07-22T09:30:17.426Z",
+  "updatedAt": "2026-07-23T09:27:04.053Z",
   "pick": {
-    "id": "InternScience/Agents-A1-4B",
-    "url": "https://hf.co/InternScience/Agents-A1-4B",
-    "author": "InternScience",
-    "name": "Agents-A1-4B",
-    "likes": 46,
-    "downloads": 8148,
-    "ageDays": 8,
-    "blurb": "Agents-A1-4B landed 8 days ago as a 4B multimodal model tagged for agentic workflows, combining vision and text in a footprint small enough for edge deployment. It's explicitly framed around agent behavior rather than pure conversation, which shifts how you'd integrate it into tool-calling and planning pipelines versus dropping it in as a chat model.",
-    "surfacedAt": "2026-07-21"
+    "id": "upstage/Solar-Open2-250B",
+    "url": "https://hf.co/upstage/Solar-Open2-250B",
+    "author": "upstage",
+    "name": "Solar-Open2-250B",
+    "likes": 368,
+    "downloads": 362,
+    "ageDays": 1,
+    "blurb": "Solar-Open2-250B landed 1 day ago as a 250B MoE model with bilingual (EN/KO) support and vLLM compatibility. If you're running inference at scale or need the density-to-performance tradeoff MoE offers, the freshness and weight behind Upstage's release warrants a closer look at the actual throughput numbers versus current production baselines.",
+    "surfacedAt": "2026-07-23"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/poolside/Laguna-S-2.1",
       "author": "poolside",
       "name": "Laguna-S-2.1",
-      "likes": 268,
-      "downloads": 3056,
-      "ageDays": 9
-    },
-    {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://hf.co/zai-org/GLM-5.2",
-      "author": "zai-org",
-      "name": "GLM-5.2",
-      "likes": 4300,
-      "downloads": 545109,
-      "ageDays": 36
+      "likes": 433,
+      "downloads": 13285,
+      "ageDays": 10
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 143,
-      "downloads": 0,
-      "ageDays": 1
+      "likes": 268,
+      "downloads": 4532,
+      "ageDays": 2
     },
     {
       "id": "Motif-Technologies/Motif-3-Beta",
       "url": "https://hf.co/Motif-Technologies/Motif-3-Beta",
       "author": "Motif-Technologies",
       "name": "Motif-3-Beta",
-      "likes": 141,
-      "downloads": 125,
-      "ageDays": 1
+      "likes": 166,
+      "downloads": 1856,
+      "ageDays": 2
     },
     {
-      "id": "tencent/Hy3",
-      "url": "https://hf.co/tencent/Hy3",
-      "author": "tencent",
-      "name": "Hy3",
-      "likes": 856,
-      "downloads": 14143,
-      "ageDays": 20
+      "id": "zai-org/GLM-5.2",
+      "url": "https://hf.co/zai-org/GLM-5.2",
+      "author": "zai-org",
+      "name": "GLM-5.2",
+      "likes": 4348,
+      "downloads": 596442,
+      "ageDays": 37
+    },
+    {
+      "id": "fdtn-ai/antares-1b",
+      "url": "https://hf.co/fdtn-ai/antares-1b",
+      "author": "fdtn-ai",
+      "name": "antares-1b",
+      "likes": 96,
+      "downloads": 2747,
+      "ageDays": 2
     }
   ]
 }

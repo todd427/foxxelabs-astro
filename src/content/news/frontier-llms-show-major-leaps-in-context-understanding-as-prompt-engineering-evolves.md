@@ -10,6 +10,14 @@ significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "DataCamp", "IBM", "Coursera", "ZipRecruiter"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-23, note: "In 2026, the key parameter for LLM prompting is reasoning_effort (Low/Med/High), not temperature; increasing reasoning_effort burns more tokens on hidden chain-of-thought but drastically improves logi", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "Chain-of-Symbol (CoS) beats Chain-of-Thought for spatial tasks; symbols like ↑ ↓ [x] token-optimize reasoning for grid/map/planning logic more efficiently than words.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "A 'High Effort' call for reasoning_effort can consume 10x the tokens of the final visible output, as reasoning tokens are billed separately but hidden from the user.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "DSPy 3.0 compiles prompts automatically; users define a Signature (Input → Output), provide 10 examples, and DSPy 3.0 optimizes the prompt for the specific model (e.g., GPT-5.2 vs Llama 4), eliminatin", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "The Metaprompt strategy uses a Reasoning Model (GPT-5.2) to write the system prompt for a Production model (GPT-4.1-mini), achieving higher adherence at 1/20th the inference cost compared to manual cr", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "ChatGPT fell to 46.4% of AI assistant users in May 2026, marking its first dip below 50% market share.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "Claude Opus 4.7 beats GPT-5.4 on SWE-bench Pro, tool use, and computer use benchmarks.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-07-23, note: "Organizations that master advanced prompt engineering techniques report 40-60% improvements in task accuracy and significant productivity gains.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-07-19, note: "Gartner forecasts 70% of enterprises will deploy AI-driven prompt automation by 2026.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-07-19, note: "Andrej Karpathy posted in June 2025 that the LLM is a CPU, the context window is RAM, and the job is to be the operating system, loading working memory with exactly the right code and data for each ta", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
   - { date: 2026-07-19, note: "Levy, Jacoby, and Goldberg (2024) found that LLM reasoning performance starts degrading around 3,000 tokens.", sourceUrl: "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026/" }
@@ -38,7 +46,7 @@ updates:
   - { date: 2026-07-10, note: "The initial hype around 'prompt engineer' as a job title has cooled considerably since the ChatGPT launch in late 2022.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
   - { date: 2026-07-10, note: "A study by researchers at KAIST found that larger language models perform worse on negated prompts (instructions telling them what not to do) compared to smaller models.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
 draft: false
-updatedDate: 2026-07-19
+updatedDate: 2026-07-23
 ---
 
 ## Frontier Models Achieve Breakthrough in Context and Nuance

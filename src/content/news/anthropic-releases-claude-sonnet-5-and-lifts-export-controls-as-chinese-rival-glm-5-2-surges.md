@@ -10,6 +10,30 @@ significance: "high"
 entities: ["Anthropic", "Claude Sonnet 5", "Claude Science", "Z.ai", "GLM-5.2", "Amazon", "Microsoft", "Google", "OpenRouter", "David Sacks"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-23, note: "Moonshot shipped Kimi K3 on July 16, 2026, a 2.8-trillion-parameter open-weight mixture-of-experts model with only ~16 of 896 experts active per token, native vision, and a 1-million-token context win", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "Kimi K3 is the largest open-weight model released to date, with full open weights scheduled for July 27, 2026.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "GLM-5.2 was released by Zhipu on June 13, 2026, with MIT license weights landing on Hugging Face around June 17.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "GLM-5.2 scored 91.2% on GPQA Diamond as of June 2026 release.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "MiniMax M3 posted 59.0% on SWE-bench Pro in June 2026, the top open-weight score.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "Kimi K2.7 Code was released on June 12, 2026, with +21.8% improvement over K2.6 on Kimi Code Bench v2, plus a HighSpeed variant with ~6× faster inference.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "Qwen family crossed 700M Hugging Face downloads in January 2026 with 113,000+ derivative models.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-23, note: "Meta announced Muse Spark 1.1 on July 9, 2026, a 1M-token-context agentic model with Meta's first-ever paid developer API in public preview at $20 free credits (US-only at launch).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Muse Spark 1.1 claims #1 ranking on MCP Atlas, JobBench, Humanity's Last Exam and Finance Agent V2.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "On the Harvey legal-agent benchmark, Muse Spark 1.1 scores 20% against Fable's 11%.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "OpenAI released GPT-5.6 publicly on July 9, 2026, in three tiers: Sol (flagship), Terra (half the cost of GPT-5.5 at GPT-5.5-level quality), and Luna (fast tier).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "GPT-5.6 Sol scored 7.8% on ARC-AGI-3 and became the first model to beat a public game.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Anthropic restored Fable 5 and Mythos 5 globally on July 1, 2026, after a 19-day pause beginning June 12 due to export-control concerns.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Anthropic launched Claude Sonnet 5 on July 1, 2026, with near-Opus 4.8 performance at introductory $2/$10 per-million-tokens pricing through August 31.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Anthropic's J-space research identified a small internal subspace of about 25 active concepts, under 10% of activation variance, that behaves like the global workspace from consciousness neuroscience.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Cognition released SWE-1.7 on July 8, 2026, an RL fine-tune of Moonshot's Kimi K2.7 base that achieves 42.3% on FrontierCode (up from 30.1% in SWE-1.5), tied with GPT-5.5.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Mistral released Robostral Navigate on July 8, 2026, an 8B robotics model for natural-language task navigation with a single RGB camera, claiming state-of-the-art on the R2R-CE benchmark.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "SpaceXAI launched Grok 4.5 on July 8, 2026, a 1.5T-parameter MoE trained with trillions of tokens of real Cursor agent-interaction data, scoring 83.3% on Terminal-Bench 2.1.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Meituan disclosed LongCat-2.0 on July 2, 2026, a 1.6-trillion-parameter MoE trained entirely on Chinese ASICs without NVIDIA hardware, scoring 59.5 on SWE-bench Pro.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Chinese open-weight models account for ~30% of global usage on OpenRouter, up from 1.2% eleven months ago.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Together AI raised $800M Series C at an $8.3B valuation on July 1, 2026, with Aramco Ventures leading and NVIDIA, Vista Equity and General Catalyst participating.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "Together AI reports over $1B in annual bookings and says open-model usage on the platform tripled year over year.", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "OpenAI shipped GPT-Live on July 8, 2026, a full-duplex voice model that listens while it speaks, with two model sizes: GPT-Live-1 (paid default) and GPT-Live-1 mini (free default).", sourceUrl: "https://thursdai.news/releases/2026-07" }
+  - { date: 2026-07-23, note: "July 2026 saw 27 AI launches covered on ThursdAI, led by OpenAI, Anthropic, Google DeepMind, Meta AI across agents, frontier models, open source, and coding.", sourceUrl: "https://thursdai.news/releases/2026-07" }
   - { date: 2026-07-11, note: "Fable 5 returned to all users worldwide on July 1, 2026, at 3:31 pm ET, following the US Department of Commerce's decision on June 30 to lift the export controls it had imposed on June 12.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
   - { date: 2026-07-11, note: "Fable 5 was suspended for 19 days, from June 12 to July 1, 2026, in the most disruptive government-ordered AI model restriction in history.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
   - { date: 2026-07-11, note: "Amazon researchers found a jailbreak that caused Fable 5 to identify software vulnerabilities and, in one case, write code demonstrating how to exploit one.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" }
@@ -66,7 +90,7 @@ updates:
   - { date: 2026-07-05, note: "ElevenLabs is exploring a secondary share sale at a $22 billion valuation.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
   - { date: 2026-07-05, note: "Google DeepMind released the 'Nano Banana 2 Lite' image model.", sourceUrl: "https://www.distillintelligence.com/briefings/ai-leaders-2026-07-03" }
 draft: true
-updatedDate: 2026-07-11
+updatedDate: 2026-07-23
 ---
 
 ## Anthropic Advances Product Line and Security Framework

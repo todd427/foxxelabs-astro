@@ -9,8 +9,14 @@ sourceUrl: "https://www.anthropic.com/research/global-workspace"
 significance: "high"
 entities: ["Anthropic", "Claude", "J-space", "J-lens", "Neuronpedia"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-23, note: "Meta AI released results on video understanding models capable of answering questions about video sequences of 30+ minutes.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-23, note: "Previous state-of-the-art video understanding models could handle short clips well but degraded rapidly on longer content.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-23, note: "Meta's new video understanding approach compresses video representations efficiently, allowing the model to maintain relevant context across much longer timespans.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-23, note: "On benchmark tasks requiring reasoning about events across an hour of video, Meta's new approach scores substantially higher than previous methods.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-23, note: "Researchers at the Allen Institute for AI published findings that AI language model hallucinations are more likely to occur when a model is asked about facts that were underrepresented in training dat", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
 draft: false
+updatedDate: 2026-07-23
 ---
 
 ## Emergent J-Space Discovery

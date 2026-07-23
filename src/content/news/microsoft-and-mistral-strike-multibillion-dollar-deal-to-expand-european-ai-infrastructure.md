@@ -9,8 +9,14 @@ sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-e
 significance: "high"
 entities: ["Microsoft", "Mistral", "NVIDIA", "Azure", "European Commission", "Google"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-23, note: "Microsoft and Mistral announced a significant expansion of their strategic partnership on July 21, 2026.", sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" }
+  - { date: 2026-07-23, note: "Microsoft will leverage Mistral's expanded Europe-based GPU infrastructure to increase capacity for AI development and to support the delivery of Microsoft's cloud and AI services, representing a mult", sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" }
+  - { date: 2026-07-23, note: "Mistral Medium 3.5 model is now available in Microsoft Copilot Studio as of July 21, 2026.", sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" }
+  - { date: 2026-07-23, note: "Mistral is adding GPU capacity drawn on thousands of the latest NVIDIA Vera Rubin GPUs to increase AI compute availability as part of the partnership expansion.", sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" }
+  - { date: 2026-07-23, note: "Microsoft declined to specify the exact dollar amount of its commitment to the partnership.", sourceUrl: "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/" }
 draft: false
+updatedDate: 2026-07-23
 ---
 
 ## Microsoft and Mistral Partnership Strengthens European AI Ecosystem

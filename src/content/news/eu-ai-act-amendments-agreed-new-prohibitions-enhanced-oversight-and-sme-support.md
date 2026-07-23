@@ -10,6 +10,20 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-23, note: "The European Union published the Cloud and AI Development Act in the Official Journal of the EU on July 15, 2026.", sourceUrl: "https://regulations.ai/news/eu-cloud-ai-act-prepare-july-2026-publication" }
+  - { date: 2026-07-23, note: "The Cloud and AI Development Act applies broadly to any company offering cloud services—including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS)—as ", sourceUrl: "https://regulations.ai/news/eu-cloud-ai-act-prepare-july-2026-publication" }
+  - { date: 2026-07-23, note: "Ireland established 15 specialised enforcement authorities for the EU AI Act.", sourceUrl: "https://www.williamfry.com/knowledge/ireland-establishes-comprehensive-ai-regulatory-framework-under-eu-act/" }
+  - { date: 2026-07-23, note: "The European Commission published the final version of its Code of Practice on Transparency of AI-Generated Content.", sourceUrl: "https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-july-2026" }
+  - { date: 2026-07-23, note: "The core transparency obligations under Article 50 of the AI Act take effect on 2 August 2026.", sourceUrl: "https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-july-2026" }
+  - { date: 2026-07-23, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 was published on 17 June 2026.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-07-23, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 is designed to give full domestic effect to the EU Artificial Intelligence Act.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
+  - { date: 2026-07-23, note: "Prohibited AI practices including harmful AI-based manipulation and deception, harmful AI-based exploitation of vulnerabilities, and social scoring became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-23, note: "A political agreement on the Digital Omnibus simplification amendments to the AI Act was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-23, note: "The AI Act amendments reinforce the AI Office's powers and centralise oversight of AI systems built on general-purpose AI models, reducing governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-23, note: "Minister Niamh Smyth launched a new industry consultation inviting businesses from across the manufacturing, tourism, construction and ICT services sectors to help shape the future of AI adoption in I", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/minister-niamh-smyth-calls-on-businesses-to-shape-ireland-s-future-ai-strategy.html" }
+  - { date: 2026-07-23, note: "Accenture has been commissioned by the Department of Enterprise, Tourism and Employment to undertake a study examining opportunities and barriers to AI adoption in the manufacturing, tourism and const", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/minister-niamh-smyth-calls-on-businesses-to-shape-ireland-s-future-ai-strategy.html" }
+  - { date: 2026-07-23, note: "The consultation for Ireland's AI in Enterprise study will close on 24 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/minister-niamh-smyth-calls-on-businesses-to-shape-ireland-s-future-ai-strategy.html" }
+  - { date: 2026-07-23, note: "The submissions from Ireland's AI in Enterprise consultation will inform the first phase of the department's Sectoral Strategy for Enterprise Adoption of AI.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/minister-niamh-smyth-calls-on-businesses-to-shape-ireland-s-future-ai-strategy.html" }
   - { date: 2026-07-22, note: "The Digital Omnibus on AI was signed on 8 July 2026 and is awaiting publication in the Official Journal.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-07-22, note: "Stand-alone Annex III high-risk systems now have until 2 December 2027 for compliance, extended from the original 2 August 2026 deadline.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-07-22, note: "AI embedded in regulated products under Annex I has until 2 August 2028 for compliance, extended from the original 2 August 2026 deadline.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
@@ -144,7 +158,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-22
+updatedDate: 2026-07-23
 ---
 
 ## Major Amendments Agreed
