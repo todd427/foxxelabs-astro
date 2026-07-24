@@ -10,6 +10,9 @@ significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "DataCamp", "IBM", "Coursera", "ZipRecruiter"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-24, note: "Shifting prompts from asking models to 'be an expert' to supplying expert context—prior failures ruled out, explicit constraints, and the true task goal—can materially improve AI output quality and re", sourceUrl: "https://blockchain.news/ainews/prompt-engineering-breakthrough-expert-context-framework-improves-ai-task-performance-in-2026" }
+  - { date: 2026-07-24, note: "Structured prompts that incorporate contextual details can improve output accuracy by up to 30 percent in tasks like content generation and problem-solving.", sourceUrl: "https://blockchain.news/ainews/prompt-engineering-breakthrough-expert-context-framework-improves-ai-task-performance-in-2026" }
+  - { date: 2026-07-24, note: "Coursera reporting a US median prompt engineering salary around $126,000 per year and ZipRecruiter showing entry-level postings closer to $63,000.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
   - { date: 2026-07-23, note: "In 2026, the key parameter for LLM prompting is reasoning_effort (Low/Med/High), not temperature; increasing reasoning_effort burns more tokens on hidden chain-of-thought but drastically improves logi", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-07-23, note: "Chain-of-Symbol (CoS) beats Chain-of-Thought for spatial tasks; symbols like ↑ ↓ [x] token-optimize reasoning for grid/map/planning logic more efficiently than words.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-07-23, note: "A 'High Effort' call for reasoning_effort can consume 10x the tokens of the final visible output, as reasoning tokens are billed separately but hidden from the user.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
@@ -46,7 +49,7 @@ updates:
   - { date: 2026-07-10, note: "The initial hype around 'prompt engineer' as a job title has cooled considerably since the ChatGPT launch in late 2022.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
   - { date: 2026-07-10, note: "A study by researchers at KAIST found that larger language models perform worse on negated prompts (instructions telling them what not to do) compared to smaller models.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
 draft: false
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 ---
 
 ## Frontier Models Achieve Breakthrough in Context and Nuance

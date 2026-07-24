@@ -9,8 +9,23 @@ sourceUrl: "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository
 significance: "high"
 entities: ["Hugging Face", "autonomous AI agent", "Z.ai", "GLM 5.2"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-24, note: "Between July 21 and July 22, 2026, at least 29 organizations fell victim to a malvertising campaign that redirected them to a malicious Claude Artifact publicly hosted on the legitimate Claude.ai doma", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
+  - { date: 2026-07-24, note: "The malicious Claude Artifact redirected users to an attacker-controlled domain where they downloaded what appeared to be a legitimate Claude desktop app (ClaudeDesktop.exe), but in reality led to the", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
+  - { date: 2026-07-24, note: "The public Claude Artifact was removed as of July 22, 2026.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
+  - { date: 2026-07-24, note: "The campaign was codenamed FakeAgent.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
+  - { date: 2026-07-24, note: "Microsoft Corp. released software updates to plug at least 570 security holes in its Windows operating systems and other software.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "Microsoft attributed the burgeoning patch counts to vulnerability discoveries aided by artificial intelligence.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "Nearly 60 of the bugs quashed in July's Patch Tuesday earned a 'critical' severity rating.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "CVE-2026-56155 is an Active Directory Federation Services bug that allows an attacker to elevate their user rights on a Windows system.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "CVE-2026-56164 is a Microsoft Sharepoint vulnerability that allows an attacker to elevate their user rights on a Windows system.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "CVE-2026-50661 is a security feature bypass in Windows BitLocker that could allow attackers to gain access to encrypted data if they have physical access to the device.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "An attacker could exploit CVE-2026-48561 by hosting a malicious website that causes Microsoft Edge for Android to automatically send crafted prompts to Copilot when a user visits the site.", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "Microsoft Executive Vice President Pavan Davuluri stated on July 9 that 'the pace of vulnerability discovery is changing with advances in AI making it possible to find more issues, faster, across more", sourceUrl: "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" }
+  - { date: 2026-07-24, note: "An analysis of 28 vibe-coded apps uncovered 434 unique and validated vulnerabilities, with missing rate-limiting and DoS controls being the most common bug in AI-generated code overall.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
+  - { date: 2026-07-24, note: "Secret exposures made up the largest share of the most critical bugs in AI-generated code.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
 draft: false
+updatedDate: 2026-07-24
 ---
 
 ## Hugging Face Security Incident Confirmed

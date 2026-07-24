@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-23T09:27:04.053Z",
+  "updatedAt": "2026-07-24T09:23:03.306Z",
   "pick": {
     "id": "upstage/Solar-Open2-250B",
     "url": "https://hf.co/upstage/Solar-Open2-250B",
     "author": "upstage",
     "name": "Solar-Open2-250B",
-    "likes": 368,
-    "downloads": 362,
-    "ageDays": 1,
+    "likes": 505,
+    "downloads": 1106,
+    "ageDays": 2,
     "blurb": "Solar-Open2-250B landed 1 day ago as a 250B MoE model with bilingual (EN/KO) support and vLLM compatibility. If you're running inference at scale or need the density-to-performance tradeoff MoE offers, the freshness and weight behind Upstage's release warrants a closer look at the actual throughput numbers versus current production baselines.",
     "surfacedAt": "2026-07-23"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/poolside/Laguna-S-2.1",
       "author": "poolside",
       "name": "Laguna-S-2.1",
-      "likes": 433,
-      "downloads": 13285,
-      "ageDays": 10
+      "likes": 544,
+      "downloads": 28992,
+      "ageDays": 11
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 268,
-      "downloads": 4532,
-      "ageDays": 2
+      "likes": 337,
+      "downloads": 8169,
+      "ageDays": 3
     },
     {
       "id": "Motif-Technologies/Motif-3-Beta",
       "url": "https://hf.co/Motif-Technologies/Motif-3-Beta",
       "author": "Motif-Technologies",
       "name": "Motif-3-Beta",
-      "likes": 166,
-      "downloads": 1856,
-      "ageDays": 2
+      "likes": 178,
+      "downloads": 2108,
+      "ageDays": 3
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 4348,
-      "downloads": 596442,
-      "ageDays": 37
+      "likes": 4394,
+      "downloads": 667403,
+      "ageDays": 38
     },
     {
       "id": "fdtn-ai/antares-1b",
       "url": "https://hf.co/fdtn-ai/antares-1b",
       "author": "fdtn-ai",
       "name": "antares-1b",
-      "likes": 96,
-      "downloads": 2747,
-      "ageDays": 2
+      "likes": 130,
+      "downloads": 4266,
+      "ageDays": 3
     }
   ]
 }

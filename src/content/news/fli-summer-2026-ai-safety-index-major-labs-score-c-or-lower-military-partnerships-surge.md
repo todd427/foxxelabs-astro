@@ -10,6 +10,19 @@ significance: "high"
 entities: ["Anthropic", "OpenAI", "Google DeepMind", "Meta", "xAI", "Mistral", "Future of Life Institute", "David Krueger", "Sharon Li", "Tegan Maharaj", "Sneha Revanur", "Stuart Russell", "Robert Trager", "Yi Zeng"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-24, note: "Anthropic earned the highest overall grade of C+ in the Future of Life Institute's 2026 AI Safety Index, followed by OpenAI and Google DeepMind at C, Meta at D+, xAI, DeepSeek, and Mistral with failin", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "The Future of Life Institute's index evaluated nine leading AI companies on 37 indicators spanning six critical domains: Risk Assessment, Current Harms, Safety Frameworks, Existential Safety, Governan", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "Anthropic, OpenAI, Google DeepMind, and Meta have weakened or voided pledges to pause unilaterally if redlines are approached, with some citing competitor-contingent conditions, which reviewers descri", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "No company in the Existential Safety domain exceeds C-; most score D or below, with reviewers judging constructive attempts like Anthropic's constitutional classifiers and OpenAI's governance calls to", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "Reviewers flagged the industry's pivot to military AI use as an emerging current harm risk, noting that companies including Anthropic, OpenAI, Google DeepMind, and Meta that previously banned military", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "Anthropic has an estimated $965 billion valuation and enterprise deployments in 15+ countries.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
+  - { date: 2026-07-24, note: "The New York Times and publishers filed a motion seeking sanctions against OpenAI, alleging the company withheld training-data evidence in the ongoing copyright lawsuit over whether OpenAI illegally u", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
+  - { date: 2026-07-24, note: "Intel announced a 5 billion euro semiconductor expansion in Ireland as part of a global chip-manufacturing buildout responding to supply-chain concentration risks in Taiwan.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
+  - { date: 2026-07-24, note: "Helsing, a European defense AI company, raised 1.8 billion euros at an 18 billion euro valuation in Series E funding, cementing its status as Europe's most valuable defense-tech startup.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
+  - { date: 2026-07-24, note: "Blackstone led a $5.34 billion arrangement with Apollo and KKR to fund behind-the-meter power generation for data centers, targeting the electricity bottleneck throttling AI expansion.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
+  - { date: 2026-07-24, note: "The index collected evidence up until June 3, 2026 and does not include possible new recent events.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "Anthropic leads five of six domains in the AI Safety Index via relatively strong transparency, a comparatively established safety framework, technical research, and governance.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-24, note: "Meta improved from 6th to 4th place in the AI Safety Index, while xAI dropped from 4th to 7th place compared to prior editions.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
   - { date: 2026-07-17, note: "The Future of Life Institute released its 2026 AI Safety Index with Anthropic earning a C+, OpenAI and Google DeepMind earning Cs, Meta earning D+, and xAI, DeepSeek, and Mistral effectively failing.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
   - { date: 2026-07-17, note: "The Future of Life Institute's AI Safety Index scores labs on risk management, transparency, governance, and whether they honor their own safety commitments, and finds that several major labs have qui", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
   - { date: 2026-07-17, note: "The CEOs of Google DeepMind, OpenAI and Anthropic each published a detailed distillation of their views on AI regulation in the past five weeks.", sourceUrl: "https://www.axios.com/2026/07/16/ai-regulations-openai-anthropic-google" }
@@ -30,7 +43,7 @@ updates:
   - { date: 2026-07-17, note: "Intel announced a 5 billion euro semiconductor expansion in Ireland.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
   - { date: 2026-07-17, note: "Google's Gemini 3.5 Pro is expected to launch on July 17, 2026, with a leaked spec of a 2-million-token context window, Deep Think reasoning on the $250 Ultra tier, and API pricing near $1.25 input an", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" }
 draft: false
-updatedDate: 2026-07-17
+updatedDate: 2026-07-24
 ---
 
 ## Safety Grades Remain Weak Across the Board

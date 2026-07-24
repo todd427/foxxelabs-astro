@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-24, note: "The AI Act will be fully applicable 2 years after entry into force on 2 August 2026, with some exceptions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "A prohibition on AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material was added to Article 5.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The AI Office gained broader supervisory reach over vertically integrated AI providers.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "Simplified requirements for small and medium-sized enterprises are extended to small mid-cap companies.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, is clarified to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The EU AI Act, which entered into force in August 2024, applies directly across all EU Member States and imposes obligations on providers, deployers and importers of AI systems and models.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-24, note: "Ireland's National Digital and AI Strategy is titled 'Digital Ireland — Connecting our People, Securing our Future'.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-13, note: "The Commission will launch a call to increase EU evaluation capacity of AI models before they are placed on the EU market, expected to be operational by 2027.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-13, note: "AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material (CSAM) have been prohibited, taking effect on 2 December 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-13, note: "Ireland's Bill provides for the Competition and Consumer Protection Commission (CCPC) to introduce a new general administrative sanctions procedure through amendments to the Competition and Consumer P", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
@@ -219,7 +227,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-13
+updatedDate: 2026-07-24
 ---
 
 ## The Bill's Purpose and Structure

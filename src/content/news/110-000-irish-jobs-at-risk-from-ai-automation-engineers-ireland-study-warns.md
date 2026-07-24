@@ -10,6 +10,11 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-24, note: "Three-quarters of 1,000 people questioned in research for Engineers Ireland by Ipsos B & A said they feared AI would lead to job losses.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
+  - { date: 2026-07-24, note: "45% of Irish employees expect AI to negatively impact or replace their current role in the future, up 19 percentage points compared with the prior year.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
+  - { date: 2026-07-24, note: "Only 3.6% of Irish companies have used AI technology to replace a full position.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
+  - { date: 2026-07-24, note: "65% of Irish companies have already commenced recruitment campaigns in 2026, representing an 11-point rise compared to the same time last year.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
+  - { date: 2026-07-24, note: "More than two-thirds (68%) of Irish survey respondents said staff retention will be their number one priority in 2026.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
   - { date: 2026-07-21, note: "Employers are using AI and automation for 'repetitive and time-consuming' tasks, though they are not 'eliminating entire roles'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
   - { date: 2026-07-21, note: "Employers are raising the bar for entry-level hires and graduate roles are becoming more diverse.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
   - { date: 2026-07-21, note: "Today's graduates require stronger commercial awareness, better communication skills and the ability to interpret data, 'not just process it'.", sourceUrl: "https://www.irishtimes.com/business/work/2026/07/15/what-effect-is-ai-having-on-entry-level-roles-in-ireland/" }
@@ -40,7 +45,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-21
+updatedDate: 2026-07-24
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

@@ -10,6 +10,18 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-24, note: "The European Commission published final Article 50 transparency guidelines on July 20, 2026.", sourceUrl: "https://aiweekly.co/alerts/european-commission-sets-august-2-ai-transparency-deadline" }
+  - { date: 2026-07-24, note: "Companies have 11 days from July 20 until August 2, 2026 to comply with Article 50 transparency obligations before enforcement begins.", sourceUrl: "https://aiweekly.co/alerts/european-commission-sets-august-2-ai-transparency-deadline" }
+  - { date: 2026-07-24, note: "Non-compliance with Article 50 transparency obligations results in fines up to €15 million or 3% of global annual turnover.", sourceUrl: "https://aiweekly.co/alerts/european-commission-sets-august-2-ai-transparency-deadline" }
+  - { date: 2026-07-24, note: "Deepfake labeling under Article 50 is intent-neutral; the compliance test is whether a target audience could perceive synthetic content as authentic.", sourceUrl: "https://aiweekly.co/alerts/european-commission-sets-august-2-ai-transparency-deadline" }
+  - { date: 2026-07-24, note: "Companies that signed the Code of Practice by July 22 carry a presumption of regulatory conformity while others face full enforcement from national surveillance authorities.", sourceUrl: "https://aiweekly.co/alerts/european-commission-sets-august-2-ai-transparency-deadline" }
+  - { date: 2026-07-24, note: "The 16-month delay of high-risk AI rules moves the deadline from August 2, 2026 to December 2, 2027 for standalone systems.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "High-risk AI systems embedded into regulated products have an extended transition period until August 2, 2028.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "A new prohibition on AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material has been agreed following political agreement on AI Act simplificatio", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The transparency rules of the AI Act came into effect in August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The AI Act prohibits eight specific practices including harmful AI-based manipulation, social scoring, individual criminal offence risk assessment, untargeted facial recognition database scraping, emo", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "The prohibitions on unacceptable-risk AI practices became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-24, note: "Transparency obligations require providers to ensure that AI-generated content is identifiable and certain AI-generated content such as deepfakes and text published on matters of public interest must ", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-23, note: "The European Commission published guidelines to assist providers and deployers of AI systems in meeting the AI Act's transparency obligations on 20 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-07-23, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
   - { date: 2026-07-23, note: "The Action Plan on Cybersecurity and Artificial Intelligence focuses on 3 complementary objectives: promoting the safe and responsible use of advanced AI, reinforcing the EU's cybersecurity and resili", sourceUrl: "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence" }
@@ -39,7 +51,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-07-23
+updatedDate: 2026-07-24
 ---
 
 ## Key Developments
