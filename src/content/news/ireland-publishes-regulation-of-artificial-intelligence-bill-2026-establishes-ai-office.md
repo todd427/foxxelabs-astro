@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-26, note: "The AIF IRL-Antenna will provide startups, SMEs, researchers and public sector organisations with streamlined access to world-class AI resources, technical expertise, training programmes and innovatio", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
+  - { date: 2026-07-26, note: "Google DeepMind published research in July 2026 examining how AI agents are transforming scientific discovery from proposing novel hypotheses to designing experiments.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "Co-Scientist, an AI agent from Google DeepMind, returned five potential explanations ranked by priority to microbiologist José Penadés within two days for a problem his team at Imperial College London", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "AlphaEvolve has assisted in the design of Google's next-generation TPU chips and helped mathematician Terence Tao solve open Erdős problems.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "In February 2026, Aletheia solved six of ten research problems in the inaugural First Proof challenge where problems were kept unpublished to prevent access from training data.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "Google DeepMind has created a wet lab inside the UK's Francis Crick Institute to validate AI agent-enabled hypotheses.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "The US National Science Foundation has allocated $100 million towards a national network of distributed facilities for automated labs.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
+  - { date: 2026-07-26, note: "The UK Materials Innovation Factory has received £81 million in funding.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
   - { date: 2026-07-24, note: "Anthropic has discovered a space inside LLMs called the J-space filled with words that don't appear in the model's output but seem to influence how models puzzle through problems", sourceUrl: "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" }
   - { date: 2026-07-24, note: "Anthropic has valued the valuation of the company at nearly $1 trillion, making it the world's most valuable AI company", sourceUrl: "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" }
   - { date: 2026-07-24, note: "Anthropic has said that monitoring the J-space could be a way to catch models doing something they shouldn't by detecting words that don't appear in output but reveal behavior such as biased responses", sourceUrl: "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" }
@@ -316,7 +324,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-07-26
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

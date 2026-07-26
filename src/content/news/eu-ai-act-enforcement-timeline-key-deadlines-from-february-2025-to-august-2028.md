@@ -10,6 +10,10 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-26, note: "Chatbot disclosure requirements became live and binding on July 10, 2026, requiring users to be clearly informed they are interacting with an AI system at the start of any interaction.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-26, note: "Violations of prohibited AI practices under the EU AI Act carry maximum fines of €35 million or 7% of global annual turnover, whichever is higher.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-26, note: "Violations of high-risk AI obligations under the EU AI Act carry maximum fines of €15 million or 3% of global annual turnover, whichever is higher.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
+  - { date: 2026-07-26, note: "The Digital Omnibus confirmed that AI systems using personal data must comply with both the AI Act and GDPR, with GDPR supervisory authorities and AI Act national competent authorities expected to coo", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
   - { date: 2026-07-24, note: "The European Commission presented the EU Action Plan on Cybersecurity and Artificial Intelligence on July 7, 2026, to strengthen the enforcement of the AI Act by establishing dedicated evaluation capa", sourceUrl: "https://quasa.io/media/eu-action-plan-july-2026-strengthens-ai-act-enforcement-for-frontier-models" }
   - { date: 2026-07-24, note: "The evaluation capacity from the EU Action Plan is expected to become operational in 2027.", sourceUrl: "https://quasa.io/media/eu-action-plan-july-2026-strengthens-ai-act-enforcement-for-frontier-models" }
   - { date: 2026-07-24, note: "Enforcement of key provisions for advanced models begins in August 2026, requiring developers to demonstrate risk evaluations and mitigation strategies.", sourceUrl: "https://quasa.io/media/eu-action-plan-july-2026-strengthens-ai-act-enforcement-for-frontier-models" }
@@ -379,7 +383,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-07-26
 ---
 
 ## The EU AI Act's Phased Entry into Force

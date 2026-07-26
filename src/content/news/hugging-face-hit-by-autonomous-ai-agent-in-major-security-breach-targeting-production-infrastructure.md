@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Hugging Face", "autonomous AI agent", "Z.ai", "GLM 5.2"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-26, note: "The Hugging Face intrusion involved unauthorized access to a limited set of internal datasets and several credentials used by the company's services.", sourceUrl: "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html" }
+  - { date: 2026-07-26, note: "The Hugging Face attack started through the data processing pipeline, exploiting two code-execution paths: a remote-code dataset loader and template-injection in dataset configuration.", sourceUrl: "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html" }
+  - { date: 2026-07-26, note: "The European Commission presented a plan on 7 July 2026 to address the risks and harness the opportunities of advanced artificial intelligence in cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-26, note: "The EU plan includes establishing an EU evaluation capacity to strengthen third-party assessment of AI capabilities and risks globally, supporting the regulatory function of the AI Office.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-26, note: "The EU will work with the EU Agency for Cybersecurity to define a European blueprint for structured access to advanced AI capabilities for cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-26, note: "The EU Agency for Cybersecurity and the Commission's Joint Research Centre will create a secure platform to test AI for cybersecurity, including using simulated environments.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
+  - { date: 2026-07-26, note: "The Commission will launch the EU Grand Challenge on AI for cybersecurity to bring together companies, researchers, and organisations to develop AI solutions for cybersecurity.", sourceUrl: "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en" }
   - { date: 2026-07-24, note: "Between July 21 and July 22, 2026, at least 29 organizations fell victim to a malvertising campaign that redirected them to a malicious Claude Artifact publicly hosted on the legitimate Claude.ai doma", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
   - { date: 2026-07-24, note: "The malicious Claude Artifact redirected users to an attacker-controlled domain where they downloaded what appeared to be a legitimate Claude desktop app (ClaudeDesktop.exe), but in reality led to the", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
   - { date: 2026-07-24, note: "The public Claude Artifact was removed as of July 22, 2026.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
@@ -25,7 +32,7 @@ updates:
   - { date: 2026-07-24, note: "An analysis of 28 vibe-coded apps uncovered 434 unique and validated vulnerabilities, with missing rate-limiting and DoS controls being the most common bug in AI-generated code overall.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
   - { date: 2026-07-24, note: "Secret exposures made up the largest share of the most critical bugs in AI-generated code.", sourceUrl: "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-07-26
 ---
 
 ## Hugging Face Security Incident Confirmed

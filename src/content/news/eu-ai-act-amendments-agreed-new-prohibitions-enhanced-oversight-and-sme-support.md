@@ -10,6 +10,13 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-26, note: "The Digital Package on Simplification (AI omnibus) has been adopted on 19 November 2025 and a political agreement was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-26, note: "The final text of the AI Omnibus Regulation entered into force in July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-26, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body which will act as Ireland's central coordinating auth", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-26, note: "The EU AI Act entered into force in August 2024, with its provisions applying in a phased manner, and applies directly across all EU Member States.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-26, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 is a technical implementing measure and does not add to the obligations placed on regulated entities by the EU Regulation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-26, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-26, note: "Ireland's Bill empowers Market Surveillance Authorities (MSAs) with a structured, proportionate enforcement toolkit, progressing from cooperative compliance notices to coercive measures such as prohib", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-07-23, note: "The European Union published the Cloud and AI Development Act in the Official Journal of the EU on July 15, 2026.", sourceUrl: "https://regulations.ai/news/eu-cloud-ai-act-prepare-july-2026-publication" }
   - { date: 2026-07-23, note: "The Cloud and AI Development Act applies broadly to any company offering cloud services—including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS)—as ", sourceUrl: "https://regulations.ai/news/eu-cloud-ai-act-prepare-july-2026-publication" }
   - { date: 2026-07-23, note: "Ireland established 15 specialised enforcement authorities for the EU AI Act.", sourceUrl: "https://www.williamfry.com/knowledge/ireland-establishes-comprehensive-ai-regulatory-framework-under-eu-act/" }
@@ -158,7 +165,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-23
+updatedDate: 2026-07-26
 ---
 
 ## Major Amendments Agreed
