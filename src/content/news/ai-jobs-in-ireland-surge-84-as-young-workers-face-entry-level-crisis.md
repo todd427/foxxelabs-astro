@@ -10,6 +10,16 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-27, note: "15% of people aged 16 to 74 in the EU used generative AI for work in 2025, according to Eurostat", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
+  - { date: 2026-07-27, note: "In Q1 2026, Germany had 288 AI-labelled job titles, followed by UK (160), France (138), Netherlands (84) and Spain (81)", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
+  - { date: 2026-07-27, note: "As of Q1 2026, AI-labelled titles correspond to 4.2% of all titles in Germany, up from 0.8% four years ago", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
+  - { date: 2026-07-27, note: "In France, 3.3% of all job titles are AI-labelled as of Q1 2026; in UK 2.7%, Spain 2.3%, and Netherlands 2.2%", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
+  - { date: 2026-07-27, note: "In Germany, 59% of AI-labelled job titles are outside tech roles; Netherlands 58%; France and UK both 54%; Spain 64% remain in tech", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
+  - { date: 2026-07-27, note: "Professionalised roles are seeing twice the growth in available jobs than democratised roles", sourceUrl: "https://www.pwc.ie/media-centre/press-releases/2026/ai-jobs-barometer-2026.html" }
+  - { date: 2026-07-27, note: "In Ireland, roles including AI-related skills are associated with higher advertised salaries, particularly in technology and financial services", sourceUrl: "https://www.pwc.ie/media-centre/press-releases/2026/ai-jobs-barometer-2026.html" }
+  - { date: 2026-07-27, note: "Roles with AI-related skills carry global average salary premium of 62%, up from 57% last year", sourceUrl: "https://www.pwc.ie/media-centre/press-releases/2026/ai-jobs-barometer-2026.html" }
+  - { date: 2026-07-27, note: "Jobs requiring specific AI skills grew 69% at 8.6% annually, nearly twice as high as 2024", sourceUrl: "https://www.pwc.ie/media-centre/press-releases/2026/ai-jobs-barometer-2026.html" }
+  - { date: 2026-07-27, note: "Technology, media and telecommunications sectors saw highest share in AI job growth at 11%, with health at less than 1%", sourceUrl: "https://www.pwc.ie/media-centre/press-releases/2026/ai-jobs-barometer-2026.html" }
   - { date: 2026-07-23, note: "PwC's 2026 Global AI Jobs Barometer analysed over a billion job ads from six continents.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
   - { date: 2026-07-23, note: "Productivity growth is 40% higher at companies most exposed to AI versus least exposed companies.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
   - { date: 2026-07-23, note: "Jobs professionalised by AI are growing twice as fast as jobs democratised by AI with 42% faster wage growth since 2021.", sourceUrl: "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html" }
@@ -70,7 +80,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-07-23
+updatedDate: 2026-07-27
 ---
 
 ## AI Hiring Explodes in Ireland

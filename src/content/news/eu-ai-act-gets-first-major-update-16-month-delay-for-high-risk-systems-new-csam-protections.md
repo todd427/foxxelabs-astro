@@ -10,6 +10,14 @@ significance: "high"
 entities: ["European Commission", "European Parliament", "Council of the European Union", "Digital Omnibus", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-27, note: "The provisional agreement sets the new application date for stand-alone high-risk AI systems at 2 December 2027 and for high-risk AI systems embedded in products at 2 August 2028.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-27, note: "The provisional agreement extends certain simplified requirements granted to small and medium-sized enterprises to small mid-cap companies (SMEs and SMCs), including simplified technical documentation", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-27, note: "The provisional agreement reinstates the obligation for providers to register AI systems in the EU database for high-risk systems where they consider their systems to be exempted from classification a", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-07-27, note: "The transparency rules of the AI Act will come into effect in August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "The AI Act entered into force on 1 August 2024 and will be fully applicable 2 years later on 2 August 2026, with some exceptions for prohibited AI practices and AI literacy obligations which entered i", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "The rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028 as a result of the political agreement on the proposal to simplify the AI Act", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "A political agreement on the AI omnibus was reached on 7 May 2026, which sets clear implementation timelines for rules governing high-risk AI systems, with systems in certain high-risk areas applying ", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "The provisional agreement clarifies the competences of the AI Office for the supervision of AI systems based on general-purpose AI models by listing exceptions where national authorities remain compet", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-20, note: "Council presidency and European Parliament negotiators reached a provisional agreement on a proposal to streamline certain rules regarding artificial intelligence on 7 May 2026", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-20, note: "Provisions on high-risk AI systems are due to enter into force on 2 August 2026", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-20, note: "The new application dates for high-risk rules would be 2 December 2027 for stand-alone high-risk AI systems and 2 August 2028 for high-risk AI systems embedded in products", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
@@ -65,7 +73,7 @@ updates:
   - { date: 2026-06-08, note: "European negotiators agree on Digital Omnibus amendments, deferring high-risk AI compliance by 16 months while introducing new prohibitions on non-consensual intimate imagery.", sourceUrl: "https://artificialintelligenceact.eu" }
   - { date: 2026-05-29, note: "EU negotiators agree on landmark amendments to AI Act, deferring compliance deadlines and introducing strict prohibitions on non-consensual intimate content.", sourceUrl: "https://artificialintelligenceact.eu" }
 draft: true
-updatedDate: 2026-07-20
+updatedDate: 2026-07-27
 ---
 
 ## EU Reshapes AI Regulation with First Major Update to Landmark Framework

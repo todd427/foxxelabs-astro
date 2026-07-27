@@ -10,6 +10,8 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-27, note: "The Bill will empower Market Surveillance Authorities (MSAs) with a structured enforcement toolkit ranging from cooperative compliance notices to prohibition, seizure, formal sanctions including fines", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-07-27, note: "On 7 May 2026, Council presidency and European Parliament negotiators reached a provisional agreement on the Digital Omnibus on AI package, the first amendments to the EU AI Act since its adoption in ", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-26, note: "The AIF IRL-Antenna will provide startups, SMEs, researchers and public sector organisations with streamlined access to world-class AI resources, technical expertise, training programmes and innovatio", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
   - { date: 2026-07-26, note: "Google DeepMind published research in July 2026 examining how AI agents are transforming scientific discovery from proposing novel hypotheses to designing experiments.", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
   - { date: 2026-07-26, note: "Co-Scientist, an AI agent from Google DeepMind, returned five potential explanations ranked by priority to microbiologist José Penadés within two days for a problem his team at Imperial College London", sourceUrl: "https://deepmind.google/public-policy/conjecture-machines-ai-agents-and-the-new-validation-bottleneck-in-science/" }
@@ -324,7 +326,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-07-26
+updatedDate: 2026-07-27
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

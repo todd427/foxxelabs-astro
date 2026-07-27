@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Thinking Machines Lab", "Inkling", "Nvidia", "Moonshot AI", "Kimi K2.5", "Bridgewater Associates"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-27, note: "Moonshot released Kimi K3 on July 16, 2026 as a 2.8-trillion-parameter open-weight mixture-of-experts model with ~16 of 896 experts active per token, native vision, and a 1-million-token context windo", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Kimi K3 is the largest open-weight model released to date, with full open weights scheduled for July 27.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Moonshot shipped Kimi K2.7 Code on June 12, 2026 with +21.8% improvement over K2.6 on Kimi Code Bench v2, plus a HighSpeed variant with ~6× faster inference.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Zhipu released GLM-5.2 on June 13, 2026 with MIT-licensed weights landing on Hugging Face around June 17.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "GLM-5.2 scored 91.2% on GPQA Diamond and matches or beats GPT-5.5 on long-horizon coding at roughly 1/6 the cost.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "MiniMax M3 posted 59.0% on SWE-bench Pro in June 2026, the top open-weight score, edging past Kimi K2.6's record of 58.6% from April.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Qwen family crossed 700 million Hugging Face downloads as of January 2026 with 113,000+ derivative models.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Qwen 3.7 Max shipped API-only on May 19, 2026 and is not open-weight, while the open Qwen line is Qwen 3.6 (April 2026, Apache 2.0).", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "DeepSeek V4 Pro was released on April 24, 2026 under MIT license with 1.6T total / 49B active parameters and a 1-million-token context window.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "DeepSeek V4 Pro achieved SWE-bench Verified 80.6% as of its April 24, 2026 release, the top published open-source SWE-bench Verified score.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
+  - { date: 2026-07-27, note: "Mistral Large 3 was released on December 2, 2025 under Apache 2.0 license with MoE architecture of 675B total / 41B active and 128K context.", sourceUrl: "https://www.taskade.com/blog/open-source-llms" }
   - { date: 2026-07-20, note: "Moonshot AI unveiled Kimi K3 on July 16, 2026.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
   - { date: 2026-07-20, note: "Kimi K3 boasts 2.7 trillion parameters, making it the largest open-weight large language model available at the time of release.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
   - { date: 2026-07-20, note: "Moonshot claimed K3 performed competitively with Anthropic's Fable 5 and substantially outperformed Anthropic's Opus 4.8 and OpenAI's GPT 5.6 Sol and GPT 5.5.", sourceUrl: "https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" }
@@ -32,7 +43,7 @@ updates:
   - { date: 2026-07-18, note: "In late June 2026, Bridgewater Associates and Thinking Machines published joint research showing their fine-tuned open-source model scored 84.7% on financial reasoning tests, beating top proprietary A", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
   - { date: 2026-07-18, note: "Thinking Machines says it brought AI to market and demonstrated revenue in roughly nine months, compared to OpenAI's roughly five years and Anthropic's roughly three years.", sourceUrl: "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" }
 draft: false
-updatedDate: 2026-07-20
+updatedDate: 2026-07-27
 ---
 
 ## Inkling Arrives as Open-Weight Competitor

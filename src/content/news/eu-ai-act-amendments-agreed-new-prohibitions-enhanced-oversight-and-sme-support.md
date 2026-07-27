@@ -10,6 +10,31 @@ significance: "high"
 entities: ["EU AI Act", "AI Office", "European Commission", "SMEs", "SMCs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-27, note: "The Irish Regulation of Artificial Intelligence Bill completed the Seanad Second Stage on 1 July 2026 and is currently in the Seanad Committee Stage", sourceUrl: "https://www.lexology.com/library/detail.aspx?g=25bf031c-432c-45ac-a363-614e1c315e07" }
+  - { date: 2026-07-27, note: "The UK's AI Regulation and Safety Bill passed its second Lords reading on July 3, 2026", sourceUrl: "https://cubbbix.com/blog/ai-regulation-july-2026-global-update/" }
+  - { date: 2026-07-27, note: "China began enforcing companion AI rules on July 15, 2026", sourceUrl: "https://cubbbix.com/blog/ai-regulation-july-2026-global-update/" }
+  - { date: 2026-07-27, note: "On August 2, 2026, the European Commission can start fining general-purpose AI providers, and Article 50 transparency rules switch on across all 27 member states", sourceUrl: "https://cubbbix.com/blog/ai-regulation-july-2026-global-update/" }
+  - { date: 2026-07-27, note: "The European Commission presented an Action Plan on Cybersecurity and Artificial Intelligence on 7 July 2026, developed with the European Union Agency for Cybersecurity (ENISA)", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "The European Commission published guidelines on transparency obligations for providers and deployers of certain AI systems on 20 July 2026", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-27, note: "Threat actors are exploiting CVE-2026-6875, a sandbox escape vulnerability in ServiceNow AI Platform that allows unauthenticated users to run arbitrary code.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "CVE-2026-6875 has a CVSS score of 9.5.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "ServiceNow released patches for CVE-2026-6875 throughout June in versions: Brazil EA/GA, Australia Patch 2, Zurich Patch 7b/9, and Yokohama Patch 12 Hot Fix 1b/Patch 13.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "Searchlight Cyber reported the CVE-2026-6875 vulnerability to ServiceNow on April 1, 2026.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "The CVE-2026-6875 exploitation targets the pre-authentication endpoint /assessment_thanks.do using HTTP POST requests.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "Attackers are achieving code execution through a different sandbox-escape gadget chain than the one documented in public proof-of-concept exploits.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
+  - { date: 2026-07-27, note: "81.2% of companies running AI packages have at least one known vulnerability.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "99.9% of AI vulnerability alerts with an available fix remain unpatched.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "74.1% of companies running AI packages have at least one critical CVE.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "56% of AI adopters have deployed agent frameworks into production.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "51.5% of AI adopters use AI to build custom applications.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "Between 87% and 98% of organizations across the three major cloud providers have not configured customer-managed encryption keys for their AI services.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "64% of AI adopters have deployed vector databases that connect LLMs to internal documents, customer records, and proprietary knowledge.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "Businesses using retrieval-augmented generation operate an average of 3.78 vector databases.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "Nearly 30% of AI adopters store at least one AI key in an insecure location.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "The EU AI Act introduces additional requirements for high-risk AI systems beginning on August 2, 2026.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "Colorado's amended AI law takes effect on January 1, 2027.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "China has expanded its cybersecurity framework with AI-specific requirements and mandatory labeling of AI-generated content.", sourceUrl: "https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/" }
+  - { date: 2026-07-27, note: "ServiceNow is enhancing instance security by severely restricting the type of code that can run in sandbox contexts.", sourceUrl: "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html" }
   - { date: 2026-07-26, note: "The Digital Package on Simplification (AI omnibus) has been adopted on 19 November 2025 and a political agreement was reached on 7 May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-26, note: "The final text of the AI Omnibus Regulation entered into force in July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-26, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body which will act as Ireland's central coordinating auth", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
@@ -165,7 +190,7 @@ updates:
   - { date: 2026-06-21, note: "The Digital Omnibus amendments are expected to be formally adopted with final approval anticipated in June 2026 and publication expected in July 2026.", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
   - { date: 2026-06-21, note: "Once adopted, the Digital Omnibus amendments will enter into force on the third day following publication in the Official Journal and will be binding in their entirety and directly applicable in all M", sourceUrl: "https://www.globalpolicywatch.com/2026/06/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions-2/" }
 draft: false
-updatedDate: 2026-07-26
+updatedDate: 2026-07-27
 ---
 
 ## Major Amendments Agreed
