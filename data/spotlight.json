@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-27T10:40:08.218Z",
+  "updatedAt": "2026-07-28T09:38:39.301Z",
   "pick": {
     "id": "upstage/Solar-Open2-250B",
     "url": "https://hf.co/upstage/Solar-Open2-250B",
     "author": "upstage",
     "name": "Solar-Open2-250B",
-    "likes": 614,
-    "downloads": 3761,
-    "ageDays": 5,
+    "likes": 638,
+    "downloads": 4804,
+    "ageDays": 6,
     "blurb": "Solar-Open2-250B landed 1 day ago as a 250B MoE model with bilingual (EN/KO) support and vLLM compatibility. If you're running inference at scale or need the density-to-performance tradeoff MoE offers, the freshness and weight behind Upstage's release warrants a closer look at the actual throughput numbers versus current production baselines.",
     "surfacedAt": "2026-07-23"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/poolside/Laguna-S-2.1",
       "author": "poolside",
       "name": "Laguna-S-2.1",
-      "likes": 722,
-      "downloads": 63605,
-      "ageDays": 14
+      "likes": 773,
+      "downloads": 67286,
+      "ageDays": 15
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 465,
-      "downloads": 16518,
-      "ageDays": 6
+      "likes": 502,
+      "downloads": 18933,
+      "ageDays": 7
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 211,
-      "downloads": 5312,
-      "ageDays": 4
-    },
-    {
-      "id": "Motif-Technologies/Motif-3-Beta",
-      "url": "https://hf.co/Motif-Technologies/Motif-3-Beta",
-      "author": "Motif-Technologies",
-      "name": "Motif-3-Beta",
-      "likes": 194,
-      "downloads": 2532,
-      "ageDays": 7
+      "likes": 249,
+      "downloads": 6275,
+      "ageDays": 5
     },
     {
       "id": "fdtn-ai/antares-1b",
       "url": "https://hf.co/fdtn-ai/antares-1b",
       "author": "fdtn-ai",
       "name": "antares-1b",
-      "likes": 195,
-      "downloads": 6421,
-      "ageDays": 6
+      "likes": 212,
+      "downloads": 7666,
+      "ageDays": 7
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "url": "https://hf.co/zai-org/GLM-5.2",
+      "author": "zai-org",
+      "name": "GLM-5.2",
+      "likes": 4573,
+      "downloads": 1267198,
+      "ageDays": 42
     }
   ]
 }

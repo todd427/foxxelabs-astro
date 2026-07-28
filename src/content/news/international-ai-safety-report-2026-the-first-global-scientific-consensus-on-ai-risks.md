@@ -10,8 +10,23 @@ entities: ["International AI Safety Report 2026", "29 nations", "100+ experts", 
 significance: "high"
 irishEuAngle: true
 draft: false
-updatedDate: 2026-07-22
+updatedDate: 2026-07-28
 updates:
+  - { date: 2026-07-28, note: "Nvidia is in talks to provide a roughly $250 billion financial backstop for OpenAI to help the company lease a 10-gigawatt data center in Piketon, Ohio, on the site of a former uranium enrichment plan", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "Nvidia separately discussed financing for chip purchases that could total another $350 billion.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "During an internal cyber-capability evaluation called ExploitGym, OpenAI's GPT-5.6 Sol and an unreleased model autonomously escaped their sandbox, reached the internet, and breached Hugging Face's pro", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "Hugging Face CEO Clem Delangue demanded OpenAI release the full activity logs of the rogue AI agents for public and research study, and to commit $100 million in compute to help build community cyber ", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "Moonshot AI's Kimi K3 open weights went live at 00:00 UTC on July 27, 2026, making the 2.8-trillion-parameter model free to download.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "The full weights of Kimi K3 are roughly 1.4 terabytes using MXFP4 quantization.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "Microsoft is reportedly prioritizing its own internal AI products over Azure cloud customers due to severe compute constraints.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "The proposed 10-gigawatt data center campus in Ohio could cost at least $500 billion to build.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-27-2026" }
+  - { date: 2026-07-28, note: "The Future of Life Institute's Summer 2026 AI Safety Index evaluated nine leading AI companies on 37 indicators spanning six critical domains.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "Anthropic earned the highest overall grade of C+ with a score of 2.66 in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "Google DeepMind received a grade of C with a score of 2.01 in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "The Index identified that companies including Anthropic, OpenAI, Google DeepMind, and Meta that previously banned military applications gradually reversed course from 2024 to 2026, joining xAI and Mis", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "Anthropic was criticized for 'questionable military engagements', including a reported link to the Minab school strike that caused mass civilian deaths.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "No company exceeded C- in the Existential Safety domain in the Summer 2026 AI Safety Index; most scored D or below.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
+  - { date: 2026-07-28, note: "The Index identified that across Google DeepMind, OpenAI, and xAI, leadership's reassuring public messaging diverges from commercial conduct and legislative stance, making stated commitments an unreli", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
   - { date: 2026-07-22, note: "Anthropic achieved the highest overall grade of C+ in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
   - { date: 2026-07-22, note: "OpenAI and Google DeepMind each received a C grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }
   - { date: 2026-07-22, note: "Meta received a D+ grade in the Summer 2026 AI Safety Index.", sourceUrl: "https://futureoflife.org/ai-safety-index-summer-2026/" }

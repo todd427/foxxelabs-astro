@@ -10,6 +10,18 @@ significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-28, note: "Ireland secured €10 million in joint European and Irish Government funding to establish the AIF IRL-Antenna.", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
+  - { date: 2026-07-28, note: "The initiative is supported by the Irish Government through the Department of Further and Higher Education, Research, Innovation and Science (DFHERIS), alongside European funding provided through Euro", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
+  - { date: 2026-07-28, note: "Google DeepMind's mathematical reasoning system scored in the top 1% on International Mathematical Olympiad (IMO) problems.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Google DeepMind's mathematical reasoning research team published their approach in a paper submitted to NeurIPS 2026.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Research groups at University of Cambridge and UCSF published separate but complementary approaches in July using diffusion models adapted for molecular dynamics to predict protein dynamics.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Research at MIT and Stanford analyzed reasoning models and found that the key factor for success on hard mathematical and logical problems is not model size but how the model is trained to self-correc", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "DeepMind published work on a new training approach called 'prospective credit assignment' for teaching models to anticipate how current decisions will affect outcomes many steps ahead.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "DeepMind's prospective credit assignment approach showed meaningful improvement in success rates on SWE-Bench for issues requiring more than 10 steps to resolve.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Research by the Allen Institute for AI found that hallucinations in language models are more likely to occur when a model is asked about facts that were underrepresented in training data.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Meta AI released results on video understanding models with the ability to answer questions about what happens across long video sequences (30+ minutes).", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Research published at ICML 2026 described a new training method called 'selective activation sparsity' that trains models to use only the most relevant parameters for each specific task.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
+  - { date: 2026-07-28, note: "Models trained with selective activation sparsity performed comparably to models three times their size on reasoning benchmarks.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
   - { date: 2026-07-11, note: "Ireland's publicly released programme for the EU presidency aims to strengthen the EU's capacities in cloud computing and artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-11, note: "The Digital Omnibus proposal is a draft law seeking to amend various digital laws including the General Data Protection Regulation.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-11, note: "The German court argued that contrary to the traditional liability exemption applicable to search engine operators when presenting third-party content, the AI overview created new and independent cont", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
@@ -39,7 +51,7 @@ updates:
   - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
-updatedDate: 2026-07-11
+updatedDate: 2026-07-28
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies

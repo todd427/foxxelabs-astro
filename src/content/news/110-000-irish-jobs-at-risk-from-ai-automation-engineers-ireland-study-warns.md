@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-28, note: "In the United States, employment in jobs with a high risk of AI substitution declined on average by more than 4% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "In the United States, employment in jobs with a low risk of AI substitution increased by 13% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "The share of low-risk jobs in total US employment increased from 23% to 25% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "The share of high-risk jobs in total US employment dropped from 35% to 33% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "Between 2019 and 2025, jobs with a high substitution risk grew by around 15 percentage points less than jobs with a low substitution risk in the United States.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "AI substitution risk has had no significant impact on wage growth in the United States since 2019.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "Firms that adopt AI technologies in the European Union experience higher productivity gains, without the technology replacing labour in the short term.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
+  - { date: 2026-07-28, note: "Firms with high levels of AI adoption or AI-related investment in the European Union are more likely to employ additional staff.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
   - { date: 2026-07-24, note: "Three-quarters of 1,000 people questioned in research for Engineers Ireland by Ipsos B & A said they feared AI would lead to job losses.", sourceUrl: "https://www.irishtimes.com/business/2026/07/03/clerical-and-high-tech-workers-most-at-risk-from-ai-growth-study-finds/" }
   - { date: 2026-07-24, note: "45% of Irish employees expect AI to negatively impact or replace their current role in the future, up 19 percentage points compared with the prior year.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
   - { date: 2026-07-24, note: "Only 3.6% of Irish companies have used AI technology to replace a full position.", sourceUrl: "https://www.thinkbusiness.ie/articles/ai-job-loss-fears-rise-irish-workers-employment-insights-report-2026/" }
@@ -45,7 +53,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-07-28
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

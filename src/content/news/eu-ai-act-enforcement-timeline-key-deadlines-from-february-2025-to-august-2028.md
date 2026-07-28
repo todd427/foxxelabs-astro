@@ -10,6 +10,17 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-28, note: "Under the Digital Markets Act decision, search data sharing begins in January 2027, with Android interoperability due by July 2027.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Prior Labs was founded by Frank Hutter, Noah Hollmann, and Sauraj Gambhir roughly 18 months ago.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Prior Labs' TabPFN model series was published in Nature and set the state of the art on tabular benchmarks across hundreds of independent academic studies.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Oracle signed a $300 billion five-year cloud contract with OpenAI covering 4.5 gigawatts of capacity as part of Stargate, the $500 billion AI infrastructure initiative.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Gemini 3.5 Pro reportedly missed its July 17 target, marking the third slip for Google's flagship model.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Moonshot AI's Kimi K3 has a 2.8-trillion-parameter open model that took the top spot on a major coding leaderboard.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Moonshot AI has promised Kimi K3's open weights by July 27, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Epoch AI tested three leading AI text detectors—Pangram, GPTZero, and Originality.ai—against text generated in imitation of a specific author's style and found that up to 18 percent of AI-generated pa", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "A new benchmark called RadLE 2.0 found that AI models frequently deliver wrong findings in radiology tasks with full confidence, reading X-rays and producing incorrect diagnoses without any signal of ", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories" }
+  - { date: 2026-07-28, note: "Prohibited AI practices under the AI Act became effective in February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-28, note: "AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material have been prohibited following amendments agreed in the AI Omnibus.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-26, note: "Chatbot disclosure requirements became live and binding on July 10, 2026, requiring users to be clearly informed they are interacting with an AI system at the start of any interaction.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
   - { date: 2026-07-26, note: "Violations of prohibited AI practices under the EU AI Act carry maximum fines of €35 million or 7% of global annual turnover, whichever is higher.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
   - { date: 2026-07-26, note: "Violations of high-risk AI obligations under the EU AI Act carry maximum fines of €15 million or 3% of global annual turnover, whichever is higher.", sourceUrl: "https://teachaitools.blog/blog/eu-ai-act-enforcement-begins-july-2026" }
@@ -383,7 +394,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-07-26
+updatedDate: 2026-07-28
 ---
 
 ## The EU AI Act's Phased Entry into Force
