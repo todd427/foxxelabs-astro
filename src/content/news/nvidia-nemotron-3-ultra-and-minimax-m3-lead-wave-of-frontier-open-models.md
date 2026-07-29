@@ -9,8 +9,26 @@ sourceUrl: "https://medium.com/nlplanet/nvidia-launches-550b-moe-llm-weekly-ai-n
 significance: "high"
 entities: ["NVIDIA", "Nemotron 3 Ultra", "MiniMax", "M3", "Anthropic", "Claude Opus 4.8", "Google DeepMind", "DiffusionGemma", "OpenAI", "Anthropic"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-06-26, note: "SpaceX acquired AI coding tool Cursor for $60 billion", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "SpaceX announced a $75 billion IPO", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "OpenAI purchased startup Ona to boost its Codex platform", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "US government banned Anthropic's Fable 5 and Mythos 5 models citing national security concerns", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Z.ai released GLM-5.2 open weights LLM under MIT license", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "GLM-5.2 has 753B parameters with Mixture-of-Experts architecture and 1 million token context window", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "GLM-5.2 became leading open weights model on Artificial Analysis Intelligence Index with score of 51", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Google DeepMind introduced DiffusionGemma, achieving up to 4x faster inference than autoregressive models with 1000+ tokens/sec on single NVIDIA H100", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "DiffusionGemma is 26B Mixture of Experts model with 3.8B active parameters", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Anthropic released Claude Fable 5 on 2026-06-09", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "OpenAI released GPT-5.5 on 2026-04-23", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Google DeepMind released Gemma 4 family with four open models (E2B, E4B, 26B MoE, 31B Dense) under Apache 2.0 license on 2026-04-02", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Gemma 4 31B model ranks as #3 open model globally on Arena AI text leaderboard", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Gemma 4 26B model ranks at #6 on Arena AI text leaderboard", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "Apple announced third-generation Apple Foundation Models (AFM 3) family of five models built with Google on 2026-06-08", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "AFM 3 lineup includes AFM 3 Core (3B dense), AFM 3 Core Advanced (20B sparse multimodal on-device), AFM 3 Cloud, ADM 3 Cloud for image generation, and AFM 3 Cloud Pro on NVIDIA GPUs in Google Cloud", sourceUrl: "https://dentro.de/ai/news/" }
+  - { date: 2026-06-26, note: "OpenAI projected to have $14 billion losses in 2026 with no expected profitability until 2029-2030", sourceUrl: "https://dentro.de/ai/news/" }
 draft: false
+updatedDate: 2026-06-26
 ---
 
 ## NVIDIA Nemotron 3 Ultra Sets New Open-Weight Bar

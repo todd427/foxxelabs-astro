@@ -9,8 +9,13 @@ sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-inte
 significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Oifig Intleachta Shaorga na hÉireann", "AI Office of Ireland", "Health Products Regulatory Authority", "Central Bank of Ireland", "Data Protection Commission", "An Garda Síochána", "European Commission"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-02, note: "Market Surveillance Authorities receive new powers including conducting unannounced inspections, remote audits, requiring access to technical documentation and datasets, and ordering withdrawal or rec", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
+  - { date: 2026-07-02, note: "A Cooperation Forum will meet at least quarterly to support consistent regulation of AI across sectors in Ireland.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
+  - { date: 2026-07-02, note: "The AI Office must ensure the establishment of, or participation in an EU-level equivalent of, a national AI regulatory sandbox.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
+  - { date: 2026-07-02, note: "The national AI regulatory sandbox will provide priority access for SMEs and start-ups free of charge.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
 draft: false
+updatedDate: 2026-07-02
 ---
 
 ## New Bill Gives Full Effect to EU AI Act

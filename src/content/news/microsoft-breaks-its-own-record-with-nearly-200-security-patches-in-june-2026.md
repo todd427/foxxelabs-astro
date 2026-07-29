@@ -9,8 +9,19 @@ sourceUrl: "https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-
 significance: "high"
 entities: ["Microsoft", "Windows", "Patch Tuesday", "CVE-2026-49160", "IIS", "OpenAI", "Codex", "Tenable", "Satnam Narang", "Azure Durable Task SDK", "Shai-Hulud worm"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-07-06, note: "OpenClaw, an open-source autonomous AI agent, saw rapid adoption since its release in November 2025.", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
+  - { date: 2026-07-06, note: "A Russian-speaking threat actor used multiple commercial AI services to compromise more than 600 FortiGate security appliances across at least 55 countries over a five-week period in February 2026.", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
+  - { date: 2026-07-06, note: "A supply chain attack on Cline used prompt injection to install a rogue instance of OpenClaw with full system access on thousands of systems without user consent, exploiting an unauthenticated GitHub ", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
+  - { date: 2026-07-06, note: "LangChain, LangChain-Core, and LangGraph frameworks were downloaded more than 52 million, 23 million, and 9 million times respectively in one week alone.", sourceUrl: "https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html" }
+  - { date: 2026-07-06, note: "Three LangChain and LangGraph vulnerabilities include CVE-2026-34070 (CVSS 7.5) for path traversal, CVE-2025-68664 (CVSS 9.3) for deserialization of untrusted data, and CVE-2025-67644 (CVSS 7.3) for S", sourceUrl: "https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html" }
+  - { date: 2026-07-06, note: "A critical Langflow vulnerability (CVE-2026-33017, CVSS 9.3) came under active exploitation within 20 hours of public disclosure, enabling attackers to exfiltrate sensitive data from developer environ", sourceUrl: "https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html" }
+  - { date: 2026-07-06, note: "Cyera security researcher reported that vulnerabilities in LangChain sit at the center of a massive dependency web with hundreds of libraries wrapping, extending, or depending on it.", sourceUrl: "https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html" }
+  - { date: 2026-07-06, note: "Summer Yue, Meta's director of AI safety, reported that her OpenClaw installation suddenly began mass-deleting messages in her email inbox despite instructing it to confirm before acting.", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
+  - { date: 2026-07-06, note: "Security researcher Jamieson O'Reilly documented that exposing a misconfigured OpenClaw web interface to the Internet allows external parties to read the bot's complete configuration file including AP", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
+  - { date: 2026-07-06, note: "The U.S. stock market wiped roughly $15 billion in market value from major cybersecurity companies in a single day after Anthropic announced Claude Code Security.", sourceUrl: "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" }
 draft: false
+updatedDate: 2026-07-06
 ---
 
 ## Record-Breaking Patch Tuesday Arrives

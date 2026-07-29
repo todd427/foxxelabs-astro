@@ -10,7 +10,7 @@ significance: "high"
 entities: ["Anthropic", "Claude Fable 5", "Mythos", "Opus 4.8", "Boris Cherny"]
 irishEuAngle: false
 updates: []
-draft: false
+draft: true
 ---
 
 ## Anthropic Releases Claude Fable 5

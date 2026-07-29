@@ -41,6 +41,22 @@
  * ever went to Supabase). Both sides have entities -> entity-aware rule; either
  * side lacks them -> higher-bar text-only threshold.
  *
+ * CLAIM IDENTITY (the strongest arm, when claims are supplied): findDuplicate
+ * consults the claim substrate FIRST. Two stories that share a primary event
+ * claim are the same story regardless of lexical score. Same-event is keyed on
+ * the claim's own identity fields — (specific entity, event_date) — before its
+ * prose (see claims.js sameEventClaim / statementsMatch). The lexical + event
+ * arms below remain the backstop for stories without captured claims.
+ *
+ * IMPORTANT — claim identity is for the LIVE gate only (findDuplicate: pairwise,
+ * candidate folds into one best match, no transitivity). It is deliberately NOT
+ * used as an edge in the offline connected-components collapse (review): a
+ * multi-event roundup article shares one claim with story A and another with B,
+ * so a claim edge chains unrelated stories into one component through the hub.
+ * The offline collapse edge stays lexical-only; a safe offline same-event mode
+ * needs non-transitive pairwise anchoring + a lexical/entity co-floor + a
+ * moving-story guard + canonical = folding hub, which is a separate mode.
+ *
  * Not an embedding model: embeddings of two different "Ireland AI Office"
  * stories are also near-identical, so they would not separate same-event from
  * same-topic any better. Event identity is lexical-distinctive, not semantic.
@@ -55,7 +71,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { aliasCanonical, entityKey } from './entities.js';
-import { statementsMatch } from './claims.js';
+import { statementsMatch, sameEventClaim } from './claims.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -154,6 +170,12 @@ export function entityOverlap(aEnts = [], bEnts = []) {
 // cosine + union-Jaccard miss. Requiring BOTH a shared org AND a shared number
 // keeps distinct same-org stories ("Microsoft buys X", "Microsoft patches 200")
 // from collapsing. The window is enforced by the caller's corpus, not here.
+//
+// NOTE: this arm only fires for events NAMED BY A RECORD-SCALE NUMBER (patch
+// counts, CVE tallies, breach sizes). Events named by "what + when" — model
+// launches, funding rounds, acquisitions, appointments — carry no headline
+// number >= 100, so this arm cannot see them; the claim-identity arm
+// (sameEventClaim, keyed on (specific entity, event_date)) covers that class.
 const YEAR_RE = /^(?:1[89]|20)\d{2}$/;
 
 /** Record-scale integers in headline text: >= min and not a calendar year.
@@ -262,8 +284,15 @@ export function isDuplicate(s) {
 // share "Microsoft June 2026 Patch Tuesday: record ~200 fixes" even when their
 // bodies diverge. This consults the captured claims, so it sees event identity the
 // full-text cosine + union-Jaccard miss. It is high-precision/low-recall (the
-// statement matcher is deliberately strict — false merge worse than false miss),
-// so the lexical+event score() stays the backstop, not the sole gate.
+// matchers are deliberately strict — false merge worse than false miss), so the
+// lexical+event score() stays the backstop, not the sole gate.
+//
+// Two match modes, tried in order (see claims.js):
+//   1. IDENTITY — sameEventClaim: shared (specific entity, event_date). Catches
+//      launches / funding / M&A, whose identity is "what + when" and which the
+//      lexical and salient-number arms structurally miss.
+//   2. PROSE — statementsMatch: near-identical statement text. Catches recurring
+//      or undated events that carry no clean date key.
 //
 // Granularity (which claims count as "primary") is the open calibration question
 // from the parent brief; until step-2 extraction is tuned, the heuristic is the
@@ -274,11 +303,17 @@ export function primaryEventClaims(claims = []) {
   return primary.length ? primary : claims;
 }
 
-/** True when two claim sets share a primary event claim (same assertion, possibly
- *  from different sources). Reuses statementsMatch from the claim substrate. */
+/** True when two claim sets share a primary event claim — by identity first
+ *  (shared specific entity + event_date), then by near-identical statement text.
+ *  Reuses sameEventClaim + statementsMatch from the claim substrate. */
 export function sharePrimaryEventClaim(aClaims = [], bClaims = []) {
   const a = primaryEventClaims(aClaims);
   const b = primaryEventClaims(bClaims);
+  // Identity first: a shared (specific entity, event_date) tuple is the same event
+  // even when statements are angled differently and bodies diverge — the exact
+  // launch / funding / M&A case the lexical and salient-number arms miss.
+  for (const x of a) for (const y of b) if (sameEventClaim(x, y)) return true;
+  // Prose fallback: near-identical statements (recurring or undated events).
   for (const x of a) for (const y of b) if (statementsMatch(x.statement, y.statement)) return true;
   return false;
 }
@@ -451,9 +486,23 @@ export function demoteToDraft(filePath) {
  *  to the corpus. Canonical = LATEST-published article in the component (the
  *  current state of a moving story); the rest are proposed for demotion. A member
  *  whose title AND publishDate both equal the canonical's is a true re-emission,
- *  flagged for hard delete; everything else is demoted to draft, never deleted. */
+ *  flagged for hard delete; everything else is demoted to draft, never deleted.
+ *
+ *  KNOWN LIMITATION (do not auto-apply blind on a forked-hub corpus): canonical
+ *  is chosen by publishDate, which is WRONG when an EARLIER article has become
+ *  the folding hub (larger timeline / later updatedDate). It also cannot MERGE
+ *  two rival hubs' timelines — it only demotes. A correct same-event collapse
+ *  wants canonical = folding hub and a timeline union, not a bare demote. */
 function review(daysBack, edgeTxt) {
   const corpus = loadCorpusWindow(daysBack);
+  // NOTE: the collapse edge is intentionally LEXICAL-ONLY. A claim-identity edge
+  // here over-merges: connected components is transitive, and a multi-event
+  // "roundup" article shares one claim with story A and another with story B,
+  // chaining unrelated stories into one component through the hub. Claim identity
+  // belongs in the LIVE gate (findDuplicate — pairwise, folds into one best match,
+  // no transitivity), not in whole-corpus clustering. A safe offline same-event
+  // collapse needs non-transitive pairwise anchoring + a lexical/entity co-floor
+  // + a moving-story guard + canonical = folding hub (see docs) — a separate mode.
   const opts = edgeTxt ? { edgeTxt } : {};
   const comps = connectedComponents(corpus, (s) => isStrongDuplicate(s, opts));
 

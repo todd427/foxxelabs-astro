@@ -9,8 +9,17 @@ sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ec
 significance: "high"
 entities: ["European Central Bank", "United States", "ChatGPT"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-07, note: "AI adoption increases labour productivity levels by 4% on average in the EU, with no evidence of reduced employment in the short run.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "Study analyzed AI adoption effects across more than 12,000 European firms.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "Medium and large firms in the EU experience substantially stronger productivity gains from AI adoption than smaller firms.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "An extra percentage point of investment in software and data infrastructure increases AI's productivity effect by 2.4 percentage points in EU firms.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "An additional percentage point spent on workforce training amplifies AI's productivity gains by 5.9 percentage points in EU firms.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "45% of large EU firms (more than 250 employees) have deployed AI, compared with only 24% of small firms (10 to 49 employees).", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "In financially developed EU countries such as Sweden and the Netherlands, around 36% of firms use big data analytics and AI in 2024.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
+  - { date: 2026-07-07, note: "In less financially developed EU economies such as Romania and Bulgaria, AI adoption rates are around 28% in 2024.", sourceUrl: "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe" }
 draft: false
+updatedDate: 2026-07-07
 ---
 
 ## US Employment Divergence Widens Along AI Substitution Lines

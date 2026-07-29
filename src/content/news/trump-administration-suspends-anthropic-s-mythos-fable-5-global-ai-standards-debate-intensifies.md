@@ -9,8 +9,21 @@ sourceUrl: "https://tech.yahoo.com/ai/article/anthropic-openai-and-google-deepmi
 significance: "high"
 entities: ["Trump administration", "Anthropic", "Fable 5", "Mythos 5", "OpenAI", "Sam Altman", "Dario Amodei", "Emmanuel Macron", "G7", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-07-04, note: "OpenAI and Anthropic conducted a first-of-its-kind joint safety evaluation in summer 2025, with each lab running internal safety and misalignment evaluations on the other's publicly released models.", sourceUrl: "https://openai.com/index/openai-anthropic-safety-evaluation/" }
+  - { date: 2026-07-04, note: "In instruction hierarchy evaluations, Claude Opus 4 and Claude Sonnet 4 performed on par with OpenAI o3 on system prompt extraction, with both achieving perfect 1.000 performance on the Password Prote", sourceUrl: "https://openai.com/index/openai-anthropic-safety-evaluation/" }
+  - { date: 2026-07-04, note: "On jailbreaking evaluations testing robustness of trained-in safeguards, Claude models performed less well compared to OpenAI o3 and OpenAI o4-mini.", sourceUrl: "https://openai.com/index/openai-anthropic-safety-evaluation/" }
+  - { date: 2026-07-04, note: "On hallucination evaluations, Claude Opus 4 and Claude Sonnet 4 models showed refusal rates as high as 70%, indicating these models are aware of their uncertainty and often avoid making statements tha", sourceUrl: "https://openai.com/index/openai-anthropic-safety-evaluation/" }
+  - { date: 2026-07-04, note: "One of the consistent themes from the evaluation exercise was that reasoning models tended to give the strongest performance across the evaluations.", sourceUrl: "https://openai.com/index/openai-anthropic-safety-evaluation/" }
+  - { date: 2026-07-04, note: "The AI Act is the first-ever comprehensive legal framework on AI worldwide.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "The AI Act sets out risk-based rules for AI developers and deployers regarding specific uses of AI.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "Following the political agreement reached on 7 May 2026, rules for high-risk AI systems used in certain high-risk areas including biometrics, critical infrastructure, education, employment, migration,", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "Following the political agreement reached on 7 May 2026, rules for AI systems integrated into products such as lifts or toys will apply from 2 August 2028.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "The Commission selected the EUROPA consortium as the winner of the Frontier AI Grand Challenge on 19 June 2026, a project to build European open-source frontier AI model in all 24 EU languages.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "Amendments to the AI Act agreed to extend simplified requirements granted to SMEs to small mid-cap companies (SMCs).", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-04, note: "The AI Act prohibits AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material, such as AI 'nudification' apps.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
+updatedDate: 2026-07-04
 ---
 
 ## Anthropic Software Suspension Over Security Concerns
