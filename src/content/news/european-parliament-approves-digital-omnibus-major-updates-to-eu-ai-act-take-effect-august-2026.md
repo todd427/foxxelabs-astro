@@ -10,6 +10,16 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-29, note: "The AI Act Omnibus entered into force across the EU on 27 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-29, note: "The AI Act Omnibus forms part of the EU's broader Omnibus legislative package aimed at simplifying digital regulation.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "The compliance deadline for stand-alone high-risk AI systems (HRAIS) has been extended to 2 December 2027.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "The compliance deadline for AI systems that are products or safety components of products (e.g. medical devices, toys, vehicles) has been extended to 2 August 2028.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "AI systems placed on the EU market before the new HRAIS deadline dates will not be subject to high-risk AI requirements unless they undergo a substantial modification after those dates.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "Transparency obligations under Art. 50 AI Act — including disclosure requirements for chatbots and deepfakes — apply from 2 August 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "The AI Act Omnibus extends the simplified compliance framework previously available only to SMEs to companies with up to 750 employees and €150 million in annual revenue (small mid-caps).", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-07-29, note: "The AI Act Omnibus reinforces the AI Office's powers and centralises oversight of AI systems built on general-purpose AI models, with the stated aim of reducing governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-29, note: "The AI Act rules on General-Purpose AI (GPAI) models became effective in August 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-07-29, note: "On 19 June 2026, the Commission selected the EUROPA consortium as the winner of the Frontier AI Grand Challenge, a project to build a European open-source frontier AI model in all 24 EU languages.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-21, note: "The Council presidency and European Parliament negotiators reached a provisional agreement on streamlining AI rules on 7 May 2026.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-21, note: "The agreement postpones the application deadline for stand-alone high-risk AI systems to 2 December 2027.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-21, note: "The agreement postpones the application deadline for high-risk AI systems embedded in regulated products to 2 August 2028.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
@@ -125,7 +135,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-07-21
+updatedDate: 2026-07-29
 ---
 
 ## Parliament Approves Digital Omnibus

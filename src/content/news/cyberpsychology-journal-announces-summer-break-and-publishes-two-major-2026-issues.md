@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-29, note: "Issue 3, Volume 20 of Cyberpsychology journal contains twelve articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-29, note: "Cyberpsychology journal describes itself as a diamond open access (non-profit) publication whose growth is not tied to financial expansion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-29, note: "The journal will reopen for new manuscript submissions on 1 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-29, note: "Issue 2, Volume 20 of Cyberpsychology journal contains eight articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-07-29, note: "Gaming Disorder is recognised in the World Health Organization's International Classification of Diseases, 11th Revision (ICD-11).", sourceUrl: "https://simplyputpsych.co.uk/psych-101-1/cyberpsychology-exploring-the-intersection-of-human-behaviour-and-digital-environments" }
+  - { date: 2026-07-29, note: "The Proteus Effect proposes that the appearance of a person's avatar in virtual environments can influence their real-world behaviour and self-perception.", sourceUrl: "https://simplyputpsych.co.uk/psych-101-1/cyberpsychology-exploring-the-intersection-of-human-behaviour-and-digital-environments" }
+  - { date: 2026-07-29, note: "The online disinhibition effect is a concept from early cyberpsychology research suggesting that people may act differently behind the perceived anonymity of a screen.", sourceUrl: "https://simplyputpsych.co.uk/psych-101-1/cyberpsychology-exploring-the-intersection-of-human-behaviour-and-digital-environments" }
+  - { date: 2026-07-29, note: "Simply Put Psych describes itself as an independent academic blog, not a peer-reviewed journal.", sourceUrl: "https://simplyputpsych.co.uk/psych-101-1/cyberpsychology-exploring-the-intersection-of-human-behaviour-and-digital-environments" }
   - { date: 2026-07-28, note: "All articles published in Cyberpsychology are open access", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-28, note: "Cyberpsychology has an SJR of 0.852 for 2025", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-07-27, note: "Issue 3, Volume 20 of Cyberpsychology contains twelve high-quality articles.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -133,7 +141,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-28
+updatedDate: 2026-07-29
 ---
 
 ## Summer Submission Break Announced
