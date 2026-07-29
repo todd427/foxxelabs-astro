@@ -237,7 +237,8 @@ class Component extends DCLogic {
       tor:{n:'Toronto',c:'Canada',lat:43.65,lon:-79.38},
       ny:{n:'New York',c:'USA',lat:40.71,lon:-74.0},
       sh:{n:'Shanghai',c:'China',lat:31.23,lon:121.47},
-      dg:{n:'Donegal',c:'Ireland',lat:54.90,lon:-8.00}
+      dg:{n:'Donegal',c:'Ireland',lat:54.90,lon:-8.00},
+      dub:{n:'Dublin',c:'Ireland',lat:53.35,lon:-6.26}
     };
     const O = {
       openai:{label:'OpenAI',color:'#1fd498'},
@@ -251,7 +252,8 @@ class Component extends DCLogic {
       deepseek:{label:'DeepSeek',color:'#6d78ff'},
       cn:{label:'China · other',color:'#ff6b6b'},
       west:{label:'Independent',color:'#ffce4a'},
-      foxxe:{label:'Foxxe AI · Ireland',color:'#ff5ea8'}
+      foxxe:{label:'Foxxe AI · Ireland',color:'#ff5ea8'},
+      adapt:{label:'ADAPT · DCU',color:'#8fe04a'}
     };
     const M = [
       ['2017-06','Transformer','Google Brain','google','mv',0.065,34,1],
@@ -379,7 +381,10 @@ class Component extends DCLogic {
       ['2025-10','toddric v2 (DPO)','Foxxe AI','foxxe','dg',8.03,68,1],
       ['2026-06','macalla-v1','Foxxe AI','foxxe','dg',8.19,72,0],
       ['2026-06','macalla-v2','Foxxe AI','foxxe','dg',8.19,72,0],
-      ['2026-07','macalla-v5','Foxxe AI','foxxe','dg',8.19,74,0]
+      ['2026-07','macalla-v5','Foxxe AI','foxxe','dg',8.19,74,0],
+      ['2021-10','Irish GPT-2','ADAPT · DCU','adapt','dub',0.124,40,1],
+      ['2022-03','gaBERT','ADAPT · DCU','adapt','dub',0.11,42,1],
+      ['2022-03','gaELECTRA','ADAPT · DCU','adapt','dub',0.11,41,1]
     ];
     this.MODELS = M.map((r,i)=>{
       const [date,name,lab,org,city,p,s,open] = r;
