@@ -1,0 +1,55 @@
+name: Astro Check
+
+# Type-checks the site. This used to run inside `npm run build`, which meant
+# every deploy paid for it — and at ~1,140 articles `astro check` outgrew
+# Node's default 4GB old-space and started killing the build outright
+# ("Reached heap limit Allocation failed"). Measured on the current corpus:
+#
+#   astro check   ~5.3GB peak, ~20s   <- needs the raised heap
+#   astro build   ~1.5GB peak, ~12s   <- fine on defaults
+#
+# So the deploy path now runs `astro build` alone and stays lean, and the
+# type-check lives here where a big heap is free and a slow job costs nothing.
+#
+# TRADEOFF: a type error no longer blocks the host's deploy — the site will
+# publish and this workflow will go red instead. Turn on branch protection
+# requiring this check if you want it blocking again.
+#
+# Runs on content pushes too (the daily generate-content job commits news
+# markdown), since astro check validates content-collection frontmatter and
+# that is exactly where generated content tends to break.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# A new push supersedes an in-flight run on the same ref.
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check Astro files
+        run: npm run check
+
+      - name: Build site
+        run: npm run build

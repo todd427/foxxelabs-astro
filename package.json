@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "NODE_OPTIONS=--max-old-space-size=6144 astro check && astro build",
+    "build": "astro build",
+    "check": "NODE_OPTIONS=--max-old-space-size=6144 astro check",
+    "build:full": "npm run check && npm run build",
     "preview": "astro preview",
     "astro": "astro",
     "generate-news": "node scripts/generate-content.js news",
