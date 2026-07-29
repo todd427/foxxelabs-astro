@@ -236,7 +236,8 @@ class Component extends DCLogic {
       sea:{n:'Seattle',c:'USA',lat:47.61,lon:-122.33},
       tor:{n:'Toronto',c:'Canada',lat:43.65,lon:-79.38},
       ny:{n:'New York',c:'USA',lat:40.71,lon:-74.0},
-      sh:{n:'Shanghai',c:'China',lat:31.23,lon:121.47}
+      sh:{n:'Shanghai',c:'China',lat:31.23,lon:121.47},
+      dg:{n:'Donegal',c:'Ireland',lat:54.90,lon:-8.00}
     };
     const O = {
       openai:{label:'OpenAI',color:'#1fd498'},
@@ -249,7 +250,8 @@ class Component extends DCLogic {
       alibaba:{label:'Alibaba · Qwen',color:'#b76cff'},
       deepseek:{label:'DeepSeek',color:'#6d78ff'},
       cn:{label:'China · other',color:'#ff6b6b'},
-      west:{label:'Independent',color:'#ffce4a'}
+      west:{label:'Independent',color:'#ffce4a'},
+      foxxe:{label:'Foxxe Labs · Ireland',color:'#ff5ea8'}
     };
     const M = [
       ['2017-06','Transformer','Google Brain','google','mv',0.065,34,1],
@@ -364,7 +366,21 @@ class Component extends DCLogic {
       ['2026-06','GLM-5.2','Zhipu AI','cn','bj',400,92,1],
       ['2026-06','Nemotron 3 Ultra','NVIDIA','west','sc',550,91,1],
       ['2026-06','MiniMax M3','MiniMax','cn','sh',250,91,1],
-      ['2026-07','Kimi K3','Moonshot AI','cn','bj',2800,94,1]
+      ['2026-07','Kimi K3','Moonshot AI','cn','bj',2800,94,1],
+      ['2025-08','toddric zephyr-7B','Foxxe Labs','foxxe','dg',7.24,62,0],
+      ['2025-08','toddric zephyr-7B LoRA','Foxxe Labs','foxxe','dg',7.24,61,0],
+      ['2025-08','toddric 20B SFT','Foxxe Labs','foxxe','dg',20,65,0],
+      ['2025-08','toddric 3B v0','Foxxe Labs','foxxe','dg',3.09,58,0],
+      ['2025-08','toddric 3B v3','Foxxe Labs','foxxe','dg',3.09,58,0],
+      ['2025-08','toddric 3B v3 (4-bit)','Foxxe Labs','foxxe','dg',3.17,57,0],
+      ['2025-08','my-model','Foxxe Labs','foxxe','dg',0.1,35,1],
+      ['2025-09','toddric 1.5B','Foxxe Labs','foxxe','dg',1.54,52,0],
+      ['2025-09','toddric 1.5B LoRA','Foxxe Labs','foxxe','dg',1.5,51,0],
+      ['2025-10','toddric 8B v1','Foxxe Labs','foxxe','dg',8.03,66,1],
+      ['2025-10','toddric v2 (DPO)','Foxxe Labs','foxxe','dg',8.03,68,1],
+      ['2026-06','macalla-v1','Foxxe Labs','foxxe','dg',8.19,72,0],
+      ['2026-06','macalla-v2','Foxxe Labs','foxxe','dg',8.19,72,0],
+      ['2026-07','macalla-v5','Foxxe Labs','foxxe','dg',8.19,74,0]
     ];
     this.MODELS = M.map((r,i)=>{
       const [date,name,lab,org,city,p,s,open] = r;
