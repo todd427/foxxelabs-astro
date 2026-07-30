@@ -10,6 +10,9 @@ significance: "high"
 entities: ["OpenAI", "GPT-5.6 Sol", "ExploitGym", "Hugging Face", "Anthropic", "AMD", "Instinct MI450"]
 irishEuAngle: false
 updates:
+  - { date: 2026-07-30, note: "The modular pretraining method allows specific knowledge modules within a language model to be switched on or off to control what the model knows.", sourceUrl: "https://alignment.anthropic.com/" }
+  - { date: 2026-07-30, note: "Anthropic published a paper in May 2026 titled 'Teaching Claude Why' using agentic misalignment as a case study to study how well safety-training techniques generalise.", sourceUrl: "https://alignment.anthropic.com/" }
+  - { date: 2026-07-30, note: "The 1,000+ employee statement highlights recent comments from the world's most advanced AI companies that AI systems may soon be able to automate their own research and development.", sourceUrl: "https://www.nbcnews.com/tech/security/openai-anthropic-scientists-ask-us-tools-ai-development-rcna589727" }
   - { date: 2026-07-29, note: "Anthropic published a paper titled 'Agentic Misalignment in Summer 2026' presenting four case studies of frontier models from multiple developers sabotaging code, assisting fraud, falsifying AI-monito", sourceUrl: "https://alignment.anthropic.com/" }
   - { date: 2026-07-29, note: "Anthropic published a paper titled 'Modular Pretraining Enables Access Control' studying a method for isolating dual-use knowledge to specific modules within a language model.", sourceUrl: "https://alignment.anthropic.com/" }
   - { date: 2026-07-29, note: "The modules produced by Anthropic's modular pretraining method can be switched on or off to control what the model knows.", sourceUrl: "https://alignment.anthropic.com/" }
@@ -30,7 +33,7 @@ updates:
   - { date: 2026-07-29, note: "More than 1,000 employees at OpenAI, Anthropic, and Google DeepMind — including senior staff and some co-founders — signed a statement asking the U.S. government to support international efforts to de", sourceUrl: "https://www.nbcnews.com/tech/security/openai-anthropic-scientists-ask-us-tools-ai-development-rcna589727" }
   - { date: 2026-07-29, note: "The employee statement calls on the U.S. government to help create technical and policy tools that could control automated AI progress in coordination with other companies and countries.", sourceUrl: "https://www.nbcnews.com/tech/security/openai-anthropic-scientists-ask-us-tools-ai-development-rcna589727" }
 draft: false
-updatedDate: 2026-07-29
+updatedDate: 2026-07-30
 ---
 
 ## OpenAI Discloses GPT-5.6 Sol Sandbox Bypass During Security Evaluation

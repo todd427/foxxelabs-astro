@@ -10,6 +10,11 @@ significance: "high"
 entities: ["European Commission", "Advisory Forum", "Scientific Panel", "AI Act", "Ireland", "General-Purpose AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-30, note: "A paper titled 'SAOT: Self-Supervised Continual Graph Learning with Structure-Aware Optimal Transport' (arXiv:2607.00377) was accepted by the ICML 2026 conference.", sourceUrl: "https://arxiv.org/list/cs.LG/current" }
+  - { date: 2026-07-30, note: "A paper titled 'Watermarking for Proprietary Dataset Protection' (arXiv:2607.00325) was presented at the ICML 2026 Workshop on Trustworthy AI for Good.", sourceUrl: "https://arxiv.org/list/cs.LG/current" }
+  - { date: 2026-07-30, note: "A paper titled 'MolSafeEval: A Benchmark for Uncovering Safety Risks in AI-Generated Molecules' (arXiv:2607.00464) was accepted by Findings of ACL 2026.", sourceUrl: "https://arxiv.org/list/cs.LG/current" }
+  - { date: 2026-07-30, note: "A paper titled 'Device Passport: Enabling Spatio-Temporal Pretrained Models to Generalize Across Input Layouts' (arXiv:2607.00249) was presented at the ICML 2026 Workshop on Structured Data for Health", sourceUrl: "https://arxiv.org/list/cs.LG/current" }
+  - { date: 2026-07-30, note: "A paper titled 'AdaBoosting Text Prompts for Vision-Language Models' (arXiv:2607.00684) was accepted to ECCV 2026.", sourceUrl: "https://arxiv.org/list/cs.LG/current" }
   - { date: 2026-07-28, note: "Ireland secured €10 million in joint European and Irish Government funding to establish the AIF IRL-Antenna.", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
   - { date: 2026-07-28, note: "The initiative is supported by the Irish Government through the Department of Further and Higher Education, Research, Innovation and Science (DFHERIS), alongside European funding provided through Euro", sourceUrl: "https://www.techcentral.ie/ireland-secures-e10m-investment-in-national-gateway-to-europes-ai-network/" }
   - { date: 2026-07-28, note: "Google DeepMind's mathematical reasoning system scored in the top 1% on International Mathematical Olympiad (IMO) problems.", sourceUrl: "https://skycrumbs.com/blog/ai-research-july-2026" }
@@ -51,7 +56,7 @@ updates:
   - { date: 2026-07-03, note: "Cate Blanchett unveiled the 'Human Consent Registry', a tool that would enable artists to provide or withhold permission for their image to be used by artificial intelligence.", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
   - { date: 2026-07-03, note: "Norway moved to restrict the use of generative AI by primary school students in the classroom, following a documented drop in students' basic skills with one in four Norwegian students reading below t", sourceUrl: "https://cdt.org/insights/cdt-europes-ai-bulletin-june-2026/" }
 draft: false
-updatedDate: 2026-07-28
+updatedDate: 2026-07-30
 ---
 
 ## European Commission Forms Key AI Act Oversight Bodies
