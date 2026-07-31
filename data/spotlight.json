@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-30T09:40:38.685Z",
+  "updatedAt": "2026-07-31T09:51:31.025Z",
   "pick": {
     "id": "upstage/Solar-Open2-250B",
     "url": "https://hf.co/upstage/Solar-Open2-250B",
     "author": "upstage",
     "name": "Solar-Open2-250B",
-    "likes": 702,
-    "downloads": 12411,
-    "ageDays": 8,
+    "likes": 708,
+    "downloads": 12911,
+    "ageDays": 9,
     "blurb": "Solar-Open2-250B landed 1 day ago as a 250B MoE model with bilingual (EN/KO) support and vLLM compatibility. If you're running inference at scale or need the density-to-performance tradeoff MoE offers, the freshness and weight behind Upstage's release warrants a closer look at the actual throughput numbers versus current production baselines.",
     "surfacedAt": "2026-07-23"
   },
@@ -17,44 +17,44 @@
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 329,
-      "downloads": 9225,
-      "ageDays": 7
-    },
-    {
-      "id": "poolside/Laguna-S-2.1",
-      "url": "https://hf.co/poolside/Laguna-S-2.1",
-      "author": "poolside",
-      "name": "Laguna-S-2.1",
-      "likes": 835,
-      "downloads": 73246,
-      "ageDays": 17
+      "likes": 356,
+      "downloads": 10241,
+      "ageDays": 8
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 563,
-      "downloads": 24542,
-      "ageDays": 9
+      "likes": 585,
+      "downloads": 26928,
+      "ageDays": 10
+    },
+    {
+      "id": "poolside/Laguna-S-2.1",
+      "url": "https://hf.co/poolside/Laguna-S-2.1",
+      "author": "poolside",
+      "name": "Laguna-S-2.1",
+      "likes": 856,
+      "downloads": 76212,
+      "ageDays": 18
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 4653,
-      "downloads": 1527760,
-      "ageDays": 44
+      "likes": 4687,
+      "downloads": 1651533,
+      "ageDays": 45
     },
     {
-      "id": "fdtn-ai/antares-1b",
-      "url": "https://hf.co/fdtn-ai/antares-1b",
-      "author": "fdtn-ai",
-      "name": "antares-1b",
-      "likes": 235,
-      "downloads": 9820,
+      "id": "XYZAILab/XYZ-Aquila-mini",
+      "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
+      "author": "XYZAILab",
+      "name": "XYZ-Aquila-mini",
+      "likes": 345,
+      "downloads": 579,
       "ageDays": 9
     }
   ]

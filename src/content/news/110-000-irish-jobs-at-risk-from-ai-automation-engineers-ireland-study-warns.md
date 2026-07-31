@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-07-31, note: "Meta is cutting approximately 20% of its Irish workforce, double the planned global average reduction at the company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-31, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-07-31, note: "The share of job postings in Ireland mentioning AI stands at 15%, the highest of any European country tracked by the Indeed AI Tracker, ahead of Spain (13%) and the UK (9%).", sourceUrl: "https://www.hiringlab.org/uk/blog/2026/07/27/july-2026-european-labour-market-chartbook/" }
+  - { date: 2026-07-31, note: "Since the end of 2023, overall job postings across France, Germany, Ireland, Italy, Spain and the UK have moved sideways or downward, while AI-related postings have increased substantially.", sourceUrl: "https://www.hiringlab.org/uk/blog/2026/07/27/july-2026-european-labour-market-chartbook/" }
   - { date: 2026-07-28, note: "In the United States, employment in jobs with a high risk of AI substitution declined on average by more than 4% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
   - { date: 2026-07-28, note: "In the United States, employment in jobs with a low risk of AI substitution increased by 13% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
   - { date: 2026-07-28, note: "The share of low-risk jobs in total US employment increased from 23% to 25% between 2019 and 2025.", sourceUrl: "https://www.ecb.europa.eu/press/economic-bulletin/focus/2026/html/ecb.ebbox202604_01~d9259db536.en.html" }
@@ -53,7 +57,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-28
+updatedDate: 2026-07-31
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk
