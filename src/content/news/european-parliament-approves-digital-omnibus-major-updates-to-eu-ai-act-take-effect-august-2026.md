@@ -10,6 +10,23 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-01, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 3 of Volume 20 on 26 June 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 3, Volume 20 of Cyberpsychology journal contains twelve articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 3, Volume 20 of Cyberpsychology journal covers topics including online incivility and victimisation, digital piracy, and presentation on social media.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "All articles in the Cyberpsychology journal are published as open access.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "The Cyberpsychology journal closed new submissions from 16 June to 31 August 2026, citing a sharp increase in submissions in 2025 and the need to protect editor workload.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "The Cyberpsychology journal will reopen for new manuscript submissions on 1 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "The Cyberpsychology journal describes itself as a diamond open access (non-profit) journal, meaning its growth is not tied to financial expansion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 2, Volume 20 of Cyberpsychology journal was published on 14 April 2026 and contains eight open-access articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 2, Volume 20 of Cyberpsychology journal covers topics including AI aversion, online sexual health knowledge, online dating, and videoconference fatigue.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 1, Volume 20 of Cyberpsychology journal was published on 28 January 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "Issue 1, Volume 20 of Cyberpsychology journal covers topics including adolescents' and young people's mobile and social network habits, prosocial and antisocial online behaviours, social media influen", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-01, note: "The EU Digital Omnibus on AI (Regulation (EU) 2026/1744) entered into force on 27 July 2026, three days after its publication in the Official Journal.", sourceUrl: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force" }
+  - { date: 2026-08-01, note: "AI Act transparency obligations under Article 50 — covering chatbot disclosure, synthetic content marking, and deepfake labelling — became enforceable on 2 August 2026.", sourceUrl: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force" }
+  - { date: 2026-08-01, note: "Article 5 of the EU AI Act now prohibits AI systems designed to generate non-consensual intimate imagery, with the ban applying from 2 December 2026.", sourceUrl: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force" }
+  - { date: 2026-08-01, note: "High-risk AI systems under Annex III of the EU AI Act now have a compliance deadline of 2 December 2027, extended from the original August 2026 deadline.", sourceUrl: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force" }
+  - { date: 2026-08-01, note: "High-risk AI systems under Annex I of the EU AI Act (AI embedded in regulated products) have a compliance deadline extended to 2 August 2028.", sourceUrl: "https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force" }
+  - { date: 2026-08-01, note: "Violations of EU AI Act transparency obligations may result in fines of up to €15 million or 3% of total annual worldwide turnover, whichever is higher.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-29, note: "The AI Act Omnibus entered into force across the EU on 27 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-29, note: "The AI Act Omnibus forms part of the EU's broader Omnibus legislative package aimed at simplifying digital regulation.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-29, note: "The compliance deadline for stand-alone high-risk AI systems (HRAIS) has been extended to 2 December 2027.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
@@ -135,7 +152,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-07-29
+updatedDate: 2026-08-01
 ---
 
 ## Parliament Approves Digital Omnibus

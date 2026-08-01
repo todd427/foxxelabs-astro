@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-07-31T09:51:31.025Z",
+  "updatedAt": "2026-08-01T09:16:14.679Z",
   "pick": {
-    "id": "upstage/Solar-Open2-250B",
-    "url": "https://hf.co/upstage/Solar-Open2-250B",
-    "author": "upstage",
-    "name": "Solar-Open2-250B",
-    "likes": 708,
-    "downloads": 12911,
-    "ageDays": 9,
-    "blurb": "Solar-Open2-250B landed 1 day ago as a 250B MoE model with bilingual (EN/KO) support and vLLM compatibility. If you're running inference at scale or need the density-to-performance tradeoff MoE offers, the freshness and weight behind Upstage's release warrants a closer look at the actual throughput numbers versus current production baselines.",
-    "surfacedAt": "2026-07-23"
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+    "author": "deepseek-ai",
+    "name": "DeepSeek-V4-Flash-0731",
+    "likes": 1188,
+    "downloads": 15366,
+    "ageDays": 1,
+    "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
+    "surfacedAt": "2026-08-01"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 356,
-      "downloads": 10241,
-      "ageDays": 8
+      "likes": 376,
+      "downloads": 10771,
+      "ageDays": 9
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 585,
-      "downloads": 26928,
-      "ageDays": 10
+      "likes": 605,
+      "downloads": 27892,
+      "ageDays": 11
     },
     {
       "id": "poolside/Laguna-S-2.1",
       "url": "https://hf.co/poolside/Laguna-S-2.1",
       "author": "poolside",
       "name": "Laguna-S-2.1",
-      "likes": 856,
-      "downloads": 76212,
-      "ageDays": 18
+      "likes": 865,
+      "downloads": 77021,
+      "ageDays": 19
+    },
+    {
+      "id": "upstage/Solar-Open2-250B",
+      "url": "https://hf.co/upstage/Solar-Open2-250B",
+      "author": "upstage",
+      "name": "Solar-Open2-250B",
+      "likes": 715,
+      "downloads": 13426,
+      "ageDays": 10
     },
     {
       "id": "zai-org/GLM-5.2",
       "url": "https://hf.co/zai-org/GLM-5.2",
       "author": "zai-org",
       "name": "GLM-5.2",
-      "likes": 4687,
-      "downloads": 1651533,
-      "ageDays": 45
-    },
-    {
-      "id": "XYZAILab/XYZ-Aquila-mini",
-      "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
-      "author": "XYZAILab",
-      "name": "XYZ-Aquila-mini",
-      "likes": 345,
-      "downloads": 579,
-      "ageDays": 9
+      "likes": 4719,
+      "downloads": 1683442,
+      "ageDays": 46
     }
   ]
 }
