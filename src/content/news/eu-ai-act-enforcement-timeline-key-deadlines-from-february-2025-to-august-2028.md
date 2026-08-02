@@ -10,6 +10,14 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-02, note: "New transparency rules under the EU AI Act started to apply on 2 August 2026.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
+  - { date: 2026-08-02, note: "The AI Office holds enforcement powers over GPAI models, including the ability to request technical documentation, evaluate models, require corrective measures, and issue fines for non-compliance.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-02, note: "A July 2026 action plan on Cybersecurity and AI sets out a coordinated approach to help Member States, businesses and public authorities address cybersecurity and resilience challenges posed by the mo", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-02, note: "The Digital Omnibus on AI deferred full compliance for high-risk AI systems listed in Annex III — including recruitment tools, credit scoring, education, law enforcement, and border control systems — ", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-02, note: "AI embedded in products already covered by EU product safety law under Annex I — such as medical devices, machinery, and toys — faces a compliance deadline of 2 August 2028.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-02, note: "Implementation of the high-risk AI regime stalled because member states were slow to designate national competent authorities, and the harmonised standards and conformity assessment tools that high-ri", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-02, note: "The Article 50 chatbot disclosure requirement — requiring organisations to inform users they are interacting with an AI — applies from 2 August 2026 to any organisation deploying a chatbot or AI assis", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-08-02, note: "Improper handling of personal data by AI systems, especially in biometric or emotion recognition applications, may lead to GDPR-related penalties of up to EUR 20,000,000 or 4% of annual worldwide turn", sourceUrl: "https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" }
   - { date: 2026-08-01, note: "From 2 August 2026, the European Commission's AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-01, note: "From 2 August 2026, new transparency rules require certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-01, note: "Chatbots and other interactive AI systems will have to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
@@ -411,7 +419,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-01
+updatedDate: 2026-08-02
 ---
 
 ## The EU AI Act's Phased Entry into Force

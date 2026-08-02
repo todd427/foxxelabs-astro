@@ -10,6 +10,20 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-02, note: "Paul Byrne was appointed as the first Chief Executive Officer of Oifig IS na hÉireann (the AI Office of Ireland).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "The Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on 21 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "The AI Office of Ireland is expected to be operational by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "Ireland adopted a distributed model of regulation for EU AI Act enforcement, leveraging existing regulatory experience rather than creating a single monolithic regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "The Act amends the Central Bank Act 1942 and the Competition and Consumer Protection Act 2014 to enable those bodies to impose administrative sanctions for the purposes of the AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "Paul Byrne joins the AI Office of Ireland from the Medical Council of Ireland, where he served as Executive Director of Education, Innovation and Artificial Intelligence.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "Paul Byrne is the President of the Council on Licensure, Enforcement and Regulation (CLEAR), the international alliance of professional and occupational regulators.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-02, note: "Ireland took over the six-month rotating presidency of the Council of the European Union in July 2026.", sourceUrl: "https://www.techpolicy.press/blaming-ireland-misses-where-europes-digital-agenda-is-really-set/" }
+  - { date: 2026-08-02, note: "As of mid-2026, Ireland's Data Protection Commission had imposed more than €4 billion in cumulative GDPR fines on companies including Meta, TikTok, LinkedIn, WhatsApp and X.", sourceUrl: "https://www.techpolicy.press/blaming-ireland-misses-where-europes-digital-agenda-is-really-set/" }
+  - { date: 2026-08-02, note: "The €4 billion cumulative GDPR fine total by Ireland's DPC is by far the highest of any EU data protection authority.", sourceUrl: "https://www.techpolicy.press/blaming-ireland-misses-where-europes-digital-agenda-is-really-set/" }
+  - { date: 2026-08-02, note: "Niamh Sweeney, a former senior Meta official, is one of the commissioners of Ireland's Data Protection Commission.", sourceUrl: "https://www.techpolicy.press/blaming-ireland-misses-where-europes-digital-agenda-is-really-set/" }
+  - { date: 2026-08-02, note: "The EU is negotiating a Digital Omnibus package that could amend parts of several flagship digital laws, including aspects of GDPR and the AI Act, as part of a broader competitiveness pivot.", sourceUrl: "https://www.techpolicy.press/blaming-ireland-misses-where-europes-digital-agenda-is-really-set/" }
   - { date: 2026-07-24, note: "The AI Act will be fully applicable 2 years after entry into force on 2 August 2026, with some exceptions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-24, note: "The rules for high-risk AI systems embedded into regulated products have an extended transition period until 2 August 2028.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-07-24, note: "A prohibition on AI systems that generate non-consensual sexually explicit and intimate content or child sexual abuse material was added to Article 5.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -227,7 +241,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-08-02
 ---
 
 ## The Bill's Purpose and Structure

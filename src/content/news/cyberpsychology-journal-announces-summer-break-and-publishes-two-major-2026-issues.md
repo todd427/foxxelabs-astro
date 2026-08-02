@@ -10,6 +10,10 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-02, note: "Issue 1 of Volume 20 was published on 28 January 2026, marking the start of the journal's 20th volume.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-02, note: "In February 2026, IADT (Institute of Art Design + Technology, Dún Laoghaire, Ireland) hosted an EU Erasmus+ Blended Intensive Programme (BIP) in Cyberpsychology.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-08-02, note: "The IADT Erasmus+ Cyberpsychology BIP ran from 23 to 27 February 2026.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
+  - { date: 2026-08-02, note: "Following the BIP, a group of IADT BSc Applied Psychology students were scheduled to travel to Estonia to complete an EU Erasmus+ BIP in Legal Psychology at Tallinn University at Easter.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-07-29, note: "Issue 3, Volume 20 of Cyberpsychology journal contains twelve articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-29, note: "Cyberpsychology journal describes itself as a diamond open access (non-profit) publication whose growth is not tied to financial expansion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-29, note: "The journal will reopen for new manuscript submissions on 1 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -141,7 +145,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-07-29
+updatedDate: 2026-08-02
 ---
 
 ## Summer Submission Break Announced
