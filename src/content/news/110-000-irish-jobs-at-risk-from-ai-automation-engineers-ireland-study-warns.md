@@ -10,6 +10,8 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-03, note: "Covalen is cutting around 700 roles at its Irish operations.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-03, note: "Sarah Friar, OpenAI's chief financial officer, has been invited to Ireland's October 2026 AI summit, according to people familiar with the plans.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-31, note: "Meta is cutting approximately 20% of its Irish workforce, double the planned global average reduction at the company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-31, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-31, note: "The share of job postings in Ireland mentioning AI stands at 15%, the highest of any European country tracked by the Indeed AI Tracker, ahead of Spain (13%) and the UK (9%).", sourceUrl: "https://www.hiringlab.org/uk/blog/2026/07/27/july-2026-european-labour-market-chartbook/" }
@@ -57,7 +59,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-07-31
+updatedDate: 2026-08-03
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

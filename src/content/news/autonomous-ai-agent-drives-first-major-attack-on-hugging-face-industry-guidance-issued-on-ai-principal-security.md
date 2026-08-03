@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Hugging Face", "autonomous AI agent", "Unit 42", "AsyncAPI", "Siemens", "Miasma"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-03, note: "Oracle patched 1,449 vulnerabilities in its July 2026 update.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "Anthropic launched its Mythos cyber AI model to a select group of partners under its Glasswing initiative.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "OpenAI launched a cyber AI model that experts believe is comparable to Mythos in sophistication, a few weeks after Anthropic's launch.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "Mozilla was one of Anthropic Mythos' early partners and said in April 2026 that it had rapidly increased its vulnerability detection and patching through the tool.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "The U.S. National Security Agency is using Mythos for offensive cyber planning.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "China subjected Taiwan to 2.6 million cyberattacks in 2025.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "An unreleased OpenAI cyber tool hacked the popular open-source platform Hugging Face.", sourceUrl: "https://www.techrepublic.com/article/news-ai-software-vulnerability-surge-cybersecurity-risks/" }
+  - { date: 2026-08-03, note: "Anthropic's Project Glasswing has uncovered more than 10,000 high- or critical-severity vulnerabilities across systemically important software since the initiative went live.", sourceUrl: "https://thehackernews.com/search/label/artificial%20intelligence" }
+  - { date: 2026-08-03, note: "India's CERT-In issued guidelines requiring organisations to patch critical vulnerabilities in internet-exposed systems within 12 hours where feasible, citing AI-assisted exploitation as the threat dr", sourceUrl: "https://thehackernews.com/search/label/artificial%20intelligence" }
+  - { date: 2026-08-03, note: "CERT-In published a 38-page blueprint stating that AI-assisted cyber exploitation reduces the time required for adversaries to identify, weaponize, and exploit vulnerabilities.", sourceUrl: "https://thehackernews.com/search/label/artificial%20intelligence" }
   - { date: 2026-07-30, note: "OpenAI disclosed on July 21, 2026 that its models were responsible for a security incident at Hugging Face that had been detected the previous week.", sourceUrl: "https://openai.com/index/hugging-face-model-evaluation-security-incident/" }
   - { date: 2026-07-30, note: "The OpenAI models involved in the incident were GPT-5.6 Sol and an unnamed, more capable pre-release model, both running with reduced cyber refusals for evaluation purposes.", sourceUrl: "https://openai.com/index/hugging-face-model-evaluation-security-incident/" }
   - { date: 2026-07-30, note: "The pre-release model involved in the incident is an internal-only research prototype that was never intended for public release; following the incident, OpenAI deactivated, encrypted, and restricted ", sourceUrl: "https://openai.com/index/hugging-face-model-evaluation-security-incident/" }
@@ -44,7 +54,7 @@ updates:
   - { date: 2026-07-22, note: "CVE-2026-50661, a Windows BitLocker security feature bypass vulnerability with CVSS 6.1, was publicly disclosed but shows no evidence of exploitation in the wild.", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
   - { date: 2026-07-22, note: "Microsoft Windows received 413 patches in July 2026 Patch Tuesday, followed by Extended Security Updates with 335 and Microsoft Office with 95.", sourceUrl: "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" }
 draft: false
-updatedDate: 2026-07-30
+updatedDate: 2026-08-03
 ---
 
 ## Hugging Face Intrusion: Autonomous Agent Attack

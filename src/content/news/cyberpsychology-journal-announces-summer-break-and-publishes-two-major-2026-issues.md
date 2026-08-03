@@ -10,6 +10,17 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-03, note: "The journal's E-ISSN is 1802-7962.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Volume 20, Issue 3 of the journal was published on 26 June 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article titled 'Towards a typology of online users in response to incivility: A latent profile analysis across six countries', authored by Emily Ahrens, Vladimir Bojarskic", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article on bystander roles when people make suicidal disclosures on social media, authored by Rhianna Brien, Bethany Cliffe, Lisa Marzano, Maria Woloshynowych, and Jay-Mar", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes a comparative study on online victimization perceptions — covering cyberbullying, dating violence, and sexual harassment — in sexual and gender minority youth, with DOI 10.58", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article on how media discourses about adolescent sexting influence parents' attitudes and practices, with DOI 10.5817/CP2026-3-4.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article examining digital piracy through the lens of moral intensity and risk perception from a cross-cultural perspective, with DOI 10.5817/CP2026-3-11.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article using eye-tracking methodology to study how fear and humor legitimize hostility on social media, with DOI 10.5817/CP2026-3-7.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "The journal's submission portal will reopen to new manuscripts on 1 September 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-03, note: "The BPS Cyberpsychology Section Annual Conference 2026 was held at York St John University, Lord Mayor's Walk, York, on 6–7 July 2026.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
+  - { date: 2026-08-03, note: "The BPS Cyberpsychology Section Annual Conference 2026 was thematically open, welcoming abstracts from across the full breadth of cyberpsychology practice and research rather than limiting submissions", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-08-02, note: "Issue 1 of Volume 20 was published on 28 January 2026, marking the start of the journal's 20th volume.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-02, note: "In February 2026, IADT (Institute of Art Design + Technology, Dún Laoghaire, Ireland) hosted an EU Erasmus+ Blended Intensive Programme (BIP) in Cyberpsychology.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-08-02, note: "The IADT Erasmus+ Cyberpsychology BIP ran from 23 to 27 February 2026.", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
@@ -145,7 +156,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-02
+updatedDate: 2026-08-03
 ---
 
 ## Summer Submission Break Announced

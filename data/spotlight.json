@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-03T09:56:26.738Z",
+  "updatedAt": "2026-08-03T10:49:25.223Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Flash-0731",
-    "likes": 1913,
+    "likes": 1928,
     "downloads": 236076,
     "ageDays": 3,
     "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
@@ -35,7 +35,7 @@
       "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
       "author": "XYZAILab",
       "name": "XYZ-Aquila-mini",
-      "likes": 380,
+      "likes": 381,
       "downloads": 1063,
       "ageDays": 12
     },

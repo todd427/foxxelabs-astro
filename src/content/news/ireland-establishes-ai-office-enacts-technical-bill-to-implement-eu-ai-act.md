@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-03, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of EU Artificial Intelligence Act, Regulation (EU) 2024/1689.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-03, note: "Further Irish legislation to address amendments arising from the Digital Omnibus on AI will be brought forward in Autumn 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-03, note: "On 2 August 2026, new EU AI Act transparency rules took effect requiring certain AI-generated or manipulated content — including deepfakes in the form of images, audio, and video that resemble existin", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "From 2 August 2026, users must be clearly informed when they are interacting with an AI system (e.g. a chatbot, AI agent, or avatar) rather than a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "Text published to inform the public on matters of public interest where there has been no human review or editorial control must be labelled as AI-generated under the new transparency obligations.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "Fines for breaching the EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "Fines for EU institutions, bodies, and agencies breaching the AI Act transparency rules are capped at €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "Proportionality must be taken into account when applying AI Act transparency fines to small and medium-sized enterprises (SMEs) and small mid-cap companies (SMCs).", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "The European Data Protection Supervisor is responsible for enforcing AI Act transparency rules when EU institutions are providers or deployers of AI systems.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "The European Commission has published a set of official icons that providers and deployers can use for labelling AI-generated content.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-03, note: "The European Commission has published guidelines to assist providers and deployers of AI systems in meeting the new transparency obligations, including through adherence to a code of practice.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-02, note: "Paul Byrne was appointed as the first Chief Executive Officer of Oifig IS na hÉireann (the AI Office of Ireland).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-02, note: "The Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on 21 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-02, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -241,7 +252,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-02
+updatedDate: 2026-08-03
 ---
 
 ## The Bill's Purpose and Structure
