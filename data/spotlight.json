@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-02T09:20:33.935Z",
+  "updatedAt": "2026-08-03T09:56:26.738Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Flash-0731",
-    "likes": 1522,
-    "downloads": 156173,
-    "ageDays": 2,
+    "likes": 1913,
+    "downloads": 236076,
+    "ageDays": 3,
     "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
     "surfacedAt": "2026-08-01"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 393,
-      "downloads": 13164,
-      "ageDays": 10
+      "likes": 420,
+      "downloads": 14339,
+      "ageDays": 11
     },
     {
       "id": "Nanbeige/Nanbeige4.2-3B",
       "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
       "author": "Nanbeige",
       "name": "Nanbeige4.2-3B",
-      "likes": 615,
-      "downloads": 33042,
-      "ageDays": 12
-    },
-    {
-      "id": "poolside/Laguna-S-2.1",
-      "url": "https://hf.co/poolside/Laguna-S-2.1",
-      "author": "poolside",
-      "name": "Laguna-S-2.1",
-      "likes": 870,
-      "downloads": 80102,
-      "ageDays": 20
-    },
-    {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://hf.co/zai-org/GLM-5.2",
-      "author": "zai-org",
-      "name": "GLM-5.2",
-      "likes": 4741,
-      "downloads": 2050533,
-      "ageDays": 47
+      "likes": 642,
+      "downloads": 34705,
+      "ageDays": 13
     },
     {
       "id": "XYZAILab/XYZ-Aquila-mini",
       "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
       "author": "XYZAILab",
       "name": "XYZ-Aquila-mini",
-      "likes": 360,
-      "downloads": 903,
-      "ageDays": 11
+      "likes": 380,
+      "downloads": 1063,
+      "ageDays": 12
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "url": "https://hf.co/zai-org/GLM-5.2",
+      "author": "zai-org",
+      "name": "GLM-5.2",
+      "likes": 4784,
+      "downloads": 2180509,
+      "ageDays": 48
+    },
+    {
+      "id": "poolside/Laguna-S-2.1",
+      "url": "https://hf.co/poolside/Laguna-S-2.1",
+      "author": "poolside",
+      "name": "Laguna-S-2.1",
+      "likes": 898,
+      "downloads": 81584,
+      "ageDays": 21
     }
   ]
 }
