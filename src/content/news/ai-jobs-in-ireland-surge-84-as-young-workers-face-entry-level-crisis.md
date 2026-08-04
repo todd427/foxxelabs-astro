@@ -10,6 +10,15 @@ significance: "high"
 entities: ["PwC", "PwC Ireland", "Irish Department of Finance", "Stanford Institute for Economic Policy Research"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-04, note: "In Ireland, the top quartile of AI-exposed jobs showed a 4.45 times greater change in demanded skills in 2025 compared to 2019, versus just 1.15 times for the bottom quartile.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "Since 2022, the most AI-exposed companies have seen 40% higher productivity growth over those least exposed to AI.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "Jobs 'professionalised' by AI are growing twice as fast as jobs 'democratised' by AI.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "Professionalised jobs are showing 42% faster wage growth since 2021 compared to democratised jobs.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "The skills needed for the most AI-exposed jobs are changing more than twice as fast as those for the least exposed roles, a gap that is 75% larger than the gap observed the prior year.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "New tasks added to AI-exposed roles are 2.5 times more likely to rely on skills like empathy, judgement, and creativity.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "'Seniorised' entry-level roles have shown 35% growth since 2019, while other entry-level roles declined by 10%.", sourceUrl: "https://www.pwc.ie/reports/ai-jobs-barometer.html" }
+  - { date: 2026-08-04, note: "According to the Indeed AI Tracker, Ireland leads European nations with 15% of job postings mentioning AI, ahead of Spain (13%) and the UK (9%).", sourceUrl: "https://www.hiringlab.org/uk/blog/2026/07/27/july-2026-european-labour-market-chartbook/" }
+  - { date: 2026-08-04, note: "In Europe, overall job postings and AI-related job postings grew on trend until end of 2023, after which overall postings moved sideways or downward while AI-related postings increased substantially.", sourceUrl: "https://www.hiringlab.org/uk/blog/2026/07/27/july-2026-european-labour-market-chartbook/" }
   - { date: 2026-07-27, note: "15% of people aged 16 to 74 in the EU used generative AI for work in 2025, according to Eurostat", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
   - { date: 2026-07-27, note: "In Q1 2026, Germany had 288 AI-labelled job titles, followed by UK (160), France (138), Netherlands (84) and Spain (81)", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
   - { date: 2026-07-27, note: "As of Q1 2026, AI-labelled titles correspond to 4.2% of all titles in Germany, up from 0.8% four years ago", sourceUrl: "https://www.euronews.com/business/2026/07/24/the-majority-of-ai-jobs-now-sit-outside-technological-occupations-in-europe" }
@@ -80,7 +89,7 @@ updates:
   - { date: 2026-06-25, note: "The European Union's current policy approach appears ill-equipped to anticipate the forthcoming significant disruption to the labour market from artificial intelligence.", sourceUrl: "https://www.epc.eu/publication/ais-impact-on-europes-job-market-a-call-for-a-social-compact/" }
   - { date: 2026-06-25, note: "A joint report from the Economic and Social Research Institute (ESRI) and Department of Finance finds that adoption of AI in Ireland is likely to lead to moderate increases in income inequality in the", sourceUrl: "https://www.esri.ie/news/challenges-and-opportunities-posed-by-artificial-intelligence-for-income-inequality-and-the" }
 draft: false
-updatedDate: 2026-07-27
+updatedDate: 2026-08-04
 ---
 
 ## AI Hiring Explodes in Ireland

@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-03T10:49:25.223Z",
+  "updatedAt": "2026-08-04T09:48:19.698Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Flash-0731",
-    "likes": 1928,
-    "downloads": 236076,
-    "ageDays": 3,
+    "likes": 2163,
+    "downloads": 433284,
+    "ageDays": 4,
     "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
     "surfacedAt": "2026-08-01"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 420,
-      "downloads": 14339,
-      "ageDays": 11
-    },
-    {
-      "id": "Nanbeige/Nanbeige4.2-3B",
-      "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
-      "author": "Nanbeige",
-      "name": "Nanbeige4.2-3B",
-      "likes": 642,
-      "downloads": 34705,
-      "ageDays": 13
+      "likes": 456,
+      "downloads": 15381,
+      "ageDays": 12
     },
     {
       "id": "XYZAILab/XYZ-Aquila-mini",
       "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
       "author": "XYZAILab",
       "name": "XYZ-Aquila-mini",
-      "likes": 381,
-      "downloads": 1063,
-      "ageDays": 12
+      "likes": 398,
+      "downloads": 1317,
+      "ageDays": 13
     },
     {
-      "id": "zai-org/GLM-5.2",
-      "url": "https://hf.co/zai-org/GLM-5.2",
-      "author": "zai-org",
-      "name": "GLM-5.2",
-      "likes": 4784,
-      "downloads": 2180509,
-      "ageDays": 48
+      "id": "EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
+      "url": "https://hf.co/EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
+      "author": "EschaLabs",
+      "name": "Qwen3.6-35B-A3B-Escha-W2",
+      "likes": 172,
+      "downloads": 2987,
+      "ageDays": 13
     },
     {
-      "id": "poolside/Laguna-S-2.1",
-      "url": "https://hf.co/poolside/Laguna-S-2.1",
-      "author": "poolside",
-      "name": "Laguna-S-2.1",
-      "likes": 898,
-      "downloads": 81584,
-      "ageDays": 21
+      "id": "Nanbeige/Nanbeige4.2-3B",
+      "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
+      "author": "Nanbeige",
+      "name": "Nanbeige4.2-3B",
+      "likes": 659,
+      "downloads": 37256,
+      "ageDays": 14
+    },
+    {
+      "id": "XYZAILab/XYZ-Aquila-pro",
+      "url": "https://hf.co/XYZAILab/XYZ-Aquila-pro",
+      "author": "XYZAILab",
+      "name": "XYZ-Aquila-pro",
+      "likes": 355,
+      "downloads": 1388,
+      "ageDays": 13
     }
   ]
 }
