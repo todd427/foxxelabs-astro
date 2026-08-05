@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-08-04T09:48:19.698Z",
+  "updatedAt": "2026-08-05T09:47:03.351Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Flash-0731",
-    "likes": 2163,
+    "likes": 2396,
     "downloads": 433284,
-    "ageDays": 4,
+    "ageDays": 5,
     "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
     "surfacedAt": "2026-08-01"
   },
   "also": [
     {
+      "id": "LiquidAI/LFM2.5-2.6B",
+      "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
+      "author": "LiquidAI",
+      "name": "LFM2.5-2.6B",
+      "likes": 204,
+      "downloads": 47393,
+      "ageDays": 7
+    },
+    {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 456,
+      "likes": 483,
       "downloads": 15381,
-      "ageDays": 12
-    },
-    {
-      "id": "XYZAILab/XYZ-Aquila-mini",
-      "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
-      "author": "XYZAILab",
-      "name": "XYZ-Aquila-mini",
-      "likes": 398,
-      "downloads": 1317,
       "ageDays": 13
     },
     {
@@ -35,27 +35,27 @@
       "url": "https://hf.co/EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
       "author": "EschaLabs",
       "name": "Qwen3.6-35B-A3B-Escha-W2",
-      "likes": 172,
+      "likes": 200,
       "downloads": 2987,
-      "ageDays": 13
-    },
-    {
-      "id": "Nanbeige/Nanbeige4.2-3B",
-      "url": "https://hf.co/Nanbeige/Nanbeige4.2-3B",
-      "author": "Nanbeige",
-      "name": "Nanbeige4.2-3B",
-      "likes": 659,
-      "downloads": 37256,
       "ageDays": 14
     },
     {
-      "id": "XYZAILab/XYZ-Aquila-pro",
-      "url": "https://hf.co/XYZAILab/XYZ-Aquila-pro",
+      "id": "inclusionAI/Ling-3.0-flash",
+      "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
+      "author": "inclusionAI",
+      "name": "Ling-3.0-flash",
+      "likes": 123,
+      "downloads": 25,
+      "ageDays": 3
+    },
+    {
+      "id": "XYZAILab/XYZ-Aquila-mini",
+      "url": "https://hf.co/XYZAILab/XYZ-Aquila-mini",
       "author": "XYZAILab",
-      "name": "XYZ-Aquila-pro",
-      "likes": 355,
-      "downloads": 1388,
-      "ageDays": 13
+      "name": "XYZ-Aquila-mini",
+      "likes": 409,
+      "downloads": 1317,
+      "ageDays": 14
     }
   ]
 }

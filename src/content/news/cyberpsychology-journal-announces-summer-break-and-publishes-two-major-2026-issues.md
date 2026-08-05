@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'What can I do as somebody who only knows her through the internet?: An interview study on the role bystanders play when people make suicidal disclosures ", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'Framing adolescent sexting: How media discourses influence parents' attitudes and practices towards sexting' (DOI: 10.5817/CP2026-3-4).", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'Subtle cues, major shifts: Eye-tracking insights on how fear and humor legitimize hostility on social media' (DOI: 10.5817/CP2026-3-7).", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-05, note: "The journal's submission portal was closed for new submissions between June 16 and August 31, 2026, due to a summer break introduced to manage editorial workload.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-05, note: "The journal's growth is not tied to financial expansion because it operates as a diamond open access (non-profit) journal.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-03, note: "The journal's E-ISSN is 1802-7962.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-03, note: "Volume 20, Issue 3 of the journal was published on 26 June 2026.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-03, note: "Vol. 20, Issue 3 includes an article titled 'Towards a typology of online users in response to incivility: A latent profile analysis across six countries', authored by Emily Ahrens, Vladimir Bojarskic", sourceUrl: "https://cyberpsychology.eu/" }
@@ -156,7 +161,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-03
+updatedDate: 2026-08-05
 ---
 
 ## Summer Submission Break Announced

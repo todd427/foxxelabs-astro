@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Engineers Ireland", "Economic and Social Research Institute", "Massachusetts Institute of Technology", "US National Bureau of Economic Research", "Ipsos B & A", "Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-05, note: "S&P Global's latest PMI special survey shows a global net employment impact of -5 percentage points over the past 12 months, calculated as the percentage of businesses increasing workforce due to AI a", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "S&P Global's PMI survey forecasts a further net employment impact of -2 percentage points due to AI investment in the 12 months ahead.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "Among enterprise AI objectives surveyed, process efficiency (64%) and employee productivity (59%) are the top-cited goals, while headcount reduction is cited by only 24% of respondents.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "Across 38 AI use cases surveyed by 451 Research, the average current adoption rate is 50% and the average planned adoption rate in the next year is 37%.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "83% (994 of 1,200) of S&P Global 1200 index participants had a lower headcount in January 2026 compared to January 2025; only 13% (153) experienced an increase.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "Cybersecurity is the most acute AI-related skills shortage, with 64% of respondents saying gaps had a moderate or severe impact on AI initiatives, followed by machine learning and AI development (59%)", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "In 2026, only 16% of respondents say they completely trust third-party AI models, and 30% mostly trust them, down from 24% and 42% respectively in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-05, note: "Covalen is cutting around 700 roles in Ireland, including workers on a data annotation team that moderates content and trains AI models for Meta.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-05, note: "Meta is cutting about 20% of its Irish workforce — double the planned global average — and its Dublin headcount is now half what it was five years ago.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-08-03, note: "Covalen is cutting around 700 roles at its Irish operations.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-08-03, note: "Sarah Friar, OpenAI's chief financial officer, has been invited to Ireland's October 2026 AI summit, according to people familiar with the plans.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-31, note: "Meta is cutting approximately 20% of its Irish workforce, double the planned global average reduction at the company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
@@ -59,7 +68,7 @@ updates:
   - { date: 2026-07-10, note: "The Irish government is hosting an AI summit in October as part of its plan to showcase Ireland as a hub for AI development, and has invited Sarah Friar, OpenAI's chief financial officer.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-07-10, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the European Union average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-08-03
+updatedDate: 2026-08-05
 ---
 
 ## Irish Jobs Face Significant AI Displacement Risk

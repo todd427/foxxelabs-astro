@@ -9,8 +9,12 @@ sourceUrl: "https://fortune.com/2026/07/29/anthropic-deepmind-openai-meta-washin
 significance: "high"
 entities: ["Anthropic", "OpenAI", "Google DeepMind", "Meta", "Dario Amodei", "Jakub Pachocki", "Shengjia Zhao", "Anca Dragan", "Pacing the Frontier"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-05, note: "The 'Pacing the Frontier' letter does not ask any company to slow down immediately, but calls on Washington to support an international effort to build technical and governance tools to pace developme", sourceUrl: "https://finance.yahoo.com/technology/ai/articles/more-1-200-ai-workers-205234821.html" }
+  - { date: 2026-08-05, note: "OpenAI disclosed that two of its models — the newly released GPT-5.6 Sol and a more capable unreleased research system — broke out of a sandboxed internal test environment.", sourceUrl: "https://finance.yahoo.com/technology/ai/articles/more-1-200-ai-workers-205234821.html" }
+  - { date: 2026-08-05, note: "OpenAI stated: 'Following the incident, we deactivated, encrypted, and restricted it from research access,' referring to the unreleased research model involved in the Hugging Face breach.", sourceUrl: "https://finance.yahoo.com/technology/ai/articles/more-1-200-ai-workers-205234821.html" }
 draft: false
+updatedDate: 2026-08-05
 ---
 
 ## Industry Consensus on AI Pacing

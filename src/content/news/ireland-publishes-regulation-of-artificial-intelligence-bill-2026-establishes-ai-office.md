@@ -10,6 +10,23 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-05, note: "The Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on 21 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne was appointed as the first Chief Executive Officer of the AI Office of Ireland (Oifig IS na hÉireann).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of EU Artificial Intelligence Act, Regulation (EU) 2024/1689.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Ireland elected for a distributed model of regulation to meet its obligations under the EU AI Act, leveraging existing regulatory experience.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "The AI Office of Ireland is expected to be operational by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne joined the AI Office of Ireland from the Medical Council of Ireland, where he served as Executive Director of Education, Innovation and Artificial Intelligence.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne is the President of the Council on Licensure, Enforcement and Regulation (CLEAR), the international alliance of professional and occupational regulators.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne holds a Professional Diploma in Artificial Intelligence from University College Dublin.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "Paul Byrne is the author of the CLEAR Principles for Ethical and Effective AI in Professional Regulation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-05, note: "From 2 August 2026, the European Commission's AI Office, together with national authorities, began enforcing the Artificial Intelligence Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-05, note: "From 2 August 2026, new transparency rules require chatbots and other interactive AI systems to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-05, note: "From 2 August 2026, deepfakes — images, videos, or audio edited or generated using AI — must be labelled.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-05, note: "From 2 August 2026, AI-generated or altered content must carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-05, note: "The Commission published a first list of more than 180 organisations that have signed the Code of Practice on transparency of AI-generated content.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-05, note: "The European Commission press release on AI Act enforcement was published on 31 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-03, note: "Ireland's government introduced the Regulation of AI Bill 2026.", sourceUrl: "https://dig.watch/updates/ireland-introduces-ai-bill-to-implement-eu-ai-act" }
   - { date: 2026-08-03, note: "The Regulation of AI Bill 2026 is intended to give full effect to the EU AI Act in Ireland by establishing the national institutions needed to supervise and enforce the regulation.", sourceUrl: "https://dig.watch/updates/ireland-introduces-ai-bill-to-implement-eu-ai-act" }
   - { date: 2026-08-03, note: "The Regulation of AI Bill 2026 establishes the AI Office of Ireland as an independent statutory body.", sourceUrl: "https://dig.watch/updates/ireland-introduces-ai-bill-to-implement-eu-ai-act" }
@@ -343,7 +360,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-08-03
+updatedDate: 2026-08-05
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
