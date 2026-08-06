@@ -10,6 +10,21 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-06, note: "From 2 August 2026, chatbots and other interactive AI systems are required to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "From 2 August 2026, deepfakes — images, videos, or audio edited or generated using AI — must be labelled.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "From 2 August 2026, AI-generated or altered content must carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "Companies that ignore Article 50 transparency obligations risk fines of up to €15 million or 3% of their worldwide annual turnover, whichever is higher.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "Henna Virkkunen, Executive Vice-President for Tech Sovereignty, Security and Democracy, warned that the most advanced AI models 'create risks on an entirely new scale.'", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "The AI Office's enforcement powers cover providers of general-purpose AI (GPAI) models and include the power to request technical documentation, run evaluations, demand corrective steps, and issue fin", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "Providers of the most advanced GPAI models must address risks of large-scale harm, including chemical, biological, radiological and nuclear incidents, loss of control, cyber offence, harmful manipulat", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "All providers of GPAI models must document certain information and provide it to competent authorities or downstream providers, put in place a copyright policy, and publish a sufficiently detailed sum", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "The Code of Practice on transparency of AI-generated content is voluntary, though the transparency obligations under Article 50 are legal requirements regardless of whether a provider signs it.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "The AI Omnibus pushed back rules for high-risk AI systems to 2 December 2027.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "The AI Omnibus pushed back rules for high-risk AI systems built into regulated products to 2 August 2028.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "From 2 December 2026, the AI Omnibus bans AI systems that generate non-consensual sexually explicit content or child sexual abuse material.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "In January 2026, the European Commission opened a formal investigation into X under the Digital Services Act over its Grok tool, after manipulated sexually explicit images and possible child sexual ab", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "The European Data Protection Supervisor is responsible for overseeing EU AI Act compliance among EU institutions themselves.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-06, note: "Henna Virkkunen said the AI Act gives 'innovators legal certainty while protecting the public interest' and called enforcement 'an important step towards AI that people and businesses can understand a", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
   - { date: 2026-08-02, note: "New transparency rules under the EU AI Act started to apply on 2 August 2026.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
   - { date: 2026-08-02, note: "The AI Office holds enforcement powers over GPAI models, including the ability to request technical documentation, evaluate models, require corrective measures, and issue fines for non-compliance.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-08-02, note: "A July 2026 action plan on Cybersecurity and AI sets out a coordinated approach to help Member States, businesses and public authorities address cybersecurity and resilience challenges posed by the mo", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -419,7 +434,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-02
+updatedDate: 2026-08-06
 ---
 
 ## The EU AI Act's Phased Entry into Force

@@ -9,8 +9,23 @@ sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026"
 significance: "high"
 entities: ["OpenAI", "Astra", "Timothy Gowers", "Paul Erdős", "GitHub", "Lean"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-06, note: "OpenAI released a 249-page manuscript alongside the Astra announcement.", sourceUrl: "https://qz.com/openai-astra-model-math-problems-lean-proofs-080326" }
+  - { date: 2026-08-06, note: "OpenAI released Lean 4 proof certificates for all 10 results on GitHub under an Apache 2.0 license.", sourceUrl: "https://qz.com/openai-astra-model-math-problems-lean-proofs-080326" }
+  - { date: 2026-08-06, note: "The GitHub repository for the Astra Lean proofs has a 'sorry' count of zero, indicating that every step across all ten formalized proofs is fully verified.", sourceUrl: "https://qz.com/openai-astra-model-math-problems-lean-proofs-080326" }
+  - { date: 2026-08-06, note: "Astra remains unreleased as of the announcement date; OpenAI describes it as its 'next major model.'", sourceUrl: "https://qz.com/openai-astra-model-math-problems-lean-proofs-080326" }
+  - { date: 2026-08-06, note: "TechIreland has announced the National AI Challenge 2026, with applications open until 9 August 2026.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "The National AI Challenge 2026 national final will be held at the Galmont Hotel in Galway on Thursday 24 September 2026.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "The National AI Challenge 2026 expects approximately 300 participants from across the island of Ireland.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "More than 200 people registered for the National AI Challenge 2026 within the first eight days of applications opening.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "The theme for the 2026 National AI Challenge is 'AI and Agents: Strategy, Processes and Roles.'", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "2026 marks the third iteration of the National AI Challenge.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "The 2025 National AI Challenge winners were HandSpeak AI, LaunchLoop and LibertyLumens.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "The National AI Challenge is supported by more than 10 regional innovation hubs.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "Participating teams will engage in two intensive weeks of remote development before presenting work via coordinated regional events on 14 September 2026.", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
+  - { date: 2026-08-06, note: "TechIreland CEO Niall Norton stated that the AI Challenge 'is becoming part of Ireland's AI talent infrastructure.'", sourceUrl: "https://www.siliconrepublic.com/machines/techireland-launches-galway-bound-national-ai-challenge-2026" }
 draft: false
+updatedDate: 2026-08-06
 ---
 
 ## OpenAI Announces Astra Solves Ten Open Mathematics Problems

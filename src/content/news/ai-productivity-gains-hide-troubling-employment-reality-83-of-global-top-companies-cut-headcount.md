@@ -10,6 +10,12 @@ significance: "high"
 entities: ["S&P Global", "PwC"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-06, note: "Morgan Stanley found AI has contributed an estimated 15 basis points to the U.S. unemployment rate as of August 2026, up from approximately 10 basis points in December 2025.", sourceUrl: "https://allwork.space/2026/08/ai-is-starting-to-push-young-workers-out-of-the-job-market-according-to-morgan-stanley" }
+  - { date: 2026-08-06, note: "Morgan Stanley found unemployment in AI-exposed industries is running approximately 50 basis points above normal, after accounting for broader economic factors.", sourceUrl: "https://allwork.space/2026/08/ai-is-starting-to-push-young-workers-out-of-the-job-market-according-to-morgan-stanley" }
+  - { date: 2026-08-06, note: "Morgan Stanley's report identified unemployment continuing to rise through the first half of 2026 for workers aged 22 to 27, making them the age group most affected by AI-related labour market changes", sourceUrl: "https://allwork.space/2026/08/ai-is-starting-to-push-young-workers-out-of-the-job-market-according-to-morgan-stanley" }
+  - { date: 2026-08-06, note: "Morgan Stanley's report found workers in AI-exposed occupations are spending more time unemployed after losing their jobs, and layoffs in those occupations have increased.", sourceUrl: "https://allwork.space/2026/08/ai-is-starting-to-push-young-workers-out-of-the-job-market-according-to-morgan-stanley" }
+  - { date: 2026-08-06, note: "S&P Global's PMI special survey found the global net employment impact from AI adoption over the past 12 months was -5 percentage points (share of businesses reducing workforce due to AI minus share i", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-06, note: "Among enterprise AI objectives surveyed by S&P Global, process efficiency (64%) and employee productivity (59%) were much more commonly prioritised than headcount reduction (24%).", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-07-30, note: "The S&P Global PMI special survey shows a global net employment impact of -5 percentage points over the past 12 months attributable to AI adoption (percentage of businesses increasing workforce minus ", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-07-30, note: "S&P Global forecasts a further net employment impact of -2 percentage points from AI adoption in the coming 12 months.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-07-30, note: "Among enterprise AI objectives surveyed, process efficiency (64%) and employee productivity (59%) are the top-cited goals, while head count reduction is cited by only 24% of respondents.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
@@ -68,7 +74,7 @@ updates:
   - { date: 2026-06-27, note: "Cybersecurity is the most acute skills shortage, with 64% of respondents saying gaps had a moderate or severe impact on AI initiatives.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-06-27, note: "In 2026, just 16% of respondents say they completely trust third-party AI models, while 30% mostly trust them, down from 24% and 42% respectively in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
 draft: false
-updatedDate: 2026-07-30
+updatedDate: 2026-08-06
 ---
 
 ## The Productivity Paradox

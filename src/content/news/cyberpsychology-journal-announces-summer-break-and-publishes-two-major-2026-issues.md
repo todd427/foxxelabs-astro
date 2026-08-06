@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-06, note: "Volume 20, Issue 3 includes an interview study on the role bystanders play when people make suicidal disclosures on social media, authored by Rhianna Brien, Bethany Cliffe, Lisa Marzano, Maria Woloshy", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a comparative study on online victimisation perceptions — covering cyberbullying, dating violence, and sexual harassment — and psychological symptoms in sexual and gender m", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a study on how media discourses about adolescent sexting influence parents' attitudes and practices, authored by Elliana Lamprianidou, Koen Ponnet, Michel Walrave, Inès Kas", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a study using eye-tracking to examine how fear and humour legitimise hostility on social media, authored by Ursula Kristin Schmid, Simon Greipl, and Diana Rieger.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a study on digital piracy examined through the lens of moral intensity and risk perception from a cross-cultural perspective, authored by Mateja Kos Koklič, Monika Kukar-Ki", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "The journal's submission portal is closed for new submissions between June 16 and August 31, 2026.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "The journal is a non-profit (diamond open access) publication whose growth is not tied to financial expansion but relies on the dedicated time of its editorial team.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-06, note: "The BPS Cyberpsychology Section conference registration fee includes access to both conference days, all sessions, lunch and refreshment breaks across both days, and a drinks reception on the evening ", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'What can I do as somebody who only knows her through the internet?: An interview study on the role bystanders play when people make suicidal disclosures ", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'Framing adolescent sexting: How media discourses influence parents' attitudes and practices towards sexting' (DOI: 10.5817/CP2026-3-4).", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-05, note: "Volume 20, Issue 3 includes an article titled 'Subtle cues, major shifts: Eye-tracking insights on how fear and humor legitimize hostility on social media' (DOI: 10.5817/CP2026-3-7).", sourceUrl: "https://cyberpsychology.eu/" }
@@ -161,7 +169,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-05
+updatedDate: 2026-08-06
 ---
 
 ## Summer Submission Break Announced

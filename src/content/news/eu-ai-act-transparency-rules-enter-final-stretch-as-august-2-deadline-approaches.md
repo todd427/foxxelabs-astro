@@ -10,6 +10,23 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-06, note: "From 2 August 2026, the European Commission's AI Office, together with national authorities, began enforcing the Artificial Intelligence Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "From 2 August 2026, new transparency rules require certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by AI.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "Chatbots and other interactive AI systems must tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "AI-generated or altered content must carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "The Commission published a first list of more than 180 organisations that have signed the Code of Practice on transparency of AI-generated content.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-06, note: "The Digital Omnibus on AI (Regulation (EU) 2026/1744) was published in the Official Journal on 24 July 2026 and entered into force on 27 July 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "The Digital Omnibus moved high-risk obligations for Annex III systems (recruitment screening, credit scoring, employee monitoring) to 2 December 2027.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "The Digital Omnibus moved high-risk obligations for AI embedded in regulated products (Annex I) to 2 August 2028.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "The Digital Omnibus added a ban on AI systems generating non-consensual intimate imagery, effective December 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "AI systems already on the market before 2 August 2026 have a grace period until 2 December 2026 to comply with the machine-readable content-marking requirement.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "Obligations for general-purpose AI (GPAI) model providers have applied since August 2025, but the Commission could not act on violations until 2 August 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "Since 2 August 2026, the AI Office can request information, demand model access and impose penalties on GPAI model providers.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "Fines for Article 50 transparency and GPAI violations reach up to 15 million euros or 3% of total worldwide annual turnover, whichever is higher.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "National market surveillance authorities are responsible for enforcing Article 50 transparency rules.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "The EU AI Office is responsible for enforcing general-purpose AI model obligations.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-06, note: "Authorities in several member states are still being set up, and no headline enforcement action exists yet under Article 50 or GPAI provisions.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
   - { date: 2026-07-30, note: "On 7 May 2026, the Council presidency and European Parliament negotiators reached a provisional agreement on a proposal to streamline certain rules regarding artificial intelligence.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-30, note: "The provisional agreement is part of the 'Omnibus VII' legislative package in the EU's simplification agenda.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-07-30, note: "The provisional agreement sets 2 December 2027 as the new application date for stand-alone high-risk AI systems (Annex III, use-based).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
@@ -98,7 +115,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-07-30
+updatedDate: 2026-08-06
 ---
 
 ## Key Developments
