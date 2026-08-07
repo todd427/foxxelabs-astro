@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-08-06T09:51:28.604Z",
+  "updatedAt": "2026-08-07T08:22:20.265Z",
   "pick": {
-    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-    "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
-    "author": "deepseek-ai",
-    "name": "DeepSeek-V4-Flash-0731",
-    "likes": 2568,
-    "downloads": 617900,
-    "ageDays": 6,
-    "blurb": "DeepSeek-V4-Flash landed 1 day ago with FP8 quantization support and MIT license, shipping with endpoints compatibility out of the box. If you're evaluating inference cost versus latency tradeoffs, the 8-bit/FP8 path and fresh benchmarks against the current generation merit baseline testing.",
-    "surfacedAt": "2026-08-01"
+    "id": "deepgrove/maple-preview",
+    "url": "https://hf.co/deepgrove/maple-preview",
+    "author": "deepgrove",
+    "name": "maple-preview",
+    "likes": 215,
+    "downloads": 419,
+    "ageDays": 2,
+    "blurb": "Maple-preview landed 2 days ago as a ternary-quantized MoE model with custom reasoning layers, MIT-licensed and under 500 downloads. If you're experimenting with sub-standard quantization schemes or building reasoning chains at odd bit-widths, the architecture is worth a baseline before it stabilizes.",
+    "surfacedAt": "2026-08-07"
   },
   "also": [
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Flash-0731",
+      "likes": 2690,
+      "downloads": 617900,
+      "ageDays": 7
+    },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
       "author": "LiquidAI",
       "name": "LFM2.5-2.6B",
-      "likes": 304,
+      "likes": 343,
       "downloads": 73573,
-      "ageDays": 8
-    },
-    {
-      "id": "deepgrove/maple-preview",
-      "url": "https://hf.co/deepgrove/maple-preview",
-      "author": "deepgrove",
-      "name": "maple-preview",
-      "likes": 179,
-      "downloads": 419,
-      "ageDays": 2
+      "ageDays": 9
     },
     {
       "id": "inclusionAI/Ling-3.0-flash",
       "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
       "author": "inclusionAI",
       "name": "Ling-3.0-flash",
-      "likes": 169,
+      "likes": 193,
       "downloads": 1196,
-      "ageDays": 4
+      "ageDays": 5
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 503,
+      "likes": 523,
       "downloads": 16961,
-      "ageDays": 14
+      "ageDays": 15
     },
     {
-      "id": "LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
-      "url": "https://hf.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B",
-      "author": "LGAI-EXAONE",
-      "name": "K-EXAONE-2.0-750B-A37B",
-      "likes": 134,
-      "downloads": 458,
-      "ageDays": 8
+      "id": "EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
+      "url": "https://hf.co/EschaLabs/Qwen3.6-35B-A3B-Escha-W2",
+      "author": "EschaLabs",
+      "name": "Qwen3.6-35B-A3B-Escha-W2",
+      "likes": 227,
+      "downloads": 3394,
+      "ageDays": 16
     }
   ]
 }

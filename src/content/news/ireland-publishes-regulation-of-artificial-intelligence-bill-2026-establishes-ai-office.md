@@ -10,6 +10,21 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-07, note: "Oifig IS na hÉireann (the AI Office of Ireland) is tasked with co-ordinating the implementation of the EU's AI regulations, which came into force on a phased basis in 2024.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Paul Byrne was appointed as chief executive of the AI Office of Ireland.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Mary Doyle, a former senior civil servant, was appointed to chair the AI Office of Ireland's board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Mary Doyle previously held assistant or deputy secretary general roles at the departments of the Taoiseach, health, and education.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Mary Doyle is currently a board member at the Wheel, a representative body for the charity sector in the Republic of Ireland.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "The AI Office of Ireland board consists of seven members.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Dr Michelle Kearney, a principal officer at the Department of Enterprise, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Chartered accountant Donal Rooney, currently a non-executive board member at Enterprise Ireland, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Alan Smeaton, emeritus professor of computing at Dublin City University, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Dr Alessandra Sala, senior director of AI and data science at Shutterstock, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "Siobhan Noble, chief data and AI officer at Irish fund services group Carne, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-07, note: "From 2 August 2026, new transparency rules require certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-07, note: "Chatbots and other interactive AI systems are required to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-07, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the new rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-07, note: "The European Commission's AI Act enforcement infrastructure includes an AI Act complaints tool, an AI Act Whistleblower Tool, and a complaints channel for downstream providers using general-purpose AI", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-05, note: "The Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on 21 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-05, note: "Paul Byrne was appointed as the first Chief Executive Officer of the AI Office of Ireland (Oifig IS na hÉireann).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-05, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -360,7 +375,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-08-05
+updatedDate: 2026-08-07
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Anthropic", "Claude Opus 5", "Claude Opus 4.8", "Claude Max", "Claude Pro", "Claude Platform", "Claude Code"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-07, note: "Claude Opus 5 was made available on 24 July 2026.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
+  - { date: 2026-08-07, note: "On OSWorld 2.0, Claude Opus 5 surpasses Fable 5's best result at just over a third of the cost.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
+  - { date: 2026-08-07, note: "Claude Opus 5 adheres to Claude's Constitution better than Opus 4.8, Sonnet 5, or Fable 5, and exhibits the lowest rates of deceptive behavior among those models.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
+  - { date: 2026-08-07, note: "Claude Opus 5 is available in Fast mode at approximately 2.5 times the default speed, priced at twice Opus 5's base price on the Claude Platform.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
+  - { date: 2026-08-07, note: "The Regulation of Artificial Intelligence Bill 2026 establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body and Ireland's central coordinating authority for implementa", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-08-07, note: "The Bill is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-08-07, note: "The Bill does not add to the obligations placed on regulated entities beyond those already imposed by the EU AI Act Regulation (EU) 2024/1689.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-08-07, note: "The EU Artificial Intelligence Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies horizontally across all sectors of the economy, both public and private, in a risk-based ", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-07-27, note: "Kimi K3 open weights are live at huggingface.co/moonshotai/Kimi-K3 with a Modified MIT license confirmed and approximately 594GB download size", sourceUrl: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" }
   - { date: 2026-07-27, note: "Independent testing found Kimi K3 has a 51% hallucination rate", sourceUrl: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" }
   - { date: 2026-07-27, note: "The EU Commission ordered Google under the DMA to open Android to Claude and ChatGPT by July 2027, requiring voice activation, screen context, and app actions", sourceUrl: "https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" }
@@ -30,7 +38,7 @@ updates:
   - { date: 2026-07-27, note: "Researchers led by Professor Han Zhang at Shenzhen University developed an all-fiber photonic AI platform using black phosphorus-based tunable modulators for medical diagnostics, achieving expert-leve", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-27, note: "Researchers at the University of Cambridge announced that an AI-designed vaccine has successfully completed initial human trials, marking the first time a vaccine's key component was designed entirely", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
-updatedDate: 2026-07-27
+updatedDate: 2026-08-07
 ---
 
 ## Launch and Availability

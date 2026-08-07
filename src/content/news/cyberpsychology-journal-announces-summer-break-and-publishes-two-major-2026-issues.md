@@ -10,6 +10,10 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-07, note: "The journal reported a sharp increase in submissions in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-07, note: "Prof. Paul Cairns from the University of York is a keynote speaker at the 2026 BPS Cyberpsychology Conference.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
+  - { date: 2026-08-07, note: "Prof. Amy Orben from the University of Cambridge is a keynote speaker at the 2026 BPS Cyberpsychology Conference.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
+  - { date: 2026-08-07, note: "The BPS is launching a £6,000 grant scheme for small research projects open to all BPS members except subscriber-grade members.", sourceUrl: "https://www.bps.org.uk/psychologist/brief-bps-april-2026" }
   - { date: 2026-08-06, note: "Volume 20, Issue 3 includes an interview study on the role bystanders play when people make suicidal disclosures on social media, authored by Rhianna Brien, Bethany Cliffe, Lisa Marzano, Maria Woloshy", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a comparative study on online victimisation perceptions — covering cyberbullying, dating violence, and sexual harassment — and psychological symptoms in sexual and gender m", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-06, note: "Volume 20, Issue 3 includes a study on how media discourses about adolescent sexting influence parents' attitudes and practices, authored by Elliana Lamprianidou, Koen Ponnet, Michel Walrave, Inès Kas", sourceUrl: "https://cyberpsychology.eu/" }
@@ -169,7 +173,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-06
+updatedDate: 2026-08-07
 ---
 
 ## Summer Submission Break Announced
