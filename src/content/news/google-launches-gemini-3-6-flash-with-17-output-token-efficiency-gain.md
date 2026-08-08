@@ -9,8 +9,22 @@ sourceUrl: "https://blog.google/innovation-and-ai/models-and-research/gemini-mod
 significance: "high"
 entities: ["Google", "Gemini 3.6 Flash", "Gemini 3.5 Flash", "Gemini 3.5 Flash-Lite", "Gemini 3.5 Flash Cyber", "Gemini 3.5 Pro", "Gemini 4", "Artificial Analysis Index"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-08, note: "The most recent frontier AI model release tracked by AI Release Tracker is Muse Spark 1.2 by Meta, released on August 5, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Qwen3.8-Max was released by the Qwen team on August 3, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "DeepSeek-V4-Flash-0731 was released by DeepSeek on July 31, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Claude Opus 5 was released by Anthropic on July 24, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Google released three models on July 21, 2026: Gemini 3.6 Flash, Gemini 3.5 Flash-Lite, and Gemini 3.5 Flash Cyber.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Kimi K3 was released by Moonshot AI on July 16, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Kimi K3 was launched at the World AI Conference in Shanghai.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Kimi K3 has a 1 million token context window.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Kimi K3 supports native multimodal input.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Kimi K3 is described as the largest open-weight model ever released at the time of its launch.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Grok 4.5 was released by SpaceXAI (xAI) on July 8, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "OpenAI released three GPT-5.6 variants — Sol, Terra, and Luna — on June 26, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
+  - { date: 2026-08-08, note: "Meta Muse Spark 1.1 was released on July 9, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
 draft: false
+updatedDate: 2026-08-08
 ---
 
 ## Gemini 3.6 Flash: Efficiency and Performance Gains

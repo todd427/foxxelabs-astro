@@ -10,6 +10,16 @@ significance: "high"
 entities: ["GPT-5", "Claude 4", "Gemini 2.5", "DataCamp", "IBM", "Coursera", "ZipRecruiter"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-08, note: "The DataCamp guide on prompt engineering was last updated on May 25, 2026.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "Standalone 'prompt engineer' job titles have cooled since the 2023–2024 hype period.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "Prompt engineering skills are now embedded in broader AI roles including AI engineer, applied ML engineer, AI solutions consultant, and conversational designer.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "Coursera reports a US median salary of approximately $126,000 per year for prompt engineering roles.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "ZipRecruiter shows entry-level prompt engineering postings closer to $63,000 per year in the US.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "The transformer architecture was introduced in the 2017 paper 'Attention is All You Need'.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "With the rise of reasoning models such as OpenAI's o-series, Anthropic's extended thinking in Claude, and DeepSeek's R1, the need for nuanced prompts has shifted because these models now perform step-", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "Agentic systems such as Claude's computer use and the Model Context Protocol (MCP) ecosystem have expanded what well-crafted prompts can automate end-to-end.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-08, note: "Prompt engineering enhances model efficacy without modifying core model parameters.", sourceUrl: "https://arxiv.org/abs/2402.07927" }
+  - { date: 2026-08-08, note: "Prompts can take the form of natural language instructions or learned vector representations that activate relevant knowledge in a model.", sourceUrl: "https://arxiv.org/abs/2402.07927" }
   - { date: 2026-07-24, note: "Shifting prompts from asking models to 'be an expert' to supplying expert context—prior failures ruled out, explicit constraints, and the true task goal—can materially improve AI output quality and re", sourceUrl: "https://blockchain.news/ainews/prompt-engineering-breakthrough-expert-context-framework-improves-ai-task-performance-in-2026" }
   - { date: 2026-07-24, note: "Structured prompts that incorporate contextual details can improve output accuracy by up to 30 percent in tasks like content generation and problem-solving.", sourceUrl: "https://blockchain.news/ainews/prompt-engineering-breakthrough-expert-context-framework-improves-ai-task-performance-in-2026" }
   - { date: 2026-07-24, note: "Coursera reporting a US median prompt engineering salary around $126,000 per year and ZipRecruiter showing entry-level postings closer to $63,000.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
@@ -49,7 +59,7 @@ updates:
   - { date: 2026-07-10, note: "The initial hype around 'prompt engineer' as a job title has cooled considerably since the ChatGPT launch in late 2022.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
   - { date: 2026-07-10, note: "A study by researchers at KAIST found that larger language models perform worse on negated prompts (instructions telling them what not to do) compared to smaller models.", sourceUrl: "https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices" }
 draft: false
-updatedDate: 2026-07-24
+updatedDate: 2026-08-08
 ---
 
 ## Frontier Models Achieve Breakthrough in Context and Nuance

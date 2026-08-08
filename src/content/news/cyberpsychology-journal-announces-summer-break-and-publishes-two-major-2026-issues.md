@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is the 6th edition of the event.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is scheduled for July 6–7, 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is hosted at York St John University.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-08-08, note: "The BPS is launching a £6,000 grant scheme to support members with small research projects.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-08-08, note: "Dr Lisa Orchard is affiliated with the University of Wolverhampton.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
+  - { date: 2026-08-08, note: "The 2025 Decisions and Reviews Statistics post for Cyberpsychology journal covers submissions, desk reject rates, acceptance rates, decision times, and reviewer statistics.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-08, note: "Cyberpsychology journal published Issue 3 of Volume 20 on June 26, 2026, containing twelve articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-08, note: "The editorial team stated that in 2025 the journal experienced a sharp increase in submissions.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-07, note: "The journal reported a sharp increase in submissions in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-07, note: "Prof. Paul Cairns from the University of York is a keynote speaker at the 2026 BPS Cyberpsychology Conference.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-08-07, note: "Prof. Amy Orben from the University of Cambridge is a keynote speaker at the 2026 BPS Cyberpsychology Conference.", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
@@ -173,7 +181,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-07
+updatedDate: 2026-08-08
 ---
 
 ## Summer Submission Break Announced
