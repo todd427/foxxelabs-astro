@@ -10,6 +10,8 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-09, note: "The journal stated that its summer submission break does not halt work on manuscripts already in the system; editors will continue contacting reviewers, processing revisions, and communicating editori", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-09, note: "Cyberpsychology is described as a diamond open-access journal, meaning it is non-profit and does not charge authors or readers.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is the 6th edition of the event.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is scheduled for July 6–7, 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-08-08, note: "The BPS Cyberpsychology Section 2026 Annual Conference is hosted at York St John University.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
@@ -181,7 +183,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-08
+updatedDate: 2026-08-09
 ---
 
 ## Summer Submission Break Announced

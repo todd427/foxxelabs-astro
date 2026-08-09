@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-08T07:56:17.934Z",
+  "updatedAt": "2026-08-09T08:01:26.477Z",
   "pick": {
     "id": "deepgrove/maple-preview",
     "url": "https://hf.co/deepgrove/maple-preview",
     "author": "deepgrove",
     "name": "maple-preview",
-    "likes": 237,
-    "downloads": 686,
-    "ageDays": 3,
+    "likes": 263,
+    "downloads": 896,
+    "ageDays": 4,
     "blurb": "Maple-preview landed 2 days ago as a ternary-quantized MoE model with custom reasoning layers, MIT-licensed and under 500 downloads. If you're experimenting with sub-standard quantization schemes or building reasoning chains at odd bit-widths, the architecture is worth a baseline before it stabilizes.",
     "surfacedAt": "2026-08-07"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 2780,
-      "downloads": 702709,
-      "ageDays": 8
+      "likes": 2874,
+      "downloads": 785771,
+      "ageDays": 9
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
       "author": "LiquidAI",
       "name": "LFM2.5-2.6B",
-      "likes": 390,
-      "downloads": 77973,
-      "ageDays": 10
+      "likes": 427,
+      "downloads": 81522,
+      "ageDays": 11
     },
     {
       "id": "inclusionAI/Ling-3.0-flash",
       "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
       "author": "inclusionAI",
       "name": "Ling-3.0-flash",
-      "likes": 209,
-      "downloads": 3065,
-      "ageDays": 6
+      "likes": 227,
+      "downloads": 4189,
+      "ageDays": 7
     },
     {
       "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
       "url": "https://hf.co/Kwaipilot/KAT-Coder-V2.5-Dev",
       "author": "Kwaipilot",
       "name": "KAT-Coder-V2.5-Dev",
-      "likes": 536,
-      "downloads": 17399,
-      "ageDays": 16
+      "likes": 546,
+      "downloads": 17885,
+      "ageDays": 17
     },
     {
-      "id": "badtheorylabs/BTL-4",
-      "url": "https://hf.co/badtheorylabs/BTL-4",
-      "author": "badtheorylabs",
-      "name": "BTL-4",
-      "likes": 74,
-      "downloads": 282,
-      "ageDays": 3
+      "id": "Akahsizrr/fuse-1-Lite",
+      "url": "https://hf.co/Akahsizrr/fuse-1-Lite",
+      "author": "Akahsizrr",
+      "name": "fuse-1-Lite",
+      "likes": 84,
+      "downloads": 309,
+      "ageDays": 4
     }
   ]
 }

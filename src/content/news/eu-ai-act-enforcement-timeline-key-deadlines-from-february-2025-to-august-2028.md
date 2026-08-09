@@ -10,6 +10,27 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-09, note: "The Digital Omnibus on AI entered into force on July 27, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "The Digital Omnibus on AI was published in the Official Journal as Regulation (EU) 2026/1744 on July 24, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "Article 50 transparency obligations became enforceable on August 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "The EU AI Office's enforcement powers over general-purpose AI (GPAI) models became active on August 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "From August 2, 2026, the EU AI Office can request information, demand model access, and impose penalties on GPAI model providers.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "Fines for transparency and GPAI violations reach up to 15 million euros or 3% of total worldwide annual turnover, whichever is higher.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "AI systems that interact directly with people must make clear that a person is dealing with a machine, unless that is obvious from context.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "Deepfakes and manipulated audio, image, or video content must be disclosed as artificially generated under Article 50.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "AI systems already on the EU market before August 2, 2026 have a grace period until December 2, 2026 to comply with the machine-readable content-marking requirement.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "High-risk obligations for stand-alone Annex III AI systems (including recruitment screening, credit scoring, education, and law enforcement tools) now apply from December 2, 2027.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "High-risk obligations for AI embedded in regulated products (Annex I) now apply from August 2, 2028.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "A new prohibition on AI systems generating non-consensual intimate imagery was added by the Digital Omnibus and takes full effect from December 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "The prohibited AI practices ban has applied since February 2, 2025.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "Obligations for general-purpose AI model providers have applied since August 2, 2025, but the Commission could not act on violations until August 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
+  - { date: 2026-08-09, note: "Breaches of the AI Act's new transparency obligations can attract administrative fines of up to 15 million euros ($17.3m) or 3 percent of global annual turnover, whichever is higher.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "AI systems used to recognise emotions or categorise people using biometric data must inform individuals that such processing is taking place.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "The AI Act's high-risk obligations for AI systems used in biometrics, employment, education, essential services, and migration were postponed in May 2026 as part of the Digital Omnibus package.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "The AI Act's high-risk obligations for systems in areas such as biometrics, employment, education, and migration were delayed until December 2, 2027.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "Annex III of the EU AI Act classifies AI systems used in migration, asylum and border management as 'high risk'.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "Prohibited AI practices and rules on AI literacy under the AI Act began applying in February 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-09, note: "Obligations for general-purpose AI models under the AI Act took effect in August 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-08-06, note: "From 2 August 2026, chatbots and other interactive AI systems are required to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-06, note: "From 2 August 2026, deepfakes — images, videos, or audio edited or generated using AI — must be labelled.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-06, note: "From 2 August 2026, AI-generated or altered content must carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
@@ -434,7 +455,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-06
+updatedDate: 2026-08-09
 ---
 
 ## The EU AI Act's Phased Entry into Force

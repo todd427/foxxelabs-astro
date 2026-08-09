@@ -10,6 +10,23 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-09, note: "From 2 August 2026, new transparency rules require that AI-generated or altered content carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-09, note: "The European Commission press release on AI Act enforcement was published on 31 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-09, note: "Ireland's AI Office of Ireland (Oifig IS na hÉireann) was established approximately one week before 5 August 2026.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The AI Office of Ireland is tasked with co-ordinating the implementation of the EU's AI regulations.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Paul Byrne was appointed chief executive of the AI Office of Ireland.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Paul Byrne joins the AI Office of Ireland from the Medical Council of Ireland, where he served as executive director of education, innovation and artificial intelligence.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Mary Doyle, a former senior civil servant, was appointed to chair the AI Office of Ireland's board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Mary Doyle previously held assistant or deputy secretary general roles at the departments of the Taoiseach, health, and education.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Mary Doyle is currently a board member at the Wheel, a representative body for the charity sector in the Republic of Ireland.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The AI Office of Ireland's board has seven members in total.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Dr Michelle Kearney, a principal officer at the Department of Enterprise, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Chartered accountant Donal Rooney, a non-executive board member at Enterprise Ireland, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Alan Smeaton, emeritus professor of computing at Dublin City University, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Dr Alessandra Sala, senior director of AI and data science at Shutterstock, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "Siobhan Noble, chief data and AI officer at Irish fund services group Carne, was appointed to the AI Office of Ireland board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The European Commission can now begin to fine and penalise companies that fail to comply with the EU AI Act.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The AI Office of Ireland's board appointment was announced by the Department of Enterprise, Trade and Employment on 5 August 2026.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
   - { date: 2026-08-07, note: "On 2 August 2026, new transparency rules on AI systems under the EU AI Act took effect.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-07, note: "Certain AI-generated or manipulated images, audio, and video content resembling existing persons, objects, places, entities, or events (deepfakes) must be clearly and visibly labelled and include mach", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-07, note: "Text published to inform the public on matters of public interest where there has been no human review or editorial control must be labelled as AI-generated under the new EU rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -140,7 +157,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-07
+updatedDate: 2026-08-09
 ---
 
 ## Key Developments

@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-09, note: "The Irish Government announced on Wednesday 5 August 2026 that Mary Doyle, a former senior civil servant, will chair the AI Office of Ireland's board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The AI Office of Ireland board has seven members in total.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "New elements of the EU AI Act came into force during the week of 4 August 2026 as part of the phased roll-out of the framework.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
+  - { date: 2026-08-09, note: "The new EU AI Act rules require companies to tell customers when they are interacting with AI systems.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
   - { date: 2026-08-08, note: "Paul Byrne is the author of the CLEAR Principles for Ethical and Effective AI in Professional Regulation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-08, note: "Ireland holds the Presidency of the Council of the EU at the time of the AI Office establishment.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-08, note: "From 2 August 2026, the European Commission's AI Office together with national authorities began enforcing the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
@@ -285,7 +289,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-08
+updatedDate: 2026-08-09
 ---
 
 ## The Bill's Purpose and Structure
