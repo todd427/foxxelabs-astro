@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-10, note: "The AI Office of Ireland is established as an independent statutory body, not a ministerial division.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-10, note: "Ireland currently holds the Presidency of the Council of the EU.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-10, note: "Article 50 of the EU AI Act began to apply on 2 August 2026, requiring chatbots and AI systems that interact directly with people to disclose that users are dealing with AI, unless the context makes i", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "AI systems used to recognise emotions or categorise people using biometric data must inform individuals that such processing is taking place, under the rules that came into force on 2 August 2026.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "Breaches of the Article 50 transparency obligations can attract administrative fines of up to €15 million or 3 percent of global annual turnover, whichever is higher.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "High-risk AI obligations for AI systems used in biometrics, employment, education, essential services, and migration, asylum and border management were postponed from 2 August 2026 to 2 December 2027 ", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "European Parliament negotiators backed the Digital Omnibus compromise on the grounds that technical standards underpinning compliance for high-risk AI systems were not ready in time.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "The EU AI Act's prohibited AI practices and AI literacy rules began applying in February 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-10, note: "Obligations for general-purpose AI models under the EU AI Act began applying in August 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-08-09, note: "The Irish Government announced on Wednesday 5 August 2026 that Mary Doyle, a former senior civil servant, will chair the AI Office of Ireland's board.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
   - { date: 2026-08-09, note: "The AI Office of Ireland board has seven members in total.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
   - { date: 2026-08-09, note: "New elements of the EU AI Act came into force during the week of 4 August 2026 as part of the phased roll-out of the framework.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
@@ -289,7 +298,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-09
+updatedDate: 2026-08-10
 ---
 
 ## The Bill's Purpose and Structure
