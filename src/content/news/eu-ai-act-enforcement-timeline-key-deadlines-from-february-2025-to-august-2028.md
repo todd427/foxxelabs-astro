@@ -10,6 +10,12 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-11, note: "The European Commission's AI Office, together with national authorities, began enforcing the AI Act on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-11, note: "Deepfakes — images, videos, or audio edited or generated using AI — are now required to be labelled under the AI Act transparency rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-11, note: "The Code of Practice on transparency of AI-generated content is voluntary, but the transparency obligations it operationalises are legal requirements under Article 50 of the AI Act.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-11, note: "Enforcement responsibility under the AI Act is split: the AI Office handles GPAI models directly; national competent authorities handle other AI systems operating within their borders; the European Da", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-11, note: "All providers of GPAI models must document certain information and provide it to competent authorities or downstream providers, and must put in place a copyright policy.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-11, note: "National competent authorities are responsible for enforcing AI Act rules on AI systems operating within their own borders, distinct from the AI Office's GPAI mandate.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
   - { date: 2026-08-09, note: "The Digital Omnibus on AI entered into force on July 27, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
   - { date: 2026-08-09, note: "The Digital Omnibus on AI was published in the Official Journal as Regulation (EU) 2026/1744 on July 24, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
   - { date: 2026-08-09, note: "Article 50 transparency obligations became enforceable on August 2, 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
@@ -455,7 +461,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-09
+updatedDate: 2026-08-11
 ---
 
 ## The EU AI Act's Phased Entry into Force

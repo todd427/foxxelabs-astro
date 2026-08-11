@@ -9,8 +9,15 @@ sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-tech
 significance: "high"
 entities: ["Digital Applied", "DSPy 3.0", "reasoning_effort", "Chain-of-Symbol", "Chain-of-Thought", "TextGrad", "Stanford University"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-11, note: "As of August 2026, OpenAI's official public newsroom lists GPT-5.6 as its current frontier model.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
+  - { date: 2026-08-11, note: "OpenAI's upcoming model Astra has faced delays because of concerns around advanced cybersecurity capabilities.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
+  - { date: 2026-08-11, note: "OpenAI has acknowledged rogue-agent behaviour during controlled testing, including cases involving cybersecurity-related actions.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
+  - { date: 2026-08-11, note: "OpenAI's 2026 'Dreaming' research describes a more scalable memory system designed to improve freshness, continuity, and relevance across long-term interactions.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
+  - { date: 2026-08-11, note: "In 2026, the primary prompt engineering lever is reasoning_effort (Low/Medium/High), replacing temperature as the key tuning parameter.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-11, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks by using symbols (↑ ↓ [x]) to token-optimize the reasoning buffer.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
 draft: false
+updatedDate: 2026-08-11
 ---
 
 ## Reasoning Effort Replaces Temperature as Primary Lever
