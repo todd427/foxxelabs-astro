@@ -22,6 +22,22 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   day: 'numeric'
 });
 
+// Story timeline. The dedupe gate folds each new development into `updates[]`
+// instead of minting a near-duplicate article, so for a slow-moving story this
+// array — not the body — carries everything that happened after publishDate.
+// News-only: resources have no timeline, hence the guard on the union type.
+const updates = 'updates' in entry.data ? entry.data.updates : [];
+
+// Newest first. The gate appends chronologically, and on a story that has been
+// folded into for months the tail is the only part still worth reading first.
+const timeline = [...updates].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+
+const timelineDate = (d: Date) => d.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
 // Show pronunciation widget on any Research post
 const showPronunciation = category === 'Research';
 ---
@@ -66,6 +82,29 @@ const showPronunciation = category === 'Research';
         <Content />
       </div>
     </div>
+
+    {timeline.length > 0 && (
+      <div class="post-timeline">
+        <div class="container-narrow">
+          <h2 class="timeline-heading">Developments since publication</h2>
+          <ol class="timeline">
+            {timeline.map(u => (
+              <li class="timeline-entry">
+                <time class="timeline-date" datetime={u.date.toISOString()}>
+                  {timelineDate(u.date)}
+                </time>
+                <p class="timeline-note">
+                  {u.note}
+                  {u.sourceUrl && (
+                    <a class="timeline-source" href={u.sourceUrl} rel="nofollow noopener" target="_blank">Source</a>
+                  )}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    )}
 
     {showPronunciation && (
       <div class="post-pronunciation">
@@ -202,6 +241,63 @@ const showPronunciation = category === 'Research';
   /* ── Post content ── */
   .post-content {
     margin-bottom: 64px;
+  }
+
+  /* ── Story timeline ── */
+  .post-timeline {
+    margin-bottom: 64px;
+  }
+
+  .timeline-heading {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+    line-height: 1.2;
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 16px;
+    border-left: 1px solid var(--border);
+  }
+
+  .timeline-entry {
+    position: relative;
+    padding: 0 0 24px 12px;
+  }
+
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .timeline-date {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .timeline-note {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .timeline-source {
+    margin-left: 8px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    white-space: nowrap;
   }
 
   .post-content :global(h2) {

@@ -6,9 +6,17 @@ const allNews = await getCollection('news', ({ data }) => {
   return data.draft !== true;
 });
 
-const sortedNews = allNews.sort((a, b) => 
-  b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
+// Order by last activity, not publication. The dedupe gate folds new
+// developments into an existing story's timeline rather than minting a
+// near-duplicate article, so a story first published in June can carry
+// today's news. Sorting on publishDate alone buried exactly that material.
+const lastActivity = (post: typeof allNews[number]) =>
+  Math.max(
+    post.data.publishDate.valueOf(),
+    post.data.updatedDate?.valueOf() ?? 0
+  );
+
+const sortedNews = allNews.sort((a, b) => lastActivity(b) - lastActivity(a));
 ---
 
 <BaseLayout title="News | Foxxe Labs" description="Latest developments in AI security, applications, and industry">
@@ -26,18 +34,28 @@ const sortedNews = allNews.sort((a, b) =>
     <div class="news-list">
       <div class="container">
         {sortedNews.map((post, index) => {
-          const formattedDate = post.data.publishDate.toLocaleDateString('en-US', {
+          const fmt = (d: Date) => d.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           });
-          
+
+          const formattedDate = fmt(post.data.publishDate);
+
+          // Only call it updated when the timeline actually moved past the
+          // publication date — appendUpdates stamps updatedDate on every fold.
+          const updated = post.data.updatedDate;
+          const wasUpdated = updated && updated.valueOf() > post.data.publishDate.valueOf();
+
           return (
             <article class="news-item" style={`animation-delay: ${index * 0.08}s`}>
               <div class="news-item-date">
                 <time datetime={post.data.publishDate.toISOString()}>{formattedDate}</time>
+                {wasUpdated && (
+                  <span class="news-item-updated">Updated {fmt(updated)}</span>
+                )}
               </div>
-              
+
               <div class="news-item-content">
                 <div class="news-item-meta">
                   <span class="news-item-category">{post.data.category}</span>
@@ -144,6 +162,13 @@ const sortedNews = allNews.sort((a, b) =>
     font-size: 0.85rem;
     color: var(--color-text-muted);
     padding-top: 0.5rem;
+  }
+
+  .news-item-updated {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--color-accent);
   }
   
   .news-item-meta {
