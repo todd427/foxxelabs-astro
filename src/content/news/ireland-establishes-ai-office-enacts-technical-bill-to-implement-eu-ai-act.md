@@ -10,6 +10,15 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-12, note: "Ireland adopted a distributed model of regulation for AI, retaining sector-specific regulators rather than creating a single national regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-12, note: "Minister of State Niamh Smyth stated that Ireland is home to many of the world's leading foundational AI model providers.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-12, note: "Seven members were appointed to the Board of Oifig IS na hÉireann (the AI Office of Ireland) on 5 August 2026, approved by Minister Peter Burke.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "The European Commission published guidelines on transparency obligations for providers and deployers of certain AI systems on 20 July 2026, ahead of their application date of 2 August 2026.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "Ireland will host the International AI Summit on 14 October 2026, officially launching European AI Innovation Month, in partnership with the European Commission.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "The theme of the International AI Summit is 'Harnessing AI to Revolutionise Europe's Competitiveness'.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "The International AI Summit is being hosted as part of Ireland's Presidency of the Council of the European Union.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "AIReady.ie is a free web-based resource developed to help the public build practical skills and confidence in using AI safely and responsibly.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-08-12, note: "The AI Office of Ireland operates an AI Regulatory Sandbox Programme — a controlled environment where AI developers can test AI solutions with regulatory guidance.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-08-11, note: "The AI Office of Ireland will act as the Single Point of Contact for the EU AI Act for the European Commission, national sectoral regulators and the public.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-11, note: "Ireland has adopted a distributed model of regulation for the EU AI Act, leveraging existing sectoral regulatory experience.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-11, note: "On 2 August 2026, new EU rules on the transparency of AI systems took effect under the AI Act.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -308,7 +317,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-11
+updatedDate: 2026-08-12
 ---
 
 ## The Bill's Purpose and Structure

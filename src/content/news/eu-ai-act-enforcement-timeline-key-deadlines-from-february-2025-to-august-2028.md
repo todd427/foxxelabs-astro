@@ -10,6 +10,17 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-12, note: "China's Implementation Opinions on the Standardized Application and Innovative Development of Intelligent Agents became enforceable on July 15, 2026.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "China's Implementation Opinions on Intelligent Agents were issued jointly by the CAC, NDRC, and MIIT.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "China's Implementation Opinions on Intelligent Agents is widely described as the first national policy document to treat AI agents as a distinct regulated category.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "Under Article 6 of China's Implementation Opinions on Intelligent Agents, an agent's decision authority must be sorted before deployment into three tiers: decisions only a human may make, decisions th", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "Agents in sensitive sectors such as healthcare, transport, media, and public safety face additional filing, testing, and recall requirements under China's Implementation Opinions on Intelligent Agents", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "New York's Department of Financial Services issued Insurance Circular Letter No. 7 (2024), requiring insurers to run and document a comprehensive assessment before using AI or external consumer data i", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "In 2026, New York's DFS layered on further guidance addressing cybersecurity and frontier-AI risks for AI used in regulated financial decisions.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "There is no comprehensive federal AI statute in the United States as of mid-2026.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "India's Digital India Act, intended to replace the Information Technology Act of 2000 with a risk-based framework covering AI, algorithmic transparency, and deepfakes, remained in draft and consultati", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
+  - { date: 2026-08-12, note: "The EU has officially transitioned into the enforcement phase of its AI Act, targeting high-risk applications such as facial recognition and predictive algorithms.", sourceUrl: "https://af.net/realtime/ai-regulation-news-august-2026-the-enforcement-era-begins-us-gridlock-ongoing/" }
+  - { date: 2026-08-12, note: "Bipartisan disagreements in the United States prevent the establishment of a cohesive federal AI framework, leaving states and local jurisdictions to fill the regulatory void.", sourceUrl: "https://af.net/realtime/ai-regulation-news-august-2026-the-enforcement-era-begins-us-gridlock-ongoing/" }
   - { date: 2026-08-11, note: "The European Commission's AI Office, together with national authorities, began enforcing the AI Act on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-11, note: "Deepfakes — images, videos, or audio edited or generated using AI — are now required to be labelled under the AI Act transparency rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-11, note: "The Code of Practice on transparency of AI-generated content is voluntary, but the transparency obligations it operationalises are legal requirements under Article 50 of the AI Act.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
@@ -461,7 +472,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-11
+updatedDate: 2026-08-12
 ---
 
 ## The EU AI Act's Phased Entry into Force

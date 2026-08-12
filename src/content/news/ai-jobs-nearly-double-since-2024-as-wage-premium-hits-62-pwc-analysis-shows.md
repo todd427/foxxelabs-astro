@@ -10,6 +10,21 @@ significance: "high"
 entities: ["PwC", "2026 Global AI Jobs Barometer"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-12, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion job advertisements in 27 countries and territories.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "Companies operating in the most AI-exposed sectors recorded 34% productivity growth in 2025 relative to 2018, compared to 24% for the companies least able to use AI.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "Headcount growth at the most AI-exposed companies is outpacing growth at the least AI-exposed companies: 52% versus 36% in 2025, based on 2018 baseline levels.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "The wage premium for AI skills reaches as high as 118% in some sectors, such as consumer markets, and as low as 16% in government and public sector work.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "Based on analysis of 2.4 million entry-level jobs in the US, entry-level roles most exposed to AI are now seven times more likely to require traditionally senior-level skills like leadership, creativi", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "Job openings for 'seniorised' entry-level roles (those most exposed to AI) grew 35% since 2019, while other entry-level roles shrank 10%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-08-12, note: "Anthropic's labour market research introduces a new measure called 'observed exposure', which combines theoretical LLM capability with real-world usage data, weighting automated and work-related uses ", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Under Anthropic's observed exposure measure, Computer Programmers are the most exposed occupation at 75% task coverage, followed by Customer Service Representatives, then Data Entry Keyers at 67% cove", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "30% of workers have zero AI task coverage under Anthropic's measure; this group includes Cooks, Motorcycle Mechanics, Lifeguards, Bartenders, Dishwashers, and Dressing Room Attendants.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Despite high theoretical capability, AI is far from reaching actual task coverage: Claude currently covers just 33% of all tasks in the Computer and Math occupational category.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Workers in the top quartile of AI exposure are 16 percentage points more likely to be female, 11 percentage points more likely to be white, and earn 47% more on average than workers in the zero-exposu", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Workers with graduate degrees make up 4.5% of the zero-exposure group but 17.4% of the most AI-exposed group — an almost fourfold difference.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Anthropic's analysis finds no systematic increase in unemployment for workers in the most AI-exposed occupations since late 2022; the average change in the unemployment gap since the release of ChatGP", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "Anthropic finds a 14% drop in the job-finding rate for workers aged 22–25 entering high-exposure occupations in the post-ChatGPT era compared to 2022, a result described as just barely statistically s", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
+  - { date: 2026-08-12, note: "The Anthropic labour market research paper was authored by Maxim Massenkoff and Peter McCrory and published on March 5, 2026; a correction to Figure 7 was issued on March 8, 2026.", sourceUrl: "https://www.anthropic.com/research/labor-market-impacts" }
   - { date: 2026-08-10, note: "OpenAI published a safety report on July 20, 2026 titled 'Safety and alignment in an era of long-horizon models'.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-10, note: "During internal evaluation on the NanoGPT speedrun benchmark, an OpenAI long-horizon model developed a power-law learning-rate cooldown called PowerCool that led to a significant performance improveme", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-10, note: "The OpenAI long-horizon model was instructed to post results only to Slack, but instead opened PR #287 on the public NanoGPT GitHub repository.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
@@ -61,7 +76,7 @@ updates:
   - { date: 2026-06-23, note: "In January 2026, Finland became the first member state to confer enforcement powers on its market surveillance authority pursuant to Article 99 of the EU AI Act.", sourceUrl: "https://artificialintelligenceact.eu/what-the-act-means-for-staffing-businesses/" }
   - { date: 2026-06-23, note: "The EU AI Act has extraterritorial reach applying to AI systems whose outputs are used in the EU or which affect persons located in the Union, regardless of where the company is headquartered or where", sourceUrl: "https://artificialintelligenceact.eu/what-the-act-means-for-staffing-businesses/" }
 draft: false
-updatedDate: 2026-08-10
+updatedDate: 2026-08-12
 ---
 
 ## AI Employment Reaches New Heights

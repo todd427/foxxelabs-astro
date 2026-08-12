@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-11T08:19:28.701Z",
+  "updatedAt": "2026-08-12T08:26:36.725Z",
   "pick": {
     "id": "deepgrove/maple-preview",
     "url": "https://hf.co/deepgrove/maple-preview",
     "author": "deepgrove",
     "name": "maple-preview",
-    "likes": 321,
-    "downloads": 1344,
-    "ageDays": 6,
+    "likes": 337,
+    "downloads": 2049,
+    "ageDays": 7,
     "blurb": "Maple-preview landed 2 days ago as a ternary-quantized MoE model with custom reasoning layers, MIT-licensed and under 500 downloads. If you're experimenting with sub-standard quantization schemes or building reasoning chains at odd bit-widths, the architecture is worth a baseline before it stabilizes.",
     "surfacedAt": "2026-08-07"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3094,
-      "downloads": 954441,
-      "ageDays": 11
+      "likes": 3184,
+      "downloads": 1048685,
+      "ageDays": 12
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
       "author": "LiquidAI",
       "name": "LFM2.5-2.6B",
-      "likes": 504,
-      "downloads": 89680,
-      "ageDays": 13
+      "likes": 559,
+      "downloads": 93668,
+      "ageDays": 14
     },
     {
       "id": "inclusionAI/Ling-3.0-flash",
       "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
       "author": "inclusionAI",
       "name": "Ling-3.0-flash",
-      "likes": 294,
-      "downloads": 5261,
-      "ageDays": 9
+      "likes": 310,
+      "downloads": 6148,
+      "ageDays": 10
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "author": "nvidia",
+      "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "likes": 166,
+      "downloads": 19250,
+      "ageDays": 8
     },
     {
       "id": "Akahsizrr/fuse-1-Lite",
       "url": "https://hf.co/Akahsizrr/fuse-1-Lite",
       "author": "Akahsizrr",
       "name": "fuse-1-Lite",
-      "likes": 94,
-      "downloads": 529,
-      "ageDays": 6
-    },
-    {
-      "id": "badtheorylabs/BTL-4",
-      "url": "https://hf.co/badtheorylabs/BTL-4",
-      "author": "badtheorylabs",
-      "name": "BTL-4",
-      "likes": 79,
-      "downloads": 1649,
-      "ageDays": 6
+      "likes": 107,
+      "downloads": 664,
+      "ageDays": 7
     }
   ]
 }

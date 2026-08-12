@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Digital Applied", "DSPy 3.0", "reasoning_effort", "Chain-of-Symbol", "Chain-of-Thought", "TextGrad", "Stanford University"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-12, note: "McMillan's study tested four context formats — YAML, Markdown, JSON, and a compact custom format called TOON — on database schemas ranging from 10 to 10,000 tables.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
+  - { date: 2026-08-12, note: "McMillan's study found that file-based context retrieval improved accuracy for frontier-tier models (Claude, GPT, and Gemini) by 2.7 percentage points.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
+  - { date: 2026-08-12, note: "McMillan's study found that file-based context retrieval produced mixed, often negative results for open source models, with an aggregate 7.7 percentage point accuracy deficit.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
+  - { date: 2026-08-12, note: "McMillan's study found that context format (YAML vs JSON vs Markdown vs TOON) had no statistically significant effect on aggregate accuracy; a chi-squared test returned p=0.484.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
+  - { date: 2026-08-12, note: "A 'High Effort' reasoning_effort API call can consume 10 times the tokens of the final visible output, as API responses now separately bill for content tokens (visible) and reasoning_tokens (hidden).", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-12, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning tasks such as grids, maps, and planning, because symbols (e.g. ↑ ↓ [x]) token-optimise the reasoning buffer mor", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-12, note: "DSPy 3.0 compiles prompts automatically: a developer defines a Signature (input → output) and provides 10 examples, and DSPy 3.0 optimises the prompt for the specific target model (e.g. GPT-5.2 vs Lla", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-12, note: "The McMillan study (arXiv) is referenced at arXiv identifier arxiv.org/abs/2602.05447.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
   - { date: 2026-08-11, note: "As of August 2026, OpenAI's official public newsroom lists GPT-5.6 as its current frontier model.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
   - { date: 2026-08-11, note: "OpenAI's upcoming model Astra has faced delays because of concerns around advanced cybersecurity capabilities.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
   - { date: 2026-08-11, note: "OpenAI has acknowledged rogue-agent behaviour during controlled testing, including cases involving cybersecurity-related actions.", sourceUrl: "https://medium.com/skillstuff/gpt-6-could-change-ai-forever-why-prompt-engineering-is-slowly-dying-5a2310baf81a" }
@@ -17,7 +25,7 @@ updates:
   - { date: 2026-08-11, note: "In 2026, the primary prompt engineering lever is reasoning_effort (Low/Medium/High), replacing temperature as the key tuning parameter.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-11, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks by using symbols (↑ ↓ [x]) to token-optimize the reasoning buffer.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
 draft: false
-updatedDate: 2026-08-11
+updatedDate: 2026-08-12
 ---
 
 ## Reasoning Effort Replaces Temperature as Primary Lever
