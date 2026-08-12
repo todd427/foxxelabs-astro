@@ -64,7 +64,7 @@ Together they create a more honest picture of how attention was actually distrib
 The second change is layout. v1 used a D3 force simulation to position blobs — useful for separation and collision avoidance, but the position of a blob had no semantic meaning. v2 uses **UMAP** to project the 384-dimensional GMM centroids into 2D before the force simulation takes over for visual separation. Semantic proximity is now structural. Blobs that are close on screen are close in meaning-space. Blobs that are far apart are genuinely conceptually distant. The map has a geography.
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
-  <iframe src="/leargas/memory_map_v2.html" width="100%" height="520" style="border:none;background:#0d0d0f;" title="Léargas — Memory Map v2"></iframe>
+  <iframe src="https://leargas.foxxelabs.ie/memory_map_v2.html" width="100%" height="520" style="border:none;background:#0d0d0f;" title="Léargas — Memory Map v2"></iframe>
 </div>
 
 What the expanded corpus reveals: the psychological attractors that emerged in v1 — *overwhelm at growing project complexity*, *fear of inadequacy and the need for validation* — are still there, and they have more mass. The git commit layer has created a new cluster of amber attractors in the engineering region that has no equivalent in conversation history alone: a cluster best described as *debugging production deployments under time pressure*. It's the commit messages. They don't describe reasoning — they describe outcomes. The manifold now contains both.
@@ -76,7 +76,7 @@ What the expanded corpus reveals: the psychological attractors that emerged in v
 The second visualisation was always planned but kept getting deferred. It answers a different question: not *what were you thinking about* but *what were you making*.
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
-  <iframe src="/leargas/book_growth.html" width="100%" height="520" style="border:none;background:#0a0a0c;" title="Léargas — Book Growth"></iframe>
+  <iframe src="https://leargas.foxxelabs.ie/book_growth.html" width="100%" height="520" style="border:none;background:#0a0a0c;" title="Léargas — Book Growth"></iframe>
 </div>
 
 Each blob is a book. Size is word count — radius grows logarithmically as the count climbs toward publication length. Colour is publication stage: blue for drafting, amber for cover design, red for KDP/print preparation, green for published. Two columns: Todd McCaffrey titles on the left, Talla Hill titles on the right.
@@ -102,7 +102,7 @@ The third visualisation emerged from a question that only became obvious after b
 The memory map shows what a mind was occupied with, month by month. The book growth shows what that mind was producing, month by month. They share a time axis. They're both traceable to the same person. What happens if you render them together?
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:2rem 0;border:0.5px solid rgba(255,255,255,0.08);">
-  <iframe src="/leargas/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — Combined Map"></iframe>
+  <iframe src="https://leargas.foxxelabs.ie/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — Combined Map"></iframe>
 </div>
 
 The design rule: **two visually distinct blob types on the same canvas.** Memory blobs (GMM components) are solid filled circles with glow, coloured by source type. Book blobs are rings — no fill, dashed stroke, coloured by publication stage. At a glance you can tell which is which. When you hover, the tooltip identifies the type and gives the appropriate metadata.

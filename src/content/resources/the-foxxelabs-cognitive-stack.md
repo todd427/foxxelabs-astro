@@ -28,7 +28,7 @@ draft: false
 ---
 
 <div style="width:100%;border-radius:8px;overflow:hidden;margin:0 0 2.5rem 0;border:0.5px solid rgba(255,255,255,0.08);">
-  <iframe src="/leargas/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — live cognitive manifold: memory and writing on the same animated canvas"></iframe>
+  <iframe src="https://leargas.foxxelabs.ie/combined_map.html" width="100%" height="560" style="border:none;background:#0a0a0c;" title="Léargas — live cognitive manifold: memory and writing on the same animated canvas"></iframe>
 </div>
 
 ## <span style="color:#1F4E79">The question we kept asking</span>
@@ -210,6 +210,6 @@ The stack is live. Mnemos holds 57,664 documents. Léargas is absorbing and cons
 
 Legion is waking up.
 
-If this architecture interests you — if you are working on cognitive AI systems, computational neuroscience, or the intersection of personal data and machine learning — we would like to hear from you. The code is at [github.com/todd427/leargas](https://github.com/todd427/leargas) and the other linked repositories. The interactive memory map is live at [foxxelabs.ie/leargas/memory_map_v2.html](https://foxxelabs.ie/leargas/memory_map_v2.html).
+If this architecture interests you — if you are working on cognitive AI systems, computational neuroscience, or the intersection of personal data and machine learning — we would like to hear from you. The code is at [github.com/todd427/leargas](https://github.com/todd427/leargas) and the other linked repositories. The interactive memory map is live at [leargas.foxxelabs.ie](https://leargas.foxxelabs.ie/memory_map_v2.html).
 
 *FoxxeLabs Ltd, Dublin. March 2026. All components run on Irish compute. The research is independent, unfunded at present, and ongoing.*
