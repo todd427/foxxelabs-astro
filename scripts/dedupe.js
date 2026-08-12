@@ -99,6 +99,15 @@ export const GATE_TEXT       = 0.35;  // entity regime: AND-gate text floor
 // "Anthropic acquires X" vs "Anthropic commits $200M") that would false-merge.
 export const SALIENT_NUM_MIN = 100;
 export const EVENT_TXT_FLOOR = 0.30;
+// Claim arm: a shared primary event claim is strong evidence of the same event,
+// but on its own it is not evidence that two ARTICLES are the same story. The arm
+// shipped with no similarity floor at all — one shared (entity, event_date) tuple
+// folded a candidate into any story in the window regardless of how unrelated the
+// bodies were. Because every fold appends its claims to the target, hub stories
+// accreted claim sets in the hundreds and each fold widened the net for the next
+// candidate: a rich-get-richer loop that drove new-article output to zero.
+// This mirrors EVENT_TXT_FLOOR — a weak cosine guard, not a second full gate.
+export const CLAIM_TXT_FLOOR = 0.30;
 export const GATE_TEXT_ONLY  = 0.55;  // text-only regime: txt => duplicate
 export const DEFAULT_WINDOW_DAYS = 120;
 
@@ -295,12 +304,17 @@ export function isDuplicate(s) {
 //      or undated events that carry no clean date key.
 //
 // Granularity (which claims count as "primary") is the open calibration question
-// from the parent brief; until step-2 extraction is tuned, the heuristic is the
-// "what happened" atoms — announcements and regulatory facts — falling back to all
-// claims when a story carries none of those.
+// from the parent brief; the heuristic is the "what happened" atoms —
+// announcements and regulatory facts.
+//
+// There is deliberately NO fallback to the full claim set. That fallback used to
+// fire whenever a candidate carried no announcement/regulatory-fact claim, which
+// promoted `data-point` atoms ("the wage premium hit 62%") to event-identity keys
+// — figures that recur across unrelated stories and co-identify nothing. A story
+// with no primary claim has no event identity to match on, so it should fall
+// through to the lexical/event arms rather than key on statistics.
 export function primaryEventClaims(claims = []) {
-  const primary = claims.filter((c) => c.claim_type === 'announcement' || c.claim_type === 'regulatory-fact');
-  return primary.length ? primary : claims;
+  return claims.filter((c) => c.claim_type === 'announcement' || c.claim_type === 'regulatory-fact');
 }
 
 /** True when two claim sets share a primary event claim — by identity first
@@ -334,6 +348,9 @@ export function findDuplicate(candidate, corpus, opts = {}) {
       if (!storyClaims || !storyClaims.length) continue;
       if (!sharePrimaryEventClaim(claims, storyClaims)) continue;
       const s = score(c, existing);
+      // Weak topical guard. Without it a lone shared claim tuple folds two
+      // articles that share nothing else — see CLAIM_TXT_FLOOR.
+      if (s.txt < CLAIM_TXT_FLOOR) continue;
       if (!best || s.txt > best.score.txt) best = { match: existing, score: s, reason: 'claim' };
     }
     if (best) return best;
