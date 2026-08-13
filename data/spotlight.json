@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-08-12T08:26:36.725Z",
+  "updatedAt": "2026-08-13T08:27:36.717Z",
   "pick": {
     "id": "deepgrove/maple-preview",
     "url": "https://hf.co/deepgrove/maple-preview",
     "author": "deepgrove",
     "name": "maple-preview",
-    "likes": 337,
+    "likes": 347,
     "downloads": 2049,
-    "ageDays": 7,
+    "ageDays": 8,
     "blurb": "Maple-preview landed 2 days ago as a ternary-quantized MoE model with custom reasoning layers, MIT-licensed and under 500 downloads. If you're experimenting with sub-standard quantization schemes or building reasoning chains at odd bit-widths, the architecture is worth a baseline before it stabilizes.",
     "surfacedAt": "2026-08-07"
   },
   "also": [
     {
+      "id": "Qwen/Qwen3.8-2.4T-A95B",
+      "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
+      "author": "Qwen",
+      "name": "Qwen3.8-2.4T-A95B",
+      "likes": 633,
+      "downloads": 978,
+      "ageDays": 5
+    },
+    {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3184,
+      "likes": 3267,
       "downloads": 1048685,
-      "ageDays": 12
+      "ageDays": 13
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
       "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
       "author": "LiquidAI",
       "name": "LFM2.5-2.6B",
-      "likes": 559,
+      "likes": 592,
       "downloads": 93668,
-      "ageDays": 14
-    },
-    {
-      "id": "inclusionAI/Ling-3.0-flash",
-      "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
-      "author": "inclusionAI",
-      "name": "Ling-3.0-flash",
-      "likes": 310,
-      "downloads": 6148,
-      "ageDays": 10
+      "ageDays": 15
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "likes": 166,
+      "likes": 216,
       "downloads": 19250,
-      "ageDays": 8
+      "ageDays": 9
     },
     {
-      "id": "Akahsizrr/fuse-1-Lite",
-      "url": "https://hf.co/Akahsizrr/fuse-1-Lite",
-      "author": "Akahsizrr",
-      "name": "fuse-1-Lite",
-      "likes": 107,
-      "downloads": 664,
-      "ageDays": 7
+      "id": "inclusionAI/Ling-3.0-flash",
+      "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
+      "author": "inclusionAI",
+      "name": "Ling-3.0-flash",
+      "likes": 320,
+      "downloads": 6148,
+      "ageDays": 11
     }
   ]
 }

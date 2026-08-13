@@ -10,6 +10,7 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-13, note: "The Cyberpsychology journal published a 'Decisions and Reviews Statistics for 2025' announcement on 05 August 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-12, note: "During the summer submission break, work on manuscripts already in the system continues as usual, with editors contacting reviewers, processing revisions, and communicating editorial decisions through", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-12, note: "Issue 3 of Volume 20 of Cyberpsychology journal is fully open access, available at https://cyberpsychology.eu/issue/view/2850.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-12, note: "Dr Lisa Orchard is affiliated with the University of Wolverhampton and is described as a contributor to the BPS Cyberpsychology Section conference context for 2026.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
@@ -191,7 +192,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-12
+updatedDate: 2026-08-13
 ---
 
 ## Summer Submission Break Announced

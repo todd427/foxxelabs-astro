@@ -10,6 +10,8 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-13, note: "Ireland adopted a distributed model of regulation for implementing the EU AI Act, coordinating the activities of relevant competent authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-13, note: "artificialintelligenceact.eu is maintained by the Future of Life Institute (FLI), which holds EU transparency register number 787064543128-10.", sourceUrl: "https://artificialintelligenceact.eu/" }
   - { date: 2026-08-12, note: "Ireland adopted a distributed model of regulation for AI, retaining sector-specific regulators rather than creating a single national regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-12, note: "Minister of State Niamh Smyth stated that Ireland is home to many of the world's leading foundational AI model providers.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-12, note: "Seven members were appointed to the Board of Oifig IS na hÉireann (the AI Office of Ireland) on 5 August 2026, approved by Minister Peter Burke.", sourceUrl: "https://aioffice.gov.ie/" }
@@ -317,7 +319,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-12
+updatedDate: 2026-08-13
 ---
 
 ## The Bill's Purpose and Structure
