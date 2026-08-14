@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-08-13T08:27:36.717Z",
+  "updatedAt": "2026-08-14T08:24:30.094Z",
   "pick": {
-    "id": "deepgrove/maple-preview",
-    "url": "https://hf.co/deepgrove/maple-preview",
-    "author": "deepgrove",
-    "name": "maple-preview",
-    "likes": 347,
-    "downloads": 2049,
-    "ageDays": 8,
-    "blurb": "Maple-preview landed 2 days ago as a ternary-quantized MoE model with custom reasoning layers, MIT-licensed and under 500 downloads. If you're experimenting with sub-standard quantization schemes or building reasoning chains at odd bit-widths, the architecture is worth a baseline before it stabilizes.",
-    "surfacedAt": "2026-08-07"
+    "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+    "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+    "author": "deepseek-ai",
+    "name": "DeepSeek-V4-Pro-0813",
+    "likes": 369,
+    "downloads": 0,
+    "ageDays": 1,
+    "blurb": "DeepSeek-V4-Pro landed 1 day ago with FP8 quantization and the V4 architecture (arxiv:2606.19348), currently at 0 downloads—meaning you're seeing behavior before adoption patterns set in. If you're shipping inference at 8-bit on capable hardware, the fresh checkpoint gives you a window to test against the Flash variant before wider ecosystem standardization.",
+    "surfacedAt": "2026-08-14"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
       "author": "Qwen",
       "name": "Qwen3.8-2.4T-A95B",
-      "likes": 633,
-      "downloads": 978,
-      "ageDays": 5
+      "likes": 838,
+      "downloads": 1012,
+      "ageDays": 6
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3267,
-      "downloads": 1048685,
-      "ageDays": 13
-    },
-    {
-      "id": "LiquidAI/LFM2.5-2.6B",
-      "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
-      "author": "LiquidAI",
-      "name": "LFM2.5-2.6B",
-      "likes": 592,
-      "downloads": 93668,
-      "ageDays": 15
+      "likes": 3347,
+      "downloads": 1431587,
+      "ageDays": 14
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "likes": 216,
-      "downloads": 19250,
-      "ageDays": 9
+      "likes": 238,
+      "downloads": 44859,
+      "ageDays": 10
     },
     {
-      "id": "inclusionAI/Ling-3.0-flash",
-      "url": "https://hf.co/inclusionAI/Ling-3.0-flash",
-      "author": "inclusionAI",
-      "name": "Ling-3.0-flash",
-      "likes": 320,
-      "downloads": 6148,
-      "ageDays": 11
+      "id": "LiquidAI/LFM2.5-2.6B",
+      "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
+      "author": "LiquidAI",
+      "name": "LFM2.5-2.6B",
+      "likes": 609,
+      "downloads": 116640,
+      "ageDays": 16
+    },
+    {
+      "id": "deepgrove/maple-preview",
+      "url": "https://hf.co/deepgrove/maple-preview",
+      "author": "deepgrove",
+      "name": "maple-preview",
+      "likes": 356,
+      "downloads": 3868,
+      "ageDays": 9
     }
   ]
 }

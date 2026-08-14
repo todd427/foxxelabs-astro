@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-14, note: "Issue 3, Vol. 20 topics include online incivility and victimisation, digital piracy, presentation on social media, adolescent sexting framing, social comparisons and wellbeing, avatar diversity in vir", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-14, note: "One article in Vol. 20, Issue 3 presents a latent profile analysis of online users' responses to incivility across six countries, authored by Emily Ahrens, Vladimir Bojarskich, and Tobias Rothmund.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-14, note: "One article in Vol. 20, Issue 3 uses eye-tracking to study how fear and humor cues legitimise hostility on social media, authored by Ursula Kristin Schmid, Simon Greipl, and Diana Rieger.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-14, note: "The journal's submission portal was closed for new manuscripts between 16 June and 31 August 2026 due to a declared summer break.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-14, note: "BIP lecture and workshop topics included the foundations of cyberpsychology, artificial intelligence, misinformation and deepfakes, online communication, gaming, and the social psychology of the inter", sourceUrl: "https://iadt.ie/news/cyberpsychology-bip/" }
   - { date: 2026-08-13, note: "The Cyberpsychology journal published a 'Decisions and Reviews Statistics for 2025' announcement on 05 August 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-12, note: "During the summer submission break, work on manuscripts already in the system continues as usual, with editors contacting reviewers, processing revisions, and communicating editorial decisions through", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-12, note: "Issue 3 of Volume 20 of Cyberpsychology journal is fully open access, available at https://cyberpsychology.eu/issue/view/2850.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -192,7 +197,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-13
+updatedDate: 2026-08-14
 ---
 
 ## Summer Submission Break Announced

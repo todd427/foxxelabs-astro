@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-14, note: "Ireland has elected a distributed model of regulation for the AI Act, coordinating existing sectoral regulatory authorities under a central body.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-14, note: "As of 2 August 2026, a new phase of the EU AI Act came into effect introducing transparency requirements for AI-generated content.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Under the new transparency obligations, organisations must clearly label AI-generated or AI-manipulated images, audio and video that could be mistaken for authentic content.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Under the new transparency obligations, organisations must inform users when they are interacting with an AI chatbot rather than a human.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Under the new transparency obligations, organisations must disclose AI-generated text published on matters of public interest where there has not been meaningful human editorial oversight.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Under the new transparency obligations, deepfakes must include appropriate disclosure so audiences understand the content has been artificially created or manipulated.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Using AI to help draft emails, summarise documents, generate ideas or improve writing does not automatically require disclosure under the new EU AI Act transparency rules.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
+  - { date: 2026-08-14, note: "Non-compliance with the EU AI Act can result in regulatory enforcement and significant financial penalties.", sourceUrl: "https://aiireland.ie/2026/08/04/new-eu-ai-transparency-rules-what-every-irish-business-needs-to-know/" }
   - { date: 2026-08-13, note: "Ireland adopted a distributed model of regulation for implementing the EU AI Act, coordinating the activities of relevant competent authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-13, note: "artificialintelligenceact.eu is maintained by the Future of Life Institute (FLI), which holds EU transparency register number 787064543128-10.", sourceUrl: "https://artificialintelligenceact.eu/" }
   - { date: 2026-08-12, note: "Ireland adopted a distributed model of regulation for AI, retaining sector-specific regulators rather than creating a single national regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -319,7 +327,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-13
+updatedDate: 2026-08-14
 ---
 
 ## The Bill's Purpose and Structure
