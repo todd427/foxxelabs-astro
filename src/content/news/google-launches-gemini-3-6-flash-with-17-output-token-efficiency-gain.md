@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Google", "Gemini 3.6 Flash", "Gemini 3.5 Flash", "Gemini 3.5 Flash-Lite", "Gemini 3.5 Flash Cyber", "Gemini 3.5 Pro", "Gemini 4", "Artificial Analysis Index"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-17, note: "Gemini 3.7 Flash was released by Google on August 13, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-08-17, note: "Qwen Image 3.0 Pro was released by Alibaba on August 5, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-08-17, note: "Qwen Image 3.0 was released by Alibaba on August 5, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
   - { date: 2026-08-08, note: "The most recent frontier AI model release tracked by AI Release Tracker is Muse Spark 1.2 by Meta, released on August 5, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
   - { date: 2026-08-08, note: "Qwen3.8-Max was released by the Qwen team on August 3, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
   - { date: 2026-08-08, note: "DeepSeek-V4-Flash-0731 was released by DeepSeek on July 31, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
@@ -24,7 +27,7 @@ updates:
   - { date: 2026-08-08, note: "OpenAI released three GPT-5.6 variants — Sol, Terra, and Luna — on June 26, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
   - { date: 2026-08-08, note: "Meta Muse Spark 1.1 was released on July 9, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
 draft: false
-updatedDate: 2026-08-08
+updatedDate: 2026-08-17
 ---
 
 ## Gemini 3.6 Flash: Efficiency and Performance Gains

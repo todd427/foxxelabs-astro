@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-17, note: "From 2 August 2026, new transparency rules require certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-17, note: "Deepfakes (images, videos, or audio that have been edited or generated using AI) must be labelled under the new AI Act transparency rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-17, note: "Ireland has adopted a distributed model of AI regulation, with the AI Office coordinating the activities of relevant competent authorities rather than centralising all enforcement.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-17, note: "The Regulation of Artificial Intelligence Act 2026 does not add to the obligations placed on regulated entities by the EU AI Regulation; it is a technical implementing measure.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-17, note: "The AI Office of Ireland will coordinate the activities of relevant competent authorities to encourage consistent implementation and supervision of the EU AI Act, and support joint investigation and e", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-17, note: "Market Surveillance Authorities (MSAs) are empowered under the Act to receive complaints, cooperate, supervise, impose and enforce administrative sanctions, including rules for penalties and enforceme", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-15, note: "The Irish government noted that further legislation beyond the Regulation of Artificial Intelligence Act 2026 will be brought forward in Autumn 2026 to address additional requirements, including amend", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-15, note: "New transparency rules under the EU AI Act started to apply on 2 August 2026.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
   - { date: 2026-08-15, note: "Ireland has elected a distributed model of regulation for AI Act implementation, leveraging existing regulatory experience across designated competent authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -340,7 +346,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-15
+updatedDate: 2026-08-17
 ---
 
 ## The Bill's Purpose and Structure

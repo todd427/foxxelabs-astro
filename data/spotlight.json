@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-17T07:05:17.554Z",
+  "updatedAt": "2026-08-17T08:01:45.324Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Pro-0813",
-    "likes": 548,
+    "likes": 550,
     "downloads": 21873,
     "ageDays": 4,
     "blurb": "DeepSeek-V4-Pro landed 1 day ago with FP8 quantization and the V4 architecture (arxiv:2606.19348), currently at 0 downloads—meaning you're seeing behavior before adoption patterns set in. If you're shipping inference at 8-bit on capable hardware, the fresh checkpoint gives you a window to test against the Flash variant before wider ecosystem standardization.",
@@ -17,7 +17,7 @@
       "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
       "author": "Qwen",
       "name": "Qwen3.8-2.4T-A95B",
-      "likes": 1018,
+      "likes": 1019,
       "downloads": 7932,
       "ageDays": 9
     },
@@ -26,7 +26,7 @@
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3470,
+      "likes": 3474,
       "downloads": 1872232,
       "ageDays": 17
     },
@@ -35,9 +35,9 @@
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "likes": 293,
+      "likes": 295,
       "downloads": 196326,
-      "ageDays": 12
+      "ageDays": 13
     },
     {
       "id": "LiquidAI/LFM2.5-2.6B",
@@ -53,7 +53,7 @@
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-      "likes": 160,
+      "likes": 161,
       "downloads": 66253,
       "ageDays": 16
     }
