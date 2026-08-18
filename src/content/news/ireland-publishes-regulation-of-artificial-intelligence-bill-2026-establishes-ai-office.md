@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-18, note: "The AI Office of Ireland is structured as an independent statutory body under the aegis of the Department of Enterprise, Tourism and Employment.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "The AI Office of Ireland will act as the Single Point of Contact for the EU AI Act for the European Commission, national sectoral regulators, and the public.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "Ireland elected a distributed model of regulation for the EU AI Act, in which existing sectoral regulators supervise AI within their domains while the AI Office coordinates nationally.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "Due to the complexity of the EU AI Act, further legislation arising from amendments in the Digital Omnibus on AI will be brought forward in the Autumn.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "Deepfakes — images, videos, or audio edited or generated using AI — must now be labelled under the EU AI Act transparency rules effective 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-18, note: "Ireland adopted a distributed model of regulation for the EU AI Act to leverage its existing regulatory experience.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "The EU AI Act applies horizontally across all sectors of the economy, both public and private, in a risk-based and proportionate manner.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-18, note: "The EU AI Act adopts a risk-based approach to regulation based on four risk categories.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-10, note: "Seven experts across technology, academia and public administration have been appointed to oversee the newly established AI Office of Ireland.", sourceUrl: "https://www.siliconrepublic.com/machines/seven-experts-join-ai-office-of-ireland-board" }
   - { date: 2026-08-10, note: "Mary Doyle, a former assistant secretary general and deputy secretary general in the departments of the Taoiseach, health and children, and education and skills, was appointed chairperson of the AI Of", sourceUrl: "https://www.siliconrepublic.com/machines/seven-experts-join-ai-office-of-ireland-board" }
   - { date: 2026-08-10, note: "Two former members of Ireland's AI Advisory Council, Prof Deirdre Ahern and Prof Alan Smeaton, were appointed to the AI Office of Ireland board.", sourceUrl: "https://www.siliconrepublic.com/machines/seven-experts-join-ai-office-of-ireland-board" }
@@ -396,7 +404,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-08-10
+updatedDate: 2026-08-18
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

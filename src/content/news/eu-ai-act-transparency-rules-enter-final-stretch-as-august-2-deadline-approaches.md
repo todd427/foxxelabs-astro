@@ -10,6 +10,13 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-18, note: "From 2 August 2026, the EU AI Office and national authorities started to enforce the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "In November 2025, the European Commission proposed targeted amendments to the AI Act (the 'AI omnibus') as part of the digital simplification package.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "A political agreement to simplify AI rules was reached in May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "On 3 June 2026, the European Commission proposed a Tech Sovereignty Package including a Cloud and AI Development Act (CADA).", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "On 1 June 2026, the AI Act Advisory Forum and Scientific Panel were launched to provide independent expert support for AI Act enforcement.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "The AI Act introduces a risk-based approach structured across 4 distinct levels of risk for AI developers, deployers, and users.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-08-18, note: "In 2025, Cyberpsychology journal experienced a sharp increase in submissions.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-13, note: "The EU AI Act's Article 50 transparency obligations became enforceable on 2 August 2026.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
   - { date: 2026-08-13, note: "The European Commission's AI Office gained active enforcement powers over general-purpose AI (GPAI) model providers on 2 August 2026, including powers to request information, demand model access, and ", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
   - { date: 2026-08-13, note: "National market surveillance authorities enforce Article 50 transparency rules; the EU AI Office enforces general-purpose AI model obligations.", sourceUrl: "https://jetico.com/blog/eu-ai-act-news-today-what-changed-on-august-2/" }
@@ -216,7 +223,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-13
+updatedDate: 2026-08-18
 ---
 
 ## Key Developments

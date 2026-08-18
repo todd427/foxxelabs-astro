@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-17T08:01:45.324Z",
+  "updatedAt": "2026-08-18T07:46:13.710Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Pro-0813",
-    "likes": 550,
-    "downloads": 21873,
-    "ageDays": 4,
+    "likes": 578,
+    "downloads": 25006,
+    "ageDays": 5,
     "blurb": "DeepSeek-V4-Pro landed 1 day ago with FP8 quantization and the V4 architecture (arxiv:2606.19348), currently at 0 downloads—meaning you're seeing behavior before adoption patterns set in. If you're shipping inference at 8-bit on capable hardware, the fresh checkpoint gives you a window to test against the Flash variant before wider ecosystem standardization.",
     "surfacedAt": "2026-08-14"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
       "author": "Qwen",
       "name": "Qwen3.8-2.4T-A95B",
-      "likes": 1019,
-      "downloads": 7932,
-      "ageDays": 9
+      "likes": 1044,
+      "downloads": 9465,
+      "ageDays": 10
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3474,
-      "downloads": 1872232,
-      "ageDays": 17
+      "likes": 3505,
+      "downloads": 1978298,
+      "ageDays": 18
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "likes": 295,
-      "downloads": 196326,
-      "ageDays": 13
+      "likes": 311,
+      "downloads": 231271,
+      "ageDays": 14
     },
     {
-      "id": "LiquidAI/LFM2.5-2.6B",
-      "url": "https://hf.co/LiquidAI/LFM2.5-2.6B",
-      "author": "LiquidAI",
-      "name": "LFM2.5-2.6B",
-      "likes": 648,
-      "downloads": 141009,
-      "ageDays": 19
+      "id": "inclusionAI/Ling-3.0-tiny",
+      "url": "https://hf.co/inclusionAI/Ling-3.0-tiny",
+      "author": "inclusionAI",
+      "name": "Ling-3.0-tiny",
+      "likes": 310,
+      "downloads": 6266,
+      "ageDays": 8
     },
     {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-      "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-      "author": "nvidia",
-      "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-      "likes": 161,
-      "downloads": 66253,
-      "ageDays": 16
+      "id": "empero-ai/Qwen3.8-9B",
+      "url": "https://hf.co/empero-ai/Qwen3.8-9B",
+      "author": "empero-ai",
+      "name": "Qwen3.8-9B",
+      "likes": 116,
+      "downloads": 540,
+      "ageDays": 3
     }
   ]
 }
