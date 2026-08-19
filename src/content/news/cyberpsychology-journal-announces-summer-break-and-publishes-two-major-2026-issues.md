@@ -10,6 +10,10 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-19, note: "Emmelyn Croes joined Cyberpsychology as Associate Editor on 7 October 2025.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-19, note: "Emmelyn Croes is an Assistant Professor at the Tilburg School of Humanities and Digital Sciences, Tilburg University.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-19, note: "The journal's SCImago Journal Rank (SJR) is 0.85, placing it Q1 in the Communication category and Q2 in Psychology and Social Sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-19, note: "The journal is published under Masaryk University (Masarykova univerzita) and its Faculty of Social Studies.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-16, note: "The journal closed its submission portal for new submissions from 16 June to 31 August 2026, due to a sharp increase in submissions experienced in 2025.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-16, note: "Cyberpsychology journal is a diamond open-access publication, meaning it operates on a non-profit basis with no author or reader fees.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-15, note: "Volume 20, Issue 3 contains twelve peer-reviewed articles.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -203,7 +207,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-16
+updatedDate: 2026-08-19
 ---
 
 ## Summer Submission Break Announced

@@ -9,8 +9,26 @@ sourceUrl: "https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-s
 significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-08-19, note: "On August 8, 2026, Demis Hassabis stepped away from running Google DeepMind day-to-day to become its chairman and Alphabet's chief scientist.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Operational control of Google DeepMind passed to CTO Koray Kavukcuoglu on August 8, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Jeff Dean left Google after 27 years to start a new company called Discovery Loop.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Researchers Sanjay Ghemawat, Quoc Le, and Oriol Vinyals departed Google alongside Jeff Dean to co-found Discovery Loop.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Discovery Loop is structured as a public benefit corporation focused on automating scientific research processes using AI.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Google will be an investor and cloud provider to Discovery Loop.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Anthropic has secured approximately $71 billion in chip lease obligations.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Anthropic's compute commitments include a roughly $10 billion computing contract with infrastructure company Volta.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Anthropic has launched an in-house chip design team.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "OpenAI released an updated GPT-5.6 Sol with 68% lower factual errors compared to the previous GPT-5.5.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "Gemini 3.5 Pro was reported to be months behind schedule at the time of the Google reorganisation.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "AMD acquired startup Taalas for its silicon-burning model technology, which demonstrated processing speeds of 17,000 tokens per second for specialised workloads.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
+  - { date: 2026-08-19, note: "On 2 August 2026, new EU AI Act transparency obligations took effect requiring certain AI-generated or manipulated content to be clearly and visibly labelled and include machine-readable marks.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-19, note: "The EU transparency obligations apply to deepfakes (images, audio, and video that resemble existing persons, objects, places, entities, or events), emotion recognition tools, biometric categorisation ", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-19, note: "From 2 August 2026, users must be clearly informed when they are interacting with an AI system (e.g. a chatbot, AI agent, or avatar) rather than a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
+updatedDate: 2026-08-19
 ---
 
 ## AI Safety Testing Becomes Safety Risk
