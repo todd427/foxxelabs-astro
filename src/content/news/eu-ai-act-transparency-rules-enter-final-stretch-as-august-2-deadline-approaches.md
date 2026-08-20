@@ -10,6 +10,9 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-20, note: "The Code of Practice on transparency of AI-generated content operationalises the EU AI Act rules on transparency of AI-generated content.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-20, note: "The AI Office of Ireland became operational by 2 August 2026 and is the central coordinating authority for implementation of the EU AI Act in Ireland.", sourceUrl: "https://www.rte.ie/news/business/2026/0730/1585741-ai-office-of-ireland/" }
+  - { date: 2026-08-20, note: "The EU AI Act came into force in August 2024 and banned AI systems considered a clear threat to the safety, livelihoods, and rights of people.", sourceUrl: "https://www.rte.ie/news/business/2026/0730/1585741-ai-office-of-ireland/" }
   - { date: 2026-08-18, note: "From 2 August 2026, the EU AI Office and national authorities started to enforce the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
   - { date: 2026-08-18, note: "In November 2025, the European Commission proposed targeted amendments to the AI Act (the 'AI omnibus') as part of the digital simplification package.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
   - { date: 2026-08-18, note: "A political agreement to simplify AI rules was reached in May 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
@@ -223,7 +226,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-18
+updatedDate: 2026-08-20
 ---
 
 ## Key Developments

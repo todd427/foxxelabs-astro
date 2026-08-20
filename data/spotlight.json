@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-19T07:47:27.244Z",
+  "updatedAt": "2026-08-20T07:48:20.704Z",
   "pick": {
     "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
     "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
     "author": "deepseek-ai",
     "name": "DeepSeek-V4-Pro-0813",
-    "likes": 608,
-    "downloads": 30985,
-    "ageDays": 6,
+    "likes": 656,
+    "downloads": 37583,
+    "ageDays": 7,
     "blurb": "DeepSeek-V4-Pro landed 1 day ago with FP8 quantization and the V4 architecture (arxiv:2606.19348), currently at 0 downloads—meaning you're seeing behavior before adoption patterns set in. If you're shipping inference at 8-bit on capable hardware, the fresh checkpoint gives you a window to test against the Flash variant before wider ecosystem standardization.",
     "surfacedAt": "2026-08-14"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
       "author": "Qwen",
       "name": "Qwen3.8-2.4T-A95B",
-      "likes": 1075,
-      "downloads": 11212,
-      "ageDays": 11
+      "likes": 1108,
+      "downloads": 12699,
+      "ageDays": 12
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3531,
-      "downloads": 2123462,
-      "ageDays": 19
+      "likes": 3560,
+      "downloads": 2330940,
+      "ageDays": 20
     },
     {
-      "id": "empero-ai/Qwen3.8-9B",
-      "url": "https://hf.co/empero-ai/Qwen3.8-9B",
-      "author": "empero-ai",
-      "name": "Qwen3.8-9B",
-      "likes": 133,
-      "downloads": 1831,
+      "id": "ornith-ai/Ornith-1.5-35B-A3B",
+      "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "author": "ornith-ai",
+      "name": "Ornith-1.5-35B-A3B",
+      "likes": 148,
+      "downloads": 0,
+      "ageDays": 2
+    },
+    {
+      "id": "z-lab/Qwen3.8-27B-DFlash2",
+      "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
+      "author": "z-lab",
+      "name": "Qwen3.8-27B-DFlash2",
+      "likes": 125,
+      "downloads": 1037,
       "ageDays": 4
     },
     {
-      "id": "inclusionAI/Ling-3.0-tiny",
-      "url": "https://hf.co/inclusionAI/Ling-3.0-tiny",
-      "author": "inclusionAI",
-      "name": "Ling-3.0-tiny",
-      "likes": 323,
-      "downloads": 9990,
-      "ageDays": 9
-    },
-    {
-      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "url": "https://hf.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "author": "nvidia",
-      "name": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
-      "likes": 326,
-      "downloads": 269372,
-      "ageDays": 15
+      "id": "incoai/Qwen3.8-27B-DFlash2",
+      "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
+      "author": "incoai",
+      "name": "Qwen3.8-27B-DFlash2",
+      "likes": 114,
+      "downloads": 1484,
+      "ageDays": 2
     }
   ]
 }
