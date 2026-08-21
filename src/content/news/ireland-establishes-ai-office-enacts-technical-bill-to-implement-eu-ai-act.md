@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-21, note: "Certain AI-generated or manipulated content — including deepfakes resembling existing persons, objects, places, or events — must be clearly and visibly labelled and include machine-readable marks.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "The transparency labelling obligations cover emotion recognition and biometric categorisation tools.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "Users must be clearly informed when they are not interacting with a real person but with an AI system, such as a chatbot, AI agent, or avatar.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "Non-compliant companies face fines of up to €15 million or 3% of global annual turnover, whichever is higher, for breaching the AI Act transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "EU institutions, bodies, and agencies that breach the AI Act transparency rules face fines of up to €750,000, enforced by the European Data Protection Supervisor.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "The EU AI Office is responsible for enforcing the transparency rules for AI systems under its supervision.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-21, note: "The EU AI Act entered into force on 1 August 2024, with its provisions applying in stages at different times.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-17, note: "From 2 August 2026, new transparency rules require certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-17, note: "Deepfakes (images, videos, or audio that have been edited or generated using AI) must be labelled under the new AI Act transparency rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-17, note: "Ireland has adopted a distributed model of AI regulation, with the AI Office coordinating the activities of relevant competent authorities rather than centralising all enforcement.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -346,7 +353,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-17
+updatedDate: 2026-08-21
 ---
 
 ## The Bill's Purpose and Structure

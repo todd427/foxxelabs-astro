@@ -9,8 +9,21 @@ sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/"
 significance: "high"
 entities: ["Stanford Digital Economy Lab", "Erik Brynjolfsson", "Bharat Chandar", "Ruyu Chen", "ADP", "ChatGPT"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-21, note: "Employment declines for young workers are concentrated in occupations that rely heavily on codified knowledge; employment has increased among experienced workers in occupations relying on tacit knowle", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-21, note: "So far, AI-related labour market adjustment is showing up primarily in employment levels rather than in base pay.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-21, note: "The divergence in employment between AI-exposed and non-exposed young workers remains when technology firms and computer occupations are excluded, and when controlling for interest-rate exposure and r", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-21, note: "The U.S. Census Bureau's administrative data show broadly consistent descriptive patterns by age and industry with the Stanford ADP findings, per Tucker (2026).", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-21, note: "Covalen has said it is cutting around 700 roles at its Irish operations.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "Meta is cutting approximately 20% of its Irish workforce, double the planned global average cut at the company.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "TikTok is considering cutting approximately 300 staff in Ireland, in a restructure impacting its AI data service and operations team.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "More than 6% of Ireland's workforce is employed in the tech sector, higher than the EU average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "Employment in ICT among the under-30s in Ireland dropped by almost one third between 2023 and 2025, according to a government analysis.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "In the first quarter of 2026, overall jobs in Ireland's tech sector fell almost 11% year-on-year.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
+  - { date: 2026-08-21, note: "Ireland's unemployment rate is below the euro-area average as of July 2026.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
+updatedDate: 2026-08-21
 ---
 
 ## Stanford Releases Updated 'Canaries in the Coal Mine' Analysis
