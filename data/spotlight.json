@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-08-21T07:52:02.602Z",
+  "updatedAt": "2026-08-22T07:40:55.605Z",
   "pick": {
     "id": "z-lab/Qwen3.8-27B-DFlash2",
     "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
     "author": "z-lab",
     "name": "Qwen3.8-27B-DFlash2",
-    "likes": 157,
-    "downloads": 12235,
-    "ageDays": 5,
+    "likes": 183,
+    "downloads": 21092,
+    "ageDays": 6,
     "blurb": "DFlash2 is a speculative decoding draft model for Qwen3.8-27B that ships with block-diffusion speedups in both sglang and vllm—two days old with enough adoption (12k downloads) to have real integration feedback. If you're running inference serving at scale, this is the window before the optimization pattern solidifies into standard practice across those frameworks.",
     "surfacedAt": "2026-08-21"
   },
   "also": [
     {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-0813",
-      "likes": 689,
-      "downloads": 43287,
-      "ageDays": 8
-    },
-    {
       "id": "ornith-ai/Ornith-1.5-35B-A3B",
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 242,
-      "downloads": 1713,
-      "ageDays": 3
+      "likes": 299,
+      "downloads": 9165,
+      "ageDays": 4
     },
     {
-      "id": "Qwen/Qwen3.8-2.4T-A95B",
-      "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
-      "author": "Qwen",
-      "name": "Qwen3.8-2.4T-A95B",
-      "likes": 1127,
-      "downloads": 14592,
-      "ageDays": 13
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Pro-0813",
+      "likes": 710,
+      "downloads": 49601,
+      "ageDays": 9
     },
     {
       "id": "superwhisper/s1-mini",
       "url": "https://hf.co/superwhisper/s1-mini",
       "author": "superwhisper",
       "name": "s1-mini",
-      "likes": 170,
-      "downloads": 348,
-      "ageDays": 9
+      "likes": 192,
+      "downloads": 1136,
+      "ageDays": 10
     },
     {
-      "id": "incoai/Qwen3.8-27B-DFlash2",
-      "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
-      "author": "incoai",
-      "name": "Qwen3.8-27B-DFlash2",
-      "likes": 135,
-      "downloads": 17062,
-      "ageDays": 3
+      "id": "Qwen/Qwen3.8-2.4T-A95B",
+      "url": "https://hf.co/Qwen/Qwen3.8-2.4T-A95B",
+      "author": "Qwen",
+      "name": "Qwen3.8-2.4T-A95B",
+      "likes": 1141,
+      "downloads": 15702,
+      "ageDays": 14
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-9B",
+      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
+      "author": "ornith-ai",
+      "name": "Ornith-1.5-9B",
+      "likes": 154,
+      "downloads": 10304,
+      "ageDays": 4
     }
   ]
 }

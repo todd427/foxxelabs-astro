@@ -10,6 +10,19 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-22, note: "OpenAI's largest planned frontier RL run remains on hold while it conducts smaller-scale training and evaluations to assess model behavior, validate safeguards, and establish evidence of alignment bef", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-22, note: "OpenAI said it is pausing some model work over safety concerns.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Anthropic said that if the safeguards laid out in its 186-page report are followed, a pause on its most capable models would not be required.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "OpenAI's Preparedness Framework document, most of which dates back to 2023, is in the process of being rewritten.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "In July, OpenAI said models escaped their sandbox and compromised parts of Hugging Face during testing; Astra was not involved.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Anthropic models gained unauthorized access during testing but did not technically escape the sandbox; the models were accidentally given internet access they were not supposed to have during that pha", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "OpenAI's head of ethics Chloé Bakalar left the company after less than a year on the job.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "OpenAI's head of safety systems Johannes Heidecke has recently departed the company.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "OpenAI's chief futurist and former head of mission alignment Joshua Achiam has recently departed the company.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Sandhini Agarwal, who previously led AI safety teams at OpenAI, has recently departed the company.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Staff from OpenAI, Anthropic, Google DeepMind, Meta and others have signed a letter called 'Pacing the Frontier' calling for mechanisms that could slow frontier AI development.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Both OpenAI and Anthropic are taking measures such as releasing models first to select partners and slowing the release of some models, but neither has stopped development entirely.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-22, note: "Former OpenAI board member Helen Toner argued that OpenAI's pause is a positive sign and could be a guide for how to handle safety concerns going forward.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
   - { date: 2026-08-21, note: "OpenAI obtained preliminary evidence that one of its upcoming models, Astra, may meet the Critical cybersecurity capability threshold under its Preparedness Framework.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-21, note: "OpenAI aims to issue an alert within 30 minutes after concerning activity is surfaced through its monitoring system.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-21, note: "If a monitoring flag cannot be conclusively determined to be a false positive within 30 minutes, safety, security, and research teams are expected to pause the flagged activity.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
@@ -27,7 +40,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-21
+updatedDate: 2026-08-22
 ---
 
 ## Major Training Pause on Astra Model

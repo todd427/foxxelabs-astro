@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-22, note: "Ireland has elected a distributed model of regulation to implement the EU AI Act, leveraging existing regulatory experience across sectoral bodies.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-22, note: "On 2 August 2026, new transparency rules under the EU AI Act took effect across all EU member states.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Under the new transparency rules, chatbots and other interactive AI systems must clearly inform users when they are interacting with an AI system rather than a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Deepfakes — images, audio, and video that resemble existing persons, objects, places, entities, or events — must be clearly and visibly labelled and include machine-readable marks.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The EU has created a set of icons that providers and deployers of generative AI systems may use to label AI-generated content.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The European Commission published guidelines to assist providers and deployers of AI systems in meeting the AI Act's transparency obligations.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-21, note: "Certain AI-generated or manipulated content — including deepfakes resembling existing persons, objects, places, or events — must be clearly and visibly labelled and include machine-readable marks.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-21, note: "The transparency labelling obligations cover emotion recognition and biometric categorisation tools.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-21, note: "Users must be clearly informed when they are not interacting with a real person but with an AI system, such as a chatbot, AI agent, or avatar.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -353,7 +359,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-21
+updatedDate: 2026-08-22
 ---
 
 ## The Bill's Purpose and Structure

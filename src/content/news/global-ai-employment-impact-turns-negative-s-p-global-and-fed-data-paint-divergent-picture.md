@@ -9,8 +9,24 @@ sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-imp
 significance: "high"
 entities: ["S&P Global", "451 Research", "Federal Reserve Bank of New York", "S&P Global 1200"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-08-22, note: "S&P Global's PMI survey forecasts a further net employment impact of -2 percentage points due to AI in the coming 12 months.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "Among enterprise AI objectives surveyed, process efficiency (64%) and employee productivity (59%) are far more commonly prioritised than head count reduction (24%).", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "Large companies (10,000+ employees) forecast a net negative employment impact from AI of -13 percentage points, while small firms forecast +3 points and medium-sized firms +2 points.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "In Germany, the net balance of AI's impact on employment was -2 percentage points, with administrative and marketing roles cut and AI developers and implementation managers added.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "In the UK, the net balance of AI's impact on employment was -6 percentage points, with cuts concentrated in administration, customer service, and finance roles.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "In Italy, the net balance of AI's impact on employment was +9 percentage points, reflecting more firms adding jobs in marketing, graphic design, analyst, and IT roles.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "Cybersecurity is the most acute AI-related skills shortage, with 64% of respondents saying gaps had a moderate or severe impact on AI initiatives.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "Machine learning and AI development skills gaps were rated as having moderate or severe impact by 59% of respondents; software development and engineering by 58%; and data management and governance by", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "In 2026, just 16% of surveyed firms completely trust third-party AI models and 30% mostly trust them, down from 24% and 42% respectively in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "51% of surveyed firms reported investing in AI for identity verification and access assurance, with 29% targeting full automation in that use case.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-08-22, note: "New York Fed regional survey data show that AI adoption among service firms rose from 25% in 2024 to 40% in 2025, with 44% expected to use AI in the next six months.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
+  - { date: 2026-08-22, note: "New York Fed regional survey data show that AI adoption among manufacturers rose from 16% in 2024 to 26% in 2025, with 33% expected to use AI in the next six months.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
+  - { date: 2026-08-22, note: "New York Fed surveyed firms report very few AI-driven layoffs, but firms do anticipate more reductions in hiring plans going forward, especially for college-educated workers.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
+  - { date: 2026-08-22, note: "New York Fed research found (October 2024) that individuals exposed to generative AI tools reported bleaker expectations for job availability and income inequality.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
+  - { date: 2026-08-22, note: "The post is the inaugural entry in a new series called 'Street Level' authored by Kartik B. Athreya, Research Director at the Federal Reserve Bank of New York.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
 draft: false
+updatedDate: 2026-08-22
 ---
 
 ## Global Net Employment Impact Turns Negative

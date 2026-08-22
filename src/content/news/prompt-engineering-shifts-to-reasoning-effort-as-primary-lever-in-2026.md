@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Digital Applied", "DSPy 3.0", "reasoning_effort", "Chain-of-Symbol", "Chain-of-Thought", "TextGrad", "Stanford University"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-22, note: "In 2026, reasoning_effort (Low/Medium/High) has replaced temperature as the primary parameter for controlling AI model output quality.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-22, note: "API responses in 2026 now separate content tokens (visible) from reasoning_tokens (billed but hidden); a 'High Effort' API call can consume 10x the tokens of the final visible output.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-22, note: "The optimal number of few-shot examples for prompt engineering is between 2 and 5; fewer than two examples often fails to establish a clear pattern, while more than five rarely improves performance.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-22, note: "Claude Opus 4.7 outperforms GPT-5.4 on SWE-bench Pro, tool use, and computer use benchmarks, according to Digital Applied's agentic coding comparison.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-22, note: "The concept of the 'prompt engineer' began to be widely discussed in 2022.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
+  - { date: 2026-08-22, note: "SDG Group's Orbitae identifies the shift from prompt engineering to context design as one of the trends in its Data, Analytics & AI Trends 2026 report.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
+  - { date: 2026-08-22, note: "SDG Group predicts a rise in automated code-generation systems in 2026, which it states will play a fundamental role in accelerating the development of new products.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
+  - { date: 2026-08-22, note: "SDG Group states that the new context-design paradigm will allow professionals without advanced programming knowledge to generate highly sophisticated, data- and AI-driven solutions.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
   - { date: 2026-08-12, note: "McMillan's study tested four context formats — YAML, Markdown, JSON, and a compact custom format called TOON — on database schemas ranging from 10 to 10,000 tables.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
   - { date: 2026-08-12, note: "McMillan's study found that file-based context retrieval improved accuracy for frontier-tier models (Claude, GPT, and Gemini) by 2.7 percentage points.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
   - { date: 2026-08-12, note: "McMillan's study found that file-based context retrieval produced mixed, often negative results for open source models, with an aggregate 7.7 percentage point accuracy deficit.", sourceUrl: "https://promptailearning.com/ai-news/daily/context-engineering-replaces-prompt-engineering-2026" }
@@ -25,7 +33,7 @@ updates:
   - { date: 2026-08-11, note: "In 2026, the primary prompt engineering lever is reasoning_effort (Low/Medium/High), replacing temperature as the key tuning parameter.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-11, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks by using symbols (↑ ↓ [x]) to token-optimize the reasoning buffer.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
 draft: false
-updatedDate: 2026-08-12
+updatedDate: 2026-08-22
 ---
 
 ## Reasoning Effort Replaces Temperature as Primary Lever

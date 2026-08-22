@@ -10,6 +10,22 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-22, note: "New AI Act transparency rules took effect on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "AI-generated or manipulated images, audio, and video that resemble existing persons, objects, places, entities, or events (deepfakes) must be clearly and visibly labelled.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "AI-generated or manipulated content must include machine-readable marks in addition to visible labelling.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Emotion recognition and biometric categorisation tools are subject to the new marking and labelling obligations.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The Commission's transparency guidelines explain how compliance can be demonstrated, including through adherence to a code of practice on AI-generated content.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "National market surveillance authorities are responsible for enforcing the AI Act transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The European AI Office is responsible for enforcing the transparency rules for AI systems under its supervision.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The European Data Protection Supervisor is responsible for enforcing the transparency rules when EU institutions are providers or deployers of AI systems.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Fines for transparency rule violations are up to €15 million or 3% of global annual turnover for companies, whichever is higher.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Fines for transparency rule violations are up to €750,000 for EU institutions, bodies, and agencies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "Proportionality in fines is to be taken into account for small and medium-sized enterprises (SMEs) and small mid-cap companies (SMCs).", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "The AI Act entered into force on 1 August 2024.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-22, note: "High-risk AI systems listed under Annex III — including recruitment tools, credit scoring, education, law enforcement, and border control — now face a full compliance deadline of 2 December 2027, not ", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-22, note: "AI embedded in products covered by EU product safety law under Annex I — including medical devices, machinery, and toys — has a full compliance deadline of 2 August 2028.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-22, note: "The high-risk deadline was deferred because harmonised standards and conformity assessment tools that high-risk compliance depends on were not finished.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-22, note: "The Digital Omnibus on AI amendment package split the AI Act compliance calendar into two speeds: transparency rules apply on schedule, while the high-risk regime is deferred.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-19, note: "On August 8, 2026, Demis Hassabis stepped away from running Google DeepMind day-to-day to become its chairman and Alphabet's chief scientist.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
   - { date: 2026-08-19, note: "Operational control of Google DeepMind passed to CTO Koray Kavukcuoglu on August 8, 2026.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
   - { date: 2026-08-19, note: "Jeff Dean left Google after 27 years to start a new company called Discovery Loop.", sourceUrl: "https://www.buildfastwithai.com/blogs/ai-news-today-august-9-2026" }
@@ -28,7 +44,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-08-19
+updatedDate: 2026-08-22
 ---
 
 ## AI Safety Testing Becomes Safety Risk
