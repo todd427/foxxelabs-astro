@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-23, note: "Under the new AI Act transparency rules, chatbots and other interactive AI systems must tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-23, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the AI Act rules effective 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-23, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating across multiple existing national competent authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-22, note: "Ireland has elected a distributed model of regulation to implement the EU AI Act, leveraging existing regulatory experience across sectoral bodies.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-22, note: "On 2 August 2026, new transparency rules under the EU AI Act took effect across all EU member states.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-22, note: "Under the new transparency rules, chatbots and other interactive AI systems must clearly inform users when they are interacting with an AI system rather than a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -359,7 +362,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-08-23
 ---
 
 ## The Bill's Purpose and Structure

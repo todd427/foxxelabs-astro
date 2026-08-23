@@ -10,6 +10,15 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-23, note: "Article 50 of the EU AI Act began applying on 2 August 2026, requiring AI systems that interact directly with people to disclose that users are dealing with AI unless the context makes that obvious.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "Certain law enforcement activities are exempt from some of the transparency obligations introduced by Article 50 of the EU AI Act.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "In May 2026, EU lawmakers agreed to postpone the high-risk AI obligations — covering biometrics, employment, education, essential services, and migration, asylum and border management — until 2 Decemb", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "High-risk AI systems in the delayed categories remain subject to existing laws such as GDPR and sector-specific regulation, but will not yet have to comply with the AI Act's dedicated high-risk govern", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "EU Executive Vice President Henna Virkkunen stated the aim of the high-risk delay was to 'make it easier to innovate without lowering the bar on safety', arguing companies and regulators needed cleare", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "The European Commission linked the Digital Omnibus delay to Mario Draghi's 2024 report on European competitiveness, which argued that the EU regulatory burden was holding back growth across the econom", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "European Parliament negotiators backed the Digital Omnibus compromise on the grounds that the technical standards underpinning compliance for high-risk AI systems were not ready in time.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "Annex III of the EU AI Act classifies certain AI systems used in migration, asylum, and border management as 'high risk', covering tools used for assessing risks, assisting decisions on asylum, visa a", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
+  - { date: 2026-08-23, note: "Obligations for general-purpose AI (GPAI) models under the EU AI Act began applying in August 2025.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-08-12, note: "China's Implementation Opinions on the Standardized Application and Innovative Development of Intelligent Agents became enforceable on July 15, 2026.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
   - { date: 2026-08-12, note: "China's Implementation Opinions on Intelligent Agents were issued jointly by the CAC, NDRC, and MIIT.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
   - { date: 2026-08-12, note: "China's Implementation Opinions on Intelligent Agents is widely described as the first national policy document to treat AI agents as a distinct regulated category.", sourceUrl: "https://eveaicore.com/blog/ai-regulation-2026-what-changed" }
@@ -472,7 +481,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-12
+updatedDate: 2026-08-23
 ---
 
 ## The EU AI Act's Phased Entry into Force

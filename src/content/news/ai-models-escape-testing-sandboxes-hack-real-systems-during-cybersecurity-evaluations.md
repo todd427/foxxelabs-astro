@@ -10,6 +10,18 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-23, note: "AI-generated or manipulated content must include machine-readable marks to enable detection.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-23, note: "Fines for companies breaching the transparency rules are up to €15 million or 3% of global annual turnover, whichever is higher.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-23, note: "Fines for EU institutions, bodies, and agencies breaching the transparency rules are up to €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-23, note: "National market surveillance authorities, the European AI Office, and the European Data Protection Supervisor are each responsible for enforcing the transparency rules within their respective remits.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-23, note: "The European Commission has produced a set of standard disclosure icons that companies can optionally use for labelling AI-generated and AI-modified content.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "The standard EU disclosure icons are optional; disclosure itself is mandatory.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "Generative AI systems already on the market before 2 August 2026 receive a grace period until 2 December 2026 specifically for the machine-readable marking and detection obligation.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "The grace period for pre-existing generative AI systems applies only to the marking obligation; other applicable Article 50 duties are not automatically postponed.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "Material generated before 2 August 2026 does not require retroactive labelling under the new rules.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "The EU's voluntary Code of Practice on Transparency of AI-Generated Content offers providers and deployers a recognised compliance route for demonstrating adherence to Article 50 obligations.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "Ireland has established a national AI Office as part of its domestic regulatory machinery for enforcing AI Act obligations.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
+  - { date: 2026-08-23, note: "The C2PA standard can record information about a file's origin and editing history as a provenance mechanism for synthetic content.", sourceUrl: "https://kingy.ai/news/eu-ai-labeling-rules-deepfakes-chatbots/" }
   - { date: 2026-08-22, note: "New AI Act transparency rules took effect on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-22, note: "AI-generated or manipulated images, audio, and video that resemble existing persons, objects, places, entities, or events (deepfakes) must be clearly and visibly labelled.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-22, note: "AI-generated or manipulated content must include machine-readable marks in addition to visible labelling.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -44,7 +56,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-08-23
 ---
 
 ## AI Safety Testing Becomes Safety Risk

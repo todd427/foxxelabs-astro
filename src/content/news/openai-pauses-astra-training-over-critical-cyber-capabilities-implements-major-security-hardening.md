@@ -10,6 +10,11 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-23, note: "OpenAI determined on August 7 that Astra may have critical cyber capabilities.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-23, note: "OpenAI added an additional monitoring requirement on August 7 for all inference of Astra with tools, not just RL training and evaluations.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-23, note: "OpenAI is applying the strictest level of security safeguards to workloads involving Astra or cyber models.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-23, note: "OpenAI plans to publish a technical report of its learnings in the coming weeks.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-23, note: "OpenAI CEO Sam Altman stated that the company's unreleased models are showing 'various degrees of misalignment'.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
   - { date: 2026-08-22, note: "OpenAI's largest planned frontier RL run remains on hold while it conducts smaller-scale training and evaluations to assess model behavior, validate safeguards, and establish evidence of alignment bef", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-22, note: "OpenAI said it is pausing some model work over safety concerns.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
   - { date: 2026-08-22, note: "Anthropic said that if the safeguards laid out in its 186-page report are followed, a pause on its most capable models would not be required.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
@@ -40,7 +45,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-08-23
 ---
 
 ## Major Training Pause on Astra Model
