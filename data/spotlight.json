@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-24T07:08:40.350Z",
+  "updatedAt": "2026-08-24T08:08:17.425Z",
   "pick": {
     "id": "incoai/Qwen3.8-27B-DFlash2",
     "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
     "author": "incoai",
     "name": "Qwen3.8-27B-DFlash2",
-    "likes": 166,
+    "likes": 167,
     "downloads": 69783,
     "ageDays": 6,
     "blurb": "DFlash2 speculative decoding on Qwen3.8-27B jumped from 12k to 69.8k downloads in 6 days—a 5.8x spike that outpaces both competing implementations (z-lab at 36k, ornith at 31k). If you're stress-testing inference serving decisions right now, this velocity suggests the pattern is consolidating around a specific implementation worth testing against your baseline.",
@@ -17,7 +17,7 @@
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 371,
+      "likes": 372,
       "downloads": 23516,
       "ageDays": 6
     },
@@ -26,7 +26,7 @@
       "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
       "author": "z-lab",
       "name": "Qwen3.8-27B-DFlash2",
-      "likes": 207,
+      "likes": 209,
       "downloads": 36234,
       "ageDays": 8
     },
@@ -53,7 +53,7 @@
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Pro-0813",
-      "likes": 737,
+      "likes": 738,
       "downloads": 57928,
       "ageDays": 11
     }

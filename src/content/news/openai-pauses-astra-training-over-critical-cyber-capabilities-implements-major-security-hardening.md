@@ -10,6 +10,8 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-24, note: "OpenAI temporarily paused reinforcement learning (RL) training on its latest models intended for deployment for two weeks.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-24, note: "OpenAI plans to evolve its Preparedness Framework to cover safeguards across training and deployment stages, not just deployment.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-23, note: "OpenAI determined on August 7 that Astra may have critical cyber capabilities.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-23, note: "OpenAI added an additional monitoring requirement on August 7 for all inference of Astra with tools, not just RL training and evaluations.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-23, note: "OpenAI is applying the strictest level of security safeguards to workloads involving Astra or cyber models.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
@@ -45,7 +47,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-23
+updatedDate: 2026-08-24
 ---
 
 ## Major Training Pause on Astra Model

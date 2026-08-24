@@ -10,6 +10,8 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-24, note: "The BPS Cyberpsychology 2026 conference topics include online behaviours and social media, gaming and virtual environments, artificial intelligence and emerging technology, health and well-being appli", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
+  - { date: 2026-08-24, note: "The British Psychological Society launched a new £6,000 Small Research Grants Scheme open to all BPS members (except subscriber-grade members), which can fund preparation, staffing, materials, partici", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
   - { date: 2026-08-22, note: "The journal closed its submission portal to new manuscripts from 16 June to 31 August 2026.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-22, note: "The journal posted a 'Decisions and Reviews Statistics for 2025' announcement on 5 August 2026, covering submissions, desk reject rates, acceptance rates, decision times, and reviewer statistics.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-19, note: "Emmelyn Croes joined Cyberpsychology as Associate Editor on 7 October 2025.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -209,7 +211,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-08-24
 ---
 
 ## Summer Submission Break Announced
