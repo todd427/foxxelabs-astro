@@ -10,6 +10,16 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-25, note: "OpenAI temporarily slowed the pace of scaling, including a two-week pause in reinforcement learning (RL) training on its latest models intended for deployment, while it hardened and red-teamed its res", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-25, note: "OpenAI aims to issue a monitoring alert within 30 minutes after concerning activity is surfaced; if the system identifies a likely violation of a critical security boundary, safety, security, and rese", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-25, note: "On 2 August 2026, new transparency rules under the EU AI Act took effect across all EU member states.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "Certain AI-generated or manipulated content — including deepfakes resembling existing persons, objects, places, or events, and text published on matters of public interest without human editorial revi", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "Users must be clearly informed when they are interacting with an AI system such as a chatbot, AI agent, or avatar rather than a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "Fines for breaching the EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "Fines for EU institutions, bodies, and agencies breaching the AI Act transparency rules can reach up to €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "Enforcement of the EU AI Act transparency rules is the responsibility of national market surveillance authorities, the European AI Office (for systems under its supervision), and the European Data Pro", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "The EU has created a set of icons that can be used for the purpose of labelling AI-generated content under the new transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-25, note: "The European Commission published guidelines to assist providers and deployers of AI systems in meeting the new transparency obligations, explaining how compliance can be demonstrated including throug", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-24, note: "OpenAI temporarily paused reinforcement learning (RL) training on its latest models intended for deployment for two weeks.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-24, note: "OpenAI plans to evolve its Preparedness Framework to cover safeguards across training and deployment stages, not just deployment.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-23, note: "OpenAI determined on August 7 that Astra may have critical cyber capabilities.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
@@ -47,7 +57,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-24
+updatedDate: 2026-08-25
 ---
 
 ## Major Training Pause on Astra Model

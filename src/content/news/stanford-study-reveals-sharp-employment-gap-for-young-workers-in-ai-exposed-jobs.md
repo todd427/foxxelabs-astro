@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Stanford Digital Economy Lab", "Erik Brynjolfsson", "Bharat Chandar", "Ruyu Chen", "ADP", "ChatGPT"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-25, note: "The adjustment for young workers in AI-exposed occupations appears to operate primarily through reduced hiring rather than increased separations.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-25, note: "Employment has declined among young workers in occupations that rely heavily on codified knowledge, while employment has increased among experienced workers in occupations relying more on tacit knowle", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-25, note: "So far, AI-related employment adjustment is showing up primarily in employment levels rather than in base pay (which excludes bonuses, equity, and other variable pay).", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-25, note: "The Stanford Digital Economy Lab launched the AI Economic Indicators project, which includes a Canaries Dashboard that updates key employment-by-AI-exposure results every month using ADP payroll data.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-25, note: "The revised 'Canaries in the Coal Mine' paper was authored by Erik Brynjolfsson, Bharat Chandar, and Ruyu Chen of the Stanford Digital Economy Lab, using ADP payroll data.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-25, note: "A Stanford Digital Economy Lab working paper released in November 2025 found that workers aged 22 to 25 in the most AI-exposed occupations experienced a 16% relative decline in employment after the sp", sourceUrl: "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/" }
+  - { date: 2026-08-25, note: "An Anthropic report from March 2026 provides suggestive evidence consistent with a relative employment decline for young workers in AI-exposed occupations.", sourceUrl: "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/" }
+  - { date: 2026-08-25, note: "The MIT Technology Review article was authored by Georgios Petropoulos, an assistant professor at the USC Marshall School of Business whose research focuses on implications of information technologies", sourceUrl: "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/" }
   - { date: 2026-08-21, note: "Employment declines for young workers are concentrated in occupations that rely heavily on codified knowledge; employment has increased among experienced workers in occupations relying on tacit knowle", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-21, note: "So far, AI-related labour market adjustment is showing up primarily in employment levels rather than in base pay.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-21, note: "The divergence in employment between AI-exposed and non-exposed young workers remains when technology firms and computer occupations are excluded, and when controlling for interest-rate exposure and r", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
@@ -23,7 +31,7 @@ updates:
   - { date: 2026-08-21, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-08-21, note: "Ireland's unemployment rate is below the euro-area average as of July 2026.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-08-21
+updatedDate: 2026-08-25
 ---
 
 ## Stanford Releases Updated 'Canaries in the Coal Mine' Analysis

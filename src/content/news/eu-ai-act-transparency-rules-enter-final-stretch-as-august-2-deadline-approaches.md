@@ -10,6 +10,17 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-25, note: "From 2 August 2026, deepfakes (images, videos, or audio edited or generated using AI) must be labelled as such.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-25, note: "The AI Office's enforcement powers over GPAI model providers include the ability to impose fines of up to €15 million or 3% of the provider's worldwide annual turnover, whichever is higher.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
+  - { date: 2026-08-25, note: "The EU is in talks with OpenAI and Anthropic after recent cyber attacks linked to their models, according to a Reuters report.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
+  - { date: 2026-08-25, note: "OpenAI confirmed it was in contact with the EU AI Office.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
+  - { date: 2026-08-25, note: "Anthropic agreed to give the EU's cybersecurity agency ENISA access to its Mythos model after senior Commission officials travelled to San Francisco to press Anthropic leadership directly.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
+  - { date: 2026-08-25, note: "OpenAI offered the EU access to its GPT-5.5-Cyber model prior to Anthropic's agreement on the Mythos model.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
+  - { date: 2026-08-25, note: "The Digital Omnibus deferred high-risk AI obligations for stand-alone Annex III systems (hiring, credit scoring, education, critical infrastructure) from 2 August 2026 to 2 December 2027.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-25, note: "The Digital Omnibus deferred high-risk AI obligations for Annex I product-embedded systems (medical devices, machinery, toys) from 2 August 2027 to 2 August 2028.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-25, note: "AI systems already on the EU market before 2 August 2026 have a grace period until 2 December 2026 to implement machine-readable watermarking under Article 50(2).", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-25, note: "A new prohibition on AI-generated non-consensual intimate imagery (including so-called nudifier apps) and CSAM was added to Article 5 of the EU AI Act.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-25, note: "The European Parliament formally adopted the Digital Omnibus text on 16 June 2026 and the Council gave its final approval on 29 June 2026.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
   - { date: 2026-08-24, note: "The European Commission announced on 2 August 2026 that its AI Office in Brussels and national regulators will begin enforcing key provisions of the EU Artificial Intelligence Act.", sourceUrl: "https://www.jurist.org/news/2026/08/european-commission-announces-ai-companies-to-face-tighter-eu-oversight-over-deepfakes-and-cyber-threats/" }
   - { date: 2026-08-24, note: "The August 2026 enforcement phase introduces broader transparency requirements and stronger oversight of general-purpose AI models.", sourceUrl: "https://www.jurist.org/news/2026/08/european-commission-announces-ai-companies-to-face-tighter-eu-oversight-over-deepfakes-and-cyber-threats/" }
   - { date: 2026-08-24, note: "EU regulators now have power to inspect advanced AI models, demand technical records, question company staff, and order changes where systems fail to meet legal requirements.", sourceUrl: "https://www.jurist.org/news/2026/08/european-commission-announces-ai-companies-to-face-tighter-eu-oversight-over-deepfakes-and-cyber-threats/" }
@@ -251,7 +262,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-24
+updatedDate: 2026-08-25
 ---
 
 ## Key Developments

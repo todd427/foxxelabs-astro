@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-25, note: "Environmental lawyers were granted leave by the Irish High Court to challenge the Commission for the Regulation of Utilities (CRU) over its grid connection rules for data centres.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "The CRU published its Large Energy Users Connection Policy in December 2025 following a multi-year moratorium on connecting new data centres to the electricity grid around Dublin.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "The CRU's Large Energy Users Connection Policy allows data centres to run on fossil fuels for the next six years, after which they must run on an energy supply that is at least 80 percent renewable.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "The 80 percent renewable energy requirement excludes back-up generation from its calculation of total data centre electricity consumption.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "As of 2025, Ireland is home to approximately 90 data centres, with dozens more in the planning pipeline.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "Data centres are already using over 20 percent of Ireland's electricity, more than the combined usage of all urban homes in the country.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
+  - { date: 2026-08-25, note: "Data centre electricity consumption in Ireland is predicted to climb to up to a third of the country's total electricity use by the end of the decade.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
   - { date: 2026-08-23, note: "Under the new AI Act transparency rules, chatbots and other interactive AI systems must tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-23, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the AI Act rules effective 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-23, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating across multiple existing national competent authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -362,7 +369,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-23
+updatedDate: 2026-08-25
 ---
 
 ## The Bill's Purpose and Structure

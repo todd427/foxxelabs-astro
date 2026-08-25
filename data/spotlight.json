@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-08-24T08:08:17.425Z",
+  "updatedAt": "2026-08-25T07:52:23.293Z",
   "pick": {
-    "id": "incoai/Qwen3.8-27B-DFlash2",
-    "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
-    "author": "incoai",
-    "name": "Qwen3.8-27B-DFlash2",
-    "likes": 167,
-    "downloads": 69783,
-    "ageDays": 6,
-    "blurb": "DFlash2 speculative decoding on Qwen3.8-27B jumped from 12k to 69.8k downloads in 6 days—a 5.8x spike that outpaces both competing implementations (z-lab at 36k, ornith at 31k). If you're stress-testing inference serving decisions right now, this velocity suggests the pattern is consolidating around a specific implementation worth testing against your baseline.",
-    "surfacedAt": "2026-08-24"
+    "id": "ornith-ai/Ornith-1.5-9B",
+    "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
+    "author": "ornith-ai",
+    "name": "Ornith-1.5-9B",
+    "likes": 205,
+    "downloads": 83192,
+    "ageDays": 7,
+    "blurb": "Ornith-1.5-9B hit 83k downloads in 7 days with multimodal (image+text) support on a 9B footprint, outpacing the single-modality DFlash2 variants while maintaining MIT licensing. If you're building production chat or RAG systems, the combination of scale, modality coverage, and endpoint compatibility makes this worth a baseline comparison.",
+    "surfacedAt": "2026-08-25"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 372,
-      "downloads": 23516,
-      "ageDays": 6
+      "likes": 407,
+      "downloads": 60294,
+      "ageDays": 7
     },
     {
       "id": "z-lab/Qwen3.8-27B-DFlash2",
       "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
       "author": "z-lab",
       "name": "Qwen3.8-27B-DFlash2",
-      "likes": 209,
-      "downloads": 36234,
-      "ageDays": 8
+      "likes": 220,
+      "downloads": 50763,
+      "ageDays": 9
     },
     {
       "id": "superwhisper/s1-mini",
       "url": "https://hf.co/superwhisper/s1-mini",
       "author": "superwhisper",
       "name": "s1-mini",
-      "likes": 217,
-      "downloads": 2280,
-      "ageDays": 12
+      "likes": 230,
+      "downloads": 2976,
+      "ageDays": 13
     },
     {
-      "id": "ornith-ai/Ornith-1.5-9B",
-      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
-      "author": "ornith-ai",
-      "name": "Ornith-1.5-9B",
-      "likes": 187,
-      "downloads": 31496,
-      "ageDays": 6
+      "id": "incoai/Qwen3.8-27B-DFlash2",
+      "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
+      "author": "incoai",
+      "name": "Qwen3.8-27B-DFlash2",
+      "likes": 173,
+      "downloads": 85034,
+      "ageDays": 7
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Pro-0813",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Pro-0813",
-      "likes": 738,
-      "downloads": 57928,
-      "ageDays": 11
+      "id": "EschaLabs/Qwen3.8-27B-Escha-W2",
+      "url": "https://hf.co/EschaLabs/Qwen3.8-27B-Escha-W2",
+      "author": "EschaLabs",
+      "name": "Qwen3.8-27B-Escha-W2",
+      "likes": 126,
+      "downloads": 2156,
+      "ageDays": 5
     }
   ]
 }
