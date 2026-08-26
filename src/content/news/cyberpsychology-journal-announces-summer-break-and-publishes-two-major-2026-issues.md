@@ -10,6 +10,11 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-26, note: "Cyberpsychology journal is published by Masaryk University as a diamond open-access, peer-reviewed, online scholarly journal.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-26, note: "Issue 3, Vol. 20 (2026) includes an article titled 'A comparative study on online victimization perceptions (cyberbullying, dating violence, and sexual harassment) and psychological symptoms in sexual", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-26, note: "Issue 3, Vol. 20 (2026) includes an article titled 'Framing adolescent sexting: How media discourses influence parents' attitudes and practices towards sexting' by Elliana Lamprianidou, Koen Ponnet, M", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-26, note: "Issue 3, Vol. 20 (2026) includes an article titled 'Digital piracy through the lens of moral intensity and risk perception: A cross-cultural perspective' by Mateja Kos Koklič, Monika Kukar-Kinney, and", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-26, note: "Cyberpsychology journal closed its submission portal to new manuscripts between June 16 and August 31, 2026.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-25, note: "The journal is diamond open access, meaning it is non-profit.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-25, note: "Foxxe Labs is based in Donegal, Ireland.", sourceUrl: "https://foxxelabs.ie/news/british-psychological-society-opens-major-cyberpsychology-conference-for-2026-research-submissions/" }
   - { date: 2026-08-24, note: "The BPS Cyberpsychology 2026 conference topics include online behaviours and social media, gaming and virtual environments, artificial intelligence and emerging technology, health and well-being appli", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
@@ -213,7 +218,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-25
+updatedDate: 2026-08-26
 ---
 
 ## Summer Submission Break Announced

@@ -10,6 +10,8 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-26, note: "The EU AI Act (Regulation (EU) 2024/1689) transparency obligations are set out in Article 50.", sourceUrl: "https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026" }
+  - { date: 2026-08-26, note: "Noncompliance with Article 50 transparency obligations can trigger fines of up to €15 million or 3% of worldwide annual turnover, whichever is higher.", sourceUrl: "https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026" }
   - { date: 2026-08-25, note: "From 2 August 2026, deepfakes (images, videos, or audio edited or generated using AI) must be labelled as such.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-25, note: "The AI Office's enforcement powers over GPAI model providers include the ability to impose fines of up to €15 million or 3% of the provider's worldwide annual turnover, whichever is higher.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
   - { date: 2026-08-25, note: "The EU is in talks with OpenAI and Anthropic after recent cyber attacks linked to their models, according to a Reuters report.", sourceUrl: "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html" }
@@ -262,7 +264,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-25
+updatedDate: 2026-08-26
 ---
 
 ## Key Developments

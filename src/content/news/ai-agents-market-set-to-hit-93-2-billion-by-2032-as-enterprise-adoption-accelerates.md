@@ -9,8 +9,10 @@ sourceUrl: "https://machinelearningmastery.com/7-machine-learning-trends-to-watc
 significance: "high"
 entities: ["Markets and Markets", "AI agents market", "enterprise applications"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-26, note: "An MIT study found that non-experts deferred to LLM-based diagnostic assistance even when it was wrong, while clinicians caught AI errors.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
 draft: false
+updatedDate: 2026-08-26
 ---
 
 ## AI Agents Market Growth Trajectory

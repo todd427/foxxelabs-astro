@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-08-25T07:52:23.293Z",
+  "updatedAt": "2026-08-26T07:54:02.412Z",
   "pick": {
-    "id": "ornith-ai/Ornith-1.5-9B",
-    "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
-    "author": "ornith-ai",
-    "name": "Ornith-1.5-9B",
-    "likes": 205,
-    "downloads": 83192,
-    "ageDays": 7,
-    "blurb": "Ornith-1.5-9B hit 83k downloads in 7 days with multimodal (image+text) support on a 9B footprint, outpacing the single-modality DFlash2 variants while maintaining MIT licensing. If you're building production chat or RAG systems, the combination of scale, modality coverage, and endpoint compatibility makes this worth a baseline comparison.",
-    "surfacedAt": "2026-08-25"
+    "id": "incoai/Qwen3.8-27B-DFlash2",
+    "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
+    "author": "incoai",
+    "name": "Qwen3.8-27B-DFlash2",
+    "likes": 181,
+    "downloads": 105786,
+    "ageDays": 8,
+    "blurb": "Qwen3.8-27B-DFlash2 crossed 105k downloads in 8 days with speculative decoding and block-diffusion optimizations for vLLM and SGLang, cutting inference latency measurably on a 27B footprint. If you're deploying to inference endpoints or batch serving, the throughput gains from draft-model acceleration warrant a latency baseline against your current stack.",
+    "surfacedAt": "2026-08-26"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 407,
-      "downloads": 60294,
-      "ageDays": 7
+      "likes": 430,
+      "downloads": 70158,
+      "ageDays": 8
     },
     {
-      "id": "z-lab/Qwen3.8-27B-DFlash2",
-      "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
-      "author": "z-lab",
-      "name": "Qwen3.8-27B-DFlash2",
-      "likes": 220,
-      "downloads": 50763,
-      "ageDays": 9
+      "id": "ornith-ai/Ornith-1.5-9B",
+      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
+      "author": "ornith-ai",
+      "name": "Ornith-1.5-9B",
+      "likes": 219,
+      "downloads": 98323,
+      "ageDays": 8
     },
     {
       "id": "superwhisper/s1-mini",
       "url": "https://hf.co/superwhisper/s1-mini",
       "author": "superwhisper",
       "name": "s1-mini",
-      "likes": 230,
-      "downloads": 2976,
-      "ageDays": 13
+      "likes": 244,
+      "downloads": 3474,
+      "ageDays": 14
     },
     {
-      "id": "incoai/Qwen3.8-27B-DFlash2",
-      "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
-      "author": "incoai",
+      "id": "z-lab/Qwen3.8-27B-DFlash2",
+      "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
+      "author": "z-lab",
       "name": "Qwen3.8-27B-DFlash2",
-      "likes": 173,
-      "downloads": 85034,
-      "ageDays": 7
+      "likes": 227,
+      "downloads": 64984,
+      "ageDays": 10
     },
     {
       "id": "EschaLabs/Qwen3.8-27B-Escha-W2",
       "url": "https://hf.co/EschaLabs/Qwen3.8-27B-Escha-W2",
       "author": "EschaLabs",
       "name": "Qwen3.8-27B-Escha-W2",
-      "likes": 126,
-      "downloads": 2156,
-      "ageDays": 5
+      "likes": 127,
+      "downloads": 2319,
+      "ageDays": 6
     }
   ]
 }

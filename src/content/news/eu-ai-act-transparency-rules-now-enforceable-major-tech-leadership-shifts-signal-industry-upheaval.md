@@ -10,6 +10,12 @@ significance: "high"
 entities: ["European Commission", "EU AI Act", "AI Office", "Google DeepMind", "Jeff Dean", "Discovery Loop", "Koray Kavukcuoglu", "Anthropic", "OpenAI", "Meta", "AMD"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-26, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of EU Artificial Intelligence Act, Regulation (EU) 2024/1689.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-26, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating activities across multiple designated competent authorities rather than a single enforcer.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-26, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-26, note: "Paul Byrne holds a Professional Diploma in Artificial Intelligence from University College Dublin.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-26, note: "Paul Byrne is the author of the CLEAR Principles for Ethical and Effective AI in Professional Regulation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-26, note: "Ireland is holding the Presidency of the Council of the EU at the time of the AI Office's establishment.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-25, note: "AI-generated or altered content must carry machine-readable marks so it can be detected more easily.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-25, note: "The AI Act transparency rules are intended to reduce deception and manipulation and help people make informed choices.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-25, note: "Oifig IS na hÉireann (the AI Office of Ireland) is tasked with co-ordinating the implementation of the EU's AI regulations, which came into force on a phased basis in 2024.", sourceUrl: "https://www.irishtimes.com/technology/2026/08/05/government-appoints-chairwoman-and-board-of-new-ai-body/" }
@@ -42,7 +48,7 @@ updates:
   - { date: 2026-08-17, note: "The reason given for the Annex III deadline extension was procedural: member states were slow to designate national competent authorities, and harmonised standards and conformity assessment tools were", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-17, note: "Article 5 of the EU AI Act, as amended, bans AI systems designed to generate non-consensual intimate imagery (nudifier applications) and child sexual abuse material.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
 draft: false
-updatedDate: 2026-08-25
+updatedDate: 2026-08-26
 ---
 
 ## EU AI Act Transparency Rules Now Enforceable
