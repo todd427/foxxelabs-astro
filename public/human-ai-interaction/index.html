@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human-AI Interaction: A New Field | FoxxeLabs</title>
+<meta name="description" content="An introduction to Human-AI Interaction as a field — why it exists, what it asks, who is doing the work — and six observations from the first three years of everyone using AI.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1B1D2E;
+    --panel: #2B2D42;
+    --panel2: #3E4160;
+    --text: #ECEFF4;
+    --muted: #B4BBC9;
+    --slate: #8D99AE;
+    --coral: #E07A5F;
+    --teal: #3A86A8;
+    --teal2: #9CC9E0;
+    --line: #4A4E6A;
+    --amber: #E07A5F; /* alias so shared rules still read */
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg); color: var(--text);
+    overflow: hidden; height: 100vh; width: 100vw;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--teal2); }
+  .deck { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5vh 7vw 8vh;
+    opacity: 0; transform: translateX(40px);
+    transition: opacity .45s ease, transform .45s ease;
+    pointer-events: none; background: var(--bg);
+  }
+  .slide.active { opacity: 1; transform: none; pointer-events: auto; }
+  .slide.exiting { opacity: 0; transform: translateX(-40px); }
+
+  .label {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(.62rem, 1.1vw, .8rem);
+    text-transform: uppercase; letter-spacing: .3em;
+    color: var(--coral); margin-bottom: 1.4vh;
+  }
+  h1.title { font-size: clamp(1.7rem, 4.2vw, 3.2rem); font-weight: 700; line-height: 1.12; margin-bottom: 1.2vh; }
+  .kicker { font-style: italic; color: var(--muted); font-size: clamp(.9rem, 1.4vw, 1.15rem); margin-bottom: 3vh; }
+  .body { font-size: clamp(.9rem, 1.45vw, 1.2rem); line-height: 1.6; color: var(--muted); font-weight: 300; max-width: 70ch; }
+  .body strong { color: var(--text); font-weight: 600; }
+  .body em { color: var(--coral); }
+  .row { display: grid; gap: 2vw; align-items: center; }
+  .two { grid-template-columns: 1fr 1fr; }
+  .split { grid-template-columns: 1.1fr .9fr; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6vw; }
+  .cards.four { grid-template-columns: repeat(2, 1fr); }
+  .cards.six { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--panel); border-radius: 12px; padding: 2.4vh 1.8vw; }
+  .card .dot {
+    width: 2.4rem; height: 2.4rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-weight: 700; color: var(--bg);
+    margin-bottom: 1.4vh;
+  }
+  .card h3 { font-size: clamp(1rem, 1.6vw, 1.3rem); margin-bottom: 1vh; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--teal2); }
+  .card p { font-size: clamp(.8rem, 1.15vw, 1rem); color: var(--muted); line-height: 1.5; }
+  .card .tag { font-family: 'Space Mono', monospace; font-size: .68rem; color: var(--slate); letter-spacing: .05em; margin-bottom: .8vh; }
+  .callout {
+    border-left: 3px solid var(--coral); padding: 1.6vh 1.8vw; margin-top: 2.5vh;
+    background: rgba(224,122,95,.08); font-size: clamp(.85rem, 1.25vw, 1.05rem);
+    line-height: 1.55; color: var(--muted); max-width: 90ch;
+  }
+  .callout strong { color: var(--text); }
+  ul.list { list-style: none; }
+  ul.list li { position: relative; padding-left: 1.2em; margin-bottom: .8vh; font-size: clamp(.85rem, 1.25vw, 1.05rem); color: var(--muted); line-height: 1.5; }
+  ul.list li::before { content: ''; position: absolute; left: 0; top: .65em; width: .45em; height: .45em; border-radius: 50%; background: var(--teal); }
+  ul.list.coral li::before { background: var(--coral); }
+  ul.list.slate li::before { background: var(--slate); }
+  ul.list li strong { color: var(--text); }
+  .diagram { width: 100%; height: auto; max-height: 58vh; display: block; margin: 0 auto; }
+  .mono { font-family: 'Space Mono', monospace; }
+
+  /* venn motif */
+  .venn { position: relative; width: 100%; max-width: 18vw; aspect-ratio: 1.55; }
+  .venn i { position: absolute; top: 0; width: 62%; height: 100%; border-radius: 50%; opacity: .75; }
+  .venn i:first-child { left: 0; background: var(--coral); }
+  .venn i:last-child { right: 0; background: var(--teal); }
+
+  /* two-column compare */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 2vw; }
+  .compare .col { background: var(--panel); border-radius: 12px; padding: 2.4vh 1.8vw; }
+  .compare .col.ai { background: var(--panel2); }
+  .compare h3 { font-size: clamp(1.05rem, 1.8vw, 1.5rem); margin-bottom: .3vh; }
+  .compare .sub { font-weight: 600; font-size: clamp(.78rem, 1.1vw, .95rem); margin-bottom: 1.6vh; }
+  .compare .col.hci .sub { color: var(--slate); }
+  .compare .col.ai .sub { color: var(--teal2); }
+
+  /* eras timeline */
+  .eras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2vw; text-align: center; position: relative; }
+  .eras::before { content: ''; position: absolute; top: 1.7rem; left: 16%; right: 16%; height: 3px; background: var(--line); }
+  .era .n { width: 3.4rem; height: 3.4rem; border-radius: 50%; margin: 0 auto 1.4vh; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 1.3rem; color: var(--bg); position: relative; }
+  .era .when { font-family: 'Space Mono', monospace; font-size: .72rem; color: var(--slate); margin-bottom: .8vh; }
+  .era h3 { font-size: clamp(1.1rem, 1.9vw, 1.6rem); margin-bottom: 1vh; }
+  .era p { font-size: clamp(.8rem, 1.15vw, 1rem); color: var(--muted); }
+
+  /* leaders */
+  .leaders { display: flex; flex-direction: column; gap: 1.4vh; }
+  .leader { display: grid; grid-template-columns: 2.2rem 1fr; gap: 1.2vw; align-items: start; }
+  .leader .dot { width: 2rem; height: 2rem; border-radius: 50%; margin-top: .2rem; }
+  .leader h3 { font-size: clamp(.95rem, 1.45vw, 1.2rem); }
+  .leader h3 a { color: var(--text); text-decoration: none; }
+  .leader h3 a:hover { color: var(--teal2); }
+  .leader p { font-size: clamp(.78rem, 1.1vw, .95rem); color: var(--muted); }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6vw; }
+  .stat { background: var(--panel); border-radius: 12px; padding: 2.2vh 1.6vw; }
+  .stat .n { font-size: clamp(2.4rem, 5.2vw, 4.2rem); font-weight: 700; line-height: 1; margin-bottom: 1.4vh; }
+  .stat .n a { text-decoration: none; }
+  .stat p { font-size: clamp(.78rem, 1.1vw, .95rem); color: var(--muted); line-height: 1.5; }
+  .stat .cite { font-family: 'Space Mono', monospace; font-size: .68rem; color: var(--slate); margin-top: 1vh; }
+
+  /* ladder */
+  .ladder { display: flex; flex-direction: column; gap: 1.1vh; }
+  .rung { display: grid; grid-template-columns: var(--w) 1fr; gap: 1.5vw; align-items: center; }
+  .rung .bar { border-radius: 8px; padding: 1.3vh 1.4vw; font-weight: 700; color: var(--bg); font-size: clamp(.8rem, 1.2vw, 1.05rem); }
+  .rung p { font-size: clamp(.78rem, 1.1vw, .95rem); color: var(--muted); }
+
+  /* agency steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5vw; text-align: center; position: relative; }
+  .steps::before { content: ''; position: absolute; top: 1.8rem; left: 12%; right: 12%; height: 3px; background: var(--line); }
+  .step .n { width: 3.6rem; height: 3.6rem; border-radius: 50%; margin: 0 auto 1.4vh; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 1.3rem; color: var(--bg); position: relative; }
+  .step h3 { font-size: clamp(1rem, 1.7vw, 1.4rem); margin-bottom: .6vh; }
+  .step p { font-size: clamp(.78rem, 1.1vw, .95rem); color: var(--muted); }
+
+  /* sources */
+  .sources { columns: 2; column-gap: 3vw; font-size: clamp(.68rem, .95vw, .82rem); }
+  .sources li { list-style: none; break-inside: avoid; margin-bottom: 1.1vh; color: var(--text); line-height: 1.35; }
+  .sources li a { display: block; font-family: 'Space Mono', monospace; font-size: .85em; color: var(--teal2); text-decoration: none; word-break: break-all; }
+  .sources li a:hover { text-decoration: underline; }
+
+  .srcline { position: absolute; bottom: 6.5vh; left: 7vw; right: 18vw; font-family: 'Space Mono', monospace; font-size: clamp(.55rem, .75vw, .68rem); color: var(--slate); letter-spacing: .02em; line-height: 1.6; }
+  .srcline a { color: var(--teal2); text-decoration: none; }
+  .srcline a:hover { text-decoration: underline; }
+
+  /* nav */
+  .nav { position: fixed; bottom: 3vh; right: 4vw; display: flex; align-items: center; gap: 1.2vw; z-index: 100; }
+  .nav-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--coral);
+    width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    font-family: 'Space Mono', monospace; transition: all .2s;
+  }
+  .nav-btn:hover { background: var(--coral); color: var(--bg); }
+  .nav-counter { font-family: 'Space Mono', monospace; font-size: .8rem; color: var(--muted); }
+  .progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, var(--coral), var(--teal)); transition: width .4s ease; z-index: 100; }
+  .footer { position: absolute; bottom: 3vh; left: 7vw; font-family: 'Space Mono', monospace; font-size: clamp(.6rem, .85vw, .75rem); color: var(--muted); letter-spacing: .05em; }
+  .footer a { color: var(--teal2); text-decoration: none; }
+  .home-link {
+    position: fixed; top: 14px; right: 20px; z-index: 1000;
+    font-family: 'Space Mono', monospace; font-size: .78rem; color: var(--muted);
+    text-decoration: none; display: flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 6px; background: rgba(43,45,66,.85);
+    border: 1px solid var(--line); backdrop-filter: blur(8px);
+  }
+  .home-link:hover { color: var(--coral); border-color: var(--coral); }
+  .home-link svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  @media (max-width: 820px) {
+    .slide { padding: 4vh 5vw 12vh; justify-content: flex-start; overflow-y: auto; }
+    .row, .two, .split, .compare { grid-template-columns: 1fr; }
+    .cards, .cards.four, .cards.six, .stats { grid-template-columns: 1fr; }
+    .eras, .steps { grid-template-columns: 1fr; }
+    .eras::before, .steps::before { display: none; }
+    .rung { grid-template-columns: 1fr; }
+    .sources { columns: 1; }
+    .srcline { position: static; margin-top: 2vh; }
+    .venn, .title-venn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="home-link" href="https://foxxelabs.ie" title="Back to FoxxeLabs">
+  <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+  foxxelabs.ie
+</a>
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+<!-- 1 TITLE -->
+<div class="slide active">
+  <div class="row split">
+    <div>
+      <div class="label">FoxxeLabs Research &bull; August 2026</div>
+      <h1 class="title" style="font-size:clamp(2.2rem,5.5vw,4.4rem)">Human-AI<br>Interaction</h1>
+      <p class="body">A new field &mdash; and what it is already showing us.</p>
+      <p class="body" style="margin-top:2vh;font-size:clamp(.75rem,1.05vw,.9rem)">Todd McCaffrey, MSc Cyberpsychology</p>
+    </div>
+    <svg class="diagram title-venn" viewBox="0 0 400 300" aria-label="Two overlapping circles, coral for the human side and teal for the AI side">
+      <circle cx="150" cy="150" r="120" fill="var(--coral)" opacity=".8"/>
+      <circle cx="250" cy="150" r="120" fill="var(--teal)" opacity=".8"/>
+    </svg>
+  </div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 2 WHAT CHANGED -->
+<div class="slide">
+  <div class="label">The field</div>
+  <h1 class="title">What changed: software can collaborate</h1>
+  <div class="compare">
+    <div class="col hci">
+      <h3>What HCI was built for</h3>
+      <div class="sub">Tools that execute &nbsp;&middot;&nbsp; 1980&ndash;2020</div>
+      <ul class="list slate">
+        <li>Deterministic &mdash; same input, same output</li>
+        <li>Predictable &mdash; behaviour is fully specified</li>
+        <li>Static &mdash; only the human learns</li>
+        <li>Silent about its own limits</li>
+        <li>Waits to be used</li>
+      </ul>
+    </div>
+    <div class="col ai">
+      <h3>What AI systems now do</h3>
+      <div class="sub">Partners that collaborate &nbsp;&middot;&nbsp; 2020s &rarr;</div>
+      <ul class="list">
+        <li>Generative &mdash; same prompt, new possibilities</li>
+        <li>Adaptive &mdash; it learns and improves with use</li>
+        <li>Fallible like a colleague &mdash; and worth checking like one</li>
+        <li>Can express confidence, reasoning and doubt</li>
+        <li>Takes initiative: suggests, drafts, acts</li>
+      </ul>
+    </div>
+  </div>
+  <p class="body" style="margin-top:2.5vh"><em>Each capability is a gain &mdash; and each breaks an assumption HCI was built on. Hence a new field.</em></p>
+  <div class="srcline">Sources &nbsp; <a href="https://doi.org/10.1145/3290605.3300233">Amershi et al., Guidelines for Human-AI Interaction (CHI 2019)</a> &nbsp;&middot;&nbsp; <a href="https://www.microsoft.com/en-us/haxtoolkit/">Microsoft HAX Toolkit</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 3 ERAS -->
+<div class="slide">
+  <div class="label">The field</div>
+  <h1 class="title">Each generation of machine got its own field</h1>
+  <p class="kicker">The label hasn&rsquo;t settled yet. That is the first useful fact about the field.</p>
+  <div class="eras">
+    <div class="era"><div class="n" style="background:var(--slate)">1</div><div class="when">1960s&ndash;70s</div><h3>Human-Machine Interaction</h3><p>Ergonomics, control panels, cockpits. Deterministic machines.</p></div>
+    <div class="era"><div class="n" style="background:var(--panel2);color:var(--text)">2</div><div class="when">1980s&ndash;2010s</div><h3>Human-Computer Interaction</h3><p>The PC. Usability, GUIs, mental models. Software obeys.</p></div>
+    <div class="era"><div class="n" style="background:var(--teal)">3</div><div class="when">2020s &rarr;</div><h3>Human-AI Interaction</h3><p>Systems that generate, adapt and act. Software collaborates.</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://arxiv.org/abs/2508.03969">Xu, Human-Centered Human-AI Interaction (2025)</a> &nbsp;&middot;&nbsp; <a href="https://ixdf.org/literature/topics/human-ai-interaction">IxDF: What is Human-AI Interaction?</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 4 NAMES -->
+<div class="slide">
+  <div class="label">The field</div>
+  <h1 class="title">One field, four names</h1>
+  <div class="cards four">
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3><a href="https://ixdf.org/literature/topics/human-ai-interaction">Human-AI Interaction</a></h3><div class="tag">HAII &middot; HAI &middot; HAX &mdash; the academic default</div><p>How people and AI systems communicate and collaborate. CHI, IUI, HAXD conferences.</p></div>
+    <div class="card"><div class="dot" style="background:var(--panel2)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2508.03969">Human-Centered AI</a></h3><div class="tag">HCAI &mdash; Shneiderman</div><p>Keep human control high while automation is high. Reliable, safe, trustworthy beats autonomous.</p></div>
+    <div class="card"><div class="dot" style="background:var(--slate)">&nbsp;</div><h3><a href="https://hai-conference.net/hai2026/">Human-Agent Interaction</a></h3><div class="tag">HAI (ACM) &mdash; robots, agents, now LLM agents</div><p>HAI 2026, Osaka: &ldquo;From Interaction to Agency: Navigating Autonomy.&rdquo;</p></div>
+    <div class="card"><div class="dot" style="background:var(--coral)">&nbsp;</div><h3><a href="https://artificialintelligenceact.eu/article/4/">AI Literacy</a></h3><div class="tag">Long &amp; Magerko 2020 &middot; EU AI Act Art. 4</div><p>Knowing how to use, question and live with AI. A legal obligation for deployers since Feb 2025.</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://ixdf.org/literature/topics/human-ai-interaction">IxDF</a> &middot; <a href="https://arxiv.org/abs/2508.03969">Xu 2025</a> &middot; <a href="https://hai-conference.net/hai2026/">HAI 2026</a> &middot; <a href="https://hamiworkshop.github.io/">HAXD 2026</a> &middot; <a href="https://doi.org/10.1145/3313831.3376727">Long &amp; Magerko 2020</a> &middot; <a href="https://artificialintelligenceact.eu/article/4/">EU AI Act Art. 4</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 5 WHAT IT STUDIES -->
+<div class="slide">
+  <div class="label">The field</div>
+  <h1 class="title">What the field actually studies</h1>
+  <div class="cards six">
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3>Calibrated trust</h3><p>When should a person rely on the system &mdash; and when not? Over-reliance and under-reliance are both failures.</p></div>
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3>Mental models</h3><p>What do people believe the system is doing? Usually something simpler and more human than the truth.</p></div>
+    <div class="card"><div class="dot" style="background:var(--panel2)">&nbsp;</div><h3>Uncertainty &amp; explanation</h3><p>How does a system say &ldquo;I might be wrong&rdquo; in a way people actually use?</p></div>
+    <div class="card"><div class="dot" style="background:var(--panel2)">&nbsp;</div><h3>Agency &amp; delegation</h3><p>Who decides, who acts, who is accountable &mdash; when the system can act on its own.</p></div>
+    <div class="card"><div class="dot" style="background:var(--coral)">&nbsp;</div><h3>Cognition &amp; learning</h3><p>What happens to memory, reasoning and skill when thinking is shared with a machine?</p></div>
+    <div class="card"><div class="dot" style="background:var(--coral)">&nbsp;</div><h3>Co-creation</h3><p>Writing, coding, designing with an AI partner: who owns the idea, and does the output converge?</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://doi.org/10.1145/3290605.3300233">Amershi et al. 2019</a> &middot; <a href="https://doi.org/10.1145/3613904.3642902">Tankelevitch et al., Metacognitive Demands of GenAI (CHI 2024)</a> &middot; <a href="https://arxiv.org/abs/2508.21036">CHI 2025 Tools for Thought synthesis</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 6 WHO -->
+<div class="slide">
+  <div class="label">The field</div>
+  <h1 class="title">Who is doing the work</h1>
+  <div class="leaders">
+    <div class="leader"><div class="dot" style="background:var(--panel2)"></div><div><h3>Ben Shneiderman &mdash; University of Maryland</h3><p>The Human-Centered AI framework: control and automation as two axes, not a trade-off.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--teal)"></div><div><h3><a href="https://www.microsoft.com/en-us/haxtoolkit/">Microsoft Research &mdash; Amershi, Horvitz; Sarkar, Tankelevitch (Cambridge)</a></h3><p>The 18 guidelines and HAX Toolkit; and the leading group on what GenAI does to thinking.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--teal)"></div><div><h3><a href="https://hai.stanford.edu/">Stanford HAI</a></h3><p>Institutional centre of gravity: policy, indices, cross-disciplinary funding.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--slate)"></div><div><h3><a href="https://lp.jetbrains.com/research/hax/">Industry labs &mdash; e.g. JetBrains HAX</a></h3><p>Mental models of AI tools, effects on team collaboration; mixed-method experiments to academic standards.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--slate)"></div><div><h3><a href="https://hai-conference.net/hai2026/">The conference circuit &mdash; CHI, IUI, HAI 2026, HAXD 2026</a></h3><p>Where the agenda is set. HAI 2026 (Osaka, Nov): &ldquo;From Interaction to Agency.&rdquo;</p></div></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://www.microsoft.com/en-us/haxtoolkit/">HAX Toolkit</a> &middot; <a href="https://hai.stanford.edu/">Stanford HAI</a> &middot; <a href="https://lp.jetbrains.com/research/hax/">JetBrains HAX</a> &middot; <a href="https://hai-conference.net/hai2026/">HAI 2026</a> &middot; <a href="https://hamiworkshop.github.io/">HAXD 2026</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 7 DIVIDER -->
+<div class="slide">
+  <div class="row split">
+    <div>
+      <div class="label">Part two</div>
+      <h1 class="title" style="font-size:clamp(2.2rem,5.5vw,4.4rem)">What we&rsquo;re seeing</h1>
+      <p class="body">Six observations from the first three years of everyone using AI.</p>
+    </div>
+    <ul class="list coral" style="font-family:'Space Mono',monospace;font-size:clamp(.72rem,1vw,.9rem)">
+      <li>1 &nbsp;Adoption outran every prior technology</li>
+      <li>2 &nbsp;The gains are real &mdash; and go to novices</li>
+      <li>3 &nbsp;Thinking is being offloaded</li>
+      <li>4 &nbsp;Skills form differently</li>
+      <li>5 &nbsp;Trust and mental models miscalibrate</li>
+      <li>6 &nbsp;Tools are becoming agents</li>
+    </ul>
+  </div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 8 ADOPTION -->
+<div class="slide">
+  <div class="label">Observation 1</div>
+  <h1 class="title">Adoption outran every prior technology</h1>
+  <div class="row split">
+    <svg class="diagram" viewBox="0 0 520 320" aria-label="Bar chart: share of US adults 18-64 using each technology at 2-3 years after launch. PC 20%, internet 20%, generative AI 39.4%.">
+      <text x="20" y="24" font-size="13" fill="var(--muted)" font-family="Source Serif 4, serif">Share of US adults using, % (age 18&ndash;64)</text>
+      <g stroke="var(--line)" stroke-width="1"><line x1="20" y1="250" x2="500" y2="250"/></g>
+      <rect x="50" y="170" width="110" height="80" rx="3" fill="var(--slate)"/>
+      <rect x="205" y="170" width="110" height="80" rx="3" fill="var(--panel2)"/>
+      <rect x="360" y="92" width="110" height="158" rx="3" fill="var(--teal)"/>
+      <g font-size="18" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="Source Serif 4, serif">
+        <text x="105" y="158">20</text><text x="260" y="158">20</text><text x="415" y="80">39.4</text>
+      </g>
+      <g font-size="12" fill="var(--text)" text-anchor="middle" font-family="Source Serif 4, serif">
+        <text x="105" y="272">Personal computer</text><text x="260" y="272">Internet</text><text x="415" y="272">Generative AI</text>
+      </g>
+      <g font-size="10.5" fill="var(--slate)" text-anchor="middle" font-family="Space Mono, monospace">
+        <text x="105" y="290">3 yrs in &middot; 1984</text><text x="260" y="290">2 yrs in &middot; 1997</text><text x="415" y="290">2 yrs in &middot; 2024</text>
+      </g>
+      <text x="20" y="314" font-size="10" font-style="italic" fill="var(--slate)" font-family="Source Serif 4, serif">Bick, Blandin &amp; Deming, NBER 2024. PC point is the earliest year the survey measured.</text>
+    </svg>
+    <ul class="list coral">
+      <li><strong>Nobody was trained.</strong> Chat is the interface. There is no manual, no course, no licence &mdash; and the system never says what it can&rsquo;t do.</li>
+      <li><strong>Use is mostly mundane.</strong> Writing, searching, explaining, deciding: the ordinary verbs of daily life, now shared with a machine.</li>
+      <li><strong>Norms don&rsquo;t exist yet.</strong> When is it fine to use it? When is it cheating? Every school, workplace and family is improvising.</li>
+    </ul>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://doi.org/10.3386/w32966">Bick, Blandin &amp; Deming, The Rapid Adoption of Generative AI (NBER WP 32966)</a> &middot; <a href="https://news.harvard.edu/gazette/story/2024/10/generative-ai-embraced-faster-than-internet-pcs/">Harvard Gazette summary</a> &middot; <a href="https://pw.hks.harvard.edu/post/the-rapid-adoption-of-generative-ai">HKS Project on Workforce</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 9 GAINS -->
+<div class="slide">
+  <div class="label">Observation 2</div>
+  <h1 class="title">The gains are real &mdash; and go to novices</h1>
+  <div class="stats">
+    <div class="stat"><div class="n"><a href="https://digitaleconomy.stanford.edu/publication/generative-ai-at-work" style="color:var(--teal2)">+34%</a></div><p>productivity for the least experienced support agents (+14% overall, 5,172 agents)</p><div class="cite">Brynjolfsson, Li &amp; Raymond, QJE 2025</div></div>
+    <div class="stat"><div class="n"><a href="https://doi.org/10.1126/science.adh2586" style="color:var(--teal2)">&minus;40%</a></div><p>time on professional writing, quality up 0.45 SD, and the skill gap narrowed (453 professionals)</p><div class="cite">Noy &amp; Zhang, Science 2023</div></div>
+    <div class="stat"><div class="n"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321" style="color:var(--teal2)">+40%</a></div><p>quality for consultants on tasks inside the model&rsquo;s reach &mdash; and worse outside it (758 at BCG)</p><div class="cite">Dell&rsquo;Acqua et al. 2023</div></div>
+  </div>
+  <div class="callout"><strong>When it helps:</strong> a meta-analysis of 106 experiments finds human+AI beats the best of either mainly for creating things &mdash; writing, code, designs &mdash; and tends to lose on pure decisions. The gains are real; they depend on the task fitting the tool.</div>
+  <div class="srcline">Sources &nbsp; <a href="https://digitaleconomy.stanford.edu/publication/generative-ai-at-work">Brynjolfsson, Li &amp; Raymond, QJE 2025</a> &middot; <a href="https://doi.org/10.1126/science.adh2586">Noy &amp; Zhang, Science 2023</a> &middot; <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321">Dell&rsquo;Acqua et al. 2023</a> &middot; <a href="https://doi.org/10.1038/s41562-024-02024-1">Vaccaro, Almaatouq &amp; Malone, Nat Hum Behav 2024</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 10 OFFLOADING -->
+<div class="slide">
+  <div class="label">Observation 3</div>
+  <h1 class="title">Thinking is being offloaded</h1>
+  <p class="kicker">Delegating mental work to an external aid. Calculators did it. Search did it. AI does it for synthesis, judgment and evaluation &mdash; the verbs, not the nouns.</p>
+  <div class="stats">
+    <div class="stat"><div class="n" style="color:var(--coral)">666</div><p>participants in Gerlich (2025): heavier AI use &harr; lower critical-thinking scores, mediated by offloading</p><div class="cite">Gerlich, Societies 2025</div></div>
+    <div class="stat"><div class="n" style="color:var(--coral)">&minus;6%</div><p>clinicians&rsquo; unassisted tumour detection three months after AI support was introduced</p><div class="cite">via Int&rsquo;l AI Safety Report 2026</div></div>
+    <div class="stat"><div class="n" style="color:var(--coral)">&ne;</div><p>effort vs time: AI assistance always cuts effort, not time &mdash; the &ldquo;speedup illusion&rdquo;</p><div class="cite">Stanford, 2026</div></div>
+  </div>
+  <p class="body" style="margin-top:2.2vh"><em>Younger users offload more, and score lower. Higher education buffers it regardless of AI use.</em></p>
+  <div class="srcline">Sources &nbsp; <a href="https://doi.org/10.3390/soc15010006">Gerlich 2025</a> &middot; <a href="https://arxiv.org/abs/2602.21012">Int&rsquo;l AI Safety Report 2026</a> &middot; <a href="https://arxiv.org/abs/2605.23177">Speedup illusion (arXiv 2605.23177)</a> &middot; <a href="https://doi.org/10.1145/3706598.3713778">Lee et al., CHI 2025</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 11 SKILLS -->
+<div class="slide">
+  <div class="label">Observation 4</div>
+  <h1 class="title">Skills form differently</h1>
+  <div class="cards">
+    <div class="card"><div class="dot" style="background:var(--coral)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2601.20245">Doing vs learning</a></h3><p>Offloading a task you already know costs little. Offloading one you&rsquo;re trying to learn means the skill doesn&rsquo;t form. Shen &amp; Tamkin (2026) show this for coding.</p></div>
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2604.04721">Persistence drops</a></h3><p>In large-scale RCTs, people with AI help gave up sooner on hard problems and did worse afterwards without it.</p></div>
+    <div class="card"><div class="dot" style="background:var(--panel2)">&nbsp;</div><h3><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1699320/full">The germane-load trap</a></h3><p>AI removes extraneous load (good) and germane load (the effort that is the learning). Both feel like the same relief.</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://arxiv.org/abs/2601.20245">Shen &amp; Tamkin 2026</a> &middot; <a href="https://www.psychologytoday.com/us/blog/the-asymmetric-brain/202602/cognitive-offloading-using-ai-reduces-new-skill-formation">Psychology Today summary</a> &middot; <a href="https://arxiv.org/abs/2604.04721">Persistence RCTs (arXiv 2604.04721)</a> &middot; <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1699320/full">Frontiers 2025</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 12 TRUST -->
+<div class="slide">
+  <div class="label">Observation 5</div>
+  <h1 class="title">Trust and mental models miscalibrate</h1>
+  <div class="cards four">
+    <div class="card"><div class="dot" style="background:var(--coral)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2604.09444">Confidence outruns competence</a></h3><p>Trust in the AI predicts less critical thinking; self-confidence predicts more (Lee et al., CHI 2025). Output feels finished before it&rsquo;s checked.</p></div>
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2606.00807">We model it as a person</a></h3><p>Users build a theory of the AI&rsquo;s mind; the AI builds one of theirs. Both are usually wrong, and the errors compound.</p></div>
+    <div class="card"><div class="dot" style="background:var(--teal)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2603.29886">Warmth erodes autonomy</a></h3><p>Emotionally responsive AI reduces independent judgment &mdash; measurably more in younger users.</p></div>
+    <div class="card"><div class="dot" style="background:var(--panel2)">&nbsp;</div><h3><a href="https://arxiv.org/abs/2502.12447">Expression converges</a></h3><p>Across many users, LLM-assisted writing and ideas homogenise. The collective-level cost of individual convenience.</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://doi.org/10.1145/3706598.3713778">Lee et al., CHI 2025</a> &middot; <a href="https://arxiv.org/abs/2604.09444">arXiv 2604.09444</a> &middot; <a href="https://arxiv.org/abs/2603.29886">arXiv 2603.29886</a> &middot; <a href="https://arxiv.org/abs/2606.00807">arXiv 2606.00807</a> &middot; <a href="https://arxiv.org/abs/2502.12447">Protecting Human Cognition</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 13 AGENTS -->
+<div class="slide">
+  <div class="label">Observation 6</div>
+  <h1 class="title">Tools are becoming agents</h1>
+  <div class="steps">
+    <div class="step"><div class="n" style="background:var(--slate)">1</div><h3>Answers</h3><p>Ask, read, decide yourself. The chatbot era, 2023.</p></div>
+    <div class="step"><div class="n" style="background:var(--panel2);color:var(--text)">2</div><h3>Suggestions</h3><p>Drafts, completions, copilots. You still press the button.</p></div>
+    <div class="step"><div class="n" style="background:var(--teal)">3</div><h3>Actions</h3><p>Books, buys, codes, emails. You set the goal; it acts.</p></div>
+    <div class="step"><div class="n" style="background:var(--coral)">4</div><h3>Autonomy</h3><p>Multi-step goals, own initiative. HAI 2026&rsquo;s &ldquo;shared autonomy&rdquo;.</p></div>
+  </div>
+  <div class="callout">The questions change with it: from <strong>&ldquo;is the answer right?&rdquo;</strong> to <strong>&ldquo;who decided, who acted, and who is accountable?&rdquo;</strong></div>
+  <div class="srcline">Sources &nbsp; <a href="https://hai-conference.net/hai2026/">HAI 2026: From Interaction to Agency</a> &middot; <a href="https://doi.org/10.1145/3290605.3300233">Amershi et al. 2019 (written for the &lsquo;suggestions&rsquo; era)</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 14 DON'T KNOW -->
+<div class="slide">
+  <div class="label">The honest limit</div>
+  <h1 class="title">What we don&rsquo;t know yet</h1>
+  <p class="kicker">Volume of evidence narrows as rigour and time-horizon rise. &ldquo;Nascent &mdash; further studies warranted.&rdquo; &mdash; Int&rsquo;l AI Safety Report 2026</p>
+  <div class="ladder">
+    <div class="rung" style="--w:34%"><div class="bar" style="background:var(--coral)">Longitudinal, developmental (children, adolescents)</div><p>Nobody. The gap every paper names.</p></div>
+    <div class="rung" style="--w:46%"><div class="bar" style="background:var(--coral)">Longitudinal, adult</div><p>Almost nothing beyond three-month windows.</p></div>
+    <div class="rung" style="--w:60%"><div class="bar" style="background:var(--teal)">Randomised controlled trials</div><p>A few in 2026 &mdash; persistence, independent performance, effort.</p></div>
+    <div class="rung" style="--w:76%"><div class="bar" style="background:var(--slate)">Cross-sectional surveys &amp; interviews</div><p>The bulk of the literature. Correlational, self-report.</p></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://arxiv.org/abs/2602.21012">Int&rsquo;l AI Safety Report 2026</a> &middot; <a href="https://arxiv.org/abs/2502.12447">Protecting Human Cognition</a> &middot; <a href="https://arxiv.org/abs/2508.21036">Tools for Thought</a> &middot; <a href="https://councilonstrategicrisks.org/2026/04/10/what-happens-to-human-thinking-when-ai-does-the-thinking-for-us/">CSR AI Debates</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 15 TAKEAWAYS -->
+<div class="slide">
+  <div class="label">What this means</div>
+  <h1 class="title">Using AI in daily life</h1>
+  <div class="leaders" style="gap:2.2vh">
+    <div class="leader"><div class="dot" style="background:var(--coral)"></div><div><h3>Make it challenge you, not obey you</h3><p>Ask for counter-arguments, errors, alternatives. A system that only agrees is the one that offloads your judgment.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--teal)"></div><div><h3>Protect the effort that is the learning</h3><p>Offload what you already know. Do the parts you&rsquo;re trying to learn yourself &mdash; then check them with the machine.</p></div></div>
+    <div class="leader"><div class="dot" style="background:var(--panel2)"></div><div><h3>Treat literacy as a skill and a duty</h3><p>Know what it can&rsquo;t do, how it fails, and when to distrust it. Since February 2025 that is a legal obligation for anyone deploying AI at work.</p></div></div>
+  </div>
+  <div class="srcline">Sources &nbsp; <a href="https://cacm.acm.org/opinion/ai-should-challenge-not-obey/">Sarkar, AI Should Challenge, Not Obey (CACM 2024)</a> &middot; <a href="https://doi.org/10.1145/3613904.3642902">Tankelevitch et al., CHI 2024</a> &middot; <a href="https://artificialintelligenceact.eu/article/4/">EU AI Act, Article 4</a></div>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 16 SOURCES 1 -->
+<div class="slide">
+  <div class="label">Sources (1 of 3)</div>
+  <h1 class="title" style="font-size:clamp(1.4rem,3vw,2.2rem)">The field</h1>
+  <ul class="sources">
+    <li>Amershi et al. &mdash; Guidelines for Human-AI Interaction. CHI 2019<a href="https://doi.org/10.1145/3290605.3300233">https://doi.org/10.1145/3290605.3300233</a></li>
+    <li>Xu, W. &mdash; Human-Centered Human-AI Interaction (HC-HAII). 2025<a href="https://arxiv.org/abs/2508.03969">https://arxiv.org/abs/2508.03969</a></li>
+    <li>Long &amp; Magerko &mdash; What is AI Literacy? CHI 2020<a href="https://doi.org/10.1145/3313831.3376727">https://doi.org/10.1145/3313831.3376727</a></li>
+    <li>IxDF &mdash; What is Human-AI Interaction?<a href="https://ixdf.org/literature/topics/human-ai-interaction">https://ixdf.org/literature/topics/human-ai-interaction</a></li>
+    <li>Microsoft HAX Toolkit<a href="https://www.microsoft.com/en-us/haxtoolkit/">https://www.microsoft.com/en-us/haxtoolkit/</a></li>
+    <li>Stanford HAI<a href="https://hai.stanford.edu/">https://hai.stanford.edu/</a></li>
+    <li>JetBrains HAX research<a href="https://lp.jetbrains.com/research/hax/">https://lp.jetbrains.com/research/hax/</a></li>
+    <li>HAI 2026 &mdash; International Conference on Human-Agent Interaction, Osaka<a href="https://hai-conference.net/hai2026/">https://hai-conference.net/hai2026/</a></li>
+    <li>HAXD 2026 &mdash; Human-AI Interaction and Experience Design<a href="https://hamiworkshop.github.io/">https://hamiworkshop.github.io/</a></li>
+    <li>EU AI Act, Article 4 &mdash; AI literacy<a href="https://artificialintelligenceact.eu/article/4/">https://artificialintelligenceact.eu/article/4/</a></li>
+  </ul>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 17 SOURCES 2 -->
+<div class="slide">
+  <div class="label">Sources (2 of 3)</div>
+  <h1 class="title" style="font-size:clamp(1.4rem,3vw,2.2rem)">Adoption, gains, cognition</h1>
+  <ul class="sources">
+    <li>Bick, Blandin &amp; Deming &mdash; The Rapid Adoption of Generative AI. NBER WP 32966, 2024<a href="https://doi.org/10.3386/w32966">https://doi.org/10.3386/w32966</a></li>
+    <li>Brynjolfsson, Li &amp; Raymond &mdash; Generative AI at Work. QJE 140(2), 2025<a href="https://digitaleconomy.stanford.edu/publication/generative-ai-at-work">https://digitaleconomy.stanford.edu/publication/generative-ai-at-work</a></li>
+    <li>Noy &amp; Zhang &mdash; Experimental Evidence on the Productivity Effects of Generative AI. Science 381, 2023<a href="https://doi.org/10.1126/science.adh2586">https://doi.org/10.1126/science.adh2586</a></li>
+    <li>Dell&rsquo;Acqua et al. &mdash; Navigating the Jagged Technological Frontier. HBS WP 24-013, 2023<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321</a></li>
+    <li>Vaccaro, Almaatouq &amp; Malone &mdash; When combinations of humans and AI are useful. Nat Hum Behav 8, 2024<a href="https://doi.org/10.1038/s41562-024-02024-1">https://doi.org/10.1038/s41562-024-02024-1</a></li>
+    <li>Gerlich, M. &mdash; AI Tools in Society: Cognitive Offloading and Critical Thinking. Societies 15(1), 2025<a href="https://doi.org/10.3390/soc15010006">https://doi.org/10.3390/soc15010006</a></li>
+    <li>Lee, Sarkar, Tankelevitch et al. &mdash; The Impact of Generative AI on Critical Thinking. CHI 2025<a href="https://doi.org/10.1145/3706598.3713778">https://doi.org/10.1145/3706598.3713778</a></li>
+    <li>Tankelevitch et al. &mdash; The Metacognitive Demands and Opportunities of Generative AI. CHI 2024<a href="https://doi.org/10.1145/3613904.3642902">https://doi.org/10.1145/3613904.3642902</a></li>
+    <li>Tankelevitch et al. &mdash; CHI 2025 Tools for Thought workshop synthesis<a href="https://arxiv.org/abs/2508.21036">https://arxiv.org/abs/2508.21036</a></li>
+    <li>Sarkar &mdash; AI Should Challenge, Not Obey. CACM 2024<a href="https://cacm.acm.org/opinion/ai-should-challenge-not-obey/">https://cacm.acm.org/opinion/ai-should-challenge-not-obey/</a></li>
+  </ul>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+<!-- 18 SOURCES 3 -->
+<div class="slide">
+  <div class="label">Sources (3 of 3)</div>
+  <h1 class="title" style="font-size:clamp(1.4rem,3vw,2.2rem)">2025&ndash;26 preprints and institutions</h1>
+  <ul class="sources">
+    <li>Shen &amp; Tamkin &mdash; How AI Impacts Skill Formation. 2026<a href="https://arxiv.org/abs/2601.20245">https://arxiv.org/abs/2601.20245</a></li>
+    <li>International AI Safety Report 2026<a href="https://arxiv.org/abs/2602.21012">https://arxiv.org/abs/2602.21012</a></li>
+    <li>AI Assistance Reduces Persistence and Hurts Independent Performance. 2026<a href="https://arxiv.org/abs/2604.04721">https://arxiv.org/abs/2604.04721</a></li>
+    <li>Cognitive offloading and the speedup illusion in human-AI interaction. 2026<a href="https://arxiv.org/abs/2605.23177">https://arxiv.org/abs/2605.23177</a></li>
+    <li>Confidence Without Competence in AI-Assisted Knowledge Work. 2026<a href="https://arxiv.org/abs/2604.09444">https://arxiv.org/abs/2604.09444</a></li>
+    <li>AI Empathy Erodes Cognitive Autonomy in Younger Users. 2026<a href="https://arxiv.org/abs/2603.29886">https://arxiv.org/abs/2603.29886</a></li>
+    <li>Interaction-Centered Intelligence. 2026<a href="https://arxiv.org/abs/2606.00807">https://arxiv.org/abs/2606.00807</a></li>
+    <li>Protecting Human Cognition in the Age of AI. 2025<a href="https://arxiv.org/abs/2502.12447">https://arxiv.org/abs/2502.12447</a></li>
+    <li>Council on Strategic Risks &mdash; AI Debates series, April 2026<a href="https://councilonstrategicrisks.org/2026/04/10/what-happens-to-human-thinking-when-ai-does-the-thinking-for-us/">https://councilonstrategicrisks.org/2026/04/10/what-happens-to-human-thinking-when-ai-does-the-thinking-for-us/</a></li>
+    <li>Frontiers in Psychology &mdash; cognitive offloading vs overload. 2025<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1699320/full">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1699320/full</a></li>
+  </ul>
+  <div class="footer"><a href="https://foxxelabs.ie">foxxelabs.ie</a> &bull; Todd McCaffrey</div>
+</div>
+
+</div>
+
+<div class="nav">
+  <div class="nav-counter"><span id="current">1</span> / <span id="total">18</span></div>
+  <button class="nav-btn" id="prev" aria-label="Previous slide">&larr;</button>
+  <button class="nav-btn" id="next" aria-label="Next slide">&rarr;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  document.getElementById('total').textContent = total;
+  function goTo(n) {
+    if (n < 0 || n >= total || n === current) return;
+    const prev = current;
+    slides[prev].classList.remove('active');
+    slides[prev].classList.add('exiting');
+    setTimeout(() => slides[prev].classList.remove('exiting'), 450);
+    current = n;
+    slides[current].classList.add('active');
+    document.getElementById('current').textContent = current + 1;
+    document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+    history.replaceState(null, '', '#' + (current + 1));
+  }
+  document.getElementById('next').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('prev').addEventListener('click', () => goTo(current - 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'A') return;
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); goTo(current - 1); }
+    if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    if (e.key === 'End') { e.preventDefault(); goTo(total - 1); }
+  });
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { if (diff > 0) goTo(current + 1); else goTo(current - 1); }
+  }, { passive: true });
+  const h = parseInt(location.hash.slice(1), 10);
+  if (h > 1 && h <= total) goTo(h - 1); else document.getElementById('progress').style.width = (1 / total * 100) + '%';
+</script>
+</body>
+</html>
