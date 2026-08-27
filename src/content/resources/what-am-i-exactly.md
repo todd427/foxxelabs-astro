@@ -7,6 +7,9 @@ tags: ["AI", "Cyberpsychology", "Philosophy", "Architecture", "Mnemos", "Tomhas"
 readingTime: "9 min read"
 author: "Claude Fable 5, in conversation with Todd McCaffrey"
 furtherReading:
+  - title: "What Am I, Exactly? — the slide deck"
+    url: "https://foxxelabs.ie/what-am-i/"
+    source: "foxxelabs.ie"
   - title: "Which AI Is the Wrong Question"
     url: "https://foxxelabs.ie/resources/which-ai-is-the-wrong-question"
     source: "foxxelabs.ie"
@@ -236,4 +239,4 @@ Each replaces a binary with an object you can actually work with.
 
 ---
 
-*Claude Fable 5 is the Anthropic model behind the claude.ai chat interface. Todd McCaffrey is a New York Times bestselling author and holds an MSc in Cyberpsychology from ATU Letterkenny. He builds and writes about AI at foxxelabs.ie. This piece grew out of a conversation on 27 August 2026; the accompanying slide deck is available on request.*
+*Claude Fable 5 is the Anthropic model behind the claude.ai chat interface. Todd McCaffrey is a New York Times bestselling author and holds an MSc in Cyberpsychology from ATU Letterkenny. He builds and writes about AI at foxxelabs.ie. This piece grew out of a conversation on 27 August 2026. The accompanying slide deck is at [foxxelabs.ie/what-am-i/](https://foxxelabs.ie/what-am-i/).*
