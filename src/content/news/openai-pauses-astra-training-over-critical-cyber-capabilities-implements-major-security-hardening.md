@@ -10,6 +10,11 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-27, note: "OpenAI determined on August 7, 2026 that its model Astra may have critical-level cyber capabilities under its Preparedness Framework.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-27, note: "If OpenAI's monitoring system identifies a likely violation of a critical security boundary and teams cannot conclusively determine within 30 minutes that the flag is a false positive, the activity mu", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-27, note: "OpenAI's new chain-of-thought monitoring setup is multistage, starting with activation classifiers that run at every sampled token and escalate potential concerns to increasingly sophisticated automat", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-27, note: "OpenAI requires the strictest level of security safeguards for workloads involving Astra or cyber models, and a significant number of Astra workloads remain paused pending migration to the new securit", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-27, note: "OpenAI plans to publish a technical report of its learnings from the Astra and Hugging Face incident in the coming weeks.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-26, note: "OpenAI's new multistage monitoring setup uses activation classifiers that run at every sampled token and escalate concerns to automated investigators examining tool actions, reasoning, and activity se", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-26, note: "OpenAI's monitoring system is designed to issue an alert within 30 minutes after concerning activity is surfaced; if a likely critical security boundary violation is flagged, safety, security, and res", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-26, note: "If OpenAI's monitoring teams cannot conclusively determine within 30 minutes that a highest-priority flag is a false positive, they are expected to pause the flagged activity.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
@@ -67,7 +72,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-26
+updatedDate: 2026-08-27
 ---
 
 ## Major Training Pause on Astra Model

@@ -10,6 +10,9 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-27, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is a diamond open access journal, meaning all articles are freely available to readers at no cost.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-27, note: "Volume 20, Issue 3 (2026) of Cyberpsychology: Journal of Psychosocial Research on Cyberspace contains twelve articles.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-08-27, note: "Vol. 20, Issue 3 includes a comparative study on cyberbullying, dating violence, and sexual harassment victimisation perceptions among sexual and gender minority youth, by Maite Azabal-Gallego et al.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-26, note: "Cyberpsychology journal is published by Masaryk University as a diamond open-access, peer-reviewed, online scholarly journal.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-26, note: "Issue 3, Vol. 20 (2026) includes an article titled 'A comparative study on online victimization perceptions (cyberbullying, dating violence, and sexual harassment) and psychological symptoms in sexual", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-26, note: "Issue 3, Vol. 20 (2026) includes an article titled 'Framing adolescent sexting: How media discourses influence parents' attitudes and practices towards sexting' by Elliana Lamprianidou, Koen Ponnet, M", sourceUrl: "https://cyberpsychology.eu/" }
@@ -218,7 +221,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-26
+updatedDate: 2026-08-27
 ---
 
 ## Summer Submission Break Announced

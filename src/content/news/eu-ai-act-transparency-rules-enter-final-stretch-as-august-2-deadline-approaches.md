@@ -10,6 +10,14 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-27, note: "From 2 August 2026, AI-generated or AI-altered content must carry machine-readable marks to enable easier detection.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-27, note: "Regulation (EU) 2026/1744 entered into force on 27 July 2026.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-27, note: "High-risk AI obligations for stand-alone systems listed in Annex III — covering recruitment, credit scoring, education, law enforcement, border control, and critical infrastructure — are deferred to 2", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-27, note: "High-risk AI embedded in already-regulated products listed in Annex I — covering medical devices, machinery, and toys — faces a compliance deadline of 2 August 2028.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-27, note: "The earlier mechanism of applying high-risk deadlines '6 or 12 months after standards are confirmed' was dropped from the final Digital Omnibus text; neither new deadline is conditional on further Com", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-27, note: "Generative AI systems placed on the market or put into service before 2 August 2026 have until 2 December 2026 to comply with the machine-readable watermarking requirement under Article 50(2).", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
+  - { date: 2026-08-27, note: "Violations of Article 50 transparency obligations may result in fines of up to €15 million or 3% of total annual worldwide turnover, whichever is higher.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-08-27, note: "The AI-generated content marking Code of Practice gathered approximately 190 signatories as of 2 August 2026.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
   - { date: 2026-08-26, note: "The EU AI Act (Regulation (EU) 2024/1689) transparency obligations are set out in Article 50.", sourceUrl: "https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026" }
   - { date: 2026-08-26, note: "Noncompliance with Article 50 transparency obligations can trigger fines of up to €15 million or 3% of worldwide annual turnover, whichever is higher.", sourceUrl: "https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026" }
   - { date: 2026-08-25, note: "From 2 August 2026, deepfakes (images, videos, or audio edited or generated using AI) must be labelled as such.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
@@ -264,7 +272,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-26
+updatedDate: 2026-08-27
 ---
 
 ## Key Developments

@@ -9,8 +9,13 @@ sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-
 significance: "high"
 entities: ["DataCamp", "prompt engineer", "AI engineer", "applied ML engineer", "AI solutions consultant", "conversational designer"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-27, note: "Standalone 'prompt engineer' job titles have declined since the 2023–2024 hype period.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-27, note: "Prompt engineering skills are now embedded in broader AI roles including AI engineer, applied ML engineer, AI solutions consultant, and conversational designer.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-27, note: "With the rise of reasoning models such as OpenAI's o-series, Anthropic's extended thinking in Claude, and DeepSeek's R1, those models now perform much of the step-by-step reasoning internally, reducin", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
+  - { date: 2026-08-27, note: "The transformer architecture was introduced in the 2017 paper 'Attention is All You Need', which DataCamp identifies as a turning point for modern prompt engineering.", sourceUrl: "https://www.datacamp.com/blog/what-is-prompt-engineering-the-future-of-ai-communication" }
 draft: false
+updatedDate: 2026-08-27
 ---
 
 ## Prompt Engineering Job Market Shifts

@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-27, note: "Ireland adopted a distributed model of AI regulation, leveraging existing regulatory experience across sectoral authorities rather than a single monolithic regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-27, note: "Ireland is holding the Presidency of the Council of the EU at the time of enacting the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-27, note: "Non-compliance with EU AI Act transparency obligations (Article 50) can trigger fines of up to €15 million or 3% of worldwide annual turnover, whichever is higher.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
   - { date: 2026-08-25, note: "Environmental lawyers were granted leave by the Irish High Court to challenge the Commission for the Regulation of Utilities (CRU) over its grid connection rules for data centres.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
   - { date: 2026-08-25, note: "The CRU published its Large Energy Users Connection Policy in December 2025 following a multi-year moratorium on connecting new data centres to the electricity grid around Dublin.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
   - { date: 2026-08-25, note: "The CRU's Large Energy Users Connection Policy allows data centres to run on fossil fuels for the next six years, after which they must run on an energy supply that is at least 80 percent renewable.", sourceUrl: "https://www.friendsoftheirishenvironment.org/fie-work/data-centre-energy-policy-challenged-amid-ai-infrastructure-boom" }
@@ -369,7 +372,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-25
+updatedDate: 2026-08-27
 ---
 
 ## The Bill's Purpose and Structure

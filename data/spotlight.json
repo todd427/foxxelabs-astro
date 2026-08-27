@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-08-26T07:54:02.412Z",
+  "updatedAt": "2026-08-27T18:14:39.981Z",
   "pick": {
-    "id": "incoai/Qwen3.8-27B-DFlash2",
-    "url": "https://hf.co/incoai/Qwen3.8-27B-DFlash2",
-    "author": "incoai",
-    "name": "Qwen3.8-27B-DFlash2",
-    "likes": 181,
-    "downloads": 105786,
-    "ageDays": 8,
-    "blurb": "Qwen3.8-27B-DFlash2 crossed 105k downloads in 8 days with speculative decoding and block-diffusion optimizations for vLLM and SGLang, cutting inference latency measurably on a 27B footprint. If you're deploying to inference endpoints or batch serving, the throughput gains from draft-model acceleration warrant a latency baseline against your current stack.",
-    "surfacedAt": "2026-08-26"
+    "id": "zai-org/GLM-5.3-Flash",
+    "url": "https://hf.co/zai-org/GLM-5.3-Flash",
+    "author": "zai-org",
+    "name": "GLM-5.3-Flash",
+    "likes": 1269,
+    "downloads": 34,
+    "ageDays": 2,
+    "blurb": "GLM-5.3-Flash landed 2 days ago with native image-text-to-text alongside text generation, built on the GLM5 architecture and already endpoints-compatible. If you're prototyping multimodal flows without model-stacking, the freshness and MIT license make it worth a quick eval against your current image-encoder + LLM chain.",
+    "surfacedAt": "2026-08-27"
   },
   "also": [
     {
@@ -17,45 +17,45 @@
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 430,
-      "downloads": 70158,
-      "ageDays": 8
-    },
-    {
-      "id": "ornith-ai/Ornith-1.5-9B",
-      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
-      "author": "ornith-ai",
-      "name": "Ornith-1.5-9B",
-      "likes": 219,
-      "downloads": 98323,
-      "ageDays": 8
-    },
-    {
-      "id": "superwhisper/s1-mini",
-      "url": "https://hf.co/superwhisper/s1-mini",
-      "author": "superwhisper",
-      "name": "s1-mini",
-      "likes": 244,
-      "downloads": 3474,
-      "ageDays": 14
-    },
-    {
-      "id": "z-lab/Qwen3.8-27B-DFlash2",
-      "url": "https://hf.co/z-lab/Qwen3.8-27B-DFlash2",
-      "author": "z-lab",
-      "name": "Qwen3.8-27B-DFlash2",
-      "likes": 227,
-      "downloads": 64984,
-      "ageDays": 10
+      "likes": 463,
+      "downloads": 88102,
+      "ageDays": 9
     },
     {
       "id": "EschaLabs/Qwen3.8-27B-Escha-W2",
       "url": "https://hf.co/EschaLabs/Qwen3.8-27B-Escha-W2",
       "author": "EschaLabs",
       "name": "Qwen3.8-27B-Escha-W2",
-      "likes": 127,
-      "downloads": 2319,
-      "ageDays": 6
+      "likes": 138,
+      "downloads": 2836,
+      "ageDays": 7
+    },
+    {
+      "id": "superwhisper/s1-mini",
+      "url": "https://hf.co/superwhisper/s1-mini",
+      "author": "superwhisper",
+      "name": "s1-mini",
+      "likes": 274,
+      "downloads": 4149,
+      "ageDays": 15
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-9B",
+      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
+      "author": "ornith-ai",
+      "name": "Ornith-1.5-9B",
+      "likes": 237,
+      "downloads": 130731,
+      "ageDays": 9
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "author": "deepseek-ai",
+      "name": "DeepSeek-V4-Flash-0731",
+      "likes": 3758,
+      "downloads": 3959575,
+      "ageDays": 27
     }
   ]
 }

@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Stanford Digital Economy Lab", "Erik Brynjolfsson", "Bharat Chandar", "Ruyu Chen", "ADP", "ChatGPT"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-27, note: "Women face greater AI exposure on average than men, according to the Stanford Digital Economy Lab's updated analysis.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-27, note: "So far, adjustment to AI exposure among young workers is showing up primarily in employment levels rather than base pay.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-08-27, note: "AI-related roles are being created in Ireland at two to three times the pace observed in neighbouring countries, according to a report from the Expert Group on Future Skills Needs (EGFSN).", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "Close to 12% of job postings in Ireland reference AI skills, compared to 4% in the US and 6% in the UK.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "The share of Irish job postings referencing AI skills fluctuated between 4% and 6% from 2019 to 2023, and has since doubled, with a marked increase over the past year.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "Usage of AI by large enterprises in Ireland rose from 31.2% to 57.3% between 2021 and 2025, according to Eurostat data cited in the EGFSN report.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "AI adoption by small firms in Ireland rose from 6.1% to 16.8% between 2021 and 2025, according to Eurostat data cited in the EGFSN report.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "AI adoption by medium-sized firms in Ireland rose from 13.2% to 28% between 2021 and 2025, according to Eurostat data cited in the EGFSN report.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "The EGFSN report warned that the gap between large and small enterprise AI adoption points to a risk of a two-speed economy, in which larger firms capture a disproportionate share of AI-related produc", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-27, note: "The EGFSN report was authored by Diarmaid Smyth.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
   - { date: 2026-08-25, note: "The adjustment for young workers in AI-exposed occupations appears to operate primarily through reduced hiring rather than increased separations.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-25, note: "Employment has declined among young workers in occupations that rely heavily on codified knowledge, while employment has increased among experienced workers in occupations relying more on tacit knowle", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-25, note: "So far, AI-related employment adjustment is showing up primarily in employment levels rather than in base pay (which excludes bonuses, equity, and other variable pay).", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
@@ -31,7 +41,7 @@ updates:
   - { date: 2026-08-21, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-08-21, note: "Ireland's unemployment rate is below the euro-area average as of July 2026.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-08-25
+updatedDate: 2026-08-27
 ---
 
 ## Stanford Releases Updated 'Canaries in the Coal Mine' Analysis
