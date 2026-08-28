@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-28, note: "Ireland aligns its AI regulatory framework with its National Digital and AI Strategy, 'Digital Ireland — Connecting our People, Securing our Future'.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-28, note: "Further legislation to address Digital Omnibus on AI amendments and additional EU AI Act requirements will be brought forward in Autumn 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-28, note: "From 2 August 2026, Article 50 transparency obligations of the EU AI Act became enforceable, requiring chatbots to identify themselves as AI and deepfakes to be labelled.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
+  - { date: 2026-08-28, note: "The Digital Omnibus on AI entered into force on 27 July 2026 and moved the EU AI Act's high-risk obligations deadline to December 2027 for stand-alone systems and August 2028 for high-risk AI embedded", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
   - { date: 2026-08-27, note: "Ireland adopted a distributed model of AI regulation, leveraging existing regulatory experience across sectoral authorities rather than a single monolithic regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-27, note: "Ireland is holding the Presidency of the Council of the EU at the time of enacting the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-27, note: "Non-compliance with EU AI Act transparency obligations (Article 50) can trigger fines of up to €15 million or 3% of worldwide annual turnover, whichever is higher.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
@@ -372,7 +376,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-27
+updatedDate: 2026-08-28
 ---
 
 ## The Bill's Purpose and Structure

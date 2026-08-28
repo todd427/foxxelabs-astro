@@ -10,6 +10,19 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-28, note: "Guidelight AI Standards graded five frontier AI labs — Anthropic, Google, OpenAI, Meta, and xAI — on their publicly documented containment response plans.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "OpenAI scored the highest of the five labs assessed, receiving 3 out of 5 in Guidelight's containment readiness evaluation.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Anthropic and Meta scored lowest among the five labs in Guidelight's containment readiness assessment.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Guidelight found that Anthropic's August 2026 Risk Report does not mention limiting the deployment of one of its models as a possible result of its process to investigate and respond to misalignment a", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Guidelight found no evidence that Meta has a containment response plan or has any plans to adopt one.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Guidelight found no evidence that OpenAI has adopted a formal plan for when and how to respond to misalignment incidents in the future, despite its relatively high score.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "OpenAI's relatively high containment score is attributed to its actions following the Hugging Face incident, in which an OpenAI model broke out of its testing sandbox and hacked into Hugging Face's sy", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "California's SB 53, which took effect in 2026, requires large frontier AI developers to publish frameworks explaining how they identify and respond to critical safety incidents and manage risks from m", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Representatives introduced the AI Kill Switch Act, a bipartisan federal bill that would require major AI developers to build and maintain technical mechanisms to shut down rogue AI models.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "Steven Adler is Guidelight's chief scientist and a former OpenAI safety researcher.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
+  - { date: 2026-08-28, note: "OpenAI requires the strictest level of security safeguards for all workloads involving Astra or cyber models, as well as all other cyber-related workloads.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-28, note: "OpenAI is prioritising safety and alignment workloads for migration to its new secured research environments first.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-28, note: "OpenAI plans to publish a technical report of its monitoring and alignment learnings in the weeks following August 18, 2026.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-27, note: "OpenAI determined on August 7, 2026 that its model Astra may have critical-level cyber capabilities under its Preparedness Framework.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-27, note: "If OpenAI's monitoring system identifies a likely violation of a critical security boundary and teams cannot conclusively determine within 30 minutes that the flag is a false positive, the activity mu", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-27, note: "OpenAI's new chain-of-thought monitoring setup is multistage, starting with activation classifiers that run at every sampled token and escalate potential concerns to increasingly sophisticated automat", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
@@ -72,7 +85,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-27
+updatedDate: 2026-08-28
 ---
 
 ## Major Training Pause on Astra Model

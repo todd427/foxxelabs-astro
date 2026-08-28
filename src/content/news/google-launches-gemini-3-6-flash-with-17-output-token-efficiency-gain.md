@@ -10,6 +10,21 @@ significance: "high"
 entities: ["Google", "Gemini 3.6 Flash", "Gemini 3.5 Flash", "Gemini 3.5 Flash-Lite", "Gemini 3.5 Flash Cyber", "Gemini 3.5 Pro", "Gemini 4", "Artificial Analysis Index"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-28, note: "Tencent released one new AI model on August 28, 2026: Hy4 preview.", sourceUrl: "https://lmmarketcap.com/llm-updates" }
+  - { date: 2026-08-28, note: "Alibaba released Qwen3.8 Flash on August 26, 2026.", sourceUrl: "https://lmmarketcap.com/llm-updates" }
+  - { date: 2026-08-28, note: "Zhipu AI released GLM-5.3 Flash on August 26, 2026.", sourceUrl: "https://lmmarketcap.com/llm-updates" }
+  - { date: 2026-08-28, note: "GLM-5.3-Flash is described as the first natively multimodal GLM-5 model.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "GLM-5.3-Flash has a 320B/18B parameter configuration and a 1M token context window.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "GLM-5.3-Flash is released under an MIT licence (open weights).", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "GLM-5.3-Flash is listed at $0.15 per 1M input tokens and $0.50 per 1M output tokens.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "Qwen3.8-Flash-Next is an open-weight preview of the Qwen4 architecture.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "Qwen3.8-Flash-Next has 6 billion active parameters and a 262K native context window.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "DeepSeek released DeepSeek-V4-Flash-Vision-Exp on August 21, 2026.", sourceUrl: "https://lmmarketcap.com/llm-updates" }
+  - { date: 2026-08-28, note: "Google released Gemini 3.5 Transcribe as two separate endpoints — a streaming endpoint and a non-streaming endpoint.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "Gemini 3.5 Transcribe's streaming endpoint delivers sub-second transcription but drops speaker diarisation.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "An article published on August 28, 2026 claims OpenAI is on track to reach its internal AGI bar by end of 2026.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "Alibaba's WAN 3.0 video model generates up to 30 seconds of 1080p video with audio in a single pass.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-08-28, note: "WAN 3.0 is listed on fal at $0.05/$0.10/$0.20 per second (standard), and $0.068/$0.14/$0.28 per second for the Prime (accelerated) SKU.", sourceUrl: "https://llm-stats.com/ai-news" }
   - { date: 2026-08-17, note: "Gemini 3.7 Flash was released by Google on August 13, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
   - { date: 2026-08-17, note: "Qwen Image 3.0 Pro was released by Alibaba on August 5, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
   - { date: 2026-08-17, note: "Qwen Image 3.0 was released by Alibaba on August 5, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
@@ -27,7 +42,7 @@ updates:
   - { date: 2026-08-08, note: "OpenAI released three GPT-5.6 variants — Sol, Terra, and Luna — on June 26, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
   - { date: 2026-08-08, note: "Meta Muse Spark 1.1 was released on July 9, 2026.", sourceUrl: "https://aireleasetracker.com/latest" }
 draft: false
-updatedDate: 2026-08-17
+updatedDate: 2026-08-28
 ---
 
 ## Gemini 3.6 Flash: Efficiency and Performance Gains

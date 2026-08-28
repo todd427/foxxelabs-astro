@@ -1,61 +1,61 @@
 {
-  "updatedAt": "2026-08-27T18:14:39.981Z",
+  "updatedAt": "2026-08-28T19:26:26.490Z",
   "pick": {
-    "id": "zai-org/GLM-5.3-Flash",
-    "url": "https://hf.co/zai-org/GLM-5.3-Flash",
-    "author": "zai-org",
-    "name": "GLM-5.3-Flash",
-    "likes": 1269,
-    "downloads": 34,
-    "ageDays": 2,
-    "blurb": "GLM-5.3-Flash landed 2 days ago with native image-text-to-text alongside text generation, built on the GLM5 architecture and already endpoints-compatible. If you're prototyping multimodal flows without model-stacking, the freshness and MIT license make it worth a quick eval against your current image-encoder + LLM chain.",
-    "surfacedAt": "2026-08-27"
+    "id": "tencent/Hy4-preview",
+    "url": "https://hf.co/tencent/Hy4-preview",
+    "author": "tencent",
+    "name": "Hy4-preview",
+    "likes": 223,
+    "downloads": 0,
+    "ageDays": 1,
+    "blurb": "Hy4-preview landed 1 day ago as Tencent's latest multimodal MoE model with dual arxiv papers (2512.02556, 2603.12201) backing the architecture. Worth a look if you're comparing routing strategies in sparse models—newer than GLM-5.3-Flash with Apache 2.0 licensing and concrete eval results.",
+    "surfacedAt": "2026-08-28"
   },
   "also": [
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "url": "https://hf.co/zai-org/GLM-5.3-Flash",
+      "author": "zai-org",
+      "name": "GLM-5.3-Flash",
+      "likes": 1477,
+      "downloads": 34,
+      "ageDays": 4
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "url": "https://hf.co/zai-org/GLM-5.3",
+      "author": "zai-org",
+      "name": "GLM-5.3",
+      "likes": 1043,
+      "downloads": 0,
+      "ageDays": 4
+    },
     {
       "id": "ornith-ai/Ornith-1.5-35B-A3B",
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 463,
+      "likes": 478,
       "downloads": 88102,
-      "ageDays": 9
+      "ageDays": 11
     },
     {
-      "id": "EschaLabs/Qwen3.8-27B-Escha-W2",
-      "url": "https://hf.co/EschaLabs/Qwen3.8-27B-Escha-W2",
-      "author": "EschaLabs",
-      "name": "Qwen3.8-27B-Escha-W2",
-      "likes": 138,
-      "downloads": 2836,
-      "ageDays": 7
-    },
-    {
-      "id": "superwhisper/s1-mini",
-      "url": "https://hf.co/superwhisper/s1-mini",
-      "author": "superwhisper",
-      "name": "s1-mini",
-      "likes": 274,
-      "downloads": 4149,
-      "ageDays": 15
-    },
-    {
-      "id": "ornith-ai/Ornith-1.5-9B",
-      "url": "https://hf.co/ornith-ai/Ornith-1.5-9B",
-      "author": "ornith-ai",
-      "name": "Ornith-1.5-9B",
-      "likes": 237,
-      "downloads": 130731,
-      "ageDays": 9
+      "id": "pipecat-ai/phonellm-alpha-1",
+      "url": "https://hf.co/pipecat-ai/phonellm-alpha-1",
+      "author": "pipecat-ai",
+      "name": "phonellm-alpha-1",
+      "likes": 106,
+      "downloads": 64,
+      "ageDays": 4
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3758,
+      "likes": 3784,
       "downloads": 3959575,
-      "ageDays": 27
+      "ageDays": 28
     }
   ]
 }
