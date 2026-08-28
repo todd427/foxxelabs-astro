@@ -1,0 +1,196 @@
+---
+// src/pages/irish-economy.astro
+// Explainer: how Sruth and Saothar relate, and why they are two things.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const SRUTH = 'https://sruth-public.fly.dev';
+const SAOTHAR = 'https://saothar-foxxelabs.fly.dev';
+
+// Figures are quoted with the vintage they came from, because a static page
+// cannot keep up with a release calendar and a number without a date is a
+// number pretending not to age. The live surfaces carry the current values.
+const asOf = {
+  gni: '2025 vintage',
+  labour: 'July 2026',
+};
+---
+
+<BaseLayout
+  title="The Model and the Tap | Foxxe Labs"
+  description="Two ways of reading the Irish economy from CSO open data: Sruth models the circular flow between institutional sectors, Saothar taps the labour market as it is published. Why they are deliberately separate."
+>
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs &middot; Irish economic data</div>
+    <h1>The Model and the Tap</h1>
+    <p class="sub">Two readings of the Irish economy, from the same open data, kept deliberately apart.</p>
+    <p class="lede">
+      Both of these read the Central Statistics Office's PxStat API &mdash; keyless, open, the same
+      source data.cso.ie charts. Neither is a dashboard over an API someone else curated. The
+      difference is not subject matter but <em>obligation</em>: one has to be internally consistent,
+      the other has to be current. That turns out to be a hard enough distinction that they are two
+      programs rather than one.
+    </p>
+  </header>
+
+  <section class="pair">
+    <article class="card proj">
+      <div class="tag">The model</div>
+      <h2><a href={SRUTH} target="_blank" rel="noopener">Sruth</a></h2>
+      <p class="gloss"><em>sruth</em> &mdash; Irish for stream, flow</p>
+      <p>
+        The circular flow of the Irish economy: what moves between the five institutional sectors
+        &mdash; households, corporations, government, financial, rest of world &mdash; with county
+        drilldowns, trade by commodity and by partner, and the energy balance underneath it.
+      </p>
+      <dl class="facts">
+        <div><dt>Cadence</dt><dd>Annual, with a quarterly cadence signal</dd></div>
+        <div><dt>Shape</dt><dd>Static site over committed CSO snapshots</dd></div>
+        <div><dt>Answers</dt><dd>&ldquo;Where does the money actually go?&rdquo;</dd></div>
+      </dl>
+      <p class="ex">
+        The number it exists to make unavoidable: on the {asOf.gni}, modified gross national income
+        was <strong>&euro;334bn</strong> against a headline GDP of <strong>&euro;602bn</strong>.
+        Roughly 45% of Irish GDP is not the domestic economy &mdash; it is intellectual property
+        relocation, aircraft leasing and redomiciled PLCs. Every figure on the site is badged with
+        whether it was measured, derived, or illustrative.
+      </p>
+    </article>
+
+    <article class="card proj">
+      <div class="tag">The tap</div>
+      <h2><a href={SAOTHAR} target="_blank" rel="noopener">Saothar</a></h2>
+      <p class="gloss"><em>saothar</em> &mdash; Irish for labour, work, toil</p>
+      <p>
+        The labour market as the CSO publishes it: seasonally adjusted monthly unemployment,
+        quarterly employment by economic sector, unemployment by age band and by region. Served as a
+        page, as a REST API, and to AI agents over MCP.
+      </p>
+      <dl class="facts">
+        <div><dt>Cadence</dt><dd>Monthly and quarterly; polled daily at 11:05 Irish time</dd></div>
+        <div><dt>Shape</dt><dd>Live service, cached, with the release date on every row</dd></div>
+        <div><dt>Answers</dt><dd>&ldquo;What has just been published?&rdquo;</dd></div>
+      </dl>
+      <p class="ex">
+        The spread it exists to keep visible: in {asOf.labour} the unemployment rate was
+        <strong>5.1%</strong> overall, <strong>4.1%</strong> for those aged 25&ndash;74, and
+        <strong>12.3%</strong> for those aged 15&ndash;24. A single headline rate hides a gap of
+        eight percentage points between the young and everyone else.
+      </p>
+    </article>
+  </section>
+
+  <section class="card why">
+    <h2 class="h">Why not one thing</h2>
+    <p>
+      They fail correctly in opposite directions, and that is the whole argument.
+    </p>
+    <p>
+      Sruth is a model, so its first duty is to be consistent with itself. Its breakdowns must sum to
+      their measured parents; its sectoral balances must close. Those are assertions that run before
+      it builds, and if one fails the site does not ship. A model that refuses to publish rather than
+      publish something that does not add up is behaving properly.
+    </p>
+    <p>
+      Saothar is a feed, so its first duty is to be current. It checks the CSO every morning after
+      the 11:00 release window and serves what is there, tagged with when it was published. A feed
+      that refuses to serve is simply broken.
+    </p>
+    <p>
+      Wire the second into the first and you get the worst of both: a static site that now depends on
+      a live service being up, and figures that arrive too late for the assertions that were the
+      point. So the labour data stays where it can be current, the model stays where it can be
+      consistent, and this page is the join.
+    </p>
+  </section>
+
+  <section class="card shared">
+    <h2 class="h">What they do share</h2>
+    <ul class="rules">
+      <li>
+        <strong>No code is ever guessed.</strong> A PxStat table is addressed by matrix code and
+        category code, and those get retired and remapped. Both projects resolve them against the
+        live catalogue and re-check them on a schedule, so a code that quietly changes meaning
+        becomes a failing build rather than a plausible wrong number.
+      </li>
+      <li>
+        <strong>Aggregates are never summed with their own members.</strong> The CSO publishes
+        &ldquo;Construction&rdquo; in the same list as &ldquo;Industry and Construction&rdquo; and
+        &ldquo;All sectors&rdquo;. Adding up that column double-counts. Both projects work out which
+        rows actually partition the total, and prove the sum rather than trusting the label.
+      </li>
+      <li>
+        <strong>Nothing is quietly modelled.</strong> Neither interpolates a gap, smooths a series,
+        or seasonally adjusts anything itself. Where a figure is seasonally adjusted it was adjusted
+        by the CSO and says so; where a figure is computed, the formula is stated.
+      </li>
+      <li>
+        <strong>Every number carries its date.</strong> Not the date it was fetched &mdash; the date
+        the CSO published it. A revision is a visible change, not a silent one.
+      </li>
+    </ul>
+  </section>
+
+  <footer class="page-footer card">
+    <p>
+      Live: <a href={SRUTH} target="_blank" rel="noopener">Sruth</a>
+      &nbsp;&middot;&nbsp; <a href={SAOTHAR} target="_blank" rel="noopener">Saothar</a>
+      &nbsp;&middot;&nbsp; source: <a href="https://data.cso.ie/" target="_blank" rel="noopener">CSO PxStat</a>,
+      Central Statistics Office, Ireland &mdash; open data.
+    </p>
+    <p class="fine">
+      Figures on this page are quoted with their vintage and will age; the live surfaces carry the
+      current values and their release dates.
+    </p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .page-header { margin-bottom: 18px; }
+  .eyebrow {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .18em;
+    color: var(--accent); font-weight: 700; margin-bottom: 10px;
+  }
+  .page-header h1 { font-size: clamp(2.2rem, 5.5vw, 3.2rem); line-height: 1; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { color: var(--text); font-size: 1.1rem; font-style: italic; margin: 0 0 16px; }
+  .lede { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 72ch; margin: 0; }
+
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 18px; margin: 0 0 18px; }
+  .proj { padding: 22px; }
+  .tag {
+    font-size: .72rem; text-transform: uppercase; letter-spacing: .16em;
+    color: var(--accent); font-weight: 700; margin-bottom: 8px;
+  }
+  .proj h2 { font-size: 1.9rem; margin: 0 0 2px; letter-spacing: -.01em; }
+  .proj h2 a { text-decoration: none; }
+  .proj h2 a:hover { text-decoration: underline; }
+  .gloss { color: var(--muted); font-size: .85rem; margin: 0 0 14px; }
+  .proj p { line-height: 1.7; margin: 0 0 14px; }
+
+  .facts { margin: 0 0 14px; padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .facts > div { display: flex; gap: 1rem; align-items: baseline; padding: 3px 0; }
+  .facts dt {
+    flex: 0 0 5.5rem; font-size: .72rem; text-transform: uppercase;
+    letter-spacing: .12em; color: var(--muted); font-weight: 700;
+  }
+  .facts dd { margin: 0; font-size: .95rem; }
+
+  .ex { color: var(--muted); font-size: .95rem; margin: 0 !important; }
+  .ex strong { color: var(--text); }
+
+  .why, .shared { padding: 22px; margin: 0 0 18px; }
+  .h { font-size: .82rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); font-weight: 700; margin: 0 0 14px; }
+  .why p { line-height: 1.7; margin: 0 0 14px; max-width: 76ch; }
+  .why p:last-child { margin-bottom: 0; }
+
+  .rules { list-style: none; margin: 0; padding: 0; }
+  .rules li {
+    line-height: 1.7; padding: 12px 0 12px 16px;
+    border-left: 2px solid var(--border); margin-bottom: 12px; max-width: 76ch;
+  }
+  .rules li:last-child { margin-bottom: 0; }
+  .rules strong { display: block; margin-bottom: 2px; }
+
+  .page-footer { font-size: .95rem; }
+  .page-footer p { margin: 0; color: var(--muted); }
+  .fine { font-size: .82rem; margin-top: 10px !important; }
+</style>
