@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const projects = [
   {
-    number: '01 / 05',
+    number: '01 / 07',
     tag: 'White-label Commerce',
     name: 'Stór',
     pronunciation: 'STORE · Irish for "treasure"',
@@ -14,7 +14,7 @@ const projects = [
     live: [true, false, false, false],
   },
   {
-    number: '02 / 05',
+    number: '02 / 07',
     tag: 'Community Platform',
     name: 'Anseo',
     pronunciation: 'AN-shuh · Irish for "here / present"',
@@ -25,7 +25,7 @@ const projects = [
     live: [true, false, false, false],
   },
   {
-    number: '03 / 05',
+    number: '03 / 07',
     tag: 'Cybersecurity Training',
     name: 'CyberSafer',
     pronunciation: null,
@@ -36,7 +36,7 @@ const projects = [
     live: [true, false, false, false],
   },
   {
-    number: '04 / 05',
+    number: '04 / 07',
     tag: 'Operations Security',
     name: 'Rialú',
     pronunciation: 'REE-ah-loo · Irish for "control"',
@@ -47,7 +47,7 @@ const projects = [
     live: [true, false, false, false],
   },
   {
-    number: '05 / 05',
+    number: '05 / 07',
     tag: 'Digital Legacy',
     name: 'Someday',
     pronunciation: null,
@@ -56,6 +56,28 @@ const projects = [
     body: 'A digital legacy platform focused on emotional inheritance: voice recordings, life stories, relationship maps, personal wisdom — preserved in formats designed to outlast the technology used to create them. 4.4 billion people have digital assets with no clear inheritance plan. The bigger problem is that most of what makes someone irreplaceable — their voice, their stories, their way of seeing the world — disappears with them entirely. Someday is about meaning transfer, not asset transfer. Applications in hospice care, estate planning, family heritage, and insurance products.',
     pills: ['Research Stage', 'Digital Legacy', 'Estate Planning', 'Hospice Care'],
     live: [false, false, false, false],
+  },
+  {
+    number: '06 / 07',
+    tag: 'Economic Modelling',
+    name: 'Sruth',
+    pronunciation: 'SRUH · Irish for "stream / flow"',
+    url: 'sruth-public.fly.dev',
+    pitch: 'Shows where the money in the Irish economy actually goes — and how much of the headline figure was never the domestic economy at all.',
+    body: 'A model of the circular flow between the five institutional sectors — households, corporations, government, financial, rest of world — built on fifteen CSO PxStat tables, with county drilldowns, trade by commodity and by partner, and the energy balance underneath. Its governing constraint is a provenance contract: every rendered figure is tagged measured, derived or illustrative, breakdowns must sum to their measured parents, and thirty-eight assertions run before the site builds — a failure stops the deploy rather than shipping a number that does not add up. Makes the Ireland caveat unavoidable: modified gross national income was €334bn against a headline GDP of €602bn on the 2025 vintage.',
+    pills: ['Live · Fly.io', 'CSO Open Data', 'Provenance Contract', 'Static · No Backend'],
+    live: [true, false, false, false],
+  },
+  {
+    number: '07 / 07',
+    tag: 'Labour-Market Signals',
+    name: 'Saothar',
+    pronunciation: 'SEE-hur · Irish for "labour, work, toil"',
+    url: 'saothar-foxxelabs.fly.dev',
+    pitch: 'A standing custom cut of the Irish labour market — machine-readable, the morning each release lands.',
+    body: 'data.cso.ie charts everything and holds nothing. Saothar keeps one canonical read of the labour market: seasonally adjusted monthly unemployment, quarterly employment by economic sector, unemployment by age band and by region — 34,000 observations across four tables, each row carrying the CSO release date it was published under. Served three ways from one process: a chart page, a REST API for dashboards, and MCP tools so AI agents can query it directly and cite the release. Matrix codes are discovered from the live catalogue rather than hardcoded, and a weekly check fails loudly if one is retired or re-coded.',
+    pills: ['Live · Fly.io', 'REST + MCP', 'CSO Open Data', 'Polls Each Release'],
+    live: [true, false, false, false],
   },
 ];
 
@@ -67,21 +89,21 @@ const reading = [
 ---
 
 <BaseLayout
-  title="Portfolio · March 2026 · Foxxe Labs"
-  description="FoxxeLabs builds experimental technology at the edges of AI, education, and human experience. Five of our top projects."
+  title="Portfolio · August 2026 · Foxxe Labs"
+  description="FoxxeLabs builds experimental technology at the edges of AI, education, and human experience. Seven of our top projects."
 >
 
   <!-- Hero -->
   <section class="port-hero">
-    <p class="port-eyebrow">Portfolio Overview · March 2026</p>
-    <h1 class="port-h1">Five things worth <em>talking about</em></h1>
+    <p class="port-eyebrow">Portfolio Overview · August 2026</p>
+    <h1 class="port-h1">Seven things worth <em>talking about</em></h1>
     <p class="port-lead">
       FoxxeLabs builds experimental technology at the edges of AI, education, and human experience.
-      Here are five of our top projects.
+      Here are seven of our top projects.
     </p>
     <div class="port-stats">
       <div class="stat">
-        <span class="stat-num">5</span>
+        <span class="stat-num">7</span>
         <span class="stat-label">Featured Projects</span>
       </div>
       <div class="stat">
