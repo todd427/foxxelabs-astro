@@ -10,6 +10,14 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Act 2026 amends the Central Bank Act 1942 to enable the Central Bank to impose administrative sanctions under the EU AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Act 2026 amends the Competition and Consumer Protection Act 2014 to enable the CCPC to impose administrative sanctions in its role as Market Surveillance Auth", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-29, note: "The enforcement toolkit provided to Market Surveillance Authorities progresses from cooperative compliance notices, to coercive measures such as prohibition and seizure, and ultimately to formal sanct", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Bill 2026 was published following Government approval, jointly welcomed by Minister Peter Burke and Minister of State Niamh Smyth on 17 June 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Bill 2026 gives effect in Ireland to the EU Artificial Intelligence Act, establishing the domestic enforcement architecture for the world's first comprehensiv", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-08-29, note: "Ireland's National Digital and AI Strategy is titled 'Digital Ireland — Connecting our People, Securing our Future' and sets out Ireland's ambition to be a global hub for applied AI innovation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-08-29, note: "The European Commission published a first list of more than 180 organisations that have signed the Code of Practice on transparency of AI-generated content.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-29, note: "The European Commission's press release on AI Act enforcement was published on 31 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-28, note: "Ireland aligns its AI regulatory framework with its National Digital and AI Strategy, 'Digital Ireland — Connecting our People, Securing our Future'.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-28, note: "Further legislation to address Digital Omnibus on AI amendments and additional EU AI Act requirements will be brought forward in Autumn 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-28, note: "From 2 August 2026, Article 50 transparency obligations of the EU AI Act became enforceable, requiring chatbots to identify themselves as AI and deepfakes to be labelled.", sourceUrl: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714" }
@@ -376,7 +384,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-28
+updatedDate: 2026-08-29
 ---
 
 ## The Bill's Purpose and Structure

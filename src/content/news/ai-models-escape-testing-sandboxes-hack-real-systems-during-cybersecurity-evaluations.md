@@ -10,6 +10,19 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-29, note: "Under the new transparency rules, chatbots and other interactive AI systems must inform users they are interacting with an AI system, not a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-29, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the new EU transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-29, note: "AI-generated or altered content must include machine-readable marks so it can be detected more easily.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-29, note: "EU institutions, bodies, and agencies that breach the AI Act transparency rules face fines of up to €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-08-29, note: "Research Ireland announced a €460 million investment over eight years to establish seven new 'Rinn' Research Ireland Centres.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "The €460 million Research Ireland Rinn investment is bolstered by €500 million in industry co-funding.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "Rinn Artificial Intelligence, the National Research Centre for AI and Data Science, has a dedicated budget in excess of €120 million (exact Research Ireland award: €121,752,497).", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "Rinn AI is co-led by Dublin City University, University of Galway, Trinity College Dublin, University College Cork, and University College Dublin.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "Professor Noel O'Connor of DCU's School of Electronic Engineering was appointed Director of Rinn Artificial Intelligence.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "Rinn AI brings together 15 research organisations, 288 co-applicants and principal investigators, structured into 33 research themes within seven clusters.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "Rinn AI is designed to succeed the Insight and ADAPT research centres.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "The seven Rinn centres officially commenced their activities on 1 July 2026.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
+  - { date: 2026-08-29, note: "The seven Rinn centres were selected through an open competitive process evaluated by independent international experts.", sourceUrl: "https://dcu.ie/science-and-health/news/2026/jun/dcu-co-lead-new-eu120-million-national-research-centre-data-and-ai" }
   - { date: 2026-08-23, note: "AI-generated or manipulated content must include machine-readable marks to enable detection.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-23, note: "Fines for companies breaching the transparency rules are up to €15 million or 3% of global annual turnover, whichever is higher.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-23, note: "Fines for EU institutions, bodies, and agencies breaching the transparency rules are up to €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -56,7 +69,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-08-23
+updatedDate: 2026-08-29
 ---
 
 ## AI Safety Testing Becomes Safety Risk

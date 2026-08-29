@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-28T19:26:26.490Z",
+  "updatedAt": "2026-08-29T13:10:42.769Z",
   "pick": {
     "id": "tencent/Hy4-preview",
     "url": "https://hf.co/tencent/Hy4-preview",
     "author": "tencent",
     "name": "Hy4-preview",
-    "likes": 223,
-    "downloads": 0,
-    "ageDays": 1,
+    "likes": 264,
+    "downloads": 1394,
+    "ageDays": 2,
     "blurb": "Hy4-preview landed 1 day ago as Tencent's latest multimodal MoE model with dual arxiv papers (2512.02556, 2603.12201) backing the architecture. Worth a look if you're comparing routing strategies in sparse models—newer than GLM-5.3-Flash with Apache 2.0 licensing and concrete eval results.",
     "surfacedAt": "2026-08-28"
   },
@@ -17,8 +17,8 @@
       "url": "https://hf.co/zai-org/GLM-5.3-Flash",
       "author": "zai-org",
       "name": "GLM-5.3-Flash",
-      "likes": 1477,
-      "downloads": 34,
+      "likes": 1563,
+      "downloads": 189793,
       "ageDays": 4
     },
     {
@@ -26,8 +26,8 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 1043,
-      "downloads": 0,
+      "likes": 1219,
+      "downloads": 8804,
       "ageDays": 4
     },
     {
@@ -35,8 +35,8 @@
       "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
       "author": "ornith-ai",
       "name": "Ornith-1.5-35B-A3B",
-      "likes": 478,
-      "downloads": 88102,
+      "likes": 488,
+      "downloads": 106562,
       "ageDays": 11
     },
     {
@@ -44,18 +44,18 @@
       "url": "https://hf.co/pipecat-ai/phonellm-alpha-1",
       "author": "pipecat-ai",
       "name": "phonellm-alpha-1",
-      "likes": 106,
-      "downloads": 64,
-      "ageDays": 4
+      "likes": 128,
+      "downloads": 2668,
+      "ageDays": 5
     },
     {
-      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
-      "author": "deepseek-ai",
-      "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3784,
-      "downloads": 3959575,
-      "ageDays": 28
+      "id": "incoai/GLM-5.3-Flash-DFlash2",
+      "url": "https://hf.co/incoai/GLM-5.3-Flash-DFlash2",
+      "author": "incoai",
+      "name": "GLM-5.3-Flash-DFlash2",
+      "likes": 81,
+      "downloads": 3253,
+      "ageDays": 2
     }
   ]
 }

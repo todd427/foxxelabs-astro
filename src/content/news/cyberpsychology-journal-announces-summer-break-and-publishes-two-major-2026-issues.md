@@ -10,6 +10,9 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-29, note: "The cyberpsychology.eu submission portal will reopen on September 1, 2026, following a summer break.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-29, note: "The journal closed its submission portal for new submissions from June 16 to August 31, 2026, citing the need to maintain editorial quality and sustainable workload.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-08-29, note: "During the summer break, the journal's editorial work continued for manuscripts already in the system, including contacting reviewers, processing revisions, and communicating editorial decisions.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-08-28, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace announced that its submission portal will reopen on September 1, 2026 following a summer break.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-28, note: "With the September 1, 2026 reopening, the journal is introducing updated submission requirements designed to strengthen the quality, transparency, and reproducibility of the research it publishes.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-08-28, note: "Volume 20, Issue 3 (2026) of the journal contains twelve open-access articles covering topics including online incivility and victimisation, digital piracy, and social media presentation.", sourceUrl: "https://cyberpsychology.eu/" }
@@ -225,7 +228,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-08-28
+updatedDate: 2026-08-29
 ---
 
 ## Summer Submission Break Announced

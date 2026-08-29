@@ -10,6 +10,14 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-29, note: "Europe's AI Office has not gone after any companies covered under the law for misconduct as of 28 August 2026, but it can now request information from companies or ask for access to models.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Anthropic announced that future Claude models will generate text that contains a watermark to comply with the EU AI Act.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Anthropic says watermarked text will be indistinguishable to readers, but plans to offer a 'watermark detection API' to users soon.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Google and Meta both said in July 2026 they would adopt and develop transparency and watermarking tools in response to the EU AI Act.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Meta said it would work with the EU AI Office to keep its approach to compliance 'practical, interoperable and genuinely useful.'", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "OpenAI is publishing training data summaries in compliance with the EU AI Act, along with embedded 'provenance signals.'", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Microsoft's compliance with the EU AI Act involves internal governance and risk management changes.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
+  - { date: 2026-08-29, note: "Rules for major categories of high-risk AI systems — covering education, biometrics, migration, and AI in physical products — take effect in December 2027 and August 2028.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
   - { date: 2026-08-27, note: "From 2 August 2026, AI-generated or AI-altered content must carry machine-readable marks to enable easier detection.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-08-27, note: "Regulation (EU) 2026/1744 entered into force on 27 July 2026.", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
   - { date: 2026-08-27, note: "High-risk AI obligations for stand-alone systems listed in Annex III — covering recruitment, credit scoring, education, law enforcement, border control, and critical infrastructure — are deferred to 2", sourceUrl: "https://www.softwareimprovementgroup.com/blog/eu-ai-act-summary/" }
@@ -272,7 +280,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-27
+updatedDate: 2026-08-29
 ---
 
 ## Key Developments

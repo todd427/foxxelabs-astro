@@ -9,8 +9,19 @@ sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating
 significance: "high"
 entities: ["Expert Group on Future Skills Needs (EGFSN)", "Diarmaid Smyth", "Ireland", "Eurostat", "CSO"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-08-29, note: "AI-related roles are being created in Ireland at two to three times the pace observed in neighbouring countries.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "4 per cent of job postings in the US reference AI skills.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "6 per cent of job postings in the UK reference AI skills.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "The Irish market shows AI skill levels 1.4 times the global average, according to LinkedIn data cited in the EGFSN report.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "Usage of AI by large enterprises in Ireland rose from 31.2 per cent to 57.3 per cent between 2021 and 2025.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "AI adoption by small firms in Ireland rose from 6.1 per cent to 16.8 per cent between 2021 and 2025.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "AI adoption by medium-sized firms in Ireland rose from 13.2 per cent to 28 per cent between 2021 and 2025.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "The EGFSN report was authored by Diarmaid Smyth and published on 24 August 2026.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "The EGFSN report states that SMEs in Ireland are more likely to face cost barriers and lack of skills as obstacles to applying AI in their operations.", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
+  - { date: 2026-08-29, note: "Separate ESRI research estimated that around one in every 14 existing jobs in Ireland could be displaced by AI in the short to medium term.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
 draft: false
+updatedDate: 2026-08-29
 ---
 
 ## AI Job Growth Outpacing International Competitors
