@@ -9,8 +9,14 @@ sourceUrl: "https://news.mit.edu/topic/machine-learning"
 significance: "high"
 entities: ["MIT", "generative AI"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-08-30, note: "MIT published a new machine-learning framework aimed at improving the success rate of computational protein design, moving away from results that reproduce sequences found in nature.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-08-30, note: "MIT's 'CrysVCD' tool is designed to cut the time and money spent on screening out chemically unstable material designs.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-08-30, note: "MIT developed a new algorithm that learns to anticipate unprecedented scenarios that critical infrastructure and global supply chains are least prepared for.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-08-30, note: "MIT research published on 20 August 2026 aims to lead to better materials for a fossil-fuel-free process for producing ammonia, a chemical essential to fertilizer.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-08-30, note: "Bill Gates published a 6,000-word essay warning that the world is unprepared for the upheaval AI could bring, including the prospect of machines permanently replacing large numbers of jobs.", sourceUrl: "https://www.irishtimes.com/your-money/2026/08/29/bill-gates-is-worried-about-ai-but-investors-are-looking-at-the-upside/" }
 draft: false
+updatedDate: 2026-08-30
 ---
 
 ## AI Image Generation Loses Connection to Training Data at Scale

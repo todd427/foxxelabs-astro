@@ -10,6 +10,9 @@ significance: "high"
 entities: ["European Commission", "EU AI Act", "AI Office", "Google DeepMind", "Jeff Dean", "Discovery Loop", "Koray Kavukcuoglu", "Anthropic", "OpenAI", "Meta", "AMD"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-30, note: "From 2 August 2026, new transparency rules require chatbots and other interactive AI systems to tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-08-30, note: "Ireland adopted a distributed model of regulation for the EU AI Act, leveraging existing regulatory experience across sectoral authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-08-30, note: "The AI Office of Ireland will act as the Single Point of Contact for the EU AI Act for the European Commission, national sectoral regulators, and the public.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-26, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of EU Artificial Intelligence Act, Regulation (EU) 2024/1689.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-26, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating activities across multiple designated competent authorities rather than a single enforcer.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-26, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -48,7 +51,7 @@ updates:
   - { date: 2026-08-17, note: "The reason given for the Annex III deadline extension was procedural: member states were slow to designate national competent authorities, and harmonised standards and conformity assessment tools were", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-17, note: "Article 5 of the EU AI Act, as amended, bans AI systems designed to generate non-consensual intimate imagery (nudifier applications) and child sexual abuse material.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
 draft: false
-updatedDate: 2026-08-26
+updatedDate: 2026-08-30
 ---
 
 ## EU AI Act Transparency Rules Now Enforceable

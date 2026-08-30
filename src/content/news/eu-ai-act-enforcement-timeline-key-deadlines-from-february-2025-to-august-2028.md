@@ -10,6 +10,15 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-30, note: "The AI Office published a list of over 180 organisations that signed the Code of Practice on transparency of AI-generated content.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-30, note: "In January 2026, the European Commission opened a formal investigation into X under the Digital Services Act over its Grok tool.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
+  - { date: 2026-08-30, note: "The EU AI Act entered into force on 1 August 2024 and became applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "EU AI Act prohibitions on harmful AI practices (items 1–8, including social scoring and real-time remote biometric identification) entered into application from 2 February 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "On 30 July 2026, the EU launched an AI Gigafactories call to boost Europe's computing capacity and unlock more than €30 billion in investment.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "The Commission's July 2026 action plan on Cybersecurity and AI includes a planned call to increase EU evaluation capacity of AI models before they are placed on the EU market, expected to be operation", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "The European Commission and ENISA will create a blueprint to secure access to advanced AI systems for cybersecurity purposes and establish a secure testing platform for organisations in critical secto", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "The AI Omnibus extends certain simplified compliance requirements — previously available only to SMEs — to small mid-cap companies, including simplified technical documentation requirements.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-08-30, note: "The AI Omnibus centralises oversight of AI systems built on GPAI models under the AI Office, reducing governance fragmentation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-08-23, note: "Article 50 of the EU AI Act began applying on 2 August 2026, requiring AI systems that interact directly with people to disclose that users are dealing with AI unless the context makes that obvious.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-08-23, note: "Certain law enforcement activities are exempt from some of the transparency obligations introduced by Article 50 of the EU AI Act.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-08-23, note: "In May 2026, EU lawmakers agreed to postpone the high-risk AI obligations — covering biometrics, employment, education, essential services, and migration, asylum and border management — until 2 Decemb", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
@@ -481,7 +490,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-23
+updatedDate: 2026-08-30
 ---
 
 ## The EU AI Act's Phased Entry into Force

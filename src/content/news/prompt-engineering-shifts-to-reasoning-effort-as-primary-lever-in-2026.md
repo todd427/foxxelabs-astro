@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Digital Applied", "DSPy 3.0", "reasoning_effort", "Chain-of-Symbol", "Chain-of-Thought", "TextGrad", "Stanford University"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-30, note: "The key API parameter for controlling reasoning depth in 2026 is reasoning_effort, with levels of Low, Medium, and High.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-30, note: "Chain-of-Symbol (CoS) prompting uses symbols such as ↑ ↓ [x] instead of words to token-optimise spatial reasoning tasks.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-30, note: "Chain-of-Symbol (CoS) outperforms traditional Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-08-30, note: "The role of the prompt engineer is shifting toward that of a context architect as the comprehension capabilities of chatbots have evolved.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
+  - { date: 2026-08-30, note: "Traditional prompt engineering focused on crafting a single static instruction to elicit a single response.", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
+  - { date: 2026-08-30, note: "Context design, as distinct from prompt engineering, involves orchestrating a flow of data from multiple sources that updates as the interaction unfolds, ensuring the model's context window is an evol", sourceUrl: "https://www.sdggroup.com/en/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026" }
   - { date: 2026-08-22, note: "In 2026, reasoning_effort (Low/Medium/High) has replaced temperature as the primary parameter for controlling AI model output quality.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-22, note: "API responses in 2026 now separate content tokens (visible) from reasoning_tokens (billed but hidden); a 'High Effort' API call can consume 10x the tokens of the final visible output.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-22, note: "The optimal number of few-shot examples for prompt engineering is between 2 and 5; fewer than two examples often fails to establish a clear pattern, while more than five rarely improves performance.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
@@ -33,7 +39,7 @@ updates:
   - { date: 2026-08-11, note: "In 2026, the primary prompt engineering lever is reasoning_effort (Low/Medium/High), replacing temperature as the key tuning parameter.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-11, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks by using symbols (↑ ↓ [x]) to token-optimize the reasoning buffer.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-08-30
 ---
 
 ## Reasoning Effort Replaces Temperature as Primary Lever
