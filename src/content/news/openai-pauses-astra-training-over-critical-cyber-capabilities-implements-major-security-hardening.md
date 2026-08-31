@@ -10,6 +10,12 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-08-31, note: "OpenAI announced on August 18, 2026 that it temporarily slowed the pace of scaling, including a two-week pause in reinforcement learning (RL) training on its latest models intended for deployment.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-08-31, note: "OpenAI said it is pausing some model work over safety concerns, days after rival Anthropic doubled down on insisting that its own safety measures were solid enough that it didn't need to slow down.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-31, note: "CEO Sam Altman told Sources newsletter writer Alex Heath that OpenAI's unreleased models are showing 'various degrees of misalignment.'", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-31, note: "Former OpenAI board member Helen Toner argued that 'pacing the frontier' is not about a fixed delay but about labs giving themselves enough time to meet reasonable safety bars either by choice or beca", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-31, note: "Andrew Freedman, co-founder and CEO at AI safety nonprofit Fathom, said OpenAI is making a legitimate effort to avoid releasing misaligned models, arguing that without a pause, even more of its resear", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
+  - { date: 2026-08-31, note: "The OpenAI Preparedness Framework document being rewritten mostly dates back to 2023, when many of the concerns raised were theoretical scenarios rather than present realities.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
   - { date: 2026-08-28, note: "Guidelight AI Standards graded five frontier AI labs — Anthropic, Google, OpenAI, Meta, and xAI — on their publicly documented containment response plans.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
   - { date: 2026-08-28, note: "OpenAI scored the highest of the five labs assessed, receiving 3 out of 5 in Guidelight's containment readiness evaluation.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
   - { date: 2026-08-28, note: "Anthropic and Meta scored lowest among the five labs in Guidelight's containment readiness assessment.", sourceUrl: "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" }
@@ -85,7 +91,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-28
+updatedDate: 2026-08-31
 ---
 
 ## Major Training Pause on Astra Model

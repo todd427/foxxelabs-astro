@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-08-31, note: "The Digital Omnibus on Artificial Intelligence was published in the Official Journal as Regulation (EU) 2026/1744, entering into force on 27 July 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "The European Parliament adopted the Digital Omnibus on AI text on 16 June 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "The Council of the EU gave final approval to the Digital Omnibus on AI on 29 June 2026, closing file 2025/0359(COD).", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "The Digital Omnibus on AI final act was signed on 8 July 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "The AI Act's Article 5 now bans AI systems designed to generate non-consensual intimate imagery (nudifier applications) and child sexual abuse material, effective 2 December 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "A second political trilogue on the Digital Omnibus on AI on 28 April 2026 collapsed without agreement.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
+  - { date: 2026-08-31, note: "Negotiators reached a provisional deal on the Digital Omnibus on AI on 7 May 2026, which member state representatives confirmed on 13 May 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Act 2026 amends the Central Bank Act 1942 to enable the Central Bank to impose administrative sanctions under the EU AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-29, note: "The Regulation of Artificial Intelligence Act 2026 amends the Competition and Consumer Protection Act 2014 to enable the CCPC to impose administrative sanctions in its role as Market Surveillance Auth", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-29, note: "The enforcement toolkit provided to Market Surveillance Authorities progresses from cooperative compliance notices, to coercive measures such as prohibition and seizure, and ultimately to formal sanct", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -384,7 +391,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-29
+updatedDate: 2026-08-31
 ---
 
 ## The Bill's Purpose and Structure
