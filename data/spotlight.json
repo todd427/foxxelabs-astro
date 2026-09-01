@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-31T14:50:35.146Z",
+  "updatedAt": "2026-09-01T12:30:50.621Z",
   "pick": {
     "id": "tencent/Hy4-preview",
     "url": "https://hf.co/tencent/Hy4-preview",
     "author": "tencent",
     "name": "Hy4-preview",
-    "likes": 338,
-    "downloads": 2589,
-    "ageDays": 4,
+    "likes": 371,
+    "downloads": 3516,
+    "ageDays": 5,
     "blurb": "Hy4-preview landed 1 day ago as Tencent's latest multimodal MoE model with dual arxiv papers (2512.02556, 2603.12201) backing the architecture. Worth a look if you're comparing routing strategies in sparse models—newer than GLM-5.3-Flash with Apache 2.0 licensing and concrete eval results.",
     "surfacedAt": "2026-08-28"
   },
@@ -17,45 +17,45 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 1388,
-      "downloads": 66195,
-      "ageDays": 6
+      "likes": 1439,
+      "downloads": 94403,
+      "ageDays": 7
     },
     {
       "id": "pipecat-ai/phonellm-alpha-1",
       "url": "https://hf.co/pipecat-ai/phonellm-alpha-1",
       "author": "pipecat-ai",
       "name": "phonellm-alpha-1",
-      "likes": 163,
-      "downloads": 4721,
-      "ageDays": 7
-    },
-    {
-      "id": "ornith-ai/Ornith-1.5-35B-A3B",
-      "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
-      "author": "ornith-ai",
-      "name": "Ornith-1.5-35B-A3B",
-      "likes": 510,
-      "downloads": 172695,
-      "ageDays": 13
+      "likes": 179,
+      "downloads": 6813,
+      "ageDays": 8
     },
     {
       "id": "incoai/GLM-5.3-Flash-DFlash2",
       "url": "https://hf.co/incoai/GLM-5.3-Flash-DFlash2",
       "author": "incoai",
       "name": "GLM-5.3-Flash-DFlash2",
-      "likes": 90,
-      "downloads": 7322,
-      "ageDays": 4
+      "likes": 93,
+      "downloads": 9190,
+      "ageDays": 5
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-35B-A3B",
+      "url": "https://hf.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "author": "ornith-ai",
+      "name": "Ornith-1.5-35B-A3B",
+      "likes": 521,
+      "downloads": 206651,
+      "ageDays": 14
     },
     {
       "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "url": "https://hf.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "author": "deepseek-ai",
       "name": "DeepSeek-V4-Flash-0731",
-      "likes": 3836,
-      "downloads": 4561861,
-      "ageDays": 31
+      "likes": 3845,
+      "downloads": 4650353,
+      "ageDays": 32
     }
   ]
 }

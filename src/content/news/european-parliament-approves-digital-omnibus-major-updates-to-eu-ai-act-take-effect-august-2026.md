@@ -10,6 +10,13 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-01, note: "The AI Act Omnibus Agreement introduces a new prohibition on 'nudifier' applications that generate or manipulate sexually explicit or intimate images, video, or audio without explicit consent.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "The new prohibition on nudifier applications and CSAM-generating AI systems takes effect on December 2, 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "The Agreement extends the compliance deadline for stand-alone high-risk AI systems (HRAIS) from August 2, 2026 to December 2, 2027.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "The Commission had not yet issued relevant harmonised standards and guidance necessary for practical HRAIS implementation within the original AI Act deadlines.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "Generative AI systems placed on the EU market before August 2, 2026 must comply with AI Act watermarking/labelling requirements only as of December 2, 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "The Omnibus Agreement narrows the definition of 'safety component' so that regulated products with AI functions that merely assist users or optimise performance will not automatically trigger HRAIS ob", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
+  - { date: 2026-09-01, note: "The Omnibus Agreement preserves the AI Act's risk-based approach and the general obligations of providers and deployers.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-08-26, note: "The EU AI Act's transparency and information obligations under Article 50 became generally applicable and enforceable by national competent authorities across the EU on 2 August 2026.", sourceUrl: "https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force" }
   - { date: 2026-08-26, note: "Providers of any AI system designed to interact directly with natural persons (such as chatbots or virtual assistants) must ensure individuals are clearly informed they are dealing with an AI system, ", sourceUrl: "https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force" }
   - { date: 2026-08-26, note: "Providers and deployers of AI systems generating synthetic audio, image, video, or text (including deepfakes) must mark outputs in a machine-readable, detectable format.", sourceUrl: "https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force" }
@@ -218,7 +225,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-08-26
+updatedDate: 2026-09-01
 ---
 
 ## Parliament Approves Digital Omnibus

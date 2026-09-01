@@ -10,13 +10,15 @@ significance: "high"
 entities: ["MIT", "generative AI"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-01, note: "MIT engineers introduced an adaptive physical therapy system that uses generative AI to learn from physical therapists and interactively support stroke patients.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-01, note: "MIT's 'GeoPT' tool helps AI models understand physics fundamentals so they can simulate how objects respond to wind and water more efficiently and accurately.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-08-30, note: "MIT published a new machine-learning framework aimed at improving the success rate of computational protein design, moving away from results that reproduce sequences found in nature.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "MIT's 'CrysVCD' tool is designed to cut the time and money spent on screening out chemically unstable material designs.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "MIT developed a new algorithm that learns to anticipate unprecedented scenarios that critical infrastructure and global supply chains are least prepared for.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "MIT research published on 20 August 2026 aims to lead to better materials for a fossil-fuel-free process for producing ammonia, a chemical essential to fertilizer.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "Bill Gates published a 6,000-word essay warning that the world is unprepared for the upheaval AI could bring, including the prospect of machines permanently replacing large numbers of jobs.", sourceUrl: "https://www.irishtimes.com/your-money/2026/08/29/bill-gates-is-worried-about-ai-but-investors-are-looking-at-the-upside/" }
 draft: false
-updatedDate: 2026-08-30
+updatedDate: 2026-09-01
 ---
 
 ## AI Image Generation Loses Connection to Training Data at Scale
