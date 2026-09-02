@@ -10,6 +10,14 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-02, note: "The EU AI Office has opened a hiring round for 40 new posts covering technology, legal, and operations roles, dedicated to enforcing the AI Act.", sourceUrl: "https://artificialintelligenceact.eu/" }
+  - { date: 2026-09-02, note: "The deadline to express interest in the EU AI Office's 40-post hiring round is 8 September, midday CET.", sourceUrl: "https://artificialintelligenceact.eu/" }
+  - { date: 2026-09-02, note: "From 2 August 2026, the AI Office and Member State authorities are responsible for implementing, supervising, and enforcing the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-02, note: "The AI Omnibus was proposed on 19 November 2025, a political agreement was reached on 7 May 2026, and it entered into force on 27 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-02, note: "The Commission will launch a call to increase EU evaluation capacity of AI models before they are placed on the EU market, expected to be operational by 2027.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-02, note: "On 31 July 2026, the Commission issued a press release stating it would start enforcing AI Act rules and new transparency requirements on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-02, note: "In July 2025, the Commission published the GPAI Code of Practice, a voluntary compliance tool submitted by independent experts offering practical guidance on transparency, copyright, and safety and se", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-02, note: "According to Article 57 of the AI Act, each Member State must establish at least one AI regulatory sandbox at the national level by 2 August 2026.", sourceUrl: "https://artificialintelligenceact.eu/" }
   - { date: 2026-08-30, note: "The AI Office published a list of over 180 organisations that signed the Code of Practice on transparency of AI-generated content.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
   - { date: 2026-08-30, note: "In January 2026, the European Commission opened a formal investigation into X under the Digital Services Act over its Grok tool.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
   - { date: 2026-08-30, note: "The EU AI Act entered into force on 1 August 2024 and became applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -490,7 +498,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-08-30
+updatedDate: 2026-09-02
 ---
 
 ## The EU AI Act's Phased Entry into Force

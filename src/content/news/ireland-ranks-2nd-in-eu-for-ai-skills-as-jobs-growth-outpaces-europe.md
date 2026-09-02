@@ -9,8 +9,25 @@ sourceUrl: "https://www.westmeathindependent.ie/2026/08/24/ireland-ranks-2nd-in-
 significance: "high"
 entities: ["Expert Group on Future Skills Needs", "Ireland", "Luxembourg", "EU", "Peter Burke", "Niamh Smyth", "Goldman Sachs"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-09-02, note: "Ireland's finance department research found early evidence that artificial intelligence is weakening employment opportunities in some parts of Ireland's technology-focused economy, particularly for yo", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Ireland's labour market is relatively more exposed to AI than the average advanced economy due to a high concentration of jobs in knowledge-intensive sectors such as tech, science, and financial servi", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment in Irish categories at risk of AI disruption (including tech and financial services) grew at around 4% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment in Irish medium-risk AI disruption categories grew at around 4.5% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment in Irish low-risk AI disruption categories grew at 6.25% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment among 15 to 29 year-olds in the Irish 'at risk' AI cohort fell by 1% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment among 15 to 29 year-olds in Irish technology firms fell by 20% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Employment among tech workers aged 30 to 59 in Ireland grew 12% between 2023 and 2025, over the same period that younger tech workers saw a 20% decline.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "In Irish sectors with lower AI exposure, employment growth among younger workers outpaced that of older workers.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Ireland's finance department researchers stated it may be premature to attribute the employment changes among younger workers solely to AI-driven substitution effects.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Finance Minister Simon Harris stated that the analysis suggests Ireland may be at the frontier of AI labour market changes.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Finance Minister Simon Harris stated the government must invest in up-skilling and re-skilling workers in AI-exposed sectors.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
+  - { date: 2026-09-02, note: "Ireland ranks 2nd in the EU in relation to how widely AI is being used across the economy, according to the EGFSN report.", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
+  - { date: 2026-09-02, note: "The EGFSN report identifies an uneven pace of AI adoption across enterprises and individuals as a key risk to Ireland's AI advantage.", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
+  - { date: 2026-09-02, note: "Minister for Enterprise, Tourism and Employment Peter Burke welcomed the EGFSN report, stating that success in AI adoption is not automatic and that AI spread throughout Ireland is uneven.", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
+  - { date: 2026-09-02, note: "Minister of State for Trade Promotion, Artificial Intelligence and Digital Transformation Niamh Smyth stated that Ireland's labour market has moved quickly to adopt AI and has a strong pipeline of AI-", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
 draft: false
+updatedDate: 2026-09-02
 ---
 
 ## Ireland's AI Advantage: Second in EU Skills, Fastest Job Growth

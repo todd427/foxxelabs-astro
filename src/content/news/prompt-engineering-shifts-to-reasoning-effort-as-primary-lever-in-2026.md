@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Digital Applied", "DSPy 3.0", "reasoning_effort", "Chain-of-Symbol", "Chain-of-Thought", "TextGrad", "Stanford University"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-02, note: "DSPy 3.0 compiles prompts automatically: a user defines a Signature (Input → Output), feeds 10 examples, and DSPy optimizes the prompt for a specific model such as GPT-5.2 or Llama 4.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-09-02, note: "The primary prompt engineering lever in 2026 is reasoning_effort (Low/Medium/High), not temperature; increasing it burns more tokens on hidden chain-of-thought but improves logic accuracy for complex ", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
+  - { date: 2026-09-02, note: "Chain-of-thought prompting lifted accuracy on mathematical word problems from 18% to 79% for GPT-3 variants, according to the 2022 paper by Wei et al.", sourceUrl: "https://groundy.com/articles/prompt-engineering-patterns-2026-what-actually-works/" }
+  - { date: 2026-09-02, note: "Zero-shot chain-of-thought (adding 'Let's think step by step' without examples) raised MultiArith accuracy from 17.7% to 78.7% and GSM8K accuracy from 10.4% to 40.7%, per Kojima et al. (2022).", sourceUrl: "https://groundy.com/articles/prompt-engineering-patterns-2026-what-actually-works/" }
   - { date: 2026-08-30, note: "The key API parameter for controlling reasoning depth in 2026 is reasoning_effort, with levels of Low, Medium, and High.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-30, note: "Chain-of-Symbol (CoS) prompting uses symbols such as ↑ ↓ [x] instead of words to token-optimise spatial reasoning tasks.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-30, note: "Chain-of-Symbol (CoS) outperforms traditional Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
@@ -39,7 +43,7 @@ updates:
   - { date: 2026-08-11, note: "In 2026, the primary prompt engineering lever is reasoning_effort (Low/Medium/High), replacing temperature as the key tuning parameter.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
   - { date: 2026-08-11, note: "Chain-of-Symbol (CoS) prompting outperforms Chain-of-Thought (CoT) for spatial reasoning, game states, and structured planning tasks by using symbols (↑ ↓ [x]) to token-optimize the reasoning buffer.", sourceUrl: "https://www.digitalapplied.com/blog/prompt-engineering-advanced-techniques-2026" }
 draft: false
-updatedDate: 2026-08-30
+updatedDate: 2026-09-02
 ---
 
 ## Reasoning Effort Replaces Temperature as Primary Lever
