@@ -99,7 +99,7 @@
 <div class="wrap">
   <header>
     <h1>The FoxxeLabs world</h1>
-    <p>One person's project territory, surveyed 3 September 2026. Top is far, bottom is bedrock; the mind faces inward, the harbour faces the sea.</p>
+    <p>One person's project territory, surveyed 3 September 2026. Top is far, bottom is bedrock; the mind faces inward, the harbour faces the sea — and behind it all lies the back country.</p>
   </header>
   <div class="legend">
     <span><i class="dot live"></i><span class="mark live" aria-hidden="true">&#9679;</span>live / serving</span>
@@ -114,7 +114,7 @@
     </aside>
   </div>
 
-  <footer>Statuses are measured, not aspirational: live means serving traffic today, in build means recent commits, on paper means a committed plan awaiting its turn. Names are Irish where the thing deserved one.</footer>
+  <footer>Statuses are measured, not aspirational: live means serving traffic today, in build means recent commits, on paper means a committed plan awaiting its turn. Back-country statuses come straight from the project registry. Names are Irish where the thing deserved one.</footer>
 </div>
 
 <script>
@@ -179,6 +179,48 @@ const REGIONS = [
     ["Rian", "live", "The trace: reads every conversation and repository and rebuilds the whole project timeline, unattended, every Monday morning."],
     ["firstlight", "build", "The fleet environment kit: dotfiles, manifests, and per-host install scripts, version-controlled."],
     ["foxxe-mcp", "plan", "The shared tool-plumbing library every service will stand on; specified, not yet built."]
+  ]},
+  { id: "backcountry", title: "An cúlra", sub: "the back country — the wider estate", wide: true, items: [
+    ["Stór", "live", "The store: the storefront platform behind stor.irish — the publishing arm's till."],
+    ["Foxxe Frey backlist", "live", "The fiction backlist, selling at foxxefrey.com."],
+    ["Foxxe Covers", "build", "Cover production for the books, in development."],
+    ["Reasons for Discord", "build", "A written work, in drafting."],
+    ["sionnach", "live", "The fox: the umbrella site at sionnach.ie sheltering the smaller tools."],
+    ["Foghlaim", "live", "Learning: a v1 app under the sionnach roof."],
+    ["ga-say", "live", "A small Irish-language speech helper, v1."],
+    ["Glór", "live", "Voice: a v1 speech service, deployed."],
+    ["agora", "live", "The gathering place at agora.irish."],
+    ["Litir", "build", "Letter: the mail layer of the Anseo platform, phase 1 complete."],
+    ["Comhordú", "plan", "Coordination: specified and build-ready at comhordu.irish."],
+    ["Tionól", "plan", "Assembly: a placeholder with a domain waiting at tionol.irish."],
+    ["Four small apps", "plan", "Coinne, Dialann, Geall, Céim — appointment, diary, pledge, step: four small Irish-named apps, specified and queued."],
+    ["Taca", "live", "Support: a personal service in phase-1 testing."],
+    ["Cúltaca", "build", "The reserve: backup configuration and runbook, v0.1."],
+    ["foxxelabs-config", "build", "The registry: fleet configuration and specs under version control."],
+    ["mcp-watcher", "live", "Keeps an eye on the MCP servers."],
+    ["george", "live", "George: a phase-0 service at george.foxxelabs.ie."],
+    ["Duel", "live", "The two-pane model face-off that Beirt was forked from."],
+    ["Versus", "live", "A head-to-head comparison site, deployed."],
+    ["The Forge", "live", "A builder's bench at builder.foxxelabs.ie."],
+    ["SLAM Bridge", "live", "An interactive bridge-auction site at slambridge.ie."],
+    ["stats-course", "live", "A statistics course, deployed."],
+    ["CyberSafer", "live", "Online-safety resources at cybersafer.uk."],
+    ["UCAHub", "build", "The masters study platform — pre-live, ethics approval pending."],
+    ["URBS", "build", "A city in a game: playable prototype."],
+    ["Stele", "plan", "Shelved: the UE5 forerunner that URBS superseded."],
+    ["Faire", "build", "The watch: a desktop app at phase 4."],
+    ["Teas", "build", "Heat: fleet thermal telemetry, scaffolded — blocked on a telemetry brief."],
+    ["Áit", "build", "Place: a prototype carrying a thesis test."],
+    ["Scéal", "build", "Story: an experiment at the tokeniser stage."],
+    ["Sanas", "plan", "Glossary: v0.1 spec accepted, early scaffold."],
+    ["Miteo", "plan", "Specced, never run — parked."],
+    ["Finne", "plan", "Witness: bootstrapped, pre-implementation."],
+    ["Suil", "plan", "The eye: a research probe at suil.irish."],
+    ["Explore Ireland", "build", "Points of interest across the island, in progress."],
+    ["Foxxeeye", "build", "In development."],
+    ["Personality Quiz", "build", "A personality quiz, in development."],
+    ["FoxxeLabs STEP", "build", "In development."],
+    ["park", "plan", "Paused — as the name insists."]
   ]}
 ];
 
@@ -221,7 +263,7 @@ function select(btn, name, status, blurb, region) {
 const horizon = regionNode(REGIONS[0]);
 const mid = document.createElement("div"); mid.className = "midrow";
 mid.append(regionNode(REGIONS[1]), regionNode(REGIONS[2]));
-mapEl.append(horizon, mid, regionNode(REGIONS[3]), regionNode(REGIONS[4]));
+mapEl.append(horizon, mid, regionNode(REGIONS[3]), regionNode(REGIONS[4]), regionNode(REGIONS[5]));
 </script>
 </body>
 </html>
