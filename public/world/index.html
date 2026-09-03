@@ -46,8 +46,9 @@
   .wrap { max-width: 1060px; margin: 0 auto; padding: 40px 20px 80px; }
   header h1 { font-size: 34px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
   header p { margin: 0; color: var(--ink-soft); max-width: 60ch; }
-  .legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 18px 0 30px; font-size: 14px; color: var(--ink-soft); }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 18px 0 6px; font-size: 14px; color: var(--ink-soft); }
   .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .count { margin: 0 0 30px; font-size: 14px; color: var(--ink-soft); }
   .dot { width: 13px; height: 13px; border-radius: 7px; display: inline-block; }
   .dot.live { background: var(--live-fill); border: 1.5px solid var(--live); }
   .dot.build { background: var(--build-fill); border: 1.5px solid var(--build); }
@@ -106,6 +107,7 @@
     <span><i class="dot build"></i><span class="mark build" aria-hidden="true">&#9670;</span>in build</span>
     <span><i class="dot plan"></i><span class="mark plan" aria-hidden="true">&#9675;</span>on paper</span>
   </div>
+  <p class="count" id="count"></p>
 
   <div class="layout">
     <div class="map" id="map"></div>
@@ -232,7 +234,8 @@ function regionNode(r) {
   const sec = document.createElement("section");
   sec.className = "region"; sec.id = r.id;
   const h = document.createElement("h2");
-  h.innerHTML = '<span lang="ga">' + r.title + '</span> <small>· ' + r.sub + "</small>";
+  h.innerHTML = '<span lang="ga">' + r.title + '</span> <small>· ' + r.sub +
+    ' · ' + r.items.length + "</small>";
   const pills = document.createElement("div");
   pills.className = "pills";
   for (const [name, status, blurb] of r.items) {
@@ -259,6 +262,13 @@ function select(btn, name, status, blurb, region) {
   const p = document.createElement("p"); p.className = "blurb"; p.textContent = blurb;
   detailEl.append(h3, st, p);
 }
+
+const tally = { live: 0, build: 0, plan: 0 };
+let total = 0;
+for (const r of REGIONS) for (const [, s] of r.items) { tally[s]++; total++; }
+document.getElementById("count").textContent =
+  total + " settlements: " + tally.live + " live, " + tally.build +
+  " in build, " + tally.plan + " on paper.";
 
 const horizon = regionNode(REGIONS[0]);
 const mid = document.createElement("div"); mid.className = "midrow";
