@@ -10,6 +10,11 @@ significance: "high"
 entities: ["S&P Global", "451 Research", "Federal Reserve Bank of New York", "S&P Global 1200"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-03, note: "S&P Global's latest PMI special survey shows a global net employment impact of -5 percentage points over the past 12 months among private-sector firms adopting AI.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-03, note: "Only 153 of the S&P Global 1200 index participants (13%) experienced a head count increase between January 2025 and January 2026.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-03, note: "In 2026, only 16% of respondents say they completely trust third-party AI models, down from 24% in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-03, note: "The share of respondents who 'mostly trust' third-party AI models fell from 42% in 2023 to 30% in 2026.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-03, note: "The US Department of Labor expanded its list of jobs threatened by AI to include PR workers, web developers, and hotel workers.", sourceUrl: "https://www.bloomberg.com/news/newsletters/2026-09-01/ai-job-risks-spread-to-pr-web-development-and-hotel-workers" }
   - { date: 2026-08-22, note: "S&P Global's PMI survey forecasts a further net employment impact of -2 percentage points due to AI in the coming 12 months.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-08-22, note: "Among enterprise AI objectives surveyed, process efficiency (64%) and employee productivity (59%) are far more commonly prioritised than head count reduction (24%).", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-08-22, note: "Large companies (10,000+ employees) forecast a net negative employment impact from AI of -13 percentage points, while small firms forecast +3 points and medium-sized firms +2 points.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
@@ -26,7 +31,7 @@ updates:
   - { date: 2026-08-22, note: "New York Fed research found (October 2024) that individuals exposed to generative AI tools reported bleaker expectations for job availability and income inequality.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
   - { date: 2026-08-22, note: "The post is the inaugural entry in a new series called 'Street Level' authored by Kartik B. Athreya, Research Director at the Federal Reserve Bank of New York.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
 draft: false
-updatedDate: 2026-08-22
+updatedDate: 2026-09-03
 ---
 
 ## Global Net Employment Impact Turns Negative
