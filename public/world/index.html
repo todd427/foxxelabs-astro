@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The FoxxeLabs world</title>
+<style>
+  :root {
+    --paper: #EDF0EA;
+    --ink: #1E2B25;
+    --ink-soft: #55635C;
+    --line: #7E8A80;
+    --live: #0F6E56;
+    --live-fill: #DDEFE7;
+    --build: #4A4494;
+    --build-fill: #E6E4F4;
+    --plan: #67645B;
+    --plan-fill: #EAE8E1;
+    --card: #F7F8F4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #151A17;
+      --ink: #E2E8E2;
+      --ink-soft: #9AA69E;
+      --line: #5C6D63;
+      --live: #5DCAA5;
+      --live-fill: #10362B;
+      --build: #AFA9EC;
+      --build-fill: #26215C;
+      --plan: #9B978C;
+      --plan-fill: #23261F;
+      --card: #1C221E;
+    }
+  }
+  * { box-sizing: border-box; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .mark { font-size: 9px; margin-right: 5px; vertical-align: 1px; }
+  .mark.live { color: var(--live); } .mark.build { color: var(--build); } .mark.plan { color: var(--plan); }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Avenir Next", "Seravek", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+    font-size: 16px; line-height: 1.55;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 40px 20px 80px; }
+  header h1 { font-size: 34px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--ink-soft); max-width: 60ch; }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 18px 0 30px; font-size: 14px; color: var(--ink-soft); }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .dot { width: 13px; height: 13px; border-radius: 7px; display: inline-block; }
+  .dot.live { background: var(--live-fill); border: 1.5px solid var(--live); }
+  .dot.build { background: var(--build-fill); border: 1.5px solid var(--build); }
+  .dot.plan { background: var(--plan-fill); border: 1.5px dashed var(--plan); }
+
+  .layout { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: start; }
+  @media (min-width: 900px) { .layout { grid-template-columns: 1fr 300px; } }
+
+  .map { display: grid; gap: 14px; }
+  .midrow { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .midrow { grid-template-columns: 3fr 2fr; } }
+
+  .region { border: 1px dashed var(--line); border-radius: 14px; padding: 14px 16px 16px; }
+  .region h2 { font-size: 15px; font-weight: 600; margin: 0 0 10px; }
+  .region h2 small { font-weight: 400; color: var(--ink-soft); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  button.pill {
+    font: inherit; font-size: 13.5px; cursor: pointer;
+    padding: 5px 13px; border-radius: 999px; color: var(--ink);
+    background: var(--plan-fill); border: 1px dashed var(--plan);
+  }
+  button.pill.live { background: var(--live-fill); border: 1.5px solid var(--live); }
+  button.pill.build { background: var(--build-fill); border: 1px solid var(--build); }
+  button.pill:hover { filter: brightness(1.06); }
+  button.pill:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  button.pill[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--ink); }
+
+  aside.detail {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; min-height: 150px;
+  }
+  @media (min-width: 900px) { aside.detail { position: sticky; top: 16px; } }
+  aside.detail h3 { margin: 0 0 2px; font-size: 19px; font-weight: 600; }
+  aside.detail .status { font-size: 13px; margin: 0 0 10px; }
+  aside.detail .status.live { color: var(--live); }
+  aside.detail .status.build { color: var(--build); }
+  aside.detail .status.plan { color: var(--plan); }
+  aside.detail p.blurb { margin: 0; font-size: 14.5px; }
+  aside.detail p.hint { margin: 0; color: var(--ink-soft); font-size: 14px; }
+
+  footer { margin-top: 34px; color: var(--ink-soft); font-size: 13.5px; max-width: 70ch; }
+  @media (prefers-reduced-motion: no-preference) {
+    button.pill, aside.detail { transition: box-shadow .12s ease, filter .12s ease; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>The FoxxeLabs world</h1>
+    <p>One person's project territory, surveyed 2 September 2026. Top is far, bottom is bedrock; the mind faces inward, the harbour faces the sea.</p>
+  </header>
+  <div class="legend">
+    <span><i class="dot live"></i><span class="mark live" aria-hidden="true">&#9679;</span>live / serving</span>
+    <span><i class="dot build"></i><span class="mark build" aria-hidden="true">&#9670;</span>in build</span>
+    <span><i class="dot plan"></i><span class="mark plan" aria-hidden="true">&#9675;</span>on paper</span>
+  </div>
+
+  <div class="layout">
+    <div class="map" id="map"></div>
+    <aside class="detail" id="detail" aria-live="polite">
+      <p class="hint">Tap any settlement to read its census entry.</p>
+    </aside>
+  </div>
+
+  <footer>Statuses are measured, not aspirational: live means serving traffic today, in build means recent commits, on paper means a committed plan awaiting its turn. Names are Irish where the thing deserved one.</footer>
+</div>
+
+<script>
+const STATUS = { live: "live / serving", build: "in build", plan: "on paper" };
+
+const REGIONS = [
+  { id: "horizon", title: "An léaslíne", sub: "the long horizon", wide: true, items: [
+    ["Lorg", "plan", "A worldline tracker — GPS and biometrics braided into one personal timeline. A long-horizon instrument, waiting its turn."],
+    ["Someday", "plan", "A sovereign personal-AI shell at someday.irish — your own assistant, on your own hardware, under your own law."],
+    ["Cruinne", "plan", "A world-model experiment with a React face. Parked, deliberately."]
+  ]},
+  { id: "mind", title: "An intinn", sub: "the mind — the cognition stack", items: [
+    ["Aigne", "live", "The cognition gateway: one OpenAI-compatible front door to the whole fleet. Routes every request to the cheapest sufficient brain and bills it in joules, not vibes. v0.1 serving across two nodes."],
+    ["Timire", "live", "The steward: a job queue and dispatcher that loads a stack of project briefs and works the fleet overnight, reporting at morning standup."],
+    ["Mnemos", "live", "The memory: 121,000 documents spanning 1996 to this morning, searchable by meaning and by keyword at once. Several other projects stand on it."],
+    ["Taithí", "live", "Experience: a continual-learning layer that teaches the local models facts as they are asserted — and revokes them when they aren't."],
+    ["Fiosrú", "live", "Inquiry: fork an investigation to a background researcher, collect the answer when it's done."],
+    ["Gléas", "live", "The instrument rack: local model serving across the GPU fleet."],
+    ["Macalla", "build", "Echo: a fine-tuned model that writes in the author's own register, trained on thirty years of his prose."],
+    ["Measure", "build", "The evaluation harness — how the stack knows whether a model change was an improvement or a story."],
+    ["Garden", "build", "VRAM pooling across three GPUs and a dedicated network lane — growing larger models than any one card can hold."],
+    ["Cuimhin", "plan", "Remembrance, open-sourced: the generic retrieval shell extracted from Mnemos under Apache-2.0."],
+    ["Ceann", "plan", "The head: a model-agnostic boundary gate — the stack's prefrontal check on any model it fronts."],
+    ["Mothú", "plan", "Feeling: an affective salience source, so the stack knows what mattered, not just what was said."],
+    ["Tuiscint", "plan", "Understanding: a pretrained decoder experiment."],
+    ["Imeall", "plan", "The edge: a concept-and-claim map drawn over the memory layer."],
+    ["Colainn", "plan", "The body: a time-series store for biometrics — the stack's medulla."],
+    ["Sleep cluster", "plan", "Léargas, Aislinge, Radharc: overnight consolidation — compiling each day's experience into the models while the human sleeps."]
+  ]},
+  { id: "harbour", title: "An margadh", sub: "the harbour — facing the world", items: [
+    ["Beirt", "live", "Two of them: an open, bring-your-own-key tool that runs the same prompt through two models side by side."],
+    ["Ainm", "live", "The name: clears a candidate company name against the register, the domains, and trademark risk in one pass."],
+    ["Eric", "live", "The marketing man: an intelligence agent who watches markets, keeps the pipeline, and answers go-to-market questions."],
+    ["Aibí", "live", "Ripe: a report and roadmap generator built for SME digitalisation work."],
+    ["Féirín", "build", "A small gift: QR voucher keys that let a stranger try the tools with a capped budget."],
+    ["Translator", "build", "EPUB in, publishable German out. The first title is in flight."],
+    ["Saothar", "build", "Labour: an Irish labour-market signal service built on CSO data."],
+    ["Sruth", "build", "The stream: an economic model of Ireland with a live dashboard."],
+    ["Anseo", "build", "Here: a community platform with sign-in and a deep roadmap."],
+    ["Solas", "build", "Light: a data-driven slide-deck compiler."],
+    ["Úire", "plan", "Freshness: a preprint frontier monitor, going open with a browser lens so anyone can run their own researcher."]
+  ]},
+  { id: "academy", title: "An acadamh", sub: "the academy — the bridge to standing", wide: true, items: [
+    ["ATU teaching", "build", "Two routes to the lectern: a module insertion into the Applied AI masters, and a lecturer application in flight."],
+    ["HAX PhD", "plan", "A research PhD in human-AI interaction, in planning — the long route to being the person Ireland calls about this."],
+    ["BWAI course", "build", "Building With AI: a six-week course teaching people to ship with these tools."],
+    ["Aithint", "build", "Recognition: a course project on spotting AI failure modes; demo stage."],
+    ["Fuzz session", "build", "Reading the Fuzz: a sixty-minute guest session teaching students to catch a model going off the rails, live, in the room."],
+    ["Trust session", "build", "Trust, cybertrust, and AI: an interactive session for an applied-AI masters cohort."],
+    ["Solopreneur book", "build", "The AI Solopreneur: a field report on running a one-person, AI-leveraged shop — written by someone actually doing it."],
+    ["Cyberpsych research", "build", "The masters research thread, continuing toward journal publication."]
+  ]},
+  { id: "ground", title: "An bonn", sub: "the ground — what everything stands on", wide: true, items: [
+    ["Féith mesh", "live", "The vein: a private WireGuard mesh joining every machine in the fleet."],
+    ["Rialú", "live", "Control: the command centre, with browser terminals into every host."],
+    ["Suim", "live", "Interest: a usage monitor — ps and top for AI assistant usage across the fleet."],
+    ["Tomhas", "live", "Measure: a conversation-context risk gauge that tells the assistant when to stop trusting itself."],
+    ["Testy", "live", "The wiring tester: verifies tool hookup across every AI client before anything real depends on it."],
+    ["Sentinel", "live", "The watchman: logs, scores, and reports hostile traffic."],
+    ["Taisce", "live", "The hoard: an encrypted vault for keys, logins, and notes."],
+    ["Flyer", "live", "Cloud fleet operations: status, logs, secrets, and restarts."],
+    ["Rian", "live", "The trace: reads every conversation and repository and rebuilds the whole project timeline, unattended, every Monday morning."],
+    ["firstlight", "build", "The fleet environment kit: dotfiles, manifests, and per-host install scripts, version-controlled."],
+    ["foxxe-mcp", "plan", "The shared tool-plumbing library every service will stand on; specified, not yet built."]
+  ]}
+];
+
+const mapEl = document.getElementById("map");
+const detailEl = document.getElementById("detail");
+let pressed = null;
+
+function regionNode(r) {
+  const sec = document.createElement("section");
+  sec.className = "region"; sec.id = r.id;
+  const h = document.createElement("h2");
+  h.innerHTML = '<span lang="ga">' + r.title + '</span> <small>· ' + r.sub + "</small>";
+  const pills = document.createElement("div");
+  pills.className = "pills";
+  for (const [name, status, blurb] of r.items) {
+    const b = document.createElement("button");
+    b.className = "pill " + status;
+    const glyph = { live: "\u25CF", build: "\u25C6", plan: "\u25CB" }[status];
+    b.innerHTML = '<span class="mark ' + status + '" aria-hidden="true">' + glyph + '</span>' +
+      name + '<span class="sr-only">, ' + STATUS[status] + '</span>';
+    b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", () => select(b, name, status, blurb, r));
+    pills.appendChild(b);
+  }
+  sec.append(h, pills);
+  return sec;
+}
+
+function select(btn, name, status, blurb, region) {
+  if (pressed) pressed.setAttribute("aria-pressed", "false");
+  pressed = btn; btn.setAttribute("aria-pressed", "true");
+  detailEl.innerHTML = "";
+  const h3 = document.createElement("h3"); h3.textContent = name;
+  const st = document.createElement("p"); st.className = "status " + status;
+  st.textContent = STATUS[status] + " · " + region.title;
+  const p = document.createElement("p"); p.className = "blurb"; p.textContent = blurb;
+  detailEl.append(h3, st, p);
+}
+
+const horizon = regionNode(REGIONS[0]);
+const mid = document.createElement("div"); mid.className = "midrow";
+mid.append(regionNode(REGIONS[1]), regionNode(REGIONS[2]));
+mapEl.append(horizon, mid, regionNode(REGIONS[3]), regionNode(REGIONS[4]));
+</script>
+</body>
+</html>
