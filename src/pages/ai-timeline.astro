@@ -6,26 +6,27 @@ import AITimeline from '../components/AITimeline.jsx';
 
 <BaseLayout
   title="AI Model Performance Timeline | Foxxe Labs"
-  description="A comparative benchmark timeline of OpenAI (ChatGPT) and Anthropic (Claude) model releases from 2022 to 2026, tracking MMLU performance scores, key capabilities, and the convergence of frontier AI."
+  description="A comparative benchmark timeline of OpenAI (ChatGPT) and Anthropic (Claude) model releases from 2022 to September 2026 — MMLU through saturation, then the contested frontier: SWE-bench Pro, Terminal-Bench 2.1, OSWorld 2.0, Frontier-Bench, ARC-AGI-3 and GDPval-AA."
 >
 
   <header class="page-header card">
     <div class="eyebrow">Foxxe Labs Research</div>
     <h1>AI Model Performance Timeline</h1>
     <p class="lede">
-      Two charts, two stories. The first tracks MMLU — the dominant knowledge
-      benchmark from 2022–2025 — across every major OpenAI and Anthropic release.
-      The headline: Claude entered 2023 thirteen points behind GPT-4 and had fully
-      caught up by mid-2024. Both labs now sit at near-saturation around 97%.
-      The second chart covers where the frontier is actually contested in May 2026:
-      SWE-bench Pro, Terminal-Bench, OSWorld, and GDPval. Both frontier models now
-      exceed the human baseline on OSWorld desktop navigation, and the contested
-      benchmarks have moved to harder, less-contaminated variants like SWE-bench
-      Pro — where Anthropic's just-released Opus 4.8 holds the lead. Hover any
-      data point for model details and source notes.
+      Two charts, two stories. The first tracks MMLU — the knowledge benchmark
+      that defined 2022–2025 — across every major OpenAI and Anthropic release.
+      The headline: Claude entered 2023 thirteen points behind GPT-4 and had
+      fully caught up by mid-2024. Neither lab reports MMLU any more, so the
+      2026 tail is shaded as estimate. The second chart covers where the
+      frontier is actually contested in September 2026, between OpenAI's
+      GPT-5.6 Sol and Anthropic's Claude Opus 5. Both cleared 96% on SWE-bench
+      Verified within a fortnight of each other, which finished that benchmark
+      as a differentiator — the live comparison has moved to SWE-bench Pro,
+      OSWorld 2.0, Frontier-Bench and ARC-AGI-3, where the gaps are wide again.
+      Hover any data point for model details and source notes.
     </p>
     <div class="meta muted">
-      <span>Last updated: 29 May 2026</span>
+      <span>Last updated: 3 September 2026</span>
       <span class="sep">·</span>
       <span>Todd McCaffrey, Foxxe Labs</span>
     </div>
@@ -35,15 +36,15 @@ import AITimeline from '../components/AITimeline.jsx';
     <AITimeline client:load />
   </section>
 
-  <a class="globe-cta card" href="/llm-observatory/view.html">
+  <a class="globe-cta card" href="/llm-observatory/view/">
     <div class="globe-copy">
       <div class="eyebrow">Interactive · full screen</div>
       <h2>The Expanding Universe of Large Language Models</h2>
       <p>
-        A dark-observatory globe that grows the whole model landscape from the 2017
-        Transformer to today — a curated ~100 models plotted on the city of their lab,
+        An observatory globe that grows the whole model landscape from the 2017
+        Transformer to today — a curated ~130 models plotted on the city of their lab,
         sized by parameters, raised by capability, and coloured by maker, with a
-        playable timeline, usage-flow arcs, and sound.
+        playable timeline, usage-flow arcs, and sound. Follows the site theme.
       </p>
     </div>
     <span class="globe-go">Open the globe <span class="arr">→</span></span>
@@ -52,7 +53,7 @@ import AITimeline from '../components/AITimeline.jsx';
   <footer class="page-footer card">
     <p>
       Related research: &nbsp;
-      <a href="/llm-observatory/view.html">The Expanding Universe of LLMs</a>
+      <a href="/llm-observatory/view/">The Expanding Universe of LLMs</a>
       &nbsp;·&nbsp;
       <a href="/ai-bubble/index.html">Managing the AI Bubble</a>
       &nbsp;·&nbsp;

@@ -4,87 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Expanding Universe of LLMs · Foxxe Labs</title>
+<!--
+  Embed shim for the homepage hero.
+
+  The standalone page now lives at /llm-observatory/view/ (src/pages/llm-observatory/view.astro)
+  so it gets the real site chrome, nav and theme toggle. This file exists only to
+  serve the hero iframe on the homepage, which wants a bare globe with no chrome
+  behind the hero copy. Anyone who lands here directly is sent to the real page.
+-->
 <style>
-  html, body { margin: 0; height: 100%; overflow: hidden;
-    background: radial-gradient(120% 78% at 50% 42%, #16223c 0%, #0c1628 56%, #070c18 100%); }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
   #stage { position: fixed; inset: 0; }
-  /* The globe is a fixed 1920x1080 design; scale it to fit any viewport, centered. */
+  /* The globe is a fixed 1920x1080 design; scale it to fit the hero, centered. */
   #frame { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; border: 0; transform-origin: center; }
-  /* On a phone the standalone page lets the globe render full-bleed & responsive
-     (index.html switches to its own mobile layout at <=700px). */
-  #frame.bleed { left: 0; top: 0; width: 100%; height: 100%; transform: none; }
-  /* Back-to-home link — only shown on the standalone page, hidden in the hero. */
-  #home {
-    position: fixed; top: 18px; left: 20px; z-index: 10; display: none;
-    font: 500 13px/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .04em;
-    color: #cdd6ea; text-decoration: none; padding: 9px 14px; border-radius: 999px;
-    background: rgba(12,20,38,.62); border: 1px solid rgba(255,255,255,.16);
-    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-    transition: background .15s, border-color .15s, color .15s;
-  }
-  #home:hover { background: rgba(30,44,74,.72); border-color: rgba(120,205,240,.5); color: #bfe6f5; }
 </style>
 </head>
 <body>
-  <a id="home" href="/" aria-label="Back to Foxxe Labs home">← Foxxe Labs</a>
   <div id="stage">
     <iframe id="frame" title="The Expanding Universe of Large Language Models" allow="autoplay"></iframe>
   </div>
   <script>
   (function () {
-    var f = document.getElementById('frame');
-    var embedded = window.self !== window.top;   // true when used as the homepage hero
-    // Hero gets a bare globe (no in-globe header/panels) so it sits cleanly behind
-    // the hero copy; the standalone page gets the full chrome.
-    f.src = './index.html' + (embedded ? '?bare=1' : '');
-    if (!embedded) {                             // standalone page → offer a way back home
-      var home = document.getElementById('home');
-      if (home) home.style.display = 'inline-block';
+    var embedded = window.self !== window.top;
+    if (!embedded) {                       // direct hit → the real page
+      location.replace('/llm-observatory/view/');
+      return;
     }
-    // Phone + standalone → full-bleed responsive; otherwise scale the fixed design.
-    function isBleed() { return !embedded && window.innerWidth <= 700; }
+
+    var f = document.getElementById('frame');
+    // bare=1 drops the globe's own header and panels so it sits cleanly behind
+    // the hero copy; the animated timeline stays.
+    //
+    // The hero is pinned to the dark globe on purpose. The homepage lays a dark
+    // scrim over this frame so the white hero copy stays legible, so a pale globe
+    // underneath would read as a washed-out mistake rather than a light theme.
+    // It behaves like a dark hero image. The standalone page at
+    // /llm-observatory/view/ is the one that follows the site theme.
+    f.src = './index.html?bare=1&theme=dark';
+
     function fit() {
-      if (isBleed()) {
-        f.classList.add('bleed');
-        f.style.transform = 'none';
-      } else {
-        f.classList.remove('bleed');
-        var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
-        f.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
-      }
+      var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      f.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
     }
     window.addEventListener('resize', fit);
     fit();
+
     var tries = 0;
     function start() {
       try {
         var d = f.contentDocument;
         var btns = [].slice.call(d.querySelectorAll('button'));
-        var play = btns.filter(function (x) { return x.textContent.trim() === '\u25B6'; })[0];
+        var play = btns.filter(function (x) { return x.textContent.trim() === '▶'; })[0];
         if (play) {
           play.click();
-          if (embedded) {
-            var sp = btns.filter(function (x) { return x.textContent.trim() === '1\u00D7'; })[0];
-            if (sp) sp.click(); // 2x in the hero so it blooms quickly
-          }
+          var sp = btns.filter(function (x) { return x.textContent.trim() === '1×'; })[0];
+          if (sp) sp.click();              // 2x in the hero so it blooms quickly
           return;
         }
       } catch (e) {}
       if (tries++ < 60) setTimeout(start, 300);
     }
+
     f.addEventListener('load', function () {
       fit();
       setTimeout(start, 500);
-      if (embedded) {
-        // loop the timeline so the hero keeps blooming
-        setInterval(function () {
-          try {
-            var d = f.contentDocument;
-            var rb = [].slice.call(d.querySelectorAll('button')).filter(function (x) { return x.textContent.trim() === '\u21BB'; })[0];
-            if (rb) rb.click();
-          } catch (e) {}
-        }, 2000);
-      }
+      // loop the timeline so the hero keeps blooming
+      setInterval(function () {
+        try {
+          var d = f.contentDocument;
+          var rb = [].slice.call(d.querySelectorAll('button'))
+            .filter(function (x) { return x.textContent.trim() === '↻'; })[0];
+          if (rb) rb.click();
+        } catch (e) {}
+      }, 2000);
     });
   })();
   </script>

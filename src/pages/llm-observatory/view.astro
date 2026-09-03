@@ -1,0 +1,183 @@
+---
+// src/pages/llm-observatory/view.astro
+//
+// Standalone home for the LLM Observatory globe. The globe itself is a fixed
+// 1920×1080 canvas design living in public/llm-observatory/index.html; this page
+// wraps it in the real site chrome so it picks up the nav, the footer and the
+// theme toggle. The resolved theme is handed to the iframe on the URL, and
+// BaseLayout re-posts it to every same-origin frame whenever the toggle fires.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="The Expanding Universe of LLMs | Foxxe Labs"
+  description="An interactive globe of every landmark language model since the 2017 Transformer — ~130 models plotted on the city of their lab, sized by parameters, raised by capability, coloured by maker, on a playable 2017–2026 timeline."
+>
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs Research · Interactive</div>
+    <h1>The Expanding Universe of Large Language Models</h1>
+    <p class="lede">
+      Every landmark model since the 2017 Transformer, plotted on the city of the
+      lab that built it — sized by parameters, raised by capability, coloured by
+      maker. Press play to grow the map from Google Brain's original paper to
+      September 2026. Drag to spin the globe, click any marker for its detail
+      card, and scrub the timeline to any month.
+    </p>
+    <div class="meta muted">
+      <span>~130 curated models · 2017 — September 2026</span>
+      <span class="sep">·</span>
+      <span>Todd McCaffrey, Foxxe Labs</span>
+    </div>
+  </header>
+
+  <div class="stage-wrap">
+    <div class="stage" id="stage">
+      <iframe
+        id="globe"
+        title="The Expanding Universe of Large Language Models — interactive globe"
+        allow="autoplay"
+        loading="eager"></iframe>
+    </div>
+  </div>
+
+  <section class="notes card">
+    <h2>Reading the globe</h2>
+    <ul>
+      <li><strong>Position</strong> — the city of the lab that released the model, jittered slightly so co-located releases stay separable.</li>
+      <li><strong>Marker size</strong> — parameter count, on a square-root scale. Sizes for closed models are best public estimates.</li>
+      <li><strong>Spike height</strong> — a capability score normalised to 0–100 across the whole set. It is a positioning aid, not a benchmark result.</li>
+      <li><strong>Colour</strong> — the maker. Filled markers are closed weights, rings are open weights.</li>
+      <li><strong>Arcs</strong> — illustrative usage flow, not measured traffic.</li>
+    </ul>
+    <p class="muted">
+      Sizes and scores are approximate and, for closed models, estimated. For live
+      benchmark tracking see the <a href="/ai-timeline/">AI Model Performance Timeline</a>
+      or <a href="https://llm-stats.com" target="_blank" rel="noopener noreferrer">llm-stats.com</a>.
+    </p>
+  </section>
+
+  <footer class="page-footer card">
+    <p>
+      Related research: &nbsp;
+      <a href="/ai-timeline/">AI Model Performance Timeline</a>
+      &nbsp;·&nbsp;
+      <a href="/ai-bubble/index.html">Managing the AI Bubble</a>
+      &nbsp;·&nbsp;
+      <a href="/after-the-bubble/index.html">After the Bubble: What Comes Next?</a>
+    </p>
+  </footer>
+
+  <script is:inline>
+    (function () {
+      var frame = document.getElementById('globe');
+      var stage = document.getElementById('stage');
+      if (!frame || !stage) return;
+
+      var theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      frame.src = '/llm-observatory/index.html?theme=' + encodeURIComponent(theme);
+
+      // The globe is authored at a fixed 1920×1080; scale it to whatever width
+      // the stage ends up with, and give the stage the matching height.
+      function fit() {
+        // On a phone a 1920-wide design scales down to nothing, so hand the globe
+        // a real viewport instead and let its own responsive CSS take over (it
+        // full-bleeds and slims the timeline below 700px).
+        if (window.innerWidth <= 700) {
+          stage.style.height = Math.round(window.innerHeight * 0.72) + 'px';
+          frame.style.width = '100%';
+          frame.style.height = '100%';
+          frame.style.transform = 'none';
+          return;
+        }
+        var s = stage.clientWidth / 1920;
+        stage.style.height = Math.round(1080 * s) + 'px';
+        frame.style.width = '1920px';
+        frame.style.height = '1080px';
+        frame.style.transform = 'scale(' + s + ')';
+      }
+      window.addEventListener('resize', fit);
+      fit();
+
+      // Autostart the timeline once the globe's own play button exists.
+      var tries = 0;
+      function start() {
+        try {
+          var d = frame.contentDocument;
+          var play = [].slice.call(d.querySelectorAll('button'))
+            .filter(function (b) { return b.textContent.trim() === '▶'; })[0];
+          if (play) { play.click(); return; }
+        } catch (e) { /* not ready */ }
+        if (tries++ < 60) setTimeout(start, 300);
+      }
+      frame.addEventListener('load', function () { fit(); setTimeout(start, 500); });
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .page-header { margin-bottom: 18px; }
+
+  .eyebrow {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 72ch;
+    margin: 0 0 14px;
+  }
+
+  .meta { font-size: .85rem; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .sep { opacity: .4; }
+
+  /* Break the globe out of the 980px content column — it is the point of the
+     page and wants the width. Falls back to the column width if the viewport
+     is narrower than it. */
+  .stage-wrap {
+    width: 100vw;
+    max-width: 1600px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 18px;
+    margin-bottom: 22px;
+  }
+  @media (min-width: 1637px) {
+    .stage-wrap { margin-left: auto; margin-right: auto; }
+  }
+
+  .stage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+  }
+
+  .stage iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    border: 0;
+    transform-origin: top left;
+  }
+
+  .notes { margin-bottom: 18px; }
+  .notes h2 { margin-bottom: 12px; }
+  .notes ul { margin: 0 0 14px; padding-left: 20px; color: var(--muted); line-height: 1.7; }
+  .notes li { margin-bottom: 6px; }
+  .notes li strong { color: var(--text); }
+  .notes p { margin: 0; font-size: .92rem; }
+
+  .page-footer { font-size: .95rem; }
+  .page-footer p { margin: 0; color: var(--muted); }
+</style>

@@ -130,7 +130,20 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
         document.documentElement.setAttribute('data-theme', resolved);
         btn.title = 'Theme: ' + LABELS[mode];
         icon.textContent = ICONS[mode];
+        broadcast(resolved);
       }
+
+      // Same-origin embeds (the LLM Observatory globe) can't see this document's
+      // [data-theme], so hand them the resolved theme directly.
+      function broadcast(resolved) {
+        var frames = document.querySelectorAll('iframe');
+        for (var i = 0; i < frames.length; i++) {
+          try {
+            frames[i].contentWindow.postMessage({ type: 'foxxe-theme', theme: resolved }, window.location.origin);
+          } catch (e) { /* cross-origin frame — not ours to theme */ }
+        }
+      }
+      window.addEventListener('load', function () { broadcast(document.documentElement.getAttribute('data-theme')); });
 
       function cycleTheme() {
         const current = getStored();
@@ -182,6 +195,16 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     --color-surface-elevated:#1a2535;
     --color-border:          var(--border);
 
+    /* Chart series colours — validated per theme (OKLCH lightness band, chroma
+       floor, CVD separation and contrast vs. the chart surface). Six-digit hex
+       so chart code can append an alpha suffix. Do not reuse the nav accents:
+       they fail the dark-surface lightness band. */
+    --chart-1:      #0e9ad4;   /* series 1 — OpenAI */
+    --chart-2:      #8b5cf6;   /* series 2 — Anthropic */
+    --chart-grid:   rgba(255,255,255,.06);
+    --chart-axis:   rgba(255,255,255,.10);
+    --warn:         #fbbf24;
+
     --font-body:    system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     --font-display: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     --font-mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
@@ -218,6 +241,12 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     --color-surface-elevated:#f0f2f5;
     --color-border:          var(--border);
 
+    --chart-1:      #0369a1;   /* series 1 — OpenAI */
+    --chart-2:      #6d28d9;   /* series 2 — Anthropic */
+    --chart-grid:   rgba(17,24,32,.07);
+    --chart-axis:   rgba(17,24,32,.14);
+    --warn:         #a16207;
+
     --font-body:    system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     --font-display: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     --font-mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
@@ -246,6 +275,14 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     --color-surface:         var(--card);
     --color-surface-elevated:#e8e2d6;
     --color-border:          var(--border);
+
+    /* Editorial's gold accent2 is too close to its red accent to carry a second
+       data series (CVD ΔE 4.6). Charts get an ink-blue instead. */
+    --chart-1:      #0a6ea8;   /* series 1 — OpenAI */
+    --chart-2:      #c0392b;   /* series 2 — Anthropic */
+    --chart-grid:   rgba(26,24,20,.08);
+    --chart-axis:   rgba(26,24,20,.16);
+    --warn:         #8a5a00;
 
     --font-body:    'Source Serif 4', Georgia, serif;
     --font-display: 'Playfair Display', Georgia, serif;
