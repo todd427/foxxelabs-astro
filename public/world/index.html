@@ -99,7 +99,7 @@
 <div class="wrap">
   <header>
     <h1>The FoxxeLabs world</h1>
-    <p>One person's project territory, surveyed 2 September 2026. Top is far, bottom is bedrock; the mind faces inward, the harbour faces the sea.</p>
+    <p>One person's project territory, surveyed 3 September 2026. Top is far, bottom is bedrock; the mind faces inward, the harbour faces the sea.</p>
   </header>
   <div class="legend">
     <span><i class="dot live"></i><span class="mark live" aria-hidden="true">&#9679;</span>live / serving</span>
@@ -124,7 +124,7 @@ const REGIONS = [
   { id: "horizon", title: "An léaslíne", sub: "the long horizon", wide: true, items: [
     ["Lorg", "plan", "A worldline tracker — GPS and biometrics braided into one personal timeline. A long-horizon instrument, waiting its turn."],
     ["Someday", "plan", "A sovereign personal-AI shell at someday.irish — your own assistant, on your own hardware, under your own law."],
-    ["Cruinne", "plan", "A world-model experiment with a React face. Parked, deliberately."]
+    ["Cruinne", "build", "A world-model experiment with a React face — first milestone working, all four planned layers in code."]
   ]},
   { id: "mind", title: "An intinn", sub: "the mind — the cognition stack", items: [
     ["Aigne", "live", "The cognition gateway: one OpenAI-compatible front door to the whole fleet. Routes every request to the cheapest sufficient brain and bills it in joules, not vibes. v0.1 serving across two nodes."],
@@ -133,29 +133,29 @@ const REGIONS = [
     ["Taithí", "live", "Experience: a continual-learning layer that teaches the local models facts as they are asserted — and revokes them when they aren't."],
     ["Fiosrú", "live", "Inquiry: fork an investigation to a background researcher, collect the answer when it's done."],
     ["Gléas", "live", "The instrument rack: local model serving across the GPU fleet."],
+    ["Mothú", "live", "Feeling: an affective salience source, so the stack knows what mattered, not just what was said."],
+    ["Colainn", "live", "The body: a time-series store for biometrics — the stack's medulla."],
     ["Macalla", "build", "Echo: a fine-tuned model that writes in the author's own register, trained on thirty years of his prose."],
     ["Measure", "build", "The evaluation harness — how the stack knows whether a model change was an improvement or a story."],
     ["Garden", "build", "VRAM pooling across three GPUs and a dedicated network lane — growing larger models than any one card can hold."],
-    ["Cuimhin", "plan", "Remembrance, open-sourced: the generic retrieval shell extracted from Mnemos under Apache-2.0."],
-    ["Ceann", "plan", "The head: a model-agnostic boundary gate — the stack's prefrontal check on any model it fronts."],
-    ["Mothú", "plan", "Feeling: an affective salience source, so the stack knows what mattered, not just what was said."],
-    ["Tuiscint", "plan", "Understanding: a pretrained decoder experiment."],
-    ["Imeall", "plan", "The edge: a concept-and-claim map drawn over the memory layer."],
-    ["Colainn", "plan", "The body: a time-series store for biometrics — the stack's medulla."],
-    ["Sleep cluster", "plan", "Léargas, Aislinge, Radharc: overnight consolidation — compiling each day's experience into the models while the human sleeps."]
+    ["Ceann", "build", "The head: a model-agnostic boundary gate — the stack's prefrontal check on any model it fronts. First two milestones built and measured."],
+    ["Tuiscint", "build", "Understanding: a from-scratch pretrained decoder — corpus and eval locked, awaiting its training run."],
+    ["Imeall", "build", "The edge: a concept-and-claim map drawn over the memory layer — core implemented, with a review loop and graph view."],
+    ["Sleep cluster", "build", "Léargas, Aislinge, Radharc: overnight consolidation — compiling each day's experience into the models while the human sleeps. Parts already running."],
+    ["Cuimhin", "plan", "Remembrance, open-sourced: the generic retrieval shell extracted from Mnemos under Apache-2.0."]
   ]},
   { id: "harbour", title: "An margadh", sub: "the harbour — facing the world", items: [
     ["Beirt", "live", "Two of them: an open, bring-your-own-key tool that runs the same prompt through two models side by side."],
     ["Ainm", "live", "The name: clears a candidate company name against the register, the domains, and trademark risk in one pass."],
     ["Eric", "live", "The marketing man: an intelligence agent who watches markets, keeps the pipeline, and answers go-to-market questions."],
     ["Aibí", "live", "Ripe: a report and roadmap generator built for SME digitalisation work."],
+    ["Saothar", "live", "Labour: an Irish labour-market signal service built on CSO data."],
+    ["Úire", "live", "Freshness: a preprint frontier monitor running nightly, unattended — with an open browser lens on the way."],
     ["Féirín", "build", "A small gift: QR voucher keys that let a stranger try the tools with a capped budget."],
     ["Translator", "build", "EPUB in, publishable German out. The first title is in flight."],
-    ["Saothar", "build", "Labour: an Irish labour-market signal service built on CSO data."],
     ["Sruth", "build", "The stream: an economic model of Ireland with a live dashboard."],
     ["Anseo", "build", "Here: a community platform with sign-in and a deep roadmap."],
-    ["Solas", "build", "Light: a data-driven slide-deck compiler."],
-    ["Úire", "plan", "Freshness: a preprint frontier monitor, going open with a browser lens so anyone can run their own researcher."]
+    ["Solas", "build", "Light: a data-driven slide-deck compiler."]
   ]},
   { id: "academy", title: "An acadamh", sub: "the academy — the bridge to standing", wide: true, items: [
     ["ATU teaching", "build", "Two routes to the lectern: a module insertion into the Applied AI masters, and a lecturer application in flight."],
