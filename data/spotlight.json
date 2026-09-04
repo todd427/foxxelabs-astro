@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-03T12:08:37.295Z",
+  "updatedAt": "2026-09-04T12:10:34.389Z",
   "pick": {
     "id": "tencent/Hy4-preview",
     "url": "https://hf.co/tencent/Hy4-preview",
     "author": "tencent",
     "name": "Hy4-preview",
-    "likes": 405,
-    "downloads": 4449,
-    "ageDays": 7,
+    "likes": 420,
+    "downloads": 5684,
+    "ageDays": 8,
     "blurb": "Hy4-preview landed 1 day ago as Tencent's latest multimodal MoE model with dual arxiv papers (2512.02556, 2603.12201) backing the architecture. Worth a look if you're comparing routing strategies in sparse models—newer than GLM-5.3-Flash with Apache 2.0 licensing and concrete eval results.",
     "surfacedAt": "2026-08-28"
   },
@@ -17,17 +17,8 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 1561,
-      "downloads": 151021,
-      "ageDays": 9
-    },
-    {
-      "id": "pipecat-ai/phonellm-alpha-1",
-      "url": "https://hf.co/pipecat-ai/phonellm-alpha-1",
-      "author": "pipecat-ai",
-      "name": "phonellm-alpha-1",
-      "likes": 202,
-      "downloads": 11526,
+      "likes": 1650,
+      "downloads": 303534,
       "ageDays": 10
     },
     {
@@ -35,27 +26,36 @@
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 148,
-      "downloads": 1514,
-      "ageDays": 10
+      "likes": 426,
+      "downloads": 3524,
+      "ageDays": 11
     },
     {
-      "id": "incoai/GLM-5.3-Flash-DFlash2",
-      "url": "https://hf.co/incoai/GLM-5.3-Flash-DFlash2",
-      "author": "incoai",
-      "name": "GLM-5.3-Flash-DFlash2",
-      "likes": 99,
-      "downloads": 10090,
-      "ageDays": 7
+      "id": "IFM/K2-Horizon-MoVA-36B-A4B",
+      "url": "https://hf.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "author": "IFM",
+      "name": "K2-Horizon-MoVA-36B-A4B",
+      "likes": 110,
+      "downloads": 433,
+      "ageDays": 3
+    },
+    {
+      "id": "pipecat-ai/phonellm-alpha-1",
+      "url": "https://hf.co/pipecat-ai/phonellm-alpha-1",
+      "author": "pipecat-ai",
+      "name": "phonellm-alpha-1",
+      "likes": 209,
+      "downloads": 18874,
+      "ageDays": 11
     },
     {
       "id": "openai-community/gpt2",
       "url": "https://hf.co/openai-community/gpt2",
       "author": "openai-community",
       "name": "gpt2",
-      "likes": 3559,
-      "downloads": 14071683,
-      "ageDays": 1646
+      "likes": 3617,
+      "downloads": 14607268,
+      "ageDays": 1647
     }
   ]
 }
