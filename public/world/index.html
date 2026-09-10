@@ -124,7 +124,7 @@ const STATUS = { live: "live / serving", build: "in build", plan: "on paper" };
 
 const REGIONS = [
   { id: "horizon", title: "An léaslíne", sub: "the long horizon", wide: true, items: [
-    ["Lorg", "plan", "A worldline tracker — GPS and biometrics braided into one personal timeline. A long-horizon instrument, waiting its turn."],
+    ["Lorg", "live", "A worldline tracker — GPS and biometrics braided into one personal timeline. The 3D worm renders and the phone app is at v0.3.6; the work has been resting since June."],
     ["Someday", "plan", "A sovereign personal-AI shell at someday.irish — your own assistant, on your own hardware, under your own law."],
     ["Cruinne", "build", "A world-model experiment with a React face — first milestone working, all four planned layers in code."]
   ]},
@@ -142,9 +142,10 @@ const REGIONS = [
     ["Garden", "build", "VRAM pooling across three GPUs and a dedicated network lane — growing larger models than any one card can hold."],
     ["Ceann", "build", "The head: a model-agnostic boundary gate — the stack's prefrontal check on any model it fronts. First two milestones built and measured."],
     ["Tuiscint", "build", "Understanding: a from-scratch pretrained decoder — corpus and eval locked, awaiting its training run."],
-    ["Imeall", "build", "The edge: a concept-and-claim map drawn over the memory layer — core implemented, with a review loop and graph view."],
+    ["Imeall", "build", "The edge: a concept-and-claim map drawn over the memory layer. The inward pass now reads each new paper against what you already hold, and /field draws the field and where you are not yet on it."],
     ["Sleep cluster", "build", "Léargas, Aislinge, Radharc: overnight consolidation — compiling each day's experience into the models while the human sleeps. Parts already running."],
-    ["Cuimhin", "plan", "Remembrance, open-sourced: the generic retrieval shell extracted from Mnemos under Apache-2.0."]
+    ["Cuimhin", "build", "Remembrance, open-sourced: the generic retrieval shell extracted from Mnemos under Apache-2.0. Design docs written, the M0 skeleton in build."],
+    ["Codoir", "plan", "The coder: a from-scratch code model sharing Tuiscint's rig. Phase 0 sizing authorised and the serve brief written — the bootstrap not yet."]
   ]},
   { id: "harbour", title: "An margadh", sub: "the harbour — facing the world", items: [
     ["Beirt", "live", "Two of them: an open, bring-your-own-key tool that runs the same prompt through two models side by side."],
@@ -180,7 +181,8 @@ const REGIONS = [
     ["Flyer", "live", "Cloud fleet operations: status, logs, secrets, and restarts."],
     ["Rian", "live", "The trace: reads every conversation and repository and rebuilds the whole project timeline, unattended, every Monday morning."],
     ["firstlight", "build", "The fleet environment kit: dotfiles, manifests, and per-host install scripts, version-controlled."],
-    ["foxxe-mcp", "plan", "The shared tool-plumbing library every service will stand on; specified, not yet built."]
+    ["git-mcp", "live", "Git over MCP: clone, branch, diff, commit and push across the repos without leaving the conversation."],
+    ["foxxe-mcp", "live", "The shared tool-plumbing every service stands on. v0.5.3 — and as of September all eleven MCP servers in the fleet run on it."]
   ]},
   { id: "backcountry", title: "An cúlra", sub: "the back country — the wider estate", wide: true, items: [
     ["Stór", "live", "The store: the storefront platform behind stor.irish — the publishing arm's till."],
@@ -213,7 +215,7 @@ const REGIONS = [
     ["Faire", "build", "The watch: a desktop app at phase 4."],
     ["Teas", "build", "Heat: fleet thermal telemetry, scaffolded — blocked on a telemetry brief."],
     ["Áit", "build", "Place: a prototype carrying a thesis test."],
-    ["Scéal", "build", "Story: an experiment at the tokeniser stage."],
+    ["Scéal", "build", "Story: multi-voice audio rendering of prose — speaker attribution, a cast list, and a voice per character."],
     ["Sanas", "plan", "Glossary: v0.1 spec accepted, early scaffold."],
     ["Miteo", "plan", "Specced, never run — parked."],
     ["Finne", "plan", "Witness: bootstrapped, pre-implementation."],
@@ -222,6 +224,13 @@ const REGIONS = [
     ["Foxxeeye", "build", "In development."],
     ["Personality Quiz", "build", "A personality quiz, in development."],
     ["FoxxeLabs STEP", "build", "In development."],
+    ["Cło", "plan", "Toll: the multi-book translation platform. A working English-to-German slice, then deprioritised — Translator carries the live work now."],
+    ["Teorainn", "plan", "Boundary: the analysis is finished, the interactive explorer is build-ready."],
+    ["Tairseach", "plan", "Threshold: specified, pre-implementation."],
+    ["AfterWords", "plan", "The long-running writing-and-voice research thread."],
+    ["dirs", "live", "A small directory utility, deployed and quietly in use."],
+    ["Fáidh", "plan", "The seer: a v0 that returned a negative result and was shelved on the strength of it."],
+    ["Legion", "plan", "Retired: closed out in September, never built."],
     ["park", "plan", "Paused — as the name insists."]
   ]}
 ];
