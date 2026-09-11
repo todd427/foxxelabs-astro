@@ -10,6 +10,21 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "Ireland designated 15 national competent authorities under the EU AI Act in September 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Ireland established a national single point of contact within the Department of Enterprise, Tourism and Employment in September 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Ireland adopted a distributed enforcement model for the EU AI Act, empowering 15 existing sectoral competent authorities to supervise AI systems within their domains.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The 15 Irish national competent authorities under the EU AI Act include the Central Bank of Ireland, the Data Protection Commission, the Health and Safety Authority, the Health Products Regulatory Aut", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The EU AI Act's rules on prohibited AI practices took effect on 2 February 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "AI literacy obligations for providers and deployers became applicable on 2 February 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Under the EU AI Act, prohibited AI practices include social scoring, untargeted scraping of facial images, emotion recognition in workplaces and schools, and certain uses of real-time remote biometric", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The European Commission proposed the Digital Omnibus Package in November 2025, aimed at reducing regulatory burden, boosting European AI start-ups, and improving Europe's overall competitiveness.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Under the Digital Omnibus Package, rules for high-risk AI systems under Annex III (including employment and law enforcement use cases) would apply no later than 2 December 2027.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Under the Digital Omnibus Package, rules for certain product-linked high-risk AI systems under Annex I would apply no later than 2 August 2028.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The Digital Omnibus Package is currently being negotiated under the Cypriot Presidency of the European Council.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "Each EU Member State must have an operational AI regulatory sandbox by 2 August 2026.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The maximum fine for prohibited AI practices or certain data-related breaches under the EU AI Act is €35 million or 7% of worldwide annual turnover of the preceding financial year, whichever is higher", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The maximum fine for other non-compliance with the EU AI Act is €15 million or 3% of worldwide annual turnover.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
+  - { date: 2026-09-11, note: "The maximum fine for supplying incorrect, incomplete or misleading information to regulators under the EU AI Act is €7.5 million or 1.5% of worldwide annual turnover.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
   - { date: 2026-08-31, note: "The Digital Omnibus on Artificial Intelligence was published in the Official Journal as Regulation (EU) 2026/1744, entering into force on 27 July 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-31, note: "The European Parliament adopted the Digital Omnibus on AI text on 16 June 2026.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-31, note: "The Council of the EU gave final approval to the Digital Omnibus on AI on 29 June 2026, closing file 2025/0359(COD).", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
@@ -391,7 +406,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-08-31
+updatedDate: 2026-09-11
 ---
 
 ## The Bill's Purpose and Structure

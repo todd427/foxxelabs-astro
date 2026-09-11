@@ -10,6 +10,18 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published a new issue on 4 September 2026 containing 15 articles.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-11, note: "All articles in the September 2026 issue of Cyberpsychology journal are open access.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace reopened its submission system on 1 September 2026 after a summer break.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-11, note: "On reopening on 1 September 2026, Cyberpsychology journal introduced updated submission requirements to strengthen quality, transparency, and reproducibility of published research.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace has an impact factor of 2.905.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace ranks Q2 in both Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-11, note: "The British Psychological Society opened a new £6,000 grant scheme to support members with small research projects.", sourceUrl: "https://www.bps.org.uk/psychologist/brief-bps-april-2026" }
+  - { date: 2026-09-11, note: "The BPS Small Research Grants Scheme funding of up to £6,000 can be used for project preparation, staffing, materials, participant payments, and additional research costs.", sourceUrl: "https://www.bps.org.uk/psychologist/brief-bps-april-2026" }
+  - { date: 2026-09-11, note: "The Hacking Games uses an AI platform called HAPTAI, which assesses real-world cyber aptitude by analysing behavioural signals, unconventional experience, and instinctive digital skills rather than tr", sourceUrl: "https://www.bps.org.uk/event/cyberpsychology-section-annual-conference-2026" }
+  - { date: 2026-09-11, note: "Ireland will host an International AI and Digital Summit on 14 October 2026 in Dublin as part of Ireland's 2026 Presidency of the Council of the EU.", sourceUrl: "https://irish-presidency.consilium.europa.eu/en/events/international-ai-summit/" }
+  - { date: 2026-09-11, note: "The European AI Innovation Month runs from 14 October to 17 November 2026, led by the European Commission in partnership with the Irish Presidency of the Council.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-ai-innovation-month" }
+  - { date: 2026-09-11, note: "The 2026 AI in Science Summit (AIS26) is coordinated by University College Dublin and Research Ireland as part of Ireland's EU Presidency Programme.", sourceUrl: "https://www.ais26.eu/about/" }
   - { date: 2026-09-04, note: "Issue 4, Volume 20 covers topics including artificial intelligence and synthetic relationships, digital privacy, content moderation, media multitasking, and digital inclusion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-04, note: "The journal's submission portal reopened on September 1, 2026, following a summer break that ran from June 16 to August 31.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-04, note: "With the September 1 reopening, the journal introduced updated submission requirements aimed at strengthening quality, transparency, and reproducibility.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -231,7 +243,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-04
+updatedDate: 2026-09-11
 ---
 
 ## Summer Submission Break Announced

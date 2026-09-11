@@ -10,6 +10,17 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "On May 7, 2026, the European Council, the European Parliament, and the European Commission reached provisional political agreement on the Digital Omnibus on AI — the first formal set of amendments to ", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "High-risk AI system obligations under Annex III (stand-alone systems) have been deferred from August 2, 2026 to December 2, 2027 — a 16-month extension.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "High-risk AI embedded in regulated products under Annex I (e.g., medical devices, machinery) now face a compliance deadline of August 2, 2028, deferred from the original August 2, 2027 date.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "As of August 2, 2026, the European Commission gained penalty enforcement powers over GPAI model providers; the maximum penalty for GPAI non-compliance is €15 million or 3% of global annual turnover, w", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "Article 50 transparency obligations — covering AI systems that interact with people, generate synthetic content, detect emotions, or categorize users biometrically — activated on August 2, 2026.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "AI systems placed on the EU market on or after August 2, 2026 that generate or manipulate synthetic audio, image, or video must embed machine-readable markers; the C2PA standard is identified by name ", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "Legacy generative AI systems placed on the EU market before August 2, 2026 benefit from a grace period; their machine-readable watermarking obligation applies from December 2, 2026, not August 2, 2026", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "The Digital Omnibus adds a new Article 5 prohibition on AI systems that generate or manipulate non-consensual intimate imagery (NCII), effective December 2, 2026, carrying fines of up to €35 million o", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "The Digital Omnibus adds a new Article 5 prohibition on AI systems that generate or manipulate child sexual abuse material (CSAM), effective December 2, 2026, subject to a narrow 'without right' carve", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "No public penalties under the EU AI Act have been issued as of August 2, 2026.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
+  - { date: 2026-09-11, note: "The Colorado AI Act, effective February 2026, requires developers of high-risk AI systems in consequential decision contexts to use reasonable care to avoid algorithmic discrimination.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
   - { date: 2026-09-01, note: "The AI Act Omnibus Agreement introduces a new prohibition on 'nudifier' applications that generate or manipulate sexually explicit or intimate images, video, or audio without explicit consent.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-09-01, note: "The new prohibition on nudifier applications and CSAM-generating AI systems takes effect on December 2, 2026.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-09-01, note: "The Agreement extends the compliance deadline for stand-alone high-risk AI systems (HRAIS) from August 2, 2026 to December 2, 2027.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
@@ -225,7 +236,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-09-01
+updatedDate: 2026-09-11
 ---
 
 ## Parliament Approves Digital Omnibus
