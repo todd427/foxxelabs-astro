@@ -643,6 +643,7 @@ async function main() {
     const topics = specificTopic ? [specificTopic] : config.topics;
     const created = [];
     const folded = [];
+    const failed = [];
 
     for (const topic of topics) {
       try {
@@ -734,11 +735,22 @@ async function main() {
         }, corpus));
       } catch (error) {
         console.error(`❌ Error with topic "${topic}":`, error.message);
+        failed.push({ topic, message: error.message });
       }
     }
 
     console.log(`\n✨ Done! ${created.length} new article(s), ${folded.length} folded into existing timelines.`);
     if (created.length) console.log('📄 New drafts in: src/content/news/');
+    if (failed.length) console.error(`⚠️  ${failed.length} of ${topics.length} topic(s) failed.`);
+
+    // Every topic threw and nothing came out: that is a broken run, not a quiet
+    // news day, and it must not report success. Exiting 0 here is exactly how a
+    // revoked ANTHROPIC_API_KEY ran green for seven days (2026-09-05 to 09-11)
+    // while writing no articles at all.
+    if (failed.length === topics.length && !created.length && !folded.length) {
+      console.error(`❌ Every topic failed (${failed[0].message}) — failing the run.`);
+      process.exit(1);
+    }
 
   } else {
     console.error('❌ Invalid content type. Use "news" or "resource"');

@@ -63,6 +63,12 @@ jobs:
           fi
 
       - name: Reconcile LLM spotlight
+        # Never gate the news on the spotlight. This step runs BEFORE the commit
+        # step, so when it threw on a revoked API key it also threw away whatever
+        # generate-content had already written — seven days of news were lost that
+        # way (2026-09-05 to 09-11). The spotlight is a nice-to-have; the articles
+        # are the point. A failure here goes red in the step and the job carries on.
+        continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
