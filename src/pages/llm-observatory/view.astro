@@ -1,12 +1,13 @@
 ---
 // src/pages/llm-observatory/view.astro
 //
-// Standalone home for the LLM Observatory globe. The globe itself is a fixed
-// 1920×1080 canvas design living in public/llm-observatory/index.html; this page
-// wraps it in the real site chrome so it picks up the nav, the footer and the
-// theme toggle. The resolved theme is handed to the iframe on the URL, and
-// BaseLayout re-posts it to every same-origin frame whenever the toggle fires.
+// Standalone home for the LLM Observatory globe. The globe is now a native
+// component (src/components/LlmGlobe.astro) drawing straight onto a canvas in
+// this page — no iframe, no fixed 1920×1080 stage, and no dc-runtime. It sizes
+// itself to its container and reads the site's own data-theme attribute, so the
+// theme toggle needs no special handling here at all.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LlmGlobe from '../../components/LlmGlobe.astro';
 ---
 
 <BaseLayout
@@ -21,7 +22,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       lab that built it — sized by parameters, raised by capability, coloured by
       maker. Press play to grow the map from Google Brain's original paper to
       September 2026. Drag to spin the globe, click any marker for its detail
-      card, and scrub the timeline to any month.
+      card, and scrub the timeline to any month — or drag the slider straight to
+      the date you care about.
     </p>
     <div class="meta muted">
       <span>~130 curated models · 2017 — September 2026</span>
@@ -31,13 +33,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </header>
 
   <div class="stage-wrap">
-    <div class="stage" id="stage">
-      <iframe
-        id="globe"
-        title="The Expanding Universe of Large Language Models — interactive globe"
-        allow="autoplay"
-        loading="eager"></iframe>
-    </div>
+    <LlmGlobe autoplay />
   </div>
 
   <section class="notes card">
@@ -47,7 +43,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <li><strong>Marker size</strong> — parameter count, on a square-root scale. Sizes for closed models are best public estimates.</li>
       <li><strong>Spike height</strong> — a capability score normalised to 0–100 across the whole set. It is a positioning aid, not a benchmark result.</li>
       <li><strong>Colour</strong> — the maker. Filled markers are closed weights, rings are open weights.</li>
-      <li><strong>Arcs</strong> — illustrative usage flow, not measured traffic.</li>
     </ul>
     <p class="muted">
       Sizes and scores are approximate and, for closed models, estimated. For live
@@ -67,51 +62,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </p>
   </footer>
 
-  <script is:inline>
-    (function () {
-      var frame = document.getElementById('globe');
-      var stage = document.getElementById('stage');
-      if (!frame || !stage) return;
-
-      var theme = document.documentElement.getAttribute('data-theme') || 'dark';
-      frame.src = '/llm-observatory/index.html?theme=' + encodeURIComponent(theme);
-
-      // The globe is authored at a fixed 1920×1080; scale it to whatever width
-      // the stage ends up with, and give the stage the matching height.
-      function fit() {
-        // On a phone a 1920-wide design scales down to nothing, so hand the globe
-        // a real viewport instead and let its own responsive CSS take over (it
-        // full-bleeds and slims the timeline below 700px).
-        if (window.innerWidth <= 700) {
-          stage.style.height = Math.round(window.innerHeight * 0.72) + 'px';
-          frame.style.width = '100%';
-          frame.style.height = '100%';
-          frame.style.transform = 'none';
-          return;
-        }
-        var s = stage.clientWidth / 1920;
-        stage.style.height = Math.round(1080 * s) + 'px';
-        frame.style.width = '1920px';
-        frame.style.height = '1080px';
-        frame.style.transform = 'scale(' + s + ')';
-      }
-      window.addEventListener('resize', fit);
-      fit();
-
-      // Autostart the timeline once the globe's own play button exists.
-      var tries = 0;
-      function start() {
-        try {
-          var d = frame.contentDocument;
-          var play = [].slice.call(d.querySelectorAll('button'))
-            .filter(function (b) { return b.textContent.trim() === '▶'; })[0];
-          if (play) { play.click(); return; }
-        } catch (e) { /* not ready */ }
-        if (tries++ < 60) setTimeout(start, 300);
-      }
-      frame.addEventListener('load', function () { fit(); setTimeout(start, 500); });
-    })();
-  </script>
 </BaseLayout>
 
 <style>
@@ -140,35 +90,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   /* Break the globe out of the 980px content column — it is the point of the
      page and wants the width. Falls back to the column width if the viewport
      is narrower than it. */
+  /* Break out of main's 980px column and centre on the viewport. The previous
+     rule paired max-width:1600px with auto margins above 1637px, which does not
+     centre an over-wide box — it pins it left and overflows the page to the
+     right, which is what was pushing the Makers panel off screen and adding a
+     horizontal scrollbar. 94vw rather than 100vw so a vertical scrollbar, which
+     vw units ignore, cannot reintroduce the overflow. */
   .stage-wrap {
-    width: 100vw;
-    max-width: 1600px;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    padding: 0 18px;
-    margin-bottom: 22px;
-  }
-  @media (min-width: 1637px) {
-    .stage-wrap { margin-left: auto; margin-right: auto; }
-  }
-
-  .stage {
     position: relative;
-    overflow: hidden;
-    border-radius: 22px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
-  }
-
-  .stage iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1920px;
-    height: 1080px;
-    border: 0;
-    transform-origin: top left;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1600px, 94vw);
+    margin-bottom: 22px;
   }
 
   .notes { margin-bottom: 18px; }

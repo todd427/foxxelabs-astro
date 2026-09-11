@@ -1,0 +1,281 @@
+---
+// src/components/LlmGlobe.astro
+//
+// The LLM Observatory globe as a first-class part of the site: a canvas, its
+// chrome, and the per-theme palette the renderer reads. No iframe, no runtime.
+//
+// `bare` is the homepage-hero mode — canvas only, autoplaying and looping, with
+// the panels and controls left out entirely rather than hidden with CSS.
+import { MODELS } from '../data/llm-observatory.js';
+
+interface Props {
+  bare?: boolean;
+  /** Start the timeline as soon as the globe scrolls into view. */
+  autoplay?: boolean;
+  /** Pin the globe to one theme regardless of the site's. The hero uses this. */
+  theme?: 'dark' | 'light' | 'editorial';
+  timelineSeconds?: number;
+  markerScale?: number;
+  class?: string;
+}
+
+const { bare = false, autoplay = false, theme, timelineSeconds = 45, markerScale = 1, class: className = '' } = Astro.props;
+const total = MODELS.length;
+---
+
+<div
+  class:list={['ob', { 'ob-bare': bare }, className]}
+  data-globe-root
+  data-bare={bare ? 'true' : 'false'}
+  data-theme={theme}
+  data-autoplay={autoplay ? 'true' : 'false'}
+  data-timeline-seconds={timelineSeconds}
+  data-marker-scale={markerScale}
+>
+  <canvas
+    data-globe-canvas
+    class="ob-canvas"
+    role="img"
+    aria-label={`An interactive globe of ${total} landmark language models from 2017 to 2026, plotted on the city of the lab that built each one.`}></canvas>
+
+  {!bare && (
+    <>
+      <div class="ob-panel ob-panel-left">
+        <dl class="ob-stats">
+          <div><dt>Models</dt><dd data-globe-count>0</dd></div>
+          <div><dt>Labs</dt><dd data-globe-labs>0</dd></div>
+          <div><dt>Countries</dt><dd data-globe-countries>0</dd></div>
+          <div><dt>Largest</dt><dd data-globe-maxp>—</dd></div>
+        </dl>
+
+        <h2 class="ob-panel-title">Latest releases</h2>
+        <ul class="ob-latest" data-globe-latest></ul>
+      </div>
+
+      <div class="ob-panel ob-panel-right">
+        <h2 class="ob-panel-title">Makers</h2>
+        <ul class="ob-legend" data-globe-legend></ul>
+        <p class="ob-hint">
+          Drag to spin. Click a marker for its card. Filled markers are closed
+          weights, rings are open.
+        </p>
+      </div>
+
+      <div class="ob-card" data-globe-card hidden></div>
+
+      <div class="ob-controls">
+        <button class="ob-btn" type="button" data-globe-play aria-label="Play the timeline">▶</button>
+        <button class="ob-btn" type="button" data-globe-reset aria-label="Back to the start">↻</button>
+        <button class="ob-btn ob-btn-wide" type="button" data-globe-speed aria-label="Playback speed">1×</button>
+
+        <div
+          class="ob-track"
+          data-globe-track
+          role="slider"
+          tabindex="0"
+          aria-label="Timeline position, June 2017 to September 2026"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div class="ob-track-fill" data-globe-fill></div>
+          <div class="ob-track-handle" data-globe-handle></div>
+        </div>
+
+        <span class="ob-date" data-globe-date>MAY 2017</span>
+        <button class="ob-btn ob-btn-wide" type="button" data-globe-spin aria-pressed="true">Spin</button>
+      </div>
+    </>
+  )}
+</div>
+
+<script>
+  import { LlmGlobe } from '../scripts/llm-globe.js';
+
+  for (const root of document.querySelectorAll('[data-globe-root]')) {
+    // Construct immediately rather than waiting on an IntersectionObserver.
+    // Gating construction on IO means the globe never appears at all if the
+    // callback does not fire — which is exactly what happens in a background
+    // tab, where Chrome defers it. The renderer pauses its own frame loop when
+    // off screen instead, which is the part that actually costs anything.
+    new LlmGlobe(root, {
+      bare: root.dataset.bare === 'true',
+      autoplay: root.dataset.autoplay === 'true',
+      timelineSeconds: Number(root.dataset.timelineSeconds) || 45,
+      markerScale: Number(root.dataset.markerScale) || 1,
+    });
+  }
+</script>
+
+<style is:global>
+  /* The globe's own palette, one block per site theme. The renderer reads these
+     off <html> so colour has a single home, and a theme flip needs no JS beyond
+     re-reading them. Carried over from the canvas export unchanged. */
+  :root, [data-theme="dark"] {
+    --ob-globe-1: #22314f; --ob-globe-2: #16243c; --ob-globe-3: #0c1426;
+    --ob-atmo-0: rgba(70,120,220,0);
+    --ob-atmo-1: rgba(86,140,238,.24);
+    --ob-atmo-2: rgba(86,140,238,0);
+    --ob-grat: rgba(130,162,224,.18);
+    --ob-coast: rgba(176,208,255,.66);
+    --ob-canvas-label: #cfd8f0;
+  }
+  [data-theme="light"] {
+    --ob-globe-1: #dfe8f5; --ob-globe-2: #bfd0e8; --ob-globe-3: #9db3d2;
+    --ob-atmo-0: rgba(90,130,200,0);
+    --ob-atmo-1: rgba(90,130,200,.28);
+    --ob-atmo-2: rgba(90,130,200,0);
+    --ob-grat: rgba(55,85,135,.3);
+    --ob-coast: rgba(28,52,92,.66);
+    --ob-canvas-label: #26324a;
+  }
+  [data-theme="editorial"] {
+    --ob-globe-1: #f3ead8; --ob-globe-2: #e0d3ba; --ob-globe-3: #c7b697;
+    --ob-atmo-0: rgba(160,130,85,0);
+    --ob-atmo-1: rgba(160,130,85,.28);
+    --ob-atmo-2: rgba(160,130,85,0);
+    --ob-grat: rgba(105,85,58,.3);
+    --ob-coast: rgba(66,52,32,.66);
+    --ob-canvas-label: #332c23;
+  }
+</style>
+
+<!--
+  Global rather than scoped on purpose: the legend, the latest-releases list and
+  the detail card are built by the renderer at runtime, so they never carry
+  Astro's scoping attribute and scoped rules would silently not apply to them.
+  Everything below is namespaced under .ob instead.
+-->
+<style is:global>
+  .ob {
+    position: relative;
+    width: 100%;
+    /* Tall enough to read on a phone, capped so it never eats a laptop screen. */
+    height: clamp(420px, 62vh, 680px);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--ob-globe-3);
+    border: 1px solid var(--border);
+  }
+  .ob-bare { height: 100%; border: 0; border-radius: 0; }
+
+  .ob-canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+
+  .ob-panel {
+    position: absolute; top: 14px; z-index: 2;
+    width: 178px; padding: 12px 13px;
+    background: color-mix(in srgb, var(--card) 78%, transparent);
+    border: 1px solid var(--border); border-radius: 12px;
+    backdrop-filter: blur(7px);
+    font-size: .76rem; line-height: 1.45;
+  }
+  .ob-panel-left { left: 14px; }
+  .ob-panel-right { right: 14px; }
+  .ob-panel-title {
+    margin: 0 0 7px; font-size: .64rem; font-weight: 700;
+    letter-spacing: .15em; text-transform: uppercase; color: var(--muted);
+  }
+
+  .ob-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 10px; margin: 0 0 13px; }
+  .ob-stats div { margin: 0; }
+  .ob-stats dt { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .ob-stats dd { margin: 0; font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  .ob-latest, .ob-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+  .ob-swatch { width: 8px; height: 8px; border-radius: 5px; flex: none; }
+
+  .ob-latest-row {
+    display: flex; align-items: center; gap: 6px; width: 100%;
+    background: none; border: 0; padding: 2px 0; cursor: pointer;
+    color: var(--text); font: inherit; text-align: left;
+  }
+  .ob-latest-row:hover .ob-latest-name { text-decoration: underline; }
+  .ob-latest-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  .ob-latest-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ob-latest-meta { margin-left: auto; color: var(--muted); font-size: .66rem; white-space: nowrap; }
+
+  .ob-legend li { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .ob-hint { margin: 10px 0 0; color: var(--muted); font-size: .68rem; line-height: 1.5; }
+
+  /* Detail card — built by the renderer when a marker is picked. */
+  .ob .ob-card {
+    position: absolute; right: 14px; bottom: 74px; z-index: 3;
+    width: 250px; padding: 14px 15px;
+    background: color-mix(in srgb, var(--card) 88%, transparent);
+    border: 1px solid var(--border); border-radius: 13px;
+    backdrop-filter: blur(9px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.26);
+  }
+  .ob .ob-card h3 { margin: 0 0 2px; font-size: 1rem; }
+  .ob .ob-card-lab { margin: 0 0 10px; color: var(--muted); font-size: .74rem; }
+  .ob .ob-card-facts { margin: 0; display: grid; gap: 5px; font-size: .74rem; }
+  .ob .ob-card-facts div { display: flex; justify-content: space-between; gap: 12px; }
+  .ob .ob-card-facts dt { color: var(--muted); }
+  .ob .ob-card-facts dd { margin: 0; font-weight: 600; text-align: right; }
+  .ob .ob-card-close {
+    position: absolute; top: 8px; right: 9px;
+    background: none; border: 0; color: var(--muted);
+    font-size: 1.05rem; line-height: 1; cursor: pointer; padding: 2px 5px; border-radius: 6px;
+  }
+  .ob .ob-card-close:hover { color: var(--text); }
+  .ob .ob-card-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* Transport */
+  .ob .ob-controls {
+    position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2;
+    display: flex; align-items: center; gap: 9px;
+    padding: 9px 12px;
+    background: color-mix(in srgb, var(--card) 80%, transparent);
+    border: 1px solid var(--border); border-radius: 12px;
+    backdrop-filter: blur(7px);
+  }
+  .ob .ob-btn {
+    flex: none; min-width: 32px; height: 30px; padding: 0 8px;
+    background: color-mix(in srgb, var(--text) 8%, transparent);
+    border: 1px solid var(--border); border-radius: 8px;
+    color: var(--text); font: inherit; font-size: .78rem; cursor: pointer;
+  }
+  .ob .ob-btn:hover { background: color-mix(in srgb, var(--text) 15%, transparent); }
+  .ob .ob-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .ob .ob-btn-wide { min-width: 46px; }
+  .ob .ob-btn[aria-pressed="true"] {
+    background: color-mix(in srgb, var(--accent) 24%, transparent);
+    border-color: var(--accent);
+  }
+
+  .ob .ob-track {
+    position: relative; flex: 1 1 auto; height: 20px; min-width: 60px; cursor: pointer;
+    touch-action: none;
+  }
+  .ob .ob-track::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 9px; height: 3px;
+    border-radius: 3px; background: color-mix(in srgb, var(--text) 16%, transparent);
+  }
+  .ob .ob-track:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 5px; }
+  .ob .ob-track-fill {
+    position: absolute; left: 0; top: 9px; height: 3px; width: 0;
+    border-radius: 3px; background: var(--accent);
+  }
+  .ob .ob-track-handle {
+    position: absolute; top: 4px; left: 0; width: 13px; height: 13px;
+    margin-left: -6.5px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--card);
+  }
+  .ob .ob-date {
+    flex: none; font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+    color: var(--muted); font-variant-numeric: tabular-nums; min-width: 74px; text-align: right;
+  }
+
+  /* Narrow: the side panels would cover the globe, so drop them and keep the
+     transport, which is the part you actually need to drive it. */
+  @media (max-width: 860px) {
+    .ob .ob-panel { display: none; }
+    .ob .ob-card { right: 10px; left: 10px; width: auto; bottom: 68px; }
+    .ob .ob-controls { left: 10px; right: 10px; gap: 7px; padding: 8px 10px; }
+    .ob .ob-date { min-width: 0; font-size: .66rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ob .ob-track-fill { transition: none; }
+  }
+
+</style>

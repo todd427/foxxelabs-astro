@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LlmGlobe from '../components/LlmGlobe.astro';
 import { getCollection } from 'astro:content';
 
 const resources = await getCollection('resources', ({ data }) => {
@@ -24,7 +25,7 @@ const latestNews = news
   <!-- ── LLM Observatory · live globe hero ── -->
   <section class="obs-hero">
     <div class="obs-hero-stage" id="obsHeroStage">
-      <iframe id="obsHeroFrame" src="/llm-observatory/view.html" title="The Expanding Universe of Large Language Models — live globe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
+      <LlmGlobe bare theme="dark" timelineSeconds={26} markerScale={0.9} />
     </div>
     <div class="obs-hero-overlay">
       <div class="obs-hero-copy">
@@ -34,24 +35,9 @@ const latestNews = news
         <span class="obs-hero-btn">Open the live globe →</span>
       </div>
     </div>
-    <a class="obs-hero-hit" href="/llm-observatory/view.html" aria-label="Open the LLM Observatory"></a>
+    <a class="obs-hero-hit" href="/llm-observatory/view/" aria-label="Open the LLM Observatory"></a>
   </section>
 
-  <script is:inline>
-  (function () {
-    var frame = document.getElementById('obsHeroFrame');
-    var stage = document.getElementById('obsHeroStage');
-    if (!frame || !stage) return;
-    function fit() {
-      var w = stage.clientWidth, h = stage.clientHeight;
-      var s = Math.max(w / 1920, h / 1080);
-      frame.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
-    }
-    window.addEventListener('resize', fit);
-    fit();
-    frame.addEventListener('load', fit);
-  })();
-  </script>
 
   <!-- Featured Research Banner -->
   <section class="featured-research">
@@ -295,14 +281,10 @@ const latestNews = news
     box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 70px rgba(91,140,255,.05);
   }
   .obs-hero-stage { position: absolute; inset: 0; overflow: hidden; }
-  #obsHeroFrame {
-    position: absolute;
-    left: 50%; top: 50%;
-    width: 1920px; height: 1080px;
-    border: 0;
-    transform-origin: center;
-    pointer-events: none;
-  }
+  /* The globe fills the hero and stays inert — the whole banner is one link,
+     so the canvas must not swallow the click or offer its own drag. */
+  .obs-hero-stage :global(.ob) { position: absolute; inset: 0; pointer-events: none; }
+  .obs-hero-stage :global(.ob-canvas) { cursor: default; }
   .obs-hero-overlay {
     position: absolute; inset: 0;
     pointer-events: none;
