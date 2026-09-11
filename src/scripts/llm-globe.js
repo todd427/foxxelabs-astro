@@ -62,6 +62,7 @@ export class LlmGlobe {
     this.playing = false;
     this.finished = false;
     this.spinOn = true;
+    this.sound = false;        // opt-in only; see toggleSound
     this.dragging = false;
     this.scrubbing = false;
     this.selected = null;
@@ -94,6 +95,7 @@ export class LlmGlobe {
     cancelAnimationFrame(this._raf);
     if (this._mo) this._mo.disconnect();
     if (this._vo) this._vo.disconnect();
+    if (this._actx) { try { this._actx.close(); } catch { /* already closed */ } }
     for (const [target, type, fn] of this._listeners || []) target.removeEventListener(type, fn);
   }
 
@@ -266,7 +268,14 @@ export class LlmGlobe {
     const ms = START + this.t * (END - START);
     const released = this.models.filter((m) => m.t <= ms);
     if (released.length !== this._count) {
+      const prev = this._count;
       this._count = released.length;
+      // One blip for one arrival, and only while the timeline is running. A
+      // scrub jumps the count by dozens; firing per model there would be a
+      // machine-gun, so the step has to be exactly one.
+      if (this.sound && this.playing && released.length === prev + 1 && released.length > 0) {
+        this.blip(released[released.length - 1]);
+      }
       this.updateStats(released);
     }
     this.drawMarkers(ctx, released, ms);
@@ -459,6 +468,115 @@ export class LlmGlobe {
     card.querySelector('.ob-card-close').addEventListener('click', () => this.clear());
   }
 
+  // ── Sound ──────────────────────────────────────────────────────────────────
+  // An ambient drone plus one blip per model as it appears, pitched by
+  // capability and panned to where it sits on the globe. Carried over from the
+  // page this replaces, with one deliberate change: it starts OFF and only ever
+  // starts from a click on the Sound button. The original defaulted it on and
+  // unlocked on the first pointerdown anywhere on the page, which meant a
+  // reader who clicked a marker got a drone they never asked for.
+  initAudio() {
+    if (this._actx) return;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;                       // no WebAudio: the button stays inert
+    const ac = new AC();
+    this._actx = ac;
+
+    this._master = ac.createGain();
+    this._master.gain.value = 0;
+    this._master.connect(ac.destination);
+
+    this._ambGain = ac.createGain();
+    this._ambGain.gain.value = 0;
+    this._ambGain.connect(this._master);
+
+    const lp = ac.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.value = 600;
+    lp.Q.value = 4;
+    lp.connect(this._ambGain);
+
+    const base = 55;
+    [1, 1.5, 2.005].forEach((mu, i) => {
+      const o = ac.createOscillator();
+      o.type = 'sine';
+      o.frequency.value = base * mu;
+      const g = ac.createGain();
+      g.gain.value = i === 0 ? 0.55 : 0.22;
+      o.connect(g); g.connect(lp); o.start();
+    });
+    const lfo = ac.createOscillator();
+    lfo.frequency.value = 0.06;
+    const lg = ac.createGain();
+    lg.gain.value = 220;
+    lfo.connect(lg); lg.connect(lp.frequency); lfo.start();
+
+    // C major pentatonic over ~2.5 octaves, so any two blips are consonant.
+    this._scale = [];
+    [0, 12, 24].forEach((oct) => [0, 2, 4, 7, 9].forEach((n) => this._scale.push(220 * Math.pow(2, (n + oct) / 12))));
+    this._scale.sort((a, b) => a - b);
+  }
+
+  blip(m) {
+    const ac = this._actx;
+    if (!ac || !this._scale || !this.sound) return;
+    const t = ac.currentTime;
+    const sc = this._scale;
+    const idx = Math.max(0, Math.min(sc.length - 1, Math.round(((m.score - 34) / (93 - 34)) * (sc.length - 1))));
+    const f = sc[idx];
+
+    const o = ac.createOscillator();
+    o.type = 'triangle';
+    o.frequency.value = f;
+    const g = ac.createGain();
+    g.gain.value = 0;
+    if (ac.createStereoPanner) {
+      const pan = ac.createStereoPanner();
+      const p = this.proj(m.lat, m.lon, 1);
+      pan.pan.value = Math.max(-1, Math.min(1, (p.x - this.cx) / this.R));
+      g.connect(pan); pan.connect(this._master);
+    } else {
+      g.connect(this._master);
+    }
+    o.connect(g);
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(0.2, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0007, t + 0.95);
+    o.start(t); o.stop(t + 1.0);
+
+    const o2 = ac.createOscillator();
+    o2.type = 'sine';
+    o2.frequency.value = f * 2;
+    const g2 = ac.createGain();
+    g2.gain.value = 0;
+    o2.connect(g2); g2.connect(this._master);
+    g2.gain.setValueAtTime(0, t);
+    g2.gain.linearRampToValueAtTime(0.06, t + 0.012);
+    g2.gain.exponentialRampToValueAtTime(0.0006, t + 0.6);
+    o2.start(t); o2.stop(t + 0.7);
+  }
+
+  toggleSound() {
+    this.sound = !this.sound;
+    if (this.sound) {
+      this.initAudio();
+      if (!this._actx) { this.sound = false; return; }   // unsupported; stay off
+      // The click that turned it on is the gesture that unlocks playback.
+      if (this._actx.resume) this._actx.resume();
+      const t = this._actx.currentTime;
+      this._master.gain.cancelScheduledValues(t);
+      this._master.gain.setValueAtTime(this._master.gain.value, t);
+      this._master.gain.linearRampToValueAtTime(0.85, t + 0.8);
+      this._ambGain.gain.linearRampToValueAtTime(0.05, t + 1.2);
+    } else if (this._actx) {
+      const t = this._actx.currentTime;
+      this._master.gain.cancelScheduledValues(t);
+      this._master.gain.setValueAtTime(this._master.gain.value, t);
+      this._master.gain.linearRampToValueAtTime(0, t + 0.5);
+    }
+    this.syncButtons();
+  }
+
   // ── Selection ──────────────────────────────────────────────────────────────
   select(m) {
     this.selected = m;
@@ -572,6 +690,7 @@ export class LlmGlobe {
       this.speed = SPEEDS[(SPEEDS.indexOf(this.speed) + 1) % SPEEDS.length];
       this.syncButtons();
     });
+    click('sound', () => this.toggleSound());
     click('spin', () => {
       this.spinOn = !this.spinOn;
       if (this.spinOn) this.clear();
@@ -625,5 +744,10 @@ export class LlmGlobe {
     if (speed) speed.textContent = this.speed + '×';
     const spin = this.el('spin');
     if (spin) spin.setAttribute('aria-pressed', String(this.spinOn));
+    const sound = this.el('sound');
+    if (sound) {
+      sound.setAttribute('aria-pressed', String(this.sound));
+      sound.setAttribute('aria-label', this.sound ? 'Mute the globe' : 'Unmute the globe');
+    }
   }
 }

@@ -84,6 +84,9 @@ const total = MODELS.length;
 
         <span class="ob-date" data-globe-date>MAY 2017</span>
         <button class="ob-btn ob-btn-wide" type="button" data-globe-spin aria-pressed="true">Spin</button>
+        <!-- Starts muted and stays muted until this is clicked: that click is
+             also the user gesture that unlocks WebAudio. -->
+        <button class="ob-btn ob-btn-wide" type="button" data-globe-sound aria-pressed="false" aria-label="Unmute the globe">Sound</button>
       </div>
     </>
   )}
