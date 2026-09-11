@@ -32,6 +32,13 @@ export const PROJECTS = [
   },
   {
     group: 'tools',
+    name: 'Tuiscint', role: 'Cited answers', gloss: 'tuiscint · understanding',
+    hook: `Ask a question, get the source for every claim — and "not stated" rather than a guess when the sources don't say it. Read the open web or a fixed canon.`,
+    tags: ['Cited answers', 'Web or canon', 'No account'],
+    dom: 'tuiscint.uk', url: 'https://tuiscint.uk',
+  },
+  {
+    group: 'tools',
     name: 'The Forge', role: 'PC builder', headliner: true, gloss: 'where things are made',
     hook: `Don't spec a PC — say what you want it to do. Five archetypes, one shareable build card.`,
     tags: ['In-browser', 'No account'],
