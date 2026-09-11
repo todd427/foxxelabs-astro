@@ -10,6 +10,22 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "Deepfake images, audio, and video that resemble existing persons, objects, places, entities, or events must be clearly and visibly labelled under the new rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-11, note: "AI-generated or manipulated content subject to the new rules must include machine-readable marks in addition to visible labels.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-11, note: "The transparency obligations extend to text published to inform the public on matters of public interest where there has been no human review or editorial control.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-11, note: "Fines for breaching the new transparency rules can reach up to €15 million or 3% of a company's global annual turnover, whichever is higher.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-11, note: "Ireland's Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on 21 July 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne was appointed as the first Chief Executive Officer of Oifig IS na hÉireann (the AI Office of Ireland).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "The AI Office of Ireland is established as an independent statutory body and will act as Ireland's central coordinating authority for the implementation of the EU AI Act (Regulation (EU) 2024/1689).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "The AI Office of Ireland was expected to be operational by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Ireland adopted a distributed model of regulation for the EU AI Act, leveraging existing sectoral regulatory authorities, with the AI Office of Ireland acting as the single point of contact and centra", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "The Regulation of Artificial Intelligence Act 2026 is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne joined the AI Office of Ireland from the Medical Council of Ireland, where he served as Executive Director of Education, Innovation and Artificial Intelligence.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne is the President of the Council on Licensure, Enforcement and Regulation (CLEAR), the international alliance of professional and occupational regulators.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne holds a Professional Diploma in Artificial Intelligence from University College Dublin.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "Paul Byrne is the author of the CLEAR Principles for Ethical and Effective AI in Professional Regulation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-11, note: "The Irish Regulation of Artificial Intelligence Act 2026 is described as a technical implementing measure that does not add to the obligations already placed on regulated entities by the EU AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-08-29, note: "Under the new transparency rules, chatbots and other interactive AI systems must inform users they are interacting with an AI system, not a real person.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-29, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the new EU transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-29, note: "AI-generated or altered content must include machine-readable marks so it can be detected more easily.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -69,7 +85,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-08-29
+updatedDate: 2026-09-11
 ---
 
 ## AI Safety Testing Becomes Safety Risk

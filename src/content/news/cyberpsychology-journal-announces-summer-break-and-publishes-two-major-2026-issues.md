@@ -10,6 +10,19 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "As of September 2026, Cyberpsychology: Journal of Psychosocial Research on Cyberspace increased its requirements regarding adherence to open science principles, rigorous measurement, and ethical resea", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "All submissions of quantitative studies (survey-based, observational, experimental, and meta-analyses) must now be accompanied by anonymized data and materials shared via an open repository such as Ze", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "Preregistration is mandatory for experimental studies submitted to the journal, and strongly recommended for observational and survey-based studies.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "For experimental studies, post-data preregistration will not be accepted by the journal.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "Preregistrations must be hosted on an open repository such as AsPredicted or OSF Registries, and must specify at minimum the study's hypotheses, design, target sample, measures, and analytical approac", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "Submissions must report psychometric properties of all measures used, computed on current study data; for scales treated as reflective constructs, confirmatory factor analysis (CFA) fit indices alongs", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "All submissions reporting studies involving human participants must state that a Research Ethics Committee (REC) or Institutional Review Board (IRB) approved the study, and must report the full name o", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "Publishing in Cyberpsychology is free of charge — no article processing charge or submission fee applies.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "The typical peer review process at the journal takes from 3 to 6 months, with an average of 4 months.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "The journal is published by the Faculty of Social Studies, Masaryk University, Brno, Czech Republic.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "Manuscripts submitted to the journal should be no longer than 11,000 words, including abstract, references, tables, figures, and footnotes.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
+  - { date: 2026-09-11, note: "On 4 September 2026, the journal published a new issue featuring 15 articles covering topics including artificial intelligence and synthetic relationships, digital privacy, content moderation, media m", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-11, note: "The journal's submission portal reopened on 1 September 2026 following a summer break, accompanied by updated submission requirements.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published a new issue on 4 September 2026 containing 15 articles.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-11, note: "All articles in the September 2026 issue of Cyberpsychology journal are open access.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-11, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace reopened its submission system on 1 September 2026 after a summer break.", sourceUrl: "https://cyberpsychology.eu/" }

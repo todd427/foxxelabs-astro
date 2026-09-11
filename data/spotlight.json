@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T17:53:36.841Z",
+  "updatedAt": "2026-09-11T19:34:02.429Z",
   "pick": {
     "id": "tencent/Hy4-preview",
     "url": "https://hf.co/tencent/Hy4-preview",
@@ -17,7 +17,7 @@
       "url": "https://hf.co/openbmb/MiniCPM5-2B",
       "author": "openbmb",
       "name": "MiniCPM5-2B",
-      "likes": 1180,
+      "likes": 1186,
       "downloads": 67550,
       "ageDays": 5
     },
@@ -44,9 +44,9 @@
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 1093,
+      "likes": 1094,
       "downloads": 17712,
-      "ageDays": 18
+      "ageDays": 19
     },
     {
       "id": "IFM/K2-Horizon-MoVA-36B-A4B",

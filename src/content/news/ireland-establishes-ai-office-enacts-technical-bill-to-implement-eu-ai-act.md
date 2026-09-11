@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-11, note: "Ireland took over the rotating Presidency of the Council of the EU on 1 July 2026 and will hold it until 31 December 2026.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
+  - { date: 2026-09-11, note: "This is Ireland's eighth time holding the rotating Presidency of the Council of the EU.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
+  - { date: 2026-09-11, note: "The Irish Presidency will hold an international AI summit on 14 October 2026, with a particular focus on AI adoption by businesses and SMEs.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
+  - { date: 2026-09-11, note: "Ireland's Presidency motto is 'strength through unity'.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
   - { date: 2026-09-11, note: "Ireland designated 15 national competent authorities under the EU AI Act in September 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
   - { date: 2026-09-11, note: "Ireland established a national single point of contact within the Department of Enterprise, Tourism and Employment in September 2025.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
   - { date: 2026-09-11, note: "Ireland adopted a distributed enforcement model for the EU AI Act, empowering 15 existing sectoral competent authorities to supervise AI systems within their domains.", sourceUrl: "https://www.idaireland.com/latest-news/insights/eu-ai-act" }
