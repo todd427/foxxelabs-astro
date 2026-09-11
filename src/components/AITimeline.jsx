@@ -122,12 +122,18 @@ const CapTooltip = ({ active, payload, label, t }) => {
     <div style={tooltipShell(t)}>
       <div style={{ color: t.text, fontWeight: 700, marginBottom: 4 }}>{label}</div>
       {bench && <div style={{ color: t.muted, fontSize: 11, marginBottom: 8 }}>{bench.description}</div>}
-      {payload.map(p => (
-        <div key={p.dataKey} style={{ color: p.color, marginBottom: 4 }}>
-          <span style={{ fontWeight: 600 }}>{p.name}:</span>{" "}
-          <span style={{ color: t.text }}>{p.value}%</span>
-        </div>
-      ))}
+      {payload.map(p => {
+        // Which model actually produced this bar. Not always the lab's newest:
+        // where a lab published no figure for a benchmark, the last one that did
+        // is shown, and the note says so.
+        const model = p.dataKey === "OpenAI" ? bench?.oai.model : bench?.cla.model;
+        return (
+          <div key={p.dataKey} style={{ color: p.color, marginBottom: 4 }}>
+            <span style={{ fontWeight: 600 }}>{model || p.name}:</span>{" "}
+            <span style={{ color: t.text }}>{p.value}%</span>
+          </div>
+        );
+      })}
       {bench?.note && (
         <div style={{ color: t.muted, fontSize: 11, marginTop: 6, borderTop: `1px solid ${t.border}`, paddingTop: 6 }}>
           {bench.note}
@@ -358,7 +364,7 @@ export default function AITimeline() {
         </div>
 
         <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginBottom: 10 }}>
-          {[{ label: "GPT-5.6 Sol", color: t.s1 }, { label: "Claude Opus 5", color: t.s2 }].map(({ label, color }) => (
+          {[{ label: "OpenAI", color: t.s1 }, { label: "Anthropic", color: t.s2 }].map(({ label, color }) => (
             <span key={label} style={{
               display: "inline-flex", alignItems: "center", gap: 6,
               padding: "4px 10px", borderRadius: 100,
@@ -448,8 +454,11 @@ export default function AITimeline() {
           <strong style={{ color: t.text }}>Benchmark notes:</strong> MMLU is official where published.
           Entries marked <em>est</em> (February 2026 onward, shaded on the chart) are estimates positioned from the
           ArtificialAnalysis Intelligence Index — neither lab reports MMLU in launch materials any more.
-          Capability scores are from the July 2026 launch posts and the comparison round-ups that followed, and reflect
-          each lab's highest published effort setting (GPT-5.6 Sol at xhigh, Claude Opus 5 at max effort).
+          Capability scores are from each model's launch post and the comparison round-ups that followed, and reflect
+          each lab's highest published effort setting. They are not all from the same release: where a lab published no
+          figure for a benchmark with its September model, the bar names the last model that did, and that benchmark's
+          note says so. Anthropic's September figures were measured with production safeguards on, taking zeros where a
+          classifier intervened, which makes them conservative.
           GDPval-AA v2 is an Elo rating and is shown on its own scale rather than on the percentage axis.
           Benchmark versions changed during 2026 — OSWorld 2.0, Terminal-Bench 2.1, SWE-bench Pro, GDPval-AA v2 —
           so these are not comparable with earlier figures published under the same names.

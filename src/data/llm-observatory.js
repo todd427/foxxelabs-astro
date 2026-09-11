@@ -351,6 +351,9 @@ export const MODELS = [
   {"date":"2026-08","name":"Grok 4.6","lab":"xAI","org":"xai","city":"sf","cityName":"San Francisco","country":"USA","lat":37.77,"lon":-122.42,"params":1600,"score":96,"open":false,"t":1786752000000,"jlat":0.2727272727272727,"jlon":0.8307692307692307},
   {"date":"2026-08","name":"GLM-5.3","lab":"Zhipu AI","org":"cn","city":"bj","cityName":"Beijing","country":"China","lat":39.9,"lon":116.4,"params":420,"score":93,"open":true,"t":1786752000000,"jlat":-0.09090909090909094,"jlon":0.6461538461538462},
   {"date":"2026-08","name":"Hy4-preview","lab":"Tencent","org":"cn","city":"sz","cityName":"Shenzhen","country":"China","lat":22.54,"lon":114.06,"params":400,"score":92,"open":true,"t":1786752000000,"jlat":0.6363636363636365,"jlon":0.8307692307692307},
+  {"date":"2026-09","name":"Claude Fable 5.1","lab":"Anthropic","org":"anthropic","city":"sf","cityName":"San Francisco","country":"USA","lat":37.77,"lon":-122.42,"params":1000,"score":98,"open":false,"t":1789430400000,"jlat":-1,"jlon":-0.8307692307692307},
+  {"date":"2026-09","name":"GPT-6 Astra","lab":"OpenAI","org":"openai","city":"sf","cityName":"San Francisco","country":"USA","lat":37.77,"lon":-122.42,"params":2000,"score":99,"open":false,"t":1789430400000,"jlat":-0.2727272727272727,"jlon":-0.6461538461538461},
+  {"date":"2026-09","name":"MiniCPM5-2B","lab":"OpenBMB","org":"cn","city":"bj","cityName":"Beijing","country":"China","lat":39.9,"lon":116.4,"params":2,"score":80,"open":true,"t":1789430400000,"jlat":0.4545454545454546,"jlon":-0.46153846153846145},
 ];
 
 export const LEGEND = Object.keys(ORGS).map((k) => ({ key: k, label: ORGS[k].label }));

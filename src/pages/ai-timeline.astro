@@ -2,6 +2,8 @@
 // src/pages/ai-timeline.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AITimeline from '../components/AITimeline.jsx';
+import { LAST_UPDATED } from '../data/ai-timeline.js';
+import { MODELS } from '../data/llm-observatory.js';
 ---
 
 <BaseLayout
@@ -18,15 +20,18 @@ import AITimeline from '../components/AITimeline.jsx';
       The headline: Claude entered 2023 thirteen points behind GPT-4 and had
       fully caught up by mid-2024. Neither lab reports MMLU any more, so the
       2026 tail is shaded as estimate. The second chart covers where the
-      frontier is actually contested in September 2026, between OpenAI's
-      GPT-5.6 Sol and Anthropic's Claude Opus 5. Both cleared 96% on SWE-bench
-      Verified within a fortnight of each other, which finished that benchmark
-      as a differentiator — the live comparison has moved to SWE-bench Pro,
-      OSWorld 2.0, Frontier-Bench and ARC-AGI-3, where the gaps are wide again.
-      Hover any data point for model details and source notes.
+      frontier is actually contested. Both labs shipped in the first week of
+      September — Claude Fable 5.1 on the 1st, GPT-6 Astra on the 3rd — and
+      neither published a full sweep, so the bars name the model that actually
+      produced each figure rather than implying one pairing. The headline is
+      ARC-AGI-3: the widest gap on this page has reversed, with Astra claiming
+      99.9% on a stateful harness against Opus 5's 30.2%. Read the notes before
+      the gaps; several of these numbers are measured under settings that are
+      not directly comparable. Hover any data point for model details and
+      source notes.
     </p>
     <div class="meta muted">
-      <span>Last updated: 3 September 2026</span>
+      <span>Last updated: {LAST_UPDATED}</span>
       <span class="sep">·</span>
       <span>Todd McCaffrey, Foxxe Labs</span>
     </div>
@@ -42,7 +47,7 @@ import AITimeline from '../components/AITimeline.jsx';
       <h2>The Expanding Universe of Large Language Models</h2>
       <p>
         An observatory globe that grows the whole model landscape from the 2017
-        Transformer to today — a curated ~130 models plotted on the city of their lab,
+        Transformer to today — a curated {MODELS.length} models plotted on the city of their lab,
         sized by parameters, raised by capability, and coloured by maker, with a
         playable timeline you can scrub to any month. Follows the site theme.
       </p>

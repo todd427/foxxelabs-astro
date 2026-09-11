@@ -8,11 +8,16 @@
 // theme toggle needs no special handling here at all.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LlmGlobe from '../../components/LlmGlobe.astro';
+import { MODELS } from '../../data/llm-observatory.js';
+
+// Counted from the data rather than written into the copy, so adding a model
+// cannot leave the page claiming a number it no longer holds.
+const total = MODELS.length;
 ---
 
 <BaseLayout
   title="The Expanding Universe of LLMs | Foxxe Labs"
-  description="An interactive globe of every landmark language model since the 2017 Transformer — ~130 models plotted on the city of their lab, sized by parameters, raised by capability, coloured by maker, on a playable 2017–2026 timeline."
+  description={`An interactive globe of every landmark language model since the 2017 Transformer — ${total} models plotted on the city of their lab, sized by parameters, raised by capability, coloured by maker, on a playable 2017–2026 timeline.`}
 >
   <header class="page-header card">
     <div class="eyebrow">Foxxe Labs Research · Interactive</div>
@@ -26,7 +31,7 @@ import LlmGlobe from '../../components/LlmGlobe.astro';
       the date you care about.
     </p>
     <div class="meta muted">
-      <span>~130 curated models · 2017 — September 2026</span>
+      <span>{total} curated models · 2017 — September 2026</span>
       <span class="sep">·</span>
       <span>Todd McCaffrey, Foxxe Labs</span>
     </div>

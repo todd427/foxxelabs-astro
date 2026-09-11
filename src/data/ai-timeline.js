@@ -10,7 +10,7 @@
 //   flagship  false for tier releases that belong in the table but not on
 //             the frontier line (e.g. Sonnet alongside an Opus in the same month)
 
-export const LAST_UPDATED = '3 September 2026';
+export const LAST_UPDATED = '11 September 2026';
 
 // ─── Part 1 · MMLU historical arc ────────────────────────────────────────────
 // MMLU stopped being a frontier differentiator in late 2025 — both labs are
@@ -34,6 +34,7 @@ export const openaiReleases = [
   { date: "Mar '26", ts: 40, model: 'GPT-5.4',       mmlu: 97.2, est: true, note: 'Native computer use; 1M context; merges the Codex line' },
   { date: "Apr '26", ts: 41, model: 'GPT-5.5',       mmlu: 96.5, est: true, note: "Codename 'Spud'; first fully-retrained base since GPT-4.5" },
   { date: "Jul '26", ts: 44, model: 'GPT-5.6 Sol',   mmlu: 97.4, est: true, note: 'Sol / Terra / Luna tiers; 96.2% SWE-bench Verified; $5/$30 per MTok' },
+  { date: "Sep '26", ts: 46, model: 'GPT-6 Astra',   mmlu: 97.8, est: true, note: '99.9% ARC-AGI-3 on a stateful harness; 72.6% OSWorld 2.0; 97.6% FrontierMath T4' },
 ];
 
 export const claudeReleases = [
@@ -54,6 +55,7 @@ export const claudeReleases = [
   { date: "Jun '26", ts: 43, model: 'Claude Fable 5',       mmlu: 97.2, est: true, note: '95.0% SWE-bench Verified, 80.0% Pro; export-control pause 12 Jun – 1 Jul' },
   { date: "Jun '26", ts: 43, model: 'Claude Sonnet 5',      mmlu: 96.4, est: true, flagship: false, note: 'GA 30 Jun; 85.2% SWE-bench Verified at $2/$10 per MTok' },
   { date: "Jul '26", ts: 44, model: 'Claude Opus 5',        mmlu: 97.5, est: true, note: '96.0% SWE-bench Verified; 1M context; Opus pricing held at $5/$25' },
+  { date: "Sep '26", ts: 46, model: 'Claude Fable 5.1',     mmlu: 97.6, est: true, note: '81.2% SWE-bench Pro; cache reads cut 4x to $0.25/MTok; Mythos 5.1 is the same model, restricted' },
 ];
 
 // One point per lab per month on the frontier line: where a lab shipped two
@@ -94,22 +96,22 @@ export const capBenchmarks = [
     shortName: 'SWE-bench Pro',
     description: 'Repository-level software engineering — harder and less contaminated than Verified',
     oai: { model: 'GPT-5.6 Sol', value: 64.6 },
-    cla: { model: 'Claude Opus 5', value: 79.2 },
-    note: 'Opus 5 leads by 14.6 points. This is the benchmark that replaced Verified once both labs passed 95% there.',
+    cla: { model: 'Claude Fable 5.1', value: 81.2 },
+    note: 'Fable 5.1 (Sep 2026) takes the Anthropic figure to 81.2, up from 79.2 for Opus 5. OpenAI published no SWE-bench Pro score for GPT-6 Astra, so the OpenAI bar is still GPT-5.6 Sol and the gap shown is not a like-for-like September comparison.',
   },
   {
     shortName: 'Terminal-Bench',
     description: 'Agentic coding in real terminal environments — planning, iteration, tool coordination',
     oai: { model: 'GPT-5.6 Sol', value: 89.5 },
     cla: { model: 'Claude Opus 5', value: 89.1 },
-    note: 'Effectively a tie (0.4 points, Sol at xhigh vs Opus 5 at max effort). GPT-5.6 Sol Ultra reaches 91.9%.',
+    note: 'Effectively a tie (0.4 points, Sol at xhigh vs Opus 5 at max effort). GPT-5.6 Sol Ultra reaches 91.9%. Not updated for September: Fable 5.1 reports against Terminal-Bench 4.0 (55.8%) and Terminal-Bench-Science (52.6%), which are different, harder sets and cannot be put on this bar.',
   },
   {
     shortName: 'OSWorld 2.0',
     description: 'Autonomous desktop navigation via screenshots and keyboard/mouse',
-    oai: { model: 'GPT-5.6 Sol', value: 62.6 },
-    cla: { model: 'Claude Opus 5', value: 70.6 },
-    note: 'OSWorld moved to the harder 2.0 set in 2026 and scores reset downward — these are not comparable to the ~80% figures on OSWorld-Verified.',
+    oai: { model: 'GPT-6 Astra', value: 72.6 },
+    cla: { model: 'Claude Fable 5.1', value: 77.9 },
+    note: 'Both September flagships, but read the settings before reading the gap: Fable 5.1 scores 77.9 on the partial setting and only 41.7 strict, and Anthropic ran with production safeguards on, taking zeros where a classifier intervened. OpenAI reports 72.6 for Astra against 65.7 for Sol. OSWorld moved to the harder 2.0 set in 2026, so none of this is comparable to the ~80% figures on OSWorld-Verified.',
   },
   {
     shortName: 'Frontier-Bench',
@@ -121,9 +123,9 @@ export const capBenchmarks = [
   {
     shortName: 'ARC-AGI-3',
     description: 'Novel reasoning on problems absent from any training set',
-    oai: { model: 'GPT-5.6 Sol', value: 7.8 },
+    oai: { model: 'GPT-6 Astra', value: 99.9 },
     cla: { model: 'Claude Opus 5', value: 30.2 },
-    note: 'The widest gap on the page — Opus 5 scores ~3.9× Sol. Absolute scores stay low across every lab: this is the benchmark nobody is close to.',
+    note: 'Astra saturates ARC-AGI-3 at 99.9% and turns the widest gap on this page completely around — but the headline number depends on a stateful, expensive harness, and stateless API calls score far lower. Anthropic has published no ARC-AGI-3 figure for Fable 5.1, so the Anthropic bar is still Opus 5. Treat this pairing as the least settled on the page.',
   },
 ];
 
@@ -145,14 +147,14 @@ export const saturated = {
     { label: 'Claude Fable 5', value: '95.0%', series: 2 },
     { label: 'Claude Sonnet 5', value: '85.2%', series: 2 },
   ],
-  note: 'Four points separate the two flagships. Verified is finished as a differentiator; the contested version is Pro.',
+  note: 'Four points separate the two flagships. Verified is finished as a differentiator; the contested version is Pro. Neither September release adds a row — Anthropic published no Verified score for Fable 5.1, and the widely-quoted 95.0% belongs to Fable 5.',
 };
 
 export const STATS = [
-  { label: 'OpenAI MMLU gain', value: '+27.4pp', sub: 'GPT-3.5 → GPT-5.6 Sol (3.7 yrs)' },
-  { label: 'Claude MMLU gain', value: '+24.5pp', sub: 'Claude 1 → Claude Opus 5' },
-  { label: 'Anthropic 2026 cadence', value: '7 releases', sub: 'Opus 4.6 → Opus 5, Feb–Jul 2026' },
-  { label: 'Widest live gap', value: 'ARC-AGI-3', sub: '30.2% vs 7.8% — nobody is close' },
+  { label: 'OpenAI MMLU gain', value: '+27.8pp', sub: 'GPT-3.5 → GPT-6 Astra (3.8 yrs)' },
+  { label: 'Claude MMLU gain', value: '+24.6pp', sub: 'Claude 1 → Claude Fable 5.1' },
+  { label: 'Anthropic 2026 cadence', value: '8 releases', sub: 'Opus 4.6 → Fable 5.1, Feb–Sep 2026' },
+  { label: 'Widest live gap', value: 'ARC-AGI-3', sub: '99.9% vs 30.2% — reversed in September' },
 ];
 
 export const SOURCES = [
