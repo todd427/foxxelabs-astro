@@ -25,7 +25,7 @@ const latestNews = news
   <!-- ── LLM Observatory · live globe hero ── -->
   <section class="obs-hero">
     <div class="obs-hero-stage" id="obsHeroStage">
-      <LlmGlobe bare theme="dark" timelineSeconds={26} markerScale={0.9} />
+      <LlmGlobe bare timelineSeconds={26} markerScale={0.9} />
     </div>
     <div class="obs-hero-overlay">
       <div class="obs-hero-copy">
@@ -275,10 +275,10 @@ const latestNews = news
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid var(--border);
-    background: #070c18;
+    background: var(--hero-bg);
     height: clamp(300px, 40vw, 520px);
     margin-bottom: 18px;
-    box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 70px rgba(91,140,255,.05);
+    box-shadow: var(--hero-shadow);
   }
   .obs-hero-stage { position: absolute; inset: 0; overflow: hidden; }
   /* The globe fills the hero and stays inert — the whole banner is one link,
@@ -289,37 +289,43 @@ const latestNews = news
     position: absolute; inset: 0;
     pointer-events: none;
     display: flex; align-items: center;
+    /* The scrim is the same shape in every theme, only its colour changes: it
+       has to sit between the globe and the copy, so in a light theme it must
+       lighten rather than darken or the dark copy on it disappears. */
     background:
-      linear-gradient(to right, rgba(3,5,12,.9) 0%, rgba(3,5,12,.45) 44%, rgba(3,5,12,0) 72%),
-      linear-gradient(to top, rgba(3,5,12,.5), transparent 48%);
+      linear-gradient(to right,
+        rgba(var(--hero-scrim-rgb), .92) 0%,
+        rgba(var(--hero-scrim-rgb), .48) 44%,
+        rgba(var(--hero-scrim-rgb), 0) 72%),
+      linear-gradient(to top, rgba(var(--hero-scrim-rgb), .5), transparent 48%);
   }
   .obs-hero-copy { padding: 0 clamp(24px, 5vw, 56px); max-width: 560px; }
   .obs-hero-eyebrow {
     font-family: var(--font-mono, ui-monospace, monospace);
     font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
-    color: #7aa2ff; font-weight: 700; margin-bottom: 12px;
+    color: var(--hero-eyebrow); font-weight: 700; margin-bottom: 12px;
   }
   .obs-hero-title {
     font-size: clamp(1.7rem, 3.4vw, 2.6rem);
     line-height: 1.05; margin: 0 0 12px;
-    color: #eef2fb; letter-spacing: -.01em;
+    color: var(--hero-title); letter-spacing: -.01em;
   }
   .obs-hero-sub {
     font-size: 1rem; line-height: 1.55;
-    color: #aab6d4; margin: 0 0 20px; max-width: 42ch;
+    color: var(--hero-sub); margin: 0 0 20px; max-width: 42ch;
   }
   .obs-hero-btn {
     display: inline-block;
     font-family: var(--font-mono, ui-monospace, monospace);
     font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
-    color: #bfe6f5;
-    border: 1px solid rgba(120,205,240,.5);
-    background: rgba(120,205,240,.12);
+    color: var(--hero-btn-fg);
+    border: 1px solid var(--hero-btn-bd);
+    background: var(--hero-btn-bg);
     border-radius: 10px; padding: 11px 18px;
     transition: background .25s ease, border-color .25s ease;
   }
   .obs-hero-hit { position: absolute; inset: 0; z-index: 3; }
-  .obs-hero:hover .obs-hero-btn { background: rgba(120,205,240,.2); border-color: rgba(120,205,240,.85); }
+  .obs-hero:hover .obs-hero-btn { background: var(--hero-btn-bg-hover); border-color: var(--hero-btn-bd-hover); }
 
   /* Mobile: the globe cover-scales under a left gradient and disappears. Give it a
      taller stage, drop the copy to the bottom, and dim from the bottom up so the
@@ -713,4 +719,51 @@ const latestNews = news
     font-style: italic;
   }
 
+</style>
+
+<style is:global>
+  /* Hero palette, per theme. The hero used to be a hard-coded dark slab with
+     white copy, which read as a foreign block sitting in a light page — the
+     globe inside it was pinned dark for the same reason. Both now follow the
+     site theme, and the scrim flips from darkening to lightening so the copy
+     keeps its contrast either way. */
+  :root, [data-theme="dark"] {
+    --hero-bg: #070c18;
+    --hero-scrim-rgb: 3, 5, 12;
+    --hero-eyebrow: #7aa2ff;
+    --hero-title: #eef2fb;
+    --hero-sub: #aab6d4;
+    --hero-btn-fg: #bfe6f5;
+    --hero-btn-bd: rgba(120,205,240,.5);
+    --hero-btn-bg: rgba(120,205,240,.12);
+    --hero-btn-bd-hover: rgba(120,205,240,.85);
+    --hero-btn-bg-hover: rgba(120,205,240,.2);
+    --hero-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 70px rgba(91,140,255,.05);
+  }
+  [data-theme="light"] {
+    --hero-bg: #e7edf6;
+    --hero-scrim-rgb: 244, 247, 251;
+    --hero-eyebrow: #0369a1;
+    --hero-title: #111820;
+    --hero-sub: #44546a;
+    --hero-btn-fg: #0b4f6c;
+    --hero-btn-bd: rgba(3,105,161,.45);
+    --hero-btn-bg: rgba(3,105,161,.10);
+    --hero-btn-bd-hover: rgba(3,105,161,.8);
+    --hero-btn-bg-hover: rgba(3,105,161,.18);
+    --hero-shadow: 0 14px 34px rgba(17,24,32,.12);
+  }
+  [data-theme="editorial"] {
+    --hero-bg: #efe7d8;
+    --hero-scrim-rgb: 245, 240, 232;
+    --hero-eyebrow: #c0392b;
+    --hero-title: #1a1814;
+    --hero-sub: #5f594c;
+    --hero-btn-fg: #7a3b31;
+    --hero-btn-bd: rgba(192,57,43,.42);
+    --hero-btn-bg: rgba(192,57,43,.10);
+    --hero-btn-bd-hover: rgba(192,57,43,.75);
+    --hero-btn-bg-hover: rgba(192,57,43,.18);
+    --hero-shadow: 0 14px 34px rgba(26,24,20,.14);
+  }
 </style>
