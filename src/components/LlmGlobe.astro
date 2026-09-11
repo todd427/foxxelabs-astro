@@ -166,7 +166,10 @@ const total = MODELS.length;
 
   .ob-panel {
     position: absolute; top: 14px; z-index: 2;
-    width: 178px; padding: 12px 13px;
+    /* overflow:hidden is the backstop. The latest-releases rows are built at
+       runtime from model names of unknown length, and without it a long name
+       plus its meta pushed the text clean outside the panel's background. */
+    width: 196px; padding: 12px 13px; overflow: hidden;
     background: color-mix(in srgb, var(--card) 78%, transparent);
     border: 1px solid var(--border); border-radius: 12px;
     backdrop-filter: blur(7px);
@@ -184,18 +187,38 @@ const total = MODELS.length;
   .ob-stats dt { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
   .ob-stats dd { margin: 0; font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 
-  .ob-latest, .ob-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+  /* minmax(0,1fr) and min-width:0 on the items are both load-bearing: a grid
+     item defaults to min-width:auto, so the track sizes to the longest row's
+     max-content and pushes the whole list outside the panel no matter what the
+     flex row inside it does. That was the overflow, not the ellipsis. */
+  .ob-latest, .ob-legend {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px;
+  }
+  .ob-latest > li, .ob-legend > li { min-width: 0; }
   .ob-swatch { width: 8px; height: 8px; border-radius: 5px; flex: none; }
+  .ob-latest-row .ob-swatch { grid-column: 1; grid-row: 1; margin-top: .38em; }
 
+  /* Name on its own line, meta under it. Side by side, the meta eats ~85px of a
+     196px panel and every model longer than "GLM-4.6" ellipsises away — the name
+     is the part worth reading, so it gets the full width. */
   .ob-latest-row {
-    display: flex; align-items: center; gap: 6px; width: 100%;
+    display: grid; grid-template-columns: 8px minmax(0, 1fr); gap: 1px 6px;
+    width: 100%; min-width: 0;
     background: none; border: 0; padding: 2px 0; cursor: pointer;
     color: var(--text); font: inherit; text-align: left;
   }
   .ob-latest-row:hover .ob-latest-name { text-decoration: underline; }
   .ob-latest-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-  .ob-latest-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .ob-latest-meta { margin-left: auto; color: var(--muted); font-size: .66rem; white-space: nowrap; }
+  .ob-latest-name {
+    grid-column: 2; min-width: 0;
+    font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .ob-latest-meta {
+    grid-column: 2; min-width: 0;
+    color: var(--muted); font-size: .66rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
 
   .ob-legend li { display: flex; align-items: center; gap: 6px; color: var(--muted); }
   .ob-hint { margin: 10px 0 0; color: var(--muted); font-size: .68rem; line-height: 1.5; }
