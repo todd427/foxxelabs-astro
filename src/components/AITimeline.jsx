@@ -304,8 +304,11 @@ export default function AITimeline() {
             <div style={{ color: col.color, fontWeight: 700, marginBottom: 12, letterSpacing: 1, textTransform: "uppercase", fontSize: 11 }}>
               {col.title}
             </div>
-            {col.releases.map((r, i) => {
-              const isNewest = i === col.releases.length - 1;
+            {/* Newest first. Copy before reversing — `openaiReleases`/`claudeReleases`
+                are the same arrays `mergedMmlu` builds the chronological chart from,
+                and Array.prototype.reverse mutates in place. */}
+            {[...col.releases].reverse().map((r, i) => {
+              const isNewest = i === 0;
               return (
                 <div key={r.model} style={{
                   display: "grid", gridTemplateColumns: "60px 1fr auto",

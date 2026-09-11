@@ -1,0 +1,73 @@
+---
+// src/components/WorldRegion.astro
+//
+// One region of the /world map: a titled plot of land with a pill per
+// settlement. The pills are real <button>s rendered server-side and carry their
+// census entry in data-* attributes, so the page works without the detail-panel
+// script and screen readers get the status as text rather than as a colour.
+import { STATUS, GLYPH } from '../data/world.js';
+
+const { region } = Astro.props;
+---
+
+<section class="region" id={region.id}>
+  <h2>
+    <span lang="ga">{region.title}</span>
+    <small class="muted">· {region.sub} · {region.items.length}</small>
+  </h2>
+
+  <div class="pills">
+    {region.items.map(item => (
+      <button
+        class={`pill ${item.status}`}
+        type="button"
+        aria-pressed="false"
+        data-name={item.name}
+        data-status={item.status}
+        data-blurb={item.blurb}
+        data-region={region.title}
+      >
+        <span class={`mark ${item.status}`} aria-hidden="true">{GLYPH[item.status]}</span>
+        {item.name}
+        <span class="sr-only">, {STATUS[item.status]}</span>
+      </button>
+    ))}
+  </div>
+</section>
+
+<style>
+  .region {
+    border: 1px dashed var(--border);
+    border-radius: 14px;
+    padding: 14px 16px 16px;
+    background: color-mix(in srgb, var(--card) 55%, transparent);
+    min-width: 0;
+  }
+  .region h2 {
+    font-size: .95rem; font-weight: 600; margin: 0 0 10px; letter-spacing: .2px;
+  }
+  .region h2 small { font-weight: 400; font-size: .85em; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .mark { font-size: 9px; margin-right: 5px; vertical-align: 1px; }
+  .mark.live  { color: var(--w-live); }
+  .mark.build { color: var(--w-build); }
+  .mark.plan  { color: var(--w-plan); }
+
+  button.pill {
+    font: inherit; font-size: .84rem; line-height: 1.35; cursor: pointer;
+    padding: 5px 13px; border-radius: 999px; color: var(--text);
+    background: var(--w-plan-fill); border: 1px dashed var(--w-plan);
+    transition: filter .12s ease, box-shadow .12s ease;
+  }
+  button.pill.live  { background: var(--w-live-fill);  border: 1.5px solid var(--w-live); }
+  button.pill.build { background: var(--w-build-fill); border: 1px solid var(--w-build); }
+  button.pill:hover { filter: brightness(1.12); }
+  button.pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.pill[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    button.pill { transition: none; }
+  }
+</style>

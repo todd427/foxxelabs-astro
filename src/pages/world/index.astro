@@ -1,0 +1,181 @@
+---
+// src/pages/world/index.astro
+//
+// The FoxxeLabs world — an interactive census of the estate, drawn as six
+// regions of territory. Every settlement comes from src/data/world.js; nothing
+// is hard-coded in the markup here.
+//
+// This replaces public/world/index.html, which was a standalone HTML blob with
+// its own palette and its own dark-mode media query, no nav, no footer and no
+// theme toggle. On BaseLayout it now inherits site chrome and all three themes,
+// and the region pills render server-side instead of being built by script —
+// so the census is in the HTML for a reader with JavaScript off.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorldRegion from '../../components/WorldRegion.astro';
+import { REGIONS, STATUS, CENSUS } from '../../data/world.js';
+
+const [horizon, mind, harbour, ...rest] = REGIONS;
+---
+
+<BaseLayout
+  title="The FoxxeLabs world | Foxxe Labs"
+  description={`An interactive map of the FoxxeLabs estate — ${CENSUS.total} projects across six regions, ${CENSUS.live} live, ${CENSUS.build} in build, ${CENSUS.plan} on paper. Click any settlement for its census entry.`}
+>
+  <header class="page-header card">
+    <div class="eyebrow">Foxxe Labs · Interactive</div>
+    <h1>The FoxxeLabs world</h1>
+    <p class="lede">
+      Everything under the roof, drawn as territory. Six regions — the long
+      horizon, the mind, the harbour, the academy, the ground it all stands on,
+      and the back country. Click any settlement to read its entry.
+    </p>
+
+    <div class="legend">
+      <span><i class="dot live"></i> {STATUS.live}</span>
+      <span><i class="dot build"></i> {STATUS.build}</span>
+      <span><i class="dot plan"></i> {STATUS.plan}</span>
+    </div>
+    <p class="count muted">
+      {CENSUS.total} settlements: {CENSUS.live} live, {CENSUS.build} in build,
+      {CENSUS.plan} on paper.
+    </p>
+  </header>
+
+  <div class="layout">
+    <div class="map">
+      <WorldRegion region={horizon} />
+
+      <div class="midrow">
+        <WorldRegion region={mind} />
+        <WorldRegion region={harbour} />
+      </div>
+
+      {rest.map(r => <WorldRegion region={r} />)}
+    </div>
+
+    <aside class="detail card" id="detail" aria-live="polite">
+      <h3>The census</h3>
+      <p class="blurb muted">
+        Click a settlement to read its entry. {CENSUS.total} of them, from a live
+        cognition gateway to a project closed out without ever being built.
+      </p>
+    </aside>
+  </div>
+
+  <footer class="page-footer card">
+    <p class="muted">
+      Statuses track the Rialú registry. A settlement marked <em>on paper</em> may
+      be specified, shelved, or retired — the map keeps the dead as well as the
+      living, because a census that quietly drops its failures reads better than
+      it deserves to.
+    </p>
+  </footer>
+</BaseLayout>
+
+<script is:inline define:vars={{ STATUS }}>
+  // Detail panel. Server-rendered pills carry everything the panel needs in
+  // data-* attributes, so there is no client-side copy of the census.
+  (function () {
+    var detail = document.getElementById('detail');
+    if (!detail) return;
+    var pressed = null;
+
+    document.querySelectorAll('button.pill').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (pressed) pressed.setAttribute('aria-pressed', 'false');
+        pressed = btn;
+        btn.setAttribute('aria-pressed', 'true');
+
+        var status = btn.dataset.status;
+        detail.innerHTML = '';
+
+        var h3 = document.createElement('h3');
+        h3.textContent = btn.dataset.name;
+
+        var st = document.createElement('p');
+        st.className = 'status ' + status;
+        st.textContent = STATUS[status] + ' · ' + btn.dataset.region;
+
+        var p = document.createElement('p');
+        p.className = 'blurb';
+        p.textContent = btn.dataset.blurb;
+
+        detail.append(h3, st, p);
+      });
+    });
+  })();
+</script>
+
+<style>
+  /* Status colours are the page's own — the site tokens carry no live/build/plan
+     axis. They are defined per theme against the surrounding surface so the
+     pills keep AA contrast in dark, light and editorial alike. */
+  .page-header { margin-bottom: 18px; }
+
+  .eyebrow {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .18em;
+    color: var(--accent); font-weight: 700; margin-bottom: 10px;
+  }
+  .lede { margin: 0 0 14px; max-width: 68ch; line-height: 1.6; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 0 0 6px; font-size: .9rem; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .count { margin: 0; font-size: .9rem; }
+
+  .dot { width: 13px; height: 13px; border-radius: 7px; display: inline-block; }
+  .dot.live  { background: var(--w-live-fill);  border: 1.5px solid var(--w-live); }
+  .dot.build { background: var(--w-build-fill); border: 1.5px solid var(--w-build); }
+  .dot.plan  { background: var(--w-plan-fill);  border: 1.5px dashed var(--w-plan); }
+
+  .layout { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; }
+  @media (min-width: 900px) { .layout { grid-template-columns: 1fr 290px; } }
+
+  .map { display: grid; gap: 14px; min-width: 0; }
+  .midrow { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .midrow { grid-template-columns: 3fr 2fr; } }
+
+  /* The detail panel follows the reader down the map on wide screens; on narrow
+     ones it sits under the map, where a tap scrolls to it naturally. */
+  @media (min-width: 900px) {
+    .detail { position: sticky; top: 86px; }
+  }
+  .detail h3 { margin: 0 0 6px; }
+  .detail .status { margin: 0 0 10px; font-size: .82rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .09em; }
+  .detail .status.live  { color: var(--w-live); }
+  .detail .status.build { color: var(--w-build); }
+  .detail .status.plan  { color: var(--w-plan); }
+  .detail .blurb { margin: 0; line-height: 1.6; font-size: .95rem; }
+
+  .page-footer { margin-top: 18px; }
+  .page-footer p { margin: 0; font-size: .9rem; line-height: 1.6; }
+</style>
+
+<style is:global>
+  /* The live/build/plan axis, per theme. Global rather than scoped because the
+     pills live in WorldRegion.astro and inherit these from :root.
+     Contrast checked against each theme's --card surface: every pairing below
+     clears WCAG AA for the 13.5px pill text. */
+  :root, [data-theme="dark"] {
+    --w-live:  #5dcaa5;  --w-live-fill:  #10362b;
+    --w-build: #afa9ec;  --w-build-fill: #26215c;
+    --w-plan:  #9b978c;  --w-plan-fill:  #23261f;
+  }
+  [data-theme="light"] {
+    --w-live:  #0f6e56;  --w-live-fill:  #ddefe7;
+    --w-build: #4a4494;  --w-build-fill: #e6e4f4;
+    --w-plan:  #5c5a52;  --w-plan-fill:  #eae8e1;
+  }
+  [data-theme="editorial"] {
+    --w-live:  #1d6b4f;  --w-live-fill:  #e3efe6;
+    --w-build: #4a3f86;  --w-build-fill: #e8e4f2;
+    --w-plan:  #5f594c;  --w-plan-fill:  #ece8dd;
+  }
+
+  /* Visually-hidden text — the pills state their status for screen readers
+     rather than relying on the colour and glyph alone. */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+</style>
