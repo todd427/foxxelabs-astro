@@ -7,7 +7,17 @@
 // script and screen readers get the status as text rather than as a colour.
 import { STATUS, GLYPH } from '../data/world.js';
 
-const { region } = Astro.props;
+interface WorldItem { name: string; status: string; blurb: string }
+interface Props {
+  region: { id: string; title: string; sub: string; wide?: boolean; items: WorldItem[] };
+}
+
+const { region } = Astro.props as Props;
+
+// The census is plain JS, so `status` infers as string rather than the union of
+// the three keys. Widen the lookups instead of narrowing the data.
+const LABEL = STATUS as Record<string, string>;
+const MARK = GLYPH as Record<string, string>;
 ---
 
 <section class="region" id={region.id}>
@@ -27,9 +37,9 @@ const { region } = Astro.props;
         data-blurb={item.blurb}
         data-region={region.title}
       >
-        <span class={`mark ${item.status}`} aria-hidden="true">{GLYPH[item.status]}</span>
+        <span class={`mark ${item.status}`} aria-hidden="true">{MARK[item.status]}</span>
         {item.name}
-        <span class="sr-only">, {STATUS[item.status]}</span>
+        <span class="sr-only">, {LABEL[item.status]}</span>
       </button>
     ))}
   </div>

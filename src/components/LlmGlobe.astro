@@ -95,7 +95,9 @@ const total = MODELS.length;
 <script>
   import { LlmGlobe } from '../scripts/llm-globe.js';
 
-  for (const root of document.querySelectorAll('[data-globe-root]')) {
+  // Typed as HTMLElement so `root.dataset` resolves — querySelectorAll returns
+  // NodeListOf<Element> by default, which has no dataset.
+  for (const root of document.querySelectorAll<HTMLElement>('[data-globe-root]')) {
     // Construct immediately rather than waiting on an IntersectionObserver.
     // Gating construction on IO means the globe never appears at all if the
     // callback does not fire — which is exactly what happens in a background
