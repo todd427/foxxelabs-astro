@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T19:34:02.429Z",
+  "updatedAt": "2026-09-12T02:35:53.019Z",
   "pick": {
     "id": "tencent/Hy4-preview",
     "url": "https://hf.co/tencent/Hy4-preview",
@@ -17,16 +17,16 @@
       "url": "https://hf.co/openbmb/MiniCPM5-2B",
       "author": "openbmb",
       "name": "MiniCPM5-2B",
-      "likes": 1186,
+      "likes": 1197,
       "downloads": 67550,
-      "ageDays": 5
+      "ageDays": 6
     },
     {
       "id": "nex-agi/Nex-N2.5-mini",
       "url": "https://hf.co/nex-agi/Nex-N2.5-mini",
       "author": "nex-agi",
       "name": "Nex-N2.5-mini",
-      "likes": 685,
+      "likes": 692,
       "downloads": 3121,
       "ageDays": 4
     },
@@ -35,16 +35,16 @@
       "url": "https://hf.co/nex-agi/Nex-N2.5-Pro",
       "author": "nex-agi",
       "name": "Nex-N2.5-Pro",
-      "likes": 593,
+      "likes": 596,
       "downloads": 12260,
-      "ageDays": 3
+      "ageDays": 4
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 1094,
+      "likes": 1107,
       "downloads": 17712,
       "ageDays": 19
     },
@@ -53,7 +53,7 @@
       "url": "https://hf.co/IFM/K2-Horizon-MoVA-36B-A4B",
       "author": "IFM",
       "name": "K2-Horizon-MoVA-36B-A4B",
-      "likes": 279,
+      "likes": 282,
       "downloads": 5192,
       "ageDays": 10
     }

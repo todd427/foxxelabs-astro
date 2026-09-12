@@ -10,6 +10,13 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-12, note: "Emotion recognition and biometric categorisation tools are subject to the new AI Act transparency labelling obligations from 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-12, note: "The European Data Protection Supervisor is the enforcement body specifically for cases where EU institutions are the providers or deployers of AI systems.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-12, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-12, note: "The AI Office of Ireland serves as Ireland's central coordinating authority for the implementation of the EU AI Act and as the national Single Point of Contact for the European Commission.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-12, note: "Ireland adopted a distributed model of AI regulation, leveraging existing sectoral regulators rather than a single unified enforcement body.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-12, note: "The Irish Act amends the Central Bank Act 1942 and the Competition and Consumer Protection Act 2014 to enable those bodies to impose administrative sanctions for AI Act non-compliance.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-12, note: "Further Irish legislation to address additional requirements, including amendments arising from the EU Digital Omnibus on AI, will be brought forward in Autumn 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-09-11, note: "Deepfake images, audio, and video that resemble existing persons, objects, places, entities, or events must be clearly and visibly labelled under the new rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-11, note: "AI-generated or manipulated content subject to the new rules must include machine-readable marks in addition to visible labels.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-11, note: "The transparency obligations extend to text published to inform the public on matters of public interest where there has been no human review or editorial control.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -85,7 +92,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-09-11
+updatedDate: 2026-09-12
 ---
 
 ## AI Safety Testing Becomes Safety Risk
