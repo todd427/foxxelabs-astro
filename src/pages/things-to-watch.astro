@@ -6,7 +6,10 @@ import spotlight from '../../data/spotlight.json';
 
 const hasPick = !!spotlight?.pick;
 const also = spotlight?.also ?? [];
-const updated = spotlight?.updatedAt ? spotlight.updatedAt.split('T')[0] : null;
+// Stats-refresh date (every reconcile). The hero's own date lives on its card.
+const updated = spotlight?.updatedAt
+  ? new Date(spotlight.updatedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
 
 const fmt = (n: number) =>
   n >= 1_000_000 ? `${(n / 1e6).toFixed(1)}M`
@@ -21,7 +24,10 @@ const age = (d: number | null) =>
   description="One open-weight model worth a real look, plus the rest of what's moving on Hugging Face right now — picked from the feed, not a leaderboard. Signal, not noise."
 >
   <header class="page-header card">
-    <div class="eyebrow">Foxxe Labs &middot; Signal, not noise</div>
+    <div class="eyebrow">
+      Foxxe Labs &middot; Signal, not noise
+      {updated && <span class="eyebrow-date">&middot; Updated {updated}</span>}
+    </div>
     <h1>Things to Watch</h1>
     <p class="sub">One open-weight model worth a real look &mdash; plus the rest of what's moving on Hugging Face right now.</p>
     <p class="lede">The model release cycle is a firehose, and the old compass &mdash; Hugging Face's Open LLM Leaderboard &mdash; retired in 2025. This is the opposite of a leaderboard: one opinionated pick, with a handful of other live candidates below it and the hype-and-remix noise filtered out. It's deliberately not a ranking. For the hard numbers &mdash; benchmarks, pricing, context windows &mdash; the link goes out to llm-stats.</p>
@@ -54,8 +60,6 @@ const age = (d: number | null) =>
     </section>
   )}
 
-  {updated && <p class="updated muted">Last reconciled {updated}.</p>}
-
   <footer class="page-footer card">
     <p>
       Related: &nbsp;<a href="/news/">News</a>
@@ -72,6 +76,7 @@ const age = (d: number | null) =>
     font-size: .8rem; text-transform: uppercase; letter-spacing: .18em;
     color: var(--accent); font-weight: 700; margin-bottom: 10px;
   }
+  .eyebrow-date { color: var(--muted); font-weight: 600; }
   .page-header h1 { font-size: clamp(2.2rem, 5.5vw, 3.2rem); line-height: 1; margin: 0 0 8px; letter-spacing: -.01em; }
   .sub { color: var(--text); font-size: 1.1rem; font-style: italic; margin: 0 0 16px; }
   .lede { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 72ch; margin: 0; }
@@ -93,8 +98,6 @@ const age = (d: number | null) =>
   .also-author { color: var(--muted); }
   .also-meta { color: var(--muted); font-size: .82rem; white-space: nowrap; }
   .also-note { font-size: .8rem; margin: 12px 0 0; }
-
-  .updated { font-size: .82rem; margin: 0 2px 18px; }
 
   .page-footer { font-size: .95rem; }
   .page-footer p { margin: 0; color: var(--muted); }

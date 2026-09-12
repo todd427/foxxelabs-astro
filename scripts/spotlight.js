@@ -67,6 +67,9 @@ Swap the pick ONLY if a candidate is clearly more interesting/fresher than the
 current one; if the current pick still holds, keep it. When you pick, write TWO
 sentences, dry and concrete - no hype words ("revolutionary", "game-changing"
 banned), no benchmark claims you can't verify. Say what it is and why look twice.
+A pick can hold for weeks and the blurb is NOT rewritten while it holds, so no
+relative time ("landed yesterday", "1 day ago", "this week") - the page shows
+the model's age and the pick date itself.
 
 Return ONLY minified JSON:
 {"changed":true|false,"id":"author/name","blurb":"two sentences","reason":"one line: why"}`;
