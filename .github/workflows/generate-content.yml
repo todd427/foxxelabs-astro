@@ -71,6 +71,14 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional, and deliberately left unset: there is no HF_TOKEN secret on
+          # this repo, so this resolves to empty and hf-models.js sends no
+          # Authorization header. The Hub endpoint it reads is public — verified
+          # 200 anonymously and 200 with a junk token, so a bad value would not
+          # fail loudly either. A token only raises rate limits, and the spotlight
+          # makes two requests a day. Set the secret and it is picked up with no
+          # code change; until then this line documents the seam rather than
+          # implying an authentication that is not happening.
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: node scripts/spotlight.js reconcile
 

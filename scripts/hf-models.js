@@ -3,9 +3,12 @@
  * hf-models.js — candidate generator for the LLM spotlight.
  *
  * The HF-direct feed the news corpus can't give you: two pulls (momentum +
- * novelty) off the Hub API, noise-filtered, deduped, scored. No API key, no
- * deps, Node 20 global fetch. This is the spotlight's source the way the news
- * sources in config.json feed generate-content.js.
+ * novelty) off the Hub API, noise-filtered, deduped, scored. No deps, Node 20
+ * global fetch. This is the spotlight's source the way the news sources in
+ * config.json feed generate-content.js.
+ *
+ * HF_TOKEN is optional and normally absent — the endpoint is public, and a token
+ * only buys rate limit. Two requests a day never approaches it.
  *
  * Used by scripts/spotlight.js. Standalone preview:
  *   node scripts/hf-models.js [--json]
@@ -23,6 +26,9 @@ async function feed(sort, perFeed = 40) {
   const url = `${HF_API}?pipeline_tag=text-generation&sort=${sort}&direction=-1` +
     `&limit=${perFeed}&full=true&config=false`;
   const headers = { 'User-Agent': 'foxxelabs-astro/spotlight' };
+  // Empty string when the CI secret is unset, which is falsy — so an absent
+  // token sends no header rather than an `Authorization: Bearer ` that the Hub
+  // would have to interpret.
   if (process.env.HF_TOKEN) headers.Authorization = `Bearer ${process.env.HF_TOKEN}`;
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HF ${sort} feed ${res.status}: ${await res.text()}`);
