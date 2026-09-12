@@ -22,17 +22,34 @@ const NOISE_TAGS = new Set([
 ]);
 const NOISE_NAME = /(gguf|abliter|obliter|quantiz|-(awq|gptq|exl2|mlx|fp4|fp8|int4|int8)\b|distill)/i;
 
-async function feed(sort, perFeed = 40) {
-  const url = `${HF_API}?pipeline_tag=text-generation&sort=${sort}&direction=-1` +
-    `&limit=${perFeed}&full=true&config=false`;
+function hfHeaders() {
   const headers = { 'User-Agent': 'foxxelabs-astro/spotlight' };
   // Empty string when the CI secret is unset, which is falsy — so an absent
   // token sends no header rather than an `Authorization: Bearer ` that the Hub
   // would have to interpret.
   if (process.env.HF_TOKEN) headers.Authorization = `Bearer ${process.env.HF_TOKEN}`;
-  const res = await fetch(url, { headers });
+  return headers;
+}
+
+async function feed(sort, perFeed = 40) {
+  const url = `${HF_API}?pipeline_tag=text-generation&sort=${sort}&direction=-1` +
+    `&limit=${perFeed}&full=true&config=false`;
+  const res = await fetch(url, { headers: hfHeaders() });
   if (!res.ok) throw new Error(`HF ${sort} feed ${res.status}: ${await res.text()}`);
   return res.json();
+}
+
+// One model by id, for a hero that has dropped out of the feed. Returns null
+// on any failure (404 if it was taken down, rate limit, network) - the caller
+// decides what to hold; nothing here should take the reconcile down.
+export async function fetchModel(id) {
+  try {
+    const res = await fetch(`${HF_API}/${id}`, { headers: hfHeaders() });
+    if (!res.ok) return null;
+    return normalise(await res.json());
+  } catch {
+    return null;
+  }
 }
 
 function normalise(raw) {

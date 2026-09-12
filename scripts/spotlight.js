@@ -19,7 +19,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getCandidates } from './hf-models.js';
+import { getCandidates, fetchModel } from './hf-models.js';
 import { MODEL, makeClient, callWithRetry, extractJson } from './anthropic-client.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -39,11 +39,22 @@ function writeSpotlight(pick, also) {
   fs.writeFileSync(SPOTLIGHT_PATH, JSON.stringify(out, null, 2) + '\n');
 }
 
-// Display record persisted for the page (no _score, no tags).
+// Display record persisted for the page (no _score, no tags). createdAt is
+// kept so ageDays can be re-derived when the live record isn't available.
 const display = (c) => ({
   id: c.id, url: c.url, author: c.author, name: c.name,
   likes: c.likes, downloads: c.downloads,
+  createdAt: c.createdAt ?? null,
   ageDays: c.ageDays == null ? null : Math.round(c.ageDays),
+});
+
+// ageDays is a snapshot, and a held hero can outlive its feed slot by weeks;
+// whatever else we keep, the age must be today's.
+const reage = (rec) => ({
+  ...rec,
+  ageDays: rec.createdAt
+    ? Math.max(0, Math.round((Date.now() - new Date(rec.createdAt).getTime()) / 86_400_000))
+    : rec.ageDays ?? null,
 });
 
 // Compact view for the model's hero decision.
@@ -110,11 +121,14 @@ async function reconcile(dryRun) {
   }
   if (!hero) {
     if (current) {
-      const live = candidates.find((c) => c.id === current.id);
+      // Off the feed is the normal case for a hero that has held a week or
+      // two, so go and get it: stats froze for eight days once when this
+      // branch just kept the stored record.
+      const live = candidates.find((c) => c.id === current.id) ?? await fetchModel(current.id);
       hero = live
         ? { ...display(live), blurb: current.blurb, surfacedAt: current.surfacedAt }
-        : current;  // dropped off the feed; keep stored values
-      console.log(`\u00b7 Hero holds: ${current.id}`);
+        : reage(current);  // HF unreachable or model gone; stored stats, today's age
+      console.log(`\u00b7 Hero holds: ${current.id}${live ? '' : ' (stored stats)'}`);
     } else {
       console.log('No hero and no current pick; leaving null.');
     }
