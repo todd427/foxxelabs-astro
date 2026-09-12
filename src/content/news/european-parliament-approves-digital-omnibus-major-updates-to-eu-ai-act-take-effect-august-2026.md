@@ -10,6 +10,14 @@ significance: "high"
 entities: ["European Parliament", "Council of the European Union", "EU AI Act", "European AI Office", "Digital Omnibus on AI"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-12, note: "Standalone high-risk AI systems within Annex III categories (e.g., education, employment, critical infrastructure, credit scoring, law enforcement) will have key obligations take effect from 2 Decembe", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-09-12, note: "The simplified compliance framework applicable to SMEs will be extended to small mid-cap companies (SMCs), defined as those with up to 750 employees and €150 million in annual revenue or an annual bal", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-09-12, note: "The Medical Devices Regulation and In Vitro Diagnostic Medical Devices Regulation (EU 2017/745 and EU 2017/746) did not secure a carve-out from parallel AI Act compliance obligations.", sourceUrl: "https://www.morganlewis.com/pubs/2026/06/eu-approves-delays-and-other-amendments-to-certain-eu-ai-act-obligations-what-businesses-should-know" }
+  - { date: 2026-09-12, note: "From 2 August 2026, the European Commission's AI Office and national competent authorities have enforcement powers under the AI Act for provisions applicable at that point.", sourceUrl: "https://annexops.com/eu-ai-act-implementation-2026/" }
+  - { date: 2026-09-12, note: "The AI Office has specific enforcement responsibilities for general-purpose AI (GPAI) models from 2 August 2026, including the power to impose fines.", sourceUrl: "https://annexops.com/eu-ai-act-implementation-2026/" }
+  - { date: 2026-09-12, note: "Article 50 transparency obligations cover: disclosure when people interact directly with AI; machine-readable marking of certain AI-generated or manipulated content; deepfake labelling; transparency a", sourceUrl: "https://annexops.com/eu-ai-act-implementation-2026/" }
+  - { date: 2026-09-12, note: "Prohibited AI practices and AI literacy provisions began applying from 2 February 2025.", sourceUrl: "https://annexops.com/eu-ai-act-implementation-2026/" }
+  - { date: 2026-09-12, note: "GPAI obligations and other AI Act provisions began applying from 2 August 2025.", sourceUrl: "https://annexops.com/eu-ai-act-implementation-2026/" }
   - { date: 2026-09-11, note: "On May 7, 2026, the European Council, the European Parliament, and the European Commission reached provisional political agreement on the Digital Omnibus on AI — the first formal set of amendments to ", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
   - { date: 2026-09-11, note: "High-risk AI system obligations under Annex III (stand-alone systems) have been deferred from August 2, 2026 to December 2, 2027 — a 16-month extension.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
   - { date: 2026-09-11, note: "High-risk AI embedded in regulated products under Annex I (e.g., medical devices, machinery) now face a compliance deadline of August 2, 2028, deferred from the original August 2, 2027 date.", sourceUrl: "https://axis-intelligence.com/eu-ai-act-news/" }
@@ -236,7 +244,7 @@ updates:
   - { date: 2026-07-07, note: "The AI Act Omnibus amendments make it easier to use GDPR special category personal data (health information, biometric data, race, or sexual orientation) where necessary to detect and mitigate bias in", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
   - { date: 2026-07-07, note: "Formal adoption of the AI Act Omnibus amendments is expected by July 2026, ahead of the originally scheduled 2 August 2026 deadline for high-risk AI system requirements to take effect.", sourceUrl: "https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines" }
 draft: false
-updatedDate: 2026-09-11
+updatedDate: 2026-09-12
 ---
 
 ## Parliament Approves Digital Omnibus

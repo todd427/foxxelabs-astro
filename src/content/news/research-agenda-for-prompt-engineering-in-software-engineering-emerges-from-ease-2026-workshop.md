@@ -9,8 +9,11 @@ sourceUrl: "https://arxiv.org/abs/2609.02248"
 significance: "high"
 entities: ["arXiv", "PROMPT-SE", "EASE 2026", "Vincenzo De Martino"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-12, note: "The paper was authored by Vincenzo De Martino, Giovanna Broccia, Fabiano Pecorelli, Jennifer Horkoff, Riccardo Coppola, Antonino Ferraro, Quim Motger, Emma McKenzie, and Shahbaz Siddeeq.", sourceUrl: "https://arxiv.org/abs/2609.02248" }
+  - { date: 2026-09-12, note: "The PROMPT-SE workshop was co-located with EASE 2026 and was the first international workshop on empirical prompt engineering for software engineering.", sourceUrl: "https://arxiv.org/abs/2609.02248" }
 draft: false
+updatedDate: 2026-09-12
 ---
 
 ## New Research Agenda for Prompt Engineering in Software Development

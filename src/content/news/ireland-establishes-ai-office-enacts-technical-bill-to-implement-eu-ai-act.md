@@ -10,6 +10,19 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-12, note: "Peter Burke is Ireland's Minister for Enterprise, Tourism and Employment and co-welcomed the Bill's publication.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-09-12, note: "Niamh Smyth is Ireland's Minister of State for Trade Promotion, Artificial Intelligence and Digital Transformation.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-09-12, note: "Ireland holds the Presidency of the Council of the EU during the second half of 2026.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
+  - { date: 2026-09-12, note: "The Data Protection Commission, the Central Bank of Ireland, and the Competition and Consumer Protection Commission are designated as Market Surveillance Authorities under Statutory Instrument No. 366", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "Under the EU AI Act's penalty structure, fines for the most serious breaches (such as prohibited practices) can reach up to 7% of a company's global annual turnover.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "The European Parliament voted to adopt the Digital Omnibus on AI on 16 June 2026.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "The Digital Omnibus on AI moves the deadline for high-risk AI obligations for standalone systems (Annex III) from 2 August 2026 to 2 December 2027.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "The Digital Omnibus on AI moves the deadline for high-risk AI embedded in regulated products (Annex I), such as medical devices, from 2 August 2026 to 2 August 2028.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "Prohibited practices under EU AI Act Article 5 — including social scoring, subliminal manipulation, and real-time biometric surveillance in public places — have applied since February 2025 and are not", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "A new ban on AI-generated non-consensual intimate imagery and CSAM joins the list of EU AI Act prohibited practices from 2 December 2026.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "General-purpose AI model (GPAI) obligations under the EU AI Act have applied since August 2025 and are not affected by the Digital Omnibus delay.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "Transparency duties under EU AI Act Article 50 — including labelling AI-generated content and disclosing AI interactions to users — still apply from 2 August 2026 as originally scheduled, unaffected b", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
+  - { date: 2026-09-12, note: "The Regulation of Artificial Intelligence Bill 2026 still needs to pass through the Dáil and Seanad before becoming law.", sourceUrl: "https://www.rmoklegal.com/news/ireland-ai-bill-2026" }
   - { date: 2026-09-11, note: "Ireland took over the rotating Presidency of the Council of the EU on 1 July 2026 and will hold it until 31 December 2026.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
   - { date: 2026-09-11, note: "This is Ireland's eighth time holding the rotating Presidency of the Council of the EU.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
   - { date: 2026-09-11, note: "The Irish Presidency will hold an international AI summit on 14 October 2026, with a particular focus on AI adoption by businesses and SMEs.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
@@ -410,7 +423,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-09-11
+updatedDate: 2026-09-12
 ---
 
 ## The Bill's Purpose and Structure

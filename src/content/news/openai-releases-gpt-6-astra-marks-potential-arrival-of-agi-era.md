@@ -9,8 +9,21 @@ sourceUrl: "https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman"
 significance: "high"
 entities: ["OpenAI", "Greg Brockman", "GPT-6 Astra", "Stargate", "Hugging Face"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-12, note: "The publicly released version of GPT-6 Astra rejects certain prompts in areas such as cybersecurity.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI delayed the release of GPT-6 Astra to add more safeguards following the Hugging Face incident in July 2026.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI once defined AGI as 'an automated system that can perform all economically valuable work as well as or better than humans'.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI VP of Research Aidan Clark stated GPT-6 Astra's training was 'by far' OpenAI's largest training run.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "GPT-6 Astra was pretrained on more than 100,000 GPUs at OpenAI's Stargate site in Texas.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "The recurrent depth technique in GPT-6 Astra has raised concerns among AI safety experts about the model's monitorability.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "On September 1, 2026, OpenAI announced that access to GPT-6 Astra's most advanced cybersecurity capabilities will be restricted to a limited group of testers initially.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "Advanced cybersecurity access for GPT-6 Astra will expand to defensive use through a programme called Daybreak Blue.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI described GPT-6 Astra as its most aligned model yet.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI stated that GPT-6 Astra 'is faster and capable of performing more tasks than any prior iteration'.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "OpenAI cited filling out tax returns, building video game scenes, ordering food, and conducting job searches as example tasks GPT-6 Astra can perform.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
+  - { date: 2026-09-12, note: "GPT-6 Astra is licensed as proprietary.", sourceUrl: "https://en.wikipedia.org/wiki/GPT-6_Astra" }
 draft: false
+updatedDate: 2026-09-12
 ---
 
 ## GPT-6 Astra Unveiled as Potential AGI Milestone

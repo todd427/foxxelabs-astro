@@ -9,8 +9,13 @@ sourceUrl: "https://softteco.com/blog/machine-learning-trends"
 significance: "high"
 entities: ["Fortune Business Insights", "Markets and Markets", "Machine Learning market", "Agentic AI"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-12, note: "Publications on machine learning applied to risk management increased by 98.99% between 2018 and 2023, based on a bibliometric analysis of Scopus and Web of Science.", sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12498517/" }
+  - { date: 2026-09-12, note: "China, South Korea, and the United States are the primary research-producing countries in machine learning applied to risk management.", sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12498517/" }
+  - { date: 2026-09-12, note: "Federated learning keeps data localised on client devices, reducing the risk of sensitive information exposure during transmission or storage, and helps organisations comply with strict data protectio", sourceUrl: "https://softteco.com/blog/machine-learning-trends" }
+  - { date: 2026-09-12, note: "LLMOps addresses unique challenges of deploying large language models such as GPT and BERT, which have massive size and require significant computational resources and continuous performance monitorin", sourceUrl: "https://softteco.com/blog/machine-learning-trends" }
 draft: false
+updatedDate: 2026-09-12
 ---
 
 ## Explosive Growth Ahead for Machine Learning

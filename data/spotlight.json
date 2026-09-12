@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-09-12T02:35:53.019Z",
+  "updatedAt": "2026-09-12T11:40:39.768Z",
   "pick": {
-    "id": "tencent/Hy4-preview",
-    "url": "https://hf.co/tencent/Hy4-preview",
-    "author": "tencent",
-    "name": "Hy4-preview",
-    "likes": 420,
-    "downloads": 5684,
-    "ageDays": 8,
-    "blurb": "Hy4-preview is Tencent's latest multimodal MoE model, with dual arxiv papers (2512.02556, 2603.12201) backing the architecture. Worth a look if you're comparing routing strategies in sparse models\u2014newer than GLM-5.3-Flash with Apache 2.0 licensing and concrete eval results.",
-    "surfacedAt": "2026-08-28"
+    "id": "TokenRhythm/NeoHorse-1-4B",
+    "url": "https://hf.co/TokenRhythm/NeoHorse-1-4B",
+    "author": "TokenRhythm",
+    "name": "NeoHorse-1-4B",
+    "likes": 1260,
+    "downloads": 6860,
+    "ageDays": 7,
+    "blurb": "NeoHorse-1-4B is a 4B agentic model built on Qwen3.5 with explicit tags for tool-use, coding, and reasoning. Compact enough for edge deployment but explicitly tuned for agent workflows—worth testing if you're shipping multi-step tasks on constrained hardware.",
+    "surfacedAt": "2026-09-12"
   },
   "also": [
     {
@@ -17,8 +17,8 @@
       "url": "https://hf.co/openbmb/MiniCPM5-2B",
       "author": "openbmb",
       "name": "MiniCPM5-2B",
-      "likes": 1197,
-      "downloads": 67550,
+      "likes": 1222,
+      "downloads": 102334,
       "ageDays": 6
     },
     {
@@ -26,8 +26,8 @@
       "url": "https://hf.co/nex-agi/Nex-N2.5-mini",
       "author": "nex-agi",
       "name": "Nex-N2.5-mini",
-      "likes": 692,
-      "downloads": 3121,
+      "likes": 706,
+      "downloads": 3581,
       "ageDays": 4
     },
     {
@@ -35,8 +35,8 @@
       "url": "https://hf.co/nex-agi/Nex-N2.5-Pro",
       "author": "nex-agi",
       "name": "Nex-N2.5-Pro",
-      "likes": 596,
-      "downloads": 12260,
+      "likes": 607,
+      "downloads": 30081,
       "ageDays": 4
     },
     {
@@ -44,8 +44,8 @@
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 1107,
-      "downloads": 17712,
+      "likes": 1127,
+      "downloads": 19733,
       "ageDays": 19
     },
     {
@@ -53,9 +53,9 @@
       "url": "https://hf.co/IFM/K2-Horizon-MoVA-36B-A4B",
       "author": "IFM",
       "name": "K2-Horizon-MoVA-36B-A4B",
-      "likes": 282,
-      "downloads": 5192,
-      "ageDays": 10
+      "likes": 295,
+      "downloads": 5616,
+      "ageDays": 11
     }
   ]
 }

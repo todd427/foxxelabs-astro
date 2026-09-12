@@ -10,6 +10,12 @@ significance: "high"
 entities: ["S&P Global", "451 Research", "Federal Reserve Bank of New York", "S&P Global 1200"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-12, note: "Large enterprises (10,000+ employees) with formal AI strategies forecast a net negative employment impact of -13 percentage points from AI.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-12, note: "Only 46% of AI initiatives launched in the past year are on track to achieve positive ROI within 12 months, globally.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-12, note: "51% of survey respondents reported investing in AI for identity verification and access assurance, with 29% targeting full automation and 28% targeting predominant automation with human oversight.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-12, note: "Ireland is generating jobs in the AI industry at 2–3 times the pace of other EU countries, according to the Expert Group on Future Skills Needs report titled 'The Irish Labour Market and AI in 2026'.", sourceUrl: "https://www.con-telegraph.ie/2026/08/24/ireland-ranks-2nd-in-eu-for-ai-skills-and-jobs-report-shows/" }
+  - { date: 2026-09-12, note: "Ireland ranks 2nd in the EU for AI skills and jobs, behind Luxembourg, according to the Expert Group on Future Skills Needs report.", sourceUrl: "https://www.con-telegraph.ie/2026/08/24/ireland-ranks-2nd-in-eu-for-ai-skills-and-jobs-report-shows/" }
+  - { date: 2026-09-12, note: "Minister for Enterprise, Tourism and Employment Peter Burke stated that AI adoption spread throughout Ireland is uneven and that the government is investing heavily in education and training.", sourceUrl: "https://www.con-telegraph.ie/2026/08/24/ireland-ranks-2nd-in-eu-for-ai-skills-and-jobs-report-shows/" }
   - { date: 2026-09-03, note: "S&P Global's latest PMI special survey shows a global net employment impact of -5 percentage points over the past 12 months among private-sector firms adopting AI.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-03, note: "Only 153 of the S&P Global 1200 index participants (13%) experienced a head count increase between January 2025 and January 2026.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-03, note: "In 2026, only 16% of respondents say they completely trust third-party AI models, down from 24% in 2023.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
@@ -31,7 +37,7 @@ updates:
   - { date: 2026-08-22, note: "New York Fed research found (October 2024) that individuals exposed to generative AI tools reported bleaker expectations for job availability and income inequality.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
   - { date: 2026-08-22, note: "The post is the inaugural entry in a new series called 'Street Level' authored by Kartik B. Athreya, Research Director at the Federal Reserve Bank of New York.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
 draft: false
-updatedDate: 2026-09-03
+updatedDate: 2026-09-12
 ---
 
 ## Global Net Employment Impact Turns Negative
