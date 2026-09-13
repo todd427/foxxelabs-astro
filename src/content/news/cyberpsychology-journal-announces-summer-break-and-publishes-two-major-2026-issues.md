@@ -10,6 +10,15 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-13, note: "Cyberpsychology journal reopened its submission system on 1 September 2026 following a summer break, introducing updated submission requirements to strengthen quality, transparency, and reproducibilit", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-13, note: "A study of 200 university students aged 18–21 found that high screen time and excessive digital use were associated with emotional distress and poor sleep quality.", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
+  - { date: 2026-09-13, note: "The study found an association between increased digital media use and intense anxiety, depression, stress, dark triad-related behaviour, and decreased mindfulness among participants.", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
+  - { date: 2026-09-13, note: "Mindfulness was identified as a protective factor that reduces negative influences of digital behaviour and improves well-being.", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
+  - { date: 2026-09-13, note: "A structured 4-week digital detox intervention produced statistically significant improvements in psychological well-being, sleep quality, and mindfulness levels in the experimental group compared to ", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
+  - { date: 2026-09-13, note: "A systematic review using a biopsychosocial framework identified six interrelated domains shaping how psychopathic traits manifest online: online behaviours (e.g. trolling and deception), online envir", sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12192149/" }
+  - { date: 2026-09-13, note: "Researchers propose 'cyberpsychopathy' as a multidimensional construct representing the expression of aversive personality traits facilitated by digital affordances and psychological vulnerabilities.", sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12192149/" }
+  - { date: 2026-09-13, note: "A mixed-methods study of 6,816 participants across six major platforms found Facebook app usage had a mean Self-Reported Habit Index score of 4.88, exceeding established benchmarks for health-related ", sourceUrl: "https://link.springer.com/article/10.1140/epjds/s13688-025-00581-7" }
+  - { date: 2026-09-13, note: "The study tracked 12,899 app-specific responses over a 6-week longitudinal behavioural tracking period.", sourceUrl: "https://link.springer.com/article/10.1140/epjds/s13688-025-00581-7" }
   - { date: 2026-09-11, note: "As of September 2026, Cyberpsychology: Journal of Psychosocial Research on Cyberspace increased its requirements regarding adherence to open science principles, rigorous measurement, and ethical resea", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
   - { date: 2026-09-11, note: "All submissions of quantitative studies (survey-based, observational, experimental, and meta-analyses) must now be accompanied by anonymized data and materials shared via an open repository such as Ze", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
   - { date: 2026-09-11, note: "Preregistration is mandatory for experimental studies submitted to the journal, and strongly recommended for observational and survey-based studies.", sourceUrl: "https://cyberpsychology.eu/about/submissions" }
@@ -256,7 +265,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-11
+updatedDate: 2026-09-13
 ---
 
 ## Summer Submission Break Announced

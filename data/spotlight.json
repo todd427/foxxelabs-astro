@@ -1,67 +1,67 @@
 {
-  "updatedAt": "2026-09-12T15:11:07.987Z",
+  "updatedAt": "2026-09-13T12:43:57.023Z",
   "pick": {
-    "id": "openbmb/MiniCPM5-2B",
-    "url": "https://hf.co/openbmb/MiniCPM5-2B",
-    "author": "openbmb",
-    "name": "MiniCPM5-2B",
-    "likes": 1233,
-    "downloads": 102334,
-    "createdAt": "2026-09-06T11:12:19.000Z",
-    "ageDays": 6,
-    "blurb": "MiniCPM5-2B is a 2B model with explicit long-context and tool-calling tags, built for on-device deployment with conversational capability. Higher engagement (1.2K likes, 102K downloads) and fresher release suggest broader validation for constrained-hardware workflows than smaller alternatives.",
-    "surfacedAt": "2026-09-12"
+    "id": "TokenRhythm/NeoHorse-1-4B",
+    "url": "https://hf.co/TokenRhythm/NeoHorse-1-4B",
+    "author": "TokenRhythm",
+    "name": "NeoHorse-1-4B",
+    "likes": 1697,
+    "downloads": 7979,
+    "createdAt": "2026-09-05T08:21:53.000Z",
+    "ageDays": 8,
+    "blurb": "NeoHorse-1-4B is a 4B model with explicit agentic, tool-use, and reasoning tags built on Qwen3.5, designed for coding and instruction-following workloads. It has stronger engagement (1.7K likes) than the current pick and trades some long-context specificity for a tighter focus on tool-calling and reasoning patterns that many production workflows actually need.",
+    "surfacedAt": "2026-09-13"
   },
   "also": [
+    {
+      "id": "openbmb/MiniCPM5-2B",
+      "url": "https://hf.co/openbmb/MiniCPM5-2B",
+      "author": "openbmb",
+      "name": "MiniCPM5-2B",
+      "likes": 1297,
+      "downloads": 150110,
+      "createdAt": "2026-09-06T11:12:19.000Z",
+      "ageDays": 7
+    },
     {
       "id": "nex-agi/Nex-N2.5-mini",
       "url": "https://hf.co/nex-agi/Nex-N2.5-mini",
       "author": "nex-agi",
       "name": "Nex-N2.5-mini",
-      "likes": 714,
-      "downloads": 3581,
+      "likes": 750,
+      "downloads": 3970,
       "createdAt": "2026-09-08T05:08:43.000Z",
-      "ageDays": 4
+      "ageDays": 5
     },
     {
       "id": "nex-agi/Nex-N2.5-Pro",
       "url": "https://hf.co/nex-agi/Nex-N2.5-Pro",
       "author": "nex-agi",
       "name": "Nex-N2.5-Pro",
-      "likes": 610,
-      "downloads": 30081,
+      "likes": 619,
+      "downloads": 30289,
       "createdAt": "2026-09-08T11:01:41.000Z",
-      "ageDays": 4
+      "ageDays": 5
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 1129,
-      "downloads": 19733,
+      "likes": 1148,
+      "downloads": 21336,
       "createdAt": "2026-08-24T06:34:34.000Z",
-      "ageDays": 19
+      "ageDays": 20
     },
     {
       "id": "IFM/K2-Horizon-MoVA-36B-A4B",
       "url": "https://hf.co/IFM/K2-Horizon-MoVA-36B-A4B",
       "author": "IFM",
       "name": "K2-Horizon-MoVA-36B-A4B",
-      "likes": 296,
-      "downloads": 5616,
+      "likes": 299,
+      "downloads": 5996,
       "createdAt": "2026-09-01T23:01:25.000Z",
-      "ageDays": 11
-    },
-    {
-      "id": "TokenRhythm/NeoHorse-1-4B",
-      "url": "https://hf.co/TokenRhythm/NeoHorse-1-4B",
-      "author": "TokenRhythm",
-      "name": "NeoHorse-1-4B",
-      "likes": 1459,
-      "downloads": 6860,
-      "createdAt": "2026-09-05T08:21:53.000Z",
-      "ageDays": 7
+      "ageDays": 12
     }
   ]
 }

@@ -10,6 +10,16 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-13, note: "From 2 August 2026, the European Commission's AI Office, together with national authorities, began enforcing the AI Act.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-13, note: "The EU has created a set of icons that can be used by providers and deployers to label AI-generated content.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-13, note: "Users must be clearly informed when they are not interacting with a real person but an AI system, such as a chatbot, AI agent, or avatar.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-13, note: "National market surveillance authorities may issue fines of up to €15 million, or 3% of global annual turnover, for companies that breach AI Act transparency rules.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-13, note: "EU institutions, bodies, and agencies that breach AI Act transparency rules may be fined up to €750,000.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Bill 2026 was approved by the Irish Government for publication on 17 June 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Bill 2026 gives effect in Ireland to EU Regulation 2024/1689 (the EU AI Act) by establishing the domestic enforcement architecture.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-13, note: "The Bill establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body to act as Ireland's central coordinating authority for the implementation of the AI Act.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-13, note: "The Bill does not add to the obligations placed on regulated entities by the EU AI Act Regulation; it is described as a technical implementing measure.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Bill 2026 was jointly welcomed by Minister Peter Burke (Enterprise, Tourism and Employment) and Minister of State Niamh Smyth (Trade Promotion, Artificial Int", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-09-12, note: "Emotion recognition and biometric categorisation tools are subject to the new AI Act transparency labelling obligations from 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-12, note: "The European Data Protection Supervisor is the enforcement body specifically for cases where EU institutions are the providers or deployers of AI systems.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-12, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -92,7 +102,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-09-12
+updatedDate: 2026-09-13
 ---
 
 ## AI Safety Testing Becomes Safety Risk

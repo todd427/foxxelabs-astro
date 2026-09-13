@@ -9,8 +9,27 @@ sourceUrl: "https://www.aljazeera.com/news/2026/9/2/us-pushes-looser-approach-to
 significance: "high"
 entities: ["European Commission", "United States", "G20", "Michael Kratsios", "Henna Virkkunen", "Thomas Regnier", "Meta", "Mark Zuckerberg", "OpenAI", "Anthropic", "Google", "Tesla", "Elon Musk"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-09-13, note: "On August 29, 2026, Henna Virkkunen, the European Commission's Executive Vice-President for Tech Sovereignty, Security and Democracy, confirmed the first formal enforcement step under the EU AI Act.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "The EU AI Office formally sent requests for information to providers of general-purpose AI models based in different regions of the world.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "The RFIs concern model security, independent external evaluations, and the monitoring of models once they are available on the market.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "Euractiv's exclusive identified the RFI recipients as leading frontier labs, reportedly including OpenAI, Anthropic, and Google.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "General-purpose AI obligations under the EU AI Act became enforceable on August 2, 2026.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "The EU AI Office used its new enforcement powers within four weeks of them becoming active on August 2, 2026.", sourceUrl: "https://tokenstead.ai/guides/eu-ai-act-first-enforcement-security-rfis" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Act 2026 was signed into law by President Connolly on July 21, 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Paul Byrne was appointed as the first Chief Executive Officer of Oifig IS na hÉireann (the AI Office of Ireland).", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "The AI Office of Ireland is established as an independent statutory body under the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of EU AI Act Regulation (EU) 2024/1689.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "The AI Office of Ireland was expected to be operational by August 2, 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Ireland elected a distributed model of regulation to leverage off existing regulatory experience for EU AI Act implementation.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Act 2026 amends the Central Bank Act 1942 and the Competition and Consumer Protection Act 2014 to enable those bodies to impose administrative sanctions for A", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "The Regulation of Artificial Intelligence Act 2026 is structured in 10 Parts with 139 Sections and 4 Schedules.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Paul Byrne joins the AI Office of Ireland from the Medical Council of Ireland, where he served as Executive Director of Education, Innovation and Artificial Intelligence.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Paul Byrne is the President of the Council on Licensure, Enforcement and Regulation (CLEAR), the international alliance of professional and occupational regulators.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Paul Byrne is a member of the World Health Organization's Expert Working Group on Regulatory Considerations of AI for Health.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-13, note: "Ireland holds the Presidency of the Council of the EU at the time of implementing the Regulation of Artificial Intelligence Act 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
 draft: false
+updatedDate: 2026-09-13
 ---
 
 ## EU AI Office Deploys First Enforcement Powers
