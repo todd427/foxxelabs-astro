@@ -10,10 +10,12 @@ significance: "high"
 entities: ["arXiv", "PROMPT-SE", "EASE 2026", "Vincenzo De Martino"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-14, note: "The paper's stated goal is to move prompt engineering from predominantly ad hoc interactions toward more systematic, maintainable, evaluable, traceable, and governable software engineering practices.", sourceUrl: "https://arxiv.org/abs/2609.02248" }
+  - { date: 2026-09-14, note: "Wharton's second Prompting Science report found that several non-reasoning models made new mistakes on easy questions after being told to reason step by step.", sourceUrl: "https://www.thetechyside.com.au/posts/a-practical-guide-to-prompt-engineering-in-september-2026" }
   - { date: 2026-09-12, note: "The paper was authored by Vincenzo De Martino, Giovanna Broccia, Fabiano Pecorelli, Jennifer Horkoff, Riccardo Coppola, Antonino Ferraro, Quim Motger, Emma McKenzie, and Shahbaz Siddeeq.", sourceUrl: "https://arxiv.org/abs/2609.02248" }
   - { date: 2026-09-12, note: "The PROMPT-SE workshop was co-located with EASE 2026 and was the first international workshop on empirical prompt engineering for software engineering.", sourceUrl: "https://arxiv.org/abs/2609.02248" }
 draft: false
-updatedDate: 2026-09-12
+updatedDate: 2026-09-14
 ---
 
 ## New Research Agenda for Prompt Engineering in Software Development

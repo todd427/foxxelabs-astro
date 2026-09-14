@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-14, note: "The AI Office of Ireland's role includes coordinating competent authorities, acting as a single point of contact, and supporting consistent implementation of the EU AI Act.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-14, note: "The Irish government describes the Regulation of Artificial Intelligence Act 2026 as an implementing measure that provides the domestic structure needed for supervision and enforcement, and states it ", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-14, note: "Ireland is using a distributed model of AI Act implementation in which existing competent authorities retain sector-specific roles while the AI Office coordinates the overall framework.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-14, note: "Throughout September 2026, the European AI Office in Brussels, working alongside 24 national market surveillance authorities, will begin its first scheduled wave of compliance inspections.", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "French regulator CNIL, German BfDI, and Spanish AESIA will focus their initial September 2026 audit requests on three regulated sectors: automated resume screening tools in HR, algorithmic credit asse", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "By 15 September 2026, providers of GPAI foundation models that exceed the 10^25 FLOPs training threshold must submit their first formal systemic risk evaluations to the European AI Office.", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "The GPAI systemic risk evaluation submissions will include red-teaming methodologies, energy consumption disclosures, and compliance with a standardised copyright training summary template published i", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "The maximum statutory penalty for GPAI and limited-risk violations under the EU AI Act is €15 million or 3% of total global annual turnover.", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "Brazil's Federal Senate scheduled the final plenary floor vote on Bill 2338/2023 — its comprehensive AI legal framework — for 16 September 2026.", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "The United Kingdom's AI Regulation and Safety Bill is expected to advance to the House of Lords committee stage on 22 September 2026.", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
+  - { date: 2026-09-14, note: "The UK AI Regulation and Safety Bill would codify the statutory powers of the UK AI Safety Institute, establishing legally binding safety evaluation requirements for frontier foundation models before ", sourceUrl: "https://cubbbix.com/blog/ai-regulation-september-2026-global-update" }
   - { date: 2026-08-31, note: "MIT published a new machine-learning framework aimed at improving the success rate of computational protein design while moving away from results that reproduce sequences found in nature.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-08-31, note: "MIT developed a tool called 'CrysVCD' designed to reduce the time and money spent screening out chemically unstable materials designs.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-08-31, note: "MIT developed a new algorithm that learns to anticipate unprecedented scenarios that critical infrastructure and global supply chains are least prepared for.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
@@ -422,7 +433,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-08-31
+updatedDate: 2026-09-14
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
