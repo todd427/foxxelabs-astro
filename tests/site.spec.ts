@@ -7,9 +7,15 @@ test("home page renders the site chrome", async ({ page }) => {
   await expect(page.locator(".sitebar .brand")).toHaveText("Foxxe Labs");
   const nav = page.locator("nav.nav");
   await expect(nav).toBeVisible();
-  await expect(nav.locator("a")).toHaveCount(8);
   await expect(nav.locator('a[href="/"]')).toHaveClass(/active/);
   await expect(page.locator("#theme-toggle")).toBeVisible();
+  // Not a count -- links come and go -- but every one of them must resolve.
+  const hrefs = await nav.locator("a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+  expect(hrefs.length).toBeGreaterThanOrEqual(5);
+  for (const href of hrefs) {
+    const res = await page.request.get(href!);
+    expect(res.status(), `${href} should resolve`).toBe(200);
+  }
 });
 
 test("theme toggle switches data-theme", async ({ page }) => {
