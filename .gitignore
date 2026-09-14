@@ -41,3 +41,6 @@ pnpm-debug.log*
 
 # reverify-corpus.js run report (regenerated each run)
 data/reverify-report.json
+
+test-results/
+playwright-report/
