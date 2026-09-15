@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Anthropic", "Claude Opus 5", "Claude Opus 4.8", "Claude Max", "Claude Pro", "Claude Platform", "Claude Code"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-15, note: "Anthropic removed over 80% of Claude Code's system prompt for Claude Opus 5 and Claude Fable 5 models with no measurable loss on coding evaluations.", sourceUrl: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" }
+  - { date: 2026-09-15, note: "The blog post was authored by Thariq Shihipar, member of technical staff at Anthropic.", sourceUrl: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" }
+  - { date: 2026-09-15, note: "Anthropic found that for Claude 5 models, providing examples to guide tool usage constrains them to a narrower exploration space, and now recommends designing expressive tool interfaces instead.", sourceUrl: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" }
+  - { date: 2026-09-15, note: "Anthropic introduced a new Claude Code command called `claude doctor` (invoked via /doctor) to help users automatically rightsize their Skills and CLAUDE.md files for Claude 5 generation models.", sourceUrl: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" }
+  - { date: 2026-09-15, note: "Claude Opus 5 is built for complex agentic coding and enterprise work, with particular strengths in long-horizon agentic tasks.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
+  - { date: 2026-09-15, note: "Claude Opus 5 has a 1 million token context window as both the default and the maximum, with instruction following, tool calling, and reasoning stated to remain consistent throughout that window.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
+  - { date: 2026-09-15, note: "Claude Opus 5 runs with thinking enabled by default, and thinking can be disabled only at effort level 'high' or below.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
+  - { date: 2026-09-15, note: "Claude Opus 5 delegates to subagents more readily than prior Claude models, which multiplies cost and time when applied to small tasks.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
+  - { date: 2026-09-15, note: "Deterministic caps on subagent spawning in Claude Code are controlled via the environment variables CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH and CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS, and the SDK's max_bud", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
+  - { date: 2026-09-15, note: "The subagent spawn depth, concurrency, and spend cap environment variables require Claude Code version 2.1.217 or later.", sourceUrl: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5" }
   - { date: 2026-08-07, note: "Claude Opus 5 was made available on 24 July 2026.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
   - { date: 2026-08-07, note: "On OSWorld 2.0, Claude Opus 5 surpasses Fable 5's best result at just over a third of the cost.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
   - { date: 2026-08-07, note: "Claude Opus 5 adheres to Claude's Constitution better than Opus 4.8, Sonnet 5, or Fable 5, and exhibits the lowest rates of deceptive behavior among those models.", sourceUrl: "https://www.anthropic.com/news/claude-opus-5" }
@@ -38,7 +48,7 @@ updates:
   - { date: 2026-07-27, note: "Researchers led by Professor Han Zhang at Shenzhen University developed an all-fiber photonic AI platform using black phosphorus-based tunable modulators for medical diagnostics, achieving expert-leve", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
   - { date: 2026-07-27, note: "Researchers at the University of Cambridge announced that an AI-designed vaccine has successfully completed initial human trials, marking the first time a vaccine's key component was designed entirely", sourceUrl: "https://www.crescendo.ai/news/latest-ai-news-and-updates" }
 draft: false
-updatedDate: 2026-08-07
+updatedDate: 2026-09-15
 ---
 
 ## Launch and Availability

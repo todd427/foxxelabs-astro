@@ -10,6 +10,16 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-15, note: "Issue 4, Volume 20 contains 15 new articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-15, note: "The journal experienced a sharp increase in submissions in 2025, prompting the introduction of a summer break for new submissions.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-15, note: "Issue 2, Volume 20 was published on 14 April 2026 and contained eight open-access articles covering AI aversion, online sexual health knowledge, online dating, and videoconference fatigue.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-15, note: "The BPS Cyberpsychology Section was established in 2019.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "Dr Linda K. Kaye is a founding member and Past Chair of the BPS Cyberpsychology Section and is an Associate Head in the Department of Psychology at Edge Hill University.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "The BPS Cyberpsychology Section offers a participant-payment research fund of up to £500 per applicant, with applications closing on 30 September 2026 and invoices due by 18 December 2026.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "The BPS Cyberpsychology Section fund is restricted to participant payments only and cannot be used for staff time, equipment, software, travel, publication costs, or institutional overheads.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "Dr Darren Chadwick, a BPS Cyberpsychology Section committee member, is a Reader in Applied Psychology at the University of Wolverhampton specialising in ICT use by people with intellectual and develop", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "The BPS Cyberpsychology Section's industry liaison representative Paul Marsden lectures in fashion psychology at UAL (University of the Arts London) with a focus on the psychology of wearable technolo", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-15, note: "Membership of the BPS Cyberpsychology Section is restricted to members of the British Psychological Society.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
   - { date: 2026-09-13, note: "Cyberpsychology journal reopened its submission system on 1 September 2026 following a summer break, introducing updated submission requirements to strengthen quality, transparency, and reproducibilit", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-13, note: "A study of 200 university students aged 18–21 found that high screen time and excessive digital use were associated with emotional distress and poor sleep quality.", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
   - { date: 2026-09-13, note: "The study found an association between increased digital media use and intense anxiety, depression, stress, dark triad-related behaviour, and decreased mindfulness among participants.", sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/42630310/" }
@@ -265,7 +275,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-13
+updatedDate: 2026-09-15
 ---
 
 ## Summer Submission Break Announced

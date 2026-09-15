@@ -10,6 +10,10 @@ significance: "high"
 entities: ["European Commission", "EU AI Act", "AI Office", "Google DeepMind", "Jeff Dean", "Discovery Loop", "Koray Kavukcuoglu", "Anthropic", "OpenAI", "Meta", "AMD"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-15, note: "The press release announcing AI Act enforcement was published on 31 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-09-15, note: "The AI Office of Ireland acts as Ireland's central coordinating authority for implementing the EU AI Act.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-15, note: "Ireland is using a distributed enforcement model in which existing competent authorities retain sector-specific roles while the AI Office coordinates the overall framework.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-15, note: "The Irish government describes the Regulation of Artificial Intelligence Act 2026 as an implementing measure that provides the domestic structure needed for supervision and enforcement of the EU AI Ac", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
   - { date: 2026-09-04, note: "The Irish Government approved the publication of the Regulation of Artificial Intelligence Bill 2026 on 17 June 2026.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-09-04, note: "The Regulation of Artificial Intelligence Bill 2026 establishes Oifig IS na hÉireann (AI Office of Ireland) as an independent statutory body.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
   - { date: 2026-09-04, note: "The AI Office of Ireland will act as Ireland's central coordinating authority for the implementation of the EU AI Act.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/" }
@@ -59,7 +63,7 @@ updates:
   - { date: 2026-08-17, note: "The reason given for the Annex III deadline extension was procedural: member states were slow to designate national competent authorities, and harmonised standards and conformity assessment tools were", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
   - { date: 2026-08-17, note: "Article 5 of the EU AI Act, as amended, bans AI systems designed to generate non-consensual intimate imagery (nudifier applications) and child sexual abuse material.", sourceUrl: "https://www.technology.org/2026/07/17/eu-ai-act-what-actually-applies-on-2-august-2026/" }
 draft: false
-updatedDate: 2026-09-04
+updatedDate: 2026-09-15
 ---
 
 ## EU AI Act Transparency Rules Now Enforceable

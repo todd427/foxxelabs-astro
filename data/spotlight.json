@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-09-14T13:45:46.171Z",
+  "updatedAt": "2026-09-15T12:39:12.978Z",
   "pick": {
     "id": "TokenRhythm/NeoHorse-1-4B",
     "url": "https://hf.co/TokenRhythm/NeoHorse-1-4B",
     "author": "TokenRhythm",
     "name": "NeoHorse-1-4B",
-    "likes": 1772,
-    "downloads": 9520,
+    "likes": 1921,
+    "downloads": 11904,
     "createdAt": "2026-09-05T08:21:53.000Z",
-    "ageDays": 9,
+    "ageDays": 10,
     "blurb": "NeoHorse-1-4B is a 4B model with explicit agentic, tool-use, and reasoning tags built on Qwen3.5, designed for coding and instruction-following workloads. It has stronger engagement (1.7K likes) than the current pick and trades some long-context specificity for a tighter focus on tool-calling and reasoning patterns that many production workflows actually need.",
     "surfacedAt": "2026-09-13"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/openbmb/MiniCPM5-2B",
       "author": "openbmb",
       "name": "MiniCPM5-2B",
-      "likes": 1370,
-      "downloads": 206774,
+      "likes": 1422,
+      "downloads": 271754,
       "createdAt": "2026-09-06T11:12:19.000Z",
-      "ageDays": 8
+      "ageDays": 9
     },
     {
       "id": "nex-agi/Nex-N2.5-mini",
       "url": "https://hf.co/nex-agi/Nex-N2.5-mini",
       "author": "nex-agi",
       "name": "Nex-N2.5-mini",
-      "likes": 776,
-      "downloads": 4543,
+      "likes": 798,
+      "downloads": 5202,
       "createdAt": "2026-09-08T05:08:43.000Z",
-      "ageDays": 6
+      "ageDays": 7
     },
     {
       "id": "nex-agi/Nex-N2.5-Pro",
       "url": "https://hf.co/nex-agi/Nex-N2.5-Pro",
       "author": "nex-agi",
       "name": "Nex-N2.5-Pro",
-      "likes": 630,
-      "downloads": 30489,
+      "likes": 642,
+      "downloads": 30881,
       "createdAt": "2026-09-08T11:01:41.000Z",
-      "ageDays": 6
+      "ageDays": 7
     },
     {
       "id": "XHToken/Spark-X2.5-4B",
       "url": "https://hf.co/XHToken/Spark-X2.5-4B",
       "author": "XHToken",
       "name": "Spark-X2.5-4B",
-      "likes": 1164,
-      "downloads": 24084,
+      "likes": 1189,
+      "downloads": 25650,
       "createdAt": "2026-08-24T06:34:34.000Z",
-      "ageDays": 21
+      "ageDays": 22
     },
     {
       "id": "thesysdev/OUI-1",
       "url": "https://hf.co/thesysdev/OUI-1",
       "author": "thesysdev",
       "name": "OUI-1",
-      "likes": 106,
-      "downloads": 1669,
+      "likes": 114,
+      "downloads": 1869,
       "createdAt": "2026-09-07T15:11:21.000Z",
-      "ageDays": 7
+      "ageDays": 8
     }
   ]
 }

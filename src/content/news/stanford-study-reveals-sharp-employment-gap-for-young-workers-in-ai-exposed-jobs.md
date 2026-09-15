@@ -10,6 +10,23 @@ significance: "high"
 entities: ["Stanford Digital Economy Lab", "Erik Brynjolfsson", "Bharat Chandar", "Ruyu Chen", "ADP", "ChatGPT"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-15, note: "There is no widespread, economy-wide job displacement associated with AI, according to payroll data from ADP analysed by Stanford Digital Economy Lab researchers Erik Brynjolfsson, Bharat Chandar, and", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-09-15, note: "Experienced workers in AI-exposed occupations show no comparable employment gap to that seen among workers aged 22–25.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-09-15, note: "Employment has declined among young workers in occupations relying heavily on codified knowledge, while employment has increased among experienced workers in occupations relying more heavily on tacit ", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-09-15, note: "Women face greater AI exposure on average, identified as an important source of heterogeneity in the Stanford Digital Economy Lab's updated Canaries in the Coal Mine paper.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
+  - { date: 2026-09-15, note: "PwC's 2026 Global AI Jobs Barometer analysed more than one billion job advertisements across 27 countries and territories.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Jobs requiring specific AI skills are growing approximately eight times (69%) faster than the total jobs market (9%).", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "The average wage premium for workers with AI skills rose to 62%, up from 57% the previous year.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "The wage premium for AI skills reaches as high as 118% in consumer markets and as low as 16% in government and public sector work.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Headcount growth at the most AI-exposed companies is outpacing growth at the least AI-exposed companies: 52% versus 36% in 2025, measured against a 2018 baseline.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018, nearly five times higher than the most AI-exposed companies overall.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Companies in the most AI-exposed sectors recorded 34% productivity growth in 2025 relative to 2018, compared to 24% for companies least able to use AI.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "'Professionalised' roles — where AI automates routine tasks so human judgement is emphasised — are seeing twice the growth in available jobs and 42% faster salary growth than 'democratised' roles wher", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Based on analysis of 2.4 million entry-level US job postings, entry-level roles most exposed to AI are now seven times more likely to require traditionally senior-level skills such as leadership, crea", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "AI-exposed entry-level roles that require senior-level skills grew 35% since 2019, while other entry-level roles declined by 10% over the same period.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "The number of AI jobs is almost twice as high as in 2024, with growth in AI jobs outpacing all jobs since 2015.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Technology, media and telecommunications (11%) and professional services (6%) saw the highest share of AI job growth; health saw the lowest at less than 1%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
+  - { date: 2026-09-15, note: "Most AI-exposed companies are seeing faster wage growth than least AI-exposed companies: 24% versus 17%.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-08-27, note: "Women face greater AI exposure on average than men, according to the Stanford Digital Economy Lab's updated analysis.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-27, note: "So far, adjustment to AI exposure among young workers is showing up primarily in employment levels rather than base pay.", sourceUrl: "https://digitaleconomy.stanford.edu/news/canariesaug26/" }
   - { date: 2026-08-27, note: "AI-related roles are being created in Ireland at two to three times the pace observed in neighbouring countries, according to a report from the Expert Group on Future Skills Needs (EGFSN).", sourceUrl: "https://www.irishtimes.com/business/work/2026/08/24/ireland-creating-ai-jobs-at-up-to-three-times-pace-of-neighbouring-countries/" }
@@ -41,7 +58,7 @@ updates:
   - { date: 2026-08-21, note: "Bloomberg Economics estimates that 30% of workers in Ireland are likely to be meaningfully affected by AI, above the 27% advanced-economy average.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
   - { date: 2026-08-21, note: "Ireland's unemployment rate is below the euro-area average as of July 2026.", sourceUrl: "https://theprint.in/world/ai-job-disruption-has-come-for-irelands-technology-sector/2978482/" }
 draft: false
-updatedDate: 2026-08-27
+updatedDate: 2026-09-15
 ---
 
 ## Stanford Releases Updated 'Canaries in the Coal Mine' Analysis
