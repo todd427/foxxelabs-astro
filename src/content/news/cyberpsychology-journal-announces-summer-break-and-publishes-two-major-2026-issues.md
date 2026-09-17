@@ -10,6 +10,9 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-17, note: "The submission portal reopened on 1 September 2026 with updated submission requirements to strengthen quality, transparency, and reproducibility.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-17, note: "Issue 3 of Volume 20 was published on 26 June 2026 and contains 12 articles covering topics including online incivility and victimisation, digital piracy, and presentation on social media.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-17, note: "The BPS Cyberpsychology Section offers a research participant funding grant of up to £500 per applicant, invoiceable by 18 December 2026.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
   - { date: 2026-09-15, note: "Issue 4, Volume 20 contains 15 new articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-15, note: "The journal experienced a sharp increase in submissions in 2025, prompting the introduction of a summer break for new submissions.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-15, note: "Issue 2, Volume 20 was published on 14 April 2026 and contained eight open-access articles covering AI aversion, online sexual health knowledge, online dating, and videoconference fatigue.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -275,7 +278,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-15
+updatedDate: 2026-09-17
 ---
 
 ## Summer Submission Break Announced

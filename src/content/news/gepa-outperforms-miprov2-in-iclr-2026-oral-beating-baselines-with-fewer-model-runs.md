@@ -9,8 +9,12 @@ sourceUrl: "https://www.thetechyside.com.au/posts/a-practical-guide-to-prompt-en
 significance: "high"
 entities: ["GEPA", "ICLR 2026", "DSPy", "MIPROv2", "Anthropic", "OpenAI", "Wharton", "USC"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-17, note: "Anthropic published 'The new rules of context engineering for Claude 5 generation models' on 24 July 2026.", sourceUrl: "https://www.thetechyside.com.au/posts/a-practical-guide-to-prompt-engineering-in-september-2026" }
+  - { date: 2026-09-17, note: "Several non-reasoning models made new mistakes on easy questions after being told to reason step by step.", sourceUrl: "https://www.thetechyside.com.au/posts/a-practical-guide-to-prompt-engineering-in-september-2026" }
+  - { date: 2026-09-17, note: "GEPA, an ICLR 2026 oral paper, improves prompts by reviewing execution traces and proposing new instructions, reporting better results than MIPROv2 and a reinforcement-learning baseline with far fewer", sourceUrl: "https://www.thetechyside.com.au/posts/a-practical-guide-to-prompt-engineering-in-september-2026" }
 draft: false
+updatedDate: 2026-09-17
 ---
 
 ## GEPA Advances Prompt Optimization at ICLR 2026

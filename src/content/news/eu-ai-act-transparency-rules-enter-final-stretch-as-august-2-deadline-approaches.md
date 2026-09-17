@@ -10,6 +10,10 @@ significance: "high"
 entities: ["European Commission", "EU AI Office", "AI Act", "Article 50", "Digital Omnibus"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-17, note: "The AI Act simplification proposal forms part of the 'Omnibus VII' legislative package in the EU's simplification agenda.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-09-17, note: "The provisional agreement introduces a fixed new application date of 2 December 2027 for stand-alone high-risk AI systems.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-09-17, note: "The provisional agreement adds a new prohibited AI practice covering the generation of non-consensual sexual and intimate content or child sexual abuse material (CSAM).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-09-17, note: "The Commission proposed to adjust the timeline for applying rules on high-risk AI systems by up to 16 months, contingent on confirmation that needed standards and tools are available.", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
   - { date: 2026-08-29, note: "Europe's AI Office has not gone after any companies covered under the law for misconduct as of 28 August 2026, but it can now request information from companies or ask for access to models.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
   - { date: 2026-08-29, note: "Anthropic announced that future Claude models will generate text that contains a watermark to comply with the EU AI Act.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
   - { date: 2026-08-29, note: "Anthropic says watermarked text will be indistinguishable to readers, but plans to offer a 'watermark detection API' to users soon.", sourceUrl: "https://www.axios.com/2026/08/28/eu-ai-act-gets-real" }
@@ -280,7 +284,7 @@ updates:
   - { date: 2026-07-22, note: "Transparency obligations will help people recognise when they are interacting with AI or when content has been generated or altered by AI, reducing the risk of deception and manipulation.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems" }
   - { date: 2026-06-14, note: "European Commission releases draft high-risk AI classification guidelines ahead of August 2026 enforcement, with Ireland hosting AI summit during EU presidency.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
 draft: false
-updatedDate: 2026-08-29
+updatedDate: 2026-09-17
 ---
 
 ## Key Developments

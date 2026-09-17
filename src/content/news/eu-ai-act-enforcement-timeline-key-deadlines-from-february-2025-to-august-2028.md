@@ -10,6 +10,20 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-17, note: "From 2 August 2026, the EU AI Office and national authorities began enforcing the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "In November 2025, the European Commission proposed targeted amendments to the AI Act as part of the digital simplification package, referred to as the 'AI Omnibus'.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "The European Commission published guidelines on transparency obligations for providers and deployers of certain AI systems on 20 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "The EU launched a call for tenders to establish up to seven AI Gigafactories across Europe on 30 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "The EU's AI Gigafactories call aims to unlock more than €30 billion in investment.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "AI Act obligations for providers of General-Purpose AI (GPAI) models entered into application on 2 August 2025.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
+  - { date: 2026-09-17, note: "A new MIT AI technique called 'xvr' helps doctors use X-rays for surgical navigation in fields such as orthopedics and neurosurgery.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "The xvr technique is patient-specific.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "MIT developed a 'HardFlow' algorithm that can help generative AI models produce outputs that obey strict requirements.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "The HardFlow algorithm is aimed at safety-critical situations where approximate outputs are insufficient.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "MIT Lincoln Laboratory and Massachusetts General Hospital jointly created the handheld catheterization device AI-GUIDE.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "The AI-GUIDE device won the 2026 Excellence in Technology Transfer Award.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "AI-GUIDE promises improved health outcomes for injured service members and civilians.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
+  - { date: 2026-09-17, note: "A new MIT method called CW-Net translates the reasoning process of an autonomous vehicle's AI system into understandable concepts that explain its behaviour.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-09-15, note: "Deepfakes — images, videos, or audio edited or generated using AI — must be labelled under the new rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-09-15, note: "The AI Office has power to request technical documentation from GPAI model providers, run evaluations, demand corrective steps, and issue fines.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
   - { date: 2026-09-15, note: "National competent authorities take on enforcement for AI systems other than GPAI models, operating within their borders.", sourceUrl: "https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/" }
@@ -515,7 +529,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-09-15
+updatedDate: 2026-09-17
 ---
 
 ## The EU AI Act's Phased Entry into Force

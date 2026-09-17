@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-17, note: "Ireland adopted a distributed model of AI regulation, coordinating the activities of multiple existing sectoral competent authorities rather than a single regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-17, note: "Fines for breaching the EU AI Act transparency obligations are up to €15 million, or 3% of global annual turnover, for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-17, note: "The EU has created a set of icons that can be used to label AI-generated content under the new transparency obligations.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-15, note: "Minister Peter Burke stated that the Bill establishes the AI Office of Ireland as a strong, independent institution and empowers Competent Authorities with investigative and sanctions tools.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-09-15, note: "Ireland's EU Council Presidency will hold an international AI summit on 14 October 2026.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
   - { date: 2026-09-15, note: "Minister Niamh Smyth described the 14 October AI summit as 'one of the most important events' of the Presidency, with a particular focus on AI adoption by businesses and SMEs.", sourceUrl: "https://euperspectives.eu/2026/09/irish-presidency-puts-competitiveness-ai-and-copyright-at-center-of-agenda/" }
@@ -443,7 +446,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-09-15
+updatedDate: 2026-09-17
 ---
 
 ## The Bill's Purpose and Structure
