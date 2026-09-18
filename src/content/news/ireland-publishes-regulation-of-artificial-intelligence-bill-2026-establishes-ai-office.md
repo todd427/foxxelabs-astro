@@ -10,6 +10,10 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-18, note: "Under the new rules, chatbots and other interactive AI systems must tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
+  - { date: 2026-09-18, note: "The Irish AI Office was expected to be operational by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-18, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating across relevant competent authorities rather than a single regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-18, note: "Ireland holds the Presidency of the Council of the EU at the time the Regulation of Artificial Intelligence Act 2026 was established.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-09-14, note: "The AI Office of Ireland's role includes coordinating competent authorities, acting as a single point of contact, and supporting consistent implementation of the EU AI Act.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
   - { date: 2026-09-14, note: "The Irish government describes the Regulation of Artificial Intelligence Act 2026 as an implementing measure that provides the domestic structure needed for supervision and enforcement, and states it ", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
   - { date: 2026-09-14, note: "Ireland is using a distributed model of AI Act implementation in which existing competent authorities retain sector-specific roles while the AI Office coordinates the overall framework.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
@@ -433,7 +437,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-09-14
+updatedDate: 2026-09-18
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

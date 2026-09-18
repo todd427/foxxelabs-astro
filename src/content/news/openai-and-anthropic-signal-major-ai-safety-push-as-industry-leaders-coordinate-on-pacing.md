@@ -9,8 +9,25 @@ sourceUrl: "https://fortune.com/2026/09/12/openai-ceo-sam-altman-safety-pact-ai-
 significance: "high"
 entities: ["OpenAI", "Anthropic", "Sam Altman", "Dario Amodei", "Fortune", "Bloomberg News"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-09-18, note: "OpenAI's global policy chief Chris Lehane confirmed on September 15, 2026 that OpenAI has been working with Anthropic and Google DeepMind on AI safety for several weeks.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "Lehane was in Washington to work with U.S. lawmakers addressing catastrophic risks associated with AI.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "Anthropic CEO Dario Amodei published an essay on September 13, 2026 calling for the industry to collectively slow the pace of frontier AI development to avoid catastrophic risks.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "Sam Altman stated that OpenAI would join Anthropic in embedding third-party evaluators into the company to monitor for safety.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "OpenAI CEO Sam Altman, Google DeepMind's Demis Hassabis, and Elon Musk all publicly expressed support for Amodei's call to action on slowing frontier AI development.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "Lehane stated that OpenAI does not believe an antitrust waiver is necessary for the three firms (OpenAI, Anthropic, Google DeepMind) to coordinate on AI safety matters.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "The Information reported that OpenAI, Anthropic, and Google DeepMind have been working together to create an AI industry standards body.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "Demis Hassabis called in July 2026 for the U.S. to establish a new AI standards body with the power to screen the world's most advanced models and coordinate industrywide slowdowns if dangers progress", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "OpenAI's Chris Lehane stated that OpenAI supports a provision in the FRONTIER Act that would require top frontier labs to allow independent verification organisations into their companies to ensure mo", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "President Trump dismissed AI safety concerns as a hoax and pushed back on the need for tighter regulations, arguing any slowdown would give China a competitive advantage.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-18, note: "GPT-6 Astra has standard API pricing of $10 input / $50 output per 1M tokens, with $1 per 1M for cached input and $12.50 per 1M for cache writes.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-09-18, note: "OpenAI launched Astra for Law on September 17, 2026, combining GPT-6 Astra with a legal search index and instructions for legal analysis and writing, initially available only to select law firms.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-09-18, note: "Anthropic released Claude Fable 5.1 on September 1, 2026 at the same price as Fable 5 ($10 input / $50 output per 1M tokens).", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-09-18, note: "Claude Fable 5.1's cache read pricing dropped to $0.25 per 1M tokens compared to Fable 5.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-09-18, note: "Anthropic self-reported Claude Fable 5.1's Terminal-Bench-Science score as 52.6, compared to 24.7 for Claude Fable 5.", sourceUrl: "https://llm-stats.com/ai-news" }
+  - { date: 2026-09-18, note: "Anthropic also released Claude Mythos 5.1 on September 1, 2026 as a trusted-access counterpart to Fable 5.1.", sourceUrl: "https://llm-stats.com/ai-news" }
 draft: false
+updatedDate: 2026-09-18
 ---
 
 ## Sam Altman Hints at Industry-Wide Safety Collaboration
