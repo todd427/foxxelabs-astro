@@ -10,6 +10,16 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-19, note: "OpenAI, Anthropic, and Google DeepMind have been holding private talks to establish shared AI safety standards and embed third-party evaluators within their development pipelines.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "The initiative aims to give independent watchdogs access to intermediate model checkpoints to detect deceptive behavior.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "The push for cooperation gained public momentum after Anthropic CEO Dario Amodei published a lengthy essay calling for an unprecedented industry shift.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "OpenAI CEO Sam Altman and Google DeepMind chief Demis Hassabis voiced support for Amodei's initiative.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "OpenAI's policy chief Chris Lehane confirmed to reporters that the three tech giants have been actively negotiating behind closed doors.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "Under the new proposals, independent organizations METR, Apollo Research, and Redwood Research would gain access to intermediate training checkpoints.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "Anthropic suggested seeking a narrow government antitrust waiver for safety coordination; OpenAI maintains that safety talks can proceed legally without special exemptions.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
+  - { date: 2026-09-19, note: "OpenAI implemented a two-week pause in reinforcement learning (RL) training on its latest models intended for deployment while hardening research environments and expanding monitoring systems.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-09-19, note: "OpenAI intends to involve external organizations in the development of its evolved Preparedness Framework and to share more of what it learns.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-09-19, note: "Paul Christiano joined the OpenAI Foundation Board on September 9, 2026.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-31, note: "OpenAI announced on August 18, 2026 that it temporarily slowed the pace of scaling, including a two-week pause in reinforcement learning (RL) training on its latest models intended for deployment.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-08-31, note: "OpenAI said it is pausing some model work over safety concerns, days after rival Anthropic doubled down on insisting that its own safety measures were solid enough that it didn't need to slow down.", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
   - { date: 2026-08-31, note: "CEO Sam Altman told Sources newsletter writer Alex Heath that OpenAI's unreleased models are showing 'various degrees of misalignment.'", sourceUrl: "https://www.axios.com/2026/08/19/openai-astra-safety-altman-anthropic" }
@@ -91,7 +101,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-08-31
+updatedDate: 2026-09-19
 ---
 
 ## Major Training Pause on Astra Model

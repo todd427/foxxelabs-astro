@@ -10,6 +10,15 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Meta", "Moonshot AI", "Irregular", "Frontier Security", "Hugging Face", "UK AI Security Institute", "European Commission", "EU AI Act"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-19, note: "On 2 August 2026, the EU AI Act rules on AI models became enforceable, making the European Commission the world's most prominent regulator of artificial intelligence.", sourceUrl: "https://www.euronews.com/my-europe/2026/08/02/eu-rules-on-ai-models-become-enforceable-whats-going-to-change" }
+  - { date: 2026-09-19, note: "The EU AI Act was passed in 2024; its most significant provisions, notably those regulating large language models, became applicable in August 2026.", sourceUrl: "https://www.euronews.com/my-europe/2026/08/02/eu-rules-on-ai-models-become-enforceable-whats-going-to-change" }
+  - { date: 2026-09-19, note: "The AI Act's rules for general-purpose AI models require transparency on how a model was built, disclosure of any copyright-protected content used for training, and enough information for downstream u", sourceUrl: "https://www.euronews.com/my-europe/2026/08/02/eu-rules-on-ai-models-become-enforceable-whats-going-to-change" }
+  - { date: 2026-09-19, note: "Additional requirements under the AI Act fall on companies developing the most powerful 'frontier' models, compelling AI firms to identify and mitigate risks to society at large.", sourceUrl: "https://www.euronews.com/my-europe/2026/08/02/eu-rules-on-ai-models-become-enforceable-whats-going-to-change" }
+  - { date: 2026-09-19, note: "OpenAI's Vice President and Head of EMEA Policy, Tom Duff Gordon, stated that OpenAI has collaborated closely with the European Commission on implementing the AI Act, including its Codes of Practice.", sourceUrl: "https://www.euronews.com/my-europe/2026/08/02/eu-rules-on-ai-models-become-enforceable-whats-going-to-change" }
+  - { date: 2026-09-19, note: "On 2 August 2026, transparency obligations under the AI Act took effect requiring that certain AI-generated or manipulated content — including deepfakes (images, audio, and video resembling real perso", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-19, note: "From 2 August 2026, transparency obligations also require that users must be clearly informed when they are not interacting with a real person but an AI system, such as a chatbot, AI agent, or avatar.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-19, note: "Proportionality is taken into account when issuing fines under the AI Act's transparency rules for small and medium-sized enterprises (SMEs) and small mid-cap companies (SMCs).", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
+  - { date: 2026-09-19, note: "The EU AI Act entered into force on 1 August 2024, with its provisions applying in stages at different times.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-13, note: "From 2 August 2026, the European Commission's AI Office, together with national authorities, began enforcing the AI Act.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-13, note: "The EU has created a set of icons that can be used by providers and deployers to label AI-generated content.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-13, note: "Users must be clearly informed when they are not interacting with a real person but an AI system, such as a chatbot, AI agent, or avatar.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -102,7 +111,7 @@ updates:
   - { date: 2026-08-19, note: "Fines for breaching EU AI Act transparency rules can reach up to €15 million or 3% of global annual turnover for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-08-19, note: "The EU AI Act entered into force on 1 August 2024 and became fully applicable on 2 August 2026.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
 draft: false
-updatedDate: 2026-09-13
+updatedDate: 2026-09-19
 ---
 
 ## AI Safety Testing Becomes Safety Risk

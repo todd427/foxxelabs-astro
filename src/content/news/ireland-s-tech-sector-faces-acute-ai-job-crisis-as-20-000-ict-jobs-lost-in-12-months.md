@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Ireland", "ICT sector", "Meta", "Covalen", "Oracle", "IrishJobs", "Stanford Digital Economy Lab"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-19, note: "The IMF said that realising AI productivity gains requires continuous reskilling and upskilling of Ireland's labour force.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-09-19, note: "Oracle told the Irish Government it plans to cut approximately 150 Irish jobs — about 15 per cent of its Irish workforce — due to a cash crunch related to AI spending.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-09-19, note: "IMF mission chief to Ireland Yan Sun said that approximately 40 per cent of jobs globally could be exposed — either replaced or complemented — by AI, and that Ireland's exposure is higher than most ad", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-09-19, note: "Irish government sources said they anticipated further AI-related job cuts over the coming months (as of late May 2026).", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
+  - { date: 2026-09-19, note: "Ireland is generating jobs requiring AI skills at between two and three times the pace of neighbouring countries.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "The proportion of Irish job advertisements referencing AI has roughly doubled since 2023.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "AI is likely responsible for at least some of a recent slowdown in youth employment in Ireland, according to a report from the Expert Group on Future Skills Needs (EGFSN).", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "CSO figures show employment growth among people aged 15 to 24 in Ireland has been flat over the past two years and contracted over the past year.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "Employment across the Irish economy grew by an average of 2.2 per cent over the same two-year period during which youth employment was flat.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "The EGFSN report concludes that AI is currently complementing workers rather than replacing them, with its immediate impact described as being about reorganisation of tasks, time savings, and changing", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
+  - { date: 2026-09-19, note: "The EGFSN report states that AI will replace certain tasks and occupations, describing some displacement as inevitable.", sourceUrl: "https://www.thejournal.ie/ai-adoption-youth-employment-business-ireland-7140021-Aug2026/" }
   - { date: 2026-07-16, note: "PwC analysed more than one billion job advertisements in 27 countries and territories for the 2026 Global AI Jobs Barometer.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-07-16, note: "Companies operating in the most AI-exposed sectors recorded 34% productivity growth in 2025 relative to 2018, compared to 24% for companies least able to use AI.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
   - { date: 2026-07-16, note: "The top 20% of the most AI-exposed companies achieved average labour productivity growth of 163% relative to 2018 – nearly five times higher than the most AI-exposed companies overall.", sourceUrl: "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" }
@@ -25,7 +36,7 @@ updates:
   - { date: 2026-07-16, note: "Oracle plans to axe some 150 Irish jobs, about 15 per cent of its workforce in the Republic, as the group deals with a cash crunch related to spending on AI.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
   - { date: 2026-07-16, note: "IMF mission chief to Ireland Yan Sun stated that Ireland's exposure to AI transformation is higher than most advanced countries.", sourceUrl: "https://www.irishtimes.com/business/economy/2026/05/25/ireland-more-exposed-to-economic-risks-of-ai-than-other-countries-says-imf/" }
 draft: false
-updatedDate: 2026-07-16
+updatedDate: 2026-09-19
 ---
 
 ## Ireland's ICT Employment Crisis
