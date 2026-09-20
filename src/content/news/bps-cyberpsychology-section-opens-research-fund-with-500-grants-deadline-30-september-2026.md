@@ -9,8 +9,15 @@ sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section"
 significance: "medium"
 entities: ["British Psychological Society", "BPS Cyberpsychology Section", "Dr Linda K. Kaye", "Dr Lisa J. Orchard", "Dr John Blythe"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-20, note: "Dr Dawn Branley-Bell is the current Chair of the BPS Cyberpsychology Section.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-20, note: "Dr Lisa Orchard's current research focuses on the role of social media within breastfeeding promotion, support, and decision-making.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-20, note: "Dr Catherine Talbot's current research focuses on the social identities of people with dementia in online settings.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-20, note: "The BPS Cyberpsychology Section participant payment fund requires the BPS to be invoiced by Friday 18 December 2026.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-20, note: "The fund is specifically intended to cover participant payments such as vouchers or payments to participants recruited through online research recruitment platforms, for example Prolific.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-20, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published a new issue on 4 September 2026 containing 15 new articles.", sourceUrl: "https://cyberpsychology.eu/" }
 draft: false
+updatedDate: 2026-09-20
 ---
 
 ## Research Fund Now Open

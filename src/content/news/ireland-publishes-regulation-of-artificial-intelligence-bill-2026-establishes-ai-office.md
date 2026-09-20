@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-20, note: "The EU AI Board met on 17 September 2026 under the Irish Presidency of the EU Council.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "At the 17 September 2026 EU AI Board meeting, the Commission briefed members on new frontier AI capabilities and recent AI incidents.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "The Commission delivered an update on AI Act transparency rules that took effect on 2 August 2026, including the Code of Practice and related guidelines.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "Board members discussed cooperation on market surveillance and governance structures for pre-market conformity assessment, as required under the EU AI Act.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "A proposal to introduce a secondment programme for market surveillance authorities to the European Data Protection Supervisor was discussed at the 17 September 2026 EU AI Board meeting.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "The EU AI Board received an update on an Action Plan on Cybersecurity and AI at the 17 September 2026 meeting.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "The tenth EU AI Board meeting is scheduled for 18 November 2026, on the sidelines of the Apply AI Summit in Brussels on 17 November.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "The European AI Innovation Month opens on 14 October 2026 in Dublin at the International AI Summit.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "The Apply AI Summit in Brussels on 17 November will close the European AI Innovation Month.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
+  - { date: 2026-09-20, note: "Ireland has elected a distributed model of regulation for the EU AI Act, leveraging existing regulatory experience across multiple sectoral authorities.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-09-18, note: "Under the new rules, chatbots and other interactive AI systems must tell users they are dealing with AI, not a human.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" }
   - { date: 2026-09-18, note: "The Irish AI Office was expected to be operational by 2 August 2026.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-09-18, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating across relevant competent authorities rather than a single regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
@@ -437,7 +447,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-09-18
+updatedDate: 2026-09-20
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
