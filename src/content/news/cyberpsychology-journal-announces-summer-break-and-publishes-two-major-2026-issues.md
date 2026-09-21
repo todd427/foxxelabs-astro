@@ -10,6 +10,14 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-21, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is a diamond open access journal, meaning it charges no fees to authors or readers.", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'AI-based writing assistants for emotional tone: Investigating users' acceptance and recipients' perceptions in online negotiations', authored by Josephin", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Immerse & befriend: The role of synthetic relationship perception and narrative transportation in a mental health app', authored by Marisa Tschopp, Stefa", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Perceptions of AI-generated profile pictures: Effects on quality, attractiveness, and trustworthiness', authored by Jacob Long, Jingyi Xiao, Shamira McCr", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'No evidence of protection: Imaginary bulletproof glass fails to reduce psychological harm in content moderation', authored by Chloe McDonough, Sarah Lewi", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Adolescents' social media use and conspiracy beliefs: The moderating role of rational and experiential thinking', authored by Magdalena Iwanowska, Rosana", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Bridging the digital divide: How smartphones are associated with physical, psychological, and social well-being in marginalized groups', authored by Ilen", sourceUrl: "https://cyberpsychology.eu/" }
+  - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Disentangling the paradox of the privacy paradox on social media: The role of privacy dimensions, perceived benefits, privacy self-efficacy, and privacy ", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-18, note: "Issue 3, Volume 20 was published on 26 June 2026 and contained 12 articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-18, note: "Issue 2, Volume 20 was published on 14 April 2026 and contained 8 articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-18, note: "The journal is a diamond open access publication, meaning it charges no fees to authors or readers.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -282,7 +290,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-18
+updatedDate: 2026-09-21
 ---
 
 ## Summer Submission Break Announced

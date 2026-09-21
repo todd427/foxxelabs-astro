@@ -10,6 +10,12 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-21, note: "The EU AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and became applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-21, note: "Prohibition 9 of the AI Act — covering AI systems that generate non-consensual sexually explicit and intimate content or CSAM material, such as AI nudification apps — comes into effect in December 202", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-21, note: "Under the AI Omnibus, rules for high-risk AI systems in sensitive areas (Annex III), including biometrics, critical infrastructure, education, employment, and migration, will apply from 2 December 202", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-21, note: "From 2 August 2026, the EU AI Office holds enforcement powers over General-Purpose AI (GPAI) models, including the ability to request technical documentation, evaluate models, require corrective measu", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-21, note: "The AI Omnibus extends certain simplified requirements — previously granted only to SMEs — to small mid-cap companies (SMCs), including simplified technical documentation requirements.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-21, note: "On 19 June 2026, the Commission selected the EUROPA consortium as the winner of the Frontier AI Grand Challenge, a project to build a European open-source frontier AI model in all 24 EU languages.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-09-20, note: "The EU AI Board met on 17 September 2026 under the Irish Presidency of the EU Council.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
   - { date: 2026-09-20, note: "At the 17 September 2026 EU AI Board meeting, the Commission briefed members on new frontier AI capabilities and recent AI incidents.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
   - { date: 2026-09-20, note: "The Commission delivered an update on AI Act transparency rules that took effect on 2 August 2026, including the Code of Practice and related guidelines.", sourceUrl: "https://completeaitraining.com/news/eu-ai-board-discusses-frontier-ai-capabilities-and/" }
@@ -447,7 +453,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-09-20
+updatedDate: 2026-09-21
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

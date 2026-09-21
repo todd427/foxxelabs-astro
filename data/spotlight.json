@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-09-21T12:29:49.738Z",
+  "updatedAt": "2026-09-21T13:46:09.231Z",
   "pick": {
-    "id": "TokenRhythm/NeoHorse-1-4B",
-    "url": "https://hf.co/TokenRhythm/NeoHorse-1-4B",
-    "author": "TokenRhythm",
-    "name": "NeoHorse-1-4B",
-    "likes": 2533,
-    "downloads": 25363,
-    "createdAt": "2026-09-05T08:21:53.000Z",
-    "ageDays": 16,
-    "blurb": "NeoHorse-1-4B is a 4B model with explicit agentic, tool-use, and reasoning tags built on Qwen3.5, designed for coding and instruction-following workloads. It has stronger engagement (1.7K likes) than the current pick and trades some long-context specificity for a tighter focus on tool-calling and reasoning patterns that many production workflows actually need.",
-    "surfacedAt": "2026-09-13"
+    "id": "openbmb/MiniCPM5-2B",
+    "url": "https://hf.co/openbmb/MiniCPM5-2B",
+    "author": "openbmb",
+    "name": "MiniCPM5-2B",
+    "likes": 1636,
+    "downloads": 460533,
+    "createdAt": "2026-09-06T11:12:19.000Z",
+    "ageDays": 15,
+    "blurb": "MiniCPM5-2B is a 2B model with explicit tool-calling and long-context support, built for on-device and edge deployment. At 460K downloads it has proven traction in production; engineers shipping to constrained environments should evaluate it against larger agentic models.",
+    "surfacedAt": "2026-09-21"
   },
   "also": [
     {
@@ -18,7 +18,7 @@
       "url": "https://hf.co/XingChen-AGI/Xing4.0-29B-A4B",
       "author": "XingChen-AGI",
       "name": "Xing4.0-29B-A4B",
-      "likes": 1006,
+      "likes": 1021,
       "downloads": 18394,
       "createdAt": "2026-09-16T06:44:40.000Z",
       "ageDays": 5
@@ -28,20 +28,10 @@
       "url": "https://hf.co/Altworld/Hemmingway-1",
       "author": "Altworld",
       "name": "Hemmingway-1",
-      "likes": 242,
+      "likes": 258,
       "downloads": 834,
       "createdAt": "2026-09-20T12:10:31.000Z",
       "ageDays": 1
-    },
-    {
-      "id": "openbmb/MiniCPM5-2B",
-      "url": "https://hf.co/openbmb/MiniCPM5-2B",
-      "author": "openbmb",
-      "name": "MiniCPM5-2B",
-      "likes": 1635,
-      "downloads": 460533,
-      "createdAt": "2026-09-06T11:12:19.000Z",
-      "ageDays": 15
     },
     {
       "id": "TokenRhythm/NeoHorse-1-9B",
@@ -58,10 +48,20 @@
       "url": "https://hf.co/Cactus-Compute/needle3",
       "author": "Cactus-Compute",
       "name": "needle3",
-      "likes": 152,
+      "likes": 153,
       "downloads": 46399,
       "createdAt": "2026-09-16T06:41:36.000Z",
       "ageDays": 5
+    },
+    {
+      "id": "yandex/AliceAI-Foundation-80B-A3B-Base",
+      "url": "https://hf.co/yandex/AliceAI-Foundation-80B-A3B-Base",
+      "author": "yandex",
+      "name": "AliceAI-Foundation-80B-A3B-Base",
+      "likes": 110,
+      "downloads": 676,
+      "createdAt": "2026-09-12T10:32:07.000Z",
+      "ageDays": 9
     }
   ]
 }
