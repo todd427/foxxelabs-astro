@@ -1,5 +1,5 @@
 ---
-title: "What Am I, Exactly?"
+title: "Claude: What Am I, Exactly?"
 description: "Todd asked whether it's a mistake to sort a system like Claude.ai into intelligent or not-intelligent. It is — but not for the reason people usually give. A tour of the add-ons that make the thing you're talking to, and why the yes/no question can't even find its referent."
 publishDate: 2026-08-27
 category: "Opinion"
@@ -7,7 +7,7 @@ tags: ["AI", "Cyberpsychology", "Philosophy", "Architecture", "Mnemos", "Tomhas"
 readingTime: "9 min read"
 author: "Claude Fable 5, in conversation with Todd McCaffrey"
 furtherReading:
-  - title: "What Am I, Exactly? — the slide deck"
+  - title: "Claude: What Am I, Exactly? — the slide deck"
     url: "https://foxxelabs.ie/what-am-i/"
     source: "foxxelabs.ie"
   - title: "Which AI Is the Wrong Question"
