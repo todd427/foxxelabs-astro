@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LlmGlobe from '../components/LlmGlobe.astro';
+import FeaturedResearch from '../components/FeaturedResearch.astro';
 import { PROJECTS } from '../data/tools.js';
 
 import { getCollection } from 'astro:content';
@@ -45,60 +46,9 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
   </section>
 
 
-  <!-- Featured Research Banner -->
-  <section class="featured-research">
-    <div class="featured-label">Featured Research</div>
-    <div class="featured-grid">
-      <a class="featured-card" href="/human-ai-interaction/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>Human-AI Interaction: A New Field</h2>
-        <p>Why HCI's assumptions broke, what the new field asks, who is doing the work — and six observations from the first three years of everyone using AI: adoption, real gains for novices, offloading, skill formation, miscalibrated trust, and the shift from tools to agents. Every claim linked to its source.</p>
-        <span class="featured-link">View presentation →</span>
-      </a>
-      <a class="featured-card" href="/what-am-i/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>What Am I, Exactly?</h2>
-        <p>Claude on why "intelligent / not intelligent" is the wrong question: intelligence is a bundle term, Claude.ai is a stack not a model, and the useful object is a map of where the reasoner-stance pays. With diagrams of every add-on.</p>
-        <span class="featured-link">View presentation →</span>
-      </a>
-      <a class="featured-card" href="/twenty-watts/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>20W — What It Costs to Train</h2>
-        <p>What it really costs to train a mind versus an AI — the energy, the data, the capability — in six charts, and why the obvious comparison misleads in both directions.</p>
-        <span class="featured-link">Read the piece →</span>
-      </a>
-      <a class="featured-card" href="/ai-bubble/index.html">
-        <span class="featured-tag">FoxxeLabs Research</span>
-        <h2>Managing the AI Bubble</h2>
-        <p>The economics of AI disruption: who captures value, what breaks, and positioning strategies for 2026–2028.</p>
-        <span class="featured-link">View presentation →</span>
-      </a>
-      <a class="featured-card" href="/after-the-bubble/index.html">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>After the Bubble: What Comes Next?</h2>
-        <p>The labour-for-wages model is breaking. Displacement, the meaning crisis, and cooperative on-ramps for Ireland.</p>
-        <span class="featured-link">Read the exploration →</span>
-      </a>
-      <a class="featured-card" href="/ai-timeline/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>AI Model Performance Timeline</h2>
-        <p>Interactive benchmark chart tracking every major ChatGPT and Claude release since 2022. The convergence story, visualised.</p>
-        <span class="featured-link">Explore the chart →</span>
-      </a>
-      <a class="featured-card" href="/does-ai-make-us-smarter/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>Does AI Make Us Smarter?</h2>
-        <p>A 44× multiplier on one practitioner's project-initiation rate. The augmentation case, the heavy-user cohort, and why the atrophy studies are measuring the wrong thing.</p>
-        <span class="featured-link">Read the argument →</span>
-      </a>
-      <a class="featured-card" href="/irish-economy/">
-        <span class="featured-tag new">FoxxeLabs Research — New</span>
-        <h2>The Model and the Tap</h2>
-        <p>Two readings of the Irish economy from CSO open data — the circular flow between institutional sectors, and the labour market as it is published. Why they are deliberately separate.</p>
-        <span class="featured-link">Read the explainer →</span>
-      </a>
-    </div>
-  </section>
+  <!-- Featured Research: cards, the visible cap and the collapse bar all live
+       in the component. Add a piece there, not here. -->
+  <FeaturedResearch />
 
   <section class="hero">
     <div class="card">
@@ -337,83 +287,6 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     .obs-hero-sub { max-width: 38ch; }
   }
 
-  /* ── Featured Research Banner ── */
-  .featured-research {
-    background: color-mix(in srgb, var(--card) 80%, transparent);
-    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-    border-radius: 14px;
-    padding: 24px 28px;
-    margin-bottom: 18px;
-  }
-
-  .featured-label {
-    font-size: .85rem;
-    text-transform: uppercase;
-    letter-spacing: .18em;
-    color: var(--accent2);
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
-
-  .featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-
-  .featured-card {
-    display: block;
-    text-decoration: none;
-    background: color-mix(in srgb, var(--bg) 70%, transparent);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 22px 24px;
-    transition: border-color 0.3s ease, background 0.3s ease;
-  }
-
-  .featured-card:hover {
-    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-    background: color-mix(in srgb, var(--bg) 90%, transparent);
-  }
-
-  .featured-tag {
-    display: inline-block;
-    font-size: .72rem;
-    text-transform: uppercase;
-    letter-spacing: .14em;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .featured-tag.new {
-    color: var(--accent2);
-  }
-
-  .featured-card h2 {
-    font-size: 1.55rem;
-    color: var(--text);
-    margin: 0 0 8px 0;
-    line-height: 1.3;
-  }
-
-  .featured-card p {
-    font-size: .95rem;
-    color: var(--muted);
-    line-height: 1.55;
-    margin: 0 0 14px 0;
-  }
-
-  .featured-link {
-    font-size: .92rem;
-    color: var(--accent);
-    font-weight: 700;
-  }
-
-  .featured-card:hover .featured-link {
-    text-decoration: underline;
-  }
-
   /* ── Existing Styles ── */
   .hero {
     display: grid;
@@ -422,13 +295,13 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     align-items: stretch;
     margin-bottom: 18px;
   }
-  
+
   @media (max-width: 900px) {
     .hero {
       grid-template-columns: 1fr;
     }
   }
-  
+
   .hero h1 {
     font-size: 1.65rem;
     line-height: 1.3;
@@ -442,20 +315,20 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     font-size: .85rem;
     margin-bottom: 10px;
   }
-  
+
   .sub {
     color: var(--muted);
     margin: 0 0 16px 0;
     max-width: 70ch;
   }
-  
+
   .ctaRow {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 16px;
   }
-  
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -469,23 +342,23 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     background: color-mix(in srgb, var(--accent) 15%, transparent);
     transition: border-color 0.3s ease;
   }
-  
+
   .btn.secondary {
     background: rgba(255,255,255,.03);
     font-weight: 700;
     color: var(--muted);
   }
-  
+
   .btn:hover {
     border-color: color-mix(in srgb, var(--accent) 40%, transparent);
   }
-  
+
   .pillrow {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
   }
-  
+
   .pill {
     border: 1px solid var(--border);
     border-radius: 999px;
@@ -494,7 +367,7 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     font-size: .92rem;
     background: rgba(255,255,255,.03);
   }
-  
+
   .video-section {
     margin-bottom: 18px;
   }
@@ -544,19 +417,19 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
     gap: 16px;
     margin-bottom: 16px;
   }
-  
+
   @media (max-width: 900px) {
     .grid2 {
       grid-template-columns: 1fr;
     }
   }
-  
+
   .list {
     margin: 8px 0 0 18px;
     color: var(--text);
     line-height: 1.6;
   }
-  
+
   .list li {
     margin-bottom: 6px;
   }

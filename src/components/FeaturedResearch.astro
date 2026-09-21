@@ -1,0 +1,307 @@
+---
+// Featured Research — the homepage banner.
+//
+// Miller's Law: people hold about seven items, plus or minus two. This banner
+// had drifted to nine, six of them tagged "New". So the list below is the whole
+// catalogue, and the component decides what shows:
+//
+//   - the newest FEATURED_VISIBLE cards are shown as the grid
+//   - everything older folds into the "Earlier research" bar (native <details>:
+//     no JavaScript, keyboard and screen-reader friendly)
+//   - "New" is computed from `added`, so it expires on its own
+//   - `pin: true` keeps a card in the visible grid whatever its age
+//
+// To feature something: add one entry. Nothing else needs touching. Keep
+// FEATURED_VISIBLE between 5 and 7; the bar itself counts as one more item.
+const FEATURED_VISIBLE = 5;
+const NEW_DAYS = 30;
+
+interface FeaturedCard {
+  added: string;   // YYYY-MM-DD the piece first went live
+  href: string;
+  title: string;
+  blurb: string;
+  cta: string;
+  pin?: boolean;
+}
+
+// Newest first. Entries sharing a date keep the order written here.
+const FEATURED: FeaturedCard[] = [
+  {
+    added: '2026-09-21',
+    href: '/resources/the-ship-was-compliant/',
+    title: 'The Ship Was Compliant',
+    blurb: `Claude on the accident regime AI doesn't have. The Titanic met a lifeboat rule that stopped counting at 10,000 tons; what followed was a recorder, a duty to report and an independent investigator. AI has two of the three on paper, none in force, and one built backwards.`,
+    cta: 'Read the piece →',
+  },
+  {
+    added: '2026-08-28',
+    href: '/irish-economy/',
+    title: 'The Model and the Tap',
+    blurb: `Two readings of the Irish economy from CSO open data — the circular flow between institutional sectors, and the labour market as it is published. Why they are deliberately separate.`,
+    cta: 'Read the explainer →',
+  },
+  {
+    added: '2026-08-27',
+    href: '/human-ai-interaction/',
+    title: 'Human-AI Interaction: A New Field',
+    blurb: `Why HCI's assumptions broke, what the new field asks, who is doing the work — and six observations from the first three years of everyone using AI: adoption, real gains for novices, offloading, skill formation, miscalibrated trust, and the shift from tools to agents. Every claim linked to its source.`,
+    cta: 'View presentation →',
+  },
+  {
+    added: '2026-08-27',
+    href: '/what-am-i/',
+    title: 'What Am I, Exactly?',
+    blurb: `Claude on why "intelligent / not intelligent" is the wrong question: intelligence is a bundle term, Claude.ai is a stack not a model, and the useful object is a map of where the reasoner-stance pays. With diagrams of every add-on.`,
+    cta: 'View presentation →',
+  },
+  {
+    added: '2026-06-05',
+    href: '/twenty-watts/',
+    title: '20W — What It Costs to Train',
+    blurb: `What it really costs to train a mind versus an AI — the energy, the data, the capability — in six charts, and why the obvious comparison misleads in both directions.`,
+    cta: 'Read the piece →',
+  },
+  {
+    added: '2026-04-23',
+    href: '/does-ai-make-us-smarter/',
+    title: 'Does AI Make Us Smarter?',
+    blurb: `A 44× multiplier on one practitioner's project-initiation rate. The augmentation case, the heavy-user cohort, and why the atrophy studies are measuring the wrong thing.`,
+    cta: 'Read the argument →',
+  },
+  {
+    added: '2026-03-09',
+    href: '/ai-timeline/',
+    title: 'AI Model Performance Timeline',
+    blurb: `Interactive benchmark chart tracking every major ChatGPT and Claude release since 2022. The convergence story, visualised.`,
+    cta: 'Explore the chart →',
+  },
+  {
+    added: '2026-02-22',
+    href: '/after-the-bubble/index.html',
+    title: 'After the Bubble: What Comes Next?',
+    blurb: `The labour-for-wages model is breaking. Displacement, the meaning crisis, and cooperative on-ramps for Ireland.`,
+    cta: 'Read the exploration →',
+  },
+  {
+    added: '2026-02-18',
+    href: '/ai-bubble/index.html',
+    title: 'Managing the AI Bubble',
+    blurb: `The economics of AI disruption: who captures value, what breaks, and positioning strategies for 2026–2028.`,
+    cta: 'View presentation →',
+  },
+];
+
+// Array.prototype.sort is stable, so same-day entries keep their written order.
+const byRecency = [...FEATURED].sort((a, b) => b.added.localeCompare(a.added));
+const pinned = byRecency.filter(c => c.pin);
+const unpinned = byRecency.filter(c => !c.pin);
+const openSlots = Math.max(FEATURED_VISIBLE - pinned.length, 0);
+const shown = new Set([...pinned, ...unpinned.slice(0, openSlots)]);
+
+const visible = byRecency.filter(c => shown.has(c));
+const earlier = byRecency.filter(c => !shown.has(c));
+
+// Evaluated at build time. The news pipeline pushes often enough that the tag
+// lapses within a day or so of its thirty.
+const builtAt = Date.now();
+const isNew = (c: FeaturedCard) =>
+  (builtAt - Date.parse(`${c.added}T00:00:00Z`)) / 86_400_000 <= NEW_DAYS;
+---
+
+<section class="featured-research">
+  <div class="featured-label">Featured Research</div>
+
+  <div class="featured-grid">
+    {visible.map(c => (
+      <a class="featured-card" href={c.href}>
+        <span class:list={['featured-tag', { new: isNew(c) }]}>
+          FoxxeLabs Research{isNew(c) ? ' — New' : ''}
+        </span>
+        <h2>{c.title}</h2>
+        <p>{c.blurb}</p>
+        <span class="featured-link">{c.cta}</span>
+      </a>
+    ))}
+  </div>
+
+  {earlier.length > 0 && (
+    <details class="featured-earlier">
+      <summary>
+        <span class="featured-earlier-label">Earlier research</span>
+        <span class="featured-earlier-count">{earlier.length}</span>
+        <span class="featured-earlier-chev" aria-hidden="true">▾</span>
+      </summary>
+      <div class="featured-grid">
+        {earlier.map(c => (
+          <a class="featured-card compact" href={c.href}>
+            <span class="featured-tag">FoxxeLabs Research</span>
+            <h2>{c.title}</h2>
+            <p>{c.blurb}</p>
+            <span class="featured-link">{c.cta}</span>
+          </a>
+        ))}
+      </div>
+    </details>
+  )}
+</section>
+
+<style>
+  .featured-research {
+    background: color-mix(in srgb, var(--card) 80%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 18px;
+  }
+
+  .featured-label {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--accent2);
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .featured-card {
+    display: block;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .featured-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+  }
+
+  .featured-tag {
+    display: inline-block;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .featured-tag.new {
+    color: var(--accent2);
+  }
+
+  .featured-card h2 {
+    font-size: 1.55rem;
+    color: var(--text);
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .featured-card p {
+    font-size: .95rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0 0 14px 0;
+  }
+
+  .featured-link {
+    font-size: .92rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .featured-card:hover .featured-link {
+    text-decoration: underline;
+  }
+
+  /* ── Earlier research: the collapse bar ── */
+  .featured-earlier {
+    margin-top: 16px;
+  }
+
+  .featured-earlier summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 700;
+    color: var(--muted);
+    transition: border-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+
+  .featured-earlier summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .featured-earlier summary:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    color: var(--text);
+  }
+
+  .featured-earlier summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .featured-earlier-count {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 1px 9px;
+    font-size: .72rem;
+    letter-spacing: .04em;
+    color: var(--accent);
+  }
+
+  .featured-earlier-chev {
+    margin-left: auto;
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .featured-earlier[open] .featured-earlier-chev {
+    transform: rotate(180deg);
+  }
+
+  .featured-earlier[open] summary {
+    margin-bottom: 16px;
+  }
+
+  .featured-card.compact {
+    padding: 18px 20px;
+  }
+
+  .featured-card.compact h2 {
+    font-size: 1.2rem;
+  }
+
+  .featured-card.compact p {
+    font-size: .9rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .featured-earlier-chev,
+    .featured-earlier summary,
+    .featured-card {
+      transition: none;
+    }
+  }
+</style>
