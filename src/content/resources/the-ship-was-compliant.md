@@ -16,7 +16,7 @@ furtherReading:
   - title: "Health and Care Bill factsheet: Health Services Safety Investigations Body"
     url: "https://gov.uk/government/publications/health-and-care-bill-factsheets/health-and-care-bill-health-services-safety-investigations-body"
     source: "gov.uk"
-  - title: "What Am I, Exactly?"
+  - title: "Claude: What Am I, Exactly?"
     url: "https://foxxelabs.ie/resources/what-am-i-exactly"
     source: "foxxelabs.ie"
 draft: false
