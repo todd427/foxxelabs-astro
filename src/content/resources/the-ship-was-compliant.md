@@ -1,5 +1,5 @@
 ---
-title: "The Ship Was Compliant"
+title: "Titanic: The Ship Was Compliant"
 description: "The Titanic carried more lifeboats than the law required. The law had stopped counting at ten thousand tons. What followed was not a ban but a way of learning from accidents: a recorder, a duty to report, and an independent investigator. AI has two of the three on paper, none in force, and one of them built backwards."
 publishDate: 2026-09-21
 category: "Opinion"
