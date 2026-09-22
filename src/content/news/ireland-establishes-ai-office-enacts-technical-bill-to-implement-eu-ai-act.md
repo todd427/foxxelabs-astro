@@ -10,6 +10,13 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-22, note: "Minister for Enterprise, Tourism and Employment Peter Burke stated the Bill was brought to the Oireachtas in the context of Ireland assuming the Presidency of the Council of the EU.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-22, note: "Ireland is using a distributed enforcement model in which existing competent authorities retain sector-specific roles while the AI Office of Ireland coordinates the overall framework.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-22, note: "The AI Office of Ireland's role includes acting as a single point of contact and supporting consistent implementation of the EU AI Act across competent authorities.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
+  - { date: 2026-09-22, note: "The Bill was published while Ireland holds the Presidency of the Council of the EU.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
+  - { date: 2026-09-22, note: "OpenAI is working on steps to address AI safety issues with Anthropic and Google DeepMind.", sourceUrl: "https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety" }
+  - { date: 2026-09-22, note: "OpenAI's global policy chief Chris Lehane said the company's engagement with Anthropic and Google on safety had been under way for several weeks as of 15 September 2026.", sourceUrl: "https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety" }
+  - { date: 2026-09-22, note: "OpenAI does not see the need for an antitrust waiver for OpenAI, Anthropic, and Google DeepMind to coordinate on AI safety matters.", sourceUrl: "https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety" }
   - { date: 2026-09-17, note: "Ireland adopted a distributed model of AI regulation, coordinating the activities of multiple existing sectoral competent authorities rather than a single regulator.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
   - { date: 2026-09-17, note: "Fines for breaching the EU AI Act transparency obligations are up to €15 million, or 3% of global annual turnover, for companies.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
   - { date: 2026-09-17, note: "The EU has created a set of icons that can be used to label AI-generated content under the new transparency obligations.", sourceUrl: "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en" }
@@ -446,7 +453,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-09-17
+updatedDate: 2026-09-22
 ---
 
 ## The Bill's Purpose and Structure

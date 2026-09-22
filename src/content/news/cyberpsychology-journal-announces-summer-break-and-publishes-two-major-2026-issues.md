@@ -10,6 +10,17 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-22, note: "Issue 4, Volume 20 covers topics including artificial intelligence and synthetic relationships.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of digital privacy.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of content moderation.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of media multitasking.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of digital inclusion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "The journal introduced a summer submission break in 2026 due to a sharp increase in submissions experienced in 2025.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Issue 3, Volume 20 was published on 26 June 2026 and included twelve open-access articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-22, note: "Dr Linda K. Kaye is a founding member of the BPS Cyberpsychology Section and is listed as Past Chair.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-22, note: "The BPS Cyberpsychology Section runs a monthly Twitter chat session called #CyberSectionChat, established in 2019.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-22, note: "Dr Darren Chadwick, a committee member of the BPS Cyberpsychology Section, specialises in the use of ICTs by people with intellectual and developmental disabilities.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
+  - { date: 2026-09-22, note: "Industry representative Dr John Blythe is an honorary research fellow at UCL Dawes Centre for Future Crime.", sourceUrl: "https://www.bps.org.uk/member-networks/cyberpsychology-section" }
   - { date: 2026-09-21, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is a diamond open access journal, meaning it charges no fees to authors or readers.", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'AI-based writing assistants for emotional tone: Investigating users' acceptance and recipients' perceptions in online negotiations', authored by Josephin", sourceUrl: "https://cyberpsychology.eu/" }
   - { date: 2026-09-21, note: "Volume 20, Issue 4 includes an article titled 'Immerse & befriend: The role of synthetic relationship perception and narrative transportation in a mental health app', authored by Marisa Tschopp, Stefa", sourceUrl: "https://cyberpsychology.eu/" }
@@ -290,7 +301,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-21
+updatedDate: 2026-09-22
 ---
 
 ## Summer Submission Break Announced
