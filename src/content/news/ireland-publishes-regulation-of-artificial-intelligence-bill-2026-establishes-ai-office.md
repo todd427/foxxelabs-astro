@@ -10,6 +10,16 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-23, note: "The AI Office of Ireland was established under the AI Regulation Bill 2026.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "The appointment of Paul Byrne as CEO was welcomed by Minister for Enterprise, Tourism and Employment Peter Burke TD and Minister of State for Trade Promotion, Artificial Intelligence and Digital Trans", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "In September 2026, the AI Office of Ireland conducted stakeholder engagements with CeADAR Ireland, Innovation Science and Economic Development Canada (ISED), Forensic Science Ireland, Ibec, and Meta.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "The Board of the AI Office of Ireland held its inaugural meeting on September 8, 2026.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "AI Office of Ireland CEO Paul Byrne and team visited the RDI Hub in Kerry on August 28, 2026.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "Ireland will host the International AI Summit on 14 October 2026 as part of its Presidency of the Council of the European Union.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "The International AI Summit will officially launch European AI Innovation Month.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "The theme of the International AI Summit hosted by Ireland is 'Harnessing AI to Revolutionise Europe's Competitiveness'.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "The AI Office of Ireland is the national authority responsible for coordinating the implementation of the EU AI Act in Ireland.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-23, note: "Ireland's AI Regulatory Sandbox Programme provides a controlled environment where AI developers can test AI solutions with regulatory guidance.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-21, note: "The EU AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and became applicable on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-09-21, note: "Prohibition 9 of the AI Act — covering AI systems that generate non-consensual sexually explicit and intimate content or CSAM material, such as AI nudification apps — comes into effect in December 202", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-09-21, note: "Under the AI Omnibus, rules for high-risk AI systems in sensitive areas (Annex III), including biometrics, critical infrastructure, education, employment, and migration, will apply from 2 December 202", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
@@ -453,7 +463,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: false
-updatedDate: 2026-09-21
+updatedDate: 2026-09-23
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework

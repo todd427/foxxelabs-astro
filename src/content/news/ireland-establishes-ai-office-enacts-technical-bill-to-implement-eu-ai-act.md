@@ -10,6 +10,9 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-23, note: "Ireland adopted a distributed model of regulation for the EU AI Act, coordinating multiple existing national sectoral regulators rather than creating a single all-purpose enforcement authority.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/july/20260730.html" }
+  - { date: 2026-09-23, note: "A call for proposals to strengthen cybersecurity capacities of European SMEs with AI-powered cybersecurity solutions (CYBER-11-AI4SME) is open from 1 September 2026 to 14 January 2027.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence" }
+  - { date: 2026-09-23, note: "The IPCEI-AI project is coordinated by Germany and aims to develop cutting-edge technologies and AI management applications, as well as innovative industrial products and services.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence" }
   - { date: 2026-09-22, note: "Minister for Enterprise, Tourism and Employment Peter Burke stated the Bill was brought to the Oireachtas in the context of Ireland assuming the Presidency of the Council of the EU.", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
   - { date: 2026-09-22, note: "Ireland is using a distributed enforcement model in which existing competent authorities retain sector-specific roles while the AI Office of Ireland coordinates the overall framework.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
   - { date: 2026-09-22, note: "The AI Office of Ireland's role includes acting as a single point of contact and supporting consistent implementation of the EU AI Act across competent authorities.", sourceUrl: "https://avondhupress.ie/irelands-new-ai-rules-will-be-felt-far-beyond-the-tech-sector/" }
@@ -453,7 +456,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-09-22
+updatedDate: 2026-09-23
 ---
 
 ## The Bill's Purpose and Structure
