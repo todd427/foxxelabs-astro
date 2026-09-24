@@ -10,6 +10,10 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-24, note: "The provisional agreement introduces a fixed new application date of 2 December 2027 for stand-alone high-risk AI systems (Annex III use cases).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-09-24, note: "The provisional agreement introduces a fixed new application date of 2 August 2028 for high-risk AI systems embedded in products (Annex I).", sourceUrl: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" }
+  - { date: 2026-09-24, note: "The Commission started enforcing AI Act rules and new transparency requirements on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
+  - { date: 2026-09-24, note: "The AI Act prohibits nine practices in total; prohibitions 1–8 became effective in February 2025, while prohibition 9 (AI-generated non-consensual sexually explicit content and CSAM) comes into effect", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-09-17, note: "From 2 August 2026, the EU AI Office and national authorities began enforcing the AI Act.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
   - { date: 2026-09-17, note: "In November 2025, the European Commission proposed targeted amendments to the AI Act as part of the digital simplification package, referred to as the 'AI Omnibus'.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
   - { date: 2026-09-17, note: "The European Commission published guidelines on transparency obligations for providers and deployers of certain AI systems on 20 July 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" }
@@ -529,7 +533,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-09-17
+updatedDate: 2026-09-24
 ---
 
 ## The EU AI Act's Phased Entry into Force

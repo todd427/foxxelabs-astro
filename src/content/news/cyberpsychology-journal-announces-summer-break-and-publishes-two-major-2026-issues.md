@@ -10,6 +10,8 @@ significance: "medium"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-24, note: "The journal's submission portal reopened on 1 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-24, note: "Issue 2, Volume 20 was published on 14 April 2026 and contains 8 new open-access articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-22, note: "Issue 4, Volume 20 covers topics including artificial intelligence and synthetic relationships.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of digital privacy.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-09-22, note: "Issue 4, Volume 20 covers the topic of content moderation.", sourceUrl: "https://cyberpsychology.eu/announcement" }
@@ -301,7 +303,7 @@ updates:
   - { date: 2026-06-20, note: "Cyberpsychology achieved an impact factor of 2.905 and currently ranks in Q2 in Communication and multidisciplinary Psychology categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-06-20, note: "Cyberpsychology's SCImago Journal Rank is 0.85 with Q1 ranking in Communication category and Q2 ranking in Psychology and Social sciences miscellaneous categories.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
-updatedDate: 2026-09-22
+updatedDate: 2026-09-24
 ---
 
 ## Summer Submission Break Announced
