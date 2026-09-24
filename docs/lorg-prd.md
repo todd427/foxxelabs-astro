@@ -3,7 +3,7 @@
 
 **Irish:** *lorg* — track, trail, trace, footprint  
 **Domain:** lorg.ie (registered 2026-03-21)  
-**Status:** Phase 0 in development  
+**Status:** done (live, and auto-generating daily)
 **Owner:** Todd McCaffrey / FoxxeLabs  
 **Date:** 2026-03-21  
 **Version:** 0.3
