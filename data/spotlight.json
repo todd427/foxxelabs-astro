@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-09-24T12:42:55.931Z",
+  "updatedAt": "2026-09-25T12:40:41.236Z",
   "pick": {
-    "id": "Cactus-Compute/needle3",
-    "url": "https://hf.co/Cactus-Compute/needle3",
-    "author": "Cactus-Compute",
-    "name": "needle3",
-    "likes": 219,
-    "downloads": 69655,
-    "createdAt": "2026-09-16T06:41:36.000Z",
-    "ageDays": 8,
-    "blurb": "needle3 is a tool-calling model optimized for on-device and edge inference with WebAssembly support and aggressive quantization. If your studio ships client-side agents or needs function calling without cloud round-trips, the 69K downloads and Apache license make this worth a production test.",
-    "surfacedAt": "2026-09-24"
+    "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "author": "XiaomiMiMo",
+    "name": "MiMo-V2.6-Pro-RL",
+    "likes": 487,
+    "downloads": 42062,
+    "createdAt": "2026-09-21T15:39:33.000Z",
+    "ageDays": 4,
+    "blurb": "MiMo-V2.6-Pro handles vision, audio, and video alongside text in a single model with long-context support and agent capabilities. If your studio is prototyping multimodal agents or needs to process mixed media without orchestrating separate pipelines, the 42K downloads and RL-tuned weights merit a production evaluation.",
+    "surfacedAt": "2026-09-25"
   },
   "also": [
     {
@@ -18,50 +18,50 @@
       "url": "https://hf.co/XingChen-AGI/Xing4.0-29B-A4B",
       "author": "XingChen-AGI",
       "name": "Xing4.0-29B-A4B",
-      "likes": 1640,
-      "downloads": 41923,
+      "likes": 1664,
+      "downloads": 42950,
       "createdAt": "2026-09-16T06:44:40.000Z",
-      "ageDays": 8
+      "ageDays": 9
     },
     {
       "id": "Altworld/Hemmingway-1",
       "url": "https://hf.co/Altworld/Hemmingway-1",
       "author": "Altworld",
       "name": "Hemmingway-1",
-      "likes": 608,
-      "downloads": 4541,
+      "likes": 651,
+      "downloads": 4978,
       "createdAt": "2026-09-20T12:10:31.000Z",
-      "ageDays": 4
-    },
-    {
-      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "author": "XiaomiMiMo",
-      "name": "MiMo-V2.6-Pro-RL",
-      "likes": 468,
-      "downloads": 9841,
-      "createdAt": "2026-09-21T15:39:33.000Z",
-      "ageDays": 3
+      "ageDays": 5
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
       "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
       "author": "XiaomiMiMo",
       "name": "MiMo-V2.6-Flash-RL",
-      "likes": 435,
-      "downloads": 18821,
+      "likes": 451,
+      "downloads": 20473,
       "createdAt": "2026-09-21T15:39:51.000Z",
-      "ageDays": 3
+      "ageDays": 4
     },
     {
       "id": "yandex/AliceAI-Foundation-80B-A3B-Base",
       "url": "https://hf.co/yandex/AliceAI-Foundation-80B-A3B-Base",
       "author": "yandex",
       "name": "AliceAI-Foundation-80B-A3B-Base",
-      "likes": 304,
-      "downloads": 2678,
+      "likes": 329,
+      "downloads": 2911,
       "createdAt": "2026-09-12T10:32:07.000Z",
-      "ageDays": 12
+      "ageDays": 13
+    },
+    {
+      "id": "Cactus-Compute/needle3",
+      "url": "https://hf.co/Cactus-Compute/needle3",
+      "author": "Cactus-Compute",
+      "name": "needle3",
+      "likes": 231,
+      "downloads": 75228,
+      "createdAt": "2026-09-16T06:41:36.000Z",
+      "ageDays": 9
     }
   ]
 }

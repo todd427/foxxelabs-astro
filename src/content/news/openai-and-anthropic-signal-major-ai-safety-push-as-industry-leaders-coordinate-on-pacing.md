@@ -10,6 +10,11 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Sam Altman", "Dario Amodei", "Fortune", "Bloomberg News"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-25, note: "Dario Amodei's essay proposed a narrow government waiver allowing AI companies to coordinate on safety without violating antitrust law.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-25, note: "Chris Lehane stated that OpenAI, Anthropic, and Google DeepMind do not need a government antitrust waiver to coordinate on AI safety matters.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-25, note: "Sam Altman told staff that the proposed AI industry standards body would need to be formed without the support of the U.S. government.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
+  - { date: 2026-09-25, note: "OpenAI posted proposals for safety and security in the development of frontier AI with a focus on alignment research and recursive self-improvement (RSI) on September 21, 2026.", sourceUrl: "https://www.cnbc.com/2026/09/21/open-ai-alignment-rsi.html" }
+  - { date: 2026-09-25, note: "Anthropic released its own proposals for the safe development of frontier AI models the week before OpenAI's September 21 post, described as a response to a wave of warnings about AI's threat to human", sourceUrl: "https://www.cnbc.com/2026/09/21/open-ai-alignment-rsi.html" }
   - { date: 2026-09-21, note: "OpenAI chief scientist Jakub Pachocki stated: 'I believe that shared safety standards and international coordination on further AI development need to be priorities now.'", sourceUrl: "https://tech-insider.org/openai-anthropic-google-ai-safety-talks-2026/" }
   - { date: 2026-09-21, note: "Sam Altman said on September 12, 2026 that leading AI CEOs — naming Dario Amodei and Demis Hassabis specifically — might 'get in a room and come up with a plan' to address AI safety collectively.", sourceUrl: "https://tech-insider.org/openai-anthropic-google-ai-safety-talks-2026/" }
   - { date: 2026-09-21, note: "Dario Amodei published an essay on approximately September 13–14, 2026 arguing that 'we must slow the pace at which we improve the capabilities of AI models' and calling for coordination across the US", sourceUrl: "https://tech-insider.org/openai-anthropic-google-ai-safety-talks-2026/" }
@@ -43,7 +48,7 @@ updates:
   - { date: 2026-09-18, note: "Anthropic self-reported Claude Fable 5.1's Terminal-Bench-Science score as 52.6, compared to 24.7 for Claude Fable 5.", sourceUrl: "https://llm-stats.com/ai-news" }
   - { date: 2026-09-18, note: "Anthropic also released Claude Mythos 5.1 on September 1, 2026 as a trusted-access counterpart to Fable 5.1.", sourceUrl: "https://llm-stats.com/ai-news" }
 draft: false
-updatedDate: 2026-09-21
+updatedDate: 2026-09-25
 ---
 
 ## Sam Altman Hints at Industry-Wide Safety Collaboration
