@@ -10,6 +10,16 @@ significance: "high"
 entities: ["OpenAI", "Anthropic", "Sam Altman", "Dario Amodei", "Fortune", "Bloomberg News"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-26, note: "OpenAI released GPT-6 Luna on September 22, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-09-26, note: "OpenAI released GPT-6 Sol on September 22, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-09-26, note: "Anthropic released Claude Opus 5.5 on September 22, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-09-26, note: "xAI released Grok 4.7 on September 21, 2026.", sourceUrl: "https://llmgateway.io/timeline" }
+  - { date: 2026-09-26, note: "Chris Lehane made his statements about AI safety coordination while in Washington working with lawmakers on catastrophic AI risks.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
+  - { date: 2026-09-26, note: "Sam Altman indicated OpenAI would join Anthropic in embedding third-party evaluators to monitor safety internally.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
+  - { date: 2026-09-26, note: "OpenAI, Anthropic, and Google DeepMind are working to establish an industry standards body to screen advanced models and coordinate industry-wide slowdowns if risks escalate.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
+  - { date: 2026-09-26, note: "Google DeepMind CEO Demis Hassabis previously proposed an industry standards body in July 2026.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
+  - { date: 2026-09-26, note: "Chris Lehane said the three companies do not require a government antitrust waiver to continue their safety coordination.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
+  - { date: 2026-09-26, note: "OpenAI backs a provision in the FRONTIER Act that would require frontier labs to allow independent verification organizations to assess their safety practices.", sourceUrl: "https://theaiinsider.tech/2026/09/16/openai-confirms-weeks-of-ai-safety-talks-with-anthropic-and-google-deepmind/" }
   - { date: 2026-09-25, note: "Dario Amodei's essay proposed a narrow government waiver allowing AI companies to coordinate on safety without violating antitrust law.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
   - { date: 2026-09-25, note: "Chris Lehane stated that OpenAI, Anthropic, and Google DeepMind do not need a government antitrust waiver to coordinate on AI safety matters.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
   - { date: 2026-09-25, note: "Sam Altman told staff that the proposed AI industry standards body would need to be formed without the support of the U.S. government.", sourceUrl: "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" }
@@ -48,7 +58,7 @@ updates:
   - { date: 2026-09-18, note: "Anthropic self-reported Claude Fable 5.1's Terminal-Bench-Science score as 52.6, compared to 24.7 for Claude Fable 5.", sourceUrl: "https://llm-stats.com/ai-news" }
   - { date: 2026-09-18, note: "Anthropic also released Claude Mythos 5.1 on September 1, 2026 as a trusted-access counterpart to Fable 5.1.", sourceUrl: "https://llm-stats.com/ai-news" }
 draft: false
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 ---
 
 ## Sam Altman Hints at Industry-Wide Safety Collaboration
