@@ -10,6 +10,17 @@ significance: "high"
 entities: ["S&P Global", "451 Research", "Federal Reserve Bank of New York", "S&P Global 1200"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-27, note: "S&P Global's PMI special survey forecasts a further net employment impact of -2 percentage points from AI adoption in the 12 months ahead (to mid-2027).", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "S&P Global's prior report characterised AI's employment effect as neutral to slightly positive; the June 2026 report marks a reversal to a modestly negative net impact.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "AI summarization is the most widely implemented use case at 71% adoption, followed by translation at 62% and data management at 61%.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "Only 22% of AI projects target a fully autonomous end state where AI operates without human intervention.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "Among large enterprises (10,000+ employees), the proportion reporting AI-related job reductions was 8 percentage points higher than the share reporting gains in the latest survey period.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "83% of S&P Global 1200 index participants (994 of 1,200 companies) had lower head counts in January 2026 compared to January 2025; only 13% (153 companies) saw an increase.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "44% of organisations with 10,000+ employees have a 'clear, documented AI strategy' aligned with core business goals, including dedicated roles and career paths for specialised AI professionals.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "Data privacy and security concerns are cited by 51% of respondents as a limitation of generative AI models, followed by response accuracy and quality at 46%, and data quality at 38%.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "Cybersecurity skills gaps had a moderate or severe impact on AI initiatives for 64% of respondents, followed by machine learning and AI development (59%), software development and engineering (58%), a", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
+  - { date: 2026-09-27, note: "Labor's share of US nonfarm business output/income was 52.8% in Q2 2026, the lowest recorded in the BLS series beginning in Q1 1947.", sourceUrl: "https://www.cnbc.com/2026/09/13/ai-jobs-pay-inflation.html" }
+  - { date: 2026-09-27, note: "A study by Apollo Global Management chief economist Torsten Slok and co-author Sania Edlich offers evidence consistent with AI contributing to slower wage growth.", sourceUrl: "https://www.cnbc.com/2026/09/13/ai-jobs-pay-inflation.html" }
   - { date: 2026-09-12, note: "Large enterprises (10,000+ employees) with formal AI strategies forecast a net negative employment impact of -13 percentage points from AI.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-12, note: "Only 46% of AI initiatives launched in the past year are on track to achieve positive ROI within 12 months, globally.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-12, note: "51% of survey respondents reported investing in AI for identity verification and access assurance, with 29% targeting full automation and 28% targeting predominant automation with human oversight.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
@@ -37,7 +48,7 @@ updates:
   - { date: 2026-08-22, note: "New York Fed research found (October 2024) that individuals exposed to generative AI tools reported bleaker expectations for job availability and income inequality.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
   - { date: 2026-08-22, note: "The post is the inaugural entry in a new series called 'Street Level' authored by Kartik B. Athreya, Research Director at the Federal Reserve Bank of New York.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
 draft: false
-updatedDate: 2026-09-12
+updatedDate: 2026-09-27
 ---
 
 ## Global Net Employment Impact Turns Negative

@@ -10,6 +10,19 @@ significance: "high"
 entities: ["MIT", "generative AI"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-27, note: "MIT researchers developed a new language-processing tool designed to estimate suicide risk from natural language text.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "The MIT language-processing suicide-risk tool is intended to identify the highest-risk individuals, enabling swifter interventions.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "MIT researchers developed a patient-specific AI technique called 'xvr' that helps doctors use X-rays for surgical navigation.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "The xvr technique is applicable to fields including orthopedics and neurosurgery.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "MIT researchers developed an algorithm called 'HardFlow' designed to help generative AI models produce outputs that obey strict requirements.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "HardFlow is intended for safety-critical situations where approximate outputs are insufficient.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "The MIT Schwarzman College of Computing launched a pilot programme to help higher education faculty teach AI across disciplines.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "The MIT AI education pilot included a weeklong summer workshop that brought higher education faculty to campus.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "MIT developed a method called CW-Net that translates the reasoning process of an autonomous vehicle's AI system into understandable concepts to explain its behaviour.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "CW-Net is designed to help humans predict when self-driving cars will make mistakes.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "MIT affiliates are engaging with the MIT-IBM Computing Research Lab to bring rigorous theory to AI and quantum production systems.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "MIT developed a new machine-learning framework aimed at improving the success rate of computational protein design.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-27, note: "The MIT protein design framework moves away from results that reproduce sequences found in nature.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-09-01, note: "MIT engineers introduced an adaptive physical therapy system that uses generative AI to learn from physical therapists and interactively support stroke patients.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-09-01, note: "MIT's 'GeoPT' tool helps AI models understand physics fundamentals so they can simulate how objects respond to wind and water more efficiently and accurately.", sourceUrl: "https://news.mit.edu/topic/artificial-intelligence2" }
   - { date: 2026-08-30, note: "MIT published a new machine-learning framework aimed at improving the success rate of computational protein design, moving away from results that reproduce sequences found in nature.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
@@ -18,7 +31,7 @@ updates:
   - { date: 2026-08-30, note: "MIT research published on 20 August 2026 aims to lead to better materials for a fossil-fuel-free process for producing ammonia, a chemical essential to fertilizer.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "Bill Gates published a 6,000-word essay warning that the world is unprepared for the upheaval AI could bring, including the prospect of machines permanently replacing large numbers of jobs.", sourceUrl: "https://www.irishtimes.com/your-money/2026/08/29/bill-gates-is-worried-about-ai-but-investors-are-looking-at-the-upside/" }
 draft: false
-updatedDate: 2026-09-01
+updatedDate: 2026-09-27
 ---
 
 ## AI Image Generation Loses Connection to Training Data at Scale
