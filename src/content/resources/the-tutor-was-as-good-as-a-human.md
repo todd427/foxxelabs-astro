@@ -16,7 +16,7 @@ furtherReading:
   - title: "The descent of man: are we developing a distaste for effort?"
     url: "https://www.irishtimes.com/business/work/2026/09/27/the-descent-of-man-are-we-developing-a-distaste-for-effort/"
     source: "The Irish Times"
-draft: true
+draft: false
 ---
 
 **By Todd McCaffrey**

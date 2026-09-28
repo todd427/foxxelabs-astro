@@ -23,13 +23,15 @@ const SECTION_SEGMENTS = new Set([
 
 /**
  * Why a source URL cannot be a specific article, or null if it can.
- * @returns {'missing'|'self'|'bare-domain'|'section'|null}
+ * @returns {'missing'|'self'|'placeholder'|'bare-domain'|'section'|null}
  */
 export function classifySource(sourceUrl) {
   if (!sourceUrl) return 'missing';
   let u;
   try { u = new URL(String(sourceUrl)); } catch { return 'missing'; }
   if (/(^|\.)foxxe[a-z]*\./i.test(u.hostname)) return 'self';
+  // Reserved placeholder domains (RFC 2606/6761): never a real source.
+  if (/(^|\.)example\.(com|org|net)$|\.(example|test|invalid|localhost)$|^localhost$/i.test(u.hostname)) return 'placeholder';
   const segs = u.pathname.split('/').filter(Boolean);
   if (segs.length === 0) return 'bare-domain';
   if (segs.length === 1) {

@@ -6,6 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { loadCorpusWindow, findDuplicate, appendUpdates, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
 import { classifySource } from '../src/lib/grounding.js';
+import { fitsStory } from '../src/lib/timeline.js';
 import {
   resolveSourceUrl, normalizeClaim, appendClaims, loadClaims,
   foldIncomingClaims, raiseConfidence, claimId,
@@ -695,7 +696,16 @@ async function main() {
           // story already states are CORROBORATION — they raise confidence (via an
           // append-only superseding claim) rather than cluttering the timeline.
           const storyClaims = claimsByStory.get(hit.match.slug) || [];
-          const { novel, corroborating } = foldIncomingClaims(claims, storyClaims);
+          const { novel: rawNovel, corroborating } = foldIncomingClaims(claims, storyClaims);
+          // A research run gathers claims about the whole topic; only those that
+          // name this story's headline entities belong on its timeline, and at
+          // most FOLD_CAP per run (src/lib/timeline.js). Without this, broad
+          // stories became attractors holding hundreds of off-topic notes.
+          const FOLD_CAP = 3;
+          const novel = rawNovel.filter((c) => fitsStory(c.statement, hit.match)).slice(0, FOLD_CAP);
+          if (rawNovel.length > novel.length) {
+            console.log(`   ↳ ${rawNovel.length - novel.length} novel claim(s) not about "${hit.match.slug}" — not folded.`);
+          }
 
           const toPersist = novel.map((c) => ({ ...c, story_id: hit.match.slug }));
           for (const { incoming, matched } of corroborating) {

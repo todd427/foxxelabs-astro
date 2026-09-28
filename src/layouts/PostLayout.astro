@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
+import { curateTimeline } from '../lib/timeline.js';
 
 interface Props {
   entry: CollectionEntry<'resources'> | CollectionEntry<'news'>;
@@ -30,7 +31,10 @@ const updates = 'updates' in entry.data ? entry.data.updates : [];
 
 // Newest first. The gate appends chronologically, and on a story that has been
 // folded into for months the tail is the only part still worth reading first.
-const timeline = [...updates].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+// Only developments that name the story's own headline entities, repeats
+// dropped, newest 12 (src/lib/timeline.js). The gate used to fold whole research
+// runs into broad stories, so raw updates[] can hold hundreds of off-topic notes.
+const timeline = curateTimeline(updates, entry.data);
 
 const timelineDate = (d: Date) => d.toLocaleDateString('en-US', {
   year: 'numeric',

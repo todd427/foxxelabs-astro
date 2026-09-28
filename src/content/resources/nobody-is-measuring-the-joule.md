@@ -16,7 +16,7 @@ furtherReading:
   - title: "We need more data on data centres, not spin"
     url: "https://www.irishtimes.com/business/2026/09/27/we-need-more-data-on-data-centres-not-spin/"
     source: "The Irish Times"
-draft: true
+draft: false
 ---
 
 **By Todd McCaffrey**

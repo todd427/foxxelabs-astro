@@ -10,7 +10,7 @@ significance: "high"
 entities: ["European Commission", "Ireland AI Office", "CYPSY29 Conference", "EU Artificial Intelligence Act", "Cyberpsychology Journal"]
 irishEuAngle: true
 updates: []
-draft: false
+draft: true
 ---
 
 ## Europe's AI Transparency Rules Set to Transform Online Behavior Research as Ireland Establishes AI Office

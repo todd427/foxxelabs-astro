@@ -9,7 +9,7 @@ sourceUrl: "https://www.gov.ie/en/publication/ai-office-establishment/"
 entities: ["Ireland", "EU AI Act", "AI Office", "August 2026", "General Scheme of the Regulation of Artificial Intelligence Bill 2026", "February 4", "European AI Office", "Code of Practice for General-Purpose AI", "August 2025", "Google", "Meta", "EU Digital Omnibus", "December 2027", "Anthropic"]
 significance: "high"
 irishEuAngle: true
-draft: false
+draft: true
 ---
 
 ## Ireland's AI Office Launch Signals National Governance Shift as August 2026 EU Compliance Deadline Approaches

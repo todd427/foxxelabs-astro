@@ -16,7 +16,7 @@ furtherReading:
   - title: "Xiaomi's MiMo-V2.6 tops the open-weight rankings"
     url: "https://thenextweb.com/news/xiaomi-mimo-v2-6-open-weight-model-anthropic-distillation"
     source: "The Next Web"
-draft: true
+draft: false
 ---
 
 **By Todd McCaffrey**

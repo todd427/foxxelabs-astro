@@ -14,7 +14,7 @@ updates:
   - { date: 2026-07-02, note: "A Cooperation Forum will meet at least quarterly to support consistent regulation of AI across sectors in Ireland.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
   - { date: 2026-07-02, note: "The AI Office must ensure the establishment of, or participation in an EU-level equivalent of, a national AI regulatory sandbox.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
   - { date: 2026-07-02, note: "The national AI regulatory sandbox will provide priority access for SMEs and start-ups free of charge.", sourceUrl: "https://ics.ie/2026/02/06/irelands-new-regulation-of-artificial-intelligence-bill-2026-what-it-means-for-people-organisations-and-the-future/" }
-draft: false
+draft: true
 updatedDate: 2026-07-02
 ---
 

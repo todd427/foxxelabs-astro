@@ -10,7 +10,7 @@ significance: "high"
 entities: ["AI Office of Ireland", "Department of Enterprise Tourism and Employment", "EU Artificial Intelligence Act", "European Commission"]
 irishEuAngle: true
 updates: []
-draft: false
+draft: true
 ---
 
 ## Ireland's AI Office Launches August 2026: Here's What Builders Need to Know

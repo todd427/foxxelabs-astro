@@ -10,7 +10,7 @@ significance: "high"
 entities: ["Irish Cabinet", "AI Office of Ireland", "National Economic Social Council", "Department of Finance", "Irish Government", "Council of the European Union", "EU AI Act"]
 irishEuAngle: true
 updates: []
-draft: false
+draft: true
 ---
 
 ## Ireland's Comprehensive AI Response Framework
