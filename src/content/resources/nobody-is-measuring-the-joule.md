@@ -71,6 +71,8 @@ Ten runs of one prompt on one card isn't a study. It is a measurement, and Irish
 
 Here's the contrarian part. I don't think sovereignty or sustainability for Irish SMEs comes from winning the hyperscale argument in either direction. It comes from small, metered, local systems where the energy cost of each answer is known: a modest card on the premises, a small model sized to the job, retrieval over the business's own documents, and a meter.
 
+The extreme version of that is running now at [tuiscint.uk](https://tuiscint.uk). It's a 496-million-parameter model, roughly a thousandth the size of a frontier system, on a single GPU. It answers only from sources it has just read, shows the source beside every claim, and says "not stated" rather than guess. It has almost no knowledge of its own, by design. It isn't a general assistant, and when a source is wrong it will quote the error faithfully. But it is the knowledge-gap result above as a working service: don't buy a bigger brain, hand a small one the facts.
+
 That has limits I'd rather name. It's still NVIDIA silicon, so it answers the licensing half of sovereignty and not the hardware half. It's one fleet, mine, and the numbers above haven't been replicated anywhere else. And one thing I expected turned out false when I tested it: a smaller card isn't more efficient per token for the same model. It draws less power but takes longer, and the two very nearly cancel. The saving from small hardware is in idle draw and in being able to switch the big card off, not in the work.
 
 ## <span style="color:#1F4E79">What to ask for</span>
@@ -89,6 +91,7 @@ All checked on 28 September 2026. The Aigne figures are my own measurements, rec
 - IDA Ireland and Patrick Brodie: [The Irish Times, 25 September 2026](https://www.irishtimes.com/business/2026/09/25/the-data-centre-dilemma-ai-growth-and-irelands-energy-needs/)
 - Cantillon: [The Irish Times, 27 September 2026](https://www.irishtimes.com/business/2026/09/27/we-need-more-data-on-data-centres-not-spin/)
 - Article 12 scope and reporting duty: [European Commission, energy performance of data centres](https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficiency-targets-directive-and-rules/energy-efficiency-directive/energy-performance-data-centres_it) and [CMS, EU publication obligations for data centres](https://cms.law/en/int/blogs/law-now-blog/specification-of-the-european-publication-obligations-for-data-centres)
+- Tuiscint, the small grounded reader: [tuiscint.uk](https://tuiscint.uk)
 
 ---
 
