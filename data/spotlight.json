@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T13:27:59.267Z",
+  "updatedAt": "2026-09-28T14:59:47.314Z",
   "pick": {
     "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
     "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
@@ -18,7 +18,7 @@
       "url": "https://hf.co/XingChen-AGI/Xing4.0-29B-A4B",
       "author": "XingChen-AGI",
       "name": "Xing4.0-29B-A4B",
-      "likes": 1788,
+      "likes": 1790,
       "downloads": 45834,
       "createdAt": "2026-09-16T06:44:40.000Z",
       "ageDays": 12
@@ -48,7 +48,7 @@
       "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
       "author": "orcarouter",
       "name": "OrcaSAQ-2-27B",
-      "likes": 182,
+      "likes": 183,
       "downloads": 1663,
       "createdAt": "2026-09-24T03:44:51.000Z",
       "ageDays": 4

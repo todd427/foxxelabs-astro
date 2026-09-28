@@ -10,6 +10,18 @@ significance: "high"
 entities: ["Irish Mental Health Services", "JMIR Human Factors", "European Union"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-28, note: "The Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 4 of Volume 20 on 4 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "Issue 4 of Volume 20 contains 15 new articles.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "Issue 4 of Volume 20 covers topics including artificial intelligence and synthetic relationships, digital privacy, content moderation, media multitasking, and digital inclusion.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "All articles in Issue 4 of Volume 20 are published as open access.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "The journal's submission portal reopened on 1 September 2026 following a summer break during which new submissions were closed from 16 June to 31 August.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "Upon reopening on 1 September 2026, the journal introduced updated submission requirements to strengthen quality, transparency, and reproducibility of published research.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "Issue 2 of Volume 20, published on 14 April 2026, contained 8 open-access articles covering topics including AI aversion, online sexual health knowledge, online dating, and videoconference fatigue.", sourceUrl: "https://cyberpsychology.eu/announcement" }
+  - { date: 2026-09-28, note: "The HSE and the Department of Health launched the Sharing the Vision Digital Mental Health Strategy 2026-2030 on 20 February 2026.", sourceUrl: "https://about.hse.ie/news/hse-launches-new-digital-strategy-to-enhance-mental-health-services-in-ireland/" }
+  - { date: 2026-09-28, note: "The strategy was launched by Minister for Mental Health Mary Butler TD at the third annual Digital Mental Health Conference, held in partnership with University of Limerick.", sourceUrl: "https://about.hse.ie/news/hse-launches-new-digital-strategy-to-enhance-mental-health-services-in-ireland/" }
+  - { date: 2026-09-28, note: "The HSE has invested in digital mental health for almost a decade, with accelerated development during the COVID-19 pandemic.", sourceUrl: "https://about.hse.ie/news/hse-launches-new-digital-strategy-to-enhance-mental-health-services-in-ireland/" }
+  - { date: 2026-09-28, note: "HSE digital mental health initiatives include My Mental Health Plan, online cognitive behavioural therapy programmes, online supports for ADHD and eating disorders, and video-enabled appointments deli", sourceUrl: "https://about.hse.ie/news/hse-launches-new-digital-strategy-to-enhance-mental-health-services-in-ireland/" }
+  - { date: 2026-09-28, note: "The HSE announced a new partnership with Togetherall to deliver a national anonymous digital peer-support service for young people aged 16 to 30.", sourceUrl: "https://about.hse.ie/news/hse-launches-new-digital-strategy-to-enhance-mental-health-services-in-ireland/" }
   - { date: 2026-07-23, note: "Cyberpsychology journal implemented a summer break for new submissions from 16 June to 31 August 2026", sourceUrl: "https://cyberpsychology.eu/announcement" }
   - { date: 2026-07-23, note: "A systematic review of 42 high-quality articles on cyberbullying and adolescent mental health identified a median cyber-victimization prevalence of 19.1% globally (range 2.1% to 88.0%)", sourceUrl: "https://www.mdpi.com/2227-9067/13/3/367" }
   - { date: 2026-07-23, note: "Cyberbullying victims exhibited 90% depression rates and 87% anxiety rates compared to uninvolved peers, based on systematic review of 42 studies", sourceUrl: "https://www.mdpi.com/2227-9067/13/3/367" }
@@ -28,7 +40,7 @@ updates:
   - { date: 2026-07-21, note: "Mental health issues in Ireland cost the country over €8.2 billion annually, representing 3.2% of Ireland's gross domestic product according to OECD 2018 report.", sourceUrl: "https://humanfactors.jmir.org/2025/1/e64919" }
   - { date: 2026-07-21, note: "The study proposes a convergence of speech-to-text transcription, interactive AI for data analysis, and permissioned blockchain (Hyperledger Fabric) for secure psychiatric data storage and retrieval i", sourceUrl: "https://humanfactors.jmir.org/2025/1/e64919" }
 draft: false
-updatedDate: 2026-07-23
+updatedDate: 2026-09-28
 ---
 
 ## Ireland's Mental Health Crisis Deepens as Digital Infrastructure Lags

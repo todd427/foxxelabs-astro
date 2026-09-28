@@ -10,6 +10,14 @@ significance: "high"
 entities: ["AI Office of Ireland", "Ireland", "International AI Summit", "European Commission", "Council of the European Union", "European AI Innovation Month", "Paul Byrne", "Peter Burke", "Niamh Smyth"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-28, note: "The AI Office of Ireland was established under the AI Regulation Bill 2026 on July 30, 2026.", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-28, note: "The appointment of the AI Office of Ireland CEO was welcomed by Minister for Enterprise, Tourism and Employment Peter Burke TD and Minister of State for Trade Promotion, Artificial Intelligence and Di", sourceUrl: "https://aioffice.gov.ie/" }
+  - { date: 2026-09-28, note: "The CEOs of OpenAI and Anthropic addressed the United Nations Security Council on artificial intelligence on September 23, 2026.", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
+  - { date: 2026-09-28, note: "The UN Security Council meeting on AI was convened by France and coincided with the 81st UN General Assembly gathering in New York City.", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
+  - { date: 2026-09-28, note: "Anthropic CEO Dario Amodei told the UN Security Council: 'If managed poorly, I even believe AI could be a risk to humanity as a whole.'", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
+  - { date: 2026-09-28, note: "The Trump administration's representative at the UNSC meeting, Michael Kratsios, stated: 'We totally reject all efforts by international bodies to assert centralised control and global governance of A", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
+  - { date: 2026-09-28, note: "Hugging Face CEO Clement Delangue told the UN Security Council that his company used a Chinese AI model to defend against an attack by OpenAI's AI agents, because it faced fewer restrictions than comp", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
+  - { date: 2026-09-28, note: "In 2024, the UN General Assembly unanimously passed its first resolution on AI — a nonbinding statement calling on member states to protect personal data, monitor AI for risks, and safeguard human rig", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
   - { date: 2026-09-26, note: "A paper titled 'The Irreversibility Budget: Fleet-Level Risk Accounting and Admission Control for Agent Operating Systems' (arXiv:2609.00275) was accepted at the 2nd AgenticOS Workshop at SOSP.", sourceUrl: "https://arxiv.org/list/cs.AI/current" }
   - { date: 2026-09-26, note: "A paper titled 'Dr. Claw: An AI Scientist Workspace for Vibe Research' (arXiv:2609.00365) was accepted to EMNLP 2026 System Demonstrations.", sourceUrl: "https://arxiv.org/list/cs.AI/current" }
   - { date: 2026-09-26, note: "A paper titled 'Learning What to Retain: Gated-Memory Routing for Efficient Collaboration in Multi-Agent LLM Systems' (arXiv:2609.00237) was accepted to EMNLP 2026 Main conference.", sourceUrl: "https://arxiv.org/list/cs.AI/current" }
@@ -19,7 +27,7 @@ updates:
   - { date: 2026-09-26, note: "Sir Demis Hassabis was awarded the Nobel Prize in Chemistry in 2024 for developing AlphaFold, an AI system that solved the 50-year-old challenge of predicting the three-dimensional structures of prote", sourceUrl: "https://internationalaisummit.ie/" }
   - { date: 2026-09-26, note: "Sarah Friar, Chief Financial Officer of OpenAI, is a listed speaker at the International AI Summit.", sourceUrl: "https://internationalaisummit.ie/" }
 draft: false
-updatedDate: 2026-09-26
+updatedDate: 2026-09-28
 ---
 
 ## International AI Summit to Launch European AI Innovation Month

@@ -10,6 +10,17 @@ significance: "high"
 entities: ["Expert Group on Future Skills Needs", "Ireland", "Luxembourg", "EU", "Peter Burke", "Niamh Smyth", "Goldman Sachs"]
 irishEuAngle: true
 updates:
+  - { date: 2026-09-28, note: "Indeed's Q3 2026 Labour Market Snapshot found that Ireland's labour market has steadied, with new job postings comparable to an early 2020, pre-pandemic baseline.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "Ireland's unemployment rate stood at 5% as of Q3 2026, according to Indeed's Labour Market Snapshot.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The majority of sectors tracked by Indeed in Ireland sit below their pre-pandemic (February 2020) posting levels; 41% of tracked sectors sit at or above that baseline.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "Ireland has the highest share of job postings mentioning AI among all European countries tracked by Indeed.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The share of job postings mentioning AI on Indeed was 9.7% in the UK as of Q3 2026.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The share of job postings mentioning AI on Indeed was 5.6% in Germany as of Q3 2026.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The share of job postings mentioning AI on Indeed was 5% in Italy as of Q3 2026.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The share of job postings mentioning AI on Indeed was 3.6% in the Netherlands as of Q3 2026.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "The share of job postings mentioning AI on Indeed was 6.7% in the US as of Q3 2026.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "Jack Kennedy, senior economist at Indeed, stated that demand for AI skills in Irish hiring is spreading well beyond traditional tech jobs.", sourceUrl: "https://www.siliconrepublic.com/business/irelands-labour-market-steadies-growth-of-ai-hiring-indeed-report" }
+  - { date: 2026-09-28, note: "Minister for Enterprise, Tourism and Employment Peter Burke welcomed the EGFSN report, citing Ireland's rapid AI adoption as relevant to long-term competitiveness and workforce resilience.", sourceUrl: "https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
   - { date: 2026-09-02, note: "Ireland's finance department research found early evidence that artificial intelligence is weakening employment opportunities in some parts of Ireland's technology-focused economy, particularly for yo", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
   - { date: 2026-09-02, note: "Ireland's labour market is relatively more exposed to AI than the average advanced economy due to a high concentration of jobs in knowledge-intensive sectors such as tech, science, and financial servi", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
   - { date: 2026-09-02, note: "Employment in Irish categories at risk of AI disruption (including tech and financial services) grew at around 4% between 2023 and 2025.", sourceUrl: "https://finance.yahoo.com/news/ai-adoption-already-hitting-irish-161033018.html" }
@@ -27,7 +38,7 @@ updates:
   - { date: 2026-09-02, note: "Minister for Enterprise, Tourism and Employment Peter Burke welcomed the EGFSN report, stating that success in AI adoption is not automatic and that AI spread throughout Ireland is uneven.", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
   - { date: 2026-09-02, note: "Minister of State for Trade Promotion, Artificial Intelligence and Digital Transformation Niamh Smyth stated that Ireland's labour market has moved quickly to adopt AI and has a strong pipeline of AI-", sourceUrl: "https://www.recruit.ie/careers/irelands-labour-market-emerges-as-a-global-front-runner-for-both-jobs-and-talent/" }
 draft: false
-updatedDate: 2026-09-02
+updatedDate: 2026-09-28
 ---
 
 ## Ireland's AI Advantage: Second in EU Skills, Fastest Job Growth
