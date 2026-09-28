@@ -68,6 +68,17 @@ const showPronunciation = category === 'Research';
             </a>
           ))}
         </div>
+
+        {entry.collection === 'news' && (
+          <p class="ai-disclosure" role="note">
+            <strong>AI-generated summary.</strong> This news item was written automatically by an AI
+            pipeline from published reporting and was not reviewed by a person before publication.
+            It may contain errors.
+            {'sourceUrl' in entry.data && entry.data.sourceUrl && (
+              <> Read the <a href={entry.data.sourceUrl} rel="nofollow noopener" target="_blank">original source</a>.</>
+            )}
+          </p>
+        )}
       </div>
     </div>
     
@@ -146,6 +157,19 @@ const showPronunciation = category === 'Research';
 </BaseLayout>
 
 <style>
+  .ai-disclosure {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .ai-disclosure strong { color: var(--text); }
+  .ai-disclosure a { color: var(--accent); }
   .container-narrow {
     max-width: 720px;
     margin: 0 auto;

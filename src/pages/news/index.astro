@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { isPublishedNews } from '../../lib/grounding.js';
 
-const allNews = await getCollection('news', ({ data }) => {
-  return data.draft !== true;
-});
+const allNews = await getCollection('news', ({ data }) => isPublishedNews(data));
 
 // Order by last activity, not publication. The dedupe gate folds new
 // developments into an existing story's timeline rather than minting a
@@ -25,8 +24,10 @@ const sortedNews = allNews.sort((a, b) => lastActivity(b) - lastActivity(a));
       <div class="container">
         <h1 class="page-title">News</h1>
         <p class="page-description">
-          Curated updates on significant developments in AI — 
-          from security incidents to breakthrough research.
+          An automated digest of AI developments — security, research, policy and industry.
+          Each item is written by an AI pipeline from a named published source and is not
+          reviewed by a person before publication; follow the source link to check it.
+          Our own writing is under <a href="/resources/">Resources</a>.
         </p>
       </div>
     </div>

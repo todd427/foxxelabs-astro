@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { loadCorpusWindow, findDuplicate, appendUpdates, makeStory, vectorize, NEWS_DIR } from './dedupe.js';
+import { classifySource } from '../src/lib/grounding.js';
 import {
   resolveSourceUrl, normalizeClaim, appendClaims, loadClaims,
   foldIncomingClaims, raiseConfidence, claimId,
@@ -576,7 +577,17 @@ tags: [${postData.tags.map(t => `"${t}"`).join(', ')}]`;
     }
   }
 
-  frontmatter += `\ndraft: false\n---\n\n`;
+  // A news item must cite a specific article. A fetched URL can still be a
+  // homepage or a section index (anthropic.com/news), which is how ungrounded
+  // items reached the site. Same rule as src/lib/grounding.js (which also hides
+  // such items at build time): write them as drafts — never published, but kept
+  // in the dedupe corpus so the gate remembers the story and does not
+  // regenerate it.
+  const ungrounded = type === 'news' ? classifySource(postData.sourceUrl) : null;
+  if (ungrounded) {
+    console.warn(`   ⚠️  sourceUrl is ${ungrounded} (${postData.sourceUrl ?? 'none'}) — writing as draft, not publishing.`);
+  }
+  frontmatter += `\ndraft: ${ungrounded ? 'true' : 'false'}\n---\n\n`;
 
   const fullContent = frontmatter + postData.content;
   const outputDir = path.join(__dirname, '..', 'src', 'content', type);

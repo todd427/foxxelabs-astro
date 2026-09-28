@@ -1,14 +1,13 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { isPublishedNews } from '../lib/grounding.js';
 
 export async function GET(context) {
   const resources = await getCollection('resources', ({ data }) => {
     return data.draft !== true;
   });
   
-  const news = await getCollection('news', ({ data }) => {
-    return data.draft !== true;
-  });
+  const news = await getCollection('news', ({ data }) => isPublishedNews(data));
   
   // Order by last activity, matching /news. NOTE: this only affects the order of
   // items in the document — readers re-sort by pubDate, which stays the original
@@ -28,7 +27,11 @@ export async function GET(context) {
     site: context.site,
     items: allPosts.map((post) => ({
       title: post.data.title,
-      description: post.data.description,
+      // News items are written by the AI pipeline without human review; say so
+      // in the feed too, since a feed reader never shows the on-page label.
+      description: post.collection === 'news'
+        ? `[AI-generated summary, not human-reviewed] ${post.data.description}`
+        : post.data.description,
       pubDate: post.data.publishDate,
       link: `/${post.collection}/${post.slug}/`,
       categories: [post.data.category, ...post.data.tags]

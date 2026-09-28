@@ -5,14 +5,13 @@ import FeaturedResearch from '../components/FeaturedResearch.astro';
 import { PROJECTS } from '../data/tools.js';
 
 import { getCollection } from 'astro:content';
+import { isPublishedNews } from '../lib/grounding.js';
 
 const resources = await getCollection('resources', ({ data }) => {
   return data.draft !== true;
 });
 
-const news = await getCollection('news', ({ data }) => {
-  return data.draft !== true;
-});
+const news = await getCollection('news', ({ data }) => isPublishedNews(data));
 
 const latestResources = resources
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -178,7 +177,7 @@ const MORE_INSIDE = PROJECTS.length - HEADLINERS.length;
 
     <div class="card">
       <h2>News</h2>
-      <p class="muted">Curated updates on significant AI developments — model releases, research breakthroughs, and industry shifts.</p>
+      <p class="muted">An automated, AI-written digest of AI developments, each item linked to its published source.</p>
       <ul class="list">
         <li><a href="/news/">All news</a></li>
         {latestNews.slice(0, 2).map(post => (

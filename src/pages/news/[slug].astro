@@ -1,11 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import { isPublishedNews } from '../../lib/grounding.js';
 
 export async function getStaticPaths() {
-  const news = await getCollection('news', ({ data }) => {
-    return data.draft !== true;
-  });
+  const news = await getCollection('news', ({ data }) => isPublishedNews(data));
   
   return news.map(entry => ({
     params: { slug: entry.slug },
