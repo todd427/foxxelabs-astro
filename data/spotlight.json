@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-09-28T14:59:47.314Z",
+  "updatedAt": "2026-09-29T13:50:01.018Z",
   "pick": {
     "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
     "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
     "author": "XiaomiMiMo",
     "name": "MiMo-V2.6-Pro-RL",
-    "likes": 571,
-    "downloads": 76518,
+    "likes": 594,
+    "downloads": 78135,
     "createdAt": "2026-09-21T15:39:33.000Z",
-    "ageDays": 7,
+    "ageDays": 8,
     "blurb": "MiMo-V2.6-Pro handles vision, audio, and video alongside text in a single model with long-context support and agent capabilities. If your studio is prototyping multimodal agents or needs to process mixed media without orchestrating separate pipelines, the 42K downloads and RL-tuned weights merit a production evaluation.",
     "surfacedAt": "2026-09-25"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/XingChen-AGI/Xing4.0-29B-A4B",
       "author": "XingChen-AGI",
       "name": "Xing4.0-29B-A4B",
-      "likes": 1790,
-      "downloads": 45834,
+      "likes": 1803,
+      "downloads": 46557,
       "createdAt": "2026-09-16T06:44:40.000Z",
-      "ageDays": 12
-    },
-    {
-      "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-      "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
-      "author": "XiaomiMiMo",
-      "name": "MiMo-V2.6-Flash-RL",
-      "likes": 504,
-      "downloads": 28842,
-      "createdAt": "2026-09-21T15:39:51.000Z",
-      "ageDays": 7
+      "ageDays": 13
     },
     {
       "id": "Altworld/Hemmingway-1",
       "url": "https://hf.co/Altworld/Hemmingway-1",
       "author": "Altworld",
       "name": "Hemmingway-1",
-      "likes": 755,
-      "downloads": 7478,
+      "likes": 769,
+      "downloads": 7880,
       "createdAt": "2026-09-20T12:10:31.000Z",
-      "ageDays": 8
+      "ageDays": 9
     },
     {
       "id": "orcarouter/OrcaSAQ-2-27B",
       "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
       "author": "orcarouter",
       "name": "OrcaSAQ-2-27B",
-      "likes": 183,
-      "downloads": 1663,
+      "likes": 204,
+      "downloads": 2143,
       "createdAt": "2026-09-24T03:44:51.000Z",
-      "ageDays": 4
+      "ageDays": 5
     },
     {
-      "id": "yandex/AliceAI-Foundation-80B-A3B-Base",
-      "url": "https://hf.co/yandex/AliceAI-Foundation-80B-A3B-Base",
-      "author": "yandex",
-      "name": "AliceAI-Foundation-80B-A3B-Base",
-      "likes": 353,
-      "downloads": 3650,
-      "createdAt": "2026-09-12T10:32:07.000Z",
-      "ageDays": 16
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "author": "XiaomiMiMo",
+      "name": "MiMo-V2.6-Flash-RL",
+      "likes": 517,
+      "downloads": 39625,
+      "createdAt": "2026-09-21T15:39:51.000Z",
+      "ageDays": 8
+    },
+    {
+      "id": "NaiveAI/Naive-N0.5-Flash",
+      "url": "https://hf.co/NaiveAI/Naive-N0.5-Flash",
+      "author": "NaiveAI",
+      "name": "Naive-N0.5-Flash",
+      "likes": 102,
+      "downloads": 769,
+      "createdAt": "2026-09-27T14:14:32.000Z",
+      "ageDays": 2
     }
   ]
 }

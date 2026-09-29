@@ -9,8 +9,12 @@ sourceUrl: "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
 significance: "high"
 entities: ["Anthropic", "Claude", "Liam Fitzpatrick", "Siddharth Mishra-Sharma", "Lance Dixon", "Matt von Hippel", "Song He"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-09-29, note: "Anthropic's Project Swap study deployed Claude-powered agents to trade books across 6 global Anthropic offices.", sourceUrl: "https://github.com/THTHDGCS/agents-radar/issues/1029" }
+  - { date: 2026-09-29, note: "Anthropic launched a dedicated in-house life sciences research group and wet laboratory focused on fundamental biology research using Claude.", sourceUrl: "https://github.com/THTHDGCS/agents-radar/issues/1029" }
+  - { date: 2026-09-29, note: "The first result from Anthropic's life sciences group is Claude's discovery of a novel enzyme system with CRISPR-like repeat properties, identified with only high-level direction from human scientists", sourceUrl: "https://github.com/THTHDGCS/agents-radar/issues/1029" }
 draft: false
+updatedDate: 2026-09-29
 ---
 
 ## Claude Completes Complex Physics Computation
