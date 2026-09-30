@@ -10,6 +10,8 @@ significance: "high"
 entities: ["MIT", "generative AI"]
 irishEuAngle: false
 updates:
+  - { date: 2026-09-30, note: "MIT researchers conducted a study focusing on hiring decisions that found the use of a single algorithm by many firms could benefit job seekers in certain situations.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
+  - { date: 2026-09-30, note: "MIT Schwarzman College of Computing launched a pilot programme in which a weeklong summer workshop brought higher education faculty to campus to explore how AI and machine learning materials can be ad", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-09-27, note: "MIT researchers developed a new language-processing tool designed to estimate suicide risk from natural language text.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-09-27, note: "The MIT language-processing suicide-risk tool is intended to identify the highest-risk individuals, enabling swifter interventions.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-09-27, note: "MIT researchers developed a patient-specific AI technique called 'xvr' that helps doctors use X-rays for surgical navigation.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
@@ -31,7 +33,7 @@ updates:
   - { date: 2026-08-30, note: "MIT research published on 20 August 2026 aims to lead to better materials for a fossil-fuel-free process for producing ammonia, a chemical essential to fertilizer.", sourceUrl: "https://news.mit.edu/topic/machine-learning" }
   - { date: 2026-08-30, note: "Bill Gates published a 6,000-word essay warning that the world is unprepared for the upheaval AI could bring, including the prospect of machines permanently replacing large numbers of jobs.", sourceUrl: "https://www.irishtimes.com/your-money/2026/08/29/bill-gates-is-worried-about-ai-but-investors-are-looking-at-the-upside/" }
 draft: false
-updatedDate: 2026-09-27
+updatedDate: 2026-09-30
 ---
 
 ## AI Image Generation Loses Connection to Training Data at Scale
