@@ -10,6 +10,8 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "Oifig IS na hÉireann (AI Office of Ireland)", "EU AI Act", "Market Surveillance Authorities"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-01, note: "The Central Bank of Ireland is designated as an MSA and oversees compliance with the EU AI Act by entities providing regulated financial services.", sourceUrl: "https://www.arthurcox.com/knowledge/irelands-domestic-ai-legislation-comes-into-force/" }
+  - { date: 2026-10-01, note: "For non-compliance with Article 5 (prohibited AI practices) of the EU AI Act, fines in Ireland can reach up to €35 million, or 7% of total worldwide annual turnover for the preceding year, whichever i", sourceUrl: "https://www.arthurcox.com/knowledge/irelands-domestic-ai-legislation-comes-into-force/" }
   - { date: 2026-09-23, note: "The AI Office of Ireland was established under the AI Regulation Bill 2026.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-23, note: "The appointment of Paul Byrne as CEO was welcomed by Minister for Enterprise, Tourism and Employment Peter Burke TD and Minister of State for Trade Promotion, Artificial Intelligence and Digital Trans", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-23, note: "In September 2026, the AI Office of Ireland conducted stakeholder engagements with CeADAR Ireland, Innovation Science and Economic Development Canada (ISED), Forensic Science Ireland, Ibec, and Meta.", sourceUrl: "https://aioffice.gov.ie/" }
@@ -463,7 +465,7 @@ updates:
   - { date: 2026-06-20, note: "The Digital Omnibus agreement clarified the interplay between the AI Act and EU product safety laws, in particular the Machinery Regulation, to avoid duplication between sectoral and AI rules.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-06-20, note: "Minister Peter Burke stated that Ireland is hosting an Oireachtas presidency and that meeting AI Act obligations will strengthen Ireland's position as an EU centre of excellence and digital regulatory", sourceUrl: "https://enterprise.gov.ie/en/news-and-events/department-news/2026/june/20260617.html" }
 draft: true
-updatedDate: 2026-09-23
+updatedDate: 2026-10-01
 ---
 
 ## Ireland Publishes AI Bill with New Governance Framework
