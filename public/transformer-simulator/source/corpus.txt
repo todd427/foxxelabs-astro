@@ -1,0 +1,9 @@
+the cat sat on the mat . the dog sat on the rug . the cat saw the dog . the dog saw the cat .
+the cat chased the mouse . the dog chased the cat . the mouse ate the cheese . the cat ate the fish .
+the dog ate the bone . the bird sat on the roof . the bird saw the cat . the cat ran to the door .
+the dog ran to the park . the mouse ran to the hole . a cat sat on a mat . a dog sat on a rug .
+the big cat sat on the mat . the small dog sat on the rug . the big dog chased the small cat .
+the small mouse ate the cheese . the black cat saw the white dog . the white dog chased the black cat .
+the cat sat on the roof . the dog sat on the mat . the bird sat on the rug . the mouse sat on the door .
+the cat and the dog sat on the mat . the dog and the cat ran to the park .
+the cat ate the fish and the dog ate the bone . the mouse ran to the hole and the cat sat on the mat .
