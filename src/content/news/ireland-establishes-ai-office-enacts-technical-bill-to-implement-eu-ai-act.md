@@ -10,6 +10,8 @@ significance: "high"
 entities: ["Ireland", "Regulation of Artificial Intelligence Bill 2026", "EU Artificial Intelligence Act", "Regulation (EU) 2024/1689", "AI Office of Ireland", "Oifig IS na hÉireann", "Market Surveillance Authorities", "Central Bank of Ireland", "CCPC", "Department of Enterprise, Tourism and Employment"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-02, note: "The Regulation of Artificial Intelligence Bill 2026 is only a technical regulation needed for supervision and enforcement of the EU AI Act and does not add to Ireland's existing obligations.", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
+  - { date: 2026-10-02, note: "Minister for Enterprise, Tourism and Employment Peter Burke stated that the Regulation of Artificial Intelligence Bill 2026 establishes the AI Office of Ireland as a strong, independent institution at", sourceUrl: "https://www.siliconrepublic.com/machines/new-irish-bill-to-supervise-eu-ai-act-gets-green-lit" }
   - { date: 2026-09-27, note: "Once enacted, the Bill will establish the AI Office of Ireland as an independent statutory entity acting as a central coordinating authority.", sourceUrl: "https://www.mondaq.com/ireland/new-technology/1807928/irish-government-publishes-the-regulation-of-artificial-intelligence-bill-2026" }
   - { date: 2026-09-27, note: "Ireland has adopted a distributed model for AI oversight: existing sectoral authorities retain domain-specific roles while the AI Office of Ireland coordinates the overall framework.", sourceUrl: "https://www.mondaq.com/ireland/new-technology/1807928/irish-government-publishes-the-regulation-of-artificial-intelligence-bill-2026" }
   - { date: 2026-09-27, note: "The Data Protection Commission (DPC) and the Central Bank of Ireland (CBI) are among the existing sectoral authorities designated to oversee AI regulation within their own domains under the Bill.", sourceUrl: "https://www.mondaq.com/ireland/new-technology/1807928/irish-government-publishes-the-regulation-of-artificial-intelligence-bill-2026" }
@@ -471,7 +473,7 @@ updates:
   - { date: 2026-06-20, note: "The Chinese frontier set converged into a credible four-horse race consisting of Qwen, DeepSeek, Hunyuan, and GLM in June 2026.", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
   - { date: 2026-06-20, note: "DeepSeek V4 in April 2026 established a price-performance benchmark that forced Alibaba (Qwen 3.7), Tencent (Hunyuan Large 3), Baidu (ERNIE 5.1), ByteDance (Doubao Pro), and Zhipu (GLM-6) to respond r", sourceUrl: "https://presenc.ai/research/june-2026-llm-release-roundup" }
 draft: false
-updatedDate: 2026-09-27
+updatedDate: 2026-10-02
 ---
 
 ## The Bill's Purpose and Structure
