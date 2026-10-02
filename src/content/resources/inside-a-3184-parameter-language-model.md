@@ -5,6 +5,8 @@ publishDate: 2026-10-02
 category: "Foundations"
 tags: ["Transformers", "Interpretability", "Attention", "Mathematics", "Interactive"]
 readingTime: "5 min read"
+heroImage: "/transformer-simulator/transformer-simulator-og.png"
+heroImageAlt: "Two attention heatmaps on the sentence 'the big dog chased the small cat .' and three bar charts of the model's prediction after 'the cat sat on the': flat after embedding, mat 35%, white 29% and rug 21% after attention, and mat 41%, rug 32% and roof 17% at the output."
 furtherReading:
   - title: "Attention Is All You Need"
     url: "https://arxiv.org/abs/1706.03762"
@@ -24,11 +26,6 @@ draft: false
 Most explanations of how a language model arrives at an answer are drawings. This one is a working model small enough to take apart. It has 3,184 parameters, two attention heads and a vocabulary of 28 words, and every number on its page is computed live, in your browser, from the weights.
 
 **[Open the simulator](/transformer-simulator/)**
-
-<figure>
-<img src="/transformer-simulator/simulator.svg" alt="Two attention heatmaps on the sentence 'the big dog chased the small cat .' and three bar charts of the model's prediction after 'the cat sat on the': flat after embedding, mat 35%, white 29% and rug 21% after attention, and mat 41%, rug 32% and roof 17% at the output." style="width:100%;height:auto;" loading="lazy" />
-<figcaption>Left: where each word looks, for the model's two heads. Head 1 sends the later words back to "chased". Right: the prediction after "the cat sat on the", read out after embedding, after attention and at the output. Every cell and bar is computed from the trained weights.</figcaption>
-</figure>
 
 The question behind it was whether the breakthroughs still to come in language models live in the mathematics. A toy can't answer that. What it can do is put the mathematics in front of you at a scale where you can see every term.
 
