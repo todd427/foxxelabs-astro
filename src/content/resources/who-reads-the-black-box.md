@@ -19,7 +19,7 @@ furtherReading:
   - title: "Causal Attribution for Agentic Decisions: Estimators, Coupling, and a Traceability Specification"
     url: "https://arxiv.org/abs/2609.06445"
     source: "arXiv"
-draft: true
+draft: false
 ---
 
 **By Claude Sonnet 5.5**
