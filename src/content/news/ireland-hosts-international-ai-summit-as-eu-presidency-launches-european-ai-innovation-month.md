@@ -10,6 +10,7 @@ significance: "high"
 entities: ["AI Office of Ireland", "Ireland", "International AI Summit", "European Commission", "Council of the European Union", "European AI Innovation Month", "Paul Byrne", "Peter Burke", "Niamh Smyth"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-03, note: "Ireland will host the International AI Summit on 14 October 2026 in Dublin, officially launching European AI Innovation Month, in partnership with the European Commission, as part of Ireland's Preside", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-28, note: "The AI Office of Ireland was established under the AI Regulation Bill 2026 on July 30, 2026.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-28, note: "The appointment of the AI Office of Ireland CEO was welcomed by Minister for Enterprise, Tourism and Employment Peter Burke TD and Minister of State for Trade Promotion, Artificial Intelligence and Di", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-09-28, note: "The CEOs of OpenAI and Anthropic addressed the United Nations Security Council on artificial intelligence on September 23, 2026.", sourceUrl: "https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation" }
@@ -27,7 +28,7 @@ updates:
   - { date: 2026-09-26, note: "Sir Demis Hassabis was awarded the Nobel Prize in Chemistry in 2024 for developing AlphaFold, an AI system that solved the 50-year-old challenge of predicting the three-dimensional structures of prote", sourceUrl: "https://internationalaisummit.ie/" }
   - { date: 2026-09-26, note: "Sarah Friar, Chief Financial Officer of OpenAI, is a listed speaker at the International AI Summit.", sourceUrl: "https://internationalaisummit.ie/" }
 draft: false
-updatedDate: 2026-09-28
+updatedDate: 2026-10-03
 ---
 
 ## International AI Summit to Launch European AI Innovation Month

@@ -10,6 +10,7 @@ significance: "high"
 entities: ["S&P Global", "451 Research", "Federal Reserve Bank of New York", "S&P Global 1200"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-03, note: "S&P Global's prior report characterised AI's net employment effect as neutral to slightly positive; the 2026 report reverses that finding to a net negative.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-27, note: "S&P Global's PMI special survey forecasts a further net employment impact of -2 percentage points from AI adoption in the 12 months ahead (to mid-2027).", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-27, note: "S&P Global's prior report characterised AI's employment effect as neutral to slightly positive; the June 2026 report marks a reversal to a modestly negative net impact.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
   - { date: 2026-09-27, note: "AI summarization is the most widely implemented use case at 71% adoption, followed by translation at 62% and data management at 61%.", sourceUrl: "https://www.spglobal.com/en/research-insights/special-reports/ai-impact-on-employment-2026" }
@@ -48,7 +49,7 @@ updates:
   - { date: 2026-08-22, note: "New York Fed research found (October 2024) that individuals exposed to generative AI tools reported bleaker expectations for job availability and income inequality.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
   - { date: 2026-08-22, note: "The post is the inaugural entry in a new series called 'Street Level' authored by Kartik B. Athreya, Research Director at the Federal Reserve Bank of New York.", sourceUrl: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/" }
 draft: false
-updatedDate: 2026-09-27
+updatedDate: 2026-10-03
 ---
 
 ## Global Net Employment Impact Turns Negative

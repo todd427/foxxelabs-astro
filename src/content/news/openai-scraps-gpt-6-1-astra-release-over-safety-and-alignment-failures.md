@@ -9,8 +9,12 @@ sourceUrl: "https://www.irishtimes.com/technology/big-tech/2026/09/29/openai-scr
 significance: "high"
 entities: ["OpenAI", "GPT-6.1 Astra", "ChatGPT", "Codex", "Saachi Jain", "Sam Altman", "Anthropic", "Dario Amodei"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-10-03, note: "OpenAI planned to launch GPT-6.1 Astra in October 2026 as a system designed to complete challenging tasks from end to end without human assistance, while outperforming earlier iterations in writing.", sourceUrl: "https://aimagazine.com/news/this-weeks-top-five-stories-in-ai-week-1-october" }
+  - { date: 2026-10-03, note: "OpenAI scrapped the release of GPT-6.1 Astra after internal testing revealed severe safety regressions and alignment concerns.", sourceUrl: "https://aimagazine.com/news/this-weeks-top-five-stories-in-ai-week-1-october" }
+  - { date: 2026-10-03, note: "GPT-6.1 Astra performed poorly on tests measuring alignment, as stated by Saachi Jain, Head of Safety Systems at OpenAI, in an interview with The Wall Street Journal.", sourceUrl: "https://aimagazine.com/news/this-weeks-top-five-stories-in-ai-week-1-october" }
 draft: false
+updatedDate: 2026-10-03
 ---
 
 ## OpenAI Cancels GPT-6.1 Astra Ahead of October Launch
