@@ -1,67 +1,67 @@
 {
-  "updatedAt": "2026-10-03T12:24:02.316Z",
+  "updatedAt": "2026-10-04T13:13:40.577Z",
   "pick": {
     "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
     "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
     "author": "XiaomiMiMo",
     "name": "MiMo-V2.6-Pro-RL",
-    "likes": 636,
-    "downloads": 84809,
+    "likes": 645,
+    "downloads": 85510,
     "createdAt": "2026-09-21T15:39:33.000Z",
-    "ageDays": 12,
+    "ageDays": 13,
     "blurb": "MiMo-V2.6-Pro handles vision, audio, and video alongside text in a single model with long-context support and agent capabilities. If your studio is prototyping multimodal agents or needs to process mixed media without orchestrating separate pipelines, the 42K downloads and RL-tuned weights merit a production evaluation.",
     "surfacedAt": "2026-09-25"
   },
   "also": [
     {
+      "id": "Aleph-Alpha/Kolibri-1",
+      "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
+      "author": "Aleph-Alpha",
+      "name": "Kolibri-1",
+      "likes": 323,
+      "downloads": 1135,
+      "createdAt": "2026-10-02T05:54:02.000Z",
+      "ageDays": 2
+    },
+    {
       "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "author": "Infatoshi",
       "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "likes": 145,
-      "downloads": 520,
+      "likes": 197,
+      "downloads": 946,
       "createdAt": "2026-10-01T03:42:00.000Z",
-      "ageDays": 2
+      "ageDays": 3
     },
     {
       "id": "NaiveAI/Naive-N0.5-Flash",
       "url": "https://hf.co/NaiveAI/Naive-N0.5-Flash",
       "author": "NaiveAI",
       "name": "Naive-N0.5-Flash",
-      "likes": 136,
-      "downloads": 1497,
+      "likes": 152,
+      "downloads": 1920,
       "createdAt": "2026-09-27T14:14:32.000Z",
-      "ageDays": 6
-    },
-    {
-      "id": "Altworld/Hemmingway-1",
-      "url": "https://hf.co/Altworld/Hemmingway-1",
-      "author": "Altworld",
-      "name": "Hemmingway-1",
-      "likes": 827,
-      "downloads": 9846,
-      "createdAt": "2026-09-20T12:10:31.000Z",
-      "ageDays": 13
-    },
-    {
-      "id": "XingChen-AGI/Xing4.0-29B-A4B",
-      "url": "https://hf.co/XingChen-AGI/Xing4.0-29B-A4B",
-      "author": "XingChen-AGI",
-      "name": "Xing4.0-29B-A4B",
-      "likes": 1829,
-      "downloads": 49984,
-      "createdAt": "2026-09-16T06:44:40.000Z",
-      "ageDays": 17
+      "ageDays": 7
     },
     {
       "id": "orcarouter/OrcaSAQ-2-27B",
       "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
       "author": "orcarouter",
       "name": "OrcaSAQ-2-27B",
-      "likes": 255,
-      "downloads": 4187,
+      "likes": 260,
+      "downloads": 4395,
       "createdAt": "2026-09-24T03:44:51.000Z",
-      "ageDays": 9
+      "ageDays": 10
+    },
+    {
+      "id": "Altworld/Hemmingway-1",
+      "url": "https://hf.co/Altworld/Hemmingway-1",
+      "author": "Altworld",
+      "name": "Hemmingway-1",
+      "likes": 830,
+      "downloads": 10079,
+      "createdAt": "2026-09-20T12:10:31.000Z",
+      "ageDays": 14
     }
   ]
 }
