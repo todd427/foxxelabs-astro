@@ -1,28 +1,18 @@
 {
-  "updatedAt": "2026-10-05T14:11:28.555Z",
+  "updatedAt": "2026-10-05T15:40:13.608Z",
   "pick": {
-    "id": "orcarouter/OrcaSAQ-2-27B",
-    "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
-    "author": "orcarouter",
-    "name": "OrcaSAQ-2-27B",
-    "likes": 264,
-    "downloads": 4567,
-    "createdAt": "2026-09-24T03:44:51.000Z",
-    "ageDays": 11,
-    "blurb": "OrcaSAQ-2-27B is a 3-bit quantized 27B model built on Qwen3.5 with function-calling and reasoning tags, designed for vLLM inference at aggressive compression ratios. At 4.5K downloads with mixed-precision quantization, it's worth a benchmark pass if your studio needs sub-8GB VRAM deployment without dropping capability.",
+    "id": "Aleph-Alpha/Kolibri-1",
+    "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
+    "author": "Aleph-Alpha",
+    "name": "Kolibri-1",
+    "likes": 564,
+    "downloads": 2453,
+    "createdAt": "2026-10-02T05:54:02.000Z",
+    "ageDays": 3,
+    "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
   "also": [
-    {
-      "id": "Aleph-Alpha/Kolibri-1",
-      "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
-      "author": "Aleph-Alpha",
-      "name": "Kolibri-1",
-      "likes": 542,
-      "downloads": 2453,
-      "createdAt": "2026-10-02T05:54:02.000Z",
-      "ageDays": 3
-    },
     {
       "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
@@ -48,7 +38,7 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 2096,
+      "likes": 2098,
       "downloads": 1436511,
       "createdAt": "2026-08-25T06:42:50.000Z",
       "ageDays": 41
@@ -58,10 +48,20 @@
       "url": "https://hf.co/NaiveAI/Naive-N0.5-Flash",
       "author": "NaiveAI",
       "name": "Naive-N0.5-Flash",
-      "likes": 166,
+      "likes": 167,
       "downloads": 2036,
       "createdAt": "2026-09-27T14:14:32.000Z",
       "ageDays": 8
+    },
+    {
+      "id": "orcarouter/OrcaSAQ-2-27B",
+      "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
+      "author": "orcarouter",
+      "name": "OrcaSAQ-2-27B",
+      "likes": 264,
+      "downloads": 4567,
+      "createdAt": "2026-09-24T03:44:51.000Z",
+      "ageDays": 11
     }
   ]
 }
