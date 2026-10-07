@@ -67,6 +67,7 @@ export const REGIONS = [
       { name: "Saothar", status: "live", blurb: "Labour: an Irish labour-market signal service built on CSO data." },
       { name: "Úire", status: "live", blurb: "Freshness: a preprint frontier monitor running nightly, unattended — with an open browser lens on the way." },
       { name: "Féirín", status: "live", blurb: "A small gift: QR voucher keys that let a stranger try Beirt with a capped budget. Built and live, with its own MCP surface behind sign-in." },
+      { name: "GlassBox", status: "live", blurb: "The glass box: a deliberately tiny transformer simulator in NumPy, 1,352 parameters with every step of the forward pass traced and clickable. It trains in the browser with hand-written backpropagation, and runs baseline-against-variant experiments over matched seeds. Live at glassformer.com." },
       { name: "Translator", status: "build", blurb: "EPUB in, publishable German out. The first title is in flight." },
       { name: "Sruth", status: "build", blurb: "The stream: an economic model of Ireland with a live dashboard." },
       { name: "Anseo", status: "build", blurb: "Here: a community platform with sign-in and a deep roadmap." },
