@@ -9,7 +9,7 @@
 //           'plan'  — on paper (also: shelved, retired, parked)
 
 export const STATUS = { live: 'live / serving', build: 'in build', plan: 'on paper' };
-export const GLYPH  = { live: '●', build: '◆', plan: '○' };
+export const GLYPH  = { live: '\u25CF', build: '\u25C6', plan: '\u25CB' };
 
 export const REGIONS = [
   {
