@@ -1,7 +1,7 @@
 // src/data/world.js
 //
 // The census behind /world. One row per project; the page renders nothing that
-// is not in here. Source of truth is the Rialu registry — when a status or a
+// is not in here. Source of truth is the Rialu registry (last synced 7 Oct 2026) — when a status or a
 // phase changes there, change it here.
 //
 //   status: 'live'  — live / serving
@@ -9,7 +9,7 @@
 //           'plan'  — on paper (also: shelved, retired, parked)
 
 export const STATUS = { live: 'live / serving', build: 'in build', plan: 'on paper' };
-export const GLYPH  = { live: '\u25CF', build: '\u25C6', plan: '\u25CB' };
+export const GLYPH  = { live: '●', build: '◆', plan: '○' };
 
 export const REGIONS = [
   {
@@ -50,6 +50,10 @@ export const REGIONS = [
       { name: "Fás", status: "build", blurb: "Growth: a staged-pretraining ladder — warm-started growth plus a WSD schedule, giving intermediate models that can be deployed along the way. The first rung has been run and redone, and a corpus extension of about 32 billion unseen tokens is built." },
       { name: "Garden", status: "plan", blurb: "VRAM pooling across three GPUs and a dedicated network lane — growing larger models than any one card can hold. The lane and toolchain are provisioned; paused before any measurement while other work goes first." },
       { name: "Lionsa", status: "plan", blurb: "Lens: the browser-native sibling of Cuimhin, hybrid retrieval in a tab. Shelved on 16 September — docs only, never built." },
+      { name: "Ciall", status: "plan", blurb: "Sense: a PRD is written (v0.1) and nothing is built. The first milestone is the skeleton plus an exposure ledger, with four held-out task families frozen and hashed before any training generator exists." },
+      { name: "Bunús", status: "plan", blurb: "Foundation: seeded on 1 October with a register and a decisions log. The clean arm comes first, a swap of the Qwen teacher; the licence and provenance work lives here now. Nothing built." },
+      { name: "Léitheoir", status: "plan", blurb: "Reader: planned, not scheduled. No repo, nothing built, no rush." },
+      { name: "Eolas", status: "plan", blurb: "Knowledge: registered on 7 October with a PRD. Nothing built." },
     ],
   },
   {
@@ -87,7 +91,9 @@ export const REGIONS = [
       { name: "Trust session", status: "build", blurb: "Trust, cybertrust, and AI: an interactive session for an applied-AI masters cohort." },
       { name: "Solopreneur book", status: "build", blurb: "The AI Solopreneur: a field report on running a one-person, AI-leveraged shop — written by someone actually doing it." },
       { name: "Cyberpsych research", status: "build", blurb: "The masters research thread, continuing toward journal publication." },
+      { name: "Suibhre", status: "build", blurb: "Instruments for the ATU student panel, \"How students work with AI\": the human strand of the PhD. The first-wave survey is written out in full; nothing is ethics-approved yet." },
       { name: "Treoir", status: "plan", blurb: "Guidance: cited answers over ATU's published policies and procedures. The brief and a 24-question gold set are written; nothing is built yet." },
+      { name: "Micro-credentials", status: "plan", blurb: "Two spring-2027 pilots, AI-assisted software engineering and Directing AI, each with a programme specification and pilot plan drafted. Nothing has been sent to ATU yet." },
     ],
   },
   {
