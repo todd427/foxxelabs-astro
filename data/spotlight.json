@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-07T14:19:00.814Z",
+  "updatedAt": "2026-10-08T14:25:57.340Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 757,
-    "downloads": 5775,
+    "likes": 800,
+    "downloads": 6777,
     "createdAt": "2026-10-02T05:54:02.000Z",
-    "ageDays": 5,
+    "ageDays": 6,
     "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
@@ -18,9 +18,19 @@
       "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "author": "Infatoshi",
       "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "likes": 277,
-      "downloads": 1903,
+      "likes": 299,
+      "downloads": 2091,
       "createdAt": "2026-10-01T03:42:00.000Z",
+      "ageDays": 7
+    },
+    {
+      "id": "Aleph-Alpha/Kolibri-1-BF16",
+      "url": "https://hf.co/Aleph-Alpha/Kolibri-1-BF16",
+      "author": "Aleph-Alpha",
+      "name": "Kolibri-1-BF16",
+      "likes": 55,
+      "downloads": 1265,
+      "createdAt": "2026-10-02T08:07:59.000Z",
       "ageDays": 6
     },
     {
@@ -28,40 +38,30 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 2125,
-      "downloads": 1507787,
+      "likes": 2138,
+      "downloads": 1545882,
       "createdAt": "2026-08-25T06:42:50.000Z",
-      "ageDays": 43
+      "ageDays": 44
     },
     {
       "id": "bytkim/Qwen3.8-27B-pi",
       "url": "https://hf.co/bytkim/Qwen3.8-27B-pi",
       "author": "bytkim",
       "name": "Qwen3.8-27B-pi",
-      "likes": 57,
-      "downloads": 1577,
+      "likes": 63,
+      "downloads": 1760,
       "createdAt": "2026-09-29T23:46:38.000Z",
-      "ageDays": 8
+      "ageDays": 9
     },
     {
-      "id": "Aleph-Alpha/Kolibri-1-BF16",
-      "url": "https://hf.co/Aleph-Alpha/Kolibri-1-BF16",
-      "author": "Aleph-Alpha",
-      "name": "Kolibri-1-BF16",
-      "likes": 52,
-      "downloads": 1058,
-      "createdAt": "2026-10-02T08:07:59.000Z",
-      "ageDays": 5
-    },
-    {
-      "id": "orcarouter/OrcaSAQ-2-27B",
-      "url": "https://hf.co/orcarouter/OrcaSAQ-2-27B",
-      "author": "orcarouter",
-      "name": "OrcaSAQ-2-27B",
-      "likes": 274,
-      "downloads": 4927,
-      "createdAt": "2026-09-24T03:44:51.000Z",
-      "ageDays": 13
+      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "author": "XiaomiMiMo",
+      "name": "MiMo-V2.6-Pro-RL",
+      "likes": 671,
+      "downloads": 93473,
+      "createdAt": "2026-09-21T15:39:33.000Z",
+      "ageDays": 17
     }
   ]
 }
