@@ -10,6 +10,7 @@ significance: "high"
 entities: ["EU AI Act", "European Commission", "European AI Office", "GPAI models", "AI Office of Ireland"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-09, note: "Article 50 of the EU AI Act began to apply on August 2, 2026.", sourceUrl: "https://www.aljazeera.com/news/2026/8/6/what-came-into-force-with-the-eus-ai-act-this-week-and-what-didnt" }
   - { date: 2026-10-04, note: "The EU AI Act became applicable on 2 August 2026, with certain exceptions.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-10-04, note: "The EU AI Act prohibits nine specific practices, including social scoring, emotion recognition in workplaces and educational institutions, untargeted scraping of internet or CCTV material to build fac", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
   - { date: 2026-10-04, note: "Ireland's Regulation of Artificial Intelligence Bill 2026 provides for penalties reaching 7% of worldwide turnover for the most serious violations of the EU AI Act.", sourceUrl: "https://www.williamfry.com/knowledge/ireland-unveils-ai-enforcement-blueprint-key-business-impacts-for-2026/" }
@@ -536,7 +537,7 @@ updates:
   - { date: 2026-06-19, note: "Deployers of AI content systems have fewer than 53 days to implement disclosure obligations before the August 2, 2026 enforcement deadline.", sourceUrl: "https://techjacksolutions.com/eu-ai-act-news/june-2026/" }
   - { date: 2026-06-19, note: "The AI Act entered into force on 1 August 2024, and will be fully applicable 2 years later on 2 August 2026.", sourceUrl: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" }
 draft: false
-updatedDate: 2026-10-04
+updatedDate: 2026-10-09
 ---
 
 ## The EU AI Act's Phased Entry into Force
