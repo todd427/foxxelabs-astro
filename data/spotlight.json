@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-09T14:14:52.863Z",
+  "updatedAt": "2026-10-10T13:25:07.384Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 829,
-    "downloads": 8474,
+    "likes": 852,
+    "downloads": 10496,
     "createdAt": "2026-10-02T05:54:02.000Z",
-    "ageDays": 7,
+    "ageDays": 8,
     "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "author": "Infatoshi",
       "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "likes": 305,
-      "downloads": 2277,
+      "likes": 318,
+      "downloads": 2509,
       "createdAt": "2026-10-01T03:42:00.000Z",
-      "ageDays": 8
-    },
-    {
-      "id": "Aleph-Alpha/Kolibri-1-BF16",
-      "url": "https://hf.co/Aleph-Alpha/Kolibri-1-BF16",
-      "author": "Aleph-Alpha",
-      "name": "Kolibri-1-BF16",
-      "likes": 56,
-      "downloads": 1449,
-      "createdAt": "2026-10-02T08:07:59.000Z",
-      "ageDays": 7
-    },
-    {
-      "id": "zai-org/GLM-5.3",
-      "url": "https://hf.co/zai-org/GLM-5.3",
-      "author": "zai-org",
-      "name": "GLM-5.3",
-      "likes": 2149,
-      "downloads": 1648104,
-      "createdAt": "2026-08-25T06:42:50.000Z",
-      "ageDays": 45
+      "ageDays": 9
     },
     {
       "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
       "url": "https://hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
       "author": "JetBrains",
       "name": "Mellum2.1-12B-A2.5B-Thinking",
-      "likes": 63,
-      "downloads": 198,
+      "likes": 85,
+      "downloads": 583,
       "createdAt": "2026-09-20T10:52:55.000Z",
-      "ageDays": 19
+      "ageDays": 20
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "url": "https://hf.co/zai-org/GLM-5.3",
+      "author": "zai-org",
+      "name": "GLM-5.3",
+      "likes": 2163,
+      "downloads": 1670161,
+      "createdAt": "2026-08-25T06:42:50.000Z",
+      "ageDays": 46
+    },
+    {
+      "id": "bytkim/Qwen3.8-27B-pi",
+      "url": "https://hf.co/bytkim/Qwen3.8-27B-pi",
+      "author": "bytkim",
+      "name": "Qwen3.8-27B-pi",
+      "likes": 67,
+      "downloads": 1939,
+      "createdAt": "2026-09-29T23:46:38.000Z",
+      "ageDays": 11
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "author": "XiaomiMiMo",
       "name": "MiMo-V2.6-Pro-RL",
-      "likes": 678,
-      "downloads": 94175,
+      "likes": 688,
+      "downloads": 95178,
       "createdAt": "2026-09-21T15:39:33.000Z",
-      "ageDays": 18
+      "ageDays": 19
     }
   ]
 }
