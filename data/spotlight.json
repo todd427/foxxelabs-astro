@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-12T15:00:22.500Z",
+  "updatedAt": "2026-10-12T16:33:21.701Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 906,
+    "likes": 908,
     "downloads": 14018,
     "createdAt": "2026-10-02T05:54:02.000Z",
     "ageDays": 10,
@@ -31,27 +31,17 @@
       "likes": 326,
       "downloads": 2768,
       "createdAt": "2026-10-01T03:42:00.000Z",
-      "ageDays": 11
+      "ageDays": 12
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 2189,
+      "likes": 2190,
       "downloads": 1707778,
       "createdAt": "2026-08-25T06:42:50.000Z",
       "ageDays": 48
-    },
-    {
-      "id": "meta-llama/Llama-3.1-8B-Instruct",
-      "url": "https://hf.co/meta-llama/Llama-3.1-8B-Instruct",
-      "author": "meta-llama",
-      "name": "Llama-3.1-8B-Instruct",
-      "likes": 8369,
-      "downloads": 5858450,
-      "createdAt": "2024-07-18T08:56:00.000Z",
-      "ageDays": 816
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
@@ -62,6 +52,16 @@
       "downloads": 96316,
       "createdAt": "2026-09-21T15:39:33.000Z",
       "ageDays": 21
+    },
+    {
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "url": "https://hf.co/meta-llama/Llama-3.1-8B-Instruct",
+      "author": "meta-llama",
+      "name": "Llama-3.1-8B-Instruct",
+      "likes": 8371,
+      "downloads": 5858450,
+      "createdAt": "2024-07-18T08:56:00.000Z",
+      "ageDays": 816
     }
   ]
 }

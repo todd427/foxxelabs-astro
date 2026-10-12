@@ -9,8 +9,12 @@ sourceUrl: "https://www.anthropic.com/news/anthropic-cyber-mission"
 significance: "high"
 entities: ["Anthropic", "Critical Infrastructure Defense Program", "OSS Scanner", "Claude", "Accenture", "Booz Allen", "CrowdStrike", "Deloitte", "Dragos", "Hitachi", "Insane Cyber", "Nozomi Networks", "Palo Alto Networks", "PwC", "Rockwell Automation", "Genesis Mission"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-10-12, note: "Anthropic launched an expanded Cyber Verification Program on October 6, 2026, making advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-10-12, note: "Anthropic introduced Claude Haiku 5.5 on October 7, 2026, described as their fastest, cheapest, and most capable small model, designed for high-volume, cost-sensitive work.", sourceUrl: "https://www.anthropic.com/news" }
+  - { date: 2026-10-12, note: "Anthropic published a 2026 Usage Policy update on October 8, 2026.", sourceUrl: "https://www.anthropic.com/news" }
 draft: false
+updatedDate: 2026-10-12
 ---
 
 ## Anthropic Launches Comprehensive Cyber Mission
