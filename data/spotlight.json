@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-12T16:33:21.701Z",
+  "updatedAt": "2026-10-13T14:58:24.273Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 908,
-    "downloads": 14018,
+    "likes": 923,
+    "downloads": 15335,
     "createdAt": "2026-10-02T05:54:02.000Z",
-    "ageDays": 10,
+    "ageDays": 11,
     "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
@@ -18,18 +18,18 @@
       "url": "https://hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
       "author": "JetBrains",
       "name": "Mellum2.1-12B-A2.5B-Thinking",
-      "likes": 110,
-      "downloads": 1068,
+      "likes": 117,
+      "downloads": 1471,
       "createdAt": "2026-09-20T10:52:55.000Z",
-      "ageDays": 22
+      "ageDays": 23
     },
     {
       "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
       "author": "Infatoshi",
       "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "likes": 326,
-      "downloads": 2768,
+      "likes": 327,
+      "downloads": 2918,
       "createdAt": "2026-10-01T03:42:00.000Z",
       "ageDays": 12
     },
@@ -38,30 +38,30 @@
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 2190,
-      "downloads": 1707778,
+      "likes": 2206,
+      "downloads": 1739432,
       "createdAt": "2026-08-25T06:42:50.000Z",
-      "ageDays": 48
+      "ageDays": 49
     },
     {
       "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "author": "XiaomiMiMo",
       "name": "MiMo-V2.6-Pro-RL",
-      "likes": 700,
-      "downloads": 96316,
+      "likes": 709,
+      "downloads": 97455,
       "createdAt": "2026-09-21T15:39:33.000Z",
-      "ageDays": 21
+      "ageDays": 22
     },
     {
-      "id": "meta-llama/Llama-3.1-8B-Instruct",
-      "url": "https://hf.co/meta-llama/Llama-3.1-8B-Instruct",
-      "author": "meta-llama",
-      "name": "Llama-3.1-8B-Instruct",
-      "likes": 8371,
-      "downloads": 5858450,
-      "createdAt": "2024-07-18T08:56:00.000Z",
-      "ageDays": 816
+      "id": "AxiomicLabs/GPT-X3-150M",
+      "url": "https://hf.co/AxiomicLabs/GPT-X3-150M",
+      "author": "AxiomicLabs",
+      "name": "GPT-X3-150M",
+      "likes": 52,
+      "downloads": 677,
+      "createdAt": "2026-09-23T02:51:52.000Z",
+      "ageDays": 21
     }
   ]
 }
