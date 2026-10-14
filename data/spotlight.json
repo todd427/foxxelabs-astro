@@ -1,65 +1,65 @@
 {
-  "updatedAt": "2026-10-13T14:58:24.273Z",
+  "updatedAt": "2026-10-14T12:49:47.039Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 923,
-    "downloads": 15335,
+    "likes": 931,
+    "downloads": 16060,
     "createdAt": "2026-10-02T05:54:02.000Z",
-    "ageDays": 11,
+    "ageDays": 12,
     "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
   "also": [
     {
+      "id": "LiquidAI/LFM2.5-24B-A2B",
+      "url": "https://hf.co/LiquidAI/LFM2.5-24B-A2B",
+      "author": "LiquidAI",
+      "name": "LFM2.5-24B-A2B",
+      "likes": 243,
+      "downloads": 4067,
+      "createdAt": "2026-10-12T05:35:46.000Z",
+      "ageDays": 2
+    },
+    {
       "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
       "url": "https://hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
       "author": "JetBrains",
       "name": "Mellum2.1-12B-A2.5B-Thinking",
-      "likes": 117,
-      "downloads": 1471,
+      "likes": 127,
+      "downloads": 1783,
       "createdAt": "2026-09-20T10:52:55.000Z",
-      "ageDays": 23
-    },
-    {
-      "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "author": "Infatoshi",
-      "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
-      "likes": 327,
-      "downloads": 2918,
-      "createdAt": "2026-10-01T03:42:00.000Z",
-      "ageDays": 12
+      "ageDays": 24
     },
     {
       "id": "zai-org/GLM-5.3",
       "url": "https://hf.co/zai-org/GLM-5.3",
       "author": "zai-org",
       "name": "GLM-5.3",
-      "likes": 2206,
-      "downloads": 1739432,
+      "likes": 2215,
+      "downloads": 1779954,
       "createdAt": "2026-08-25T06:42:50.000Z",
-      "ageDays": 49
+      "ageDays": 50
     },
     {
-      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "url": "https://hf.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "author": "XiaomiMiMo",
-      "name": "MiMo-V2.6-Pro-RL",
-      "likes": 709,
-      "downloads": 97455,
-      "createdAt": "2026-09-21T15:39:33.000Z",
-      "ageDays": 22
+      "id": "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+      "url": "https://hf.co/Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+      "author": "Infatoshi",
+      "name": "GLM-5.3-UNCENSORED-EXL3-3.0bpw",
+      "likes": 328,
+      "downloads": 3044,
+      "createdAt": "2026-10-01T03:42:00.000Z",
+      "ageDays": 13
     },
     {
       "id": "AxiomicLabs/GPT-X3-150M",
       "url": "https://hf.co/AxiomicLabs/GPT-X3-150M",
       "author": "AxiomicLabs",
       "name": "GPT-X3-150M",
-      "likes": 52,
-      "downloads": 677,
+      "likes": 57,
+      "downloads": 848,
       "createdAt": "2026-09-23T02:51:52.000Z",
       "ageDays": 21
     }
