@@ -10,6 +10,9 @@ significance: "high"
 entities: ["AI Office of Ireland", "Ireland", "International AI Summit", "European Commission", "Council of the European Union", "European AI Innovation Month", "Paul Byrne", "Peter Burke", "Niamh Smyth"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-15, note: "Ireland presented the Dublin Declaration on Reliable, Secure and Sovereign AI on 14 October 2026 at the International AI Summit held at the RDS in Ballsbridge, Dublin.", sourceUrl: "https://tech-insider.org/ie/dublin-ai-declaration-eu-backing-2026/" }
+  - { date: 2026-10-15, note: "Henna Virkkunen, European Commission Executive Vice-President for Tech Sovereignty, Security and Democracy, delivered the opening address at the International AI Summit in Dublin.", sourceUrl: "https://tech-insider.org/ie/dublin-ai-declaration-eu-backing-2026/" }
+  - { date: 2026-10-15, note: "The International AI Summit was held under the theme 'Harnessing AI to Revolutionise Europe's Competitiveness' and was officially part of Ireland's EU Council presidency programme.", sourceUrl: "https://tech-insider.org/ie/dublin-ai-declaration-eu-backing-2026/" }
   - { date: 2026-10-14, note: "Ireland is hosting the International AI Summit on 14 October 2026 at the RDS Dublin, officially launching European AI Innovation Month, in partnership with the European Commission.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-10-14, note: "The International AI Summit is a flagship event of Ireland's Presidency of the Council of the European Union.", sourceUrl: "https://aioffice.gov.ie/" }
   - { date: 2026-10-13, note: "The International AI Summit at the RDS is being held as part of Ireland's presidency of the Council of the European Union.", sourceUrl: "https://irishtimes.com/politics/2026/10/13/taoiseach-to-chair-new-cabinet-ai-committee-on-regulation-and-impact-of-technology" }
@@ -33,7 +36,7 @@ updates:
   - { date: 2026-09-26, note: "Sir Demis Hassabis was awarded the Nobel Prize in Chemistry in 2024 for developing AlphaFold, an AI system that solved the 50-year-old challenge of predicting the three-dimensional structures of prote", sourceUrl: "https://internationalaisummit.ie/" }
   - { date: 2026-09-26, note: "Sarah Friar, Chief Financial Officer of OpenAI, is a listed speaker at the International AI Summit.", sourceUrl: "https://internationalaisummit.ie/" }
 draft: false
-updatedDate: 2026-10-14
+updatedDate: 2026-10-15
 ---
 
 ## International AI Summit to Launch European AI Innovation Month

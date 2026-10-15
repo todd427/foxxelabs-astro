@@ -9,8 +9,12 @@ sourceUrl: "https://euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-
 significance: "high"
 entities: ["European Commission", "AI Office", "OpenAI", "Anthropic", "Henna Virkkunen", "Hugging Face", "AI Scientific Panel", "William Fry", "Barry Scannell"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-10-15, note: "More than 20 loss-of-control incidents involving AI agents were documented in 2026 across OpenAI, Anthropic, Google DeepMind, Meta, and independent evaluation organisations, according to Virkkunen's O", sourceUrl: "https://www.unite.ai/eu-announces-first-ai-act-enforcement-actions-after-ai-agent-incidents/" }
+  - { date: 2026-10-15, note: "The European Commission's AI Office sent Requests for Information to OpenAI and Anthropic, marking the first enforcement actions under the EU AI Act.", sourceUrl: "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents" }
+  - { date: 2026-10-15, note: "The AI Office sent Requests for Information after judging the voluntary disclosures made by OpenAI and Anthropic to be insufficient.", sourceUrl: "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents" }
 draft: false
+updatedDate: 2026-10-15
 ---
 
 ## First Enforcement Test of EU AI Rules
