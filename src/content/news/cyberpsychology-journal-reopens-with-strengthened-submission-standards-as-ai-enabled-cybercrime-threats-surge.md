@@ -9,8 +9,10 @@ sourceUrl: "https://cyberpsychology.eu/"
 significance: "high"
 entities: ["Cyberpsychology Journal", "Masaryk University", "Mary Aiken", "Capitol Technology University", "University of East London", "INTERPOL", "Europol EC3"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-10-16, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace published Issue 4, Volume 20 on 4 September 2026.", sourceUrl: "https://cyberpsychology.eu/announcement" }
 draft: false
+updatedDate: 2026-10-16
 ---
 
 ## Cyberpsychology Journal Reopens with Enhanced Submission Standards
