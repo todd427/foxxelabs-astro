@@ -10,12 +10,13 @@ significance: "high"
 entities: ["IMF", "Kristalina Georgieva", "World Bank", "Ajay Banga", "Singapore", "Tharman Shanmugaratnam"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-17, note: "IMF Managing Director Kristalina Georgieva described AI as 'a slow-moving tsunami, but [a] tsunami nonetheless' at the annual meetings of the IMF and World Bank in Bangkok.", sourceUrl: "https://www.irishtimes.com/business/work/2026/10/12/imf-chief-alarmed-at-slow-moving-tsunami-of-ai-for-jobs-taxes/" }
   - { date: 2026-10-14, note: "IMF Managing Director Kristalina Georgieva warned that AI could affect about 40 per cent of jobs globally.", sourceUrl: "https://dailytrust.com/ai-to-affect-60-of-global-jobs-imf" }
   - { date: 2026-10-13, note: "IMF Managing Director Kristalina Georgieva described AI's effect on the global labor market as a 'slow-moving tsunami' during her appearance at the annual IMF and World Bank meetings in Bangkok.", sourceUrl: "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html" }
   - { date: 2026-10-13, note: "IMF Managing Director Kristalina Georgieva identified young workers entering the job market as the most exposed group to AI-driven labor market disruption.", sourceUrl: "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html" }
   - { date: 2026-10-13, note: "IMF Managing Director Kristalina Georgieva said AI investment is keeping global economic growth at around 3%.", sourceUrl: "https://pymnts.com/news/artificial-intelligence/2026/imf-says-ai-fuels-growth-could-disrupt-labor-markets" }
 draft: false
-updatedDate: 2026-10-14
+updatedDate: 2026-10-17
 ---
 
 ## Global AI Disruption Warning

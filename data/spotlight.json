@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-16T12:17:25.444Z",
+  "updatedAt": "2026-10-17T11:32:38.745Z",
   "pick": {
     "id": "Aleph-Alpha/Kolibri-1",
     "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
     "author": "Aleph-Alpha",
     "name": "Kolibri-1",
-    "likes": 940,
-    "downloads": 17864,
+    "likes": 946,
+    "downloads": 19214,
     "createdAt": "2026-10-02T05:54:02.000Z",
-    "ageDays": 14,
+    "ageDays": 15,
     "blurb": "Kolibri-1 is a 1B MoE model with reasoning tags and vLLM support, shipping 3 days old with 564 likes and bilingual (DE/EN) training. Worth a look if you're testing whether sparse models at this scale can handle reasoning workloads without the VRAM overhead of dense alternatives.",
     "surfacedAt": "2026-10-05"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/LiquidAI/LFM2.5-24B-A2B",
       "author": "LiquidAI",
       "name": "LFM2.5-24B-A2B",
-      "likes": 406,
-      "downloads": 9356,
+      "likes": 440,
+      "downloads": 11926,
       "createdAt": "2026-10-12T05:35:46.000Z",
-      "ageDays": 4
-    },
-    {
-      "id": "inclusionAI/Ling-3.1-flash",
-      "url": "https://hf.co/inclusionAI/Ling-3.1-flash",
-      "author": "inclusionAI",
-      "name": "Ling-3.1-flash",
-      "likes": 109,
-      "downloads": 1276,
-      "createdAt": "2026-10-13T11:16:41.000Z",
-      "ageDays": 3
-    },
-    {
-      "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
-      "url": "https://hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
-      "author": "JetBrains",
-      "name": "Mellum2.1-12B-A2.5B-Thinking",
-      "likes": 156,
-      "downloads": 2939,
-      "createdAt": "2026-09-20T10:52:55.000Z",
-      "ageDays": 26
+      "ageDays": 5
     },
     {
       "id": "tencent/Hy-Memory-30B-A3B",
       "url": "https://hf.co/tencent/Hy-Memory-30B-A3B",
       "author": "tencent",
       "name": "Hy-Memory-30B-A3B",
-      "likes": 51,
-      "downloads": 0,
+      "likes": 138,
+      "downloads": 736,
       "createdAt": "2026-10-15T09:52:00.000Z",
-      "ageDays": 1
+      "ageDays": 2
     },
     {
-      "id": "AxiomicLabs/GPT-X3-150M",
-      "url": "https://hf.co/AxiomicLabs/GPT-X3-150M",
-      "author": "AxiomicLabs",
-      "name": "GPT-X3-150M",
-      "likes": 65,
-      "downloads": 1210,
-      "createdAt": "2026-09-23T02:51:52.000Z",
-      "ageDays": 23
+      "id": "inclusionAI/Ling-3.1-flash",
+      "url": "https://hf.co/inclusionAI/Ling-3.1-flash",
+      "author": "inclusionAI",
+      "name": "Ling-3.1-flash",
+      "likes": 116,
+      "downloads": 1904,
+      "createdAt": "2026-10-13T11:16:41.000Z",
+      "ageDays": 4
+    },
+    {
+      "id": "reflection/Beam-1.0-501B-A23B",
+      "url": "https://hf.co/reflection/Beam-1.0-501B-A23B",
+      "author": "reflection",
+      "name": "Beam-1.0-501B-A23B",
+      "likes": 125,
+      "downloads": 1148,
+      "createdAt": "2026-10-07T19:52:01.000Z",
+      "ageDays": 10
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "url": "https://hf.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "author": "nvidia",
+      "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+      "likes": 49,
+      "downloads": 674,
+      "createdAt": "2026-10-16T18:25:29.000Z",
+      "ageDays": 1
     }
   ]
 }

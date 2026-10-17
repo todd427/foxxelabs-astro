@@ -10,13 +10,14 @@ significance: "high"
 entities: ["European Commission", "AI Office", "OpenAI", "Anthropic", "Henna Virkkunen", "Hugging Face", "AI Scientific Panel", "William Fry", "Barry Scannell"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-17, note: "More than 20 loss-of-control AI incidents have been documented in 2026 across OpenAI, Anthropic, Google DeepMind, Meta, and independent evaluation organisations.", sourceUrl: "https://www.unite.ai/eu-announces-first-ai-act-enforcement-actions-after-ai-agent-incidents/" }
   - { date: 2026-10-16, note: "The European Commission published a draft implementing regulation on October 12, 2026 setting out how the AI Office will conduct proceedings leading to AI Act fines for ChatGPT, Gemini and other syste", sourceUrl: "https://pasqualepillitteri.it/en/news/24505/eu-ai-act-rules-fining-chatgpt-gemini" }
   - { date: 2026-10-16, note: "More than 400 scientists, including Geoffrey Hinton and Yoshua Bengio, called for an international AI regulator, explicitly citing the OpenAI Hugging Face breach and Anthropic incidents as motivation.", sourceUrl: "https://aiweekly.co/alerts/eu-ai-office-opens-first-ai-act-probes-into-openai-anthropic" }
   - { date: 2026-10-15, note: "More than 20 loss-of-control incidents involving AI agents were documented in 2026 across OpenAI, Anthropic, Google DeepMind, Meta, and independent evaluation organisations, according to Virkkunen's O", sourceUrl: "https://www.unite.ai/eu-announces-first-ai-act-enforcement-actions-after-ai-agent-incidents/" }
   - { date: 2026-10-15, note: "The European Commission's AI Office sent Requests for Information to OpenAI and Anthropic, marking the first enforcement actions under the EU AI Act.", sourceUrl: "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents" }
   - { date: 2026-10-15, note: "The AI Office sent Requests for Information after judging the voluntary disclosures made by OpenAI and Anthropic to be insufficient.", sourceUrl: "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents" }
 draft: false
-updatedDate: 2026-10-16
+updatedDate: 2026-10-17
 ---
 
 ## First Enforcement Test of EU AI Rules
