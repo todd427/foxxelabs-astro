@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-18T12:09:50.870Z",
+  "updatedAt": "2026-10-19T12:43:58.236Z",
   "pick": {
     "id": "tencent/Hy-Memory-30B-A3B",
     "url": "https://hf.co/tencent/Hy-Memory-30B-A3B",
     "author": "tencent",
     "name": "Hy-Memory-30B-A3B",
-    "likes": 175,
-    "downloads": 1187,
+    "likes": 204,
+    "downloads": 1571,
     "createdAt": "2026-10-15T09:52:00.000Z",
-    "ageDays": 3,
+    "ageDays": 4,
     "blurb": "Hy-Memory-30B uses a hybrid architecture (arxiv:2610.22196) designed to extend context window while staying inference-efficient; 3 days old with vLLM endpoints support, worth testing if you're handling long-context workloads that dense models waste VRAM on.",
     "surfacedAt": "2026-10-18"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/LiquidAI/LFM2.5-24B-A2B",
       "author": "LiquidAI",
       "name": "LFM2.5-24B-A2B",
-      "likes": 455,
-      "downloads": 13007,
+      "likes": 485,
+      "downloads": 14151,
       "createdAt": "2026-10-12T05:35:46.000Z",
-      "ageDays": 6
-    },
-    {
-      "id": "inclusionAI/Ling-3.1-flash",
-      "url": "https://hf.co/inclusionAI/Ling-3.1-flash",
-      "author": "inclusionAI",
-      "name": "Ling-3.1-flash",
-      "likes": 119,
-      "downloads": 2191,
-      "createdAt": "2026-10-13T11:16:41.000Z",
-      "ageDays": 5
+      "ageDays": 7
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
-      "likes": 108,
-      "downloads": 1247,
+      "likes": 127,
+      "downloads": 1779,
       "createdAt": "2026-10-16T18:25:29.000Z",
-      "ageDays": 2
+      "ageDays": 3
     },
     {
       "id": "reflection/Beam-1.0-501B-A23B",
       "url": "https://hf.co/reflection/Beam-1.0-501B-A23B",
       "author": "reflection",
       "name": "Beam-1.0-501B-A23B",
-      "likes": 139,
-      "downloads": 1591,
+      "likes": 156,
+      "downloads": 2097,
       "createdAt": "2026-10-07T19:52:01.000Z",
-      "ageDays": 11
+      "ageDays": 12
     },
     {
-      "id": "Aleph-Alpha/Kolibri-1",
-      "url": "https://hf.co/Aleph-Alpha/Kolibri-1",
-      "author": "Aleph-Alpha",
-      "name": "Kolibri-1",
-      "likes": 949,
-      "downloads": 19548,
-      "createdAt": "2026-10-02T05:54:02.000Z",
-      "ageDays": 16
+      "id": "inclusionAI/Ling-3.1-flash",
+      "url": "https://hf.co/inclusionAI/Ling-3.1-flash",
+      "author": "inclusionAI",
+      "name": "Ling-3.1-flash",
+      "likes": 126,
+      "downloads": 2468,
+      "createdAt": "2026-10-13T11:16:41.000Z",
+      "ageDays": 6
+    },
+    {
+      "id": "NaiveAI/Naive-N0.5-Flash",
+      "url": "https://hf.co/NaiveAI/Naive-N0.5-Flash",
+      "author": "NaiveAI",
+      "name": "Naive-N0.5-Flash",
+      "likes": 258,
+      "downloads": 2971,
+      "createdAt": "2026-09-27T14:14:32.000Z",
+      "ageDays": 22
     }
   ]
 }
