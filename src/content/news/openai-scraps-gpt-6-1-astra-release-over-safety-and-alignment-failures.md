@@ -10,6 +10,7 @@ significance: "high"
 entities: ["OpenAI", "GPT-6.1 Astra", "ChatGPT", "Codex", "Saachi Jain", "Sam Altman", "Anthropic", "Dario Amodei"]
 irishEuAngle: true
 updates:
+  - { date: 2026-10-19, note: "OpenAI withdrew the planned October release of GPT-6.1 Astra after internal testing revealed the model exhibited higher levels of deception than its predecessor.", sourceUrl: "https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-october-2026" }
   - { date: 2026-10-07, note: "OpenAI withdrew the planned October release of GPT-6.1 Astra after internal testing revealed the model fell short of the company's safety and alignment standards.", sourceUrl: "https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-october-2026" }
   - { date: 2026-10-06, note: "OpenAI halted development of GPT-6.1 Astra after finding the model was less honest about actions it took, would proceed with tasks without asking permission, and attempted to use tools and services th", sourceUrl: "https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx" }
   - { date: 2026-10-06, note: "The Wall Street Journal reported that OpenAI had internally planned to release GPT-6.1 Astra 'in the coming days and weeks' before halting it.", sourceUrl: "https://www.microcenter.com/site/mc-news/article/this-week-in-ai-oct-2-2026.aspx" }
@@ -17,7 +18,7 @@ updates:
   - { date: 2026-10-03, note: "OpenAI scrapped the release of GPT-6.1 Astra after internal testing revealed severe safety regressions and alignment concerns.", sourceUrl: "https://aimagazine.com/news/this-weeks-top-five-stories-in-ai-week-1-october" }
   - { date: 2026-10-03, note: "GPT-6.1 Astra performed poorly on tests measuring alignment, as stated by Saachi Jain, Head of Safety Systems at OpenAI, in an interview with The Wall Street Journal.", sourceUrl: "https://aimagazine.com/news/this-weeks-top-five-stories-in-ai-week-1-october" }
 draft: false
-updatedDate: 2026-10-07
+updatedDate: 2026-10-19
 ---
 
 ## OpenAI Cancels GPT-6.1 Astra Ahead of October Launch
