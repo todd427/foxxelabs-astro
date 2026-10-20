@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-19T14:24:46.067Z",
+  "updatedAt": "2026-10-20T12:39:26.357Z",
   "pick": {
     "id": "tencent/Hy-Memory-30B-A3B",
     "url": "https://hf.co/tencent/Hy-Memory-30B-A3B",
     "author": "tencent",
     "name": "Hy-Memory-30B-A3B",
-    "likes": 206,
-    "downloads": 1571,
+    "likes": 230,
+    "downloads": 2145,
     "createdAt": "2026-10-15T09:52:00.000Z",
-    "ageDays": 4,
+    "ageDays": 5,
     "blurb": "Hy-Memory-30B uses a hybrid architecture (arxiv:2610.22196) designed to extend context window while staying inference-efficient; 3 days old with vLLM endpoints support, worth testing if you're handling long-context workloads that dense models waste VRAM on.",
     "surfacedAt": "2026-10-18"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/LiquidAI/LFM2.5-24B-A2B",
       "author": "LiquidAI",
       "name": "LFM2.5-24B-A2B",
-      "likes": 487,
-      "downloads": 14151,
+      "likes": 509,
+      "downloads": 15410,
       "createdAt": "2026-10-12T05:35:46.000Z",
-      "ageDays": 7
+      "ageDays": 8
     },
     {
       "id": "nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
       "url": "https://hf.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
       "author": "nvidia",
       "name": "NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
-      "likes": 128,
-      "downloads": 1779,
+      "likes": 139,
+      "downloads": 2480,
       "createdAt": "2026-10-16T18:25:29.000Z",
-      "ageDays": 3
+      "ageDays": 4
     },
     {
       "id": "reflection/Beam-1.0-501B-A23B",
       "url": "https://hf.co/reflection/Beam-1.0-501B-A23B",
       "author": "reflection",
       "name": "Beam-1.0-501B-A23B",
-      "likes": 157,
-      "downloads": 2097,
+      "likes": 175,
+      "downloads": 2930,
       "createdAt": "2026-10-07T19:52:01.000Z",
-      "ageDays": 12
+      "ageDays": 13
     },
     {
       "id": "inclusionAI/Ling-3.1-flash",
       "url": "https://hf.co/inclusionAI/Ling-3.1-flash",
       "author": "inclusionAI",
       "name": "Ling-3.1-flash",
-      "likes": 126,
-      "downloads": 2468,
+      "likes": 134,
+      "downloads": 2905,
       "createdAt": "2026-10-13T11:16:41.000Z",
-      "ageDays": 6
+      "ageDays": 7
     },
     {
-      "id": "NaiveAI/Naive-N0.5-Flash",
-      "url": "https://hf.co/NaiveAI/Naive-N0.5-Flash",
-      "author": "NaiveAI",
-      "name": "Naive-N0.5-Flash",
-      "likes": 264,
-      "downloads": 2971,
-      "createdAt": "2026-09-27T14:14:32.000Z",
-      "ageDays": 22
+      "id": "MemTensor/MemT-1.0-Flash",
+      "url": "https://hf.co/MemTensor/MemT-1.0-Flash",
+      "author": "MemTensor",
+      "name": "MemT-1.0-Flash",
+      "likes": 46,
+      "downloads": 25,
+      "createdAt": "2026-10-17T15:45:17.000Z",
+      "ageDays": 3
     }
   ]
 }

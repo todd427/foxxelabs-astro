@@ -10,6 +10,8 @@ significance: "high"
 entities: ["OpenAI", "Astra", "Preparedness Framework"]
 irishEuAngle: false
 updates:
+  - { date: 2026-10-20, note: "OpenAI temporarily slowed the pace of scaling after the OpenAI-Hugging Face incident and after preliminary evidence emerged that an upcoming model, Astra, may meet the Critical cybersecurity capabilit", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
+  - { date: 2026-10-20, note: "OpenAI determined on August 7 that its Astra model may have a critical level of cyber capability, triggering additional monitoring requirements for all inference of Astra with tools.", sourceUrl: "https://openai.com/index/pacing-model-development-cyber-capabilities/" }
   - { date: 2026-09-19, note: "OpenAI, Anthropic, and Google DeepMind have been holding private talks to establish shared AI safety standards and embed third-party evaluators within their development pipelines.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
   - { date: 2026-09-19, note: "The initiative aims to give independent watchdogs access to intermediate model checkpoints to detect deceptive behavior.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
   - { date: 2026-09-19, note: "The push for cooperation gained public momentum after Anthropic CEO Dario Amodei published a lengthy essay calling for an unprecedented industry shift.", sourceUrl: "https://www.androidheadlines.com/2026/09/big-tech-ai-rivals-team-up-for-safety-pact.html" }
@@ -101,7 +103,7 @@ updates:
   - { date: 2026-08-21, note: "OpenAI found that its long-running models were worse at remembering instructions on long rollouts, and that training the model specifically for that capability produced a model that remained aligned t", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
   - { date: 2026-08-21, note: "OpenAI stated that no serious circumvention of safeguards has been observed since redeployment of the long-horizon model began several weeks prior to July 20, 2026.", sourceUrl: "https://openai.com/index/safety-alignment-long-horizon-models/" }
 draft: false
-updatedDate: 2026-09-19
+updatedDate: 2026-10-20
 ---
 
 ## Major Training Pause on Astra Model

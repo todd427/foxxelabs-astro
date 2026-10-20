@@ -9,8 +9,12 @@ sourceUrl: "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-pa
 significance: "high"
 entities: ["OpenAI", "GPT-5.6 Sol", "Anthropic", "Google", "OpenCode"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-10-20, note: "The breach affected only Console users who had an external AI provider linked — specifically OpenAI, Anthropic, or Google keys.", sourceUrl: "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html" }
+  - { date: 2026-10-20, note: "User Colin Parsons reported his OpenAI key was used for $281 in unauthorized charges and his Anthropic key for $168.", sourceUrl: "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html" }
+  - { date: 2026-10-20, note: "OpenCode began using OpenAI's Daybreak AI cybersecurity model for defensive work after being approved to do so on Saturday, October 18, 2026.", sourceUrl: "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/" }
 draft: false
+updatedDate: 2026-10-20
 ---
 
 ## OpenAI Confirms Seven Model Misalignment Incidents

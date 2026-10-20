@@ -9,8 +9,10 @@ sourceUrl: "https://cyberpsychology.eu/"
 significance: "high"
 entities: ["Cyberpsychology: Journal of Psychosocial Research on Cyberspace", "Masaryk University", "SCImago"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-10-20, note: "Cyberpsychology: Journal of Psychosocial Research on Cyberspace is published by Masaryk University.", sourceUrl: "https://cyberpsychology.eu/" }
 draft: false
+updatedDate: 2026-10-20
 ---
 
 ## Journal Impact and Standing
