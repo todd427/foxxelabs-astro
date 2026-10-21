@@ -9,8 +9,10 @@ sourceUrl: "https://acdigest.substack.com/p/prompt-engineering-summer-2026-what"
 significance: "high"
 entities: ["GEPA", "DSPy", "MATH benchmark", "Wharton Generative AI Labs", "o3-mini", "o4-mini", "Gemini Flash 2.5", "Shopify", "Anthropic", "Claude Opus 4.8"]
 irishEuAngle: false
-updates: []
+updates:
+  - { date: 2026-10-21, note: "GEPA, an ICLR 2026 paper, reports lifting a chain-of-thought program on the MATH benchmark from a 67% baseline to 93% through instruction refinement alone, with no few-shot examples and no fine-tuning", sourceUrl: "https://acdigest.substack.com/p/prompt-engineering-summer-2026-what" }
 draft: false
+updatedDate: 2026-10-21
 ---
 
 ## GEPA Achieves Dramatic Benchmark Gains Through Instruction Refinement
