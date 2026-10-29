@@ -1,7 +1,7 @@
 // src/data/world.js
 //
 // The census behind /world. One row per project; the page renders nothing that
-// is not in here. Source of truth is the Rialu registry (last synced 7 Oct 2026) — when a status or a
+// is not in here. Source of truth is the Rialu registry (last synced 29 Oct 2026) — when a status or a
 // phase changes there, change it here.
 //
 //   status: 'live'  — live / serving
@@ -43,17 +43,20 @@ export const REGIONS = [
       { name: "Ceann", status: "build", blurb: "The head: a model-agnostic boundary gate — the stack's prefrontal check on any model it fronts. First two milestones built and measured." },
       { name: "Imeall", status: "build", blurb: "The edge: a concept-and-claim map drawn over the memory layer. The inward pass now reads each new paper against what you already hold, and /field draws the field and where you are not yet on it." },
       { name: "Sleep cluster", status: "build", blurb: "Léargas, Aislinge, Radharc: overnight consolidation — compiling each day's experience into the models while the human sleeps. Parts already running. Suan, the slow half that would compile evaluated dreams into model weights, is stalled at its go/no-go." },
-      { name: "Cuimhin", status: "build", blurb: "Remembrance, on its way to open source: the generic retrieval shell extracted from Mnemos, to be released under Apache-2.0. The package and its tests are in place; not yet released." },
-      { name: "Codoir", status: "build", blurb: "The coder: a from-scratch code model sharing Tuiscint's rig. Bootstrapped and building — a frozen serve contract, an executor-verified training pool (116 examples so far; the low yield is the finding) and a baseline harness." },
+      { name: "Cuimhin", status: "live", blurb: "Remembrance, now open source: the generic hybrid-retrieval shell extracted from Mnemos, released under Apache-2.0 — version 0.1.0 shipped to PyPI on 24 September. M3 acceptance is next, then M2." },
+      { name: "Codoir", status: "build", blurb: "The coder: a from-scratch code model sharing Tuiscint's rig, now training on Poppy. The Phase 0.5 reports are in — the executor-verified pool stays small (every one of the first arm's 159 candidates proved unanchorable), and that low yield is the finding. The 500M pretrain gained a WSD schedule ported from Fás, atomic checkpoints and a systemd unit on 29 October." },
+      { name: "Moncaí", status: "build", blurb: "Monkeys: a ladder of story generators, from random monkeys up to a tiny transformer, all writing about the Seomra room — a probe of the floor between not-LLM and LLM. Repo seeded on 15 October with a PRD and the first build brief." },
       { name: "Fíodóir", status: "build", blurb: "The weaver: Codoir's web-stack sibling, bootstrapped from it with a web executor. Its first diff has shipped on the site's own stack." },
-      { name: "Luascadh", status: "build", blurb: "Replay: does hippocampus-style episodic replay beat plain epochs under BabyLM rules? The first 18-run comparison found no effect on the two headline hypotheses; a larger-seed check is running." },
+      { name: "Luascadh", status: "build", blurb: "Replay: does hippocampus-style episodic replay beat plain epochs under BabyLM rules? On eight seeds, yes — replay repairs forgetting, with a +0.44 effect (95% CI 0.08 to 0.79) that does not depend on the stage order (D18, 24 October). The paper's first full draft is written and reframed to lead with the staged-stream result." },
       { name: "Fás", status: "build", blurb: "Growth: a staged-pretraining ladder — warm-started growth plus a WSD schedule, giving intermediate models that can be deployed along the way. The first rung has been run and redone, and a corpus extension of about 32 billion unseen tokens is built." },
       { name: "Garden", status: "plan", blurb: "VRAM pooling across three GPUs and a dedicated network lane — growing larger models than any one card can hold. The lane and toolchain are provisioned; paused before any measurement while other work goes first." },
       { name: "Lionsa", status: "plan", blurb: "Lens: the browser-native sibling of Cuimhin, hybrid retrieval in a tab. Shelved on 16 September — docs only, never built." },
-      { name: "Ciall", status: "plan", blurb: "Sense: a PRD is written (v0.1) and nothing is built. The first milestone is the skeleton plus an exposure ledger, with four held-out task families frozen and hashed before any training generator exists." },
-      { name: "Bunús", status: "plan", blurb: "Foundation: seeded on 1 October with a register and a decisions log. The clean arm comes first, a swap of the Qwen teacher; the licence and provenance work lives here now. Nothing built." },
+      { name: "Ciall", status: "build", blurb: "Sense: a two-model small-data project — a language model and a separate reasoner behind a swappable interface, with held-out task families frozen and hashed before any training generator existed. M2 closed on 19 October with all twelve training families registered; decision 0006, the reasoner, is decided. An Xid A/B on the training rig showed the GPU faults are not launch-rate driven, so the hardware question stays open." },
+      { name: "Bunús", status: "build", blurb: "Foundation: the clean-provenance arm — a swap of the Qwen teacher for a chain that can be released. Phase 1 ran 22 to 26 October and R1 failed on over-refusal, so there is no release; the paper's fifth-arm section is written, and the next brief needs a different generator." },
       { name: "Léitheoir", status: "plan", blurb: "Reader: planned, not scheduled. No repo, nothing built, no rush." },
-      { name: "Eolas", status: "plan", blurb: "Knowledge: registered on 7 October with a PRD. Nothing built." },
+      { name: "Eolas", status: "build", blurb: "Knowledge: the reference machine for the words — what a word refers to, with a learning DAG and a growable vocabulary. Registered on 7 October; by the 19th a reader pilot had run (the 8B pretrained reader failed most of its pass criteria) and the extraction series had measured a 252-kind hierarchy at 0.83 weighted precision." },
+      { name: "Feasa", status: "plan", blurb: "Knowing: a knowing machine rather than a guessing one, starting from a store of around forty thousand written words. Split from Eolas on 11 October; a concept note, nothing built." },
+      { name: "Síol", status: "plan", blurb: "Seed: evolving a local learning rule for a small, joule-scored language learner — the target is a three-year-old that can learn. Plan v0.3 with a CHILDES exposure-curve measurement arm and a fast Hebbian memory in the design; no code yet." },
     ],
   },
   {
@@ -68,6 +71,7 @@ export const REGIONS = [
       { name: "Úire", status: "live", blurb: "Freshness: a preprint frontier monitor running nightly, unattended — with an open browser lens on the way." },
       { name: "Féirín", status: "live", blurb: "A small gift: QR voucher keys that let a stranger try Beirt with a capped budget. Built and live, with its own MCP surface behind sign-in." },
       { name: "GlassBox", status: "live", blurb: "The glass box: a deliberately tiny transformer simulator in NumPy, 1,352 parameters with every step of the forward pass traced and clickable. It trains in the browser with hand-written backpropagation, and runs baseline-against-variant experiments over matched seeds. Live at glassformer.com." },
+      { name: "Dréacht", status: "live", blurb: "Draft: a beta-reader tool — share a draft by link, decide who may read it, get margin notes back. FastAPI and SQLite on Fly, live since 26 October at dreacht.foxxelabs.ie, waiting on its first draft and its first reader." },
       { name: "Translator", status: "build", blurb: "EPUB in, publishable German out. The first title is in flight." },
       { name: "Sruth", status: "build", blurb: "The stream: an economic model of Ireland with a live dashboard." },
       { name: "Anseo", status: "build", blurb: "Here: a community platform with sign-in and a deep roadmap." },
@@ -85,6 +89,8 @@ export const REGIONS = [
     wide: true,
     items: [
       { name: "ATU teaching", status: "build", blurb: "Two routes to the lectern: a module insertion into the Applied AI masters, and a lecturer application in flight." },
+      { name: "SophIA", status: "build", blurb: "An ATU faculty-funded active-learning pilot: a lecturer uploads their materials, the system reads them and generates quizzes, flashcards and training material in a form students can use and teachers can grade. M0 ran on an MSc cyberpsychology module; M1 generation with a repair pass and a review site landed on 29 October. MVP targeted for 30 November." },
+      { name: "Cleachtadh", status: "build", blurb: "Practice: a training simulator in which a human learner guides a simulated patient, Othar, with a simulated mentor, Meantóir, at their shoulder — the inverse of a model that asks the questions itself. Phase 0 spine, PRD and Phase 1 brief are in the repo; nothing trained." },
       { name: "HAX PhD", status: "plan", blurb: "A research PhD in human-AI interaction, in planning — the long route to being the person Ireland calls about this." },
       { name: "BWAI course", status: "build", blurb: "Building With AI: a six-week course teaching people to ship with these tools." },
       { name: "Aithint", status: "build", blurb: "Recognition: a course project on spotting AI failure modes; demo stage." },
@@ -150,6 +156,7 @@ export const REGIONS = [
       { name: "CyberSafer", status: "live", blurb: "Online-safety resources at cybersafer.uk." },
       { name: "UCAHub", status: "build", blurb: "The masters study platform — pre-live, ethics approval pending." },
       { name: "URBS", status: "build", blurb: "A city in a game: playable prototype." },
+      { name: "Gaisce", status: "build", blurb: "Feat: a fantasy role-playing engine where you become what you do — no class lock, growth by use, an optional LLM dungeon master and LLM players, map and plot builders. M0 engine with its tests and a FastAPI web client, 20 October; the M1 play loop is next." },
       { name: "Stele", status: "plan", blurb: "Shelved: the UE5 forerunner that URBS superseded." },
       { name: "Faire", status: "build", blurb: "The watch: a desktop app at phase 4." },
       { name: "Teas", status: "build", blurb: "Heat: fleet thermal telemetry, running against live fleet data, installable over SSH, with a command-line view and a header strip." },

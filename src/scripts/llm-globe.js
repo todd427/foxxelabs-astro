@@ -16,7 +16,7 @@ import { MODELS, ORGS, MAKER_HUES, COAST } from '../data/llm-observatory.js';
 
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 const START = new Date('2017-05-01').getTime();
-const END = new Date('2026-10-01').getTime();
+const END = new Date('2026-11-01').getTime();
 const SPEEDS = [1, 2, 4];
 const TAU = Math.PI * 2;
 
