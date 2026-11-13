@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-11-12T15:58:05.779Z",
+  "updatedAt": "2026-11-13T15:14:30.314Z",
   "pick": {
-    "id": "tencent/Qwen3.8-27B-DSpine-b16",
-    "url": "https://hf.co/tencent/Qwen3.8-27B-DSpine-b16",
-    "author": "tencent",
-    "name": "Qwen3.8-27B-DSpine-b16",
-    "likes": 207,
-    "downloads": 3738,
-    "createdAt": "2026-11-07T14:20:29.000Z",
-    "ageDays": 5,
-    "blurb": "DSpine is a speculative decoding draft model paired with Qwen3.8-27B, designed to accelerate inference by generating candidate tokens that the base model validates; worth testing if you're optimizing throughput on constrained hardware or looking to squeeze more tokens/sec from existing VRAM budgets.",
-    "surfacedAt": "2026-11-11"
+    "id": "NousResearch/Arete-27B",
+    "url": "https://hf.co/NousResearch/Arete-27B",
+    "author": "NousResearch",
+    "name": "Arete-27B",
+    "likes": 519,
+    "downloads": 5545,
+    "createdAt": "2026-11-06T19:31:28.000Z",
+    "ageDays": 7,
+    "blurb": "Arete is a supervised fine-tune of Qwen3.8-27B trained on Nous Research's value-aligned dataset, shipping in safetensors with higher engagement than the current pick. If you're building on the same base model, this is worth comparing against DSpine—you get task-specific behavior tuning instead of just inference acceleration.",
+    "surfacedAt": "2026-11-13"
   },
   "also": [
     {
-      "id": "NousResearch/Arete-27B",
-      "url": "https://hf.co/NousResearch/Arete-27B",
-      "author": "NousResearch",
-      "name": "Arete-27B",
-      "likes": 464,
-      "downloads": 4669,
-      "createdAt": "2026-11-06T19:31:28.000Z",
+      "id": "tencent/Qwen3.8-27B-DSpine-b16",
+      "url": "https://hf.co/tencent/Qwen3.8-27B-DSpine-b16",
+      "author": "tencent",
+      "name": "Qwen3.8-27B-DSpine-b16",
+      "likes": 223,
+      "downloads": 4332,
+      "createdAt": "2026-11-07T14:20:29.000Z",
       "ageDays": 6
     },
     {
@@ -28,40 +28,40 @@
       "url": "https://hf.co/LiquidAI/LFM3-1.7B",
       "author": "LiquidAI",
       "name": "LFM3-1.7B",
-      "likes": 1689,
-      "downloads": 89946,
+      "likes": 1705,
+      "downloads": 96615,
       "createdAt": "2026-10-23T21:35:42.000Z",
-      "ageDays": 20
+      "ageDays": 21
     },
     {
-      "id": "baidu/ERNIE-5.5-Flash-Base",
-      "url": "https://hf.co/baidu/ERNIE-5.5-Flash-Base",
-      "author": "baidu",
-      "name": "ERNIE-5.5-Flash-Base",
-      "likes": 292,
-      "downloads": 2963,
-      "createdAt": "2026-10-21T08:40:58.000Z",
-      "ageDays": 22
+      "id": "MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
+      "url": "https://hf.co/MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
+      "author": "MoonMath-ai",
+      "name": "DeepSeek-V4.1-Flash-1017-uncensored",
+      "likes": 85,
+      "downloads": 725,
+      "createdAt": "2026-11-04T16:45:50.000Z",
+      "ageDays": 9
     },
     {
       "id": "MinimaLabs/KLM-1.6",
       "url": "https://hf.co/MinimaLabs/KLM-1.6",
       "author": "MinimaLabs",
       "name": "KLM-1.6",
-      "likes": 59,
-      "downloads": 909,
+      "likes": 65,
+      "downloads": 1095,
       "createdAt": "2026-11-09T10:00:48.000Z",
-      "ageDays": 3
+      "ageDays": 4
     },
     {
       "id": "taobao-mnn/MNN-Pocket-0.3B",
       "url": "https://hf.co/taobao-mnn/MNN-Pocket-0.3B",
       "author": "taobao-mnn",
       "name": "MNN-Pocket-0.3B",
-      "likes": 193,
-      "downloads": 3397,
+      "likes": 206,
+      "downloads": 3711,
       "createdAt": "2026-09-23T09:54:34.000Z",
-      "ageDays": 50
+      "ageDays": 51
     }
   ]
 }
