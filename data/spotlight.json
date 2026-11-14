@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-13T15:14:30.314Z",
+  "updatedAt": "2026-11-14T14:07:03.667Z",
   "pick": {
     "id": "NousResearch/Arete-27B",
     "url": "https://hf.co/NousResearch/Arete-27B",
     "author": "NousResearch",
     "name": "Arete-27B",
-    "likes": 519,
-    "downloads": 5545,
+    "likes": 585,
+    "downloads": 6191,
     "createdAt": "2026-11-06T19:31:28.000Z",
-    "ageDays": 7,
+    "ageDays": 8,
     "blurb": "Arete is a supervised fine-tune of Qwen3.8-27B trained on Nous Research's value-aligned dataset, shipping in safetensors with higher engagement than the current pick. If you're building on the same base model, this is worth comparing against DSpine—you get task-specific behavior tuning instead of just inference acceleration.",
     "surfacedAt": "2026-11-13"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/tencent/Qwen3.8-27B-DSpine-b16",
       "author": "tencent",
       "name": "Qwen3.8-27B-DSpine-b16",
-      "likes": 223,
-      "downloads": 4332,
+      "likes": 269,
+      "downloads": 4873,
       "createdAt": "2026-11-07T14:20:29.000Z",
-      "ageDays": 6
+      "ageDays": 7
     },
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://hf.co/LiquidAI/LFM3-1.7B",
       "author": "LiquidAI",
       "name": "LFM3-1.7B",
-      "likes": 1705,
-      "downloads": 96615,
+      "likes": 1787,
+      "downloads": 100643,
       "createdAt": "2026-10-23T21:35:42.000Z",
-      "ageDays": 21
-    },
-    {
-      "id": "MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
-      "url": "https://hf.co/MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
-      "author": "MoonMath-ai",
-      "name": "DeepSeek-V4.1-Flash-1017-uncensored",
-      "likes": 85,
-      "downloads": 725,
-      "createdAt": "2026-11-04T16:45:50.000Z",
-      "ageDays": 9
-    },
-    {
-      "id": "MinimaLabs/KLM-1.6",
-      "url": "https://hf.co/MinimaLabs/KLM-1.6",
-      "author": "MinimaLabs",
-      "name": "KLM-1.6",
-      "likes": 65,
-      "downloads": 1095,
-      "createdAt": "2026-11-09T10:00:48.000Z",
-      "ageDays": 4
+      "ageDays": 22
     },
     {
       "id": "taobao-mnn/MNN-Pocket-0.3B",
       "url": "https://hf.co/taobao-mnn/MNN-Pocket-0.3B",
       "author": "taobao-mnn",
       "name": "MNN-Pocket-0.3B",
-      "likes": 206,
-      "downloads": 3711,
+      "likes": 281,
+      "downloads": 3947,
       "createdAt": "2026-09-23T09:54:34.000Z",
-      "ageDays": 51
+      "ageDays": 52
+    },
+    {
+      "id": "MinimaLabs/KLM-1.6",
+      "url": "https://hf.co/MinimaLabs/KLM-1.6",
+      "author": "MinimaLabs",
+      "name": "KLM-1.6",
+      "likes": 75,
+      "downloads": 1270,
+      "createdAt": "2026-11-09T10:00:48.000Z",
+      "ageDays": 5
+    },
+    {
+      "id": "MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
+      "url": "https://hf.co/MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
+      "author": "MoonMath-ai",
+      "name": "DeepSeek-V4.1-Flash-1017-uncensored",
+      "likes": 92,
+      "downloads": 953,
+      "createdAt": "2026-11-04T16:45:50.000Z",
+      "ageDays": 10
     }
   ]
 }
