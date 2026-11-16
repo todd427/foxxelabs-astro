@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-16T15:22:39.277Z",
+  "updatedAt": "2026-11-16T16:52:22.925Z",
   "pick": {
     "id": "NousResearch/Arete-27B",
     "url": "https://hf.co/NousResearch/Arete-27B",
     "author": "NousResearch",
     "name": "Arete-27B",
-    "likes": 629,
+    "likes": 630,
     "downloads": 9187,
     "createdAt": "2026-11-06T19:31:28.000Z",
     "ageDays": 10,
@@ -18,7 +18,7 @@
       "url": "https://hf.co/MinimaLabs/KLM-1.6",
       "author": "MinimaLabs",
       "name": "KLM-1.6",
-      "likes": 97,
+      "likes": 112,
       "downloads": 1948,
       "createdAt": "2026-11-09T10:00:48.000Z",
       "ageDays": 7
@@ -28,7 +28,7 @@
       "url": "https://hf.co/LiquidAI/LFM3-1.7B",
       "author": "LiquidAI",
       "name": "LFM3-1.7B",
-      "likes": 1821,
+      "likes": 1831,
       "downloads": 106961,
       "createdAt": "2026-10-23T21:35:42.000Z",
       "ageDays": 24
@@ -38,7 +38,7 @@
       "url": "https://hf.co/KRAFTON/Raon-1-nano",
       "author": "KRAFTON",
       "name": "Raon-1-nano",
-      "likes": 105,
+      "likes": 115,
       "downloads": 1510,
       "createdAt": "2026-10-29T05:38:14.000Z",
       "ageDays": 18

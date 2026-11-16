@@ -9,8 +9,10 @@ sourceUrl: "https://www.rte.ie/news/ireland/2026/1113/1599186-ai-taoiseach-eu/"
 significance: "high"
 entities: ["European Union", "Geoffrey Hinton", "Ursula von der Leyen", "Arthur Mensch", "Mistral", "ClientEarth", "Friends of the Irish Environment", "Friends of the Earth Ireland", "Commission for Regulation of Utilities"]
 irishEuAngle: true
-updates: []
+updates:
+  - { date: 2026-11-16, note: "Geoffrey Hinton, the Nobel Prize-winning 'godfather of AI', attended the informal EU leaders meeting in Dublin on 13 November 2026.", sourceUrl: "https://www.rte.ie/news/ireland/2026/1113/1599186-ai-taoiseach-eu/" }
 draft: false
+updatedDate: 2026-11-16
 ---
 
 ## EU Summit Focuses on AI Risks
