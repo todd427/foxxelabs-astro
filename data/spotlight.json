@@ -1,67 +1,67 @@
 {
-  "updatedAt": "2026-11-16T16:52:22.925Z",
+  "updatedAt": "2026-11-17T16:49:23.978Z",
   "pick": {
     "id": "NousResearch/Arete-27B",
     "url": "https://hf.co/NousResearch/Arete-27B",
     "author": "NousResearch",
     "name": "Arete-27B",
-    "likes": 630,
-    "downloads": 9187,
+    "likes": 679,
+    "downloads": 10670,
     "createdAt": "2026-11-06T19:31:28.000Z",
-    "ageDays": 10,
+    "ageDays": 11,
     "blurb": "Arete is a supervised fine-tune of Qwen3.8-27B trained on Nous Research's value-aligned dataset, shipping in safetensors with higher engagement than the current pick. If you're building on the same base model, this is worth comparing against DSpine—you get task-specific behavior tuning instead of just inference acceleration.",
     "surfacedAt": "2026-11-13"
   },
   "also": [
     {
-      "id": "MinimaLabs/KLM-1.6",
-      "url": "https://hf.co/MinimaLabs/KLM-1.6",
-      "author": "MinimaLabs",
-      "name": "KLM-1.6",
-      "likes": 112,
-      "downloads": 1948,
-      "createdAt": "2026-11-09T10:00:48.000Z",
-      "ageDays": 7
-    },
-    {
-      "id": "LiquidAI/LFM3-1.7B",
-      "url": "https://hf.co/LiquidAI/LFM3-1.7B",
-      "author": "LiquidAI",
-      "name": "LFM3-1.7B",
-      "likes": 1831,
-      "downloads": 106961,
-      "createdAt": "2026-10-23T21:35:42.000Z",
-      "ageDays": 24
-    },
-    {
-      "id": "KRAFTON/Raon-1-nano",
-      "url": "https://hf.co/KRAFTON/Raon-1-nano",
-      "author": "KRAFTON",
-      "name": "Raon-1-nano",
-      "likes": 115,
-      "downloads": 1510,
-      "createdAt": "2026-10-29T05:38:14.000Z",
-      "ageDays": 18
-    },
-    {
-      "id": "tencent/Qwen3.8-27B-DSpine-b16",
-      "url": "https://hf.co/tencent/Qwen3.8-27B-DSpine-b16",
-      "author": "tencent",
-      "name": "Qwen3.8-27B-DSpine-b16",
-      "likes": 286,
-      "downloads": 5984,
-      "createdAt": "2026-11-07T14:20:29.000Z",
-      "ageDays": 9
+      "id": "maxwell-model/Maxwell-V1-Flash",
+      "url": "https://hf.co/maxwell-model/Maxwell-V1-Flash",
+      "author": "maxwell-model",
+      "name": "Maxwell-V1-Flash",
+      "likes": 137,
+      "downloads": 287,
+      "createdAt": "2026-10-13T07:53:39.000Z",
+      "ageDays": 35
     },
     {
       "id": "MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
       "url": "https://hf.co/MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
       "author": "MoonMath-ai",
       "name": "DeepSeek-V4.1-Flash-1017-uncensored",
-      "likes": 103,
-      "downloads": 1444,
+      "likes": 143,
+      "downloads": 1683,
       "createdAt": "2026-11-04T16:45:50.000Z",
-      "ageDays": 12
+      "ageDays": 13
+    },
+    {
+      "id": "StarpowerTechnology/WVY-Blender-5m",
+      "url": "https://hf.co/StarpowerTechnology/WVY-Blender-5m",
+      "author": "StarpowerTechnology",
+      "name": "WVY-Blender-5m",
+      "likes": 48,
+      "downloads": 648,
+      "createdAt": "2026-11-12T05:26:09.000Z",
+      "ageDays": 5
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B",
+      "url": "https://hf.co/LiquidAI/LFM3-1.7B",
+      "author": "LiquidAI",
+      "name": "LFM3-1.7B",
+      "likes": 1902,
+      "downloads": 109972,
+      "createdAt": "2026-10-23T21:35:42.000Z",
+      "ageDays": 25
+    },
+    {
+      "id": "MinimaLabs/KLM-1.6",
+      "url": "https://hf.co/MinimaLabs/KLM-1.6",
+      "author": "MinimaLabs",
+      "name": "KLM-1.6",
+      "likes": 144,
+      "downloads": 2417,
+      "createdAt": "2026-11-09T10:00:48.000Z",
+      "ageDays": 8
     }
   ]
 }
