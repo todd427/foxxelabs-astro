@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-18T16:18:05.138Z",
+  "updatedAt": "2026-11-19T16:26:29.137Z",
   "pick": {
     "id": "NousResearch/Arete-27B",
     "url": "https://hf.co/NousResearch/Arete-27B",
     "author": "NousResearch",
     "name": "Arete-27B",
-    "likes": 705,
-    "downloads": 12167,
+    "likes": 765,
+    "downloads": 13499,
     "createdAt": "2026-11-06T19:31:28.000Z",
-    "ageDays": 12,
+    "ageDays": 13,
     "blurb": "Arete is a supervised fine-tune of Qwen3.8-27B trained on Nous Research's value-aligned dataset, shipping in safetensors with higher engagement than the current pick. If you're building on the same base model, this is worth comparing against DSpine—you get task-specific behavior tuning instead of just inference acceleration.",
     "surfacedAt": "2026-11-13"
   },
@@ -18,50 +18,50 @@
       "url": "https://hf.co/maxwell-model/Maxwell-V1-Flash",
       "author": "maxwell-model",
       "name": "Maxwell-V1-Flash",
-      "likes": 215,
-      "downloads": 1052,
+      "likes": 263,
+      "downloads": 1703,
       "createdAt": "2026-10-13T07:53:39.000Z",
-      "ageDays": 36
-    },
-    {
-      "id": "StarpowerTechnology/WVY-Blender-5m",
-      "url": "https://hf.co/StarpowerTechnology/WVY-Blender-5m",
-      "author": "StarpowerTechnology",
-      "name": "WVY-Blender-5m",
-      "likes": 63,
-      "downloads": 890,
-      "createdAt": "2026-11-12T05:26:09.000Z",
-      "ageDays": 6
+      "ageDays": 37
     },
     {
       "id": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
       "url": "https://hf.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
       "author": "nvidia",
       "name": "Qwen3.5-4B-Qwen3.8-27B-Draft",
-      "likes": 47,
-      "downloads": 290,
+      "likes": 109,
+      "downloads": 757,
       "createdAt": "2026-11-11T20:23:07.000Z",
-      "ageDays": 7
+      "ageDays": 8
     },
     {
       "id": "LiquidAI/LFM3-1.7B",
       "url": "https://hf.co/LiquidAI/LFM3-1.7B",
       "author": "LiquidAI",
       "name": "LFM3-1.7B",
-      "likes": 1924,
-      "downloads": 113798,
+      "likes": 1984,
+      "downloads": 119783,
       "createdAt": "2026-10-23T21:35:42.000Z",
-      "ageDays": 26
+      "ageDays": 27
     },
     {
-      "id": "MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
-      "url": "https://hf.co/MoonMath-ai/DeepSeek-V4.1-Flash-1017-uncensored",
-      "author": "MoonMath-ai",
-      "name": "DeepSeek-V4.1-Flash-1017-uncensored",
-      "likes": 166,
-      "downloads": 2000,
-      "createdAt": "2026-11-04T16:45:50.000Z",
-      "ageDays": 14
+      "id": "microsoft/Aion-1.0-Instruct-2.3B",
+      "url": "https://hf.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "author": "microsoft",
+      "name": "Aion-1.0-Instruct-2.3B",
+      "likes": 62,
+      "downloads": 788,
+      "createdAt": "2026-11-18T17:05:50.000Z",
+      "ageDays": 1
+    },
+    {
+      "id": "StarpowerTechnology/WVY-Blender-5m",
+      "url": "https://hf.co/StarpowerTechnology/WVY-Blender-5m",
+      "author": "StarpowerTechnology",
+      "name": "WVY-Blender-5m",
+      "likes": 76,
+      "downloads": 1173,
+      "createdAt": "2026-11-12T05:26:09.000Z",
+      "ageDays": 7
     }
   ]
 }
